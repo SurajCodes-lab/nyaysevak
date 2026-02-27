@@ -31,15 +31,7 @@ export default function PracticeAreas() {
           {/* Left: Letter navigation */}
           <div className="lg:w-[200px] shrink-0">
             {/* Mobile: Horizontal scrollable row */}
-            <div
-              className="flex gap-1.5 pb-2 -mx-1 lg:mx-0 lg:pb-0 lg:flex-col lg:sticky lg:top-28 overflow-x-auto lg:overflow-x-visible"
-              style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-            >
-              <style jsx>{`
-                div::-webkit-scrollbar {
-                  display: none;
-                }
-              `}</style>
+            <div className="scrollbar-hide flex gap-1.5 pb-2 -mx-1 lg:mx-0 lg:pb-0 lg:flex-col lg:sticky lg:top-28 overflow-x-auto lg:overflow-x-visible">
               <button
                 onClick={() => setActiveLetter(null)}
                 className={`h-9 w-9 sm:h-10 sm:w-10 lg:h-auto lg:w-full rounded-lg text-xs sm:text-sm font-semibold flex items-center justify-center shrink-0 transition-all duration-300 ${
