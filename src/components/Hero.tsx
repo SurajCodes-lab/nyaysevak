@@ -21,20 +21,20 @@ export default function Hero() {
       {/* Split Layout */}
       <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col lg:flex-row items-stretch px-4 sm:px-6 lg:px-8">
         {/* Left 55% — Content */}
-        <div className="flex flex-1 flex-col items-center text-center lg:items-start lg:text-left justify-center pt-28 sm:pt-32 lg:pt-28 pb-12 sm:pb-16 lg:pb-12 lg:w-[55%] lg:pr-16">
+        <div className="flex flex-1 flex-col items-center text-center lg:items-start lg:text-left justify-center pt-20 sm:pt-24 lg:pt-28 pb-12 sm:pb-16 lg:pb-12 lg:w-[55%] lg:pr-16">
           <Image
             src="/logo.jpeg"
             alt="NyaySevak Logo"
             width={120}
             height={120}
-            className="mb-6 sm:mb-8 h-20 w-20 sm:h-24 sm:w-24 lg:h-[120px] lg:w-[120px] rounded-full ring-2 ring-gold/30 shadow-lg shadow-gold/20"
+            className="mb-3 sm:mb-6 lg:mb-8 h-20 w-20 sm:h-24 sm:w-24 lg:h-[120px] lg:w-[120px] rounded-full ring-2 ring-gold/30 shadow-lg shadow-gold/20"
           />
 
-          <p className="mb-4 sm:mb-6 text-[11px] sm:text-xs uppercase tracking-[0.3em] text-gold/70">
+          <p className="mb-2 sm:mb-4 lg:mb-6 text-[11px] sm:text-xs uppercase tracking-[0.3em] text-gold/70">
             India&apos;s First Complete Legal Ecosystem
           </p>
 
-          <h1 className="mb-4 sm:mb-6 text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-heading font-bold tracking-tight text-white">
+          <h1 className="mb-3 sm:mb-4 lg:mb-6 text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-heading font-bold tracking-tight text-white">
             <span className="lg:hidden">NYAYSEVAK</span>
             <span className="hidden lg:inline">NYAY<br />SEVAK</span>
           </h1>
