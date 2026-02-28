@@ -21,7 +21,7 @@ export default function Hero() {
       {/* Split Layout */}
       <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col lg:flex-row items-stretch px-4 sm:px-6 lg:px-8">
         {/* Left 55% — Content */}
-        <div className="flex flex-1 flex-col justify-center pt-28 sm:pt-32 lg:pt-28 pb-12 sm:pb-16 lg:pb-12 lg:w-[55%] lg:pr-16">
+        <div className="flex flex-1 flex-col items-center text-center lg:items-start lg:text-left justify-center pt-28 sm:pt-32 lg:pt-28 pb-12 sm:pb-16 lg:pb-12 lg:w-[55%] lg:pr-16">
           <Image
             src="/logo.jpeg"
             alt="NyaySevak Logo"
@@ -35,13 +35,12 @@ export default function Hero() {
           </p>
 
           <h1 className="mb-4 sm:mb-6 text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-heading font-bold tracking-tight text-white">
-            NYAY
-            <br />
-            SEVAK
+            <span className="lg:hidden">NYAYSEVAK</span>
+            <span className="hidden lg:inline">NYAY<br />SEVAK</span>
           </h1>
 
           {/* Gold line divider */}
-          <div className="mb-6 sm:mb-8 h-px w-16 sm:w-24 bg-gold" />
+          <div className="mb-6 sm:mb-8 h-px w-16 sm:w-24 bg-gold mx-auto lg:mx-0" />
 
           <p className="mb-3 sm:mb-4 text-base sm:text-lg lg:text-xl font-heading font-medium tracking-wide text-gold/80">
             Defending Your Rights
