@@ -16,9 +16,12 @@ const quickLinks = [
 export default function Footer() {
   return (
     <>
-      <footer className="relative bg-dark-deep">
-        {/* Top gold line */}
-        <div className="gold-shimmer" />
+      <footer className="relative bg-dark-deep overflow-hidden">
+        {/* Ambient glow */}
+        <div className="glow-pulse pointer-events-none absolute top-[10%] left-[20%] w-[600px] h-[600px] rounded-full bg-[radial-gradient(circle,rgba(201,168,76,0.04)_0%,transparent_70%)]" />
+
+        {/* Top gold gradient band */}
+        <div className="h-1 bg-gradient-to-r from-transparent via-gold/50 to-transparent" />
 
         <div className="mx-auto max-w-7xl px-6 pt-24 pb-12 lg:px-8">
           {/* Large brand */}
@@ -30,7 +33,7 @@ export default function Footer() {
               height={100}
               className="mx-auto mb-6 rounded-full"
             />
-            <h2 className="text-5xl font-heading font-bold tracking-[0.2em] text-white lg:text-6xl">
+            <h2 className="text-5xl font-heading font-bold tracking-[0.2em] gradient-text-gold lg:text-6xl">
               NYAYSEVAK
             </h2>
             <p className="mt-4 text-xs uppercase tracking-[0.3em] text-gold/70">
@@ -52,7 +55,7 @@ export default function Footer() {
               <ul className="space-y-3">
                 {quickLinks.map((link) => (
                   <li key={link.label}>
-                    <Link href={link.href} className="text-sm text-gray-300 transition-colors duration-200 hover:text-white">
+                    <Link href={link.href} className="text-sm text-gray-300 transition-colors duration-200 hover:text-white link-underline">
                       {link.label}
                     </Link>
                   </li>
@@ -68,7 +71,7 @@ export default function Footer() {
               <ul className="space-y-3">
                 {practiceAreas.map((area) => (
                   <li key={area.slug}>
-                    <Link href={`/practice-areas/${area.slug}`} className="text-sm text-gray-300 transition-colors duration-200 hover:text-white">
+                    <Link href={`/practice-areas/${area.slug}`} className="text-sm text-gray-300 transition-colors duration-200 hover:text-white link-underline">
                       {area.title}
                     </Link>
                   </li>
@@ -84,7 +87,7 @@ export default function Footer() {
               <ul className="space-y-3">
                 {allServices.map((service) => (
                   <li key={service.slug}>
-                    <Link href={`/services/${service.slug}`} className="text-sm text-gray-300 transition-colors duration-200 hover:text-white">
+                    <Link href={`/services/${service.slug}`} className="text-sm text-gray-300 transition-colors duration-200 hover:text-white link-underline">
                       {service.title}
                     </Link>
                   </li>

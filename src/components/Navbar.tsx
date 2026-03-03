@@ -79,7 +79,7 @@ export default function Navbar() {
           {/* Desktop CTA */}
           <Link
             href="/contact"
-            className="hidden lg:inline-flex items-center rounded-xl border border-gold/40 px-6 py-2.5 text-xs font-semibold uppercase tracking-widest text-gold transition-all duration-300 hover:bg-gold/10 hover:border-gold"
+            className="btn-gold-shine hidden lg:inline-flex items-center rounded-xl bg-gradient-to-r from-gold to-gold-light px-6 py-2.5 text-xs font-semibold uppercase tracking-widest text-black transition-all duration-300 hover:shadow-lg hover:shadow-gold/20"
           >
             Get Consultation
           </Link>

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { practiceAreas } from "@/data/practice-areas";
 
 const letters = practiceAreas.map((a) => a.letter);
+const totalCount = practiceAreas.length;
 
 export default function PracticeAreas() {
   const [expandedSlug, setExpandedSlug] = useState<string | null>(null);
@@ -15,13 +16,19 @@ export default function PracticeAreas() {
     : practiceAreas;
 
   return (
-    <section id="practice-areas" className="bg-cream py-16 sm:py-20 lg:py-28">
+    <section id="practice-areas" className="bg-cream cream-pattern py-16 sm:py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <p className="mb-3 sm:mb-4 text-[10px] sm:text-xs uppercase tracking-[0.3em] text-gold-dark/70 text-center">
-          A-Z Legal Coverage
-        </p>
+        <div className="flex items-center justify-center gap-3 mb-4">
+          <div className="h-8 w-1 bg-gold-dark rounded-full" />
+          <p className="text-[10px] sm:text-xs uppercase tracking-[0.3em] text-gold-dark font-semibold">
+            A-Z Legal Coverage
+          </p>
+        </div>
         <h2 className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-bold tracking-tight text-gray-900">
           Practice Areas
+          <span className="ml-3 inline-flex items-center align-middle rounded-full bg-gold/10 px-3 py-1 text-sm font-body font-semibold text-gold-dark">
+            {totalCount}
+          </span>
         </h2>
         <p className="mx-auto mt-3 sm:mt-4 max-w-2xl text-center text-sm sm:text-base text-gray-500">
           Complete A-Z Legal Services Across Every Domain
@@ -30,13 +37,46 @@ export default function PracticeAreas() {
         <div className="mt-10 sm:mt-12 lg:mt-16 flex flex-col lg:flex-row gap-6 sm:gap-8 lg:gap-10">
           {/* Left: Letter navigation */}
           <div className="lg:w-[200px] shrink-0">
-            {/* Mobile: Horizontal scrollable row */}
-            <div className="scrollbar-hide flex gap-1.5 pb-2 -mx-1 lg:mx-0 lg:pb-0 lg:flex-col lg:sticky lg:top-28 overflow-x-auto lg:overflow-x-visible">
+            {/* Mobile: Horizontal scrollable row with edge shadows */}
+            <div className="relative lg:hidden">
+              <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-6 bg-gradient-to-r from-cream to-transparent z-10" />
+              <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-6 bg-gradient-to-l from-cream to-transparent z-10" />
+              <div className="scrollbar-hide flex gap-1.5 pb-2 -mx-1 overflow-x-auto px-6">
+                <button
+                  onClick={() => setActiveLetter(null)}
+                  className={`h-9 w-9 sm:h-10 sm:w-10 rounded-lg text-xs sm:text-sm font-semibold flex items-center justify-center shrink-0 transition-all duration-300 ${
+                    !activeLetter
+                      ? "bg-gradient-to-r from-gold to-gold-light text-black shadow-lg shadow-gold/20"
+                      : "bg-cream-dark text-gray-500 hover:bg-gold/10 hover:text-gold-dark"
+                  }`}
+                >
+                  All
+                </button>
+                {letters.map((letter) => (
+                  <button
+                    key={letter}
+                    onClick={() =>
+                      setActiveLetter(activeLetter === letter ? null : letter)
+                    }
+                    className={`h-9 w-9 sm:h-10 sm:w-10 rounded-lg text-xs sm:text-sm font-semibold flex items-center justify-center shrink-0 transition-all duration-300 transition-transform hover:scale-105 ${
+                      activeLetter === letter
+                        ? "bg-gradient-to-r from-gold to-gold-light text-black shadow-lg shadow-gold/20"
+                        : "bg-cream-dark text-gray-500 hover:bg-gold/10 hover:text-gold-dark"
+                    }`}
+                  >
+                    {letter}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Desktop: Vertical sticky nav */}
+            <div className="hidden lg:flex flex-col sticky top-28 gap-1.5">
               <button
                 onClick={() => setActiveLetter(null)}
-                className={`h-9 w-9 sm:h-10 sm:w-10 lg:h-auto lg:w-full rounded-lg text-xs sm:text-sm font-semibold flex items-center justify-center shrink-0 transition-all duration-300 ${
+                className={`h-auto w-full rounded-lg text-sm font-semibold flex items-center justify-center py-2 transition-all duration-300 transition-transform hover:scale-105 ${
                   !activeLetter
-                    ? "bg-gold text-black"
+                    ? "bg-gradient-to-r from-gold to-gold-light text-black shadow-lg shadow-gold/20"
                     : "bg-cream-dark text-gray-500 hover:bg-gold/10 hover:text-gold-dark"
                 }`}
               >
@@ -48,9 +88,9 @@ export default function PracticeAreas() {
                   onClick={() =>
                     setActiveLetter(activeLetter === letter ? null : letter)
                   }
-                  className={`h-9 w-9 sm:h-10 sm:w-10 lg:h-auto lg:w-full rounded-lg text-xs sm:text-sm font-semibold flex items-center justify-center shrink-0 transition-all duration-300 ${
+                  className={`h-auto w-full rounded-lg text-sm font-semibold flex items-center justify-center py-2 transition-all duration-300 transition-transform hover:scale-105 ${
                     activeLetter === letter
-                      ? "bg-gold text-black"
+                      ? "bg-gradient-to-r from-gold to-gold-light text-black shadow-lg shadow-gold/20"
                       : "bg-cream-dark text-gray-500 hover:bg-gold/10 hover:text-gold-dark"
                   }`}
                 >
@@ -60,18 +100,23 @@ export default function PracticeAreas() {
             </div>
           </div>
 
-          {/* Right: Practice area cards */}
-          <div className="flex-1 min-w-0">
-            <div className="space-y-3 sm:space-y-4">
+          {/* Right: Practice area cards with watermark */}
+          <div className="flex-1 min-w-0 relative">
+            {/* Giant watermark letter */}
+            {activeLetter && (
+              <div className="watermark-letter absolute -top-8 right-0 lg:right-8 z-0 select-none">
+                {activeLetter}
+              </div>
+            )}
+
+            <div className="space-y-3 sm:space-y-4 relative z-10">
               {filtered.map((area) => {
                 const isExpanded = expandedSlug === area.slug;
                 return (
                   <div
                     key={area.slug}
-                    className={`group rounded-xl bg-white border overflow-hidden transition-all duration-300 ${
-                      isExpanded
-                        ? "shadow-md border-gold/20"
-                        : "shadow-sm border-gray-100 hover:shadow-md hover:border-gold/20"
+                    className={`group cream-card overflow-hidden ${
+                      isExpanded ? "!border-gold/20" : ""
                     }`}
                   >
                     {/* Header button */}

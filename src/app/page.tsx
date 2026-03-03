@@ -1,4 +1,5 @@
 import Hero from "@/components/Hero";
+import StatsMarquee from "@/components/StatsMarquee";
 import About from "@/components/About";
 import Services from "@/components/Services";
 import PlatformBanner from "@/components/PlatformBanner";
@@ -7,27 +8,34 @@ import Courts from "@/components/Courts";
 import FeaturesPreview from "@/components/FeaturesPreview";
 import Contact from "@/components/Contact";
 
-function GoldSeparator() {
-  return <div className="gold-shimmer" />;
+function OrnamentalDivider() {
+  return (
+    <div className="ornamental-divider">
+      <span className="ornamental-diamond" />
+    </div>
+  );
+}
+
+function GoldShimmerDivider() {
+  return <div className="gold-shimmer mx-auto max-w-4xl" />;
 }
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-dark-deep">
       <Hero />
-      <GoldSeparator />
+      <StatsMarquee />
       <About />
-      <GoldSeparator />
+      <OrnamentalDivider />
       <Services />
-      <GoldSeparator />
+      <GoldShimmerDivider />
       <PlatformBanner />
-      <GoldSeparator />
+      <GoldShimmerDivider />
       <PracticeAreas />
-      <GoldSeparator />
+      <OrnamentalDivider />
       <Courts />
-      <GoldSeparator />
+      <GoldShimmerDivider />
       <FeaturesPreview />
-      <GoldSeparator />
       <Contact />
     </main>
   );

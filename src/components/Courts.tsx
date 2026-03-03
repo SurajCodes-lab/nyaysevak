@@ -4,271 +4,366 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { highCourts, tribunalGroups, districtCourts } from "@/data/courts";
-
-const tabs = ["Supreme Court", "High Courts", "District Courts", "Tribunals", "Arbitration"];
+import ScrollReveal from "./ScrollReveal";
 
 export default function Courts() {
-  const [activeTab, setActiveTab] = useState(0);
+  const [dcExpanded, setDcExpanded] = useState(false);
   const [dcFilter, setDcFilter] = useState<"all" | "state" | "ut">("all");
   const [expandedState, setExpandedState] = useState<string | null>(null);
+  const [mobileTier, setMobileTier] = useState<"hc" | "tribunals">("hc");
 
-  const filteredDC = dcFilter === "all"
-    ? districtCourts
-    : districtCourts.filter((d) => d.type === dcFilter);
+  const filteredDC =
+    dcFilter === "all"
+      ? districtCourts
+      : districtCourts.filter((d) => d.type === dcFilter);
 
-  const totalDistricts = districtCourts.reduce((sum, s) => sum + s.districts.length, 0);
+  const totalDistricts = districtCourts.reduce(
+    (sum, s) => sum + s.districts.length,
+    0
+  );
+
+  const scrollToTier = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
 
   return (
-    <section id="courts" className="bg-dark-deep py-16 sm:py-20 lg:py-28">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <p className="mb-3 sm:mb-4 text-[10px] sm:text-xs uppercase tracking-[0.3em] text-gold/70 text-center">
-          Pan-India Presence
-        </p>
-        <h2 className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-bold tracking-tight text-white">
+    <section
+      id="courts"
+      className="animated-mesh py-20 sm:py-28 lg:py-36 relative overflow-hidden"
+    >
+      {/* Glow orbs */}
+      <div className="glow-pulse pointer-events-none absolute top-[30%] -right-[8%] w-[500px] h-[500px] rounded-full bg-[radial-gradient(circle,rgba(201,168,76,0.05)_0%,transparent_70%)]" />
+      <div
+        className="glow-pulse pointer-events-none absolute bottom-[20%] -left-[5%] w-[400px] h-[400px] rounded-full bg-[radial-gradient(circle,rgba(201,168,76,0.04)_0%,transparent_70%)]"
+        style={{ animationDelay: "3s" }}
+      />
+
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        {/* Section header */}
+        <div className="flex items-center justify-center gap-4 mb-4">
+          <div className="h-px w-12 sm:w-20 bg-gradient-to-r from-transparent to-gold/40" />
+          <p className="text-[10px] sm:text-xs uppercase tracking-[0.3em] text-gold font-semibold">
+            Pan-India Presence
+          </p>
+          <div className="h-px w-12 sm:w-20 bg-gradient-to-l from-transparent to-gold/40" />
+        </div>
+        <h2 className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-bold tracking-tight text-white heading-glow">
           Court Coverage
         </h2>
         <p className="mx-auto mt-3 sm:mt-4 max-w-2xl text-center text-sm sm:text-base text-gray-300">
           Complete Coverage Across Every Court, Tribunal &amp; Arbitration Centre
         </p>
 
-        {/* Tabs */}
-        <div className="mt-8 sm:mt-10 lg:mt-12 overflow-x-auto scrollbar-hide pb-2">
-          <div className="flex gap-2 justify-start sm:justify-center min-w-max sm:min-w-0">
-            {tabs.map((tab, i) => (
-              <button
-                key={tab}
-                onClick={() => setActiveTab(i)}
-                className={`rounded-full px-4 sm:px-5 py-2 sm:py-2.5 text-[10px] sm:text-xs font-semibold uppercase tracking-wider whitespace-nowrap shrink-0 transition-all duration-300 ${
-                  activeTab === i
-                    ? "bg-gold text-black shadow-lg shadow-gold/20"
-                    : "glass-card text-gray-400 hover:text-white hover:border-gold/20"
-                }`}
-              >
-                {tab}
-              </button>
-            ))}
-          </div>
+        {/* Anchor links */}
+        <div className="mt-8 sm:mt-10 flex items-center justify-center gap-2 sm:gap-4 text-[10px] sm:text-xs uppercase tracking-wider text-gray-500">
+          <button onClick={() => scrollToTier("tier-supreme")} className="hover:text-gold transition-colors">Supreme Court</button>
+          <span className="text-gold/30">&bull;</span>
+          <button onClick={() => scrollToTier("tier-high")} className="hover:text-gold transition-colors">High Courts</button>
+          <span className="text-gold/30">&bull;</span>
+          <button onClick={() => scrollToTier("tier-tribunals")} className="hover:text-gold transition-colors">Tribunals</button>
+          <span className="text-gold/30">&bull;</span>
+          <button onClick={() => scrollToTier("tier-districts")} className="hover:text-gold transition-colors">Districts</button>
         </div>
 
-        {/* Content */}
-        <div className="mt-10 sm:mt-12 lg:mt-14">
-          {/* Supreme Court */}
-          {activeTab === 0 && (
-            <div className="mx-auto max-w-4xl">
-              <div className="glass-card p-6 sm:p-8">
-                <div className="flex flex-col md:flex-row items-center gap-6 md:gap-10">
-                  {/* Supreme Court building image */}
-                  <div className="w-full max-w-[200px] sm:max-w-[240px] md:w-[280px] shrink-0">
-                    <Image
-                      src="/courts-image.png"
-                      alt="Supreme Court of India"
-                      width={360}
-                      height={480}
-                      className="w-full h-auto rounded-xl object-cover shadow-lg shadow-gold/10"
-                    />
-                  </div>
+        {/* ══════════════════════════════════════════════
+           TOP TIER — Supreme Court (always visible)
+           ══════════════════════════════════════════════ */}
+        <ScrollReveal>
+          <div id="tier-supreme" className="mt-12 sm:mt-16 scroll-mt-24">
+            <div className="court-apex rounded-2xl p-6 sm:p-8 lg:p-10 relative overflow-hidden">
+              {/* Background image */}
+              <div className="absolute inset-0 z-0">
+                <Image
+                  src="/courts-image.png"
+                  alt=""
+                  fill
+                  className="object-cover opacity-[0.12]"
+                  sizes="100vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-dark-deep/80 via-dark-deep/60 to-dark-deep/80" />
+              </div>
 
-                  <div className="flex-1 text-center md:text-left">
-                    <h3 className="text-xl sm:text-2xl lg:text-3xl font-heading font-bold text-white">
-                      Supreme Court of India
-                    </h3>
-                    <p className="mt-4 sm:mt-6 text-sm sm:text-base text-gray-400 leading-relaxed">
-                      Complete coverage of all Supreme Court matters with access to India&apos;s top advocates and senior counsels.
-                    </p>
+              <div className="relative z-10 flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                <div className="flex-1 text-center md:text-left">
+                  <p className="text-[10px] sm:text-xs uppercase tracking-[0.3em] text-gold/70 font-semibold mb-3">
+                    Apex Court
+                  </p>
+                  <h3 className="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-white heading-glow">
+                    Supreme Court of India
+                  </h3>
+                  <p className="mt-4 text-sm sm:text-base text-gray-300 leading-relaxed max-w-xl">
+                    Complete coverage of all Supreme Court matters with access to India&apos;s top advocates and senior counsels.
+                  </p>
+
+                  {/* Stats inline */}
+                  <div className="mt-6 sm:mt-8 flex flex-wrap items-center gap-6 sm:gap-10 justify-center md:justify-start">
+                    {[
+                      { val: "34", label: "Judges" },
+                      { val: "4+", label: "Case Types" },
+                      { val: "#1", label: "Apex Court" },
+                    ].map((s) => (
+                      <div key={s.label} className="text-center md:text-left">
+                        <span className="text-3xl sm:text-4xl font-heading font-bold stat-gradient">
+                          {s.val}
+                        </span>
+                        <p className="text-[10px] sm:text-xs uppercase tracking-wider text-gray-500 mt-1">
+                          {s.label}
+                        </p>
+                      </div>
+                    ))}
                   </div>
                 </div>
-                <div className="mt-8 sm:mt-10 grid grid-cols-1 gap-3 sm:gap-4 sm:grid-cols-2">
-                  {["Complete SC matter coverage", "Access to SC advocates & Sr. Counsels", "SLP, PIL, Writ Petition, Appeals", "Constitutional matters & landmark cases"].map((item) => (
-                    <div key={item} className="glass-card p-4 border-l-2 border-l-gold/40">
+
+                {/* Feature list */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full md:w-auto md:shrink-0 md:max-w-sm">
+                  {[
+                    "SLP, PIL, Writ Petitions",
+                    "Access to SC Advocates & Sr. Counsels",
+                    "Constitutional Matters",
+                    "Landmark Cases & Appeals",
+                  ].map((item) => (
+                    <div
+                      key={item}
+                      className="glass-card p-3.5 sm:p-4 border-l-2 border-l-gold/40"
+                    >
                       <span className="text-xs sm:text-sm text-gray-300">{item}</span>
                     </div>
                   ))}
                 </div>
               </div>
             </div>
-          )}
+          </div>
+        </ScrollReveal>
 
-          {/* High Courts */}
-          {activeTab === 1 && (
-            <div>
-              <p className="mb-6 sm:mb-8 lg:mb-10 text-center text-xs sm:text-sm text-gray-500">All 25 High Courts across India</p>
-              {/* Desktop table */}
-              <div className="hidden md:block rounded-2xl overflow-hidden border border-white/[0.08]">
-                <table className="w-full text-left">
-                  <thead>
-                    <tr className="bg-dark-card">
-                      <th className="px-5 lg:px-6 py-4 text-[10px] sm:text-xs uppercase tracking-wider text-gold/70 font-semibold">Court</th>
-                      <th className="px-5 lg:px-6 py-4 text-[10px] sm:text-xs uppercase tracking-wider text-gold/70 font-semibold">Jurisdiction</th>
-                      <th className="px-5 lg:px-6 py-4 text-[10px] sm:text-xs uppercase tracking-wider text-gold/70 font-semibold">Benches</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-white/5">
-                    {highCourts.map((court) => (
-                      <tr key={court.slug} className="hover:bg-white/[0.02] transition-colors duration-200 group">
-                        <td className="px-5 lg:px-6 py-4 text-sm font-medium">
-                          <Link href={`/courts/${court.slug}`} className="text-white group-hover:text-gold transition-colors duration-200">
-                            {court.name}
-                          </Link>
-                        </td>
-                        <td className="px-5 lg:px-6 py-4 text-sm text-gray-400">{court.jurisdiction}</td>
-                        <td className="px-5 lg:px-6 py-4 text-sm text-gray-500">{court.benches.join(", ") || "\u2014"}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-              {/* Mobile cards */}
-              <div className="md:hidden space-y-2 sm:space-y-3">
-                {highCourts.map((court) => (
-                  <Link
-                    key={court.slug}
-                    href={`/courts/${court.slug}`}
-                    className="block glass-card p-4 sm:p-5 hover:border-gold/30 transition-all duration-300"
-                  >
-                    <h4 className="text-sm font-semibold text-gold">{court.name}</h4>
-                    <p className="mt-1.5 text-xs text-gray-400">{court.jurisdiction}</p>
-                    {court.benches.length > 0 && (
-                      <p className="mt-1.5 text-xs text-gray-500">Benches: {court.benches.join(", ")}</p>
-                    )}
-                  </Link>
-                ))}
-              </div>
-            </div>
-          )}
+        {/* ══════════════════════════════════════════════
+           MIDDLE TIER — High Courts & Tribunals
+           ══════════════════════════════════════════════ */}
+        <div id="tier-high" className="mt-12 sm:mt-16 scroll-mt-24">
+          {/* Mobile: tabs for HC / Tribunals */}
+          <div className="lg:hidden flex justify-center gap-2 mb-8">
+            <button
+              onClick={() => setMobileTier("hc")}
+              className={`rounded-full px-5 py-2.5 text-xs font-semibold uppercase tracking-wider transition-all duration-300 ${
+                mobileTier === "hc"
+                  ? "bg-gradient-to-r from-gold to-gold-light text-black shadow-lg shadow-gold/25"
+                  : "glass-card text-gray-400 hover:text-white"
+              }`}
+            >
+              High Courts
+            </button>
+            <button
+              onClick={() => setMobileTier("tribunals")}
+              className={`rounded-full px-5 py-2.5 text-xs font-semibold uppercase tracking-wider transition-all duration-300 ${
+                mobileTier === "tribunals"
+                  ? "bg-gradient-to-r from-gold to-gold-light text-black shadow-lg shadow-gold/25"
+                  : "glass-card text-gray-400 hover:text-white"
+              }`}
+            >
+              Tribunals
+            </button>
+          </div>
 
-          {/* District Courts */}
-          {activeTab === 2 && (
-            <div>
-              {/* Stats */}
-              <div className="mb-8 sm:mb-10 lg:mb-12 grid grid-cols-3 gap-3 sm:gap-4 lg:gap-6 max-w-2xl mx-auto">
-                <div className="glass-card p-4 sm:p-6 text-center">
-                  <span className="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-white">{districtCourts.length}</span>
-                  <p className="mt-1 sm:mt-2 text-[10px] sm:text-xs uppercase tracking-wider text-gray-500">States &amp; UTs</p>
-                </div>
-                <div className="glass-card p-4 sm:p-6 text-center">
-                  <span className="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-white">{totalDistricts}+</span>
-                  <p className="mt-1 sm:mt-2 text-[10px] sm:text-xs uppercase tracking-wider text-gray-500">District Courts</p>
-                </div>
-                <div className="glass-card p-4 sm:p-6 text-center">
-                  <span className="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-white">100%</span>
-                  <p className="mt-1 sm:mt-2 text-[10px] sm:text-xs uppercase tracking-wider text-gray-500">Pan-India</p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
+            {/* Left — High Courts */}
+            <ScrollReveal>
+              <div className={`${mobileTier !== "hc" ? "hidden lg:block" : ""}`}>
+                <h3 className="text-lg sm:text-xl font-heading font-bold text-white mb-4 sm:mb-6 heading-glow">
+                  25 High Courts
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {highCourts.map((court) => (
+                    <Link
+                      key={court.slug}
+                      href={`/courts/${court.slug}`}
+                      className="glass-card px-3 py-2 text-xs sm:text-sm text-gray-300 hover:text-gold hover:border-gold/30 transition-all duration-300"
+                    >
+                      {court.name.replace("High Court of ", "").replace(" High Court", "")}
+                    </Link>
+                  ))}
                 </div>
               </div>
+            </ScrollReveal>
 
-              {/* Filter */}
-              <div className="mb-6 sm:mb-8 flex justify-center gap-2">
-                {([["all", "All"], ["state", "States"], ["ut", "Union Territories"]] as const).map(([key, label]) => (
-                  <button
-                    key={key}
-                    onClick={() => setDcFilter(key)}
-                    className={`rounded-full px-4 sm:px-5 py-2 sm:py-2.5 text-[10px] sm:text-xs font-semibold uppercase tracking-wider whitespace-nowrap shrink-0 transition-all duration-300 ${
-                      dcFilter === key
-                        ? "bg-gold text-black shadow-lg shadow-gold/20"
-                        : "glass-card text-gray-400 hover:text-white hover:border-gold/20"
-                    }`}
-                  >
-                    {label}
-                  </button>
-                ))}
-              </div>
-
-              {/* Accordion rows */}
-              <div className="space-y-2 sm:space-y-3">
-                {filteredDC.map((stateData) => {
-                  const isOpen = expandedState === stateData.state;
-                  return (
-                    <div key={stateData.state} className="glass-card overflow-hidden">
-                      <button
-                        onClick={() => setExpandedState(isOpen ? null : stateData.state)}
-                        className="flex w-full items-center justify-between px-4 sm:px-5 py-3.5 sm:py-4 text-left transition-colors duration-200 hover:bg-white/[0.02]"
+            {/* Right — Tribunals */}
+            <ScrollReveal>
+              <div id="tier-tribunals" className={`scroll-mt-24 ${mobileTier !== "tribunals" ? "hidden lg:block" : ""}`}>
+                <h3 className="text-lg sm:text-xl font-heading font-bold text-white mb-4 sm:mb-6 heading-glow">
+                  Tribunals &amp; Specialized Bodies
+                </h3>
+                <div className="space-y-4">
+                  {tribunalGroups.map((group) => (
+                    <div key={group.slug}>
+                      <Link
+                        href={`/courts/${group.slug}`}
+                        className="text-sm font-semibold text-gold hover:text-gold-light transition-colors duration-200"
                       >
-                        <div className="flex items-center gap-3 sm:gap-4">
-                          <span className="text-xs font-bold text-gold/60 w-6 text-right shrink-0">{stateData.districts.length}</span>
-                          <div>
-                            <Link
-                              href={`/courts/${stateData.slug}`}
-                              className="text-sm font-medium text-white hover:text-gold transition-colors duration-200"
-                              onClick={(e) => e.stopPropagation()}
-                            >
-                              {stateData.state}
-                            </Link>
-                            <span className="ml-2 sm:ml-3 text-[10px] uppercase tracking-wider text-gray-500">
-                              {stateData.type === "ut" ? "UT" : "State"}
-                            </span>
-                          </div>
-                        </div>
-                        <svg
-                          className={`h-4 w-4 shrink-0 text-gold/50 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
-                          fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}
-                        >
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-                        </svg>
-                      </button>
-                      <div
-                        className="overflow-hidden transition-all duration-500 ease-in-out"
-                        style={{ maxHeight: isOpen ? `${stateData.districts.length * 28 + 32}px` : "0px", opacity: isOpen ? 1 : 0 }}
-                      >
-                        <div className="px-4 sm:px-5 pb-4 pl-10 sm:pl-14 flex flex-wrap gap-2">
-                          {stateData.districts.map((d) => (
-                            <span key={d} className="rounded-lg bg-white/[0.05] border border-white/[0.08] px-2.5 sm:px-3 py-1.5 text-xs text-gray-400">
-                              {d}
-                            </span>
-                          ))}
-                        </div>
+                        {group.title}
+                      </Link>
+                      <div className="mt-2 flex flex-wrap gap-1.5">
+                        {group.items.map((item) => (
+                          <span
+                            key={item}
+                            className="text-xs text-gray-400 bg-white/[0.03] rounded-lg px-2.5 py-1.5 border border-white/5"
+                          >
+                            {item}
+                          </span>
+                        ))}
                       </div>
                     </div>
-                  );
-                })}
+                  ))}
+                </div>
+              </div>
+            </ScrollReveal>
+          </div>
+        </div>
+
+        {/* ══════════════════════════════════════════════
+           BOTTOM TIER — District Courts (expandable)
+           ══════════════════════════════════════════════ */}
+        <div id="tier-districts" className="mt-12 sm:mt-16 scroll-mt-24">
+          <div className="glass-card p-6 sm:p-8">
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6">
+              <div className="text-center sm:text-left">
+                <h3 className="text-lg sm:text-xl font-heading font-bold text-white heading-glow">
+                  District Courts
+                </h3>
+                <p className="mt-1 text-sm text-gray-400">
+                  <span className="text-2xl sm:text-3xl font-heading font-bold stat-gradient mr-2">
+                    {totalDistricts}+
+                  </span>
+                  Courts across{" "}
+                  <span className="text-white font-medium">
+                    {districtCourts.length} States &amp; UTs
+                  </span>
+                </p>
+              </div>
+
+              <button
+                onClick={() => setDcExpanded(!dcExpanded)}
+                className={`btn-premium inline-flex items-center gap-2 border border-gold/40 rounded-xl px-6 py-3 text-xs sm:text-sm font-semibold uppercase tracking-widest text-gold transition-all duration-300 ${
+                  dcExpanded ? "bg-gold/10" : ""
+                }`}
+              >
+                {dcExpanded ? "Collapse" : "Explore District Courts"}
+                <svg
+                  className={`h-4 w-4 transition-transform duration-300 ${dcExpanded ? "rotate-180" : ""}`}
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+            </div>
+
+            {/* Expanded content */}
+            <div
+              className="overflow-hidden transition-all duration-700 ease-in-out"
+              style={{
+                maxHeight: dcExpanded ? "5000px" : "0px",
+                opacity: dcExpanded ? 1 : 0,
+              }}
+            >
+              <div className="mt-6 sm:mt-8 pt-6 border-t border-white/10">
+                {/* Filter pills */}
+                <div className="mb-6 sm:mb-8 flex justify-center gap-2">
+                  {(
+                    [
+                      ["all", "All"],
+                      ["state", "States"],
+                      ["ut", "Union Territories"],
+                    ] as const
+                  ).map(([key, label]) => (
+                    <button
+                      key={key}
+                      onClick={() => setDcFilter(key)}
+                      className={`rounded-full px-4 sm:px-5 py-2 sm:py-2.5 text-[10px] sm:text-xs font-semibold uppercase tracking-wider whitespace-nowrap shrink-0 transition-all duration-300 ${
+                        dcFilter === key
+                          ? "bg-gradient-to-r from-gold to-gold-light text-black shadow-lg shadow-gold/25"
+                          : "glass-card text-gray-400 hover:text-white hover:border-gold/20"
+                      }`}
+                    >
+                      {label}
+                    </button>
+                  ))}
+                </div>
+
+                {/* State accordion */}
+                <div className="space-y-2 sm:space-y-3">
+                  {filteredDC.map((stateData) => {
+                    const isOpen = expandedState === stateData.state;
+                    return (
+                      <div
+                        key={stateData.state}
+                        className="glass-card overflow-hidden"
+                      >
+                        <button
+                          onClick={() =>
+                            setExpandedState(isOpen ? null : stateData.state)
+                          }
+                          className="flex w-full items-center justify-between px-4 sm:px-5 py-3.5 sm:py-4 text-left transition-colors duration-200 hover:bg-gold/[0.03]"
+                        >
+                          <div className="flex items-center gap-3 sm:gap-4">
+                            <span className="text-xs font-bold text-gold w-6 text-right shrink-0">
+                              {stateData.districts.length}
+                            </span>
+                            <div>
+                              <Link
+                                href={`/courts/${stateData.slug}`}
+                                className="text-sm font-medium text-white hover:text-gold transition-colors duration-200"
+                                onClick={(e) => e.stopPropagation()}
+                              >
+                                {stateData.state}
+                              </Link>
+                              <span className="ml-2 sm:ml-3 text-[10px] uppercase tracking-wider text-gray-500">
+                                {stateData.type === "ut" ? "UT" : "State"}
+                              </span>
+                            </div>
+                          </div>
+                          <svg
+                            className={`h-4 w-4 shrink-0 text-gold/50 transition-transform duration-300 ${
+                              isOpen ? "rotate-180" : ""
+                            }`}
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            strokeWidth={2}
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              d="M19 9l-7 7-7-7"
+                            />
+                          </svg>
+                        </button>
+                        <div
+                          className="overflow-hidden transition-all duration-500 ease-in-out"
+                          style={{
+                            maxHeight: isOpen
+                              ? `${stateData.districts.length * 28 + 32}px`
+                              : "0px",
+                            opacity: isOpen ? 1 : 0,
+                          }}
+                        >
+                          <div className="px-4 sm:px-5 pb-4 pl-10 sm:pl-14 flex flex-wrap gap-2">
+                            {stateData.districts.map((d) => (
+                              <span
+                                key={d}
+                                className="rounded-lg bg-gold/5 border border-gold/10 px-2.5 sm:px-3 py-1.5 text-xs text-gray-300"
+                              >
+                                {d}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
             </div>
-          )}
-
-          {/* Tribunals */}
-          {activeTab === 3 && (
-            <div className="space-y-4">
-              {tribunalGroups.map((group) => (
-                <div key={group.slug} className="glass-card p-5 sm:p-6 lg:p-8">
-                  <Link
-                    href={`/courts/${group.slug}`}
-                    className="text-base sm:text-lg font-heading font-bold text-gold hover:text-gold-light transition-colors duration-200"
-                  >
-                    {group.title}
-                  </Link>
-                  <ul className="mt-3 sm:mt-4 space-y-2 sm:space-y-2.5">
-                    {group.items.map((item) => (
-                      <li key={item} className="flex items-center gap-3 text-xs sm:text-sm text-gray-400">
-                        <span className="h-1.5 w-1.5 rounded-full bg-gold/50 shrink-0" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          )}
-
-          {/* Arbitration */}
-          {activeTab === 4 && (
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
-              {[
-                { title: "Domestic Arbitration", items: ["MCIA (Mumbai)", "DIAC (Delhi)", "ICA (Indian Council)", "ICADR", "IIAM", "NANI", "State Arbitration Centers"] },
-                { title: "International Arbitration", items: ["ICC (International Chamber of Commerce)", "LCIA (London)", "SIAC (Singapore)", "HKIAC (Hong Kong)"] },
-                { title: "ADR Services", items: ["Ad-hoc Arbitration under Act, 1996", "Commercial Mediation", "Family Mediation", "Court-annexed Mediation", "Conciliation proceedings", "Lok Adalat services"] },
-              ].map((group) => (
-                <div key={group.title} className="glass-card p-5 sm:p-6 lg:p-8">
-                  <h4 className="text-base sm:text-lg font-heading font-bold text-white mb-4">{group.title}</h4>
-                  <ul className="space-y-2.5 sm:space-y-3">
-                    {group.items.map((item) => (
-                      <li key={item} className="flex items-center gap-3 text-xs sm:text-sm text-gray-400">
-                        <span className="h-1.5 w-1.5 rounded-full bg-gold/50 shrink-0" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          )}
+          </div>
         </div>
       </div>
     </section>
