@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const missionPoints = [
   { num: "01", text: "Bridge the gap between legal service providers and consumers across India" },
   { num: "02", text: "Simplify complex legal processes through digital solutions" },
@@ -74,19 +76,38 @@ const trustItems = [
 export default function About() {
   return (
     <section id="about">
-      {/* Section 1 — Dark: Large vision statement */}
+      {/* Section 1 — Dark: Vision statement with Ashoka lion image */}
       <div className="bg-black py-16 sm:py-20 lg:py-28">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-          <p className="mb-6 sm:mb-8 text-[11px] sm:text-xs uppercase tracking-[0.3em] text-gold/70 text-center">
-            Who We Are
-          </p>
-          <blockquote className="text-center">
-            <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-heading font-bold leading-snug tracking-tight text-white">
-              To become India&apos;s premier legal services platform, democratizing access to quality
-              legal assistance and creating transparency in the Indian legal ecosystem.
-            </p>
-          </blockquote>
-          <div className="mx-auto mt-8 sm:mt-10 h-px w-16 sm:w-24 bg-gold/40" />
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
+            {/* Left: Ashoka lion image */}
+            <div className="w-full max-w-[280px] sm:max-w-[320px] lg:w-[38%] lg:max-w-none shrink-0">
+              <div className="relative">
+                <Image
+                  src="/about-vision.jpeg"
+                  alt="Ashoka Pillar — Symbol of Indian Justice"
+                  width={480}
+                  height={640}
+                  className="w-full h-auto rounded-2xl object-cover shadow-2xl shadow-gold/10"
+                />
+                <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gold/10" />
+              </div>
+            </div>
+
+            {/* Right: Vision text */}
+            <div className="flex-1 text-center lg:text-left">
+              <p className="mb-6 sm:mb-8 text-[11px] sm:text-xs uppercase tracking-[0.3em] text-gold/70">
+                Who We Are
+              </p>
+              <blockquote>
+                <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-heading font-bold leading-snug tracking-tight text-white">
+                  To become India&apos;s premier legal services platform, democratizing access to quality
+                  legal assistance and creating transparency in the Indian legal ecosystem.
+                </p>
+              </blockquote>
+              <div className="mt-8 sm:mt-10 h-px w-16 sm:w-24 bg-gold/40 mx-auto lg:mx-0" />
+            </div>
+          </div>
         </div>
       </div>
 

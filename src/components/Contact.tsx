@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
@@ -15,7 +16,20 @@ export default function Contact() {
     <section id="contact" className="min-h-screen">
       <div className="flex flex-col lg:flex-row min-h-[80vh]">
         {/* Left half — Dark */}
-        <div className="flex flex-col justify-center bg-black px-4 sm:px-6 py-16 sm:py-20 lg:w-1/2 lg:px-12 xl:px-16 lg:py-28 xl:py-32">
+        <div className="relative flex flex-col justify-center bg-black px-4 sm:px-6 py-16 sm:py-20 lg:w-1/2 lg:px-12 xl:px-16 lg:py-28 xl:py-32 overflow-hidden">
+          {/* Background handshake image */}
+          <div className="absolute inset-0 z-0">
+            <Image
+              src="/contact-image.png"
+              alt=""
+              fill
+              className="object-cover opacity-[0.08]"
+              sizes="50vw"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/90 to-black/70" />
+          </div>
+
+          <div className="relative z-10">
           <p className="mb-3 sm:mb-4 text-[10px] sm:text-xs uppercase tracking-[0.3em] text-gold/70">
             Let&apos;s Connect
           </p>
@@ -85,6 +99,7 @@ export default function Contact() {
                 </p>
               </div>
             </div>
+          </div>
           </div>
         </div>
 

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { highCourts, tribunalGroups, districtCourts } from "@/data/courts";
 
 const tabs = ["Supreme Court", "High Courts", "District Courts", "Tribunals", "Arbitration"];
@@ -53,15 +54,28 @@ export default function Courts() {
         <div className="mt-10 sm:mt-12 lg:mt-14">
           {/* Supreme Court */}
           {activeTab === 0 && (
-            <div className="mx-auto max-w-3xl">
+            <div className="mx-auto max-w-4xl">
               <div className="bg-dark-card rounded-2xl p-6 sm:p-8 border border-white/5">
-                <div className="text-center">
-                  <h3 className="text-xl sm:text-2xl lg:text-3xl font-heading font-bold text-white">
-                    Supreme Court of India
-                  </h3>
-                  <p className="mt-4 sm:mt-6 text-sm sm:text-base text-gray-400 leading-relaxed">
-                    Complete coverage of all Supreme Court matters with access to India&apos;s top advocates and senior counsels.
-                  </p>
+                <div className="flex flex-col md:flex-row items-center gap-6 md:gap-10">
+                  {/* Supreme Court building image */}
+                  <div className="w-full max-w-[200px] sm:max-w-[240px] md:w-[280px] shrink-0">
+                    <Image
+                      src="/courts-image.png"
+                      alt="Supreme Court of India"
+                      width={360}
+                      height={480}
+                      className="w-full h-auto rounded-xl object-cover shadow-lg shadow-gold/10"
+                    />
+                  </div>
+
+                  <div className="flex-1 text-center md:text-left">
+                    <h3 className="text-xl sm:text-2xl lg:text-3xl font-heading font-bold text-white">
+                      Supreme Court of India
+                    </h3>
+                    <p className="mt-4 sm:mt-6 text-sm sm:text-base text-gray-400 leading-relaxed">
+                      Complete coverage of all Supreme Court matters with access to India&apos;s top advocates and senior counsels.
+                    </p>
+                  </div>
                 </div>
                 <div className="mt-8 sm:mt-10 grid grid-cols-1 gap-3 sm:gap-4 sm:grid-cols-2">
                   {["Complete SC matter coverage", "Access to SC advocates & Sr. Counsels", "SLP, PIL, Writ Petition, Appeals", "Constitutional matters & landmark cases"].map((item) => (

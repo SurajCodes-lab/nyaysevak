@@ -12,9 +12,23 @@ const stats = [
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen w-full bg-black">
+    <section className="relative min-h-screen w-full bg-black overflow-hidden">
+      {/* Background courthouse image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/hero-bg.jpeg"
+          alt=""
+          fill
+          priority
+          className="object-cover opacity-[0.12]"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/85 to-black/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/60" />
+      </div>
+
       {/* Subtle radial glow */}
-      <div className="pointer-events-none absolute inset-0" aria-hidden="true">
+      <div className="pointer-events-none absolute inset-0 z-[1]" aria-hidden="true">
         <div className="absolute left-1/2 top-1/3 -translate-x-1/2 -translate-y-1/2 h-[600px] w-[600px] sm:h-[800px] sm:w-[800px] rounded-full bg-[radial-gradient(circle,rgba(201,168,76,0.08)_0%,transparent_60%)]" />
       </div>
 
@@ -39,8 +53,18 @@ export default function Hero() {
             <span className="hidden lg:inline">NYAY<br />SEVAK</span>
           </h1>
 
-          {/* Gold line divider */}
-          <div className="mb-6 sm:mb-8 h-px w-16 sm:w-24 bg-gold mx-auto lg:mx-0" />
+          {/* Accent gavel with gold divider lines */}
+          <div className="mb-6 sm:mb-8 flex items-center gap-3 sm:gap-4 mx-auto lg:mx-0">
+            <div className="h-px w-10 sm:w-16 bg-gold" />
+            <Image
+              src="/hero-accent.jpeg"
+              alt="Golden gavel"
+              width={44}
+              height={44}
+              className="h-9 w-9 sm:h-11 sm:w-11 rounded-full object-cover ring-1 ring-gold/30 shadow-md shadow-gold/20"
+            />
+            <div className="h-px w-10 sm:w-16 bg-gold" />
+          </div>
 
           <p className="mb-3 sm:mb-4 text-base sm:text-lg lg:text-xl font-heading font-medium tracking-wide text-gold/80">
             Defending Your Rights
@@ -69,26 +93,36 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Right 45% — Decorative stats (desktop) */}
-        <div className="hidden lg:flex lg:w-[45%] flex-col justify-center items-end">
-          <div className="w-full max-w-sm bg-white/[0.02] rounded-2xl p-8">
-            {/* Large decorative number */}
-            <div className="mb-10 text-right">
-              <span className="text-[10rem] font-heading font-bold leading-none text-gold/[0.07] xl:text-[12rem]">
-                A–Z
-              </span>
-            </div>
+        {/* Right 45% — Constitution book + stats (desktop) */}
+        <div className="hidden lg:flex lg:w-[45%] flex-col justify-center items-center">
+          {/* Main hero illustration */}
+          <div className="relative mb-10">
+            <Image
+              src="/hero-main.png"
+              alt="Constitution of India with golden light"
+              width={480}
+              height={400}
+              priority
+              className="h-auto w-full max-w-[400px] xl:max-w-[460px] object-contain drop-shadow-[0_0_50px_rgba(201,168,76,0.2)]"
+            />
+            <div className="absolute inset-0 -z-10 translate-y-4 scale-75 rounded-full bg-[radial-gradient(circle,rgba(201,168,76,0.08)_0%,transparent_70%)]" />
+          </div>
 
-            {/* Stat list */}
-            <div className="space-y-6">
-              {stats.map((stat) => (
-                <div key={stat.label} className="flex items-center gap-5 border-l-2 border-gold/30 pl-6 transition-all duration-300 hover:border-gold/60 hover:pl-8">
-                  <span className="text-2xl sm:text-3xl font-heading font-bold text-white">
-                    {stat.value}
-                  </span>
-                  <span className="text-xs uppercase tracking-[0.15em] text-gray-500">
-                    {stat.label}
-                  </span>
+          {/* Stats grid below the image */}
+          <div className="w-full max-w-md">
+            <div className="grid grid-cols-3 gap-4">
+              {stats.slice(0, 3).map((stat) => (
+                <div key={stat.label} className="text-center border-l border-gold/20 first:border-l-0 pl-4 first:pl-0">
+                  <span className="text-2xl font-heading font-bold text-white">{stat.value}</span>
+                  <p className="mt-1 text-[10px] uppercase tracking-[0.15em] text-gray-500">{stat.label}</p>
+                </div>
+              ))}
+            </div>
+            <div className="mt-4 grid grid-cols-3 gap-4">
+              {stats.slice(3).map((stat) => (
+                <div key={stat.label} className="text-center border-l border-gold/20 first:border-l-0 pl-4 first:pl-0">
+                  <span className="text-2xl font-heading font-bold text-white">{stat.value}</span>
+                  <p className="mt-1 text-[10px] uppercase tracking-[0.15em] text-gray-500">{stat.label}</p>
                 </div>
               ))}
             </div>
@@ -96,8 +130,18 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Mobile stats — visible only on smaller screens */}
+      {/* Mobile: Constitution book + stats */}
       <div className="relative z-10 border-t border-white/5 bg-black/50 px-4 sm:px-6 py-8 sm:py-10 lg:hidden">
+        <div className="mx-auto mb-8 flex justify-center">
+          <Image
+            src="/hero-main.png"
+            alt="Constitution of India with golden light"
+            width={280}
+            height={230}
+            className="h-auto w-full max-w-[220px] sm:max-w-[260px] object-contain opacity-90 drop-shadow-[0_0_30px_rgba(201,168,76,0.15)]"
+          />
+        </div>
+
         <div className="mx-auto grid max-w-lg grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
           {stats.map((stat) => (
             <div key={stat.label} className="bg-white/[0.03] rounded-xl p-3 sm:p-4 border border-white/5 text-center">
