@@ -16,17 +16,17 @@ export default function Contact() {
     <section id="contact" className="min-h-screen">
       <div className="flex flex-col lg:flex-row min-h-[80vh]">
         {/* Left half — Dark */}
-        <div className="relative flex flex-col justify-center bg-black px-4 sm:px-6 py-16 sm:py-20 lg:w-1/2 lg:px-12 xl:px-16 lg:py-28 xl:py-32 overflow-hidden">
+        <div className="relative flex flex-col justify-center bg-dark-deep px-4 sm:px-6 py-16 sm:py-20 lg:w-1/2 lg:px-12 xl:px-16 lg:py-28 xl:py-32 overflow-hidden">
           {/* Background handshake image */}
           <div className="absolute inset-0 z-0">
             <Image
               src="/contact-image.png"
               alt=""
               fill
-              className="object-cover opacity-[0.08]"
+              className="object-cover opacity-[0.15]"
               sizes="50vw"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/90 to-black/70" />
+            <div className="absolute inset-0 bg-gradient-to-t from-dark-deep via-dark-deep/90 to-dark-deep/70" />
           </div>
 
           <div className="relative z-10">
@@ -50,7 +50,7 @@ export default function Contact() {
               <div>
                 <p className="text-[10px] sm:text-xs uppercase tracking-[0.2em] text-gold/60 mb-1.5 sm:mb-2">Phone</p>
                 <p className="text-base sm:text-lg text-white font-medium">+91 XXXXX XXXXX</p>
-                <p className="text-xs sm:text-sm text-gray-500 mt-0.5">Mon-Sat, 9:00 AM - 8:00 PM</p>
+                <p className="text-xs sm:text-sm text-gray-400 mt-0.5">Mon-Sat, 9:00 AM - 8:00 PM</p>
               </div>
             </div>
 
@@ -64,7 +64,7 @@ export default function Contact() {
               <div>
                 <p className="text-[10px] sm:text-xs uppercase tracking-[0.2em] text-gold/60 mb-1.5 sm:mb-2">Email</p>
                 <p className="text-base sm:text-lg text-white font-medium">info@nyaysevak.com</p>
-                <p className="text-xs sm:text-sm text-gray-500 mt-0.5">We respond within 24 hours</p>
+                <p className="text-xs sm:text-sm text-gray-400 mt-0.5">We respond within 24 hours</p>
               </div>
             </div>
 
@@ -79,7 +79,7 @@ export default function Contact() {
               <div>
                 <p className="text-[10px] sm:text-xs uppercase tracking-[0.2em] text-gold/60 mb-1.5 sm:mb-2">Office</p>
                 <p className="text-base sm:text-lg text-white font-medium">New Delhi, India</p>
-                <p className="text-xs sm:text-sm text-gray-500 mt-0.5">Pan-India legal services coverage</p>
+                <p className="text-xs sm:text-sm text-gray-400 mt-0.5">Pan-India legal services coverage</p>
               </div>
             </div>
           </div>
@@ -94,7 +94,7 @@ export default function Contact() {
               </div>
               <div>
                 <p className="text-sm sm:text-base font-semibold text-gold">Available 24/7 for Emergencies</p>
-                <p className="mt-1 sm:mt-1.5 text-xs sm:text-sm text-gray-500">
+                <p className="mt-1 sm:mt-1.5 text-xs sm:text-sm text-gray-400">
                   Urgent bail matters, arrest situations, and time-sensitive legal needs — we&apos;re here round the clock.
                 </p>
               </div>

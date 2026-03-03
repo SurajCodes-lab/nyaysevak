@@ -19,7 +19,7 @@ export default function Courts() {
   const totalDistricts = districtCourts.reduce((sum, s) => sum + s.districts.length, 0);
 
   return (
-    <section id="courts" className="bg-dark py-16 sm:py-20 lg:py-28">
+    <section id="courts" className="bg-dark-deep py-16 sm:py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <p className="mb-3 sm:mb-4 text-[10px] sm:text-xs uppercase tracking-[0.3em] text-gold/70 text-center">
           Pan-India Presence
@@ -27,7 +27,7 @@ export default function Courts() {
         <h2 className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-bold tracking-tight text-white">
           Court Coverage
         </h2>
-        <p className="mx-auto mt-3 sm:mt-4 max-w-2xl text-center text-sm sm:text-base text-gray-400">
+        <p className="mx-auto mt-3 sm:mt-4 max-w-2xl text-center text-sm sm:text-base text-gray-300">
           Complete Coverage Across Every Court, Tribunal &amp; Arbitration Centre
         </p>
 
@@ -41,7 +41,7 @@ export default function Courts() {
                 className={`rounded-full px-4 sm:px-5 py-2 sm:py-2.5 text-[10px] sm:text-xs font-semibold uppercase tracking-wider whitespace-nowrap shrink-0 transition-all duration-300 ${
                   activeTab === i
                     ? "bg-gold text-black shadow-lg shadow-gold/20"
-                    : "bg-dark-card text-gray-500 border border-white/5 hover:text-white hover:border-white/20"
+                    : "glass-card text-gray-400 hover:text-white hover:border-gold/20"
                 }`}
               >
                 {tab}
@@ -55,7 +55,7 @@ export default function Courts() {
           {/* Supreme Court */}
           {activeTab === 0 && (
             <div className="mx-auto max-w-4xl">
-              <div className="bg-dark-card rounded-2xl p-6 sm:p-8 border border-white/5">
+              <div className="glass-card p-6 sm:p-8">
                 <div className="flex flex-col md:flex-row items-center gap-6 md:gap-10">
                   {/* Supreme Court building image */}
                   <div className="w-full max-w-[200px] sm:max-w-[240px] md:w-[280px] shrink-0">
@@ -79,7 +79,7 @@ export default function Courts() {
                 </div>
                 <div className="mt-8 sm:mt-10 grid grid-cols-1 gap-3 sm:gap-4 sm:grid-cols-2">
                   {["Complete SC matter coverage", "Access to SC advocates & Sr. Counsels", "SLP, PIL, Writ Petition, Appeals", "Constitutional matters & landmark cases"].map((item) => (
-                    <div key={item} className="bg-white/[0.03] rounded-xl p-4 border border-white/5 border-l-2 border-l-gold/40">
+                    <div key={item} className="glass-card p-4 border-l-2 border-l-gold/40">
                       <span className="text-xs sm:text-sm text-gray-300">{item}</span>
                     </div>
                   ))}
@@ -93,7 +93,7 @@ export default function Courts() {
             <div>
               <p className="mb-6 sm:mb-8 lg:mb-10 text-center text-xs sm:text-sm text-gray-500">All 25 High Courts across India</p>
               {/* Desktop table */}
-              <div className="hidden md:block rounded-2xl overflow-hidden border border-white/5">
+              <div className="hidden md:block rounded-2xl overflow-hidden border border-white/[0.08]">
                 <table className="w-full text-left">
                   <thead>
                     <tr className="bg-dark-card">
@@ -123,7 +123,7 @@ export default function Courts() {
                   <Link
                     key={court.slug}
                     href={`/courts/${court.slug}`}
-                    className="block rounded-xl bg-dark-card border border-white/5 p-4 sm:p-5 hover:border-gold/30 transition-all duration-300"
+                    className="block glass-card p-4 sm:p-5 hover:border-gold/30 transition-all duration-300"
                   >
                     <h4 className="text-sm font-semibold text-gold">{court.name}</h4>
                     <p className="mt-1.5 text-xs text-gray-400">{court.jurisdiction}</p>
@@ -141,15 +141,15 @@ export default function Courts() {
             <div>
               {/* Stats */}
               <div className="mb-8 sm:mb-10 lg:mb-12 grid grid-cols-3 gap-3 sm:gap-4 lg:gap-6 max-w-2xl mx-auto">
-                <div className="bg-dark-card rounded-2xl p-4 sm:p-6 border border-white/5 text-center">
+                <div className="glass-card p-4 sm:p-6 text-center">
                   <span className="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-white">{districtCourts.length}</span>
                   <p className="mt-1 sm:mt-2 text-[10px] sm:text-xs uppercase tracking-wider text-gray-500">States &amp; UTs</p>
                 </div>
-                <div className="bg-dark-card rounded-2xl p-4 sm:p-6 border border-white/5 text-center">
+                <div className="glass-card p-4 sm:p-6 text-center">
                   <span className="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-white">{totalDistricts}+</span>
                   <p className="mt-1 sm:mt-2 text-[10px] sm:text-xs uppercase tracking-wider text-gray-500">District Courts</p>
                 </div>
-                <div className="bg-dark-card rounded-2xl p-4 sm:p-6 border border-white/5 text-center">
+                <div className="glass-card p-4 sm:p-6 text-center">
                   <span className="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-white">100%</span>
                   <p className="mt-1 sm:mt-2 text-[10px] sm:text-xs uppercase tracking-wider text-gray-500">Pan-India</p>
                 </div>
@@ -164,7 +164,7 @@ export default function Courts() {
                     className={`rounded-full px-4 sm:px-5 py-2 sm:py-2.5 text-[10px] sm:text-xs font-semibold uppercase tracking-wider whitespace-nowrap shrink-0 transition-all duration-300 ${
                       dcFilter === key
                         ? "bg-gold text-black shadow-lg shadow-gold/20"
-                        : "bg-dark-card text-gray-500 border border-white/5 hover:text-white hover:border-white/20"
+                        : "glass-card text-gray-400 hover:text-white hover:border-gold/20"
                     }`}
                   >
                     {label}
@@ -177,7 +177,7 @@ export default function Courts() {
                 {filteredDC.map((stateData) => {
                   const isOpen = expandedState === stateData.state;
                   return (
-                    <div key={stateData.state} className="rounded-xl bg-dark-card border border-white/5 overflow-hidden">
+                    <div key={stateData.state} className="glass-card overflow-hidden">
                       <button
                         onClick={() => setExpandedState(isOpen ? null : stateData.state)}
                         className="flex w-full items-center justify-between px-4 sm:px-5 py-3.5 sm:py-4 text-left transition-colors duration-200 hover:bg-white/[0.02]"
@@ -192,7 +192,7 @@ export default function Courts() {
                             >
                               {stateData.state}
                             </Link>
-                            <span className="ml-2 sm:ml-3 text-[10px] uppercase tracking-wider text-gray-600">
+                            <span className="ml-2 sm:ml-3 text-[10px] uppercase tracking-wider text-gray-500">
                               {stateData.type === "ut" ? "UT" : "State"}
                             </span>
                           </div>
@@ -210,7 +210,7 @@ export default function Courts() {
                       >
                         <div className="px-4 sm:px-5 pb-4 pl-10 sm:pl-14 flex flex-wrap gap-2">
                           {stateData.districts.map((d) => (
-                            <span key={d} className="rounded-lg bg-white/[0.03] border border-white/5 px-2.5 sm:px-3 py-1.5 text-xs text-gray-500">
+                            <span key={d} className="rounded-lg bg-white/[0.05] border border-white/[0.08] px-2.5 sm:px-3 py-1.5 text-xs text-gray-400">
                               {d}
                             </span>
                           ))}
@@ -227,7 +227,7 @@ export default function Courts() {
           {activeTab === 3 && (
             <div className="space-y-4">
               {tribunalGroups.map((group) => (
-                <div key={group.slug} className="rounded-2xl bg-dark-card border border-white/5 p-5 sm:p-6 lg:p-8">
+                <div key={group.slug} className="glass-card p-5 sm:p-6 lg:p-8">
                   <Link
                     href={`/courts/${group.slug}`}
                     className="text-base sm:text-lg font-heading font-bold text-gold hover:text-gold-light transition-colors duration-200"
@@ -255,7 +255,7 @@ export default function Courts() {
                 { title: "International Arbitration", items: ["ICC (International Chamber of Commerce)", "LCIA (London)", "SIAC (Singapore)", "HKIAC (Hong Kong)"] },
                 { title: "ADR Services", items: ["Ad-hoc Arbitration under Act, 1996", "Commercial Mediation", "Family Mediation", "Court-annexed Mediation", "Conciliation proceedings", "Lok Adalat services"] },
               ].map((group) => (
-                <div key={group.title} className="rounded-2xl bg-dark-card border border-white/5 p-5 sm:p-6 lg:p-8">
+                <div key={group.title} className="glass-card p-5 sm:p-6 lg:p-8">
                   <h4 className="text-base sm:text-lg font-heading font-bold text-white mb-4">{group.title}</h4>
                   <ul className="space-y-2.5 sm:space-y-3">
                     {group.items.map((item) => (

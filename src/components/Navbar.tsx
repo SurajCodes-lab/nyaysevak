@@ -40,19 +40,19 @@ export default function Navbar() {
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled
-            ? "bg-black/80 backdrop-blur-xl border-b border-white/5"
+            ? "bg-dark-deep/80 backdrop-blur-xl border-b border-white/5"
             : "bg-transparent"
         }`}
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2.5 group shrink-0 -ml-[30px]">
+          <Link href="/" className="flex items-center gap-2.5 group shrink-0">
             <Image
               src="/logo.jpeg"
               alt="NyaySevak Logo"
-              width={36}
-              height={36}
-              className="h-9 w-9 rounded-full object-cover"
+              width={44}
+              height={44}
+              className="h-11 w-11 rounded-full object-cover"
             />
             <span className="text-lg font-heading font-bold tracking-[0.15em] text-gold transition-colors duration-300 group-hover:text-gold-light lg:text-xl">
               NYAYSEVAK
@@ -79,7 +79,7 @@ export default function Navbar() {
           {/* Desktop CTA */}
           <Link
             href="/contact"
-            className="hidden lg:inline-flex items-center border border-gold/40 px-6 py-2.5 text-xs font-semibold uppercase tracking-widest text-gold transition-all duration-300 hover:bg-gold/10 hover:border-gold"
+            className="hidden lg:inline-flex items-center rounded-xl border border-gold/40 px-6 py-2.5 text-xs font-semibold uppercase tracking-widest text-gold transition-all duration-300 hover:bg-gold/10 hover:border-gold"
           >
             Get Consultation
           </Link>
@@ -99,7 +99,7 @@ export default function Navbar() {
 
       {/* Mobile Menu — dramatic full-screen */}
       <div
-        className={`fixed inset-0 z-40 bg-black/95 backdrop-blur-2xl transition-all duration-500 lg:hidden ${
+        className={`fixed inset-0 z-40 bg-dark-deep/95 backdrop-blur-2xl transition-all duration-500 lg:hidden ${
           mobileOpen ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
       >

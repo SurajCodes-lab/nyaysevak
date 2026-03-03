@@ -119,14 +119,14 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" href="/logo.jpeg" />
-        <meta name="theme-color" content="#000000" />
+        <meta name="theme-color" content="#080704" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
       <body
-        className={`${playfair.variable} ${inter.variable} antialiased bg-black text-white font-body`}
+        className={`${playfair.variable} ${inter.variable} antialiased bg-dark-deep text-white font-body`}
       >
         <NavigationProgress />
         <Navbar />

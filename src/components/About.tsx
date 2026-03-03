@@ -77,11 +77,11 @@ export default function About() {
   return (
     <section id="about">
       {/* Section 1 — Dark: Vision statement with Ashoka lion image */}
-      <div className="bg-black py-16 sm:py-20 lg:py-28">
+      <div className="bg-dark-deep py-16 sm:py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
             {/* Left: Ashoka lion image */}
-            <div className="w-full max-w-[280px] sm:max-w-[320px] lg:w-[38%] lg:max-w-none shrink-0">
+            <div className="w-full max-w-[200px] sm:max-w-[240px] lg:w-[28%] lg:max-w-none shrink-0">
               <div className="relative">
                 <Image
                   src="/about-vision.jpeg"
@@ -134,7 +134,7 @@ export default function About() {
             <div className="space-y-4 sm:space-y-6">
               {missionPoints.map((point) => (
                 <div key={point.num} className="flex gap-4 sm:gap-6 bg-cream-dark/50 rounded-xl p-4 sm:p-5 border-l-2 border-gold/30">
-                  <span className="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-gold/20 shrink-0 leading-none">
+                  <span className="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-gold-dark shrink-0 leading-none">
                     {point.num}
                   </span>
                   <p className="text-sm sm:text-base leading-relaxed text-gray-600 pt-0.5 sm:pt-1">
@@ -148,7 +148,7 @@ export default function About() {
       </div>
 
       {/* Section 3 — Dark: Why Choose Us — card grid */}
-      <div className="bg-gradient-to-b from-black via-dark to-black py-16 sm:py-20 lg:py-28">
+      <div className="bg-gradient-to-b from-dark-deep via-dark to-dark-deep py-16 sm:py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <p className="mb-3 sm:mb-4 text-[11px] sm:text-xs uppercase tracking-[0.3em] text-gold/70 text-center">
             The NyaySevak Advantage
@@ -161,7 +161,7 @@ export default function About() {
             {whyItems.map((item) => (
               <div
                 key={item.title}
-                className="group bg-dark-card rounded-2xl p-6 sm:p-8 border border-white/5 hover:border-gold/30 transition-all duration-300 hover:scale-[1.02] hover:shadow-xl"
+                className="group glass-card p-6 sm:p-8 hover:border-gold/30 transition-all duration-300 hover:scale-[1.02] hover:shadow-xl"
               >
                 {/* Icon circle */}
                 <div className="h-12 w-12 rounded-xl bg-gold/10 flex items-center justify-center mb-4 transition-all duration-300 group-hover:bg-gold/20">
@@ -171,7 +171,7 @@ export default function About() {
                 <h3 className="text-lg sm:text-xl font-heading font-bold text-white">
                   {item.title}
                 </h3>
-                <p className="text-sm text-gray-400 leading-relaxed mt-3">
+                <p className="text-sm text-gray-300 leading-relaxed mt-3">
                   {item.desc}
                 </p>
               </div>

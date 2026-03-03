@@ -8,12 +8,12 @@ import FeaturesPreview from "@/components/FeaturesPreview";
 import Contact from "@/components/Contact";
 
 function GoldSeparator() {
-  return <div className="h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent" />;
+  return <div className="gold-shimmer" />;
 }
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-black">
+    <main className="min-h-screen bg-dark-deep">
       <Hero />
       <GoldSeparator />
       <About />

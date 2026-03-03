@@ -16,9 +16,9 @@ const quickLinks = [
 export default function Footer() {
   return (
     <>
-      <footer className="relative bg-black">
+      <footer className="relative bg-dark-deep">
         {/* Top gold line */}
-        <div className="h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
+        <div className="gold-shimmer" />
 
         <div className="mx-auto max-w-7xl px-6 pt-24 pb-12 lg:px-8">
           {/* Large brand */}
@@ -36,7 +36,7 @@ export default function Footer() {
             <p className="mt-4 text-xs uppercase tracking-[0.3em] text-gold/70">
               Defending Your Rights
             </p>
-            <p className="mx-auto mt-6 max-w-xl text-sm leading-relaxed text-gray-500">
+            <p className="mx-auto mt-6 max-w-xl text-sm leading-relaxed text-gray-400">
               India&apos;s first complete legal ecosystem. Connecting citizens, businesses, and legal
               professionals across the entire Indian judicial system.
             </p>
@@ -52,7 +52,7 @@ export default function Footer() {
               <ul className="space-y-3">
                 {quickLinks.map((link) => (
                   <li key={link.label}>
-                    <Link href={link.href} className="text-sm text-gray-400 transition-colors duration-200 hover:text-white">
+                    <Link href={link.href} className="text-sm text-gray-300 transition-colors duration-200 hover:text-white">
                       {link.label}
                     </Link>
                   </li>
@@ -68,7 +68,7 @@ export default function Footer() {
               <ul className="space-y-3">
                 {practiceAreas.map((area) => (
                   <li key={area.slug}>
-                    <Link href={`/practice-areas/${area.slug}`} className="text-sm text-gray-400 transition-colors duration-200 hover:text-white">
+                    <Link href={`/practice-areas/${area.slug}`} className="text-sm text-gray-300 transition-colors duration-200 hover:text-white">
                       {area.title}
                     </Link>
                   </li>
@@ -84,7 +84,7 @@ export default function Footer() {
               <ul className="space-y-3">
                 {allServices.map((service) => (
                   <li key={service.slug}>
-                    <Link href={`/services/${service.slug}`} className="text-sm text-gray-400 transition-colors duration-200 hover:text-white">
+                    <Link href={`/services/${service.slug}`} className="text-sm text-gray-300 transition-colors duration-200 hover:text-white">
                       {service.title}
                     </Link>
                   </li>
@@ -97,7 +97,7 @@ export default function Footer() {
               <h4 className="mb-6 text-xs font-semibold uppercase tracking-[0.2em] text-gold/70">
                 Contact Us
               </h4>
-              <div className="space-y-5 text-sm text-gray-400">
+              <div className="space-y-5 text-sm text-gray-300">
                 <div className="flex items-start gap-3">
                   <svg className="mt-0.5 h-4 w-4 shrink-0 text-gold/50" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
@@ -124,13 +124,13 @@ export default function Footer() {
           {/* Bottom bar */}
           <div className="mt-20 border-t border-white/5 pt-8">
             <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
-              <p className="text-xs text-gray-600">
+              <p className="text-xs text-gray-500">
                 &copy; 2026 NyaySevak. All rights reserved.
               </p>
               <div className="flex gap-6">
-                <Link href="/privacy-policy" className="text-xs text-gray-600 transition-colors hover:text-white">Privacy Policy</Link>
-                <Link href="/terms-of-service" className="text-xs text-gray-600 transition-colors hover:text-white">Terms of Service</Link>
-                <Link href="/disclaimer" className="text-xs text-gray-600 transition-colors hover:text-white">Disclaimer</Link>
+                <Link href="/privacy-policy" className="text-xs text-gray-500 transition-colors hover:text-white">Privacy Policy</Link>
+                <Link href="/terms-of-service" className="text-xs text-gray-500 transition-colors hover:text-white">Terms of Service</Link>
+                <Link href="/disclaimer" className="text-xs text-gray-500 transition-colors hover:text-white">Disclaimer</Link>
               </div>
             </div>
           </div>

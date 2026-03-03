@@ -8,7 +8,7 @@ const steps = [
 
 export default function PlatformBanner() {
   return (
-    <section className="bg-gradient-to-b from-black via-dark to-black py-16 sm:py-20 lg:py-28">
+    <section className="bg-gradient-to-b from-dark-deep via-dark to-dark-deep py-16 sm:py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <p className="mb-3 sm:mb-4 text-[11px] sm:text-xs uppercase tracking-[0.3em] text-gold/70 text-center">
           How It Works
@@ -16,7 +16,7 @@ export default function PlatformBanner() {
         <h2 className="text-center text-2xl sm:text-3xl lg:text-4xl font-heading font-bold tracking-tight text-white">
           Three Simple Steps
         </h2>
-        <p className="mx-auto mt-3 sm:mt-4 max-w-2xl text-center text-sm sm:text-base text-gray-500">
+        <p className="mx-auto mt-3 sm:mt-4 max-w-2xl text-center text-sm sm:text-base text-gray-400">
           Connect with verified legal professionals and resolve your matters
         </p>
 
@@ -25,7 +25,7 @@ export default function PlatformBanner() {
           {steps.map((step, i) => (
             <div key={step.num} className="relative flex">
               {/* Step card */}
-              <div className="group bg-dark-card rounded-2xl p-6 sm:p-8 border border-white/5 relative overflow-hidden w-full transition-all duration-300 hover:border-gold/30 hover:scale-[1.02] hover:shadow-xl">
+              <div className="group glass-card p-6 sm:p-8 relative overflow-hidden w-full transition-all duration-300 hover:border-gold/30 hover:scale-[1.02] hover:shadow-xl">
                 {/* Large watermark number */}
                 <span className="absolute -top-2 -right-2 text-6xl sm:text-7xl font-heading font-bold text-gold/[0.06] leading-none select-none pointer-events-none">
                   {step.num}
@@ -39,7 +39,7 @@ export default function PlatformBanner() {
                 <h3 className="text-lg sm:text-xl font-heading font-bold text-white mt-4">
                   {step.title}
                 </h3>
-                <p className="text-sm text-gray-400 mt-2 leading-relaxed">
+                <p className="text-sm text-gray-300 mt-2 leading-relaxed">
                   {step.desc}
                 </p>
               </div>

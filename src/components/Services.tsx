@@ -24,25 +24,25 @@ export default function Services() {
   };
 
   return (
-    <section id="services" className="bg-dark">
+    <section id="services" className="bg-cream">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-28">
         {/* Header */}
-        <p className="mb-3 sm:mb-4 text-[10px] sm:text-xs uppercase tracking-[0.3em] text-gold/70 text-center">
+        <p className="mb-3 sm:mb-4 text-[10px] sm:text-xs uppercase tracking-[0.3em] text-gold-dark/70 text-center">
           What We Offer
         </p>
-        <h2 className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-bold tracking-tight text-white">
+        <h2 className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-bold tracking-tight text-gray-900">
           Our Services
         </h2>
 
         {/* Toggle tabs — pill style */}
         <div className="mt-8 sm:mt-10 lg:mt-12 flex justify-center">
-          <div className="bg-dark-card rounded-full p-1.5 inline-flex">
+          <div className="bg-cream-dark rounded-full p-1.5 inline-flex">
             <button
               onClick={() => switchTab("b2c")}
               className={`rounded-full px-5 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm font-semibold transition-all duration-300 ${
                 activeTab === "b2c"
                   ? "bg-gold text-black"
-                  : "text-gray-400 hover:text-white"
+                  : "text-gray-500 hover:text-gray-900"
               }`}
             >
               For Individuals
@@ -52,7 +52,7 @@ export default function Services() {
               className={`rounded-full px-5 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm font-semibold transition-all duration-300 ${
                 activeTab === "b2b"
                   ? "bg-gold text-black"
-                  : "text-gray-400 hover:text-white"
+                  : "text-gray-500 hover:text-gray-900"
               }`}
             >
               For Businesses
@@ -61,24 +61,24 @@ export default function Services() {
         </div>
 
         {/* Split panel — desktop only */}
-        <div className="mt-10 sm:mt-12 lg:mt-16 hidden lg:flex rounded-2xl overflow-hidden border border-white/5 bg-dark-card min-h-[420px]">
+        <div className="mt-10 sm:mt-12 lg:mt-16 hidden lg:flex rounded-2xl overflow-hidden border border-gray-200 bg-white shadow-sm min-h-[420px]">
           {/* Left — nav list */}
-          <div className="lg:w-[40%] border-r border-white/5">
+          <div className="lg:w-[40%] border-r border-gray-100">
             {services.map((service, i) => (
               <button
                 key={service.slug}
                 onClick={() => setActiveIndex(i)}
                 className={`group flex w-full items-center gap-3 sm:gap-4 px-4 sm:px-6 py-4 sm:py-5 text-left transition-all duration-300 border-l-2 ${
                   activeIndex === i
-                    ? "border-gold bg-gold/5 text-white"
-                    : "border-transparent text-gray-500 hover:text-gray-300 hover:bg-white/[0.02]"
+                    ? "border-gold bg-gold/5 text-gray-900"
+                    : "border-transparent text-gray-500 hover:text-gray-900 hover:bg-cream-dark/50"
                 }`}
               >
                 <span
                   className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-lg transition-all duration-300 ${
                     activeIndex === i
                       ? "bg-gold/15"
-                      : "bg-white/5 group-hover:bg-gold/10"
+                      : "bg-cream-dark group-hover:bg-gold/10"
                   }`}
                 >
                   <svg
@@ -107,12 +107,12 @@ export default function Services() {
                   fill="none"
                   stroke="currentColor"
                   strokeWidth={1.5}
-                  className="h-5 w-5 sm:h-6 sm:w-6 text-gold"
+                  className="h-5 w-5 sm:h-6 sm:w-6 text-gold-dark"
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" d={active.iconPath} />
                 </svg>
               </span>
-              <h3 className="text-xl sm:text-2xl font-heading font-bold text-white">
+              <h3 className="text-xl sm:text-2xl font-heading font-bold text-gray-900">
                 {active.title}
               </h3>
             </div>
@@ -121,7 +121,7 @@ export default function Services() {
               {active.bullets.map((b) => (
                 <li
                   key={b}
-                  className="flex items-start gap-3 text-sm sm:text-base leading-relaxed text-gray-400"
+                  className="flex items-start gap-3 text-sm sm:text-base leading-relaxed text-gray-600"
                 >
                   <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
                   {b}
@@ -131,7 +131,7 @@ export default function Services() {
 
             <Link
               href={`/services/${active.slug}`}
-              className="mt-8 inline-flex items-center gap-2 rounded-lg border border-gold/30 px-5 py-2.5 text-xs sm:text-sm font-semibold uppercase tracking-widest text-gold hover:bg-gold/10 transition-all duration-300 self-start"
+              className="mt-8 inline-flex items-center gap-2 rounded-lg border border-gold-dark/30 px-5 py-2.5 text-xs sm:text-sm font-semibold uppercase tracking-widest text-gold-dark hover:bg-gold/10 transition-all duration-300 self-start"
             >
               Learn More
               <svg
@@ -156,8 +156,8 @@ export default function Services() {
                 key={service.slug}
                 className={`rounded-xl border overflow-hidden transition-all duration-300 ${
                   isOpen
-                    ? "border-gold/20 bg-dark-card"
-                    : "border-white/5 bg-dark-card hover:border-white/10"
+                    ? "border-gold/20 bg-white shadow-sm"
+                    : "border-gray-100 bg-white shadow-sm hover:border-gray-200"
                 }`}
               >
                 {/* Card header */}
@@ -176,7 +176,7 @@ export default function Services() {
                       <path strokeLinecap="round" strokeLinejoin="round" d={service.iconPath} />
                     </svg>
                   </span>
-                  <span className="flex-1 text-sm font-medium text-gray-300">
+                  <span className="flex-1 text-sm font-medium text-gray-700">
                     {service.title}
                   </span>
                   <svg
@@ -200,12 +200,12 @@ export default function Services() {
                     opacity: isOpen ? 1 : 0,
                   }}
                 >
-                  <div className="px-4 sm:px-5 pb-4 sm:pb-5 border-t border-white/5 pt-4">
+                  <div className="px-4 sm:px-5 pb-4 sm:pb-5 border-t border-gray-100 pt-4">
                     <ul className="space-y-2.5">
                       {service.bullets.map((b) => (
                         <li
                           key={b}
-                          className="flex items-start gap-2.5 text-sm text-gray-400"
+                          className="flex items-start gap-2.5 text-sm text-gray-600"
                         >
                           <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
                           {b}
@@ -214,7 +214,7 @@ export default function Services() {
                     </ul>
                     <Link
                       href={`/services/${service.slug}`}
-                      className="mt-4 inline-flex items-center gap-2 rounded-lg border border-gold/30 px-5 py-2.5 text-xs sm:text-sm font-semibold uppercase tracking-widest text-gold hover:bg-gold/10 transition-all duration-300"
+                      className="mt-4 inline-flex items-center gap-2 rounded-lg border border-gold-dark/30 px-5 py-2.5 text-xs sm:text-sm font-semibold uppercase tracking-widest text-gold-dark hover:bg-gold/10 transition-all duration-300"
                     >
                       Learn More
                       <svg
@@ -240,14 +240,14 @@ export default function Services() {
 
         {/* Audiences — badge pills */}
         <div className="mt-12 sm:mt-14 lg:mt-16">
-          <p className="mb-4 sm:mb-6 text-center text-[10px] sm:text-xs uppercase tracking-[0.2em] text-gray-500">
+          <p className="mb-4 sm:mb-6 text-center text-[10px] sm:text-xs uppercase tracking-[0.2em] text-gray-500/80">
             Who We Serve
           </p>
           <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3">
             {audiences.map((a) => (
               <span
                 key={a.label}
-                className="bg-dark-card rounded-full px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-medium text-gray-300 border border-white/5"
+                className="bg-white rounded-full px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-medium text-gray-700 border border-gray-100 shadow-sm"
               >
                 {a.label}
               </span>

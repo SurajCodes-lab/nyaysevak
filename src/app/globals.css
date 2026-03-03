@@ -4,9 +4,10 @@
   --color-gold: #C9A84C;
   --color-gold-light: #e8c55a;
   --color-gold-dark: #b8942e;
-  --color-dark: #0a0a0a;
-  --color-dark-light: #1a1a1a;
-  --color-dark-card: #111111;
+  --color-dark: #0c0b09;
+  --color-dark-light: #1a1812;
+  --color-dark-card: #15130e;
+  --color-dark-deep: #080704;
   --color-cream: #faf9f6;
   --color-cream-dark: #f0eee8;
   --font-heading: 'Playfair Display', serif;
@@ -19,7 +20,7 @@ html {
 }
 
 body {
-  background: #000000;
+  background: var(--color-dark-deep);
   color: #ffffff;
   font-family: var(--font-body);
   overflow-x: hidden;
@@ -35,7 +36,7 @@ body {
 
 /* Scrollbar */
 ::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: #0a0a0a; }
+::-webkit-scrollbar-track { background: var(--color-dark); }
 ::-webkit-scrollbar-thumb { background: #C9A84C; border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: #e8c55a; }
 
@@ -58,6 +59,30 @@ input:focus, textarea:focus, select:focus {
 /* Hide scrollbar utility */
 .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
 .scrollbar-hide::-webkit-scrollbar { display: none; }
+
+/* Glass card — premium translucent panel */
+.glass-card {
+  background: rgba(21, 19, 14, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(201, 168, 76, 0.08);
+  border-radius: 1rem;
+}
+
+/* Gold shimmer — multi-stop gradient divider */
+.gold-shimmer {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(201, 168, 76, 0.08) 15%,
+    rgba(201, 168, 76, 0.35) 40%,
+    rgba(232, 197, 90, 0.5) 50%,
+    rgba(201, 168, 76, 0.35) 60%,
+    rgba(201, 168, 76, 0.08) 85%,
+    transparent 100%
+  );
+}
 
 /* Smooth image loading */
 img { transition: opacity 0.3s ease; }
