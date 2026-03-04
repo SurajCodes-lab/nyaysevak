@@ -75,7 +75,7 @@ export default function Contact() {
               src="/contact-image.png"
               alt=""
               fill
-              className="object-cover opacity-[0.12]"
+              className="object-cover opacity-[0.3]"
               sizes="50vw"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-dark-deep via-dark-deep/90 to-dark-deep/70" />

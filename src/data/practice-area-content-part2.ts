@@ -1038,10 +1038,274 @@ export const part2Content: Record<string, PracticeAreaContent> = {
       "International Arbitration Institutions (ICC, SIAC, LCIA, IIAC)"
     ],
     highlights: [
-      { stat: "95+", label: "Double Taxation Avoidance Agreements signed by India with partner countries" },
-      { stat: "100%", label: "FDI permitted under automatic route in most sectors of the Indian economy" },
-      { stat: "Rs. 5.5 Lakh Cr+", label: "Annual FDI inflows into India reflecting investor confidence" },
-      { stat: "164", label: "WTO member nations including India participating in the multilateral trading system" }
+      { stat: "95+", label: "DTAAs signed by India" },
+      { stat: "100%", label: "FDI via automatic route in most sectors" },
+      { stat: "Rs. 5.5L Cr+", label: "Annual FDI inflows" },
+      { stat: "164", label: "WTO member nations" }
+    ]
+  },
+
+  "cbi-cases": {
+    detailedOverview: [
+      "The Central Bureau of Investigation (CBI) is India's premier investigating agency, established under the Delhi Special Police Establishment Act, 1946 (DSPE Act), and entrusted with investigating cases of corruption, economic offences, and special crimes of national and inter-state significance. CBI investigations carry enormous gravity — they are often ordered by the Supreme Court or High Courts in high-profile cases, and the agency's jurisdiction extends across India when notified by the Central Government. Being investigated or prosecuted by the CBI demands specialized legal representation from advocates who understand the unique procedural framework, evidentiary standards, and strategic nuances of CBI proceedings.",
+      "CBI cases are tried in designated Special Courts (CBI Courts) established under the DSPE Act and the Prevention of Corruption Act, 1988 (PC Act). These courts follow the Code of Criminal Procedure but with specific modifications for corruption and economic offence trials. The investigation process is rigorous, involving Preliminary Enquiries (PE), Regular Cases (RC), search and seizure operations, and detailed charge sheets. Convictions under CBI-prosecuted cases can result in severe penalties including imprisonment, fines, and forfeiture of property. The legal landscape has been further shaped by the Bharatiya Nyaya Sanhita, 2023 (BNS) which replaced the Indian Penal Code.",
+      "Our CBI defense practice provides comprehensive legal representation at every stage — from responding to CBI summons and Preliminary Enquiries, through bail applications (regular, anticipatory, and interim), to full trial defense in CBI Special Courts. We have extensive experience defending public servants, corporate executives, and individuals in corruption cases, disproportionate assets matters, CBI trap cases, and special crime investigations. Our team also handles appeals against CBI court convictions before High Courts and the Supreme Court of India."
+    ],
+    keyLegislation: [
+      "Delhi Special Police Establishment Act, 1946 (DSPE Act)",
+      "Prevention of Corruption Act, 1988 (as amended 2018)",
+      "Bharatiya Nyaya Sanhita, 2023 (BNS)",
+      "Bharatiya Nagarik Suraksha Sanhita, 2023 (BNSS)",
+      "Prevention of Money Laundering Act, 2002 (PMLA)",
+      "Benami Transactions (Prohibition) Act, 1988",
+      "Companies Act, 2013 (for corporate fraud investigations)",
+      "Indian Evidence Act / Bharatiya Sakshya Adhiniyam, 2023"
+    ],
+    serviceDetails: [
+      {
+        title: "CBI FIR Quashing & Anticipatory Bail",
+        description: "Filing petitions to quash CBI FIRs on grounds of jurisdictional defects, absence of cognizable offence, or abuse of process. We also secure anticipatory bail to protect clients from arrest during ongoing CBI investigations, presenting compelling arguments on the absence of flight risk and cooperation with the investigation."
+      },
+      {
+        title: "Defense in Corruption & Bribery Cases",
+        description: "Specialized defense in cases under the Prevention of Corruption Act, 1988, including demand and acceptance of illegal gratification, criminal misconduct by public servants, and abetment of corruption. We challenge the prosecution's trap evidence, sanction orders, and witness testimonies with meticulous cross-examination."
+      },
+      {
+        title: "Economic Offences Defense",
+        description: "Representation in CBI-investigated economic offences including bank fraud, insurance fraud, investment scams, and corporate misconduct. We analyze complex financial evidence, engage forensic accountants, and build robust defense strategies against CBI's economic offences wing."
+      },
+      {
+        title: "CBI Trap Cases & DA Defense",
+        description: "Defense in CBI trap (sting) operations and disproportionate assets (DA) cases. We scrutinize the trap procedure for compliance with CBI manual guidelines, challenge the phenolphthalein test evidence, and present alternative explanations for asset accumulation in DA cases."
+      },
+      {
+        title: "Special Crimes Defense",
+        description: "Representation in CBI-investigated special crimes including murder, kidnapping, terrorism-related offences, and cases transferred to CBI by court orders. We provide aggressive trial defense with thorough investigation, witness preparation, and expert evidence presentation."
+      },
+      {
+        title: "CBI Court Trial Representation",
+        description: "Full trial representation before CBI Special Courts including filing of discharge applications, cross-examination of prosecution witnesses, presentation of defense evidence, and final arguments. We handle cases involving multiple accused and voluminous documentary evidence."
+      },
+      {
+        title: "Appeals Against CBI Court Convictions",
+        description: "Filing and arguing criminal appeals before High Courts and the Supreme Court against convictions by CBI Special Courts. We identify grounds for appeal including errors of law, perverse findings of fact, improper appreciation of evidence, and sentencing irregularities."
+      },
+      {
+        title: "CBI Summons & PE Response",
+        description: "Strategic legal advice and representation when clients receive CBI summons for questioning or are subjects of Preliminary Enquiries (PE). We guide clients on their rights, prepare them for interrogation, and ensure procedural safeguards are maintained throughout the investigation."
+      }
+    ],
+    faqs: [
+      {
+        question: "What should I do if I receive a CBI summons?",
+        answer: "Immediately consult a criminal defense lawyer experienced in CBI matters. Do not ignore the summons as non-compliance can lead to coercive measures. Your lawyer will advise you on your rights during questioning, help you prepare your responses, and ensure that the CBI follows proper procedural safeguards. You have the right to have your lawyer present during interrogation, and you cannot be compelled to make self-incriminating statements under Article 20(3) of the Constitution."
+      },
+      {
+        question: "Can a CBI FIR be quashed?",
+        answer: "Yes, CBI FIRs can be quashed by the High Court under Section 482 of CrPC (now Section 528 of BNSS) or under Article 226 of the Constitution. Grounds for quashing include: the allegations do not constitute a cognizable offence, the FIR is based on a settled civil dispute, the investigation is politically motivated, the required sanction for prosecution was not obtained, or continuation of proceedings would amount to an abuse of the process of court. However, courts are generally reluctant to quash FIRs at the initial stage."
+      },
+      {
+        question: "Is bail difficult to obtain in CBI cases?",
+        answer: "Bail in CBI cases, especially corruption and economic offence cases, can be challenging but is a constitutional right. Courts consider factors including the gravity of the offence, the evidence against the accused, the likelihood of tampering with evidence or influencing witnesses, flight risk, and the accused's antecedents. For offences under the PC Act, there are no special bail restrictions, but courts tend to be cautious. Anticipatory bail applications require demonstrating extraordinary circumstances."
+      },
+      {
+        question: "What is the difference between a CBI PE and RC?",
+        answer: "A Preliminary Enquiry (PE) is a fact-finding exercise conducted by CBI to determine whether there is sufficient material to register a Regular Case (RC/FIR). A PE does not carry the legal consequences of an FIR and is essentially a verification exercise. If the PE reveals cognizable offence, an RC (equivalent to FIR) is registered and formal investigation begins under the DSPE Act. The accused has more limited rights during PE stage compared to the RC stage."
+      },
+      {
+        question: "Can CBI investigate cases without state government consent?",
+        answer: "Generally, CBI requires the consent of the state government to investigate cases within that state's jurisdiction, as policing is a state subject. However, this requirement is waived when the Supreme Court or a High Court directs a CBI investigation, or when the case involves a Union Territory. Several states have withdrawn general consent for CBI, requiring case-specific consent. CBI can also investigate cases involving central government employees and organizations under its own jurisdiction."
+      }
+    ],
+    relevantCourts: [
+      "CBI Special Courts (designated under DSPE Act)",
+      "High Courts (bail, quashing, and appeals)",
+      "Supreme Court of India (appeals and special leave petitions)",
+      "Designated Courts under Prevention of Corruption Act",
+      "Sessions Courts (for non-PC Act CBI cases)"
+    ],
+    highlights: [
+      { stat: "1946", label: "Year CBI was established under DSPE Act" },
+      { stat: "Pan-India", label: "CBI jurisdiction when notified by Central Government" },
+      { stat: "Special Courts", label: "Dedicated CBI courts for expeditious trial" },
+      { stat: "PC Act 1988", label: "Primary anti-corruption legislation" }
+    ]
+  },
+
+  "ed-cases": {
+    detailedOverview: [
+      "The Enforcement Directorate (ED) is India's principal law enforcement agency responsible for fighting economic crimes and enforcing two critical statutes — the Prevention of Money Laundering Act, 2002 (PMLA) and the Foreign Exchange Management Act, 1999 (FEMA). ED investigations have expanded dramatically in recent years, with the agency attaching assets worth thousands of crores and filing Enforcement Case Information Reports (ECIRs) across sectors including real estate, banking, corporate fraud, narcotics proceeds, and public corruption. The severity of PMLA provisions — including the reversal of burden of proof for bail, attachment of property, and stringent bail conditions under Section 45 — makes ED cases among the most consequential in Indian criminal law.",
+      "Under PMLA, money laundering is defined as involvement in any process or activity connected with the proceeds of crime, including concealment, possession, acquisition, use, or projection as untainted property. The ED can provisionally attach property believed to be proceeds of crime, and if not confirmed by the Adjudicating Authority within 180 days, the attachment lapses. FEMA proceedings, while civil in nature, can result in heavy penalties up to three times the amount involved in the contravention. The ED also enforces the Fugitive Economic Offenders Act, 2018, which allows confiscation of assets of declared fugitive economic offenders.",
+      "Our ED defense practice combines deep expertise in financial law, constitutional safeguards, and criminal procedure to protect clients at every stage of ED proceedings. From responding to ED summons under Section 50 of PMLA, challenging provisional attachment orders before the Adjudicating Authority, securing bail in ECIR cases (where twin conditions under Section 45 apply), to defending full prosecution before Special PMLA Courts — we provide strategic, outcome-focused legal representation. We also handle FEMA violation proceedings, compounding applications before RBI, and appeals before the Appellate Tribunal and High Courts."
+    ],
+    keyLegislation: [
+      "Prevention of Money Laundering Act, 2002 (PMLA, as amended)",
+      "Foreign Exchange Management Act, 1999 (FEMA)",
+      "Fugitive Economic Offenders Act, 2018",
+      "Bharatiya Nyaya Sanhita, 2023 (BNS) — scheduled offences",
+      "Prevention of Corruption Act, 1988 (as predicate offence)",
+      "Narcotic Drugs and Psychotropic Substances Act, 1985 (as predicate offence)",
+      "Companies Act, 2013 (corporate fraud as predicate offence)",
+      "Conservation of Foreign Exchange and Prevention of Smuggling Activities Act, 1974 (COFEPOSA)"
+    ],
+    serviceDetails: [
+      {
+        title: "PMLA Defense & Prosecution Representation",
+        description: "Comprehensive defense in PMLA prosecution before Special Courts including challenging the predicate offence connection, questioning the proceeds of crime identification, and defending against money laundering charges. We analyze complex financial trails and present evidence to demonstrate legitimate sources of funds."
+      },
+      {
+        title: "FEMA Violation Cases & Compounding",
+        description: "Representation in FEMA contravention proceedings before the Adjudicating Authority and filing compounding applications before the Reserve Bank of India (RBI). We handle cases involving unauthorized foreign exchange transactions, hawala operations, export-import violations, and non-compliance with FDI regulations."
+      },
+      {
+        title: "Provisional Attachment Order Challenges",
+        description: "Filing replies and arguments before the Adjudicating Authority under PMLA to challenge ED's Provisional Attachment Orders (PAOs). We demonstrate that the attached property does not constitute proceeds of crime, challenge the nexus between the predicate offence and the property, and argue for de-attachment."
+      },
+      {
+        title: "ED Summons Response & Statement Representation",
+        description: "Legal advice and representation when clients are summoned under Section 50 of PMLA for recording of statements. We prepare clients for ED questioning, advise on rights against self-incrimination under Article 20(3), and ensure procedural fairness during the investigation process."
+      },
+      {
+        title: "Bail Applications in ECIR Cases",
+        description: "Filing and arguing bail applications in PMLA cases where the twin conditions under Section 45 apply — the accused must demonstrate that there are reasonable grounds for believing they are not guilty, and that they are not likely to commit any offence while on bail. We present compelling arguments and documentary evidence to satisfy these stringent requirements."
+      },
+      {
+        title: "Appeals Before Appellate Tribunal",
+        description: "Filing appeals before the Appellate Tribunal under PMLA against orders of the Adjudicating Authority confirming attachment of property. We also handle appeals against orders refusing to release attached property and other adverse orders passed during PMLA proceedings."
+      },
+      {
+        title: "Asset Restoration & De-freezing",
+        description: "Representation for restoration of attached or frozen properties and bank accounts. We file applications demonstrating legitimate ownership and source of funds, challenge the proportionality of attachments, and pursue release of properties not connected to the alleged proceeds of crime."
+      },
+      {
+        title: "Fugitive Economic Offenders Act Defense",
+        description: "Defense against applications filed under the Fugitive Economic Offenders Act, 2018, including challenging the declaration of a person as a fugitive economic offender and opposing confiscation of properties. We also assist clients in voluntarily appearing before courts to avoid fugitive declarations."
+      }
+    ],
+    faqs: [
+      {
+        question: "What is an ECIR and how is it different from an FIR?",
+        answer: "An Enforcement Case Information Report (ECIR) is the internal document registered by the Enforcement Directorate to initiate investigation under PMLA. Unlike an FIR (First Information Report) under criminal law, an ECIR is not a public document and the ED is not legally obligated to provide a copy to the accused. The Supreme Court has held that non-supply of ECIR does not violate the right to fair trial, as PMLA proceedings are based on the predicate offence for which an FIR already exists."
+      },
+      {
+        question: "Why is bail so difficult in ED/PMLA cases?",
+        answer: "Section 45 of PMLA imposes twin conditions for bail: the court must be satisfied that there are reasonable grounds for believing the accused is (i) not guilty of the offence, and (ii) not likely to commit any offence while on bail. This effectively reverses the presumption of innocence for bail purposes. The Supreme Court in Vijay Madanlal Choudhary (2022) upheld these provisions. However, courts have granted bail where the accused demonstrates cooperation with investigation, prolonged incarceration, or when the predicate offence itself does not survive."
+      },
+      {
+        question: "Can ED attach property of family members or third parties?",
+        answer: "Yes, under PMLA, the ED can attach any property that constitutes proceeds of crime, regardless of who currently holds it. If proceeds of crime are transferred to family members or third parties (even without their knowledge, in some interpretations), such property can be attached. However, bona fide purchasers for adequate consideration without knowledge of the criminal origin may challenge the attachment by demonstrating good faith acquisition."
+      },
+      {
+        question: "What is the time limit for ED investigation?",
+        answer: "Under PMLA, there is no specific statutory time limit for ED investigation, unlike CBI cases. However, the Provisional Attachment Order must be confirmed by the Adjudicating Authority within 180 days, failing which it lapses. The prosecution complaint (equivalent to charge sheet) must be filed before the Special Court within 60 days of arrest, extendable up to 90 days. If not filed within this period, the accused is entitled to default bail."
+      },
+      {
+        question: "Can FEMA violations lead to criminal prosecution?",
+        answer: "FEMA itself is a civil law and violations attract civil penalties (up to three times the amount involved). However, if FEMA violations involve hawala transactions or are connected to predicate offences under PMLA (such as fraud, corruption, or drug trafficking), they can trigger PMLA proceedings which are criminal in nature. Additionally, violations under the now-repealed FERA (Foreign Exchange Regulation Act) that involved criminal provisions may still be prosecuted under transitional provisions."
+      },
+      {
+        question: "What rights does an accused have during ED summons under Section 50 PMLA?",
+        answer: "Under Section 50 of PMLA, the ED can summon any person to give evidence or produce documents. The summoned person is bound to attend and state the truth. However, the constitutional protection against self-incrimination under Article 20(3) applies. The accused has the right to legal representation, the right to remain silent on self-incriminating questions, and the right to retract statements made under coercion. Statements recorded under Section 50 are admissible as evidence in PMLA proceedings."
+      }
+    ],
+    relevantCourts: [
+      "Special PMLA Courts (designated under PMLA)",
+      "Adjudicating Authority under PMLA",
+      "Appellate Tribunal under PMLA",
+      "High Courts (bail, quashing, and writ jurisdiction)",
+      "Supreme Court of India (appeals and constitutional challenges)"
+    ],
+    highlights: [
+      { stat: "PMLA 2002", label: "Primary anti-money laundering statute" },
+      { stat: "Section 45", label: "Stringent twin-condition bail requirements" },
+      { stat: "180 Days", label: "Deadline for confirming provisional attachment" },
+      { stat: "3x Penalty", label: "Maximum FEMA contravention penalty" }
+    ]
+  },
+
+  "ndps-cases": {
+    detailedOverview: [
+      "The Narcotic Drugs and Psychotropic Substances Act, 1985 (NDPS Act) is India's primary legislation governing drug-related offences, prescribing severe penalties including imprisonment up to 20 years and death penalty for repeat offenders in commercial quantity cases. The Act classifies drug offences based on quantity — small quantity, intermediate (more than small but less than commercial), and commercial quantity — with correspondingly graduated punishment. NDPS cases require highly specialized legal defense because of the strict procedural requirements for search, seizure, sampling, and chain of custody that the prosecution must follow, and any non-compliance can be grounds for acquittal.",
+      "The NDPS Act mandates specific procedures under Sections 41-43 (search of buildings, persons, and in public places), Section 50 (right of the accused to be searched before a Gazetted Officer or Magistrate), Section 52A (disposal of seized drugs), and Section 55 (police diary entries). Indian courts, including the Supreme Court, have consistently held that non-compliance with these mandatory provisions — particularly Section 50 regarding personal search — vitiates the entire prosecution case. The distinction between 'conscious possession' and mere proximity to contraband, and between personal consumption and commercial trafficking, are critical defense strategies.",
+      "Our NDPS defense practice provides vigorous legal representation at every stage — from the moment of arrest through bail applications, trial before Special NDPS Courts, and appeals. We scrutinize search and seizure procedures for compliance with NDPS Act provisions and Supreme Court guidelines, challenge forensic and chemical analysis reports, question the chain of custody of seized substances, and present compelling arguments on quantity disputes and reclassification. For commercial quantity cases where bail is restricted under Section 37, we build strong cases demonstrating reasonable grounds for acquittal."
+    ],
+    keyLegislation: [
+      "Narcotic Drugs and Psychotropic Substances Act, 1985 (NDPS Act, as amended)",
+      "NDPS Rules and Notifications (quantity thresholds)",
+      "Bharatiya Nagarik Suraksha Sanhita, 2023 (BNSS) — procedural provisions",
+      "Bharatiya Nyaya Sanhita, 2023 (BNS) — general criminal provisions",
+      "Prevention of Illicit Traffic in Narcotic Drugs and Psychotropic Substances Act, 1988",
+      "Narcotic Drugs and Psychotropic Substances (Regulation of Controlled Substances) Order, 2013",
+      "UN Convention Against Illicit Traffic in Narcotic Drugs, 1988"
+    ],
+    serviceDetails: [
+      {
+        title: "Bail Applications in NDPS Cases",
+        description: "Filing and arguing bail applications in NDPS cases, including the stringent requirements under Section 37 for commercial quantity offences where the court must be satisfied that there are reasonable grounds for believing the accused is not guilty. For small and intermediate quantities, we present strong arguments on merits, cooperation, and personal circumstances."
+      },
+      {
+        title: "NDPS Trial Defense & Representation",
+        description: "Full trial representation before Special NDPS Courts including cross-examination of investigating officers, independent witnesses, and forensic experts. We challenge the prosecution's case on procedural non-compliance, chain of custody gaps, and inadequate forensic evidence to secure acquittals."
+      },
+      {
+        title: "Challenge of Search & Seizure Procedures",
+        description: "Detailed scrutiny of search and seizure operations for compliance with Sections 41-43 and Section 50 of the NDPS Act. Non-compliance with the mandatory requirement of offering search before a Gazetted Officer or Magistrate (Section 50) has been held to be fatal to the prosecution by the Supreme Court in multiple judgments."
+      },
+      {
+        title: "Acquittal Appeals for NDPS Convictions",
+        description: "Filing criminal appeals before High Courts and the Supreme Court against NDPS convictions, identifying errors of law, procedural violations overlooked by the trial court, perverse findings of fact, and disproportionate sentencing. We have experience in securing acquittals on appeal by demonstrating prosecution failures."
+      },
+      {
+        title: "Special NDPS Court Representation",
+        description: "Dedicated representation before Special Courts constituted under Section 36 of the NDPS Act for trial of NDPS offences. These courts have exclusive jurisdiction over NDPS cases and follow expedited trial procedures. We handle all stages from framing of charges to final arguments."
+      },
+      {
+        title: "Conscious Possession & Conspiracy Defense",
+        description: "Building defense strategies around the critical legal concept of 'conscious possession' — the prosecution must prove not just physical proximity to the contraband but actual knowledge and control. We also defend against conspiracy charges under Section 29 of the NDPS Act by challenging the evidence of common intention and pre-arranged plan."
+      },
+      {
+        title: "Drug Quantity Dispute & Reclassification",
+        description: "Challenging the quantity determination by the prosecution through independent forensic analysis, questioning sampling procedures, and arguing for reclassification from commercial to intermediate or small quantity. Quantity reclassification can dramatically reduce the applicable punishment and remove bail restrictions under Section 37."
+      },
+      {
+        title: "Preventive Detention Challenges (PIT-NDPS Act)",
+        description: "Filing habeas corpus petitions before High Courts to challenge preventive detention orders passed under the Prevention of Illicit Traffic in Narcotic Drugs and Psychotropic Substances Act, 1988. We challenge detention orders on grounds of non-application of mind, stale grounds, non-supply of relied-upon documents, and violation of constitutional safeguards."
+      }
+    ],
+    faqs: [
+      {
+        question: "What are the quantity thresholds under the NDPS Act?",
+        answer: "The NDPS Act classifies drug quantities into three categories: Small Quantity (lower threshold), Commercial Quantity (higher threshold), and Intermediate Quantity (between the two). For example, for cannabis (ganja): small quantity is 1 kg, commercial quantity is 20 kg. For heroin: small quantity is 5 grams, commercial quantity is 250 grams. For cocaine: small quantity is 2 grams, commercial quantity is 100 grams. The punishment varies significantly — small quantity attracts up to 1 year (or fine), intermediate up to 10 years, and commercial quantity 10-20 years with fine."
+      },
+      {
+        question: "Is bail possible in NDPS commercial quantity cases?",
+        answer: "Bail in commercial quantity NDPS cases is extremely difficult due to Section 37 of the NDPS Act, which imposes twin conditions similar to PMLA: the court must be satisfied that there are reasonable grounds for believing the accused is not guilty and is unlikely to commit any offence on bail. However, bail can be granted on grounds of prolonged incarceration (violation of Article 21), if the prosecution case is inherently weak, if there are procedural violations in search and seizure, or on medical/humanitarian grounds. Default bail is also available if the charge sheet is not filed within the statutory period."
+      },
+      {
+        question: "What is the importance of Section 50 compliance in NDPS cases?",
+        answer: "Section 50 of the NDPS Act mandates that when an officer is about to search a person, the officer must inform the person of their right to be searched before a Gazetted Officer or a Magistrate. The Supreme Court in cases like Vijaysinh Chandubha Jadeja (2011) has held that compliance with Section 50 is mandatory and not merely directory. Non-compliance vitiates the search and makes the recovery inadmissible, which can be fatal to the prosecution's case. This is one of the most powerful defense tools in NDPS cases."
+      },
+      {
+        question: "Can NDPS cases result in the death penalty?",
+        answer: "Yes, Section 31A of the NDPS Act provides for the death penalty for repeat offenders convicted of specified offences involving commercial quantities. The death penalty applies to a person who has been previously convicted of an offence punishable with 10 years or more under NDPS and is subsequently convicted of the same category of offence involving commercial quantity. However, this provision has been rarely invoked, and courts apply the 'rarest of rare' doctrine."
+      },
+      {
+        question: "What defenses are available in NDPS cases?",
+        answer: "Key defenses include: (1) Non-compliance with mandatory procedures under Sections 41-43, 50, 52A, and 55 of the NDPS Act; (2) Absence of 'conscious possession' — mere proximity without knowledge; (3) Quantity dispute — challenging the prosecution's quantity determination; (4) Chain of custody gaps — breaks in the custody of seized substance from seizure to FSL examination; (5) Planting/fabrication — evidence of false implication; (6) Delayed FSL report or tampered samples; (7) Non-joining of independent witnesses during search and seizure operations."
+      }
+    ],
+    relevantCourts: [
+      "Special NDPS Courts (constituted under Section 36)",
+      "High Courts (bail, appeals, habeas corpus for preventive detention)",
+      "Supreme Court of India (appeals and constitutional challenges)",
+      "Sessions Courts (for NDPS offences where Special Court not constituted)",
+      "Narcotics Control Bureau (NCB) — investigating authority"
+    ],
+    highlights: [
+      { stat: "1985", label: "Year NDPS Act was enacted" },
+      { stat: "Section 37", label: "Stringent bail restriction for commercial quantity" },
+      { stat: "Section 50", label: "Mandatory search procedure — non-compliance fatal" },
+      { stat: "20 Years", label: "Maximum imprisonment for commercial quantity offences" }
     ]
   }
 };

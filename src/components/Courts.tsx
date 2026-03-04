@@ -77,7 +77,7 @@ export default function Courts() {
               {/* Right — Supreme Court image + overlay */}
               <div className="relative rounded-2xl overflow-hidden aspect-[4/3] lg:aspect-auto lg:h-[560px] xl:h-[620px] border border-gold/10 shadow-2xl shadow-black/30">
                 <Image
-                  src="/courts-image.png"
+                  src="/courts-image.jpg"
                   alt="Supreme Court of India"
                   fill
                   className="object-cover"

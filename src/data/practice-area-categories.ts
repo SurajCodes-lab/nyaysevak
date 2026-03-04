@@ -8,6 +8,13 @@ export interface PracticeAreaCategory {
 
 export const practiceAreaCategories: PracticeAreaCategory[] = [
   {
+    id: "criminal-defense",
+    title: "Criminal Defense",
+    description: "CBI, ED & NDPS specialist defense, expert criminal law, cyber crime, military law and bail applications across all courts.",
+    lucideIcon: "ShieldAlert",
+    slugs: ["cbi-cases", "ed-cases", "ndps-cases", "criminal-law", "cyber-law", "military-defense"],
+  },
+  {
     id: "family-personal",
     title: "Family & Personal",
     description: "Divorce, custody, immigration, documentation and personal legal matters handled with care and sensitivity.",
@@ -30,13 +37,6 @@ export const practiceAreaCategories: PracticeAreaCategory[] = [
       "corporate-business", "labour-employment", "intellectual-property",
       "tax-law", "banking-finance", "international-law",
     ],
-  },
-  {
-    id: "criminal-defense",
-    title: "Criminal Defense",
-    description: "Expert criminal defense, cyber crime, military law and bail applications across all courts.",
-    lucideIcon: "ShieldAlert",
-    slugs: ["criminal-law", "cyber-law", "military-defense"],
   },
   {
     id: "consumer-rights",

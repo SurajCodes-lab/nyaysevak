@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Shield, Users, MapPin, MessageCircle, ChevronDown, ArrowRight } from "lucide-react";
 
 const trustItems = [
-  { icon: Shield, label: "10+ Years Experience" },
+  { icon: Shield, label: "15+ Years Experience" },
   { icon: Users, label: "1,000+ Verified Lawyers" },
   { icon: MapPin, label: "700+ Courts Covered" },
   { icon: MessageCircle, label: "Free First Consultation" },
@@ -15,7 +15,7 @@ export default function Hero() {
       {/* Background image with cinematic overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/hero-bg.jpeg"
+          src="/hero-bg.jpg"
           alt=""
           fill
           priority

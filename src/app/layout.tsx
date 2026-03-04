@@ -33,8 +33,8 @@ const jsonLd = {
   description:
     "India's first complete legal ecosystem. Access Supreme Court, 25 High Courts, 700+ District Courts, all Tribunals & Arbitration centres. Complete A-Z legal services for individuals and businesses.",
   url: "https://nyaysevak.com",
-  logo: "https://nyaysevak.com/logo.jpeg",
-  image: "https://nyaysevak.com/logo.jpeg",
+  logo: "https://nyaysevak.com/logo.png",
+  image: "https://nyaysevak.com/logo.png",
   areaServed: {
     "@type": "Country",
     name: "India",
@@ -95,7 +95,7 @@ export const metadata: Metadata = {
       "India's first complete legal ecosystem offering A-Z legal services across all courts, tribunals & arbitration centres. B2B + B2C platform for individuals and businesses.",
     images: [
       {
-        url: "/logo.jpeg",
+        url: "/logo.png",
         width: 800,
         height: 800,
         alt: "NyaySevak - Defending Your Rights",
@@ -107,7 +107,7 @@ export const metadata: Metadata = {
     title: "NyaySevak - India's Premier Legal Services Platform",
     description:
       "Complete A-Z legal services across Supreme Court, High Courts, District Courts, Tribunals & Arbitration centres.",
-    images: ["/logo.jpeg"],
+    images: ["/logo.png"],
   },
 };
 
@@ -119,7 +119,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/logo.jpeg" />
+        <link rel="icon" href="/logo.png" />
         <meta name="theme-color" content="#080704" />
         <script
           type="application/ld+json"

@@ -905,7 +905,7 @@ const part1Content: Record<string, PracticeAreaContent> = {
     detailedOverview: [
       "Arbitration and Alternative Dispute Resolution (ADR) have emerged as the preferred methods for resolving commercial and civil disputes in India, offering faster, confidential, and cost-effective alternatives to the overburdened court system. India's arbitration framework, governed by the Arbitration and Conciliation Act, 1996 (as substantially amended in 2015, 2019, and 2021), is modeled on the UNCITRAL Model Law and provides a robust statutory basis for both domestic and international commercial arbitration. At NyaySevak, our ADR practice encompasses arbitration, mediation, conciliation, and Lok Adalat proceedings, helping clients resolve disputes efficiently without the delays inherent in traditional litigation.",
       "The Government of India has taken significant steps to promote India as a global arbitration hub, including the establishment of the India International Arbitration Centre (IIAC) in New Delhi, amendments encouraging institutional arbitration over ad hoc proceedings, the introduction of the Mediation Act, 2023 for a comprehensive mediation framework, and judicial decisions that have increasingly adopted a pro-arbitration stance (limiting court interference with arbitral awards). Indian courts now generally respect party autonomy, enforce arbitration agreements, and adopt a minimal-intervention approach, making arbitration an increasingly attractive option for dispute resolution.",
-      "Our ADR practice covers the entire lifecycle of alternative dispute resolution\u2014from drafting effective arbitration and mediation clauses in commercial contracts, to representing clients in arbitral proceedings before sole arbitrators and three-member tribunals, to enforcing or challenging arbitral awards before competent courts. We handle disputes across sectors including construction, infrastructure, joint ventures, shareholder disagreements, insurance, real estate, and international trade. We also represent parties in mediation and conciliation proceedings before accredited mediators and in Lok Adalats organized by the National Legal Services Authority."
+      "Our ADR practice covers the entire lifecycle of alternative dispute resolution\u2014from drafting effective arbitration and mediation clauses in commercial contracts, to representing clients in arbitral proceedings before sole arbitrators and three-member tribunals, to enforcing or challenging arbitral awards before competent courts. We handle disputes across sectors including construction, infrastructure, joint ventures, shareholder disagreements, insurance, real estate, and international trade. We also represent parties in mediation and conciliation proceedings before accredited mediators and in Lok Adalats organized by the National Legal Services Authority. Additionally, our practice extends to internal and corporate arbitration, resolving intra-corporate disputes such as shareholder conflicts, partnership disagreements, employment arbitration, and joint venture disputes through efficient arbitral mechanisms."
     ],
     keyLegislation: [
       "Arbitration and Conciliation Act, 1996 (as amended in 2015, 2019, 2021)",
@@ -939,6 +939,10 @@ const part1Content: Record<string, PracticeAreaContent> = {
       {
         title: "Lok Adalat Representation",
         description: "Representing parties in Lok Adalats organized under the Legal Services Authorities Act, 1987. Awards passed in Lok Adalats are deemed decrees of civil courts, are final and binding, and are non-appealable. We help clients prepare their cases effectively for these settlement-focused forums, which handle motor accident claims, matrimonial disputes, labour disputes, and pre-litigation matters."
+      },
+      {
+        title: "Internal & Corporate Arbitration",
+        description: "Resolution of intra-corporate and internal disputes through arbitration, including shareholder disagreements, partnership dissolution conflicts, employment arbitration clauses, joint venture disputes, promoter-investor conflicts, and disagreements arising under articles of association or shareholder agreements. We draft arbitration-friendly corporate governance documents and represent parties in institutional and ad hoc proceedings for internal business disputes."
       }
     ],
     faqs: [
@@ -961,6 +965,10 @@ const part1Content: Record<string, PracticeAreaContent> = {
       {
         question: "How is a foreign arbitral award enforced in India?",
         answer: "Foreign arbitral awards are enforced in India under Part II of the Arbitration Act, which implements the New York Convention, 1958 and the Geneva Convention, 1927. To enforce a foreign award, the party must file an application before the competent High Court with the original award or certified copy, the original arbitration agreement, and evidence that the award is from a notified country. The court can refuse enforcement on limited grounds including invalidity of agreement, violation of natural justice, the award being beyond the scope of arbitration, or enforcement being contrary to Indian public policy."
+      },
+      {
+        question: "Can internal corporate disputes be resolved through arbitration?",
+        answer: "Yes, internal corporate disputes — including shareholder disagreements, partnership dissolution conflicts, promoter-investor disputes, and disagreements under joint venture agreements — are increasingly being resolved through arbitration. Arbitration clauses in shareholder agreements, articles of association, and partnership deeds are enforceable. The Supreme Court in Booz Allen & Hamilton Inc. v. SBI Home Finance (2011) clarified which disputes are arbitrable, and most commercial corporate disputes fall within this scope. However, matters involving winding up, oppression and mismanagement under Sections 241-242 of the Companies Act are generally non-arbitrable and must be adjudicated by the NCLT."
       }
     ],
     relevantCourts: [

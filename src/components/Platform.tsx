@@ -54,7 +54,7 @@ const platformStats = [
   { value: "25+", label: "High Courts", Icon: Landmark },
   { value: "700+", label: "District Courts", Icon: Building2 },
   { value: "20+", label: "Tribunals", Icon: Scale },
-  { value: "26", label: "Practice Areas", Icon: Briefcase },
+  { value: "29", label: "Practice Areas", Icon: Briefcase },
   { value: "50+", label: "Legal Services", Icon: FileText },
   { value: "36", label: "States & UTs", Icon: Globe },
 ];

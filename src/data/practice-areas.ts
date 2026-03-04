@@ -4,9 +4,57 @@ export interface PracticeArea {
   title: string;
   description: string;
   services: string[];
+  featured?: boolean;
 }
 
 export const practiceAreas: PracticeArea[] = [
+  {
+    slug: "cbi-cases",
+    letter: "CB",
+    title: "CBI Cases",
+    description: "Specialized defense and representation in Central Bureau of Investigation matters",
+    featured: true,
+    services: [
+      "CBI FIR quashing & anticipatory bail",
+      "Defense in corruption & bribery cases (Prevention of Corruption Act)",
+      "Representation in economic offences investigated by CBI",
+      "CBI trap cases & disproportionate assets defense",
+      "Defense in special crimes (murder, kidnapping, terrorism referred to CBI)",
+      "CBI court trial representation & cross-examination",
+      "Appeals against CBI court convictions in High Courts & Supreme Court",
+    ],
+  },
+  {
+    slug: "ed-cases",
+    letter: "ED",
+    title: "ED Cases",
+    description: "Expert legal defense in Enforcement Directorate investigations and proceedings",
+    featured: true,
+    services: [
+      "Defense in PMLA (Prevention of Money Laundering Act) proceedings",
+      "FEMA violation cases & compounding applications",
+      "Provisional attachment order challenges before Adjudicating Authority",
+      "ED summons response & statement recording representation",
+      "Bail applications in ECIR (Enforcement Case Information Report) cases",
+      "Appeals before Appellate Tribunal under PMLA",
+      "Asset restoration & de-freezing of attached properties",
+    ],
+  },
+  {
+    slug: "ndps-cases",
+    letter: "ND",
+    title: "NDPS Cases",
+    description: "Dedicated legal defense for narcotics and psychotropic substances matters",
+    services: [
+      "Bail applications in NDPS cases (commercial & intermediate quantity)",
+      "Defense in NDPS Act prosecution & trial representation",
+      "Challenge of illegal search & seizure procedures",
+      "Acquittal appeals for NDPS convictions",
+      "Representation before Special NDPS Courts",
+      "Defense in conscious possession & conspiracy charges",
+      "Drug quantity dispute & reclassification petitions",
+    ],
+  },
   {
     slug: "civil-law",
     letter: "A",
@@ -178,6 +226,7 @@ export const practiceAreas: PracticeArea[] = [
       "Award enforcement",
       "Mediation & conciliation",
       "Lok Adalat representation",
+      "Internal & corporate arbitration",
     ],
   },
   {

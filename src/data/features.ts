@@ -68,7 +68,7 @@ export const platformFeatures: Feature[] = [
       "Category-wise frequently asked questions",
       "Plain-language answers to legal queries",
       "Updated with latest legal developments",
-      "Covers all 26 practice area categories",
+      "Covers all 29 practice area categories",
       "Links to detailed resources for further reading",
     ],
   },

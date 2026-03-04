@@ -6,20 +6,20 @@ import { BookOpen, MapPin, ShieldCheck, ArrowRight, ChevronRight, Search } from 
 export const metadata: Metadata = {
   title: "Practice Areas - A-Z Legal Services | NyaySevak",
   description:
-    "Complete A-Z legal services across every domain of Indian law. Civil law, criminal law, family law, corporate law, IP, tax, consumer protection, arbitration, documentation & more. 26 practice areas with pan-India coverage.",
+    "Complete A-Z legal services across every domain of Indian law. Civil law, criminal law, CBI, ED, NDPS defense, family law, corporate law, IP, tax, consumer protection, arbitration, documentation & more. 29 practice areas with pan-India coverage.",
   keywords:
     "practice areas, civil law India, criminal lawyer, family lawyer, corporate lawyer, IP lawyer, tax lawyer, consumer protection, arbitration, legal documentation, Indian law, NyaySevak",
   openGraph: {
     title: "A-Z Legal Practice Areas | NyaySevak",
     description:
-      "26 practice areas covering every domain of Indian law. Find verified lawyers for civil, criminal, family, corporate, IP, tax, and more.",
+      "29 practice areas covering every domain of Indian law. Find verified lawyers for CBI, ED, NDPS, civil, criminal, family, corporate, IP, tax, and more.",
     type: "website",
   },
 };
 
 const stats = [
   {
-    value: "26",
+    value: "29",
     label: "Practice Areas",
     Icon: BookOpen,
   },

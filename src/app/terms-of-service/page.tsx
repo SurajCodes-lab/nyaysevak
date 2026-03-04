@@ -74,7 +74,7 @@ export default function TermsOfServicePage() {
               </p>
               <ul className="list-disc space-y-2 pl-6 text-gray-500">
                 <li>Connecting users with verified legal professionals across the Supreme Court, 25 High Courts, 700+ District Courts, Tribunals, and Arbitration centres</li>
-                <li>Online and offline lawyer consultations across 26+ practice areas</li>
+                <li>Online and offline lawyer consultations across 29+ practice areas</li>
                 <li>Legal document preparation, review, and management services</li>
                 <li>Corporate legal advisory and compliance management for businesses</li>
                 <li>Contract management, intellectual property services, and due diligence</li>

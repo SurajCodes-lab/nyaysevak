@@ -73,11 +73,14 @@ input:focus, textarea:focus, select:focus {
    ======================================================= */
 
 .gradient-text-gold {
-  background: linear-gradient(90deg, #C9A84C 0%, #f0d878 25%, #C9A84C 50%, #a67c2e 75%, #C9A84C 100%);
+  background: linear-gradient(90deg, #d4af37 0%, #f5e27a 25%, #d4af37 50%, #f0d878 75%, #d4af37 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  color: transparent;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
   animation: goldTextShimmer 4s linear infinite;
 }
 
@@ -91,6 +94,7 @@ input:focus, textarea:focus, select:focus {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  color: transparent;
   filter: drop-shadow(0 0 12px rgba(201, 168, 76, 0.3));
 }
 

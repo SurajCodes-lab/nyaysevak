@@ -30,7 +30,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="mb-14 text-center">
             <Image
-              src="/logo.jpeg"
+              src="/logo.png"
               alt="NyaySevak Logo"
               width={72}
               height={72}
@@ -108,7 +108,7 @@ export default function Footer() {
                 ))}
                 <li className="pt-1">
                   <Link href="/practice-areas" className="inline-flex items-center gap-1.5 text-sm text-gold/70 font-semibold hover:text-gold transition-colors duration-200">
-                    View All 26 Areas
+                    View All {practiceAreas.length} Areas
                     <ArrowRight className="h-3 w-3" strokeWidth={2} />
                   </Link>
                 </li>

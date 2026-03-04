@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowRight, CheckCircle2, Scale, BookOpen, Landmark, ChevronRight } from "lucide-react";
 import { practiceAreas } from "@/data/practice-areas";
 import { practiceAreaContent } from "@/data/practice-area-content";
+import { practiceAreaCategories } from "@/data/practice-area-categories";
 import { notFound } from "next/navigation";
 
 export function generateStaticParams() {
@@ -45,11 +46,26 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ s
 
   const content = practiceAreaContent[slug];
   const currentIndex = practiceAreas.findIndex((a) => a.slug === slug);
-  const related = [
-    practiceAreas[(currentIndex + 1) % practiceAreas.length],
-    practiceAreas[(currentIndex + 2) % practiceAreas.length],
-    practiceAreas[(currentIndex + 3) % practiceAreas.length],
-  ];
+
+  // Category-aware related areas: same category first, then adjacent
+  const sameCategory = practiceAreaCategories.find((c) => c.slugs.includes(slug));
+  const sameCatAreas = sameCategory
+    ? sameCategory.slugs
+        .filter((s) => s !== slug)
+        .map((s) => practiceAreas.find((a) => a.slug === s))
+        .filter(Boolean) as typeof practiceAreas
+    : [];
+  const related = sameCatAreas.slice(0, 3);
+  if (related.length < 3) {
+    const usedSlugs = new Set([slug, ...related.map((r) => r.slug)]);
+    for (let i = 1; related.length < 3 && i < practiceAreas.length; i++) {
+      const candidate = practiceAreas[(currentIndex + i) % practiceAreas.length];
+      if (!usedSlugs.has(candidate.slug)) {
+        related.push(candidate);
+        usedSlugs.add(candidate.slug);
+      }
+    }
+  }
 
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
@@ -117,22 +133,26 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ s
                 {area.title}
               </h1>
               <p className="mt-3 sm:mt-4 text-base sm:text-lg text-gray-400 max-w-2xl leading-relaxed">{area.description}</p>
-
-              {/* Stat highlights */}
-              {content && (
-                <div className="mt-6 sm:mt-8 flex flex-wrap gap-3 sm:gap-4">
-                  {content.highlights.map((h) => (
-                    <div key={h.label} className="glass-card !rounded-xl px-4 py-2.5 sm:px-5 sm:py-3">
-                      <span className="text-lg sm:text-xl font-heading font-bold stat-gradient">{h.stat}</span>
-                      <p className="text-[10px] sm:text-xs uppercase tracking-wider text-gray-500 mt-0.5">{h.label}</p>
-                    </div>
-                  ))}
-                </div>
-              )}
             </div>
           </div>
         </div>
       </section>
+
+      {/* ===== Stat Highlights Strip ===== */}
+      {content && (
+        <section className="relative bg-dark border-y border-gold/[0.08]">
+          <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-gold/[0.08]">
+              {content.highlights.map((h) => (
+                <div key={h.label} className="px-4 sm:px-6 lg:px-8 py-6 sm:py-8 text-center">
+                  <span className="block text-2xl sm:text-3xl lg:text-4xl font-heading font-bold stat-gradient leading-tight">{h.stat}</span>
+                  <p className="text-[10px] sm:text-xs uppercase tracking-wider text-gray-500 mt-2 leading-snug">{h.label}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* ===== Detailed Overview ===== */}
       {content && (

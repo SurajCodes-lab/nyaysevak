@@ -48,7 +48,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5 group shrink-0">
             <Image
-              src="/logo.jpeg"
+              src="/logo.png"
               alt="NyaySevak Logo"
               width={44}
               height={44}

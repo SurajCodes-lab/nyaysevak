@@ -52,7 +52,7 @@ const featureContent: Record<string, { longDesc: string; howItWorks: { title: st
     ],
     highlights: [
       { label: "1,000+ Verified Lawyers", desc: "Bar Council verified professionals across India" },
-      { label: "26 Practice Areas", desc: "Complete coverage of all legal specializations" },
+      { label: "29 Practice Areas", desc: "Complete coverage of all legal specializations" },
       { label: "15+ Languages", desc: "Lawyers available in major Indian languages" },
       { label: "Quarterly Verification", desc: "Profiles updated and verified every quarter" },
       { label: "Under 2 Hour Response", desc: "Average response time for urgent matters" },
@@ -109,7 +109,7 @@ const featureContent: Record<string, { longDesc: string; howItWorks: { title: st
   "legal-guides-resources": {
     longDesc: "Legal literacy is the foundation of empowerment. NyaySevak's Legal Guides & Resources section is a comprehensive knowledge hub covering all aspects of Indian law — from simple explainers on filing RTI applications to in-depth analyses of corporate governance requirements. Every guide is written by practicing lawyers and reviewed by senior advocates.",
     howItWorks: [
-      { title: "Browse by Category", desc: "Explore guides organized by 26 practice areas for easy navigation." },
+      { title: "Browse by Category", desc: "Explore guides organized by 29 practice areas for easy navigation." },
       { title: "Search by Topic", desc: "Use our search to find specific answers to your legal questions." },
       { title: "Read Expert Content", desc: "Articles written by practicing lawyers in plain, accessible language." },
       { title: "Follow Step-by-Step Guides", desc: "Process guides walk you through legal procedures with clarity." },
@@ -118,7 +118,7 @@ const featureContent: Record<string, { longDesc: string; howItWorks: { title: st
     ],
     highlights: [
       { label: "500+ Legal Guides", desc: "Comprehensive articles covering all areas" },
-      { label: "26 Practice Areas", desc: "Complete topical coverage of Indian law" },
+      { label: "29 Practice Areas", desc: "Complete topical coverage of Indian law" },
       { label: "Regular Updates", desc: "New laws, amendments, and case summaries" },
       { label: "Bilingual Content", desc: "Available in English and Hindi" },
       { label: "Process Guides", desc: "Step-by-step legal procedure walkthroughs" },
@@ -175,7 +175,7 @@ const featureContent: Record<string, { longDesc: string; howItWorks: { title: st
   "faq-sections": {
     longDesc: "Legal questions shouldn't require a lawyer just to understand the basics. NyaySevak's FAQ Sections provide quick, plain-language answers to the most common legal questions across every practice area. Whether you want to know your rights in a property dispute, understand the bail process, or learn about consumer complaint procedures — our FAQs give you clarity in minutes.",
     howItWorks: [
-      { title: "Browse by Practice Area", desc: "FAQs are organized into 26 legal categories for easy navigation." },
+      { title: "Browse by Practice Area", desc: "FAQs are organized into 29 legal categories for easy navigation." },
       { title: "Search by Keyword", desc: "Type your question to instantly find relevant answers." },
       { title: "Read Clear Answers", desc: "Get concise, jargon-free responses written by legal experts." },
       { title: "Explore Related Guides", desc: "Follow links to detailed articles for deeper understanding." },
@@ -183,7 +183,7 @@ const featureContent: Record<string, { longDesc: string; howItWorks: { title: st
       { title: "Ask a Lawyer", desc: "If you need more clarity, connect with a lawyer directly." },
     ],
     highlights: [
-      { label: "26 Legal Categories", desc: "FAQs covering all practice areas" },
+      { label: "29 Legal Categories", desc: "FAQs covering all practice areas" },
       { label: "Jargon-Free Language", desc: "Simple, accessible explanations" },
       { label: "Regular Updates", desc: "Reflecting latest legal changes" },
       { label: "Deep-Linked Resources", desc: "Connected to detailed guides" },
@@ -192,7 +192,7 @@ const featureContent: Record<string, { longDesc: string; howItWorks: { title: st
     ],
     whyChoose: [
       "Answers written by practicing lawyers in simple, accessible language",
-      "Organized by 26 practice areas for easy discovery of relevant questions",
+      "Organized by 29 practice areas for easy discovery of relevant questions",
       "Smart keyword search that understands legal terminology and common language",
       "Deep-linked to comprehensive guides for those who want detailed explanations",
       "Regularly updated to reflect new laws, amendments, and court decisions",

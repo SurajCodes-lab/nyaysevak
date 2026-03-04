@@ -87,6 +87,11 @@ export default function PracticeAreas({ showFullListing = false }: PracticeAreas
                       className="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 shadow-lg shadow-black/[0.03] hover:border-gold/20 hover:shadow-xl hover:shadow-gold/[0.08] transition-all duration-500"
                     >
                       <div className="h-0.5 bg-gradient-to-r from-transparent via-gold/25 to-transparent group-hover:via-gold/60 transition-all duration-500" />
+                      {area.featured && (
+                        <span className="absolute top-3 right-3 z-10 bg-gradient-to-r from-gold to-gold-light text-black text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-lg shadow-gold/25">
+                          Featured
+                        </span>
+                      )}
                       <span className="absolute top-4 right-5 text-[100px] font-heading font-bold text-gold/[0.04] leading-none select-none pointer-events-none">
                         {area.letter}
                       </span>
@@ -207,8 +212,13 @@ export default function PracticeAreas({ showFullListing = false }: PracticeAreas
             <Link
               key={area.slug}
               href={`/practice-areas/${area.slug}`}
-              className="group flex items-center gap-4 glass-cream p-4 sm:p-5 transition-all duration-300"
+              className="group relative flex items-center gap-4 glass-cream p-4 sm:p-5 transition-all duration-300"
             >
+              {area.featured && (
+                <span className="absolute top-2 right-2 z-10 bg-gradient-to-r from-gold to-gold-light text-black text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full shadow-sm shadow-gold/25">
+                  Featured
+                </span>
+              )}
               <span className="h-11 w-11 rounded-lg icon-gold flex items-center justify-center text-sm font-heading font-bold text-black shrink-0 transition-all duration-300">
                 {area.letter}
               </span>
