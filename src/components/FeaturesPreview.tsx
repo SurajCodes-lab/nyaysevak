@@ -1,103 +1,182 @@
+"use client";
+
+import { useRef } from "react";
 import Link from "next/link";
+import {
+  Users, CalendarCheck, BookOpen, Landmark, HelpCircle, MessageCircle,
+  ArrowRight, ChevronLeft, ChevronRight,
+} from "lucide-react";
 import { platformFeatures } from "@/data/features";
 import ScrollReveal from "./ScrollReveal";
 
+const lucideIconMap: Record<string, React.ComponentType<{ className?: string; strokeWidth?: number }>> = {
+  "lawyer-directory": Users,
+  "service-booking": CalendarCheck,
+  "legal-guides-resources": BookOpen,
+  "court-tribunal-information": Landmark,
+  "faq-sections": HelpCircle,
+  "whatsapp-integration": MessageCircle,
+};
+
 export default function FeaturesPreview() {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const scrollCarousel = (direction: "left" | "right") => {
+    if (!scrollRef.current) return;
+    const cardWidth = scrollRef.current.children[0]?.clientWidth || 320;
+    scrollRef.current.scrollBy({
+      left: direction === "left" ? -cardWidth - 20 : cardWidth + 20,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <section id="features" className="bg-cream cream-pattern py-20 sm:py-28 lg:py-36">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-center gap-3 mb-4">
-          <div className="h-8 w-1 bg-gold-dark rounded-full" />
-          <p className="text-[10px] sm:text-xs uppercase tracking-[0.3em] text-gold-dark font-semibold">
-            Platform Features
-          </p>
-        </div>
-        <h2 className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-bold tracking-tight text-gray-900">
-          Why Choose NyaySevak
-        </h2>
-        <p className="mx-auto mt-3 sm:mt-4 max-w-2xl text-center text-sm sm:text-base text-gray-600">
-          A comprehensive platform designed to make India&apos;s legal system accessible to everyone
-        </p>
+        {/* Header — left-aligned */}
+        <ScrollReveal>
+          <div className="lg:flex lg:items-end lg:justify-between lg:gap-8 mb-12 sm:mb-16">
+            <div className="max-w-xl">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="h-8 w-1 bg-gold-dark rounded-full" />
+                <p className="text-[10px] sm:text-xs uppercase tracking-[0.3em] text-gold-dark font-semibold">
+                  Platform Features
+                </p>
+              </div>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-bold tracking-tight text-gray-900">
+                Built for Your Legal Needs
+              </h2>
+              <p className="mt-3 text-sm sm:text-base text-gray-500 leading-relaxed">
+                A comprehensive platform designed to make India&apos;s legal system accessible to everyone
+              </p>
+            </div>
+            <Link
+              href="/features"
+              className="mt-4 lg:mt-0 inline-flex items-center gap-2 text-sm font-semibold text-gold-dark hover:text-gold transition-colors shrink-0"
+            >
+              See All Features
+              <ArrowRight className="h-3.5 w-3.5" strokeWidth={2} />
+            </Link>
+          </div>
+        </ScrollReveal>
 
-        {/* Alternating left-right rows */}
-        <div className="mt-12 sm:mt-16 lg:mt-20">
-          {platformFeatures.map((feature, i) => {
-            const isOdd = i % 2 === 0; // 0-indexed: first row has number on left
-            const num = String(i + 1).padStart(2, "0");
+        {/* ── Mobile: Horizontal carousel ── */}
+        <div className="lg:hidden">
+          <div className="flex items-center justify-end gap-2 mb-4 pr-1">
+            <button
+              onClick={() => scrollCarousel("left")}
+              className="h-9 w-9 rounded-full border border-gold/15 bg-white flex items-center justify-center text-gold-dark hover:bg-gold/5 transition-all shadow-sm"
+              aria-label="Scroll left"
+            >
+              <ChevronLeft className="h-4 w-4" strokeWidth={2} />
+            </button>
+            <button
+              onClick={() => scrollCarousel("right")}
+              className="h-9 w-9 rounded-full border border-gold/15 bg-white flex items-center justify-center text-gold-dark hover:bg-gold/5 transition-all shadow-sm"
+              aria-label="Scroll right"
+            >
+              <ChevronRight className="h-4 w-4" strokeWidth={2} />
+            </button>
+          </div>
 
-            return (
-              <ScrollReveal key={feature.slug}>
+          <div
+            ref={scrollRef}
+            className="flex gap-4 overflow-x-auto snap-scroll-x pb-4 -mx-4 px-4 sm:-mx-6 sm:px-6"
+          >
+            {platformFeatures.map((feature) => {
+              const IconComponent = lucideIconMap[feature.slug];
+              return (
                 <Link
+                  key={feature.slug}
                   href={`/features/${feature.slug}`}
-                  className={`group flex flex-col ${
-                    isOdd ? "lg:flex-row" : "lg:flex-row-reverse"
-                  } items-center gap-6 sm:gap-8 lg:gap-12 py-10 sm:py-12 lg:py-14 ${
-                    i < platformFeatures.length - 1
-                      ? "border-b border-gold/10"
-                      : ""
-                  }`}
+                  className="snap-child shrink-0 w-[78vw] sm:w-[60vw] md:w-[42vw] rounded-2xl glass-cream overflow-hidden group"
                 >
-                  {/* Number + icon side */}
-                  <div className="flex items-center gap-4 lg:gap-6 shrink-0 lg:w-[200px]">
-                    <span className="text-7xl lg:text-8xl font-heading font-bold stat-gradient leading-none select-none">
-                      {num}
-                    </span>
-                    <div className="h-14 w-14 sm:h-16 sm:w-16 rounded-2xl bg-gradient-to-br from-gold/20 to-gold/5 flex items-center justify-center shrink-0 transition-all duration-300 group-hover:from-gold/30 group-hover:to-gold/10">
-                      <svg
-                        className="h-7 w-7 sm:h-8 sm:w-8 text-gold-dark"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        strokeWidth={1.5}
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d={feature.iconPath}
-                        />
-                      </svg>
+                  <div className="h-1 bg-gradient-to-r from-gold/20 via-gold/40 to-gold/20" />
+                  <div className="p-5 sm:p-6">
+                    <div className="h-11 w-11 rounded-xl bg-gradient-to-br from-gold/15 to-gold/5 border border-gold/10 flex items-center justify-center mb-4">
+                      {IconComponent && <IconComponent className="h-5 w-5 text-gold-dark" strokeWidth={1.5} />}
                     </div>
-                  </div>
-
-                  {/* Title + description side */}
-                  <div className="flex-1 text-center lg:text-left">
-                    <h3 className="text-xl sm:text-2xl font-heading font-bold text-gray-900 group-hover:text-gold-dark transition-colors duration-300">
+                    <h3 className="text-base sm:text-lg font-heading font-bold text-gray-900 group-hover:text-gold-dark transition-colors mb-2">
                       {feature.title}
                     </h3>
-                    <p className="mt-2 sm:mt-3 text-sm sm:text-base leading-relaxed text-gray-600 max-w-xl">
+                    <p className="text-xs sm:text-sm text-gray-500 leading-relaxed">
                       {feature.description}
                     </p>
-                    <span className="mt-4 inline-flex items-center gap-2 text-[10px] sm:text-xs font-semibold uppercase tracking-widest text-gold-dark/60 group-hover:text-gold-dark transition-colors duration-300">
+                    <span className="mt-4 inline-flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-widest text-gold-dark/50 group-hover:text-gold-dark transition-colors">
                       Learn More
-                      <svg
-                        className="h-3 w-3 transition-transform duration-300 group-hover:translate-x-1.5"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        strokeWidth={2}
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M17 8l4 4m0 0l-4 4m4-4H3"
-                        />
-                      </svg>
+                      <ArrowRight className="h-3 w-3 group-hover:translate-x-1 transition-transform" strokeWidth={2} />
                     </span>
                   </div>
                 </Link>
-              </ScrollReveal>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
 
-        <div className="mt-12 sm:mt-16 text-center">
-          <Link
-            href="/features"
-            className="btn-gold-shine inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-gold to-gold-light px-8 sm:px-10 py-4 sm:py-5 text-sm font-semibold uppercase tracking-widest text-black transition-all duration-300 hover:shadow-xl hover:shadow-gold/20"
-          >
-            View All Features
-          </Link>
-        </div>
+        {/* ── Desktop: Bento grid — varied card sizes ── */}
+        <ScrollReveal stagger>
+          <div className="hidden lg:grid grid-cols-3 grid-rows-[auto_auto] gap-5 xl:gap-6">
+            {platformFeatures.map((feature, i) => {
+              const IconComponent = lucideIconMap[feature.slug];
+              /* First card spans 2 rows tall, last card spans 2 cols wide */
+              const isHeroCard = i === 0;
+              const isWideCard = i === platformFeatures.length - 1;
+
+              return (
+                <Link
+                  key={feature.slug}
+                  href={`/features/${feature.slug}`}
+                  className={`group relative overflow-hidden rounded-2xl glass-cream transition-all duration-400 flex flex-col ${
+                    isHeroCard ? "row-span-2" : ""
+                  } ${isWideCard ? "col-span-2" : ""}`}
+                >
+                  <div className="h-0.5 bg-gradient-to-r from-transparent via-gold/25 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+                  <div className={`flex flex-col flex-1 ${
+                    isHeroCard ? "p-8 xl:p-10" : isWideCard ? "p-7 xl:p-8" : "p-6 xl:p-7"
+                  }`}>
+                    <div className={`rounded-xl bg-gradient-to-br from-gold/15 to-gold/5 border border-gold/10 flex items-center justify-center mb-5 group-hover:from-gold/25 group-hover:to-gold/10 group-hover:border-gold/20 transition-all duration-300 ${
+                      isHeroCard ? "h-16 w-16" : "h-12 w-12"
+                    }`}>
+                      {IconComponent && (
+                        <IconComponent className={`text-gold-dark ${isHeroCard ? "h-8 w-8" : "h-6 w-6"}`} strokeWidth={1.5} />
+                      )}
+                    </div>
+
+                    <h3 className={`font-heading font-bold text-gray-900 group-hover:text-gold-dark transition-colors mb-2 ${
+                      isHeroCard ? "text-xl xl:text-2xl" : "text-base xl:text-lg"
+                    }`}>
+                      {feature.title}
+                    </h3>
+
+                    <p className={`text-gray-500 leading-relaxed flex-1 ${
+                      isHeroCard ? "text-sm xl:text-base" : "text-sm"
+                    }`}>
+                      {feature.description}
+                    </p>
+
+                    {/* Bullets only on hero & wide cards */}
+                    {(isHeroCard || isWideCard) && (
+                      <ul className="mt-4 space-y-2">
+                        {feature.bullets.slice(0, isHeroCard ? 4 : 3).map((b) => (
+                          <li key={b} className="flex items-start gap-2 text-sm text-gray-600">
+                            <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
+                            {b}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+
+                    <span className="mt-5 inline-flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-widest text-gold-dark/50 group-hover:text-gold-dark transition-colors">
+                      Explore Feature
+                      <ArrowRight className="h-3 w-3 group-hover:translate-x-1 transition-transform" strokeWidth={2} />
+                    </span>
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );

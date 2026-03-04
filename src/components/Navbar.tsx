@@ -72,6 +72,13 @@ export default function Navbar() {
                 }`}
               >
                 {link.label}
+                <span
+                  className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-[2px] bg-gold rounded-full transition-all duration-300 ${
+                    pathname === link.href
+                      ? "w-5 opacity-100"
+                      : "w-0 opacity-0"
+                  }`}
+                />
               </Link>
             ))}
           </div>

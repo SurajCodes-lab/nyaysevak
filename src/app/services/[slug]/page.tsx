@@ -213,16 +213,31 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
         </div>
       </div>
 
-      {/* FAQs — Dark */}
+      {/* FAQs — Dark Glassmorphism Cards */}
       {content.faqs.length > 0 && (
-        <div className="bg-black py-20">
-          <div className="mx-auto max-w-3xl px-6 lg:px-8">
-            <h2 className="mb-10 text-2xl font-heading font-bold text-white">Frequently Asked Questions</h2>
-            <div className="space-y-8">
+        <div className="bg-dark-deep py-20 relative overflow-hidden">
+          <div className="glow-pulse pointer-events-none absolute top-[20%] right-[-10%] w-[400px] h-[400px] rounded-full bg-[radial-gradient(circle,rgba(201,168,76,0.04)_0%,transparent_70%)]" />
+          <div className="relative mx-auto max-w-5xl px-6 lg:px-8">
+            <div className="mb-10 sm:mb-14">
+              <p className="text-[10px] sm:text-xs uppercase tracking-[0.3em] text-gold/50 font-semibold mb-2">Common Questions</p>
+              <h2 className="text-2xl sm:text-3xl font-heading font-bold text-white heading-glow">Frequently Asked Questions</h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
               {content.faqs.map((faq, i) => (
-                <div key={i} className="border-l border-gold/20 pl-6">
-                  <h3 className="text-sm font-semibold text-white">{faq.q}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-gray-400">{faq.a}</p>
+                <div key={i} className="faq-card-dark group">
+                  <div className="flex items-start gap-4">
+                    <span className="shrink-0 h-8 w-8 rounded-lg bg-gold/[0.08] border border-gold/10 flex items-center justify-center text-xs font-heading font-bold text-gold/60 group-hover:text-gold transition-all duration-300">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <div>
+                      <h3 className="text-sm sm:text-base font-semibold text-white group-hover:text-gold transition-colors duration-300 mb-2">
+                        {faq.q}
+                      </h3>
+                      <p className="text-xs sm:text-sm leading-relaxed text-gray-400">
+                        {faq.a}
+                      </p>
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>

@@ -272,31 +272,33 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ s
         </section>
       )}
 
-      {/* ───── FAQs ───── */}
+      {/* ───── FAQs — Glassmorphism Cards ───── */}
       {content && (
-        <section className="bg-cream py-16 sm:py-20 lg:py-24">
-          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+        <section className="bg-cream cream-pattern py-16 sm:py-20 lg:py-24">
+          <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-10 sm:mb-14">
               <p className="mb-2 text-[10px] sm:text-xs uppercase tracking-[0.3em] text-gold-dark/60">Common Questions</p>
               <h2 className="text-2xl sm:text-3xl font-heading font-bold text-gray-900">
                 Frequently Asked Questions
               </h2>
             </div>
-            <div className="space-y-4 sm:space-y-5">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
               {content.faqs.map((faq, i) => (
-                <details key={i} className="group rounded-2xl bg-white border border-gray-100 shadow-sm overflow-hidden">
-                  <summary className="flex items-center justify-between cursor-pointer px-5 sm:px-6 lg:px-8 py-4 sm:py-5 text-sm sm:text-base font-semibold text-gray-900 hover:text-gold-dark transition-colors duration-200">
-                    <span className="pr-4">{faq.question}</span>
-                    <svg className="h-5 w-5 shrink-0 text-gold/50 transition-transform duration-300 group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </summary>
-                  <div className="px-5 sm:px-6 lg:px-8 pb-5 sm:pb-6">
-                    <div className="border-t border-gray-100 pt-4">
-                      <p className="text-xs sm:text-sm leading-relaxed text-gray-600">{faq.answer}</p>
+                <div key={i} className="faq-card group">
+                  <div className="flex items-start gap-4">
+                    <span className="shrink-0 h-8 w-8 rounded-lg bg-gradient-to-br from-gold/15 to-gold/5 border border-gold/10 flex items-center justify-center text-xs font-heading font-bold text-gold-dark group-hover:from-gold/25 group-hover:to-gold/10 transition-all duration-300">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <div>
+                      <h3 className="text-sm sm:text-base font-semibold text-gray-900 group-hover:text-gold-dark transition-colors duration-300 mb-2">
+                        {faq.question}
+                      </h3>
+                      <p className="text-xs sm:text-sm leading-relaxed text-gray-500">
+                        {faq.answer}
+                      </p>
                     </div>
                   </div>
-                </details>
+                </div>
               ))}
             </div>
           </div>
