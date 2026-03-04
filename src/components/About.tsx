@@ -1,4 +1,5 @@
-import { Scale, FileText, Users, Handshake, Building2, ShieldCheck } from "lucide-react";
+import { Scale, FileText, Users, Handshake, Building2, ShieldCheck, ArrowRight } from "lucide-react";
+import Link from "next/link";
 import ScrollReveal from "./ScrollReveal";
 
 const missionPoints = [
@@ -45,13 +46,17 @@ const whyItems = [
 export default function About() {
   return (
     <section id="about">
-      {/* ── Sub-section A: Vision (Dark bg) ── */}
-      <div className="bg-dark-deep py-28 sm:py-36 lg:py-44 relative overflow-hidden">
+      {/* -- Sub-section A: Vision (Dark bg) -- */}
+      <div className="bg-dark-deep py-28 sm:py-36 lg:py-44 relative overflow-hidden dark-section-depth">
         <div
           className="absolute inset-0 bg-cover bg-center opacity-[0.08]"
           style={{ backgroundImage: "url('/about-vision.jpeg')" }}
         />
-        <div className="absolute inset-0 bg-dark-deep/90" />
+        <div className="absolute inset-0 bg-dark-deep/85" />
+
+        {/* Glow orbs */}
+        <div className="glow-pulse pointer-events-none absolute top-[20%] left-[10%] w-[400px] h-[400px] rounded-full bg-[radial-gradient(circle,rgba(201,168,76,0.08)_0%,transparent_60%)]" />
+        <div className="glow-pulse pointer-events-none absolute bottom-[20%] right-[10%] w-[300px] h-[300px] rounded-full bg-[radial-gradient(circle,rgba(201,168,76,0.06)_0%,transparent_60%)]" style={{ animationDelay: "3s" }} />
 
         <div className="quote-mark absolute top-12 left-6 sm:left-12 lg:left-20 select-none">
           &ldquo;
@@ -71,15 +76,15 @@ export default function About() {
           </ScrollReveal>
 
           <div className="mt-12 sm:mt-16 flex flex-col items-center gap-4">
-            <div className="h-px w-16 bg-gradient-to-r from-transparent via-gold/50 to-transparent" />
-            <p className="text-[11px] sm:text-xs uppercase tracking-[0.3em] text-gold/70 font-semibold">
+            <div className="gold-line-animated w-20" />
+            <p className="text-[11px] sm:text-xs uppercase tracking-[0.3em] text-gold font-semibold">
               Our Vision
             </p>
           </div>
         </div>
       </div>
 
-      {/* ── Sub-section B: Mission (Cream bg — left/right split) ── */}
+      {/* -- Sub-section B: Mission (Cream bg -- left/right split) -- */}
       <div className="bg-cream cream-pattern py-20 sm:py-28 lg:py-36">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-10 sm:gap-12 lg:gap-20 lg:grid-cols-[2fr_3fr] lg:items-start">
@@ -123,56 +128,84 @@ export default function About() {
         </div>
       </div>
 
-      {/* ── Sub-section C: Why Choose — Editorial Row Layout (NO cards) ── */}
-      <div className="bg-dark-deep py-20 sm:py-28 lg:py-36 relative overflow-hidden">
-        {/* Subtle decorative */}
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/10 to-transparent" />
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/10 to-transparent" />
+      {/* -- Sub-section C: Why Choose — Glass Cards with Gradient Borders -- */}
+      <div className="bg-dark-deep py-20 sm:py-28 lg:py-36 relative overflow-hidden dark-section-depth">
+        {/* Decorative separators */}
+        <div className="absolute top-0 left-0 right-0 section-separator" />
+        <div className="absolute bottom-0 left-0 right-0 section-separator" />
+
+        {/* Glow orbs */}
+        <div className="glow-pulse pointer-events-none absolute top-[30%] right-[5%] w-[500px] h-[500px] rounded-full bg-[radial-gradient(circle,rgba(201,168,76,0.07)_0%,transparent_55%)]" />
 
         <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          {/* Left-aligned header */}
+          {/* Header */}
           <ScrollReveal>
-            <div className="max-w-xl mb-16 sm:mb-20">
-              <p className="text-[11px] sm:text-xs uppercase tracking-[0.3em] text-gold font-semibold mb-4">
+            <div className="text-center mb-14 sm:mb-18 lg:mb-20">
+              <p className="text-[11px] sm:text-xs uppercase tracking-[0.35em] text-gold font-semibold mb-4">
                 The NyaySevak Advantage
               </p>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold tracking-tight text-white heading-glow">
                 Why Choose NyaySevak
               </h2>
+              <div className="mt-6 flex items-center justify-center gap-3">
+                <div className="h-px w-12 bg-gradient-to-r from-transparent to-gold/30" />
+                <div className="h-2 w-2 bg-gold rotate-45 shadow-[0_0_12px_rgba(201,168,76,0.4)]" />
+                <div className="h-px w-12 bg-gradient-to-l from-transparent to-gold/30" />
+              </div>
             </div>
           </ScrollReveal>
 
-          {/* 2-column editorial grid — NO cards, just content rows */}
+          {/* Featured first card — full width */}
+          <ScrollReveal>
+            {(() => {
+              const FeaturedIcon = whyItems[0].Icon;
+              return (
+                <div className="gradient-border-card mb-6 lg:mb-8">
+                  <div className="glass-card !rounded-[calc(1.25rem-1.5px)]">
+                    <div className="p-6 sm:p-8 lg:p-10 lg:flex lg:items-center lg:gap-10">
+                      <div className="h-16 w-16 lg:h-20 lg:w-20 rounded-2xl icon-gold flex items-center justify-center shrink-0 mb-5 lg:mb-0">
+                        <FeaturedIcon className="h-8 w-8 lg:h-10 lg:w-10 text-black" strokeWidth={1.5} />
+                      </div>
+                      <div>
+                        <h3 className="text-xl sm:text-2xl lg:text-3xl font-heading font-bold text-white heading-glow mb-2">
+                          {whyItems[0].title}
+                        </h3>
+                        <p className="text-sm sm:text-base text-gray-300 leading-relaxed">
+                          {whyItems[0].desc}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );
+            })()}
+          </ScrollReveal>
+
+          {/* Remaining 5 cards — 2-column grid */}
           <ScrollReveal stagger>
-            <div className="grid md:grid-cols-2 gap-x-16 lg:gap-x-24 gap-y-0">
-              {whyItems.map((item, i) => {
+            <div className="grid md:grid-cols-2 gap-5 lg:gap-6">
+              {whyItems.slice(1).map((item, i) => {
                 const ItemIcon = item.Icon;
+                const isLastOdd = i === whyItems.length - 2 && (whyItems.length - 1) % 2 !== 0;
                 return (
                   <div
                     key={item.title}
-                    className={`flex items-start gap-5 sm:gap-6 py-8 sm:py-10 ${
-                      /* horizontal rule between items in each column */
-                      i < whyItems.length - 2 ? "border-b border-white/[0.05]" : ""
-                    }`}
+                    className={`glass-card ${isLastOdd ? "md:col-span-2 md:max-w-lg md:mx-auto md:w-full" : ""}`}
                   >
-                    {/* Number + icon */}
-                    <div className="shrink-0 flex flex-col items-center gap-3">
-                      <span className="text-4xl sm:text-5xl font-heading font-bold stat-gradient leading-none">
-                        {String(i + 1).padStart(2, "0")}
-                      </span>
-                      <div className="h-10 w-10 rounded-lg bg-gold/[0.08] border border-gold/10 flex items-center justify-center">
-                        <ItemIcon className="h-5 w-5 text-gold/70" strokeWidth={1.5} />
+                    <div className="p-6 sm:p-8">
+                      <div className="flex items-start gap-5">
+                        <div className="h-13 w-13 rounded-xl icon-box-dark flex items-center justify-center shrink-0">
+                          <ItemIcon className="h-6 w-6 text-gold" strokeWidth={1.5} />
+                        </div>
+                        <div>
+                          <h3 className="text-lg sm:text-xl font-heading font-bold text-white mb-2">
+                            {item.title}
+                          </h3>
+                          <p className="text-sm text-gray-400 leading-relaxed">
+                            {item.desc}
+                          </p>
+                        </div>
                       </div>
-                    </div>
-
-                    {/* Text */}
-                    <div className="pt-1">
-                      <h3 className="text-lg sm:text-xl font-heading font-bold text-white mb-2">
-                        {item.title}
-                      </h3>
-                      <p className="text-sm text-gray-400 leading-relaxed">
-                        {item.desc}
-                      </p>
                     </div>
                   </div>
                 );

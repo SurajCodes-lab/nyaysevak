@@ -19,12 +19,12 @@ const displayPracticeAreas = practiceAreas.slice(0, 12);
 export default function Footer() {
   return (
     <>
-      <footer className="relative bg-dark-deep overflow-hidden">
+      <footer className="relative bg-dark-deep overflow-hidden dark-section-depth">
         {/* Top gold gradient band */}
-        <div className="h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
+        <div className="section-separator" />
 
         {/* Decorative glow */}
-        <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] rounded-full bg-[radial-gradient(circle,rgba(201,168,76,0.03)_0%,transparent_60%)]" />
+        <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] rounded-full bg-[radial-gradient(circle,rgba(201,168,76,0.04)_0%,transparent_60%)]" />
 
         <div className="relative mx-auto max-w-7xl px-6 pt-16 pb-12 lg:px-8">
           {/* Brand */}
@@ -34,12 +34,12 @@ export default function Footer() {
               alt="NyaySevak Logo"
               width={72}
               height={72}
-              className="mx-auto mb-5 rounded-full shadow-lg shadow-gold/10"
+              className="mx-auto mb-5 rounded-full shadow-lg shadow-gold/15 ring-2 ring-gold/20"
             />
             <h2 className="text-3xl font-heading font-bold tracking-[0.15em] gradient-text-gold lg:text-4xl">
               NYAYSEVAK
             </h2>
-            <p className="mt-2 text-[10px] sm:text-xs uppercase tracking-[0.3em] text-gold/60 font-semibold">
+            <p className="mt-2 text-[10px] sm:text-xs uppercase tracking-[0.3em] text-gold/70 font-semibold">
               Defending Your Rights
             </p>
             <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-gray-500">
@@ -49,13 +49,13 @@ export default function Footer() {
           </div>
 
           {/* Divider */}
-          <div className="h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent mb-12" />
+          <div className="h-px bg-gradient-to-r from-transparent via-white/[0.08] to-transparent mb-12" />
 
           {/* 3-Column Grid */}
           <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
             {/* Col 1: Quick Links + Contact Info */}
             <div>
-              <h4 className="mb-5 text-[10px] sm:text-xs font-bold uppercase tracking-[0.25em] text-gold/60">
+              <h4 className="mb-5 text-[10px] sm:text-xs font-bold uppercase tracking-[0.25em] text-gold/70">
                 Quick Links
               </h4>
               <ul className="space-y-2.5 mb-8">
@@ -68,25 +68,25 @@ export default function Footer() {
                 ))}
               </ul>
 
-              <h4 className="mb-4 text-[10px] sm:text-xs font-bold uppercase tracking-[0.25em] text-gold/60">
+              <h4 className="mb-4 text-[10px] sm:text-xs font-bold uppercase tracking-[0.25em] text-gold/70">
                 Contact
               </h4>
               <div className="space-y-3 text-sm text-gray-400">
                 <a href="tel:+91XXXXXXXXXX" className="flex items-center gap-3 hover:text-white transition-colors">
-                  <div className="h-8 w-8 rounded-lg bg-gold/[0.05] border border-gold/[0.08] flex items-center justify-center shrink-0">
-                    <Phone className="h-3.5 w-3.5 text-gold/50" strokeWidth={1.5} />
+                  <div className="h-8 w-8 rounded-lg icon-box-dark flex items-center justify-center shrink-0">
+                    <Phone className="h-3.5 w-3.5 text-gold/60" strokeWidth={1.5} />
                   </div>
                   <span>+91 XXXXX XXXXX</span>
                 </a>
                 <a href="mailto:info@nyaysevak.com" className="flex items-center gap-3 hover:text-white transition-colors">
-                  <div className="h-8 w-8 rounded-lg bg-gold/[0.05] border border-gold/[0.08] flex items-center justify-center shrink-0">
-                    <Mail className="h-3.5 w-3.5 text-gold/50" strokeWidth={1.5} />
+                  <div className="h-8 w-8 rounded-lg icon-box-dark flex items-center justify-center shrink-0">
+                    <Mail className="h-3.5 w-3.5 text-gold/60" strokeWidth={1.5} />
                   </div>
                   <span>info@nyaysevak.com</span>
                 </a>
                 <div className="flex items-center gap-3">
-                  <div className="h-8 w-8 rounded-lg bg-gold/[0.05] border border-gold/[0.08] flex items-center justify-center shrink-0">
-                    <MapPin className="h-3.5 w-3.5 text-gold/50" strokeWidth={1.5} />
+                  <div className="h-8 w-8 rounded-lg icon-box-dark flex items-center justify-center shrink-0">
+                    <MapPin className="h-3.5 w-3.5 text-gold/60" strokeWidth={1.5} />
                   </div>
                   <span>New Delhi, India</span>
                 </div>
@@ -95,7 +95,7 @@ export default function Footer() {
 
             {/* Col 2: Practice Areas (top 12 + View All) */}
             <div>
-              <h4 className="mb-5 text-[10px] sm:text-xs font-bold uppercase tracking-[0.25em] text-gold/60">
+              <h4 className="mb-5 text-[10px] sm:text-xs font-bold uppercase tracking-[0.25em] text-gold/70">
                 Practice Areas
               </h4>
               <ul className="space-y-2.5">
@@ -107,7 +107,7 @@ export default function Footer() {
                   </li>
                 ))}
                 <li className="pt-1">
-                  <Link href="/practice-areas" className="inline-flex items-center gap-1.5 text-sm text-gold/60 font-semibold hover:text-gold transition-colors duration-200">
+                  <Link href="/practice-areas" className="inline-flex items-center gap-1.5 text-sm text-gold/70 font-semibold hover:text-gold transition-colors duration-200">
                     View All 26 Areas
                     <ArrowRight className="h-3 w-3" strokeWidth={2} />
                   </Link>
@@ -117,7 +117,7 @@ export default function Footer() {
 
             {/* Col 3: Services */}
             <div>
-              <h4 className="mb-5 text-[10px] sm:text-xs font-bold uppercase tracking-[0.25em] text-gold/60">
+              <h4 className="mb-5 text-[10px] sm:text-xs font-bold uppercase tracking-[0.25em] text-gold/70">
                 Services
               </h4>
               <ul className="space-y-2.5">
@@ -133,7 +133,7 @@ export default function Footer() {
           </div>
 
           {/* Bottom bar */}
-          <div className="mt-14 border-t border-white/[0.04] pt-8">
+          <div className="mt-14 border-t border-white/[0.06] pt-8">
             <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
               <p className="text-xs text-gray-600">
                 &copy; 2026 NyaySevak. All rights reserved.

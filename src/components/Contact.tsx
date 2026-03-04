@@ -4,7 +4,8 @@ import { useState } from "react";
 import Image from "next/image";
 import {
   Siren, MessageSquare, UserCheck, Scale, Phone, Mail,
-  User, MapPin, Briefcase, FileText, Send, ShieldCheck, ArrowRight, CheckCircle2,
+  User, MapPin, Briefcase, FileText, Send, ShieldCheck, CheckCircle2,
+  Clock, Star,
 } from "lucide-react";
 
 const processSteps = [
@@ -25,6 +26,12 @@ const legalIssueOptions = [
   "Other",
 ];
 
+const trustBadges = [
+  { Icon: ShieldCheck, label: "100% Confidential" },
+  { Icon: Clock, label: "Response within 24hrs" },
+  { Icon: Star, label: "4.8/5 Client Rating" },
+];
+
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
 
@@ -37,11 +44,11 @@ export default function Contact() {
   return (
     <section id="contact">
       {/* Emergency banner — full width */}
-      <div className="relative bg-dark-deep border-y border-gold/15 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-gold/[0.03] via-transparent to-gold/[0.03]" />
+      <div className="relative bg-dark-deep border-y border-gold/20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-gold/[0.04] via-transparent to-gold/[0.04]" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-3.5 sm:py-4">
           <div className="flex items-center justify-center gap-3 sm:gap-4">
-            <div className="h-8 w-8 rounded-full bg-gold/10 flex items-center justify-center shrink-0">
+            <div className="h-8 w-8 rounded-full bg-gold/15 flex items-center justify-center shrink-0 gold-glow-sm">
               <Siren className="h-4 w-4 text-gold" strokeWidth={2} />
             </div>
             <p className="text-sm sm:text-base text-gold font-semibold">
@@ -52,7 +59,7 @@ export default function Contact() {
               href="tel:+91XXXXXXXXXX"
               className="hidden sm:inline-flex items-center gap-2 text-sm text-gray-300 hover:text-white transition-colors font-medium"
             >
-              <Phone className="h-3.5 w-3.5 text-gold/50" strokeWidth={1.5} />
+              <Phone className="h-3.5 w-3.5 text-gold/60" strokeWidth={1.5} />
               Call Now: +91 XXXXX XXXXX
             </a>
           </div>
@@ -61,8 +68,8 @@ export default function Contact() {
 
       {/* Main content */}
       <div className="flex flex-col lg:flex-row min-h-[80vh]">
-        {/* Left side (45%) — Dark with image */}
-        <div className="relative flex flex-col justify-center bg-dark-deep px-4 sm:px-6 py-16 sm:py-20 lg:w-[45%] lg:px-10 xl:px-16 lg:py-24 overflow-hidden">
+        {/* Left side (45%) */}
+        <div className="relative flex flex-col justify-center bg-dark-deep px-4 sm:px-6 py-16 sm:py-20 lg:w-[45%] lg:px-10 xl:px-16 lg:py-24 overflow-hidden dark-section-depth">
           <div className="absolute inset-0 z-0">
             <Image
               src="/contact-image.png"
@@ -75,12 +82,12 @@ export default function Contact() {
           </div>
 
           {/* Glow orb */}
-          <div className="glow-pulse pointer-events-none absolute top-[20%] right-[-15%] w-[300px] h-[300px] rounded-full bg-[radial-gradient(circle,rgba(201,168,76,0.06)_0%,transparent_70%)]" />
+          <div className="glow-pulse pointer-events-none absolute top-[20%] right-[-15%] w-[300px] h-[300px] rounded-full bg-[radial-gradient(circle,rgba(201,168,76,0.08)_0%,transparent_65%)]" />
 
           <div className="relative z-10">
             <div className="flex items-center gap-3 mb-4">
-              <div className="h-px w-8 bg-gradient-to-r from-transparent to-gold/40" />
-              <p className="text-[10px] sm:text-xs uppercase tracking-[0.3em] text-gold font-semibold">
+              <div className="h-px w-8 bg-gradient-to-r from-transparent to-gold/50" />
+              <p className="text-[10px] sm:text-xs uppercase tracking-[0.35em] text-gold font-semibold">
                 Free Consultation
               </p>
             </div>
@@ -88,7 +95,7 @@ export default function Contact() {
               Get Expert Legal Help
             </h2>
             <p className="mt-3 text-sm text-gray-400 leading-relaxed max-w-md">
-              Connect with verified legal professionals and get the guidance you deserve.
+              Connect with verified legal professionals and get the guidance you deserve. Your first consultation is completely free.
             </p>
 
             {/* Process steps */}
@@ -97,7 +104,7 @@ export default function Contact() {
                 <div key={step.label} className="relative">
                   <div className="flex items-start gap-4 py-4">
                     <div className="relative z-10">
-                      <div className="h-12 w-12 sm:h-13 sm:w-13 rounded-xl bg-gradient-to-br from-gold/20 to-gold/5 flex items-center justify-center shrink-0 border border-gold/15">
+                      <div className="h-12 w-12 sm:h-13 sm:w-13 rounded-xl icon-box-dark flex items-center justify-center shrink-0">
                         <step.Icon className="h-5 w-5 sm:h-6 sm:w-6 text-gold" strokeWidth={1.5} />
                       </div>
                     </div>
@@ -109,25 +116,24 @@ export default function Contact() {
                       <p className="text-xs text-gray-500 mt-1">{step.desc}</p>
                     </div>
                   </div>
-                  {/* Connector line */}
                   {i < processSteps.length - 1 && (
-                    <div className="absolute left-6 top-[68px] w-px h-4 bg-gradient-to-b from-gold/20 to-transparent" />
+                    <div className="absolute left-6 top-[68px] w-px h-4 bg-gradient-to-b from-gold/25 to-transparent" />
                   )}
                 </div>
               ))}
             </div>
 
             {/* Compact contact info */}
-            <div className="mt-8 sm:mt-10 pt-6 border-t border-white/[0.06] space-y-3.5">
+            <div className="mt-8 sm:mt-10 pt-6 border-t border-white/[0.08] space-y-3.5">
               <a href="tel:+91XXXXXXXXXX" className="flex items-center gap-3 group">
-                <div className="h-9 w-9 rounded-lg bg-gold/[0.06] border border-gold/10 flex items-center justify-center shrink-0 group-hover:bg-gold/10 transition-all duration-300">
-                  <Phone className="h-4 w-4 text-gold/60" strokeWidth={1.5} />
+                <div className="h-9 w-9 rounded-lg icon-box-dark flex items-center justify-center shrink-0">
+                  <Phone className="h-4 w-4 text-gold/70" strokeWidth={1.5} />
                 </div>
                 <span className="text-sm text-gray-300 group-hover:text-white transition-colors">+91 XXXXX XXXXX</span>
               </a>
               <a href="mailto:info@nyaysevak.com" className="flex items-center gap-3 group">
-                <div className="h-9 w-9 rounded-lg bg-gold/[0.06] border border-gold/10 flex items-center justify-center shrink-0 group-hover:bg-gold/10 transition-all duration-300">
-                  <Mail className="h-4 w-4 text-gold/60" strokeWidth={1.5} />
+                <div className="h-9 w-9 rounded-lg icon-box-dark flex items-center justify-center shrink-0">
+                  <Mail className="h-4 w-4 text-gold/70" strokeWidth={1.5} />
                 </div>
                 <span className="text-sm text-gray-300 group-hover:text-white transition-colors">info@nyaysevak.com</span>
               </a>
@@ -135,9 +141,9 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* Right side (55%) — Dark form */}
+        {/* Right side (55%) — Form */}
         <div className="relative flex flex-col justify-center bg-dark px-4 sm:px-6 py-16 sm:py-20 lg:w-[55%] lg:px-10 xl:px-16 lg:py-24 overflow-hidden">
-          {/* Subtle pattern */}
+          {/* Subtle grid pattern */}
           <div className="absolute inset-0 bg-[linear-gradient(rgba(201,168,76,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(201,168,76,0.02)_1px,transparent_1px)] bg-[size:3rem_3rem] pointer-events-none" />
 
           <div className="relative z-10">
@@ -150,7 +156,7 @@ export default function Contact() {
 
             {submitted ? (
               <div className="flex flex-col items-center justify-center py-12 sm:py-16 text-center">
-                <div className="mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-gold to-gold-dark shadow-xl shadow-gold/30">
+                <div className="mb-6 flex h-20 w-20 items-center justify-center rounded-2xl icon-gold gold-glow-md">
                   <CheckCircle2 className="h-10 w-10 text-black" strokeWidth={1.5} />
                 </div>
                 <h4 className="text-xl font-heading font-bold text-white heading-glow">Thank You!</h4>
@@ -162,26 +168,26 @@ export default function Contact() {
                 <div className="grid gap-5 sm:gap-6 sm:grid-cols-2">
                   <div>
                     <label className="mb-2.5 flex items-center gap-2 text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-gray-400">
-                      <User className="h-3.5 w-3.5 text-gold/50" strokeWidth={1.5} />
+                      <User className="h-3.5 w-3.5 text-gold/60" strokeWidth={1.5} />
                       Full Name
                     </label>
                     <input
                       type="text"
                       required
                       placeholder="Your full name"
-                      className="w-full rounded-xl border border-white/[0.08] bg-dark-card px-4 py-3.5 sm:py-4 text-sm text-white placeholder-gray-600 transition-all duration-300 hover:border-gold/15 focus:border-gold/40 focus:ring-2 focus:ring-gold/15 focus:bg-dark-card/80"
+                      className="w-full rounded-xl border border-white/[0.1] bg-dark-card px-4 py-3.5 sm:py-4 text-sm text-white placeholder-gray-600 transition-all duration-300 hover:border-gold/20 focus:border-gold/40 focus:ring-2 focus:ring-gold/15 focus:bg-dark-card/80"
                     />
                   </div>
                   <div>
                     <label className="mb-2.5 flex items-center gap-2 text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-gray-400">
-                      <Phone className="h-3.5 w-3.5 text-gold/50" strokeWidth={1.5} />
+                      <Phone className="h-3.5 w-3.5 text-gold/60" strokeWidth={1.5} />
                       Phone
                     </label>
                     <input
                       type="tel"
                       required
                       placeholder="+91 XXXXX XXXXX"
-                      className="w-full rounded-xl border border-white/[0.08] bg-dark-card px-4 py-3.5 sm:py-4 text-sm text-white placeholder-gray-600 transition-all duration-300 hover:border-gold/15 focus:border-gold/40 focus:ring-2 focus:ring-gold/15 focus:bg-dark-card/80"
+                      className="w-full rounded-xl border border-white/[0.1] bg-dark-card px-4 py-3.5 sm:py-4 text-sm text-white placeholder-gray-600 transition-all duration-300 hover:border-gold/20 focus:border-gold/40 focus:ring-2 focus:ring-gold/15 focus:bg-dark-card/80"
                     />
                   </div>
                 </div>
@@ -190,21 +196,21 @@ export default function Contact() {
                 <div className="grid gap-5 sm:gap-6 sm:grid-cols-2">
                   <div>
                     <label className="mb-2.5 flex items-center gap-2 text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-gray-400">
-                      <MapPin className="h-3.5 w-3.5 text-gold/50" strokeWidth={1.5} />
+                      <MapPin className="h-3.5 w-3.5 text-gold/60" strokeWidth={1.5} />
                       City / District
                     </label>
                     <input
                       type="text"
                       placeholder="Your city or district"
-                      className="w-full rounded-xl border border-white/[0.08] bg-dark-card px-4 py-3.5 sm:py-4 text-sm text-white placeholder-gray-600 transition-all duration-300 hover:border-gold/15 focus:border-gold/40 focus:ring-2 focus:ring-gold/15 focus:bg-dark-card/80"
+                      className="w-full rounded-xl border border-white/[0.1] bg-dark-card px-4 py-3.5 sm:py-4 text-sm text-white placeholder-gray-600 transition-all duration-300 hover:border-gold/20 focus:border-gold/40 focus:ring-2 focus:ring-gold/15 focus:bg-dark-card/80"
                     />
                   </div>
                   <div>
                     <label className="mb-2.5 flex items-center gap-2 text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-gray-400">
-                      <Briefcase className="h-3.5 w-3.5 text-gold/50" strokeWidth={1.5} />
+                      <Briefcase className="h-3.5 w-3.5 text-gold/60" strokeWidth={1.5} />
                       Legal Issue
                     </label>
-                    <select className="w-full rounded-xl border border-white/[0.08] bg-dark-card px-4 py-3.5 sm:py-4 text-sm text-gray-500 transition-all duration-300 appearance-none hover:border-gold/15 focus:border-gold/40 focus:ring-2 focus:ring-gold/15">
+                    <select className="w-full rounded-xl border border-white/[0.1] bg-dark-card px-4 py-3.5 sm:py-4 text-sm text-gray-500 transition-all duration-300 appearance-none hover:border-gold/20 focus:border-gold/40 focus:ring-2 focus:ring-gold/15">
                       <option value="">Select an issue type</option>
                       {legalIssueOptions.map((opt) => (
                         <option key={opt} value={opt.toLowerCase().replace(/\s+/g, "-")}>
@@ -218,34 +224,41 @@ export default function Contact() {
                 {/* Row 3: Description */}
                 <div>
                   <label className="mb-2.5 flex items-center gap-2 text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-gray-400">
-                    <FileText className="h-3.5 w-3.5 text-gold/50" strokeWidth={1.5} />
+                    <FileText className="h-3.5 w-3.5 text-gold/60" strokeWidth={1.5} />
                     Brief Description
                   </label>
                   <textarea
                     rows={4}
                     required
                     placeholder="Describe your legal matter briefly..."
-                    className="w-full rounded-xl border border-white/[0.08] bg-dark-card px-4 py-3.5 sm:py-4 text-sm text-white placeholder-gray-600 transition-all duration-300 resize-none hover:border-gold/15 focus:border-gold/40 focus:ring-2 focus:ring-gold/15 focus:bg-dark-card/80"
+                    className="w-full rounded-xl border border-white/[0.1] bg-dark-card px-4 py-3.5 sm:py-4 text-sm text-white placeholder-gray-600 transition-all duration-300 resize-none hover:border-gold/20 focus:border-gold/40 focus:ring-2 focus:ring-gold/15 focus:bg-dark-card/80"
                   />
                 </div>
 
                 {/* Submit */}
                 <button
                   type="submit"
-                  className="btn-gold-shine rounded-xl w-full inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-gold to-gold-light px-6 py-4 sm:py-5 text-sm font-semibold uppercase tracking-widest text-black hover:shadow-xl hover:shadow-[0_8px_30px_-4px_rgba(201,168,76,0.3)] transition-all duration-300"
+                  className="btn-gold-shine rounded-xl w-full inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-gold to-gold-light px-6 py-4 sm:py-5 text-sm font-semibold uppercase tracking-widest text-black transition-all duration-300"
                 >
                   Book Free Consultation
                   <Send className="h-4 w-4" strokeWidth={2} />
                 </button>
 
-                {/* Trust badge */}
-                <div className="flex items-center justify-center gap-2.5 pt-2">
-                  <div className="h-6 w-6 rounded-full bg-gold/[0.06] flex items-center justify-center">
-                    <ShieldCheck className="h-3.5 w-3.5 text-gold/50" strokeWidth={1.5} />
-                  </div>
-                  <p className="text-[11px] sm:text-xs text-gray-500">
-                    Confidential &amp; Secure — Your information is protected.
-                  </p>
+                {/* Trust badges row */}
+                <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 pt-2">
+                  {trustBadges.map((badge) => {
+                    const BadgeIcon = badge.Icon;
+                    return (
+                      <div key={badge.label} className="flex items-center gap-2">
+                        <div className="h-6 w-6 rounded-full bg-gold/[0.08] flex items-center justify-center">
+                          <BadgeIcon className="h-3.5 w-3.5 text-gold/60" strokeWidth={1.5} />
+                        </div>
+                        <p className="text-[11px] sm:text-xs text-gray-500 font-medium">
+                          {badge.label}
+                        </p>
+                      </div>
+                    );
+                  })}
                 </div>
               </form>
             )}

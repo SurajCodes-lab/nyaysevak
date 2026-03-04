@@ -33,7 +33,7 @@ export default function FeaturesPreview() {
   return (
     <section id="features" className="bg-cream cream-pattern py-20 sm:py-28 lg:py-36">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* Header — left-aligned */}
+        {/* Header */}
         <ScrollReveal>
           <div className="lg:flex lg:items-end lg:justify-between lg:gap-8 mb-12 sm:mb-16">
             <div className="max-w-xl">
@@ -43,7 +43,7 @@ export default function FeaturesPreview() {
                   Platform Features
                 </p>
               </div>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-bold tracking-tight text-gray-900">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-bold tracking-tight text-gray-900 heading-glow-cream">
                 Built for Your Legal Needs
               </h2>
               <p className="mt-3 text-sm sm:text-base text-gray-500 leading-relaxed">
@@ -60,19 +60,19 @@ export default function FeaturesPreview() {
           </div>
         </ScrollReveal>
 
-        {/* ── Mobile: Horizontal carousel ── */}
+        {/* Mobile: Horizontal carousel */}
         <div className="lg:hidden">
           <div className="flex items-center justify-end gap-2 mb-4 pr-1">
             <button
               onClick={() => scrollCarousel("left")}
-              className="h-9 w-9 rounded-full border border-gold/15 bg-white flex items-center justify-center text-gold-dark hover:bg-gold/5 transition-all shadow-sm"
+              className="h-9 w-9 rounded-full border border-gold/20 bg-white flex items-center justify-center text-gold-dark hover:bg-gold/5 transition-all shadow-sm hover:shadow-md"
               aria-label="Scroll left"
             >
               <ChevronLeft className="h-4 w-4" strokeWidth={2} />
             </button>
             <button
               onClick={() => scrollCarousel("right")}
-              className="h-9 w-9 rounded-full border border-gold/15 bg-white flex items-center justify-center text-gold-dark hover:bg-gold/5 transition-all shadow-sm"
+              className="h-9 w-9 rounded-full border border-gold/20 bg-white flex items-center justify-center text-gold-dark hover:bg-gold/5 transition-all shadow-sm hover:shadow-md"
               aria-label="Scroll right"
             >
               <ChevronRight className="h-4 w-4" strokeWidth={2} />
@@ -89,11 +89,11 @@ export default function FeaturesPreview() {
                 <Link
                   key={feature.slug}
                   href={`/features/${feature.slug}`}
-                  className="snap-child shrink-0 w-[78vw] sm:w-[60vw] md:w-[42vw] rounded-2xl glass-cream overflow-hidden group"
+                  className="snap-child shrink-0 w-[78vw] sm:w-[60vw] md:w-[42vw] glass-cream overflow-hidden group"
                 >
-                  <div className="h-1 bg-gradient-to-r from-gold/20 via-gold/40 to-gold/20" />
+                  <div className="h-1.5 bg-gradient-to-r from-gold/30 via-gold/60 to-gold/30" />
                   <div className="p-5 sm:p-6">
-                    <div className="h-11 w-11 rounded-xl bg-gradient-to-br from-gold/15 to-gold/5 border border-gold/10 flex items-center justify-center mb-4">
+                    <div className="h-12 w-12 rounded-xl icon-box-cream flex items-center justify-center mb-4">
                       {IconComponent && <IconComponent className="h-5 w-5 text-gold-dark" strokeWidth={1.5} />}
                     </div>
                     <h3 className="text-base sm:text-lg font-heading font-bold text-gray-900 group-hover:text-gold-dark transition-colors mb-2">
@@ -113,12 +113,11 @@ export default function FeaturesPreview() {
           </div>
         </div>
 
-        {/* ── Desktop: Bento grid — varied card sizes ── */}
+        {/* Desktop: Bento grid */}
         <ScrollReveal stagger>
           <div className="hidden lg:grid grid-cols-3 grid-rows-[auto_auto] gap-5 xl:gap-6">
             {platformFeatures.map((feature, i) => {
               const IconComponent = lucideIconMap[feature.slug];
-              /* First card spans 2 rows tall, last card spans 2 cols wide */
               const isHeroCard = i === 0;
               const isWideCard = i === platformFeatures.length - 1;
 
@@ -126,16 +125,16 @@ export default function FeaturesPreview() {
                 <Link
                   key={feature.slug}
                   href={`/features/${feature.slug}`}
-                  className={`group relative overflow-hidden rounded-2xl glass-cream transition-all duration-400 flex flex-col ${
+                  className={`group relative overflow-hidden glass-cream transition-all duration-400 flex flex-col ${
                     isHeroCard ? "row-span-2" : ""
                   } ${isWideCard ? "col-span-2" : ""}`}
                 >
-                  <div className="h-0.5 bg-gradient-to-r from-transparent via-gold/25 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="h-0.5 bg-gradient-to-r from-transparent via-gold/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                   <div className={`flex flex-col flex-1 ${
                     isHeroCard ? "p-8 xl:p-10" : isWideCard ? "p-7 xl:p-8" : "p-6 xl:p-7"
                   }`}>
-                    <div className={`rounded-xl bg-gradient-to-br from-gold/15 to-gold/5 border border-gold/10 flex items-center justify-center mb-5 group-hover:from-gold/25 group-hover:to-gold/10 group-hover:border-gold/20 transition-all duration-300 ${
+                    <div className={`rounded-xl icon-box-cream flex items-center justify-center mb-5 transition-all duration-300 ${
                       isHeroCard ? "h-16 w-16" : "h-12 w-12"
                     }`}>
                       {IconComponent && (
@@ -160,7 +159,7 @@ export default function FeaturesPreview() {
                       <ul className="mt-4 space-y-2">
                         {feature.bullets.slice(0, isHeroCard ? 4 : 3).map((b) => (
                           <li key={b} className="flex items-start gap-2 text-sm text-gray-600">
-                            <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
+                            <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold shadow-[0_0_6px_rgba(201,168,76,0.4)]" />
                             {b}
                           </li>
                         ))}
