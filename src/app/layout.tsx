@@ -5,6 +5,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import NavigationProgress from "@/components/NavigationProgress";
 import ScrollToTop from "@/components/ScrollToTop";
+import ContactModal from "@/components/ContactModal";
+import { ContactModalProvider } from "@/context/ContactModalContext";
 
 const playfair = Playfair_Display({
   variable: "--font-heading",
@@ -129,11 +131,14 @@ export default function RootLayout({
       <body
         className={`${playfair.variable} ${inter.variable} antialiased bg-dark-deep text-white font-body`}
       >
-        <ScrollToTop />
-        <NavigationProgress />
-        <Navbar />
-        {children}
-        <Footer />
+        <ContactModalProvider>
+          <ScrollToTop />
+          <NavigationProgress />
+          <Navbar />
+          {children}
+          <Footer />
+          <ContactModal />
+        </ContactModalProvider>
       </body>
     </html>
   );

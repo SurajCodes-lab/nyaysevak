@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import About from "@/components/About";
 import Features from "@/components/Features";
-import Link from "next/link";
+import ContactButton from "@/components/ContactButton";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -34,13 +34,12 @@ export default function AboutPage() {
               <p className="mx-auto mt-4 mb-8 max-w-lg text-sm text-gray-400 leading-relaxed">
                 Get connected with verified legal professionals across India today.
               </p>
-              <Link
-                href="/contact"
-                className="btn-gold-shine rounded-xl inline-flex items-center gap-2.5 bg-gradient-to-r from-gold to-gold-light px-8 py-4 text-sm font-semibold uppercase tracking-widest text-black transition-all duration-300"
+              <ContactButton
+                className="btn-gold-shine rounded-xl inline-flex items-center gap-2.5 bg-gradient-to-r from-gold to-gold-light px-8 py-4 text-sm font-semibold uppercase tracking-widest text-black transition-all duration-300 cursor-pointer"
               >
                 Get Consultation
                 <ArrowRight className="h-4 w-4" strokeWidth={2} />
-              </Link>
+              </ContactButton>
             </div>
           </div>
         </div>

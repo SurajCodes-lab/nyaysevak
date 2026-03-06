@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import ContactButton from "@/components/ContactButton";
 import {
   ArrowRight, Landmark, MapPin, Building2, Scale, Shield,
   Users, Clock, Star, CheckCircle2, Phone, Gavel, BookOpen,
@@ -574,12 +575,12 @@ export default async function CourtDetailPage({ params }: { params: Promise<{ sl
                 Connect with verified lawyers {hc ? `at the ${hc.name}` : dc ? `across all ${dc.districts.length} district courts in ${dc.state}` : `for ${tr?.title} tribunal matters`}. Book a free consultation today.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <Link href="/contact" className="btn-gold-shine rounded-xl inline-flex items-center gap-2.5 bg-gradient-to-r from-gold to-gold-light px-8 py-4 text-sm font-semibold uppercase tracking-widest text-black transition-all duration-300">
+                <ContactButton className="btn-gold-shine rounded-xl inline-flex items-center gap-2.5 bg-gradient-to-r from-gold to-gold-light px-8 py-4 text-sm font-semibold uppercase tracking-widest text-black transition-all duration-300 cursor-pointer">
                   Find a Lawyer
                   <ArrowRight className="h-4 w-4" strokeWidth={2} />
-                </Link>
+                </ContactButton>
                 <a
-                  href="https://wa.me/91XXXXXXXXXX"
+                  href="https://wa.me/+91 98686 66715"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2.5 rounded-xl border border-white/10 px-8 py-4 text-sm font-semibold text-white transition-all duration-300 hover:border-gold/30 hover:text-gold"

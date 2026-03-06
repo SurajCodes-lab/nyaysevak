@@ -1,7 +1,10 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { Users, MessageSquare, BadgeCheck, ArrowRight } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
+import ContactButton from "./ContactButton";
 
 const steps = [
   {
@@ -144,13 +147,12 @@ export default function PlatformBanner() {
           {/* CTA */}
           <ScrollReveal>
             <div className="mt-16 sm:mt-20 flex flex-col sm:flex-row items-center gap-5">
-              <Link
-                href="/contact"
-                className="btn-gold-shine inline-flex items-center gap-2.5 rounded-xl bg-gradient-to-r from-gold to-gold-light px-10 py-5 text-sm font-semibold uppercase tracking-widest text-black"
+              <ContactButton
+                className="btn-gold-shine inline-flex items-center gap-2.5 rounded-xl bg-gradient-to-r from-gold to-gold-light px-10 py-5 text-sm font-semibold uppercase tracking-widest text-black cursor-pointer"
               >
                 Start Your Journey
                 <ArrowRight className="h-4 w-4" strokeWidth={2} />
-              </Link>
+              </ContactButton>
               <Link
                 href="/platform"
                 className="inline-flex items-center gap-2 text-sm font-semibold text-gold/70 hover:text-gold transition-colors"

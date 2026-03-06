@@ -1,8 +1,11 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { Phone, Mail, MapPin, ArrowRight } from "lucide-react";
 import { practiceAreas } from "@/data/practice-areas";
 import { allServices } from "@/data/services";
+import ContactButton from "./ContactButton";
 
 const quickLinks = [
   { label: "Home", href: "/" },
@@ -11,7 +14,6 @@ const quickLinks = [
   { label: "How It Works", href: "/platform" },
   { label: "Practice Areas", href: "/practice-areas" },
   { label: "Courts", href: "/courts" },
-  { label: "Contact", href: "/contact" },
 ];
 
 const displayPracticeAreas = practiceAreas.slice(0, 12);
@@ -66,23 +68,28 @@ export default function Footer() {
                     </Link>
                   </li>
                 ))}
+                <li>
+                  <ContactButton className="text-sm text-gray-400 transition-colors duration-200 hover:text-white link-underline cursor-pointer bg-transparent border-none p-0">
+                    Contact
+                  </ContactButton>
+                </li>
               </ul>
 
               <h4 className="mb-4 text-[10px] sm:text-xs font-bold uppercase tracking-[0.25em] text-gold/70">
                 Contact
               </h4>
               <div className="space-y-3 text-sm text-gray-400">
-                <a href="tel:+91XXXXXXXXXX" className="flex items-center gap-3 hover:text-white transition-colors">
+                <a href="tel:+91 98686 66715" className="flex items-center gap-3 hover:text-white transition-colors">
                   <div className="h-8 w-8 rounded-lg icon-box-dark flex items-center justify-center shrink-0">
                     <Phone className="h-3.5 w-3.5 text-gold/60" strokeWidth={1.5} />
                   </div>
-                  <span>+91 XXXXX XXXXX</span>
+                  <span>+91 98686 66715</span>
                 </a>
-                <a href="mailto:info@nyaysevak.com" className="flex items-center gap-3 hover:text-white transition-colors">
+                <a href="mailto:nyaysevak@gmail.com" className="flex items-center gap-3 hover:text-white transition-colors">
                   <div className="h-8 w-8 rounded-lg icon-box-dark flex items-center justify-center shrink-0">
                     <Mail className="h-3.5 w-3.5 text-gold/60" strokeWidth={1.5} />
                   </div>
-                  <span>info@nyaysevak.com</span>
+                  <span>nyaysevak@gmail.com</span>
                 </a>
                 <div className="flex items-center gap-3">
                   <div className="h-8 w-8 rounded-lg icon-box-dark flex items-center justify-center shrink-0">
@@ -150,7 +157,7 @@ export default function Footer() {
 
       {/* WhatsApp Floating Button */}
       <a
-        href="https://wa.me/91XXXXXXXXXX"
+        href="https://wa.me/+91 98686 66715"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] shadow-lg shadow-[#25D366]/30 transition-all duration-300 hover:scale-110 hover:shadow-xl hover:shadow-[#25D366]/40"

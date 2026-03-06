@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import PracticeAreas from "@/components/PracticeAreas";
 import Link from "next/link";
+import ContactButton from "@/components/ContactButton";
 import { BookOpen, MapPin, ShieldCheck, ArrowRight, ChevronRight, Search } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -147,13 +148,12 @@ export default function PracticeAreasPage() {
           </p>
 
           <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-            <Link
-              href="/contact"
-              className="btn-gold-shine inline-flex items-center gap-2.5 rounded-xl bg-gradient-to-r from-gold to-gold-light px-9 py-4 text-sm font-semibold uppercase tracking-widest text-black transition-all duration-300"
+            <ContactButton
+              className="btn-gold-shine inline-flex items-center gap-2.5 rounded-xl bg-gradient-to-r from-gold to-gold-light px-9 py-4 text-sm font-semibold uppercase tracking-widest text-black transition-all duration-300 cursor-pointer"
             >
               Get Legal Help
               <ArrowRight className="h-4 w-4" strokeWidth={2} />
-            </Link>
+            </ContactButton>
             <Link
               href="/services"
               className="btn-premium inline-flex items-center gap-2 rounded-xl border border-gold/30 px-8 py-4 text-sm font-semibold uppercase tracking-widest text-gold transition-all duration-300"

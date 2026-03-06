@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import {
   ArrowRight, Users, CalendarCheck, BookOpen, Landmark,
@@ -5,6 +7,7 @@ import {
   BarChart3, CreditCard, Headphones, Shield, CircleCheck,
 } from "lucide-react";
 import { platformFeatures } from "@/data/features";
+import ContactButton from "./ContactButton";
 
 const lucideFeatureIcons: Record<string, React.ComponentType<{ className?: string; strokeWidth?: number }>> = {
   "lawyer-directory": Users,
@@ -178,13 +181,12 @@ export default function Features() {
                 Join India&apos;s first complete legal ecosystem and get access to all features.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <Link
-                  href="/contact"
-                  className="btn-gold-shine rounded-xl inline-flex items-center gap-2.5 bg-gradient-to-r from-gold to-gold-light px-8 py-4 text-sm font-semibold uppercase tracking-widest text-black transition-all duration-300"
+                <ContactButton
+                  className="btn-gold-shine rounded-xl inline-flex items-center gap-2.5 bg-gradient-to-r from-gold to-gold-light px-8 py-4 text-sm font-semibold uppercase tracking-widest text-black transition-all duration-300 cursor-pointer"
                 >
                   Get Started
                   <ArrowRight className="h-4 w-4" strokeWidth={2} />
-                </Link>
+                </ContactButton>
                 <Link
                   href="/platform"
                   className="inline-flex items-center gap-2 rounded-xl border border-white/10 px-8 py-4 text-sm font-semibold text-white transition-all duration-300 hover:border-gold/30 hover:text-gold"

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import ContactButton from "@/components/ContactButton";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -303,13 +303,12 @@ export default function TermsOfServicePage() {
           <p className="mb-8 text-gray-500">
             Our team is ready to clarify any aspect of our terms and help you get started with NyaySevak.
           </p>
-          <Link
-            href="/contact"
-            className="btn-gold-shine rounded-xl inline-flex items-center gap-2.5 bg-gradient-to-r from-gold to-gold-light px-8 py-4 text-sm font-semibold uppercase tracking-widest text-black transition-all duration-300"
+          <ContactButton
+            className="btn-gold-shine rounded-xl inline-flex items-center gap-2.5 bg-gradient-to-r from-gold to-gold-light px-8 py-4 text-sm font-semibold uppercase tracking-widest text-black transition-all duration-300 cursor-pointer"
           >
             Contact Us
             <ArrowRight className="h-4 w-4" strokeWidth={2} />
-          </Link>
+          </ContactButton>
         </div>
       </section>
     </main>

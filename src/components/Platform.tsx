@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import ContactButton from "./ContactButton";
 import {
   ArrowRight, Users, Search, FileText, HeartHandshake, BookOpen, Upload,
   Building2, ClipboardCheck, PenTool, Lightbulb, BarChart3, ArrowLeftRight,
@@ -284,13 +285,12 @@ export default function Platform() {
               Join thousands of individuals and businesses already using NyaySevak for their legal needs.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link
-                href="/contact"
-                className="btn-gold-shine rounded-xl inline-flex items-center gap-2.5 bg-gradient-to-r from-gold to-gold-light px-8 py-4 text-sm font-semibold uppercase tracking-widest text-black transition-all duration-300"
+              <ContactButton
+                className="btn-gold-shine rounded-xl inline-flex items-center gap-2.5 bg-gradient-to-r from-gold to-gold-light px-8 py-4 text-sm font-semibold uppercase tracking-widest text-black transition-all duration-300 cursor-pointer"
               >
                 Get Legal Help
                 <ArrowRight className="h-4 w-4" strokeWidth={2} />
-              </Link>
+              </ContactButton>
               <Link
                 href="/features"
                 className="inline-flex items-center gap-2 rounded-xl border border-gold/40 px-8 py-4 text-sm font-semibold uppercase tracking-widest text-gold-dark transition-all duration-300 hover:bg-gold/10 hover:border-gold"

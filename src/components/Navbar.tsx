@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import ContactButton from "./ContactButton";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -12,7 +13,6 @@ const navLinks = [
   { label: "How\u00A0It\u00A0Works", href: "/platform" },
   { label: "Practice Areas", href: "/practice-areas" },
   { label: "Courts", href: "/courts" },
-  { label: "Contact", href: "/contact" },
 ];
 
 export default function Navbar() {
@@ -50,11 +50,11 @@ export default function Navbar() {
             <Image
               src="/logo.png"
               alt="NyaySevak Logo"
-              width={44}
-              height={44}
-              className="h-11 w-11 rounded-full object-cover"
+              width={56}
+              height={56}
+              className="h-12 w-12 sm:h-14 sm:w-14 rounded-full object-cover ring-1 ring-gold/20"
             />
-            <span className="text-lg font-heading font-bold tracking-[0.15em] text-gold transition-colors duration-300 group-hover:text-gold-light lg:text-xl">
+            <span className="text-xl font-heading font-bold tracking-[0.15em] text-gold transition-colors duration-300 group-hover:text-gold-light lg:text-2xl">
               NYAYSEVAK
             </span>
           </Link>
@@ -84,12 +84,11 @@ export default function Navbar() {
           </div>
 
           {/* Desktop CTA */}
-          <Link
-            href="/contact"
-            className="btn-gold-shine hidden lg:inline-flex items-center rounded-xl bg-gradient-to-r from-gold to-gold-light px-6 py-2.5 text-xs font-semibold uppercase tracking-widest text-black transition-all duration-300 hover:shadow-lg hover:shadow-gold/20"
+          <ContactButton
+            className="btn-gold-shine hidden lg:inline-flex items-center rounded-xl bg-gradient-to-r from-gold to-gold-light px-6 py-2.5 text-xs font-semibold uppercase tracking-widest text-black transition-all duration-300 hover:shadow-lg hover:shadow-gold/20 cursor-pointer"
           >
             Get Consultation
-          </Link>
+          </ContactButton>
 
           {/* Mobile Hamburger */}
           <button
@@ -127,9 +126,8 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
-          <Link
-            href="/contact"
-            className="mt-6 border border-gold/40 px-10 py-3.5 text-sm font-semibold uppercase tracking-widest text-gold transition-all duration-300 hover:bg-gold/10"
+          <ContactButton
+            className="mt-6 border border-gold/40 px-10 py-3.5 text-sm font-semibold uppercase tracking-widest text-gold transition-all duration-300 hover:bg-gold/10 cursor-pointer"
             style={{
               transitionDelay: mobileOpen ? `${navLinks.length * 60}ms` : "0ms",
               opacity: mobileOpen ? 1 : 0,
@@ -137,7 +135,7 @@ export default function Navbar() {
             }}
           >
             Get Consultation
-          </Link>
+          </ContactButton>
         </div>
       </div>
     </>

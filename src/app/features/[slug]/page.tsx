@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import ContactButton from "@/components/ContactButton";
 import {
   ArrowRight, CheckCircle2, Shield, Clock, Users, Star,
   CircleCheck, ChevronRight, BadgeCheck, HelpCircle, Phone,
@@ -510,10 +511,10 @@ export default async function FeatureDetailPage({ params }: { params: Promise<{ 
               Experience this feature and all other powerful tools on NyaySevak — India&apos;s first complete legal ecosystem.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link href="/contact" className="btn-gold-shine rounded-xl inline-flex items-center gap-2.5 bg-gradient-to-r from-gold to-gold-light px-8 py-4 text-sm font-semibold uppercase tracking-widest text-black transition-all duration-300">
+              <ContactButton className="btn-gold-shine rounded-xl inline-flex items-center gap-2.5 bg-gradient-to-r from-gold to-gold-light px-8 py-4 text-sm font-semibold uppercase tracking-widest text-black transition-all duration-300 cursor-pointer">
                 Get Started
                 <ArrowRight className="h-4 w-4" strokeWidth={2} />
-              </Link>
+              </ContactButton>
               <Link href="/features" className="inline-flex items-center gap-2 text-sm text-gold-dark font-semibold hover:text-gold transition-colors">
                 Explore All Features
                 <ArrowRight className="h-4 w-4" strokeWidth={2} />

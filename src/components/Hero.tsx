@@ -1,6 +1,9 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { Shield, Users, MapPin, MessageCircle, ChevronDown, ArrowRight } from "lucide-react";
+import ContactButton from "./ContactButton";
 
 const trustItems = [
   { icon: Shield, label: "15+ Years Experience" },
@@ -11,7 +14,7 @@ const trustItems = [
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen w-full bg-dark-deep overflow-hidden flex flex-col">
+    <section className="relative min-h-screen min-h-[100svh] w-full bg-dark-deep overflow-hidden flex flex-col">
       {/* Background image with cinematic overlay */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -38,9 +41,9 @@ export default function Hero() {
       <div className="absolute top-[70%] left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/12 to-transparent z-[1]" />
 
       {/* Main content */}
-      <div className="relative z-10 flex-1 flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 text-center pt-24 pb-8">
+      <div className="relative z-10 flex-1 flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 text-center pt-20 sm:pt-24 pb-4 sm:pb-8">
         {/* Eyebrow with decorative lines */}
-        <div className="hero-entrance hero-delay-1 flex items-center gap-4 mb-6 sm:mb-8">
+        <div className="hero-entrance hero-delay-1 flex items-center gap-4 mb-4 sm:mb-8">
           <div className="h-px w-12 sm:w-20 bg-gradient-to-r from-transparent to-gold/50" />
           <p className="text-[10px] sm:text-xs uppercase tracking-[0.35em] text-gold font-semibold">
             Trusted Legal Services Across India
@@ -66,7 +69,7 @@ export default function Hero() {
         </div>
 
         {/* Supporting paragraph */}
-        <p className="hero-entrance hero-delay-4 mb-8 sm:mb-10 max-w-xl text-sm sm:text-base lg:text-lg leading-relaxed text-gray-300/90">
+        <p className="hero-entrance hero-delay-4 mb-6 sm:mb-10 max-w-xl text-sm sm:text-base lg:text-lg leading-relaxed text-gray-300/90">
           Connect with verified lawyers across India for property disputes,
           bail applications, corporate counsel, and more — affordable, transparent,
           and always in your corner.
@@ -74,13 +77,12 @@ export default function Hero() {
 
         {/* CTAs */}
         <div className="hero-entrance hero-delay-5 flex flex-col sm:flex-row items-center gap-4 sm:gap-5">
-          <Link
-            href="/contact"
-            className="btn-gold-shine inline-flex items-center justify-center gap-2.5 rounded-xl bg-gradient-to-r from-gold to-gold-light px-10 py-5 text-sm font-semibold uppercase tracking-widest text-black transition-all duration-300"
+          <ContactButton
+            className="btn-gold-shine inline-flex items-center justify-center gap-2.5 rounded-xl bg-gradient-to-r from-gold to-gold-light px-8 py-4 sm:px-10 sm:py-5 text-sm font-semibold uppercase tracking-widest text-black transition-all duration-300 cursor-pointer"
           >
             Talk to a Lawyer Today
             <ArrowRight className="h-4 w-4" strokeWidth={2} />
-          </Link>
+          </ContactButton>
           <Link
             href="/services"
             className="btn-premium inline-flex items-center justify-center gap-2 rounded-xl border border-gold/40 px-8 py-4.5 text-sm font-semibold uppercase tracking-widest text-gold transition-all duration-300"
@@ -94,7 +96,7 @@ export default function Hero() {
       <div className="hero-entrance hero-delay-6 relative z-10">
         <div className="h-px bg-gradient-to-r from-transparent via-gold/25 to-transparent" />
         <div className="bg-dark-deep/50 backdrop-blur-2xl">
-          <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-7 sm:py-8">
+          <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-5 sm:py-8">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
               {trustItems.map((item) => {
                 const Icon = item.icon;
@@ -114,7 +116,7 @@ export default function Hero() {
       </div>
 
       {/* Scroll indicator */}
-      <div className="hero-entrance hero-delay-7 absolute bottom-24 sm:bottom-28 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 animate-bounce">
+      <div className="hero-entrance hero-delay-7 absolute bottom-4 sm:bottom-28 left-1/2 -translate-x-1/2 z-10 hidden sm:flex flex-col items-center gap-2 animate-bounce">
         <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.2em] text-gray-400">Scroll</span>
         <ChevronDown className="h-4 w-4 sm:h-5 sm:w-5 text-gold/60" strokeWidth={1.5} />
       </div>

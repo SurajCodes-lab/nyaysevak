@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import ContactButton from "@/components/ContactButton";
 import {
   ArrowRight, CheckCircle2, Shield, Clock, Users, Star,
   Scale, Search, FileText, HeartHandshake, BookOpen, Upload,
@@ -400,15 +401,14 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
             Connect with verified legal professionals for expert {service.title.toLowerCase()} services across India. Your first consultation is free.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link
-              href="/contact"
-              className="btn-gold-shine inline-flex items-center gap-2.5 rounded-xl bg-gradient-to-r from-gold to-gold-light px-8 sm:px-10 py-4 sm:py-5 text-sm font-semibold uppercase tracking-widest text-black"
+            <ContactButton
+              className="btn-gold-shine inline-flex items-center gap-2.5 rounded-xl bg-gradient-to-r from-gold to-gold-light px-8 sm:px-10 py-4 sm:py-5 text-sm font-semibold uppercase tracking-widest text-black cursor-pointer"
             >
               Get Free Consultation
               <ArrowRight className="h-4 w-4" strokeWidth={2} />
-            </Link>
+            </ContactButton>
             <a
-              href="https://wa.me/91XXXXXXXXXX"
+              href="https://wa.me/+91 98686 66715"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2.5 rounded-xl bg-[#25D366] px-6 sm:px-8 py-4 sm:py-5 text-sm font-semibold uppercase tracking-widest text-white shadow-lg shadow-[#25D366]/25 hover:shadow-xl hover:shadow-[#25D366]/35 hover:scale-[1.02] transition-all duration-300"

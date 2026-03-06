@@ -5,8 +5,9 @@ import Image from "next/image";
 import {
   Siren, MessageSquare, UserCheck, Scale, Phone, Mail,
   User, MapPin, Briefcase, FileText, Send, ShieldCheck, CheckCircle2,
-  Clock, Star,
+  Clock, Star, Loader2,
 } from "lucide-react";
+import { submitToSheet } from "@/lib/submitToSheet";
 
 const processSteps = [
   { Icon: MessageSquare, label: "Tell us your concern", desc: "Share your legal matter in confidence" },
@@ -34,10 +35,18 @@ const trustBadges = [
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "", phone: "", city: "", legalIssue: "", description: "",
+  });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setLoading(true);
+    await submitToSheet(formData);
+    setLoading(false);
     setSubmitted(true);
+    setFormData({ name: "", phone: "", city: "", legalIssue: "", description: "" });
     setTimeout(() => setSubmitted(false), 3000);
   };
 
@@ -56,11 +65,11 @@ export default function Contact() {
             </p>
             <span className="text-gray-600 hidden sm:inline">|</span>
             <a
-              href="tel:+91XXXXXXXXXX"
+              href="tel:+91 98686 66715"
               className="hidden sm:inline-flex items-center gap-2 text-sm text-gray-300 hover:text-white transition-colors font-medium"
             >
               <Phone className="h-3.5 w-3.5 text-gold/60" strokeWidth={1.5} />
-              Call Now: +91 XXXXX XXXXX
+              Call Now: +91 98686 66715
             </a>
           </div>
         </div>
@@ -125,17 +134,17 @@ export default function Contact() {
 
             {/* Compact contact info */}
             <div className="mt-8 sm:mt-10 pt-6 border-t border-white/[0.08] space-y-3.5">
-              <a href="tel:+91XXXXXXXXXX" className="flex items-center gap-3 group">
+              <a href="tel:+91 98686 66715" className="flex items-center gap-3 group">
                 <div className="h-9 w-9 rounded-lg icon-box-dark flex items-center justify-center shrink-0">
                   <Phone className="h-4 w-4 text-gold/70" strokeWidth={1.5} />
                 </div>
-                <span className="text-sm text-gray-300 group-hover:text-white transition-colors">+91 XXXXX XXXXX</span>
+                <span className="text-sm text-gray-300 group-hover:text-white transition-colors">+91 98686 66715</span>
               </a>
-              <a href="mailto:info@nyaysevak.com" className="flex items-center gap-3 group">
+              <a href="mailto:nyaysevak@gmail.com" className="flex items-center gap-3 group">
                 <div className="h-9 w-9 rounded-lg icon-box-dark flex items-center justify-center shrink-0">
                   <Mail className="h-4 w-4 text-gold/70" strokeWidth={1.5} />
                 </div>
-                <span className="text-sm text-gray-300 group-hover:text-white transition-colors">info@nyaysevak.com</span>
+                <span className="text-sm text-gray-300 group-hover:text-white transition-colors">nyaysevak@gmail.com</span>
               </a>
             </div>
           </div>
@@ -175,6 +184,8 @@ export default function Contact() {
                       type="text"
                       required
                       placeholder="Your full name"
+                      value={formData.name}
+                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       className="w-full rounded-xl border border-white/[0.1] bg-dark-card px-4 py-3.5 sm:py-4 text-sm text-white placeholder-gray-600 transition-all duration-300 hover:border-gold/20 focus:border-gold/40 focus:ring-2 focus:ring-gold/15 focus:bg-dark-card/80"
                     />
                   </div>
@@ -186,7 +197,9 @@ export default function Contact() {
                     <input
                       type="tel"
                       required
-                      placeholder="+91 XXXXX XXXXX"
+                      placeholder="+91 98686 66715"
+                      value={formData.phone}
+                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       className="w-full rounded-xl border border-white/[0.1] bg-dark-card px-4 py-3.5 sm:py-4 text-sm text-white placeholder-gray-600 transition-all duration-300 hover:border-gold/20 focus:border-gold/40 focus:ring-2 focus:ring-gold/15 focus:bg-dark-card/80"
                     />
                   </div>
@@ -202,6 +215,8 @@ export default function Contact() {
                     <input
                       type="text"
                       placeholder="Your city or district"
+                      value={formData.city}
+                      onChange={(e) => setFormData({ ...formData, city: e.target.value })}
                       className="w-full rounded-xl border border-white/[0.1] bg-dark-card px-4 py-3.5 sm:py-4 text-sm text-white placeholder-gray-600 transition-all duration-300 hover:border-gold/20 focus:border-gold/40 focus:ring-2 focus:ring-gold/15 focus:bg-dark-card/80"
                     />
                   </div>
@@ -210,14 +225,25 @@ export default function Contact() {
                       <Briefcase className="h-3.5 w-3.5 text-gold/60" strokeWidth={1.5} />
                       Legal Issue
                     </label>
-                    <select className="w-full rounded-xl border border-white/[0.1] bg-dark-card px-4 py-3.5 sm:py-4 text-sm text-gray-500 transition-all duration-300 appearance-none hover:border-gold/20 focus:border-gold/40 focus:ring-2 focus:ring-gold/15">
-                      <option value="">Select an issue type</option>
-                      {legalIssueOptions.map((opt) => (
-                        <option key={opt} value={opt.toLowerCase().replace(/\s+/g, "-")}>
-                          {opt}
-                        </option>
-                      ))}
-                    </select>
+                    <div className="relative">
+                      <select
+                        value={formData.legalIssue}
+                        onChange={(e) => setFormData({ ...formData, legalIssue: e.target.value })}
+                        className="w-full rounded-xl border border-white/[0.1] bg-dark-card px-4 py-3.5 sm:py-4 pr-10 text-sm text-gray-500 transition-all duration-300 appearance-none hover:border-gold/20 focus:border-gold/40 focus:ring-2 focus:ring-gold/15 [&>option]:bg-[#1a1a2e] [&>option]:text-white [&>option]:py-2"
+                      >
+                        <option value="">Select an issue type</option>
+                        {legalIssueOptions.map((opt) => (
+                          <option key={opt} value={opt.toLowerCase().replace(/\s+/g, "-")}>
+                            {opt}
+                          </option>
+                        ))}
+                      </select>
+                      <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
+                        <svg className="h-4 w-4 text-gold/50" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </div>
+                    </div>
                   </div>
                 </div>
 
@@ -231,6 +257,8 @@ export default function Contact() {
                     rows={4}
                     required
                     placeholder="Describe your legal matter briefly..."
+                    value={formData.description}
+                    onChange={(e) => setFormData({ ...formData, description: e.target.value })}
                     className="w-full rounded-xl border border-white/[0.1] bg-dark-card px-4 py-3.5 sm:py-4 text-sm text-white placeholder-gray-600 transition-all duration-300 resize-none hover:border-gold/20 focus:border-gold/40 focus:ring-2 focus:ring-gold/15 focus:bg-dark-card/80"
                   />
                 </div>
@@ -238,10 +266,20 @@ export default function Contact() {
                 {/* Submit */}
                 <button
                   type="submit"
-                  className="btn-gold-shine rounded-xl w-full inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-gold to-gold-light px-6 py-4 sm:py-5 text-sm font-semibold uppercase tracking-widest text-black transition-all duration-300"
+                  disabled={loading}
+                  className="btn-gold-shine rounded-xl w-full inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-gold to-gold-light px-6 py-4 sm:py-5 text-sm font-semibold uppercase tracking-widest text-black transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed"
                 >
-                  Book Free Consultation
-                  <Send className="h-4 w-4" strokeWidth={2} />
+                  {loading ? (
+                    <>
+                      Submitting...
+                      <Loader2 className="h-4 w-4 animate-spin" strokeWidth={2} />
+                    </>
+                  ) : (
+                    <>
+                      Book Free Consultation
+                      <Send className="h-4 w-4" strokeWidth={2} />
+                    </>
+                  )}
                 </button>
 
                 {/* Trust badges row */}
