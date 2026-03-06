@@ -580,7 +580,7 @@ export default async function CourtDetailPage({ params }: { params: Promise<{ sl
                   <ArrowRight className="h-4 w-4" strokeWidth={2} />
                 </ContactButton>
                 <a
-                  href="https://wa.me/+91 98686 66715"
+                  href="https://wa.me/919868666715"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2.5 rounded-xl border border-white/10 px-8 py-4 text-sm font-semibold text-white transition-all duration-300 hover:border-gold/30 hover:text-gold"

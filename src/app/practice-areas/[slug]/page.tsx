@@ -346,7 +346,7 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ s
                   <ArrowRight className="h-4 w-4" strokeWidth={2} />
                 </ContactButton>
                 <a
-                  href="https://wa.me/+91 98686 66715"
+                  href="https://wa.me/919868666715"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2.5 rounded-xl bg-[#25D366] px-6 sm:px-8 py-4 sm:py-5 text-sm font-semibold uppercase tracking-widest text-white shadow-lg shadow-[#25D366]/25 hover:shadow-xl hover:shadow-[#25D366]/35 hover:scale-[1.02] transition-all duration-300"
