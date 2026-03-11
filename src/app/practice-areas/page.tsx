@@ -10,11 +10,13 @@ export const metadata: Metadata = {
     "Complete A-Z legal services across every domain of Indian law. Civil law, criminal law, CBI, ED, NDPS defense, family law, corporate law, IP, tax, consumer protection, arbitration, documentation & more. 29 practice areas with pan-India coverage.",
   keywords:
     "practice areas, civil law India, criminal lawyer, family lawyer, corporate lawyer, IP lawyer, tax lawyer, consumer protection, arbitration, legal documentation, Indian law, NyaySevak",
+  alternates: { canonical: "https://nyaysevak.com/practice-areas" },
   openGraph: {
     title: "A-Z Legal Practice Areas | NyaySevak",
     description:
       "29 practice areas covering every domain of Indian law. Find verified lawyers for CBI, ED, NDPS, civil, criminal, family, corporate, IP, tax, and more.",
     type: "website",
+    url: "https://nyaysevak.com/practice-areas",
   },
 };
 

@@ -9,6 +9,8 @@ export const metadata: Metadata = {
     "Complete coverage across Supreme Court, all 25 High Courts, 700+ District Courts, 20+ Tribunals, and all major Arbitration centres in India.",
   keywords:
     "Supreme Court advocate, High Court lawyer, District Court lawyer, NCLT lawyer, tribunal lawyer, arbitration India, court coverage India",
+  alternates: { canonical: "https://nyaysevak.com/courts" },
+  openGraph: { url: "https://nyaysevak.com/courts" },
 };
 
 export default function CourtsPage() {

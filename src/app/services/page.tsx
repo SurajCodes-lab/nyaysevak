@@ -9,6 +9,8 @@ export const metadata: Metadata = {
     "Comprehensive legal services for individuals and businesses. Lawyer consultation, document services, corporate advisory, compliance management, contract management, IP management & more.",
   keywords:
     "legal services India, lawyer consultation, corporate legal advisory, compliance management, contract management, IP management, B2B legal services, B2C legal services",
+  alternates: { canonical: "https://nyaysevak.com/services" },
+  openGraph: { url: "https://nyaysevak.com/services" },
 };
 
 export default function ServicesPage() {

@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     "Read the Terms of Service for NyaySevak. Understand the terms governing your use of India's first complete legal ecosystem platform.",
   keywords:
     "NyaySevak terms of service, legal platform terms, legal services agreement India, user agreement legal platform, NyaySevak usage terms",
+  alternates: { canonical: "https://nyaysevak.com/terms-of-service" },
 };
 
 export default function TermsOfServicePage() {

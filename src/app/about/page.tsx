@@ -10,6 +10,8 @@ export const metadata: Metadata = {
     "Learn about NyaySevak's vision, mission, and platform features. India's premier legal services platform with verified lawyer directory, service booking, legal guides, court information, and WhatsApp integration. Pan-India coverage across Supreme Court, High Courts, District Courts, Tribunals & Arbitration centres.",
   keywords:
     "about NyaySevak, legal services India, legal ecosystem India, legal platform vision, legal services mission, lawyer directory, service booking, legal guides, court information, WhatsApp legal support",
+  alternates: { canonical: "https://nyaysevak.com/about" },
+  openGraph: { url: "https://nyaysevak.com/about" },
 };
 
 export default function AboutPage() {

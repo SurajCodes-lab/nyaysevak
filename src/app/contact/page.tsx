@@ -7,6 +7,8 @@ export const metadata: Metadata = {
     "Get in touch with NyaySevak for legal consultation. Available 24/7 for emergencies. Connect with verified lawyers across India.",
   keywords:
     "contact NyaySevak, legal consultation India, hire lawyer online, legal help India, emergency legal help",
+  alternates: { canonical: "https://nyaysevak.com/contact" },
+  openGraph: { url: "https://nyaysevak.com/contact" },
 };
 
 export default function ContactPage() {

@@ -28,10 +28,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: `${service.title} - ${service.category === "b2c" ? "B2C" : "B2B"} Legal Services India | NyaySevak`,
     description: `${service.title} ${catLabel} on NyaySevak. ${service.bullets.join(". ")}. Book verified legal professionals across India.`,
     keywords: `${service.title.toLowerCase()}, ${service.category === "b2c" ? "individual" : "business"} legal services, ${service.bullets.map(b => b.toLowerCase()).slice(0, 3).join(", ")}, NyaySevak`,
+    alternates: {
+      canonical: `https://nyaysevak.com/services/${slug}`,
+    },
     openGraph: {
       title: `${service.title} | NyaySevak Legal Services`,
       description: `${service.title} ${catLabel}. ${service.bullets[0]}.`,
       type: "website",
+      url: `https://nyaysevak.com/services/${slug}`,
     },
   };
 }
@@ -195,6 +199,22 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
     ],
   };
 
+  const serviceJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: service.title,
+    description: content.overview,
+    provider: {
+      "@type": "Organization",
+      name: "NyaySevak",
+      url: "https://nyaysevak.com",
+    },
+    areaServed: { "@type": "Country", name: "India" },
+    serviceType: service.title,
+    url: `https://nyaysevak.com/services/${slug}`,
+    category: service.category === "b2c" ? "Individual Legal Services" : "Business Legal Services",
+  };
+
   const faqJsonLd = content.faqs.length > 0 ? {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -208,6 +228,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
   return (
     <main className="min-h-screen">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }} />
       {faqJsonLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />}
 
       {/* ===== Hero — Premium Dark ===== */}

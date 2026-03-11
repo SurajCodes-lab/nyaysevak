@@ -31,6 +31,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: `${hc.name} - Lawyers & Legal Services | NyaySevak`,
     description: `Find verified lawyers for ${hc.name} matters. Jurisdiction: ${hc.jurisdiction}. ${hc.benches.length > 0 ? `Bench locations: ${hc.benches.join(", ")}.` : ""} Book expert advocates on NyaySevak.`,
     keywords: `${hc.name} lawyer, ${hc.jurisdiction} advocate, high court lawyer India, NyaySevak`,
+    alternates: { canonical: `https://nyaysevak.com/courts/${slug}` },
+    openGraph: { url: `https://nyaysevak.com/courts/${slug}` },
   };
 
   const dc = districtCourts.find((d) => d.slug === slug);
@@ -38,6 +40,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: `District Courts in ${dc.state} - Lawyers & Legal Services | NyaySevak`,
     description: `Find verified lawyers for all ${dc.districts.length} district courts in ${dc.state}. Book expert advocates on NyaySevak.`,
     keywords: `${dc.state} district court lawyer, NyaySevak`,
+    alternates: { canonical: `https://nyaysevak.com/courts/${slug}` },
+    openGraph: { url: `https://nyaysevak.com/courts/${slug}` },
   };
 
   const tr = tribunalGroups.find((t) => t.slug === slug);
@@ -45,6 +49,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: `${tr.title} Tribunals - Lawyers & Legal Services | NyaySevak`,
     description: `Find verified lawyers for ${tr.title} tribunals in India. Expert tribunal advocates on NyaySevak.`,
     keywords: `${tr.title} tribunal lawyer, NyaySevak`,
+    alternates: { canonical: `https://nyaysevak.com/courts/${slug}` },
+    openGraph: { url: `https://nyaysevak.com/courts/${slug}` },
   };
 
   return { title: "Not Found | NyaySevak" };

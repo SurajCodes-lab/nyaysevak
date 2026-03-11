@@ -1,4 +1,6 @@
-const GOOGLE_SHEET_URL = process.env.NEXT_PUBLIC_GOOGLE_SHEET_URL || "";
+const GOOGLE_SHEET_URL =
+  process.env.NEXT_PUBLIC_GOOGLE_SHEET_URL ||
+  "https://script.google.com/macros/s/AKfycbzLCW6ZtY27qf_ERKDRHWFBKN8opzRmTNmd7Sndx-HG-kWga0LuWgO93Du-8nebf_3jhg/exec";
 
 export interface ContactFormData {
   name: string;

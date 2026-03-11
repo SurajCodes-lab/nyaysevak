@@ -28,18 +28,26 @@ export const viewport: Viewport = {
   maximumScale: 5,
 };
 
-const jsonLd = {
+const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": ["Organization", "LegalService"],
+  "@id": "https://nyaysevak.com/#organization",
   name: "NyaySevak",
+  alternateName: "NyaySevak Legal Services",
   description:
     "India's first complete legal ecosystem. Access Supreme Court, 25 High Courts, 700+ District Courts, all Tribunals & Arbitration centres. Complete A-Z legal services for individuals and businesses.",
   url: "https://nyaysevak.com",
-  logo: "https://nyaysevak.com/logo.png",
+  logo: {
+    "@type": "ImageObject",
+    url: "https://nyaysevak.com/logo.png",
+    width: 800,
+    height: 800,
+  },
   image: "https://nyaysevak.com/logo.png",
   areaServed: {
     "@type": "Country",
     name: "India",
+    "@id": "https://en.wikipedia.org/wiki/India",
   },
   serviceType: [
     "Legal Consultation",
@@ -54,22 +62,63 @@ const jsonLd = {
     "E-filing Assistance",
     "Legal Aid",
   ],
+  knowsAbout: [
+    "Indian Law",
+    "Supreme Court of India",
+    "High Courts of India",
+    "District Courts",
+    "Tribunals",
+    "Arbitration",
+    "Corporate Law",
+    "Criminal Law",
+    "Civil Law",
+    "Family Law",
+    "Property Law",
+    "Intellectual Property",
+  ],
+  slogan: "Defending Your Rights",
   sameAs: [
     "https://www.facebook.com/nyaysevak",
     "https://www.twitter.com/nyaysevak",
     "https://www.linkedin.com/company/nyaysevak",
     "https://www.instagram.com/nyaysevak",
   ],
-  contactPoint: {
-    "@type": "ContactPoint",
-    contactType: "customer service",
-    availableLanguage: ["English", "Hindi"],
+  contactPoint: [
+    {
+      "@type": "ContactPoint",
+      telephone: "+91-9868666715",
+      contactType: "customer service",
+      areaServed: "IN",
+      availableLanguage: ["English", "Hindi"],
+    },
+  ],
+};
+
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://nyaysevak.com/#website",
+  name: "NyaySevak",
+  alternateName: "NyaySevak - Defending Your Rights",
+  url: "https://nyaysevak.com",
+  publisher: { "@id": "https://nyaysevak.com/#organization" },
+  inLanguage: "en-IN",
+  potentialAction: {
+    "@type": "SearchAction",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: "https://nyaysevak.com/practice-areas?q={search_term_string}",
+    },
+    "query-input": "required name=search_term_string",
   },
 };
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://nyaysevak.com"),
-  title: "NyaySevak - Defending Your Rights | India's Premier Legal Services Platform",
+  title: {
+    default: "NyaySevak - Defending Your Rights | India's Premier Legal Services Platform",
+    template: "%s | NyaySevak",
+  },
   description:
     "India's first complete legal ecosystem. Get access to Supreme Court, 25 High Courts, 700+ District Courts, all Tribunals & Arbitration centres. Complete A-Z legal services for individuals and businesses. B2B + B2C legal services platform.",
   keywords:
@@ -77,6 +126,9 @@ export const metadata: Metadata = {
   authors: [{ name: "NyaySevak" }],
   creator: "NyaySevak",
   publisher: "NyaySevak",
+  alternates: {
+    canonical: "https://nyaysevak.com",
+  },
   robots: {
     index: true,
     follow: true,
@@ -91,6 +143,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_IN",
+    url: "https://nyaysevak.com",
     siteName: "NyaySevak",
     title: "NyaySevak - Defending Your Rights | India's Premier Legal Services Platform",
     description:
@@ -106,11 +159,16 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    site: "@nyaysevak",
+    creator: "@nyaysevak",
     title: "NyaySevak - India's Premier Legal Services Platform",
     description:
       "Complete A-Z legal services across Supreme Court, High Courts, District Courts, Tribunals & Arbitration centres.",
     images: ["/logo.png"],
   },
+  // Add your Google Search Console verification code here after setup:
+  // verification: { google: "YOUR_CODE" },
+  category: "Legal Services",
 };
 
 export default function RootLayout({
@@ -125,7 +183,11 @@ export default function RootLayout({
         <meta name="theme-color" content="#080704" />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
         />
       </head>
       <body

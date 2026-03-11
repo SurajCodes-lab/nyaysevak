@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     "Read the legal disclaimer for NyaySevak. Important information about limitations of our platform, no attorney-client relationship, and no guarantee of legal outcomes.",
   keywords:
     "NyaySevak disclaimer, legal disclaimer India, no attorney-client relationship, legal platform disclaimer, legal services limitations",
+  alternates: { canonical: "https://nyaysevak.com/disclaimer" },
 };
 
 export default function DisclaimerPage() {

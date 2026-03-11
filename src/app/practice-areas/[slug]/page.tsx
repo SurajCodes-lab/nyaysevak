@@ -32,10 +32,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       "NyaySevak",
       "legal services India",
     ].join(", "),
+    alternates: {
+      canonical: `https://nyaysevak.com/practice-areas/${slug}`,
+    },
     openGraph: {
       title: `${area.title} Lawyers & Legal Services | NyaySevak`,
       description: `${area.description}. Find verified ${area.title.toLowerCase()} lawyers across India on NyaySevak.`,
       type: "website",
+      url: `https://nyaysevak.com/practice-areas/${slug}`,
     },
   };
 }

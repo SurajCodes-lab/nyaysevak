@@ -32,10 +32,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: `${feature.title} - Platform Feature | NyaySevak India`,
     description: `${feature.description} ${feature.bullets.join(". ")}. Available on NyaySevak — India's first complete legal ecosystem.`,
     keywords: `${feature.title.toLowerCase()}, NyaySevak feature, legal platform India`,
+    alternates: {
+      canonical: `https://nyaysevak.com/features/${slug}`,
+    },
     openGraph: {
       title: `${feature.title} | NyaySevak Platform Feature`,
       description: feature.description,
       type: "website",
+      url: `https://nyaysevak.com/features/${slug}`,
     },
   };
 }

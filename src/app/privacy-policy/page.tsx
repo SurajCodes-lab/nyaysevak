@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     "Read NyaySevak's Privacy Policy. Learn how we collect, use, and protect your personal data on India's first complete legal ecosystem platform.",
   keywords:
     "NyaySevak privacy policy, legal services data protection, privacy policy India, IT Act 2000 compliance, user data protection legal platform",
+  alternates: { canonical: "https://nyaysevak.com/privacy-policy" },
 };
 
 export default function PrivacyPolicyPage() {
