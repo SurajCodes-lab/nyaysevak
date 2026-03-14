@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import NavigationProgress from "@/components/NavigationProgress";
 import ScrollToTop from "@/components/ScrollToTop";
 import ContactModal from "@/components/ContactModal";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { ContactModalProvider } from "@/context/ContactModalContext";
 
 const playfair = Playfair_Display({
@@ -166,8 +167,9 @@ export const metadata: Metadata = {
       "Complete A-Z legal services across Supreme Court, High Courts, District Courts, Tribunals & Arbitration centres.",
     images: ["/logo.png"],
   },
-  // Add your Google Search Console verification code here after setup:
-  // verification: { google: "YOUR_CODE" },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "",
+  },
   category: "Legal Services",
 };
 
@@ -178,6 +180,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <GoogleAnalytics />
       <head>
         <link rel="icon" href="/logo.png" />
         <meta name="theme-color" content="#080704" />
