@@ -14,14 +14,15 @@ const trustItems = [
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen min-h-[100svh] w-full bg-dark-deep overflow-hidden flex flex-col">
+    <section className="relative min-h-screen min-h-[100svh] w-full bg-dark-deep overflow-hidden flex flex-col" aria-label="NyaySevak - India's Premier Legal Services Platform">
       {/* Background image with cinematic overlay */}
       <div className="absolute inset-0 z-0">
         <Image
           src="/hero-bg.jpg"
-          alt=""
+          alt="Indian courthouse representing legal services and justice across India"
           fill
           priority
+          quality={75}
           className="object-cover opacity-[0.25]"
           sizes="100vw"
         />

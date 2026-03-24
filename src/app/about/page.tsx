@@ -14,9 +14,48 @@ export const metadata: Metadata = {
   openGraph: { url: "https://nyaysevak.com/about" },
 };
 
+const aboutPageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "@id": "https://nyaysevak.com/about/#aboutpage",
+  name: "About NyaySevak",
+  description:
+    "India's first complete legal ecosystem connecting citizens, businesses, and legal professionals across the entire Indian judicial system.",
+  url: "https://nyaysevak.com/about",
+  mainEntity: { "@id": "https://nyaysevak.com/#organization" },
+  isPartOf: { "@id": "https://nyaysevak.com/#website" },
+};
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://nyaysevak.com",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "About",
+      item: "https://nyaysevak.com/about",
+    },
+  ],
+};
+
 export default function AboutPage() {
   return (
     <main className="min-h-screen pt-20">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutPageJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <About />
 
       <div className="section-separator" />

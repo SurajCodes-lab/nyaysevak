@@ -51,7 +51,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact">
+    <section id="contact" aria-label="Contact NyaySevak for legal consultation">
       {/* Emergency banner — full width */}
       <div className="relative bg-dark-deep border-y border-gold/20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-gold/[0.04] via-transparent to-gold/[0.04]" />
@@ -82,10 +82,11 @@ export default function Contact() {
           <div className="absolute inset-0 z-0">
             <Image
               src="/contact-image.png"
-              alt=""
+              alt="Legal consultation and professional lawyer services in India"
               fill
+              quality={75}
               className="object-cover opacity-[0.3]"
-              sizes="50vw"
+              sizes="(max-width: 1024px) 100vw, 45vw"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-dark-deep via-dark-deep/90 to-dark-deep/70" />
           </div>
@@ -172,7 +173,7 @@ export default function Contact() {
                 <p className="mt-2 text-sm text-gray-400">We&apos;ll get back to you within 24 hours.</p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6" aria-label="Legal consultation request form">
                 {/* Row 1: Name + Phone */}
                 <div className="grid gap-5 sm:gap-6 sm:grid-cols-2">
                   <div>

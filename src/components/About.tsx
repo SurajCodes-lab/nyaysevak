@@ -45,7 +45,7 @@ const whyItems = [
 
 export default function About() {
   return (
-    <section id="about">
+    <section id="about" aria-label="About NyaySevak - Vision, Mission and Platform Advantages">
       {/* -- Sub-section A: Vision (Dark bg) -- */}
       <div className="bg-dark-deep py-28 sm:py-36 lg:py-44 relative overflow-hidden dark-section-depth">
         <div

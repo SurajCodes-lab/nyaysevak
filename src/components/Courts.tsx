@@ -14,7 +14,7 @@ const tribunalHighlights = [
 
 export default function Courts() {
   return (
-    <section id="courts" className="bg-dark-deep relative overflow-hidden dark-section-depth">
+    <section id="courts" className="bg-dark-deep relative overflow-hidden dark-section-depth" aria-label="Pan-India court coverage including Supreme Court, High Courts, District Courts and Tribunals">
       {/* Top separator */}
       <div className="section-separator" />
 
@@ -78,8 +78,9 @@ export default function Courts() {
               <div className="relative rounded-2xl overflow-hidden aspect-[4/3] lg:aspect-auto lg:h-[560px] xl:h-[620px] border border-gold/10 shadow-2xl shadow-black/30">
                 <Image
                   src="/courts-image.jpg"
-                  alt="Supreme Court of India"
+                  alt="Supreme Court of India building - NyaySevak provides legal representation at India's apex court"
                   fill
+                  quality={75}
                   className="object-cover"
                   sizes="(min-width: 1024px) 50vw, 100vw"
                 />

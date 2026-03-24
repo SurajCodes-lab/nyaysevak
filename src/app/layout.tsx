@@ -123,7 +123,7 @@ export const metadata: Metadata = {
   description:
     "India's first complete legal ecosystem. Get access to Supreme Court, 25 High Courts, 700+ District Courts, all Tribunals & Arbitration centres. Complete A-Z legal services for individuals and businesses. B2B + B2C legal services platform.",
   keywords:
-    "legal services India, lawyer consultation online, find lawyer India, Supreme Court advocate, High Court lawyer, legal services platform, corporate legal advisory, compliance management, arbitration India, NyaySevak, legal aid India, property lawyer, criminal lawyer, family lawyer, divorce lawyer India, NCLT lawyer, tax lawyer, IP lawyer India",
+    "legal services India, lawyer consultation online, find lawyer India, Supreme Court advocate, High Court lawyer, legal services platform, corporate legal advisory, compliance management, arbitration India, NyaySevak, legal aid India, property lawyer, criminal lawyer, family lawyer, divorce lawyer India, NCLT lawyer, tax lawyer, IP lawyer India, best lawyer near me, online legal consultation, affordable lawyer India, verified advocate India, legal help online, hire lawyer online India, court representation India, bail lawyer India, business lawyer India",
   authors: [{ name: "NyaySevak" }],
   creator: "NyaySevak",
   publisher: "NyaySevak",
@@ -169,6 +169,10 @@ export const metadata: Metadata = {
   },
   verification: {
     google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "",
+    other: {
+      "msvalidate.01": process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION || "",
+      "yandex-verification": process.env.NEXT_PUBLIC_YANDEX_VERIFICATION || "",
+    },
   },
   category: "Legal Services",
 };
@@ -197,10 +201,17 @@ export default function RootLayout({
         className={`${playfair.variable} ${inter.variable} antialiased bg-dark-deep text-white font-body`}
       >
         <ContactModalProvider>
+          {/* Skip to content link for keyboard accessibility */}
+          <a
+            href="#main-content"
+            className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:rounded-xl focus:bg-gold focus:px-6 focus:py-3 focus:text-sm focus:font-semibold focus:text-black focus:shadow-lg"
+          >
+            Skip to main content
+          </a>
           <ScrollToTop />
           <NavigationProgress />
           <Navbar />
-          {children}
+          <div id="main-content">{children}</div>
           <Footer />
           <ContactModal />
         </ContactModalProvider>

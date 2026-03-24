@@ -40,8 +40,9 @@ export default function PlatformBanner() {
       <div className="absolute inset-0 z-0">
         <Image
           src="/about-vision.jpeg"
-          alt=""
+          alt="NyaySevak legal services platform connecting lawyers and clients across India"
           fill
+          quality={60}
           className="object-cover opacity-[0.08]"
           sizes="100vw"
         />

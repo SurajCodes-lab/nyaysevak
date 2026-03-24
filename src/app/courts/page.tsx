@@ -6,16 +6,29 @@ import { ArrowRight } from "lucide-react";
 export const metadata: Metadata = {
   title: "Court Coverage - Pan-India Legal Coverage | NyaySevak",
   description:
-    "Complete coverage across Supreme Court, all 25 High Courts, 700+ District Courts, 20+ Tribunals, and all major Arbitration centres in India.",
+    "Complete coverage across Supreme Court, all 25 High Courts, 700+ District Courts, 20+ Tribunals, and all major Arbitration centres in India. Find lawyers for any court.",
   keywords:
-    "Supreme Court advocate, High Court lawyer, District Court lawyer, NCLT lawyer, tribunal lawyer, arbitration India, court coverage India",
+    "Supreme Court advocate, High Court lawyer, District Court lawyer, NCLT lawyer, tribunal lawyer, arbitration India, court coverage India, find court lawyer, legal representation India",
   alternates: { canonical: "https://nyaysevak.com/courts" },
   openGraph: { url: "https://nyaysevak.com/courts" },
+};
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://nyaysevak.com" },
+    { "@type": "ListItem", position: 2, name: "Courts", item: "https://nyaysevak.com/courts" },
+  ],
 };
 
 export default function CourtsPage() {
   return (
     <main className="min-h-screen pt-20">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <Courts />
 
       <div className="section-separator" />

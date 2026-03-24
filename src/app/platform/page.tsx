@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "Discover how NyaySevak's dual B2B and B2C legal platform works. Connect with verified lawyers, book consultations, and resolve legal matters across every court and tribunal in India. Serving individuals, families, startups, corporates, and law firms.",
   keywords:
-    "legal services platform India, B2B legal services, B2C legal services, online lawyer consultation, hire lawyer India, legal ecosystem, court representation India, NyaySevak",
+    "legal services platform India, B2B legal services, B2C legal services, online lawyer consultation, hire lawyer India, legal ecosystem, court representation India, NyaySevak, how to hire lawyer online",
   alternates: { canonical: "https://nyaysevak.com/platform" },
   openGraph: {
     title: "How NyaySevak Works | India's First Complete Legal Ecosystem",
@@ -17,9 +17,22 @@ export const metadata: Metadata = {
   },
 };
 
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://nyaysevak.com" },
+    { "@type": "ListItem", position: 2, name: "How It Works", item: "https://nyaysevak.com/platform" },
+  ],
+};
+
 export default function PlatformPage() {
   return (
     <main className="min-h-screen pt-20">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <Platform />
     </main>
   );

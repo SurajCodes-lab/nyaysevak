@@ -21,7 +21,7 @@ const displayPracticeAreas = practiceAreas.slice(0, 12);
 export default function Footer() {
   return (
     <>
-      <footer className="relative bg-dark-deep overflow-hidden dark-section-depth">
+      <footer className="relative bg-dark-deep overflow-hidden dark-section-depth" role="contentinfo" aria-label="Site footer">
         {/* Top gold gradient band */}
         <div className="section-separator" />
 
