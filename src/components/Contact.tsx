@@ -43,11 +43,16 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    await submitToSheet(formData);
-    setLoading(false);
-    setSubmitted(true);
-    setFormData({ name: "", phone: "", city: "", legalIssue: "", description: "" });
-    setTimeout(() => setSubmitted(false), 3000);
+    try {
+      await submitToSheet(formData);
+      setSubmitted(true);
+      setFormData({ name: "", phone: "", city: "", legalIssue: "", description: "" });
+      setTimeout(() => setSubmitted(false), 3000);
+    } catch {
+      alert("Something went wrong. Please try again or call us at +91 98686 66715.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -165,7 +170,7 @@ export default function Contact() {
             </p>
 
             {submitted ? (
-              <div className="flex flex-col items-center justify-center py-12 sm:py-16 text-center">
+              <div role="status" aria-live="polite" className="flex flex-col items-center justify-center py-12 sm:py-16 text-center">
                 <div className="mb-6 flex h-20 w-20 items-center justify-center rounded-2xl icon-gold gold-glow-md">
                   <CheckCircle2 className="h-10 w-10 text-black" strokeWidth={1.5} />
                 </div>

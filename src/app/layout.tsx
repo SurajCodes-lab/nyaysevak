@@ -45,10 +45,26 @@ const organizationJsonLd = {
     height: 800,
   },
   image: "https://nyaysevak.com/logo.png",
+  foundingDate: "2024",
+  founder: {
+    "@type": "Person",
+    name: "NyaySevak Team",
+  },
+  numberOfEmployees: {
+    "@type": "QuantitativeValue",
+    minValue: 10,
+    maxValue: 50,
+  },
   areaServed: {
     "@type": "Country",
     name: "India",
     "@id": "https://en.wikipedia.org/wiki/India",
+  },
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "New Delhi",
+    addressRegion: "Delhi",
+    addressCountry: "IN",
   },
   serviceType: [
     "Legal Consultation",
@@ -76,6 +92,12 @@ const organizationJsonLd = {
     "Family Law",
     "Property Law",
     "Intellectual Property",
+    "Bail Application Process",
+    "Legal Documentation India",
+    "Court Filing Procedures",
+    "NCLT Proceedings",
+    "Consumer Disputes",
+    "Divorce Proceedings India",
   ],
   slogan: "Defending Your Rights",
   sameAs: [
@@ -93,6 +115,32 @@ const organizationJsonLd = {
       availableLanguage: ["English", "Hindi"],
     },
   ],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Legal Services",
+    itemListElement: [
+      {
+        "@type": "OfferCatalog",
+        name: "B2C Legal Services",
+        itemListElement: [
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Lawyer Consultation" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Find & Hire Lawyers" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Document Services" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Legal Aid" } },
+        ],
+      },
+      {
+        "@type": "OfferCatalog",
+        name: "B2B Legal Services",
+        itemListElement: [
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Corporate Legal Advisory" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Compliance Management" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Litigation Management" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "M&A Support" } },
+        ],
+      },
+    ],
+  },
 };
 
 const websiteJsonLd = {

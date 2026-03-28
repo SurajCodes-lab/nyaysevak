@@ -38,9 +38,32 @@ const stats = [
   },
 ];
 
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://nyaysevak.com",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Practice Areas",
+      item: "https://nyaysevak.com/practice-areas",
+    },
+  ],
+};
+
 export default function PracticeAreasPage() {
   return (
     <main className="min-h-screen bg-black">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       {/* ── Hero Section ── */}
       <section className="relative overflow-hidden bg-dark pt-32 pb-20 sm:pt-36 sm:pb-24 lg:pt-40 lg:pb-28">
         {/* Decorative background elements */}

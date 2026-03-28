@@ -61,14 +61,19 @@ export default function ContactModal() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    await submitToSheet(formData);
-    setLoading(false);
-    setSubmitted(true);
-    setFormData({ name: "", phone: "", city: "", legalIssue: "", description: "" });
-    setTimeout(() => {
-      setSubmitted(false);
-      closeContactModal();
-    }, 3000);
+    try {
+      await submitToSheet(formData);
+      setSubmitted(true);
+      setFormData({ name: "", phone: "", city: "", legalIssue: "", description: "" });
+      setTimeout(() => {
+        setSubmitted(false);
+        closeContactModal();
+      }, 3000);
+    } catch {
+      alert("Something went wrong. Please try again or call us at +91 98686 66715.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   if (!isOpen) return null;
@@ -82,7 +87,7 @@ export default function ContactModal() {
       />
 
       {/* Modal */}
-      <div className="relative z-10 w-[95%] max-w-lg max-h-[90vh] overflow-y-auto rounded-2xl border border-white/10 bg-dark shadow-2xl shadow-black/50 animate-modalSlideUp">
+      <div role="dialog" aria-modal="true" aria-labelledby="contact-modal-title" className="relative z-10 w-[95%] max-w-lg max-h-[90vh] overflow-y-auto rounded-2xl border border-white/10 bg-dark shadow-2xl shadow-black/50 animate-modalSlideUp">
         {/* Close button */}
         <button
           onClick={closeContactModal}
@@ -100,7 +105,7 @@ export default function ContactModal() {
               Free Consultation
             </p>
           </div>
-          <h3 className="text-xl sm:text-2xl font-heading font-bold text-white heading-glow">
+          <h3 id="contact-modal-title" className="text-xl sm:text-2xl font-heading font-bold text-white heading-glow">
             Request a Consultation
           </h3>
           <p className="mt-1.5 text-sm text-gray-500">
@@ -111,7 +116,7 @@ export default function ContactModal() {
         {/* Form */}
         <div className="px-6 py-6 sm:px-8 sm:py-8">
           {submitted ? (
-            <div className="flex flex-col items-center justify-center py-8 text-center">
+            <div role="status" aria-live="polite" className="flex flex-col items-center justify-center py-8 text-center">
               <div className="mb-6 flex h-20 w-20 items-center justify-center rounded-2xl icon-gold gold-glow-md">
                 <CheckCircle2 className="h-10 w-10 text-black" strokeWidth={1.5} />
               </div>

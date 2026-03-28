@@ -671,3 +671,40 @@ img { transition: opacity 0.3s ease; }
 .animate-modalSlideUp {
   animation: modalSlideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
+
+/* =======================================================
+   ACCESSIBILITY — Reduced Motion
+   ======================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .glow-pulse,
+  .hero-entrance,
+  .hero-entrance-scale,
+  .hero-line,
+  .float-subtle,
+  .gold-line-animated,
+  .gradient-border-card,
+  .animated-mesh {
+    animation: none !important;
+  }
+  .marquee-track {
+    animation: none !important;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .reveal-stagger > * {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .gradient-text-gold {
+    animation: none !important;
+  }
+  * {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

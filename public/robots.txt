@@ -1,7 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /_next/
-Disallow: /api/
-
-Sitemap: https://nyaysevak.com/sitemap.xml
-Host: https://nyaysevak.com

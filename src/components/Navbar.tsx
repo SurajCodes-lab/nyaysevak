@@ -94,7 +94,9 @@ export default function Navbar() {
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className="relative z-50 flex h-10 w-10 flex-col items-center justify-center gap-1.5 lg:hidden"
-            aria-label="Toggle menu"
+            aria-label="Toggle navigation menu"
+            aria-expanded={mobileOpen}
+            aria-controls="mobile-menu"
           >
             <span className={`h-0.5 w-6 rounded-full transition-all duration-300 ${mobileOpen ? "bg-gold translate-y-2 rotate-45" : "bg-gold"}`} />
             <span className={`h-0.5 w-6 rounded-full transition-all duration-300 ${mobileOpen ? "bg-gold opacity-0 scale-0" : "bg-gold"}`} />
@@ -105,6 +107,7 @@ export default function Navbar() {
 
       {/* Mobile Menu — dramatic full-screen */}
       <div
+        id="mobile-menu"
         className={`fixed inset-0 z-40 bg-dark-deep/95 backdrop-blur-2xl transition-all duration-500 lg:hidden ${
           mobileOpen ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
