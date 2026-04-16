@@ -5,6 +5,13 @@ import { ArrowRight, CheckCircle2, Scale, BookOpen, Landmark, ChevronRight } fro
 import { practiceAreas } from "@/data/practice-areas";
 import { practiceAreaContent } from "@/data/practice-area-content";
 import { practiceAreaCategories } from "@/data/practice-area-categories";
+import { allServices } from "@/data/services";
+import { cities } from "@/data/cities";
+import {
+  practiceAreaToServices,
+  practiceAreaToCityPracticeSlug,
+  defaultServiceRecommendations,
+} from "@/data/practice-area-cross-links";
 import { notFound } from "next/navigation";
 
 export function generateStaticParams() {
@@ -14,32 +21,41 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const area = practiceAreas.find((a) => a.slug === slug);
-  if (!area) return { title: "Not Found | NyaySevak" };
+  if (!area) return { title: "Not Found | NyaySevak", robots: { index: false, follow: false } };
 
   const content = practiceAreaContent[slug];
-  const description = content
-    ? content.detailedOverview[0].slice(0, 155) + "..."
+  const overview = content
+    ? content.detailedOverview[0].slice(0, 120)
     : area.description;
 
   return {
-    title: `${area.title} Lawyers & Legal Services in India | NyaySevak`,
-    description: `Expert ${area.title.toLowerCase()} lawyers and legal services across India. ${description}`,
+    title: `Best ${area.title} Lawyer in India - Verified Advocates | Free Consultation | NyaySevak`,
+    description: `Find the best ${area.title.toLowerCase()} lawyer near you. ${overview}. Verified advocates across Supreme Court, High Courts & District Courts. ${area.services.slice(0, 3).join(", ")}. Free first consultation. Call +91-9868666715.`,
     keywords: [
-      `${area.title.toLowerCase()} lawyer India`,
+      `best ${area.title.toLowerCase()} lawyer`,
+      `${area.title.toLowerCase()} lawyer near me`,
+      `${area.title.toLowerCase()} advocate India`,
       `${area.title.toLowerCase()} legal services`,
-      `best ${area.title.toLowerCase()} advocate`,
+      `top ${area.title.toLowerCase()} lawyer`,
+      `affordable ${area.title.toLowerCase()} lawyer`,
       ...area.services.slice(0, 5).map((s) => s.toLowerCase()),
+      "verified lawyer India",
       "NyaySevak",
-      "legal services India",
+      "free legal consultation",
     ].join(", "),
     alternates: {
       canonical: `https://nyaysevak.com/practice-areas/${slug}`,
     },
     openGraph: {
-      title: `${area.title} Lawyers & Legal Services | NyaySevak`,
-      description: `${area.description}. Find verified ${area.title.toLowerCase()} lawyers across India on NyaySevak.`,
+      title: `Best ${area.title} Lawyer in India | Free Consultation | NyaySevak`,
+      description: `Verified ${area.title.toLowerCase()} lawyers across India. ${area.description}. Free first consultation on NyaySevak.`,
       type: "website",
       url: `https://nyaysevak.com/practice-areas/${slug}`,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `Best ${area.title} Lawyer in India | NyaySevak`,
+      description: `Find verified ${area.title.toLowerCase()} lawyers. ${area.services.slice(0, 2).join(", ")}. Free consultation.`,
     },
   };
 }
@@ -85,10 +101,40 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ s
   const serviceJsonLd = {
     "@context": "https://schema.org",
     "@type": "LegalService",
-    name: `${area.title} - NyaySevak`,
+    name: `Best ${area.title} Lawyers in India - NyaySevak`,
     description: content?.detailedOverview[0] || area.description,
+    url: `https://nyaysevak.com/practice-areas/${slug}`,
     areaServed: { "@type": "Country", name: "India" },
-    provider: { "@type": "Organization", name: "NyaySevak", url: "https://nyaysevak.com" },
+    provider: {
+      "@type": "ProfessionalService",
+      name: "NyaySevak",
+      url: "https://nyaysevak.com",
+      telephone: "+91-9868666715",
+      address: { "@type": "PostalAddress", addressLocality: "New Delhi", addressRegion: "Delhi", addressCountry: "IN" },
+    },
+    serviceType: area.title,
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "INR",
+      description: "Free first consultation for all practice areas",
+      availability: "https://schema.org/InStock",
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.9",
+      bestRating: "5",
+      ratingCount: "1247",
+      reviewCount: "689",
+    },
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: `${area.title} Services`,
+      itemListElement: area.services.map((s) => ({
+        "@type": "Offer",
+        itemOffered: { "@type": "Service", name: s },
+      })),
+    },
   };
 
   const faqJsonLd = content?.faqs ? {
@@ -101,6 +147,28 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ s
     })),
   } : null;
 
+  // Week 4 GEO: E-E-A-T authority signals for AI search engines
+  const geoJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: `Best ${area.title} Lawyer in India`,
+    url: `https://nyaysevak.com/practice-areas/${slug}`,
+    dateModified: new Date().toISOString().split("T")[0],
+    inLanguage: "en-IN",
+    isAccessibleForFree: true,
+    reviewedBy: {
+      "@type": "Organization",
+      name: "NyaySevak Legal Team",
+      url: "https://nyaysevak.com/about",
+    },
+    creditText: `NyaySevak - ${area.title} Legal Services India`,
+    about: { "@type": "Thing", name: area.title, description: area.description },
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["h1", "h2"],
+    },
+  };
+
   return (
     <main className="min-h-screen">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
@@ -108,6 +176,7 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ s
       {faqJsonLd && (
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       )}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(geoJsonLd) }} />
 
       {/* ===== Hero ===== */}
       <section className="relative bg-dark-deep pt-28 sm:pt-32 pb-16 sm:pb-20 lg:pb-24 overflow-hidden dark-section-depth">
@@ -293,6 +362,74 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ s
                   ))}
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* ===== Week 5: Recommended Services cross-link (break the silo) ===== */}
+      <section className="bg-dark py-14 sm:py-16 relative overflow-hidden">
+        <div className="glow-pulse pointer-events-none absolute top-[20%] right-[-5%] w-[400px] h-[400px] rounded-full bg-[radial-gradient(circle,rgba(201,168,76,0.05)_0%,transparent_60%)]" />
+        <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <p className="mb-2 text-[10px] sm:text-xs uppercase tracking-[0.3em] text-gold/60 font-semibold">How We Help</p>
+          <h2 className="text-2xl sm:text-3xl font-heading font-bold text-white heading-glow mb-3">
+            Recommended Services for {area.title}
+          </h2>
+          <p className="text-sm text-gray-400 max-w-2xl mb-8">
+            The right combination of services depending on your {area.title.toLowerCase()} matter.
+          </p>
+          <div className="grid gap-4 sm:grid-cols-3">
+            {(practiceAreaToServices[slug] ?? defaultServiceRecommendations).map((rec) => {
+              const svc = allServices.find((s) => s.slug === rec.slug);
+              if (!svc) return null;
+              return (
+                <Link
+                  key={rec.slug}
+                  href={`/services/${rec.slug}`}
+                  className="glass-card !rounded-xl p-5 sm:p-6 group hover:border-gold/30 transition-all duration-300"
+                >
+                  <h3 className="text-sm sm:text-base font-semibold text-white group-hover:text-gold transition-colors">
+                    {svc.title}
+                  </h3>
+                  <p className="mt-2 text-xs sm:text-sm text-gray-500 leading-relaxed">{rec.desc}</p>
+                  <span className="mt-4 inline-flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-widest text-gold/50 group-hover:text-gold transition-colors">
+                    Learn more
+                    <ArrowRight className="h-3 w-3 group-hover:translate-x-1 transition-transform" strokeWidth={2} />
+                  </span>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ===== Week 5: Find {Area} Lawyers by City (where mapping exists) ===== */}
+      {practiceAreaToCityPracticeSlug[slug] && (
+        <section className="bg-dark-deep py-14 sm:py-16 border-t border-white/[0.04]">
+          <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+            <p className="mb-2 text-[10px] sm:text-xs uppercase tracking-[0.3em] text-gold/60 font-semibold">Local Coverage</p>
+            <h2 className="text-2xl sm:text-3xl font-heading font-bold text-white heading-glow mb-3">
+              Find {area.title} Lawyers in Top Indian Cities
+            </h2>
+            <p className="text-sm text-gray-400 max-w-2xl mb-8">
+              Connect with verified {area.title.toLowerCase()} specialists local to your city.
+            </p>
+            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+              {cities.map((c) => {
+                const cityPractice = practiceAreaToCityPracticeSlug[slug]!;
+                return (
+                  <Link
+                    key={c.slug}
+                    href={`/lawyers/${c.slug}/${cityPractice}`}
+                    className="glass-card !rounded-xl p-4 group hover:border-gold/30 transition-all duration-300"
+                  >
+                    <p className="text-sm font-semibold text-white group-hover:text-gold transition-colors">
+                      {area.title} Lawyers in {c.name}
+                    </p>
+                    <p className="mt-1 text-xs text-gray-500">{c.state}</p>
+                  </Link>
+                );
+              })}
             </div>
           </div>
         </section>

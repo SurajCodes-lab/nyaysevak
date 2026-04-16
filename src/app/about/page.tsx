@@ -5,25 +5,36 @@ import ContactButton from "@/components/ContactButton";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About NyaySevak - India's First Complete Legal Ecosystem | Features & Platform",
+  title: "About NyaySevak - India's #1 Legal Services Platform | Verified Lawyers Across All Courts",
   description:
-    "Learn about NyaySevak's vision, mission, and platform features. India's premier legal services platform with verified lawyer directory, service booking, legal guides, court information, and WhatsApp integration. Pan-India coverage across Supreme Court, High Courts, District Courts, Tribunals & Arbitration centres.",
+    "NyaySevak is India's most trusted legal platform connecting you with verified lawyers across Supreme Court, 25 High Courts, 700+ District Courts & all Tribunals. 29 practice areas, transparent pricing, free first consultation. Serving individuals & businesses pan-India.",
   keywords:
-    "about NyaySevak, legal services India, legal ecosystem India, legal platform vision, legal services mission, lawyer directory, service booking, legal guides, court information, WhatsApp legal support",
+    "about NyaySevak, best legal services India, trusted lawyer platform, verified lawyer directory India, legal services platform, online legal consultation India, find lawyer near me, hire advocate online, pan-India legal coverage",
   alternates: { canonical: "https://nyaysevak.com/about" },
-  openGraph: { url: "https://nyaysevak.com/about" },
+  openGraph: {
+    title: "About NyaySevak - India's Most Trusted Legal Services Platform",
+    description: "Verified lawyers across all courts in India. 29 practice areas. Free first consultation.",
+    url: "https://nyaysevak.com/about",
+    type: "website",
+  },
 };
 
 const aboutPageJsonLd = {
   "@context": "https://schema.org",
   "@type": "AboutPage",
   "@id": "https://nyaysevak.com/about/#aboutpage",
-  name: "About NyaySevak",
+  name: "About NyaySevak - India's #1 Legal Services Platform",
   description:
-    "India's first complete legal ecosystem connecting citizens, businesses, and legal professionals across the entire Indian judicial system.",
+    "India's first complete legal ecosystem connecting citizens, businesses, and legal professionals across the entire Indian judicial system. Verified lawyers across Supreme Court, 25 High Courts, 700+ District Courts & all Tribunals.",
   url: "https://nyaysevak.com/about",
   mainEntity: { "@id": "https://nyaysevak.com/#organization" },
   isPartOf: { "@id": "https://nyaysevak.com/#website" },
+  speakable: {
+    "@type": "SpeakableSpecification",
+    cssSelector: ["h1", "h2", ".vision-text"],
+  },
+  dateModified: new Date().toISOString().split("T")[0],
+  inLanguage: "en-IN",
 };
 
 const breadcrumbJsonLd = {

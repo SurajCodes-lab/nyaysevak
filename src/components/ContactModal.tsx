@@ -7,6 +7,7 @@ import {
 } from "lucide-react";
 import { useContactModal } from "@/context/ContactModalContext";
 import { submitToSheet } from "@/lib/submitToSheet";
+import { trackContactFormSubmit } from "@/lib/analytics";
 
 const legalIssueOptions = [
   "Property Dispute",
@@ -63,6 +64,7 @@ export default function ContactModal() {
     setLoading(true);
     try {
       await submitToSheet(formData);
+      trackContactFormSubmit("modal");
       setSubmitted(true);
       setFormData({ name: "", phone: "", city: "", legalIssue: "", description: "" });
       setTimeout(() => {

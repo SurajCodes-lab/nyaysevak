@@ -2,16 +2,15 @@ import type { Metadata } from "next";
 import Platform from "@/components/Platform";
 
 export const metadata: Metadata = {
-  title: "How NyaySevak Works | B2B & B2C Legal Services Platform India",
+  title: "How to Hire a Lawyer Online in India - Step by Step | NyaySevak Platform",
   description:
-    "Discover how NyaySevak's dual B2B and B2C legal platform works. Connect with verified lawyers, book consultations, and resolve legal matters across every court and tribunal in India. Serving individuals, families, startups, corporates, and law firms.",
+    "Learn how to hire a verified lawyer online in India through NyaySevak. Simple 4-step process: describe your case, get matched with verified advocates, book free consultation, proceed with representation. B2B & B2C legal services for individuals, startups & corporates.",
   keywords:
-    "legal services platform India, B2B legal services, B2C legal services, online lawyer consultation, hire lawyer India, legal ecosystem, court representation India, NyaySevak, how to hire lawyer online",
+    "how to hire lawyer online India, how to find lawyer near me, online lawyer consultation process, best legal services platform India, B2B legal services, B2C legal services, hire advocate online, lawyer booking platform India, NyaySevak platform",
   alternates: { canonical: "https://nyaysevak.com/platform" },
   openGraph: {
-    title: "How NyaySevak Works | India's First Complete Legal Ecosystem",
-    description:
-      "One platform for every legal need. B2C services for individuals and B2B solutions for businesses — covering Supreme Court, High Courts, District Courts, Tribunals, and Arbitration across India.",
+    title: "How to Hire a Lawyer Online in India | NyaySevak",
+    description: "Simple 4-step process to find & hire verified lawyers. Free first consultation. B2B + B2C legal services across all courts in India.",
     type: "website",
     url: "https://nyaysevak.com/platform",
   },

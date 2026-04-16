@@ -26,20 +26,33 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const feature = platformFeatures.find((f) => f.slug === slug);
-  if (!feature) return { title: "Not Found | NyaySevak" };
+  if (!feature) return { title: "Not Found | NyaySevak", robots: { index: false, follow: false } };
 
   return {
-    title: `${feature.title} - Platform Feature | NyaySevak India`,
-    description: `${feature.description} ${feature.bullets.join(". ")}. Available on NyaySevak — India's first complete legal ecosystem.`,
-    keywords: `${feature.title.toLowerCase()}, NyaySevak feature, legal platform India`,
+    title: `${feature.title} - Find Best Lawyers in India | NyaySevak Platform`,
+    description: `${feature.description} ${feature.bullets.join(". ")}. India's most advanced legal platform with verified lawyers across all courts. Free first consultation.`,
+    keywords: [
+      feature.title.toLowerCase(),
+      `best ${feature.title.toLowerCase()} India`,
+      "find lawyer India",
+      "verified lawyer platform",
+      "legal services platform India",
+      "NyaySevak",
+      "free legal consultation",
+    ].join(", "),
     alternates: {
       canonical: `https://nyaysevak.com/features/${slug}`,
     },
     openGraph: {
-      title: `${feature.title} | NyaySevak Platform Feature`,
-      description: feature.description,
+      title: `${feature.title} - India's Best Legal Platform | NyaySevak`,
+      description: `${feature.description}. Free first consultation with verified lawyers.`,
       type: "website",
       url: `https://nyaysevak.com/features/${slug}`,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${feature.title} | NyaySevak`,
+      description: feature.description,
     },
   };
 }

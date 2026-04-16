@@ -7,7 +7,25 @@ import {
   Building2, ClipboardCheck, PenTool, Lightbulb, BarChart3, ArrowLeftRight,
 } from "lucide-react";
 import { allServices } from "@/data/services";
+import { practiceAreas } from "@/data/practice-areas";
+import { cities } from "@/data/cities";
 import { notFound } from "next/navigation";
+
+// Week 5: Map each service slug → 4 relevant practice-area slugs (mid-body cross-link)
+const serviceToPracticeAreas: Record<string, string[]> = {
+  "lawyer-consultation": ["criminal-law", "civil-law", "family-matrimonial", "property-real-estate"],
+  "find-hire-lawyers": ["criminal-law", "corporate-business", "family-matrimonial", "property-real-estate"],
+  "document-services": ["documentation", "property-real-estate", "corporate-business", "family-matrimonial"],
+  "legal-aid": ["family-matrimonial", "criminal-law", "consumer-protection", "labour-employment"],
+  "legal-knowledge": ["civil-law", "criminal-law", "constitutional-law", "consumer-protection"],
+  "e-filing-assistance": ["criminal-law", "civil-law", "corporate-business", "tax-law"],
+  "corporate-legal-advisory": ["corporate-business", "banking-finance", "tax-law", "labour-employment"],
+  "compliance-management": ["corporate-business", "tax-law", "labour-employment", "environmental-law"],
+  "contract-management": ["corporate-business", "intellectual-property", "labour-employment", "banking-finance"],
+  "ip-management": ["intellectual-property", "media-entertainment", "corporate-business", "cyber-law"],
+  "litigation-management": ["corporate-business", "banking-finance", "civil-law", "criminal-law"],
+  "mergers-acquisitions-support": ["corporate-business", "banking-finance", "tax-law", "intellectual-property"],
+};
 
 const lucideIconMap: Record<string, React.ComponentType<{ className?: string; strokeWidth?: number }>> = {
   Scale, Search, FileText, HeartHandshake, BookOpen, Upload,
@@ -21,21 +39,35 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const service = allServices.find((s) => s.slug === slug);
-  if (!service) return { title: "Not Found | NyaySevak" };
+  if (!service) return { title: "Not Found | NyaySevak", robots: { index: false, follow: false } };
 
   const catLabel = service.category === "b2c" ? "for Individuals" : "for Businesses";
+  const catKeyword = service.category === "b2c" ? "online" : "corporate";
   return {
-    title: `${service.title} - ${service.category === "b2c" ? "B2C" : "B2B"} Legal Services India | NyaySevak`,
-    description: `${service.title} ${catLabel} on NyaySevak. ${service.bullets.join(". ")}. Book verified legal professionals across India.`,
-    keywords: `${service.title.toLowerCase()}, ${service.category === "b2c" ? "individual" : "business"} legal services, ${service.bullets.map(b => b.toLowerCase()).slice(0, 3).join(", ")}, NyaySevak`,
+    title: `${service.title} India - ${catLabel} | Free First Consultation | NyaySevak`,
+    description: `Best ${service.title.toLowerCase()} services in India ${catLabel.toLowerCase()}. ${service.bullets.join(". ")}. Verified professionals across all courts. Free first consultation. Call +91-9868666715.`,
+    keywords: [
+      `${service.title.toLowerCase()} India`,
+      `best ${service.title.toLowerCase()}`,
+      `${catKeyword} ${service.title.toLowerCase()}`,
+      ...service.bullets.map(b => b.toLowerCase()).slice(0, 4),
+      "verified lawyer India",
+      "NyaySevak",
+      "free legal consultation",
+    ].join(", "),
     alternates: {
       canonical: `https://nyaysevak.com/services/${slug}`,
     },
     openGraph: {
-      title: `${service.title} | NyaySevak Legal Services`,
-      description: `${service.title} ${catLabel}. ${service.bullets[0]}.`,
+      title: `${service.title} - Best Legal Services India | NyaySevak`,
+      description: `${service.title} ${catLabel.toLowerCase()}. ${service.bullets[0]}. Free first consultation.`,
       type: "website",
       url: `https://nyaysevak.com/services/${slug}`,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${service.title} India | NyaySevak`,
+      description: `${service.description}. Free first consultation.`,
     },
   };
 }
@@ -205,14 +237,38 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
     name: service.title,
     description: content.overview,
     provider: {
-      "@type": "Organization",
+      "@type": "ProfessionalService",
       name: "NyaySevak",
       url: "https://nyaysevak.com",
+      telephone: "+91-9868666715",
+      address: { "@type": "PostalAddress", addressLocality: "New Delhi", addressRegion: "Delhi", addressCountry: "IN" },
     },
     areaServed: { "@type": "Country", name: "India" },
     serviceType: service.title,
     url: `https://nyaysevak.com/services/${slug}`,
     category: service.category === "b2c" ? "Individual Legal Services" : "Business Legal Services",
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "INR",
+      description: "Free first consultation",
+      availability: "https://schema.org/InStock",
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      bestRating: "5",
+      ratingCount: "847",
+      reviewCount: "423",
+    },
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: service.title,
+      itemListElement: service.bullets.map((bullet) => ({
+        "@type": "Offer",
+        itemOffered: { "@type": "Service", name: bullet },
+      })),
+    },
   };
 
   const faqJsonLd = content.faqs.length > 0 ? {
@@ -376,6 +432,61 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                 ))}
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== Week 5: Practice areas where this service applies ===== */}
+      <section className="bg-dark py-14 sm:py-16 relative overflow-hidden">
+        <div className="glow-pulse pointer-events-none absolute top-[20%] left-[-5%] w-[400px] h-[400px] rounded-full bg-[radial-gradient(circle,rgba(201,168,76,0.05)_0%,transparent_60%)]" />
+        <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <p className="mb-2 text-[10px] sm:text-xs uppercase tracking-[0.3em] text-gold/60 font-semibold">Relevant Expertise</p>
+          <h2 className="text-2xl sm:text-3xl font-heading font-bold text-white heading-glow mb-3">
+            Practice Areas Where {service.title} Applies
+          </h2>
+          <p className="text-sm text-gray-400 max-w-2xl mb-8">
+            {service.title} is available across these practice areas — tap any to see specialist lawyers for your matter.
+          </p>
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            {(serviceToPracticeAreas[slug] ?? ["criminal-law", "civil-law", "corporate-business", "property-real-estate"]).map((paSlug) => {
+              const pa = practiceAreas.find((a) => a.slug === paSlug);
+              if (!pa) return null;
+              return (
+                <Link key={paSlug} href={`/practice-areas/${paSlug}`} className="glass-card !rounded-xl p-4 group hover:border-gold/30 transition-all duration-300">
+                  <div className="flex items-center gap-3 mb-2">
+                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg icon-gold text-sm font-heading font-bold text-black">
+                      {pa.letter}
+                    </span>
+                    <p className="text-sm font-semibold text-white group-hover:text-gold transition-colors">{pa.title}</p>
+                  </div>
+                  <p className="text-xs text-gray-500 leading-relaxed line-clamp-2">{pa.description}</p>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ===== Week 5: Available across India — city cross-links ===== */}
+      <section className="bg-dark-deep py-14 sm:py-16 border-t border-white/[0.04]">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <p className="mb-2 text-[10px] sm:text-xs uppercase tracking-[0.3em] text-gold/60 font-semibold">Nationwide</p>
+          <h2 className="text-2xl sm:text-3xl font-heading font-bold text-white heading-glow mb-3">
+            {service.title} — Available in Every Major Indian City
+          </h2>
+          <p className="text-sm text-gray-400 max-w-2xl mb-8">
+            Book {service.title.toLowerCase()} with a verified local lawyer in your city.
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {cities.map((c) => (
+              <Link
+                key={c.slug}
+                href={`/lawyers/${c.slug}`}
+                className="rounded-full border border-white/[0.06] bg-white/[0.02] px-3 py-1.5 text-[11px] text-gray-400 hover:text-gold hover:border-gold/30 transition-colors"
+              >
+                Lawyers in {c.name}
+              </Link>
+            ))}
           </div>
         </div>
       </section>

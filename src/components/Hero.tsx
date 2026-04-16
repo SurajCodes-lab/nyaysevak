@@ -79,6 +79,7 @@ export default function Hero() {
         {/* CTAs */}
         <div className="hero-entrance hero-delay-5 flex flex-col sm:flex-row items-center gap-4 sm:gap-5">
           <ContactButton
+            source="hero"
             className="btn-gold-shine inline-flex items-center justify-center gap-2.5 rounded-xl bg-gradient-to-r from-gold to-gold-light px-8 py-4 sm:px-10 sm:py-5 text-sm font-semibold uppercase tracking-widest text-black transition-all duration-300 cursor-pointer"
           >
             Talk to a Lawyer Today

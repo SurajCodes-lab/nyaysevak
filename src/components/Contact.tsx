@@ -8,6 +8,7 @@ import {
   Clock, Star, Loader2,
 } from "lucide-react";
 import { submitToSheet } from "@/lib/submitToSheet";
+import { trackContactFormSubmit, trackPhoneClick } from "@/lib/analytics";
 
 const processSteps = [
   { Icon: MessageSquare, label: "Tell us your concern", desc: "Share your legal matter in confidence" },
@@ -45,6 +46,7 @@ export default function Contact() {
     setLoading(true);
     try {
       await submitToSheet(formData);
+      trackContactFormSubmit("contact_section");
       setSubmitted(true);
       setFormData({ name: "", phone: "", city: "", legalIssue: "", description: "" });
       setTimeout(() => setSubmitted(false), 3000);
@@ -140,7 +142,7 @@ export default function Contact() {
 
             {/* Compact contact info */}
             <div className="mt-8 sm:mt-10 pt-6 border-t border-white/[0.08] space-y-3.5">
-              <a href="tel:+91 98686 66715" className="flex items-center gap-3 group">
+              <a href="tel:+919868666715" onClick={() => trackPhoneClick()} className="flex items-center gap-3 group">
                 <div className="h-9 w-9 rounded-lg icon-box-dark flex items-center justify-center shrink-0">
                   <Phone className="h-4 w-4 text-gold/70" strokeWidth={1.5} />
                 </div>

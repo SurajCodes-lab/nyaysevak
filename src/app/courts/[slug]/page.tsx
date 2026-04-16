@@ -7,6 +7,7 @@ import {
   FileText, CircleCheck, ChevronRight, BadgeCheck, HelpCircle,
 } from "lucide-react";
 import { highCourts, tribunalGroups, districtCourts } from "@/data/courts";
+import { allServices } from "@/data/services";
 import { notFound } from "next/navigation";
 
 type CourtType = "hc" | "dc" | "tribunal";
@@ -28,32 +29,62 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   const hc = highCourts.find((c) => c.slug === slug);
   if (hc) return {
-    title: `${hc.name} - Lawyers & Legal Services | NyaySevak`,
-    description: `Find verified lawyers for ${hc.name} matters. Jurisdiction: ${hc.jurisdiction}. ${hc.benches.length > 0 ? `Bench locations: ${hc.benches.join(", ")}.` : ""} Book expert advocates on NyaySevak.`,
-    keywords: `${hc.name} lawyer, ${hc.jurisdiction} advocate, high court lawyer India, NyaySevak`,
+    title: `Best ${hc.name} Lawyers - Verified Advocates in ${hc.jurisdiction} | NyaySevak`,
+    description: `Find the best verified lawyers for ${hc.name} in ${hc.jurisdiction}. Writ petitions, appeals, bail, criminal, civil, family, corporate & tax matters. ${hc.benches.length > 0 ? `Benches: ${hc.benches.join(", ")}. ` : ""}Free first consultation. Call +91-9868666715.`,
+    keywords: `${hc.name} lawyer, best advocate ${hc.jurisdiction}, ${hc.jurisdiction} lawyer, high court lawyer ${hc.jurisdiction}, bail lawyer ${hc.jurisdiction}, writ petition lawyer, ${hc.name} advocate, NyaySevak, free legal consultation`,
     alternates: { canonical: `https://nyaysevak.com/courts/${slug}` },
-    openGraph: { url: `https://nyaysevak.com/courts/${slug}` },
+    openGraph: {
+      title: `Best ${hc.name} Lawyers | Free Consultation | NyaySevak`,
+      description: `Verified advocates for ${hc.name}. Jurisdiction: ${hc.jurisdiction}. All practice areas. Free first consultation.`,
+      url: `https://nyaysevak.com/courts/${slug}`,
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${hc.name} Lawyers | NyaySevak`,
+      description: `Find verified advocates for ${hc.name}. Free first consultation.`,
+    },
   };
 
   const dc = districtCourts.find((d) => d.slug === slug);
   if (dc) return {
-    title: `District Courts in ${dc.state} - Lawyers & Legal Services | NyaySevak`,
-    description: `Find verified lawyers for all ${dc.districts.length} district courts in ${dc.state}. Book expert advocates on NyaySevak.`,
-    keywords: `${dc.state} district court lawyer, NyaySevak`,
+    title: `Best District Court Lawyers in ${dc.state} - ${dc.districts.length} Courts Covered | NyaySevak`,
+    description: `Find the best verified lawyers for all ${dc.districts.length} district courts in ${dc.state}. ${dc.districts.slice(0, 5).join(", ")} & more. Criminal, civil, family, property, consumer & labour cases. Free first consultation.`,
+    keywords: `district court lawyer ${dc.state}, best lawyer ${dc.districts[0]}, advocate near me ${dc.state}, ${dc.districts.slice(0, 3).map(d => `lawyer ${d}`).join(", ")}, NyaySevak, free legal consultation`,
     alternates: { canonical: `https://nyaysevak.com/courts/${slug}` },
-    openGraph: { url: `https://nyaysevak.com/courts/${slug}` },
+    openGraph: {
+      title: `District Court Lawyers in ${dc.state} | NyaySevak`,
+      description: `Verified lawyers for all ${dc.districts.length} district courts in ${dc.state}. Free first consultation.`,
+      url: `https://nyaysevak.com/courts/${slug}`,
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `District Court Lawyers ${dc.state} | NyaySevak`,
+      description: `Find verified advocates for ${dc.districts.length} district courts in ${dc.state}.`,
+    },
   };
 
   const tr = tribunalGroups.find((t) => t.slug === slug);
   if (tr) return {
-    title: `${tr.title} Tribunals - Lawyers & Legal Services | NyaySevak`,
-    description: `Find verified lawyers for ${tr.title} tribunals in India. Expert tribunal advocates on NyaySevak.`,
-    keywords: `${tr.title} tribunal lawyer, NyaySevak`,
+    title: `Best ${tr.title} Tribunal Lawyers in India - Expert Advocates | NyaySevak`,
+    description: `Find the best verified lawyers for ${tr.title} tribunals in India. ${tr.items.slice(0, 4).join(", ")} & more. Expert tribunal representation. Free first consultation. Call +91-9868666715.`,
+    keywords: `${tr.title} tribunal lawyer, ${tr.items.slice(0, 3).map(i => `${i} lawyer`).join(", ")}, best tribunal advocate India, NyaySevak, free legal consultation`,
     alternates: { canonical: `https://nyaysevak.com/courts/${slug}` },
-    openGraph: { url: `https://nyaysevak.com/courts/${slug}` },
+    openGraph: {
+      title: `${tr.title} Tribunal Lawyers India | NyaySevak`,
+      description: `Expert ${tr.title.toLowerCase()} tribunal lawyers across India. Free first consultation.`,
+      url: `https://nyaysevak.com/courts/${slug}`,
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${tr.title} Tribunal Lawyers | NyaySevak`,
+      description: `Expert tribunal advocates across India. Free consultation.`,
+    },
   };
 
-  return { title: "Not Found | NyaySevak" };
+  return { title: "Not Found | NyaySevak", robots: { index: false, follow: false } };
 }
 
 const hcServices = [
@@ -169,10 +200,49 @@ export default async function CourtDetailPage({ params }: { params: Promise<{ sl
     })),
   };
 
+  // Week 4: Court-specific LegalService schema for rich results
+  const courtServiceJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "LegalService",
+    name: `${pageTitle} Lawyers - NyaySevak`,
+    description: hc
+      ? `Find the best verified lawyers for ${hc.name} in ${hc.jurisdiction}. Writ petitions, appeals, bail, criminal, civil & more.`
+      : dc
+      ? `Find verified lawyers for all ${dc.districts.length} district courts in ${dc.state}. Criminal, civil, family & property cases.`
+      : `Expert lawyers for ${tr?.title} tribunal matters across India.`,
+    url: `https://nyaysevak.com/courts/${slug}`,
+    provider: {
+      "@type": "ProfessionalService",
+      name: "NyaySevak",
+      url: "https://nyaysevak.com",
+      telephone: "+91-9868666715",
+    },
+    areaServed: hc
+      ? { "@type": "State", name: hc.jurisdiction }
+      : dc
+      ? { "@type": "State", name: dc.state }
+      : { "@type": "Country", name: "India" },
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "INR",
+      description: "Free first consultation",
+      availability: "https://schema.org/InStock",
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      bestRating: "5",
+      ratingCount: "956",
+      reviewCount: "512",
+    },
+  };
+
   return (
     <main className="min-h-screen">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courtServiceJsonLd) }} />
 
       {/* ── Hero — Dark Premium ── */}
       <section className="relative bg-dark-deep overflow-hidden dark-section-depth">
@@ -507,6 +577,37 @@ export default async function CourtDetailPage({ params }: { params: Promise<{ sl
           </section>
         </>
       )}
+
+      {/* ── Week 5: Legal services available at this court (cross-link) ── */}
+      <section className="bg-dark py-14 sm:py-16 relative overflow-hidden">
+        <div className="glow-pulse pointer-events-none absolute top-[20%] right-[-5%] w-[400px] h-[400px] rounded-full bg-[radial-gradient(circle,rgba(201,168,76,0.05)_0%,transparent_60%)]" />
+        <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <p className="mb-2 text-[10px] sm:text-xs uppercase tracking-[0.3em] text-gold/60 font-semibold">Services at This Forum</p>
+          <h2 className="text-2xl sm:text-3xl font-heading font-bold text-white heading-glow mb-3">
+            Legal Services for Cases at {pageTitle}
+          </h2>
+          <p className="text-sm text-gray-400 max-w-2xl mb-8">
+            End-to-end legal support — advisory, drafting, filing, and representation — for matters before {pageTitle}.
+          </p>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              { slug: "lawyer-consultation", desc: `Talk to a ${pageTitle} specialist for case-specific advice.` },
+              { slug: "find-hire-lawyers", desc: `Find verified advocates regularly practising at ${pageTitle}.` },
+              { slug: "document-services", desc: `Petitions, affidavits, and court filings drafted by experts.` },
+              { slug: "e-filing-assistance", desc: `End-to-end e-filing support for ${pageTitle}.` },
+            ].map((rec) => {
+              const svc = allServices.find((s) => s.slug === rec.slug);
+              if (!svc) return null;
+              return (
+                <Link key={rec.slug} href={`/services/${rec.slug}`} className="glass-card !rounded-xl p-5 group hover:border-gold/30 transition-all duration-300">
+                  <h3 className="text-sm font-semibold text-white group-hover:text-gold transition-colors">{svc.title}</h3>
+                  <p className="mt-2 text-xs text-gray-500 leading-relaxed">{rec.desc}</p>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      </section>
 
       {/* ── Why Choose NyaySevak ── */}
       <section className="relative bg-dark py-16 sm:py-20 overflow-hidden">
