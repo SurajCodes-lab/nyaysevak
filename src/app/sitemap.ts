@@ -4,6 +4,8 @@ import { practiceAreas } from "@/data/practice-areas";
 import { highCourts, tribunalGroups, districtCourts } from "@/data/courts";
 import { platformFeatures } from "@/data/features";
 import { cities, cityPracticeSlugs } from "@/data/cities";
+import { articles } from "@/data/insights";
+import { authors } from "@/data/authors";
 import { SITE_URL } from "@/lib/site";
 
 const BASE_URL = SITE_URL;
@@ -31,6 +33,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/disclaimer`, lastModified: legalPageDate, changeFrequency: "yearly", priority: 0.3 },
     // Week 5: Lawyers-by-city hub
     { url: `${BASE_URL}/lawyers`, lastModified: corePageDate, changeFrequency: "weekly", priority: 0.9 },
+    // Week 6: Insights, Glossary, Authors hubs
+    { url: `${BASE_URL}/insights`, lastModified: corePageDate, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${BASE_URL}/legal-glossary`, lastModified: corePageDate, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE_URL}/authors`, lastModified: corePageDate, changeFrequency: "monthly", priority: 0.7 },
   ];
 
   // Service pages — boosted priority, these are high-conversion pages
@@ -98,6 +104,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }))
   );
 
+  // Week 6: Insight articles (long-form pillar content) — high SEO priority
+  const insightPages: MetadataRoute.Sitemap = articles.map((a) => ({
+    url: `${BASE_URL}/insights/${a.slug}`,
+    lastModified: a.dateModified,
+    changeFrequency: "monthly" as const,
+    priority: 0.85,
+  }));
+
+  // Week 6: Author profile pages — E-E-A-T signal
+  const authorPages: MetadataRoute.Sitemap = authors.map((a) => ({
+    url: `${BASE_URL}/authors/${a.slug}`,
+    lastModified: corePageDate,
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  }));
+
   return [
     ...staticPages,
     ...servicePages,
@@ -108,5 +130,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...featurePages,
     ...cityHubPages,
     ...cityPracticePages,
+    ...insightPages,
+    ...authorPages,
   ];
 }

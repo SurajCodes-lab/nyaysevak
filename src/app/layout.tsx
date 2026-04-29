@@ -9,6 +9,7 @@ import ContactModal from "@/components/ContactModal";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import FloatingContactBar from "@/components/FloatingContactBar";
 import { ContactModalProvider } from "@/context/ContactModalContext";
+import { reviews, aggregateRatingValue, aggregateRatingCount } from "@/data/reviews";
 
 const playfair = Playfair_Display({
   variable: "--font-heading",
@@ -219,12 +220,23 @@ const professionalServiceJsonLd = {
   },
   aggregateRating: {
     "@type": "AggregateRating",
-    ratingValue: "4.8",
+    ratingValue: aggregateRatingValue,
     bestRating: "5",
     worstRating: "1",
     ratingCount: "2847",
-    reviewCount: "1523",
+    reviewCount: String(aggregateRatingCount),
   },
+  // Week 7: Named reviews — verifiable, dated, geographic. Stronger signal than
+  // raw AggregateRating; required by Google for legitimate Review-rich-results.
+  review: reviews.map((r) => ({
+    "@type": "Review",
+    author: { "@type": "Person", name: r.reviewerName, address: r.reviewerCity ? { "@type": "PostalAddress", addressLocality: r.reviewerCity } : undefined },
+    reviewRating: { "@type": "Rating", ratingValue: r.rating, bestRating: 5, worstRating: 1 },
+    datePublished: r.datePublished,
+    reviewBody: r.reviewBody,
+    itemReviewed: { "@type": "Service", name: r.serviceCategory },
+    publisher: { "@type": "Organization", name: "NyaySevak" },
+  })),
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",

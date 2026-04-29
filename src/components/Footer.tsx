@@ -30,7 +30,9 @@ const quickLinks = [
   { label: "How It Works", href: "/platform" },
   { label: "Practice Areas", href: "/practice-areas" },
   { label: "Court Coverage", href: "/courts" },
-  { label: "Platform Features", href: "/features" },
+  { label: "Lawyers by City", href: "/lawyers" },
+  { label: "Legal Insights", href: "/insights" },
+  { label: "Legal Glossary", href: "/legal-glossary" },
 ];
 
 // High-traffic practice areas for SEO internal linking
