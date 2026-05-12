@@ -32,27 +32,42 @@ export async function generateMetadata(
   const content = cityPracticeContent[`${citySlug}__${slug}`];
   const url = `${SITE_URL}/lawyers/${citySlug}/${slug}`;
 
-  const title = `Best ${label.title} in ${city.name} - Verified Advocates | Free Consultation | NyaySevak`;
+  // Week 8: title now surfaces "Near You" to capture "near me" search intent.
+  // Keywords expanded to include the term-variant ("advocate"/"attorney") and
+  // ~14 neighbourhoods (was 5) so neighbourhood-specific "near me" queries map.
+  const title = `Best ${label.title} in ${city.name} — Verified Advocates Near You | Free Consultation | NyaySevak`;
   const description = content
     ? `${content.lead.slice(0, 155)}…`
-    : `Find the best ${label.keyword}s in ${city.name}, ${city.state}. Verified advocates for ${label.long.toLowerCase()} matters across ${city.highCourt.name} and district courts. Free first consultation. Call +91-9868666715.`;
+    : `Find the best ${label.keyword}s near you in ${city.name}, ${city.state}. Verified advocates for ${label.long.toLowerCase()} matters across ${city.highCourt.name} and district courts. Free first consultation. Call +91-9868666715.`;
+
+  const cityLower = city.name.toLowerCase();
+  const stateLower = city.state.toLowerCase();
+  const kw = label.keyword;
+  const altKw = kw.replace("lawyer", "advocate");
 
   return {
     title,
     description,
     keywords: [
-      `${label.keyword} in ${city.name.toLowerCase()}`,
-      `best ${label.keyword} ${city.name.toLowerCase()}`,
-      `${label.keyword} near me ${city.name.toLowerCase()}`,
-      `top ${label.keyword} ${city.name.toLowerCase()}`,
-      `${city.name.toLowerCase()} ${label.keyword}`,
-      `${label.title.toLowerCase()} ${city.name.toLowerCase()}`,
-      `${label.short.toLowerCase()} advocate ${city.name.toLowerCase()}`,
-      `${label.keyword} ${city.state.toLowerCase()}`,
-      `affordable ${label.keyword} ${city.name.toLowerCase()}`,
-      `online ${label.keyword} ${city.name.toLowerCase()}`,
-      `${city.highCourt.name.toLowerCase()} ${label.keyword}`,
-      ...city.neighbourhoods.slice(0, 5).map((n) => `${label.keyword} ${n.toLowerCase()}`),
+      `${kw} in ${cityLower}`,
+      `best ${kw} in ${cityLower}`,
+      `${kw} near me`,
+      `${kw} near me ${cityLower}`,
+      `top ${kw} ${cityLower}`,
+      `${cityLower} ${kw}`,
+      `${label.title.toLowerCase()} ${cityLower}`,
+      `${altKw} in ${cityLower}`,
+      `best ${altKw} in ${cityLower}`,
+      `${altKw} near me ${cityLower}`,
+      `${kw} ${stateLower}`,
+      `affordable ${kw} ${cityLower}`,
+      `online ${kw} ${cityLower}`,
+      `free consultation ${kw} ${cityLower}`,
+      `${city.highCourt.name.toLowerCase()} ${kw}`,
+      ...city.neighbourhoods.slice(0, 14).flatMap((n) => [
+        `${kw} ${n.toLowerCase()}`,
+        `${kw} near me ${n.toLowerCase()}`,
+      ]),
       "verified lawyer India",
       "NyaySevak",
       "free legal consultation",

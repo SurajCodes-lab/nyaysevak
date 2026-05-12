@@ -37,6 +37,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/insights`, lastModified: corePageDate, changeFrequency: "weekly", priority: 0.9 },
     { url: `${BASE_URL}/legal-glossary`, lastModified: corePageDate, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE_URL}/authors`, lastModified: corePageDate, changeFrequency: "monthly", priority: 0.7 },
+    // Week 8: intent-rendered landing pages targeting head queries
+    { url: `${BASE_URL}/best-property-lawyers-in-india`, lastModified: corePageDate, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${BASE_URL}/best-divorce-lawyers-in-india`, lastModified: corePageDate, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${BASE_URL}/best-criminal-lawyers-in-india`, lastModified: corePageDate, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${BASE_URL}/free-legal-consultation`, lastModified: corePageDate, changeFrequency: "weekly", priority: 0.9 },
   ];
 
   // Service pages — boosted priority, these are high-conversion pages

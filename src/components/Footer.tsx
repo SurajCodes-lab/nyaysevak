@@ -6,6 +6,7 @@ import { Phone, Mail, MapPin, ArrowRight } from "lucide-react";
 import { practiceAreas } from "@/data/practice-areas";
 import { allServices } from "@/data/services";
 import { highCourts } from "@/data/courts";
+import { practiceAreaKeywordVariants } from "@/data/practice-area-keyword-variants";
 import ContactButton from "./ContactButton";
 import { trackPhoneClick } from "@/lib/analytics";
 
@@ -142,13 +143,22 @@ export default function Footer() {
                 Practice Areas
               </h4>
               <ul className="space-y-2.5">
-                {displayPracticeAreas.map((area) => (
-                  <li key={area.slug}>
-                    <Link href={`/practice-areas/${area.slug}`} className="text-sm text-gray-400 transition-colors duration-200 hover:text-white link-underline">
-                      {area.title}
-                    </Link>
-                  </li>
-                ))}
+                {displayPracticeAreas.map((area) => {
+                  // Week 8: anchor text uses the user-search keyword variant
+                  // ("Property Lawyer", "Divorce Lawyer") instead of the entity
+                  // name ("Property & Real Estate", "Family & Matrimonial").
+                  // This diversifies the anchor-text graph and matches the way
+                  // people actually search.
+                  const variant = practiceAreaKeywordVariants[area.slug];
+                  const anchor = variant?.shortLabel ?? area.title;
+                  return (
+                    <li key={area.slug}>
+                      <Link href={`/practice-areas/${area.slug}`} className="text-sm text-gray-400 transition-colors duration-200 hover:text-white link-underline">
+                        {anchor}
+                      </Link>
+                    </li>
+                  );
+                })}
                 <li className="pt-1">
                   <Link href="/practice-areas" className="inline-flex items-center gap-1.5 text-sm text-gold/70 font-semibold hover:text-gold transition-colors duration-200">
                     View All {practiceAreas.length} Areas

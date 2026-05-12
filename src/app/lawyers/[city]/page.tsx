@@ -16,37 +16,59 @@ export async function generateMetadata({ params }: { params: Promise<{ city: str
   const city = cities.find((c) => c.slug === citySlug);
   if (!city) return { title: "Not Found | NyaySevak", robots: { index: false, follow: false } };
 
-  const title = `Best Lawyers in ${city.name} - Verified Advocates Across Every Practice Area | NyaySevak`;
-  const description = `Find the best verified lawyers in ${city.name}, ${city.state}. Criminal, civil, divorce, property, and corporate advocates. Covering ${city.highCourt.name} and all ${city.name} district courts. Free first consultation.`;
+  // Week 8: title surfaces "Near You" to capture "lawyer near me [city]" intent.
+  // Keywords expanded with the per-practice variants ("criminal lawyer Delhi",
+  // "divorce lawyer Delhi" etc.) and neighbourhood-level near-me variants.
+  const title = `Best Lawyers Near You in ${city.name} — Verified Advocates Across Every Practice Area | NyaySevak`;
+  const description = `Find the best verified lawyers near you in ${city.name}, ${city.state}. Criminal lawyer, civil lawyer, divorce lawyer, property lawyer, corporate lawyer & more. Covering ${city.highCourt.name} and all ${city.name} district courts. Free first consultation.`;
   const url = `${SITE_URL}/lawyers/${citySlug}`;
+  const cityLower = city.name.toLowerCase();
 
   return {
     title,
     description,
     keywords: [
-      `lawyer in ${city.name.toLowerCase()}`,
-      `best lawyer ${city.name.toLowerCase()}`,
-      `advocate ${city.name.toLowerCase()}`,
-      `lawyer near me ${city.name.toLowerCase()}`,
-      `${city.name.toLowerCase()} lawyers`,
-      `${city.name.toLowerCase()} advocate`,
+      `lawyer in ${cityLower}`,
+      `best lawyer ${cityLower}`,
+      `advocate ${cityLower}`,
+      `attorney ${cityLower}`,
+      `lawyer near me`,
+      `lawyer near me ${cityLower}`,
+      `advocate near me ${cityLower}`,
+      `${cityLower} lawyers`,
+      `${cityLower} advocate`,
+      `${cityLower} attorney`,
+      `criminal lawyer ${cityLower}`,
+      `divorce lawyer ${cityLower}`,
+      `property lawyer ${cityLower}`,
+      `corporate lawyer ${cityLower}`,
+      `civil lawyer ${cityLower}`,
+      `cyber crime lawyer ${cityLower}`,
+      `tax lawyer ${cityLower}`,
+      `consumer court lawyer ${cityLower}`,
       `${city.highCourt.name.toLowerCase()} lawyer`,
-      `free legal consultation ${city.name.toLowerCase()}`,
-      ...city.neighbourhoods.slice(0, 6).map((n) => `lawyer ${n.toLowerCase()}`),
+      `${city.highCourt.name.toLowerCase()} advocate`,
+      `free legal consultation ${cityLower}`,
+      `free lawyer consultation ${cityLower}`,
+      `online lawyer consultation ${cityLower}`,
+      ...city.neighbourhoods.slice(0, 14).flatMap((n) => {
+        const nLower = n.toLowerCase();
+        return [`lawyer ${nLower}`, `lawyer near me ${nLower}`, `advocate ${nLower}`];
+      }),
       "verified lawyer India",
       "NyaySevak",
     ].join(", "),
     alternates: { canonical: url },
     openGraph: {
-      title: `Best Lawyers in ${city.name} | Free Consultation | NyaySevak`,
-      description: `Verified advocates across ${city.name}, ${city.state}. Every practice area. Free first consultation.`,
+      title: `Best Lawyers Near You in ${city.name} | Free Consultation | NyaySevak`,
+      description: `Verified advocates near you across ${city.name}, ${city.state}. Every practice area. Free first consultation.`,
       url,
       type: "website",
     },
     twitter: {
       card: "summary_large_image",
-      title: `Best Lawyers in ${city.name} | NyaySevak`,
-      description: `Find verified ${city.name} advocates. Free first consultation.`,
+      title: `Best Lawyers Near You in ${city.name} | NyaySevak`,
+      description: `Find verified ${city.name} lawyers near you. Free first consultation.`,
     },
   };
 }

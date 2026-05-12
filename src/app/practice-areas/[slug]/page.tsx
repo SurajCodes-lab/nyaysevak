@@ -12,6 +12,7 @@ import {
   practiceAreaToCityPracticeSlug,
   defaultServiceRecommendations,
 } from "@/data/practice-area-cross-links";
+import { getVariantsForPractice } from "@/data/practice-area-keyword-variants";
 import { notFound } from "next/navigation";
 
 export function generateStaticParams() {
@@ -28,17 +29,29 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     ? content.detailedOverview[0].slice(0, 120)
     : area.description;
 
+  // Week 8: Use the user-search-vocabulary primary term in title/H1/meta.
+  // Pre-Week-8 titles like "Best Family & Matrimonial Lawyer in India" did
+  // not match how users search ("divorce lawyer"). The primary variant is
+  // the natural search wording; secondary variants populate keywords meta.
+  const v = getVariantsForPractice(slug);
+  const primaryLower = v.primary.toLowerCase();
+
   return {
-    title: `Best ${area.title} Lawyer in India - Verified Advocates | Free Consultation | NyaySevak`,
-    description: `Find the best ${area.title.toLowerCase()} lawyer near you. ${overview}. Verified advocates across Supreme Court, High Courts & District Courts. ${area.services.slice(0, 3).join(", ")}. Free first consultation. Call +91-9868666715.`,
+    title: `Best ${v.primary} in India — Verified Advocates Near You | Free Consultation | NyaySevak`,
+    description: `Find the best ${primaryLower} near you. ${overview}. Verified ${v.variants[1]?.toLowerCase() ?? primaryLower} across Supreme Court, High Courts & District Courts. ${area.services.slice(0, 3).join(", ")}. Free first consultation. Call +91-9868666715.`,
     keywords: [
-      `best ${area.title.toLowerCase()} lawyer`,
-      `${area.title.toLowerCase()} lawyer near me`,
-      `${area.title.toLowerCase()} advocate India`,
-      `${area.title.toLowerCase()} legal services`,
-      `top ${area.title.toLowerCase()} lawyer`,
-      `affordable ${area.title.toLowerCase()} lawyer`,
-      ...area.services.slice(0, 5).map((s) => s.toLowerCase()),
+      ...v.variants.map((vv) => vv.toLowerCase()),
+      `best ${primaryLower}`,
+      `${primaryLower} near me`,
+      `top ${primaryLower}`,
+      `${primaryLower} fees`,
+      `${primaryLower} online`,
+      `affordable ${primaryLower} India`,
+      `${primaryLower} consultation`,
+      `${primaryLower} in Delhi`,
+      `${primaryLower} in Mumbai`,
+      `${primaryLower} in Bangalore`,
+      ...area.services.slice(0, 4).map((s) => s.toLowerCase()),
       "verified lawyer India",
       "NyaySevak",
       "free legal consultation",
@@ -47,15 +60,15 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       canonical: `https://nyaysevak.com/practice-areas/${slug}`,
     },
     openGraph: {
-      title: `Best ${area.title} Lawyer in India | Free Consultation | NyaySevak`,
-      description: `Verified ${area.title.toLowerCase()} lawyers across India. ${area.description}. Free first consultation on NyaySevak.`,
+      title: `Best ${v.primary} in India — Verified Advocates Near You | NyaySevak`,
+      description: `Verified ${primaryLower}s across India. ${area.description}. Free first consultation on NyaySevak.`,
       type: "website",
       url: `https://nyaysevak.com/practice-areas/${slug}`,
     },
     twitter: {
       card: "summary_large_image",
-      title: `Best ${area.title} Lawyer in India | NyaySevak`,
-      description: `Find verified ${area.title.toLowerCase()} lawyers. ${area.services.slice(0, 2).join(", ")}. Free consultation.`,
+      title: `Best ${v.primary} in India | NyaySevak`,
+      description: `Find verified ${primaryLower}s near you. ${area.services.slice(0, 2).join(", ")}. Free consultation.`,
     },
   };
 }
@@ -64,6 +77,12 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ s
   const { slug } = await params;
   const area = practiceAreas.find((a) => a.slug === slug);
   if (!area) notFound();
+
+  // Week 8: pull keyword-variant set so the H1 and intro use the natural
+  // search wording ("Property Lawyer") rather than only the entity name
+  // ("Property & Real Estate"). Practice-area title is still rendered as
+  // a secondary subtitle to preserve the entity context.
+  const variant = getVariantsForPractice(slug);
 
   const content = practiceAreaContent[slug];
   const currentIndex = practiceAreas.findIndex((a) => a.slug === slug);
@@ -204,8 +223,9 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ s
                 <p className="text-[10px] uppercase tracking-[0.3em] text-gold/60">Practice Area</p>
               </div>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-heading font-bold text-white heading-glow tracking-tight">
-                {area.title}
+                Best {variant.primary} in India
               </h1>
+              <p className="mt-2 text-sm sm:text-base text-gold/70 font-semibold uppercase tracking-[0.2em]">{area.title}</p>
               <p className="mt-3 sm:mt-4 text-base sm:text-lg text-gray-400 max-w-2xl leading-relaxed">{area.description}</p>
             </div>
           </div>

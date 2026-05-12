@@ -135,6 +135,40 @@ const homepageFaqJsonLd = {
         text: "NyaySevak is India's most comprehensive legal services platform, covering the Supreme Court, all 25 High Courts, 700+ District Courts, and all Tribunals. Unlike other platforms, NyaySevak offers end-to-end services including lawyer matching, document preparation, e-filing, and court representation across 29 practice areas with transparent pricing.",
       },
     },
+    // Week 8 consolidation: 5 Q&As previously in a separate aeoQAJsonLd FAQPage
+    // are merged here so the page emits exactly one FAQPage block.
+    {
+      "@type": "Question",
+      name: "How can I find a good lawyer near me in India?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Use NyaySevak's verified lawyer directory to find lawyers near you. Search by practice area (criminal, divorce, property, corporate, etc.), court, location, and language. Every lawyer is Bar Council verified with transparent fees. You can compare ratings, reviews, and experience before booking a free first consultation.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is online lawyer consultation legal and safe in India?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, online lawyer consultation is completely legal in India. The Bar Council of India permits advocates to provide consultations via digital means. NyaySevak provides secure, encrypted communication channels (video, audio, and chat) with full attorney-client privilege protection. All lawyers are Bar Council verified.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What types of legal cases does NyaySevak handle?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "NyaySevak handles all types of legal cases across 29 practice areas including criminal law, civil law, family & divorce law, property disputes, corporate law, cyber crime, consumer protection, tax disputes, banking & finance, intellectual property, CBI cases, ED cases, NDPS cases, arbitration, immigration, insurance, environmental law, constitutional law, medical negligence, and more.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How much does it cost to consult a lawyer on NyaySevak?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "NyaySevak offers a free first consultation for all new clients. After that, lawyer fees vary by specialization, experience, and court level. District Court lawyers typically charge ₹5,000-₹25,000 per hearing, High Court lawyers ₹15,000-₹1,00,000, and Supreme Court advocates ₹50,000-₹5,00,000+. All fees are displayed transparently with no hidden charges.",
+      },
+    },
   ],
 };
 
@@ -222,54 +256,11 @@ const geoAuthorityJsonLd = {
   ],
 };
 
-// Week 4 AEO: Additional Q&A targeting voice search and AI answer extraction
-const aeoQAJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "@id": "https://nyaysevak.com/#aeo-faq",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "Which is the best legal services platform in India?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "NyaySevak is India's most comprehensive legal services platform, covering the Supreme Court, all 25 High Courts, 700+ District Courts, and all Tribunals. It offers 29 practice areas with verified lawyers, transparent pricing, and free first consultation — serving both individuals and businesses pan-India.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How can I find a good lawyer near me in India?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Use NyaySevak's verified lawyer directory to find lawyers near you. Search by practice area (criminal, divorce, property, corporate, etc.), court, location, and language. Every lawyer is Bar Council verified with transparent fees. You can compare ratings, reviews, and experience before booking a free first consultation.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Is online lawyer consultation legal and safe in India?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, online lawyer consultation is completely legal in India. The Bar Council of India permits advocates to provide consultations via digital means. NyaySevak provides secure, encrypted communication channels (video, audio, and chat) with full attorney-client privilege protection. All lawyers are Bar Council verified.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What types of legal cases does NyaySevak handle?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "NyaySevak handles all types of legal cases across 29 practice areas including criminal law, civil law, family & divorce law, property disputes, corporate law, cyber crime, consumer protection, tax disputes, banking & finance, intellectual property, CBI cases, ED cases, NDPS cases, arbitration, immigration, insurance, environmental law, constitutional law, medical negligence, and more.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How much does it cost to consult a lawyer on NyaySevak?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "NyaySevak offers a free first consultation for all new clients. After that, lawyer fees vary by specialization, experience, and court level. District Court lawyers typically charge ₹5,000-₹25,000 per hearing, High Court lawyers ₹15,000-₹1,00,000, and Supreme Court advocates ₹50,000-₹5,00,000+. All fees are displayed transparently with no hidden charges.",
-      },
-    },
-  ],
-};
+// Week 8 fix: the previous Week-4 `aeoQAJsonLd` FAQPage block has been
+// consolidated into `homepageFaqJsonLd` above (single FAQPage per URL).
+// Google Search Console flagged the prior dual-FAQPage pattern as a
+// "Duplicate field 'FAQPage'" critical issue, suppressing FAQ rich results.
+// The five additional Q&As are now part of the single FAQPage.mainEntity.
 
 export default function Home() {
   return (
@@ -290,10 +281,9 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(geoAuthorityJsonLd) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(aeoQAJsonLd) }}
-      />
+      {/* Week 8: aeoQAJsonLd merged into homepageFaqJsonLd above to comply with
+          Google's "one FAQPage per URL" rule. The duplicate emission previously
+          triggered a "Duplicate field 'FAQPage'" critical issue in GSC. */}
       <Hero />
       <StatsMarquee />
       <About />

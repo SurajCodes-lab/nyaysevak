@@ -8,6 +8,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 import ContactModal from "@/components/ContactModal";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import FloatingContactBar from "@/components/FloatingContactBar";
+import EngagementTracker from "@/components/EngagementTracker";
 import { ContactModalProvider } from "@/context/ContactModalContext";
 import { reviews, aggregateRatingValue, aggregateRatingCount } from "@/data/reviews";
 
@@ -36,7 +37,14 @@ const organizationJsonLd = {
   "@type": ["Organization", "LegalService"],
   "@id": "https://nyaysevak.com/#organization",
   name: "NyaySevak",
-  alternateName: "NyaySevak Legal Services",
+  // Week 8: expanded alternateName so search engines and AI engines
+  // associate every common user-vocabulary brand variant with this entity.
+  alternateName: [
+    "NyaySevak Legal Services",
+    "NyaySevak Lawyers",
+    "NyaySevak Advocates",
+    "NyaySevak.com",
+  ],
   description:
     "India's first complete legal ecosystem. Access Supreme Court, 25 High Courts, 700+ District Courts, all Tribunals & Arbitration centres. Complete A-Z legal services for individuals and businesses.",
   url: "https://nyaysevak.com",
@@ -68,6 +76,10 @@ const organizationJsonLd = {
     addressRegion: "Delhi",
     addressCountry: "IN",
   },
+  // Week 8: serviceType expanded with the user-search vocabulary
+  // ("Property Lawyer", "Divorce Lawyer", "Criminal Lawyer" etc.) alongside
+  // the original entity-name service categories. Surfaces the brand for
+  // searches that name the lawyer-type rather than the service-name.
   serviceType: [
     "Legal Consultation",
     "Lawyer Hiring",
@@ -80,6 +92,34 @@ const organizationJsonLd = {
     "Arbitration & ADR",
     "E-filing Assistance",
     "Legal Aid",
+    // User-vocabulary lawyer-type variants
+    "Criminal Lawyer Services",
+    "Civil Lawyer Services",
+    "Divorce Lawyer Services",
+    "Family Lawyer Services",
+    "Property Lawyer Services",
+    "Real Estate Lawyer Services",
+    "Corporate Lawyer Services",
+    "Business Lawyer Services",
+    "Cyber Crime Lawyer Services",
+    "Tax Lawyer Services",
+    "GST Lawyer Services",
+    "Consumer Court Lawyer Services",
+    "Labour Lawyer Services",
+    "IP Lawyer Services",
+    "Trademark Lawyer Services",
+    "Patent Lawyer Services",
+    "Banking Lawyer Services",
+    "Cheque Bounce Lawyer Services",
+    "Arbitration Lawyer Services",
+    "PMLA Defence Lawyer Services",
+    "NDPS Lawyer Services",
+    "CBI Case Lawyer Services",
+    "Medical Negligence Lawyer Services",
+    "Constitutional Lawyer Services",
+    "Bail Lawyer Services",
+    "Online Lawyer Consultation",
+    "Free Lawyer Consultation",
   ],
   knowsAbout: [
     "Indian Law",
@@ -210,13 +250,83 @@ const professionalServiceJsonLd = {
   hasOfferCatalog: {
     "@type": "OfferCatalog",
     name: "Legal Services",
+    // Week 9: priceSpecification added to every Offer so rich-result systems
+    // can surface "lawyer consultation price India" / "free legal advice"
+    // queries with a price chip in SERP. The Free First Consultation offer
+    // uses price: "0" + priceCurrency: "INR" — the schema-validated way to
+    // mark a free offer.
     itemListElement: [
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Free Lawyer Consultation", description: "Connect with verified lawyers for free first consultation" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Find & Hire Lawyers", description: "Search verified advocates by specialization, court & location" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Legal Document Services", description: "Professional legal document drafting, review & management" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Corporate Legal Advisory", description: "Dedicated legal teams for enterprise strategy & governance" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Court Representation", description: "Expert court representation across all Indian courts" } },
+      {
+        "@type": "Offer",
+        name: "Free First Lawyer Consultation",
+        url: "https://nyaysevak.com/free-legal-consultation",
+        price: "0",
+        priceCurrency: "INR",
+        availability: "https://schema.org/InStock",
+        eligibleRegion: { "@type": "Country", name: "India" },
+        itemOffered: { "@type": "Service", name: "Free Lawyer Consultation", description: "First consultation with a verified lawyer at no cost." },
+      },
+      {
+        "@type": "Offer",
+        name: "Online Lawyer Consultation (Paid)",
+        url: "https://nyaysevak.com/services/lawyer-consultation",
+        priceSpecification: {
+          "@type": "PriceSpecification",
+          minPrice: "499",
+          maxPrice: "5000",
+          priceCurrency: "INR",
+        },
+        availability: "https://schema.org/InStock",
+        itemOffered: { "@type": "Service", name: "Find & Hire Lawyers", description: "Search verified advocates by specialization, court & location" },
+      },
+      {
+        "@type": "Offer",
+        name: "Legal Document Services",
+        priceSpecification: {
+          "@type": "PriceSpecification",
+          minPrice: "999",
+          maxPrice: "25000",
+          priceCurrency: "INR",
+        },
+        availability: "https://schema.org/InStock",
+        itemOffered: { "@type": "Service", name: "Legal Document Services", description: "Professional legal document drafting, review & management" },
+      },
+      {
+        "@type": "Offer",
+        name: "Corporate Legal Advisory",
+        priceSpecification: {
+          "@type": "PriceSpecification",
+          minPrice: "10000",
+          priceCurrency: "INR",
+        },
+        availability: "https://schema.org/InStock",
+        itemOffered: { "@type": "Service", name: "Corporate Legal Advisory", description: "Dedicated legal teams for enterprise strategy & governance" },
+      },
+      {
+        "@type": "Offer",
+        name: "Court Representation",
+        priceSpecification: {
+          "@type": "PriceSpecification",
+          minPrice: "15000",
+          priceCurrency: "INR",
+        },
+        availability: "https://schema.org/InStock",
+        itemOffered: { "@type": "Service", name: "Court Representation", description: "Expert court representation across all Indian courts" },
+      },
     ],
+  },
+  // Week 9: makesOffer mirrors the catalog at the entity level so AI engines
+  // that scan ProfessionalService.makesOffer (some Perplexity / Gemini index
+  // pipelines do, even when hasOfferCatalog is not walked) still see pricing.
+  makesOffer: {
+    "@type": "AggregateOffer",
+    offerCount: 5,
+    lowPrice: "0",
+    highPrice: "25000",
+    priceCurrency: "INR",
+    availability: "https://schema.org/InStock",
+    eligibleRegion: { "@type": "Country", name: "India" },
+    offeredBy: { "@id": "https://nyaysevak.com/#organization" },
   },
   aggregateRating: {
     "@type": "AggregateRating",
@@ -368,6 +478,7 @@ export default function RootLayout({
           <Footer />
           <ContactModal />
           <FloatingContactBar />
+          <EngagementTracker />
         </ContactModalProvider>
       </body>
     </html>
