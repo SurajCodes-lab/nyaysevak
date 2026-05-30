@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ContactButton from "@/components/ContactButton";
+import TableOfContents, { TocItem } from "@/components/TableOfContents";
 import {
   ArrowRight, CheckCircle2, Shield, Clock, Users, Star,
   Scale, Search, FileText, HeartHandshake, BookOpen, Upload,
@@ -43,9 +44,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   const catLabel = service.category === "b2c" ? "for Individuals" : "for Businesses";
   const catKeyword = service.category === "b2c" ? "online" : "corporate";
+  // Title pattern: keyword-first → year → CTA → brand (under ~60 chars).
   return {
-    title: `${service.title} India - ${catLabel} | Free First Consultation | NyaySevak`,
-    description: `Best ${service.title.toLowerCase()} services in India ${catLabel.toLowerCase()}. ${service.bullets.join(". ")}. Verified professionals across all courts. Free first consultation. Call +91-9868666715.`,
+    title: `${service.title} India [2026] — Free Consultation | NyaySevak.com`,
+    description: `Best ${service.title.toLowerCase()} ${catLabel.toLowerCase()} in India. ${service.bullets.join(". ")}. Verified professionals across all courts. Free first consultation in 60 seconds. Call +91-9868666715.`,
     keywords: [
       `${service.title.toLowerCase()} India`,
       `best ${service.title.toLowerCase()}`,
@@ -59,14 +61,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       canonical: `https://nyaysevak.com/services/${slug}`,
     },
     openGraph: {
-      title: `${service.title} - Best Legal Services India | NyaySevak`,
+      title: `${service.title} India 2026 — Free Consultation | NyaySevak.com`,
       description: `${service.title} ${catLabel.toLowerCase()}. ${service.bullets[0]}. Free first consultation.`,
       type: "website",
       url: `https://nyaysevak.com/services/${slug}`,
     },
     twitter: {
       card: "summary_large_image",
-      title: `${service.title} India | NyaySevak`,
+      title: `${service.title} India 2026 | NyaySevak.com`,
       description: `${service.description}. Free first consultation.`,
     },
   };
@@ -221,6 +223,17 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
   const otherServices = allServices.filter((s) => s.slug !== slug && s.category === service.category).slice(0, 3);
   const ServiceIcon = lucideIconMap[service.lucideIcon];
 
+  const tocItems: TocItem[] = [
+    { id: "overview", label: "Overview" },
+    { id: "benefits", label: "Key Benefits" },
+    { id: "process", label: "How It Works" },
+    { id: "why-nyaysevak", label: "Why NyaySevak" },
+    { id: "practice-areas", label: "Practice Areas" },
+    { id: "cities", label: "Available in Cities" },
+    ...(content.faqs.length > 0 ? [{ id: "faqs", label: "FAQs" }] : []),
+    { id: "consultation", label: "Get Consultation" },
+  ];
+
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -233,7 +246,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
 
   const serviceJsonLd = {
     "@context": "https://schema.org",
-    "@type": "Service",
+    "@type": "LegalService",
     name: service.title,
     description: content.overview,
     provider: {
@@ -340,8 +353,11 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
         </div>
       </section>
 
+      {/* ===== On-page Table of Contents ===== */}
+      <TableOfContents items={tocItems} variant="dark" />
+
       {/* ===== Overview — Cream ===== */}
-      <section className="bg-cream cream-pattern py-16 sm:py-20 lg:py-24">
+      <section id="overview" className="bg-cream cream-pattern py-16 sm:py-20 lg:py-24">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-3 mb-6 sm:mb-8">
             <div className="h-8 w-1 rounded-full bg-gold" />
@@ -362,7 +378,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
       </section>
 
       {/* ===== Benefits — Dark ===== */}
-      <section className="bg-dark-deep py-16 sm:py-20 lg:py-24 relative overflow-hidden dark-section-depth">
+      <section id="benefits" className="bg-dark-deep py-16 sm:py-20 lg:py-24 relative overflow-hidden dark-section-depth">
         <div className="glow-pulse pointer-events-none absolute bottom-[10%] left-[5%] w-[400px] h-[400px] rounded-full bg-[radial-gradient(circle,rgba(201,168,76,0.06)_0%,transparent_55%)]" />
         <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 sm:mb-14">
@@ -385,7 +401,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
       </section>
 
       {/* ===== Process — Cream ===== */}
-      <section className="bg-cream cream-pattern py-16 sm:py-20 lg:py-24">
+      <section id="process" className="bg-cream cream-pattern py-16 sm:py-20 lg:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 sm:mb-14">
             <p className="text-[10px] sm:text-xs uppercase tracking-[0.3em] text-gold-dark/60 font-semibold mb-2">Step by Step</p>
@@ -410,7 +426,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
       </section>
 
       {/* ===== Why Choose — Dark ===== */}
-      <section className="bg-dark-deep py-16 sm:py-20 lg:py-24 relative overflow-hidden dark-section-depth">
+      <section id="why-nyaysevak" className="bg-dark-deep py-16 sm:py-20 lg:py-24 relative overflow-hidden dark-section-depth">
         <div className="absolute top-0 left-0 right-0 section-separator" />
         <div className="glow-pulse pointer-events-none absolute top-[20%] right-[10%] w-[400px] h-[400px] rounded-full bg-[radial-gradient(circle,rgba(201,168,76,0.06)_0%,transparent_55%)]" />
 
@@ -437,7 +453,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
       </section>
 
       {/* ===== Week 5: Practice areas where this service applies ===== */}
-      <section className="bg-dark py-14 sm:py-16 relative overflow-hidden">
+      <section id="practice-areas" className="bg-dark py-14 sm:py-16 relative overflow-hidden">
         <div className="glow-pulse pointer-events-none absolute top-[20%] left-[-5%] w-[400px] h-[400px] rounded-full bg-[radial-gradient(circle,rgba(201,168,76,0.05)_0%,transparent_60%)]" />
         <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <p className="mb-2 text-[10px] sm:text-xs uppercase tracking-[0.3em] text-gold/60 font-semibold">Relevant Expertise</p>
@@ -468,7 +484,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
       </section>
 
       {/* ===== Week 5: Available across India — city cross-links ===== */}
-      <section className="bg-dark-deep py-14 sm:py-16 border-t border-white/[0.04]">
+      <section id="cities" className="bg-dark-deep py-14 sm:py-16 border-t border-white/[0.04]">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <p className="mb-2 text-[10px] sm:text-xs uppercase tracking-[0.3em] text-gold/60 font-semibold">Nationwide</p>
           <h2 className="text-2xl sm:text-3xl font-heading font-bold text-white heading-glow mb-3">
@@ -493,7 +509,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
 
       {/* ===== FAQs — Dark Glassmorphism Cards ===== */}
       {content.faqs.length > 0 && (
-        <section className="bg-dark py-16 sm:py-20 lg:py-24 relative overflow-hidden">
+        <section id="faqs" className="bg-dark py-16 sm:py-20 lg:py-24 relative overflow-hidden">
           <div className="glow-pulse pointer-events-none absolute top-[20%] right-[-10%] w-[400px] h-[400px] rounded-full bg-[radial-gradient(circle,rgba(201,168,76,0.05)_0%,transparent_60%)]" />
           <div className="relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-10 sm:mb-14">
@@ -524,7 +540,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
       )}
 
       {/* ===== CTA — Cream ===== */}
-      <section className="bg-cream cream-pattern py-16 sm:py-20 lg:py-24">
+      <section id="consultation" className="bg-cream cream-pattern py-16 sm:py-20 lg:py-24">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-gray-900 heading-glow-cream">
             Get {service.title} Today
@@ -576,7 +592,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                   </div>
                   <p className="text-xs sm:text-sm text-gray-500 leading-relaxed">{s.bullets[0]}</p>
                   <span className="mt-4 inline-flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-widest text-gold/50 group-hover:text-gold transition-colors">
-                    Learn More
+                    Book {s.title}
                     <ArrowRight className="h-3 w-3 group-hover:translate-x-1 transition-transform" strokeWidth={2} />
                   </span>
                 </Link>
@@ -590,7 +606,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
               className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-gold transition-colors duration-200"
             >
               <ArrowRight className="h-4 w-4 rotate-180" strokeWidth={1.5} />
-              View All Services
+              Browse All Legal Services for India
             </Link>
           </div>
         </div>

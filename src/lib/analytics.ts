@@ -141,6 +141,47 @@ export function trackQualifiedLead(reason: string) {
   });
 }
 
+// ── Week 11: Exit-intent capture ──
+
+/**
+ * Fire when the exit-intent phone-capture modal is shown to a visitor. Paired
+ * with `exit_capture_submit` / `exit_capture_dismiss` so we can compute the
+ * modal's true capture rate (submits ÷ shows) per page in GA4 Explorations.
+ */
+export function trackExitCaptureShown(page?: string) {
+  trackEvent({
+    action: "exit_capture_shown",
+    category: "engagement",
+    label: page || window.location.pathname,
+    params: { page_path: window.location.pathname },
+  });
+}
+
+/**
+ * Fire when a visitor submits their phone number in the exit-intent modal.
+ * This is a hard conversion (a lead we would otherwise have lost to the exit)
+ * so it carries the same value weight as a primary form submit.
+ */
+export function trackExitCaptureSubmit(page?: string) {
+  trackEvent({
+    action: "exit_capture_submit",
+    category: "conversion",
+    label: page || window.location.pathname,
+    value: 10,
+    params: { page_path: window.location.pathname },
+  });
+}
+
+/** Fire when the visitor dismisses the exit-intent modal without converting. */
+export function trackExitCaptureDismiss(page?: string) {
+  trackEvent({
+    action: "exit_capture_dismiss",
+    category: "engagement",
+    label: page || window.location.pathname,
+    params: { page_path: window.location.pathname },
+  });
+}
+
 /** Fire when a user reaches a key practice-area or city-intent page from organic search. */
 export function trackOrganicLanding(slug: string) {
   trackEvent({

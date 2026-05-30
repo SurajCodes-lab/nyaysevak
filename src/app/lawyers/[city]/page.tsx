@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ContactButton from "@/components/ContactButton";
+import AnswerBlock from "@/components/AnswerBlock";
 import { ArrowRight, MapPin, Landmark, Scale, Briefcase, ChevronRight } from "lucide-react";
 import { cities, cityPracticeSlugs, cityPracticeLabels } from "@/data/cities";
 import { cityPracticeContent } from "@/data/city-practice-content";
@@ -113,10 +114,17 @@ export default async function CityHubPage({ params }: { params: Promise<{ city: 
     },
   };
 
+  // Week 11: full GBP-mirror LocalBusiness for the city hub. The hub previously
+  // carried a minimal LocalBusiness; this brings it to parity with the
+  // city×practice pages and with the on-site Google Business Profile we are
+  // standing up this cycle — stable @id, openingHoursSpecification, sameAs, and
+  // an areaServed that names both the city and its state.
   const localBusinessJsonLd = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": "LegalService",
+    "@id": `${url}#localbusiness`,
     name: `NyaySevak — Lawyers in ${city.name}`,
+    description: `Bar-Council-verified lawyers in ${city.name}, ${city.state} across criminal, civil, family, property, and corporate law. Free first consultation.`,
     image: `${SITE_URL}/logo.png`,
     url,
     telephone: "+91-9868666715",
@@ -124,8 +132,44 @@ export default async function CityHubPage({ params }: { params: Promise<{ city: 
     priceRange: "Free - ₹₹₹",
     address: { "@type": "PostalAddress", addressLocality: city.name, addressRegion: city.state, addressCountry: "IN" },
     geo: { "@type": "GeoCoordinates", latitude: city.geo.lat, longitude: city.geo.lng },
-    areaServed: { "@type": "City", name: city.name },
+    areaServed: [
+      { "@type": "City", name: city.name },
+      { "@type": "State", name: city.state },
+    ],
     aggregateRating: { "@type": "AggregateRating", ratingValue: "4.8", bestRating: "5", ratingCount: "1247" },
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        opens: "09:00",
+        closes: "21:00",
+      },
+      { "@type": "OpeningHoursSpecification", dayOfWeek: "Sunday", opens: "10:00", closes: "18:00" },
+    ],
+    parentOrganization: { "@id": "https://nyaysevak.com/#organization" },
+    sameAs: [
+      "https://www.facebook.com/nyaysevak",
+      "https://www.linkedin.com/company/nyaysevak",
+      "https://www.instagram.com/nyaysevak",
+    ],
+  };
+
+  // Week 11: AEO Quick Answer for the city hub + WebPage Speakable target.
+  const quickAnswerQuestion = `Who are the best lawyers in ${city.name}?`;
+  const quickAnswer =
+    `NyaySevak connects you with Bar-Council-verified lawyers in ${city.name}, ${city.state} for criminal, civil, family and divorce, property, and corporate matters. Our ${city.name} advocates practise before ${city.highCourt.name} and the city's district courts, cover all ${city.neighbourhoods.length}+ localities, and offer a free first consultation with fees agreed upfront.`;
+
+  const webPageJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: `Best Lawyers in ${city.name}`,
+    url,
+    inLanguage: "en-IN",
+    isAccessibleForFree: true,
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["#answer", "h1"],
+    },
   };
 
   return (
@@ -133,6 +177,7 @@ export default async function CityHubPage({ params }: { params: Promise<{ city: 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }} />
 
       {/* Hero */}
       <section className="relative bg-dark-deep pt-28 sm:pt-32 pb-16 sm:pb-20 overflow-hidden dark-section-depth">
@@ -176,6 +221,13 @@ export default async function CityHubPage({ params }: { params: Promise<{ city: 
               <ArrowRight className="h-4 w-4" strokeWidth={2} />
             </ContactButton>
           </div>
+        </div>
+      </section>
+
+      {/* Week 11: AEO Quick Answer (Speakable + AI-Overview extraction target) */}
+      <section className="bg-dark border-y border-gold/[0.08]">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <AnswerBlock question={quickAnswerQuestion}>{quickAnswer}</AnswerBlock>
         </div>
       </section>
 

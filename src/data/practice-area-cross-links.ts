@@ -86,6 +86,11 @@ export const practiceAreaToServices: Record<string, { slug: string; desc: string
     { slug: "lawyer-consultation", desc: "Advice on the right legal instrument for your need." },
     { slug: "find-hire-lawyers", desc: "Notaries and drafting specialists." },
   ],
+  "legal-notices": [
+    { slug: "document-services", desc: "Drafting, dispatch, and follow-up of every notice type — RPAD + speed post + e-mail." },
+    { slug: "lawyer-consultation", desc: "Pick the right statutory framework and limitation period before you send." },
+    { slug: "find-hire-lawyers", desc: "Specialist notice and reply lawyers for cheque-bounce, eviction, defamation, recovery." },
+  ],
   "constitutional-law": [
     { slug: "lawyer-consultation", desc: "Writ petition, PIL, and fundamental-rights strategy." },
     { slug: "find-hire-lawyers", desc: "Constitutional bench and senior-counsel specialists." },

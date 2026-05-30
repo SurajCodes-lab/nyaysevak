@@ -7,12 +7,25 @@ export interface PracticeAreaContent {
   faqs: { question: string; answer: string }[];
   relevantCourts: string[];
   highlights: { stat: string; label: string }[];
+  // Optional blocks — when present, the practice-area template renders
+  // dedicated H2 sections so the page can target "documents required for X",
+  // "process for X", and "how long does X take" queries that the
+  // earlier overview-only structure couldn't capture.
+  commonProblems?: string[];
+  legalProcess?: { step: string; description: string; durationHint?: string }[];
+  requiredDocuments?: string[];
+  timeline?: { stage: string; duration: string }[];
+  // Outbound links to authority sources (indiacode.nic.in, sci.gov.in,
+  // ecourts.gov.in, MCA, RBI, etc.). Google treats outbound links to
+  // high-authority sites as a quality signal for YMYL pages — and the
+  // citations also strengthen E-E-A-T for AI search engines.
+  outboundReferences?: { label: string; url: string; source: string }[];
 }
 
 const part1Content: Record<string, PracticeAreaContent> = {
   "civil-law": {
     detailedOverview: [
-      "Civil law in India forms the backbone of the justice system, governing disputes between individuals, organizations, and institutions over rights, obligations, and liabilities. Whether it concerns property ownership, contractual obligations, monetary claims, or declaratory relief, civil litigation under the Code of Civil Procedure, 1908 (CPC) provides a structured legal framework for adjudicating private disputes. At NyaySevak, we bring decades of combined expertise in navigating the procedural intricacies of civil courts across India, ensuring that our clients receive timely, cost-effective, and result-oriented legal representation.",
+      "Looking for the best civil lawyer in India? NyaySevak connects you with verified civil law advocates across the Supreme Court, 25 High Courts, and 700+ District Courts. Whether you need a civil lawyer for a property dispute, money recovery suit, breach of contract, partition matter, injunction, or specific performance action, our network covers every type of civil litigation under the Code of Civil Procedure, 1908 (CPC). Civil law in India governs disputes between individuals, organizations, and institutions over rights, obligations, and liabilities — and our advocates have decades of combined experience handling these matters end-to-end. Book a free first consultation in 60 seconds.",
       "Civil disputes in India can range from relatively straightforward money recovery suits to extraordinarily complex multi-party property litigation spanning generations. Indian civil courts follow a well-defined hierarchy\u2014from the courts of Civil Judges (Junior and Senior Division) at the district level, through the District Courts, up to the High Courts and ultimately the Supreme Court of India. Our legal team is well-versed in all stages of civil litigation, including the filing of plaints, written statements, interim applications for injunctions and attachments, examination of witnesses, arguments on merits, and execution of decrees.",
       "Beyond traditional courtroom litigation, we also advise clients on pre-litigation strategies such as sending legal notices under Order VII of CPC, exploring settlement possibilities through Lok Adalats and mediation centres, and pursuing alternative remedies where appropriate. Our approach combines aggressive advocacy with pragmatic counsel\u2014we believe that the best legal outcome is one that protects your rights while minimizing unnecessary time and expense."
     ],
@@ -94,12 +107,59 @@ const part1Content: Record<string, PracticeAreaContent> = {
       { stat: "25", label: "High Courts with civil jurisdiction" },
       { stat: "3 Years", label: "General limitation for contract suits" },
       { stat: "100%", label: "Pan-India coverage through our network" }
+    ],
+    commonProblems: [
+      "Property title disputes, boundary disagreements, and encroachment by neighbours",
+      "Breach of contract — non-payment, non-delivery, or non-performance of agreed terms",
+      "Money recovery from individuals, businesses, or defaulting borrowers",
+      "Landlord-tenant disputes — eviction, unpaid rent, illegal subletting",
+      "Partition of joint family or co-owned property",
+      "Specific performance of a sale agreement where the seller refuses to honour the deal",
+      "Injunctions to stop unauthorised construction, sale, or transfer",
+      "Succession, inheritance, and probate disputes over wills"
+    ],
+    legalProcess: [
+      { step: "Pre-litigation legal notice", description: "Send a demand notice under Section 80 CPC (or Order VII as applicable) calling on the opposite party to perform — many disputes settle here without filing.", durationHint: "7–30 days" },
+      { step: "Drafting and filing the plaint", description: "Plaint is drafted with cause of action, relief sought, schedule of property/documents, and court-fee valuation. Filed at the court of competent territorial and pecuniary jurisdiction.", durationHint: "1–2 weeks" },
+      { step: "Service of summons and written statement", description: "Court issues summons to the defendant who must file a written statement (denial / admission) within 30 days, extendable to 90.", durationHint: "30–90 days" },
+      { step: "Framing of issues", description: "Court identifies the disputed questions of fact and law that need adjudication.", durationHint: "1–2 hearings" },
+      { step: "Evidence — examination-in-chief and cross-examination", description: "Plaintiff leads evidence by affidavit followed by oral cross-examination; defendant follows. Documents are formally proved and exhibited.", durationHint: "6–18 months" },
+      { step: "Final arguments", description: "Counsel for both sides argue on the issues, supported by case law and statutory provisions.", durationHint: "2–6 hearings" },
+      { step: "Judgment and decree", description: "Court pronounces judgment; decree is drawn up. Either party can appeal under Section 96 CPC within 30 days (district) or 90 days (HC).", durationHint: "Within 30 days of arguments" },
+      { step: "Execution of decree", description: "Decree-holder files execution petition under Order XXI CPC to enforce — through attachment, sale, or possession.", durationHint: "6 months – several years" }
+    ],
+    requiredDocuments: [
+      "Identity proof (Aadhaar / PAN / Passport) of plaintiff and defendant",
+      "Address proof for jurisdiction (utility bill, ration card, registered lease)",
+      "All agreements, contracts, MoUs, and correspondence relating to the dispute",
+      "Title deeds, sale deeds, gift deeds, or chain of ownership for property matters",
+      "Bank statements, payment receipts, cheques (and dishonour memos if any)",
+      "Demand notice and proof of service (RPAD acknowledgement / courier POD)",
+      "Encumbrance certificate and revenue records for immovable property",
+      "Photographs, site plans, and survey reports for boundary / encroachment issues",
+      "Death certificate, succession certificate, or probate for inheritance matters",
+      "List of witnesses with their affidavits in support",
+      "Court-fee receipt / e-stamp papers as per state valuation rules",
+      "Vakalatnama (lawyer's authorisation) executed in favour of the advocate"
+    ],
+    timeline: [
+      { stage: "Filing to first hearing", duration: "1–3 months" },
+      { stage: "Pleadings & framing of issues", duration: "3–6 months" },
+      { stage: "Evidence & cross-examination", duration: "6–24 months" },
+      { stage: "Arguments to judgment", duration: "2–6 months" }
+    ],
+    outboundReferences: [
+      { label: "Code of Civil Procedure, 1908 — full text", url: "https://www.indiacode.nic.in/handle/123456789/2191", source: "India Code (indiacode.nic.in)" },
+      { label: "Limitation Act, 1963 — full text", url: "https://www.indiacode.nic.in/handle/123456789/1554", source: "India Code" },
+      { label: "Specific Relief Act, 1963 — full text", url: "https://www.indiacode.nic.in/handle/123456789/1547", source: "India Code" },
+      { label: "Supreme Court of India — judgements portal", url: "https://main.sci.gov.in/judgments", source: "sci.gov.in" },
+      { label: "eCourts case status lookup", url: "https://services.ecourts.gov.in/ecourtindia_v6/", source: "ecourts.gov.in" }
     ]
   },
 
   "criminal-law": {
     detailedOverview: [
-      "Criminal law in India has undergone a historic transformation with the enactment of three new criminal codes\u2014the Bharatiya Nyaya Sanhita (BNS), 2023, Bharatiya Nagarik Suraksha Sanhita (BNSS), 2023, and Bharatiya Sakshya Adhiniyam (BSA), 2023\u2014which replaced the colonial-era Indian Penal Code, Code of Criminal Procedure, and Indian Evidence Act respectively. At NyaySevak, our criminal law practice is built on a deep understanding of both the legacy legislation and the new framework, ensuring that our clients receive cutting-edge defense and prosecution support at every stage of criminal proceedings.",
+      "Need the best criminal lawyer in India? NyaySevak connects you with verified criminal defence advocates for bail, anticipatory bail, FIR quashing, trial defence, and appeals across the Supreme Court, High Courts, Sessions Courts, and Magistrate's Courts. Our criminal lawyers handle every offence type \u2014 economic offences, NDPS cases, PMLA defence, POCSO matters, organised crime, cyber-crime, and offences against women and children \u2014 under both the legacy IPC/CrPC framework and the new Bharatiya Nyaya Sanhita (BNS) 2023, Bharatiya Nagarik Suraksha Sanhita (BNSS) 2023, and Bharatiya Sakshya Adhiniyam (BSA) 2023. Free first consultation, available round-the-clock for urgent bail matters.",
       "From the moment an FIR is registered at the police station to the final appellate hearing before the Supreme Court, criminal proceedings in India follow a rigorous procedural path involving investigation, charge-sheeting, bail hearings, framing of charges, examination of prosecution and defense witnesses, arguments, judgment, and sentencing. Our team of experienced criminal lawyers handles the full spectrum\u2014from securing anticipatory bail to prevent wrongful arrest, to defending complex trials involving economic offences, organized crime, cyber-crime, and offences against women and children.",
       "We understand that being accused of a criminal offence is one of the most stressful experiences a person can face. Our approach prioritizes protecting our clients' fundamental rights under Articles 20, 21, and 22 of the Constitution of India, including the right against self-incrimination, the right to a fair trial, and the right to legal counsel. We meticulously analyze evidence, challenge procedural irregularities, cross-examine witnesses effectively, and build compelling defenses tailored to each case's unique facts."
     ],
@@ -177,12 +237,60 @@ const part1Content: Record<string, PracticeAreaContent> = {
       { stat: "3", label: "New criminal codes effective from July 2024" },
       { stat: "90 Days", label: "Default chargesheet filing deadline" },
       { stat: "1000+", label: "Criminal courts across India" }
+    ],
+    commonProblems: [
+      "Anticipated arrest under a false complaint — need for anticipatory bail",
+      "FIR registered against you and the police seeking custodial interrogation",
+      "Regular bail rejected by Magistrate / Sessions and need for High Court bail",
+      "FIR or charge-sheet that should be quashed — frivolous / vexatious / barred by law",
+      "Defending economic offences — PMLA, ED, CBI, GST evasion, NDPS cases",
+      "498A / dowry / domestic violence allegations against you or your family",
+      "Cheque bounce prosecution under Section 138 NI Act",
+      "POCSO, cyber, and offences against women requiring specialised defence",
+      "Appeal or revision against a conviction by Magistrate, Sessions, or High Court"
+    ],
+    legalProcess: [
+      { step: "FIR or complaint stage", description: "Either an FIR is registered under Section 173 BNSS / Section 154 CrPC at the police station, or a private complaint is filed before the Magistrate under Section 223 BNSS / Section 200 CrPC.", durationHint: "Same day" },
+      { step: "Investigation and arrest", description: "Police investigate, record statements, gather evidence, and may arrest. Anticipatory bail under Section 482 BNSS / Section 438 CrPC can be sought before arrest.", durationHint: "24 hours – 60 days" },
+      { step: "Production before Magistrate & remand", description: "Arrestee must be produced within 24 hours. Magistrate decides judicial / police custody. Regular bail under Section 480/483 BNSS / Section 437/439 CrPC can be moved.", durationHint: "Within 24 hours" },
+      { step: "Chargesheet / final report", description: "Police file chargesheet within 60 or 90 days (depending on offence). If not filed in time, default bail under Section 187(3) BNSS / Section 167(2) CrPC is granted.", durationHint: "60–90 days" },
+      { step: "Framing of charges", description: "Court considers material on record and frames charges; accused pleads guilty or not guilty.", durationHint: "1–3 months" },
+      { step: "Prosecution evidence & cross-examination", description: "Prosecution witnesses examined and cross-examined; documents and seized articles exhibited.", durationHint: "6–24 months" },
+      { step: "Defence statement and evidence", description: "Statement of accused recorded under Section 351 BNSS / Section 313 CrPC; defence witnesses examined.", durationHint: "1–3 months" },
+      { step: "Arguments and judgment", description: "Counsel argue on merits; court pronounces judgment — acquittal, conviction, or discharge. Appeal lies to Sessions / High Court / Supreme Court.", durationHint: "1–6 months" }
+    ],
+    requiredDocuments: [
+      "Copy of the FIR / complaint / NCR with FIR number and police station details",
+      "Identity proof (Aadhaar, PAN, Passport) of accused and complainant",
+      "Address proof for verification of bail surety",
+      "Medical records — MLC, post-mortem report, injury certificates where relevant",
+      "All statements recorded by police under Section 180 BNSS / Section 161 CrPC",
+      "Chargesheet, list of witnesses, and seizure memos",
+      "Bank statements, GST records, ITRs where economic offences are alleged",
+      "Call detail records (CDRs), CCTV footage, digital evidence",
+      "Bail bonds, surety affidavits, sureties' solvency proof",
+      "Vakalatnama executed in favour of the criminal advocate",
+      "Passport (for surrender / production direction during bail)",
+      "Previous criminal antecedents / clearance certificate if any"
+    ],
+    timeline: [
+      { stage: "Bail application & decision", duration: "1–4 weeks" },
+      { stage: "Investigation & chargesheet", duration: "60–90 days" },
+      { stage: "Trial — framing of charges to judgment", duration: "1–4 years" },
+      { stage: "Appeal to High Court / Supreme Court", duration: "1–5 years" }
+    ],
+    outboundReferences: [
+      { label: "Bharatiya Nyaya Sanhita, 2023 — full text", url: "https://www.indiacode.nic.in/handle/123456789/20062", source: "India Code" },
+      { label: "Bharatiya Nagarik Suraksha Sanhita, 2023", url: "https://www.indiacode.nic.in/handle/123456789/20064", source: "India Code" },
+      { label: "Bharatiya Sakshya Adhiniyam, 2023", url: "https://www.indiacode.nic.in/handle/123456789/20063", source: "India Code" },
+      { label: "Supreme Court bail judgements collection", url: "https://main.sci.gov.in/judgments", source: "sci.gov.in" },
+      { label: "Prevention of Money Laundering Act, 2002", url: "https://www.indiacode.nic.in/handle/123456789/2036", source: "India Code" }
     ]
   },
 
   "family-matrimonial": {
     detailedOverview: [
-      "Family and matrimonial law in India is a deeply personal area of legal practice that intersects with religion, culture, and constitutional values. India's family law framework is uniquely complex because different personal laws apply to different religious communities\u2014Hindus are governed by the Hindu Marriage Act, 1955 and the Hindu Succession Act, 1956; Muslims by their personal law and the Muslim Women (Protection of Rights on Divorce) Act, 1986; Christians by the Indian Divorce Act, 1869; and Parsis by the Parsi Marriage and Divorce Act, 1936. The Special Marriage Act, 1954 provides a secular alternative for inter-faith and civil marriages. At NyaySevak, we navigate this intricate legal landscape with sensitivity and expertise.",
+      "Looking for the best divorce lawyer or family lawyer in India? NyaySevak connects you with verified matrimonial advocates for mutual-consent and contested divorce, child custody, maintenance, alimony, domestic violence protection, and 498A / dowry harassment defence \u2014 across Family Courts in every major Indian city. Our family lawyers handle cases under the Hindu Marriage Act 1955, Special Marriage Act 1954, Muslim personal law, Indian Divorce Act 1869, and the Parsi Marriage and Divorce Act 1936, with sensitivity to the religious and cultural dimensions every matrimonial matter carries. Whether you need a divorce lawyer near you, a child custody specialist, or protection under the Protection of Women from Domestic Violence Act 2005, book a free first consultation today.",
       "Matrimonial disputes are among the most emotionally charged legal matters, involving not just the dissolution of a marriage but also critical issues of child custody, maintenance, division of assets, and domestic violence protection. Our team understands that behind every case file is a family in crisis, and we approach each matter with the compassion it deserves while maintaining fierce advocacy for our clients' legal rights. We have extensive experience in both contested and mutual consent divorces, complex custody battles, and high-value maintenance and alimony proceedings.",
       "Beyond divorce and separation, our family law practice encompasses adoption proceedings under the Juvenile Justice Act and the Hindu Adoptions and Maintenance Act, guardianship petitions under the Guardians and Wards Act, 1890, marriage registration, second marriage validity issues, NRI matrimonial disputes, and inter-country child custody matters under the Hague Convention principles. We also handle protection orders under the Protection of Women from Domestic Violence Act, 2005, and defend against false matrimonial complaints."
     ],
@@ -260,12 +368,61 @@ const part1Content: Record<string, PracticeAreaContent> = {
       { stat: "6 Months", label: "Cooling-off period in mutual consent divorce" },
       { stat: "7", label: "Personal laws governing different communities" },
       { stat: "100%", label: "Confidential case handling guaranteed" }
+    ],
+    commonProblems: [
+      "Wanting a fast, low-conflict mutual-consent divorce (Section 13B HMA)",
+      "Contested divorce on grounds of cruelty, desertion, or adultery",
+      "Child custody, visitation rights, and inter-country custody under Hague principles",
+      "Maintenance / alimony for spouse and minor children under Section 125 BNSS / DV Act / HAMA",
+      "498A IPC / Section 85 BNS and dowry harassment complaints filed by either side",
+      "Domestic violence protection orders under the DV Act 2005",
+      "Restitution of conjugal rights or judicial separation",
+      "Nullity of marriage / void marriage declaration",
+      "NRI matrimonial disputes — jurisdiction, service abroad, foreign decree recognition",
+      "Settlement deed enforcement and contempt for breach"
+    ],
+    legalProcess: [
+      { step: "Initial counsel session and option analysis", description: "Lawyer assesses whether mutual-consent, contested, judicial separation, or DV Act route best suits the facts.", durationHint: "1–2 sittings" },
+      { step: "Pre-litigation settlement deed (for MCD)", description: "Comprehensive settlement deed covering alimony, custody, asset division, withdrawal of criminal complaints. Signed by both spouses.", durationHint: "1–4 weeks" },
+      { step: "Filing of petition before Family Court", description: "Joint petition under Section 13B(1) HMA for MCD or contested petition under Section 13 HMA / Section 27 SMA / Section 10 IDA as applicable.", durationHint: "1 week" },
+      { step: "First motion / first hearing", description: "Statements recorded on oath, court notes preconditions and adjourns for cooling-off period or for service of summons.", durationHint: "1–3 months from filing" },
+      { step: "Cooling-off period (Section 13B(2) — MCD only)", description: "Mandatory 6 months unless waived under Amardeep Singh v. Harveen Kaur (2017). Waiver applications can shave this down materially.", durationHint: "6 months (or waiver granted)" },
+      { step: "Second motion / contested evidence stage", description: "For MCD, second motion confirms continued consent; decree pronounced. For contested, evidence-in-chief, cross-examination, arguments.", durationHint: "1 day (MCD) / 1–4 years (contested)" },
+      { step: "Decree of divorce", description: "Court passes the decree. Becomes final after 30-day appeal period under Section 28 HMA. Spouses can remarry thereafter.", durationHint: "30 days after decree" },
+      { step: "Post-decree formalities", description: "Mutation in PAN, passport, bank, immigration records; enforcement of alimony / custody terms via Section 125 BNSS or DV Act.", durationHint: "1–3 months" }
+    ],
+    requiredDocuments: [
+      "Marriage certificate or proof of solemnisation (priest's certificate, photos, witness affidavits)",
+      "PAN and Aadhaar of both spouses",
+      "Address proof — passport, voter ID, registered lease, or utility bill",
+      "4 passport-size photographs of each spouse",
+      "Income tax returns (last 3 years) and salary slips for maintenance assessment",
+      "Bank statements (last 12 months) of both spouses",
+      "Birth certificates of all children",
+      "List of movable and immovable property (with valuations) for asset division",
+      "Mutual-consent settlement deed (for MCD) duly signed and notarised",
+      "Medical certificates / cruelty evidence / DV evidence (for contested matters)",
+      "Copies of any pending FIRs, DV applications, or maintenance applications",
+      "Vakalatnama in favour of the family lawyer"
+    ],
+    timeline: [
+      { stage: "Mutual-consent divorce (without waiver)", duration: "6–12 months" },
+      { stage: "Mutual-consent divorce (with waiver)", duration: "2–4 months" },
+      { stage: "Contested divorce — trial court", duration: "2–5 years" },
+      { stage: "Appeal to High Court / SLP", duration: "2–4 additional years" }
+    ],
+    outboundReferences: [
+      { label: "Hindu Marriage Act, 1955 — full text", url: "https://www.indiacode.nic.in/handle/123456789/1560", source: "India Code" },
+      { label: "Special Marriage Act, 1954 — full text", url: "https://www.indiacode.nic.in/handle/123456789/1605", source: "India Code" },
+      { label: "Protection of Women from Domestic Violence Act, 2005", url: "https://www.indiacode.nic.in/handle/123456789/2031", source: "India Code" },
+      { label: "Amardeep Singh v. Harveen Kaur, (2017) 8 SCC 746", url: "https://main.sci.gov.in/judgments", source: "Supreme Court of India" },
+      { label: "Family Courts Act, 1984", url: "https://www.indiacode.nic.in/handle/123456789/1827", source: "India Code" }
     ]
   },
 
   "property-real-estate": {
     detailedOverview: [
-      "Property and real estate law in India is an extraordinarily complex domain shaped by a patchwork of central and state-level legislation, customary practices, and evolving jurisprudence. Land and property matters touch upon constitutional provisions (the right to property under Article 300A), central statutes like the Transfer of Property Act, 1882 and the Registration Act, 1908, state-specific tenancy and land reform laws, and the transformative Real Estate (Regulation and Development) Act, 2016 (RERA). At NyaySevak, our property law practice provides end-to-end legal solutions\u2014from pre-purchase due diligence to dispute resolution and post-transaction compliance.",
+      "Looking for the best property lawyer in India? NyaySevak connects you with verified property law advocates for title verification, sale deed drafting, RERA complaints, builder-buyer disputes, partition suits, tenant eviction, and land acquisition matters \u2014 across the Supreme Court, 25 High Courts, RERA Tribunals, and 700+ District Sub-Registrar offices. Whether you need a property lawyer in Delhi for a builder dispute, in Bangalore for an A-khata/B-khata title check, in Mumbai for a CHS conveyance, or anywhere in India for stamp-duty and registration guidance, our advocates handle every type of real-estate matter under the Transfer of Property Act 1882, Registration Act 1908, and the Real Estate (Regulation and Development) Act 2016 (RERA). Free first consultation in 60 seconds.",
       "India's real estate sector is one of the largest contributors to the GDP, and with increasing urbanization, property transactions have grown in both volume and complexity. Issues like unclear titles, benami (fictitious) ownership, encroachments, unauthorized constructions, delayed possession by builders, unfair agreements, and fraudulent registrations are endemic. Our team has deep expertise in conducting multi-layered title verification spanning 30+ years of ownership history, identifying encumbrances, liens, and pending litigation, and ensuring that our clients make fully informed property decisions.",
       "For homebuyers affected by delayed or stalled projects, we provide aggressive representation before RERA authorities, Appellate Tribunals, and the National Consumer Disputes Redressal Commission (NCDRC). For landowners facing acquisition, we ensure fair compensation under the Right to Fair Compensation and Transparency in Land Acquisition, Rehabilitation and Resettlement Act, 2013. Our documentation services cover the entire lifecycle of property ownership\u2014from agreement to sell and sale deed drafting to mutation, property tax management, and estate planning through wills and trusts."
     ],
@@ -347,6 +504,55 @@ const part1Content: Record<string, PracticeAreaContent> = {
       { stat: "30 Years", label: "Minimum title search period we recommend" },
       { stat: "70%", label: "Funds builders must keep in RERA escrow" },
       { stat: "100K+", label: "RERA complaints resolved across India" }
+    ],
+    commonProblems: [
+      "Builder delaying possession or refusing refund / interest under RERA",
+      "Defective title — unclear chain of ownership, missing mother deed, or benami links",
+      "Boundary disputes, encroachment by neighbours, or illegal constructions",
+      "Tenant refusing to vacate or paying below market / agreed rent",
+      "Partition of joint family / ancestral / co-owned property",
+      "Unauthorised sale by joint owner / power-of-attorney holder",
+      "Land acquisition with inadequate compensation under the 2013 Act",
+      "Stamp-duty undervaluation notice and reassessment proceedings",
+      "Mutation, khata transfer, or property-tax disputes with municipality",
+      "Society / RWA disputes — share transfer, NOC refusal, parking allotment"
+    ],
+    legalProcess: [
+      { step: "Title due diligence (pre-purchase)", description: "30-year title search at Sub-Registrar, encumbrance certificate, revenue records, search at Registrar of Companies if seller is a corporate, and search at the relevant municipal body.", durationHint: "1–3 weeks" },
+      { step: "Drafting agreement to sell / sale deed", description: "Lawyer drafts an Agreement to Sell (registered or notarised) followed by the Sale Deed with full description of property, consideration, payment terms, possession date, and indemnity clauses.", durationHint: "1–2 weeks" },
+      { step: "Stamp duty payment and registration", description: "Stamp duty computed under state-specific rates; payment via e-stamp / SHCIL. Document presented at Sub-Registrar within 4 months for registration under Section 17 Registration Act.", durationHint: "Same day to 4 months" },
+      { step: "Mutation / khata transfer", description: "Update municipal records (khata, property tax, electricity / water connections) in the new owner's name post-registration.", durationHint: "1–3 months" },
+      { step: "RERA / consumer / civil filing (for disputes)", description: "Builder dispute → RERA complaint at state authority; partition / title / specific performance → civil suit; tenant eviction → Rent Control Court.", durationHint: "1 month to file" },
+      { step: "Hearings, evidence, and interim relief", description: "Notice to opposite party, pleadings, interim injunction or status-quo orders to prevent transfer / construction. Evidence leads to final order.", durationHint: "6 months – 3 years" },
+      { step: "Final order / decree", description: "RERA orders are time-bound (60–120 days). Civil decrees take longer. Appeal lies to RERA Appellate Tribunal / NCDRC / HC.", durationHint: "Varies by forum" },
+      { step: "Execution / enforcement", description: "Refund recovery, possession delivery, or partition through court commissioner.", durationHint: "6 months – several years" }
+    ],
+    requiredDocuments: [
+      "Sale deed / title deed / gift deed of the property (and parent deeds for 30-year chain)",
+      "Encumbrance certificate (EC) for the last 30 years from Sub-Registrar",
+      "Property tax receipts and latest khata / patta / 7/12 extract",
+      "Approved building plan and occupancy certificate (OC) from municipal body",
+      "RERA registration certificate of the project (for under-construction property)",
+      "NOC from society / RWA / housing co-operative (for transfer)",
+      "Identity and address proof of buyer and seller (Aadhaar, PAN, passport)",
+      "Builder-buyer agreement, payment receipts, demand letters",
+      "Possession letter, allotment letter, and conveyance deed (where applicable)",
+      "Power of attorney (if executed through a POA holder)",
+      "Indemnity bond and affidavit confirming title is clear",
+      "Photographs, site plan, and survey number details"
+    ],
+    timeline: [
+      { stage: "Title due diligence", duration: "2–4 weeks" },
+      { stage: "Registration & mutation", duration: "1–3 months" },
+      { stage: "RERA complaint to order", duration: "60–180 days" },
+      { stage: "Civil property suit (with appeal)", duration: "5–15 years" }
+    ],
+    outboundReferences: [
+      { label: "Transfer of Property Act, 1882 — full text", url: "https://www.indiacode.nic.in/handle/123456789/2338", source: "India Code" },
+      { label: "Real Estate (Regulation and Development) Act, 2016", url: "https://www.indiacode.nic.in/handle/123456789/2158", source: "India Code" },
+      { label: "Registration Act, 1908 — full text", url: "https://www.indiacode.nic.in/handle/123456789/2168", source: "India Code" },
+      { label: "MahaRERA online portal (Maharashtra)", url: "https://maharera.maharashtra.gov.in/", source: "maharera.maharashtra.gov.in" },
+      { label: "Indian Stamp Act, 1899 — full text", url: "https://www.indiacode.nic.in/handle/123456789/2304", source: "India Code" }
     ]
   },
 
@@ -434,6 +640,55 @@ const part1Content: Record<string, PracticeAreaContent> = {
       { stat: "3-7 Days", label: "Company incorporation via SPICe+" },
       { stat: "100%", label: "FDI allowed in most sectors" },
       { stat: "330 Days", label: "Maximum IBC resolution timeline" }
+    ],
+    commonProblems: [
+      "Need to incorporate a private limited / LLP / OPC / Section 8 company",
+      "Shareholder dispute, oppression & mismanagement, or board deadlock",
+      "Director resignation, removal, DIN deactivation, or disqualification",
+      "MCA / ROC compliance backlog — annual returns, board reports, AOC-4 / MGT-7",
+      "Cross-border investment — FDI route, RBI reporting, FC-GPR / FC-TRS filings",
+      "M&A transaction — diligence, SPA / SHA / BTA drafting, CCI / SEBI / RBI approvals",
+      "Insolvency / IBC proceedings — corporate debtor, financial / operational creditor",
+      "SEBI investigation, listing-compliance notice, or insider-trading allegation",
+      "Competition Commission complaint or cartel investigation",
+      "Drafting and enforcing shareholder agreements, BTAs, and joint-venture agreements"
+    ],
+    legalProcess: [
+      { step: "Structuring and entity choice", description: "Pvt Ltd vs LLP vs OPC vs Section 8 — choice depends on capital plans, liability appetite, investor expectations, and tax treatment.", durationHint: "1–2 sittings" },
+      { step: "Name reservation (RUN / SPICe+ Part A)", description: "File RUN / SPICe+ Part A on MCA portal with up to two name choices; reservation valid for 20 days.", durationHint: "1–3 days" },
+      { step: "Documentation and DSC / DIN", description: "Class-3 DSC for proposed directors; DIN allotted through SPICe+ Part B. KYC, address proof, MOA / AOA, declarations.", durationHint: "3–5 days" },
+      { step: "Incorporation filing (SPICe+ Part B)", description: "Integrated form filed with MOA, AOA, INC-9, AGILE-PRO. PAN, TAN, EPFO, ESIC, GSTIN, and bank-account opening flow through the same submission.", durationHint: "3–7 days" },
+      { step: "Post-incorporation compliance", description: "First board meeting, statutory registers, appointment of auditor (INC-22 + ADT-1), commencement of business (INC-20A within 180 days), shareholder agreement signing.", durationHint: "30–180 days" },
+      { step: "Ongoing MCA compliance", description: "Annual ROC filings (AOC-4 financial statements, MGT-7 annual return), DIR-3 KYC, board meetings (4 per year), AGM (within 6 months of FY end).", durationHint: "Annual recurring" },
+      { step: "Dispute / litigation route", description: "Oppression & mismanagement before NCLT under Sections 241–242 Companies Act; IBC under CIRP route; civil / commercial-court suit for contractual disputes; arbitration where the contract carries an arbitration clause.", durationHint: "Varies" },
+      { step: "Closure / strike-off / winding-up", description: "Voluntary strike-off under Section 248 (Form STK-2) where conditions met; otherwise voluntary liquidation under IBC; compulsory winding-up by NCLT in fraud / public-interest cases.", durationHint: "3–18 months" }
+    ],
+    requiredDocuments: [
+      "PAN, Aadhaar, and passport-size photographs of all directors / partners / members",
+      "Address proof of directors (utility bill / bank statement, not older than 2 months)",
+      "Registered-office address proof and NOC from owner",
+      "MOA and AOA drafted to the company's object clause",
+      "Class-3 Digital Signature Certificate (DSC) for each director",
+      "DIN application for proposed directors (if not already allotted)",
+      "Declaration in form INC-9 by each subscriber",
+      "Shareholder agreement / joint-venture agreement (where applicable)",
+      "Share certificate format, register of members, board minutes book",
+      "Auditor consent letter and certificate of practice",
+      "PAN / TAN / GST registration documents (post-incorporation)",
+      "FEMA filings (FC-GPR, FC-TRS) for foreign investment"
+    ],
+    timeline: [
+      { stage: "Incorporation (SPICe+)", duration: "3–10 days" },
+      { stage: "Post-incorporation setup", duration: "30–60 days" },
+      { stage: "Annual ROC compliance cycle", duration: "Recurring 12 months" },
+      { stage: "M&A / IBC / NCLT litigation", duration: "330 days – 3 years" }
+    ],
+    outboundReferences: [
+      { label: "Companies Act, 2013 — full text", url: "https://www.indiacode.nic.in/handle/123456789/2114", source: "India Code" },
+      { label: "MCA portal — SPICe+ incorporation", url: "https://www.mca.gov.in/", source: "mca.gov.in" },
+      { label: "Insolvency and Bankruptcy Code, 2016", url: "https://www.indiacode.nic.in/handle/123456789/2154", source: "India Code" },
+      { label: "SEBI regulations and circulars", url: "https://www.sebi.gov.in/legal/regulations", source: "sebi.gov.in" },
+      { label: "Competition Act, 2002 — full text", url: "https://www.indiacode.nic.in/handle/123456789/2025", source: "India Code" }
     ]
   },
 
@@ -513,6 +768,55 @@ const part1Content: Record<string, PracticeAreaContent> = {
       { stat: "12%", label: "EPF contribution rate (employer + employee)" },
       { stat: "Rs. 20L", label: "Maximum gratuity payable" },
       { stat: "10+", label: "Employees triggers POSH Act applicability" }
+    ],
+    commonProblems: [
+      "Wrongful termination, forced resignation, or sudden dismissal without notice pay",
+      "Unpaid salary, bonus, incentives, or notice-period buy-out",
+      "Withheld gratuity (Payment of Gratuity Act 1972) or PF non-remittance",
+      "POSH Act 2013 complaint — sexual harassment at workplace",
+      "Industrial dispute — retrenchment, layoff, lockout, strike",
+      "ESIC / PF inspection notice or recovery order",
+      "Maternity-benefit denial, paternity-leave dispute, parental-leave issues",
+      "Restrictive covenants — non-compete, non-solicit, garden-leave enforceability",
+      "Equal-pay / gender-pay-gap claim under the Code on Wages 2019",
+      "Contract-labour engagement issues under the Contract Labour Act 1970"
+    ],
+    legalProcess: [
+      { step: "Pre-litigation conciliation", description: "Many disputes are resolved through internal grievance committees, mediation, or pre-conciliation with the employer. POSH cases follow a dedicated 90-day Internal Committee process under the 2013 Act.", durationHint: "30–90 days" },
+      { step: "Filing before Labour Commissioner / Inspector", description: "Conciliation officer under the Industrial Disputes Act 1947 attempts settlement. Failure report (Section 12(4) ID Act) opens the route to Labour Court or Tribunal.", durationHint: "60–90 days" },
+      { step: "Reference to Labour Court / Industrial Tribunal", description: "State Government refers the dispute to the appropriate court / tribunal for adjudication.", durationHint: "30–60 days from failure report" },
+      { step: "Pleadings, evidence, and award", description: "Statements of claim, written statements, examination of witnesses, documentary evidence. Tribunal passes an award which is published in the Gazette.", durationHint: "1–3 years" },
+      { step: "POSH Act parallel route", description: "Internal Committee inquiry must be completed within 90 days. Aggrieved party can appeal to court within 90 days. Employer non-compliance attracts ₹50,000 penalty + repeat-offence licence cancellation.", durationHint: "90 + 90 days" },
+      { step: "Recovery of dues", description: "Salary arrears, gratuity, and bonus recovery under Payment of Wages Act 1936 / Code on Wages 2019 / Gratuity Act 1972 — applications to Controlling Authority.", durationHint: "60–180 days" },
+      { step: "Writ remedy in High Court", description: "Where statutory remedy is inadequate or there is a violation of fundamental rights, writ under Article 226 lies — particularly for public-sector employment.", durationHint: "6 months – 3 years" },
+      { step: "Settlement / award enforcement", description: "Award becomes enforceable 30 days after publication. Execution through Section 33C(2) ID Act or as a court decree.", durationHint: "30 days to enforce" }
+    ],
+    requiredDocuments: [
+      "Appointment letter, offer letter, and signed employment contract",
+      "Last 12 months of salary slips and bank-credit statement",
+      "PF UAN, EPS records, and gratuity calculation",
+      "Termination letter / acceptance of resignation / dismissal order",
+      "E-mail correspondence with HR / management / reporting manager",
+      "Performance appraisals and any warning / show-cause notices",
+      "Company policies — leave, POSH, code of conduct, NDA, non-compete",
+      "Identity proof of employee (Aadhaar, PAN)",
+      "Form 16 / Form 26AS for the relevant financial year",
+      "Industry classification (Schedule I of ID Act) — workman / non-workman",
+      "Witness affidavits and supporting documents",
+      "Vakalatnama for the labour advocate"
+    ],
+    timeline: [
+      { stage: "Conciliation before Labour Commissioner", duration: "60–90 days" },
+      { stage: "Labour Court / Tribunal award", duration: "1–3 years" },
+      { stage: "POSH Act inquiry", duration: "90 days" },
+      { stage: "Writ to High Court / Supreme Court", duration: "6 months – 5 years" }
+    ],
+    outboundReferences: [
+      { label: "Code on Wages, 2019 — full text", url: "https://www.indiacode.nic.in/handle/123456789/15464", source: "India Code" },
+      { label: "Industrial Disputes Act, 1947 — full text", url: "https://www.indiacode.nic.in/handle/123456789/2244", source: "India Code" },
+      { label: "Sexual Harassment of Women at Workplace Act, 2013 (POSH)", url: "https://www.indiacode.nic.in/handle/123456789/2104", source: "India Code" },
+      { label: "Payment of Gratuity Act, 1972 — full text", url: "https://www.indiacode.nic.in/handle/123456789/1546", source: "India Code" },
+      { label: "EPFO portal (PF / EPS / ESIC)", url: "https://www.epfindia.gov.in/", source: "epfindia.gov.in" }
     ]
   },
 
@@ -592,6 +896,55 @@ const part1Content: Record<string, PracticeAreaContent> = {
       { stat: "20 Years", label: "Patent protection duration in India" },
       { stat: "80%", label: "Fee reduction for startup patent filing" },
       { stat: "10 Years", label: "Trademark validity period (renewable)" }
+    ],
+    commonProblems: [
+      "Trademark registration for a new brand / product name / logo / tagline",
+      "Trademark opposition received against your application",
+      "Patent filing — provisional, complete, PCT, national-phase entry",
+      "Patent infringement notice received or infringer needs to be sued",
+      "Copyright registration for software, music, film, book, choreography",
+      "Industrial design registration under the Designs Act 2000",
+      "Geographical Indication (GI) registration for traditional / regional products",
+      "Domain-name dispute and cybersquatting (UDRP / INDRP)",
+      "IP licensing, assignment, and franchising agreements",
+      "Trade-secret theft, employee NDA breach, or reverse engineering"
+    ],
+    legalProcess: [
+      { step: "IP audit and identification", description: "Inventory of registrable IP — marks, inventions, designs, software, content. Decision on which to register, which to keep as trade secret.", durationHint: "1–2 weeks" },
+      { step: "Prior-art / similarity search", description: "Public TM register search at ipindiaonline.gov.in; patent prior-art search via Indian Patent Office, USPTO, EPO, and PCT databases.", durationHint: "1–2 weeks" },
+      { step: "Filing the application", description: "TM application (Form TM-A) per Nice Class; provisional or complete patent specification (Form 1 + 2 + 3); copyright application (Form XIV); design application (Form 1).", durationHint: "1–2 weeks" },
+      { step: "Examination and objection / opposition response", description: "Registrar examines application; examination report (TM) or first examination report (FER for patents) raises objections; response within 1–6 months.", durationHint: "6–18 months" },
+      { step: "Publication and opposition window", description: "TM published in Trade Marks Journal, opposition window of 4 months; patent published 18 months from filing, pre-grant opposition under Section 25(1) Patents Act.", durationHint: "4 months (TM) / open (Patent)" },
+      { step: "Registration and certificate", description: "Where no opposition or oppositions are resolved, registration certificate is issued. TM: ®. Patent: 20-year monopoly from filing date.", durationHint: "12–24 months (TM) / 3–6 years (Patent)" },
+      { step: "Enforcement and infringement", description: "Cease-and-desist notice → civil suit for injunction + damages + delivery-up under Section 134 TM Act / Section 104 Patents Act / Section 55 Copyright Act. Criminal action under Section 103 TM Act / Section 63 Copyright Act.", durationHint: "1 day notice / 2–5 years suit" },
+      { step: "Renewals and portfolio management", description: "TM renewable every 10 years; patent annuities annually from year 3; design renewable 5+5+5 years; copyright lasts lifetime + 60 years.", durationHint: "Recurring" }
+    ],
+    requiredDocuments: [
+      "Identity and address proof of applicant (individual / company / partnership)",
+      "Power of Attorney (Form TM-48 for trademarks / Form 26 for patents) in favour of agent",
+      "Trademark / logo image (in JPEG / TIFF) and statement of use / proposed use",
+      "Patent specification — provisional or complete — with claims, drawings, abstract",
+      "Form 5 declaration of inventorship (for patents)",
+      "Copyright work — manuscript / software code / music score / artwork copies",
+      "Industrial-design drawings from all relevant views",
+      "Class identification under Nice Classification (TM) or IPC (Patent)",
+      "Prior-use evidence — invoices, advertisements, sales data (for prior-use claims)",
+      "Assignment / licence / NDA agreements (if filing on behalf of assignee)",
+      "Startup recognition certificate from DPIIT (for 80% fee reduction)",
+      "Filing fee challan / online payment receipt"
+    ],
+    timeline: [
+      { stage: "Trademark registration (uncontested)", duration: "12–18 months" },
+      { stage: "Patent grant (regular)", duration: "3–6 years" },
+      { stage: "Copyright registration", duration: "6–12 months" },
+      { stage: "IP infringement suit + interim injunction", duration: "Interim: 1–6 months / Final: 2–5 years" }
+    ],
+    outboundReferences: [
+      { label: "Trade Marks Act, 1999 — full text", url: "https://www.indiacode.nic.in/handle/123456789/1993", source: "India Code" },
+      { label: "Patents Act, 1970 — full text", url: "https://www.indiacode.nic.in/handle/123456789/1393", source: "India Code" },
+      { label: "Copyright Act, 1957 — full text", url: "https://www.indiacode.nic.in/handle/123456789/1367", source: "India Code" },
+      { label: "Indian Patent Office (IPO)", url: "https://ipindia.gov.in/", source: "ipindia.gov.in" },
+      { label: "Trademark Public Search", url: "https://tmrsearch.ipindia.gov.in/", source: "ipindia.gov.in" }
     ]
   },
 
@@ -746,12 +1099,61 @@ const part1Content: Record<string, PracticeAreaContent> = {
       { stat: "Rs. 1 Cr", label: "Minimum default threshold for IBC" },
       { stat: "60 Days", label: "SARFAESI notice response period" },
       { stat: "2 Years", label: "Maximum imprisonment for cheque bounce" }
+    ],
+    commonProblems: [
+      "Cheque bounce — issuer or recipient under Section 138 NI Act",
+      "Loan default / NPA — bank serving SARFAESI Section 13(2) notice",
+      "Possession of mortgaged property under Section 13(4) SARFAESI Act",
+      "Debt Recovery Tribunal proceedings under the RDB Act 1993",
+      "Insolvency under IBC — corporate, personal, or partnership",
+      "Bank fraud — unauthorised UPI / card / wire transactions",
+      "Wrongful loan deduction, hidden charges, or pre-payment penalty disputes",
+      "Credit-card dispute, EMI dispute, or CIBIL score correction",
+      "Locker contents lost, KYC freeze, or unwarranted account closure",
+      "Banking Ombudsman complaint under the RBI Integrated Ombudsman Scheme 2021"
+    ],
+    legalProcess: [
+      { step: "Cheque-bounce — issuance of notice", description: "Within 30 days of bank dishonour memo, send statutory notice under Section 138(b) NI Act demanding payment within 15 days.", durationHint: "Within 30 days" },
+      { step: "Cheque-bounce — filing complaint", description: "If amount not paid within 15 days, file complaint within next 30 days before Magistrate where the cheque was presented / dishonour bank is located.", durationHint: "30 days from notice expiry" },
+      { step: "SARFAESI Section 13(2) demand notice", description: "Bank issues 60-day notice to borrower / guarantor to repay the NPA. Borrower can submit representation under Section 13(3-A).", durationHint: "60 days" },
+      { step: "SARFAESI Section 13(4) possession", description: "After expiry of 60 days without repayment, bank takes symbolic / physical possession through Authorised Officer; sale notice issued.", durationHint: "After 60-day notice" },
+      { step: "Borrower's SARFAESI appeal", description: "Borrower can challenge before Debt Recovery Tribunal (DRT) under Section 17 within 45 days; further appeal to DRAT under Section 18 with 50% pre-deposit.", durationHint: "45 days to DRT" },
+      { step: "Bank's recovery — DRT route", description: "Where debt is above ₹20 lakh, bank can directly approach DRT under RDB Act 1993 for recovery and decree; auction of attached assets follows.", durationHint: "6 months – 2 years" },
+      { step: "IBC route for default above ₹1 crore", description: "Operational / financial creditor files Section 9 / Section 7 IBC application at NCLT; corporate insolvency resolution process (CIRP) of 330-day maximum.", durationHint: "Up to 330 days" },
+      { step: "Execution and recovery", description: "Decree / award executed via attachment, sale, garnishment, and arrest where the judgement-debtor is wilfully refusing to pay.", durationHint: "6 months – 5 years" }
+    ],
+    requiredDocuments: [
+      "Original cheque, dishonour memo, and bank statement (for Section 138 cases)",
+      "Statutory legal notice and proof of dispatch (RPAD AD + speed post)",
+      "Loan agreement, sanction letter, mortgage deed, hypothecation deed",
+      "Demand notice under SARFAESI Section 13(2) (where applicable)",
+      "Account statement showing default and NPA classification",
+      "Title deed of mortgaged property and EC / khata",
+      "Guarantor's documents and personal guarantee deed",
+      "CIBIL report and credit-history statement",
+      "RBI Ombudsman complaint and bank's response (for grievance cases)",
+      "Transaction screenshots, SMS alerts, and IP / login logs for fraud cases",
+      "FIR copy (for fraud / unauthorised-transaction cases)",
+      "Vakalatnama and authority letter (where corporate party)"
+    ],
+    timeline: [
+      { stage: "Section 138 NI Act case — Magistrate Court", duration: "1–3 years" },
+      { stage: "SARFAESI Section 13(2) to possession", duration: "60 days" },
+      { stage: "DRT recovery proceedings", duration: "6 months – 2 years" },
+      { stage: "IBC CIRP", duration: "Up to 330 days" }
+    ],
+    outboundReferences: [
+      { label: "Negotiable Instruments Act, 1881 — full text", url: "https://www.indiacode.nic.in/handle/123456789/2189", source: "India Code" },
+      { label: "SARFAESI Act, 2002 — full text", url: "https://www.indiacode.nic.in/handle/123456789/2027", source: "India Code" },
+      { label: "Recovery of Debts and Bankruptcy Act, 1993", url: "https://www.indiacode.nic.in/handle/123456789/1934", source: "India Code" },
+      { label: "RBI Integrated Ombudsman Scheme, 2021", url: "https://cms.rbi.org.in/", source: "rbi.org.in" },
+      { label: "Insolvency and Bankruptcy Code, 2016", url: "https://www.indiacode.nic.in/handle/123456789/2154", source: "India Code" }
     ]
   },
 
   "consumer-protection": {
     detailedOverview: [
-      "Consumer protection law in India received a major overhaul with the enactment of the Consumer Protection Act, 2019, which replaced the 1986 Act and introduced modern provisions addressing e-commerce disputes, product liability, misleading advertisements, unfair trade practices, and an enhanced three-tier adjudicatory mechanism. The new Act empowers consumers with tools to fight defective products, deficient services, and exploitative commercial practices across both offline and online marketplaces. At NyaySevak, our consumer protection practice ensures that individuals and businesses can effectively access these remedies through expert legal representation.",
+      "Need to file a consumer complaint in India? NyaySevak connects you with verified consumer court lawyers who specialise in defective product claims, deficient service complaints, e-commerce refund disputes, medical negligence, insurance claim rejections, real-estate deficiencies, and banking service failures. Our consumer protection advocates represent buyers and businesses at all three tiers of the Consumer Disputes Redressal Commission — District (claims up to ₹1 crore), State (₹1–10 crore), and National (above ₹10 crore) — under the Consumer Protection Act 2019. From filing the complaint and serving the statutory notice through to enforcement of orders and appeals, our team handles the entire process end-to-end. Free first consultation in 60 seconds.",
       "The three-tier Consumer Disputes Redressal Commission structure\u2014District Commissions (for claims up to Rs. 1 crore), State Commissions (for claims between Rs. 1 crore and Rs. 10 crores), and the National Commission (for claims exceeding Rs. 10 crores)\u2014provides accessible justice with simplified procedures, no requirement for a lawyer (though legal representation is advisable), and relatively faster resolution compared to civil courts. The 2019 Act has broadened the definition of 'consumer' to include online buyers, introduced the concept of product liability (making manufacturers, sellers, and service providers strictly liable), and established the Central Consumer Protection Authority (CCPA) to investigate and address unfair trade practices proactively.",
       "Our consumer protection practice covers the full spectrum of disputes\u2014from everyday complaints about defective electronics and automobiles to high-value claims involving medical negligence, insurance claim rejections, real estate deficiencies, banking service failures, and e-commerce disputes. We also represent businesses defending against consumer complaints, ensuring that frivolous or exaggerated claims are effectively contested. Our team is experienced in pursuing enforcement of orders, interim relief (ad-interim injunctions), and appeals through all three tiers of the consumer forum hierarchy."
     ],
@@ -825,12 +1227,60 @@ const part1Content: Record<string, PracticeAreaContent> = {
       { stat: "Rs. 1 Cr", label: "District Commission jurisdiction limit" },
       { stat: "2 Years", label: "Limitation period for consumer complaints" },
       { stat: "E-Filing", label: "Available via edaakhil portal" }
+    ],
+    commonProblems: [
+      "Defective product — phone, appliance, vehicle — and seller refuses replacement or refund",
+      "E-commerce order not delivered, wrong item delivered, or refund denied by Flipkart / Amazon / Myntra",
+      "Builder delivering possession late or charging beyond agreed price (also a RERA matter)",
+      "Insurance claim wrongfully rejected — health, motor, or life policy",
+      "Banking deficiency — wrong charges, unauthorised debit, locker contents lost",
+      "Medical negligence — wrong diagnosis, surgical error, hospital overcharging",
+      "Misleading advertisement or unfair trade practice",
+      "Service deficiency by airline, telecom, courier, or cab aggregator",
+      "Defect in real-estate flat / villa — leakage, structural issues, missing amenities"
+    ],
+    legalProcess: [
+      { step: "Statutory notice to the opposite party", description: "Formal demand notice giving 15–30 days to refund / replace / repair. Most matters settle here without filing.", durationHint: "15–30 days" },
+      { step: "Determining the correct forum", description: "District Commission (claims up to ₹1 crore), State Commission (₹1–10 crore), National Commission (above ₹10 crore). Filed where consumer resides, works, or where the cause arose.", durationHint: "Same day" },
+      { step: "Filing the consumer complaint", description: "Complaint drafted under Section 35 / 47 / 58 of the CPA 2019, with supporting documents and prescribed fee. E-filing available via edaakhil.nic.in.", durationHint: "1 week" },
+      { step: "Notice and admission", description: "Forum issues notice to the opposite party who must file written reply within 30 days (extendable to 45).", durationHint: "30–45 days" },
+      { step: "Evidence by affidavit", description: "Both sides file evidence affidavits and documents; oral evidence is rare unless directed.", durationHint: "2–4 months" },
+      { step: "Arguments and order", description: "Counsel argue on merits; Commission may direct refund, replacement, compensation, punitive damages, and litigation costs.", durationHint: "1–3 months" },
+      { step: "Appeal / revision", description: "Appeal to State (from District), to National (from State), and to Supreme Court (from National). Mandatory pre-deposit applies on the opposite party for delay of refund.", durationHint: "30 days to file" },
+      { step: "Execution of order", description: "If order not complied with, execution petition leads to attachment / sale of opposite party's assets and possible imprisonment for wilful disobedience.", durationHint: "3–12 months" }
+    ],
+    requiredDocuments: [
+      "Original invoice, bill, or tax invoice with date and serial number",
+      "Order confirmation / booking confirmation / e-mail correspondence",
+      "Product warranty card and proof of purchase",
+      "Photographs and videos of the defective product / deficient service",
+      "Bank statement showing the disputed payment",
+      "Service / repair history with dates and amounts",
+      "Statutory legal notice and proof of service (RPAD / courier POD)",
+      "Identity proof and address proof of complainant",
+      "Insurance policy document and claim rejection letter (for insurance cases)",
+      "Medical records, prescriptions, hospital bills (for medical negligence)",
+      "Affidavit of complainant verifying contents of complaint",
+      "Demand draft / online payment receipt for filing fee"
+    ],
+    timeline: [
+      { stage: "Notice to filing", duration: "2–6 weeks" },
+      { stage: "Filing to first hearing", duration: "1–2 months" },
+      { stage: "District Commission — final order", duration: "6 months – 2 years" },
+      { stage: "Appeal to State / National / SC", duration: "1–4 additional years" }
+    ],
+    outboundReferences: [
+      { label: "Consumer Protection Act, 2019 — full text", url: "https://www.indiacode.nic.in/handle/123456789/15256", source: "India Code" },
+      { label: "edaakhil — National e-filing portal", url: "https://edaakhil.nic.in/", source: "edaakhil.nic.in" },
+      { label: "National Consumer Disputes Redressal Commission", url: "https://ncdrc.nic.in/", source: "ncdrc.nic.in" },
+      { label: "Central Consumer Protection Authority (CCPA)", url: "https://consumeraffairs.nic.in/", source: "consumeraffairs.nic.in" },
+      { label: "National Consumer Helpline", url: "https://consumerhelpline.gov.in/", source: "consumerhelpline.gov.in" }
     ]
   },
 
   "cyber-law": {
     detailedOverview: [
-      "Cyber law in India is primarily governed by the Information Technology Act, 2000 (as amended in 2008) and the rules framed thereunder, supplemented by provisions of the Bharatiya Nyaya Sanhita, 2023 and sector-specific regulations. As India's digital economy has exploded\u2014with over 800 million internet users, the world's largest UPI payment ecosystem, and a rapidly growing digital commerce sector\u2014the legal challenges in cyberspace have grown exponentially. From cyber-crimes like hacking, phishing, ransomware, and identity theft to civil disputes involving data privacy, online defamation, and e-commerce compliance, the field of cyber law demands specialized expertise at the intersection of technology and law. At NyaySevak, our cyber law practice provides both proactive advisory and aggressive enforcement for individuals and businesses operating in the digital space.",
+      "Looking for a cyber crime lawyer in India? NyaySevak connects you with verified cyber-law advocates for online fraud, UPI scam recovery, phishing, ransomware, identity theft, online defamation, data privacy, and IT Act compliance \u2014 across the Supreme Court, High Courts, Cyber Crime Police Stations, and the National Cyber Crime Reporting Portal (cybercrime.gov.in). Our cyber crime lawyers handle complaints under the Information Technology Act 2000 (as amended in 2008), the Digital Personal Data Protection Act 2023 (DPDPA), and the relevant provisions of the Bharatiya Nyaya Sanhita 2023. From the moment a fraud is reported to chargeback recovery, bank ombudsman complaints, and trial defence, we cover the full digital legal lifecycle. Free first consultation in 60 seconds.",
       "The Digital Personal Data Protection Act, 2023 (DPDPA) has added a transformative layer to India's cyber law framework, establishing a comprehensive data protection regime that governs how personal data is collected, processed, stored, and transferred. The DPDPA introduces concepts of data fiduciaries, data processors, consent management, data principal rights, and the Data Protection Board of India as the adjudicatory authority. Businesses across sectors\u2014from IT companies and startups to banks, hospitals, and e-commerce platforms\u2014must now comply with these provisions or face penalties of up to Rs. 250 crores.",
       "Our cyber law practice covers the full spectrum of digital legal issues: filing and defending cyber-crime complaints before Cyber Crime Police Stations and the National Cyber Crime Reporting Portal (cybercrime.gov.in), pursuing civil remedies for online defamation and harassment, advising on IT Act compliance including intermediary guidelines (IT Rules, 2021), social media regulation, data localization requirements, and handling domain name disputes through the .IN Registry Dispute Resolution Policy. We also assist businesses with digital contract enforcement, electronic evidence admissibility under the Bharatiya Sakshya Adhiniyam, 2023, and cyber insurance claims."
     ],
@@ -898,6 +1348,55 @@ const part1Content: Record<string, PracticeAreaContent> = {
       { stat: "Rs. 250 Cr", label: "Maximum penalty under DPDPA" },
       { stat: "1930", label: "National Cyber Crime Helpline number" },
       { stat: "6 Hours", label: "CERT-In incident reporting deadline" }
+    ],
+    commonProblems: [
+      "UPI / debit-card / net-banking fraud — money debited without authorisation",
+      "Online investment / crypto / share-trading scam (WhatsApp groups, fake apps)",
+      "Phishing, OTP fraud, or SIM-swap leading to account compromise",
+      "Ransomware, hacking of e-mail / social-media accounts, or business data exfiltration",
+      "Online defamation, cyber-stalking, or non-consensual image sharing",
+      "Identity theft using stolen Aadhaar / PAN / KYC documents",
+      "Job-offer, romance, or matrimonial fraud through online channels",
+      "E-commerce / marketplace fraud — fake seller, counterfeit goods, refund denial",
+      "Defending a client wrongly named as an accused in a cyber-crime FIR",
+      "Data-protection compliance under the DPDPA 2023 for businesses"
+    ],
+    legalProcess: [
+      { step: "Immediate reporting (within 24 hours)", description: "Call 1930 (National Cyber Crime Helpline) or file complaint at cybercrime.gov.in. For banking fraud, also report to bank in writing within 3 working days to limit customer liability under the RBI 2017 circular.", durationHint: "Within 24 hours" },
+      { step: "FIR registration", description: "Local Cyber Crime Police Station registers FIR under IT Act 2000 sections (Section 66, 66C, 66D, etc.) and corresponding BNS provisions. Insist on registration even if police suggest waiting.", durationHint: "1–3 days" },
+      { step: "Bank / payment-platform engagement", description: "Bank locks the fraudster's account on receipt of complaint; chargeback initiated for card transactions. Banking Ombudsman complaint if bank delays.", durationHint: "Parallel — within 7 days" },
+      { step: "Investigation and digital forensics", description: "Police obtain CDRs, IP logs, transaction trails, and may request CERT-In or NCIIPC assistance. KYC of fraudster's account is pulled via court order if required.", durationHint: "30–90 days" },
+      { step: "Chargesheet filing", description: "Police file chargesheet under IT Act + IPC/BNS provisions. Special Court for cyber offences takes cognisance.", durationHint: "60–90 days from FIR" },
+      { step: "Trial before special / Magistrate court", description: "Charges framed; prosecution and defence evidence; cross-examination of digital evidence including hash verification under Section 65B BSA / IEA.", durationHint: "1–4 years" },
+      { step: "Civil remedies in parallel", description: "Civil suit for damages, injunction to remove defamatory content, suit before Adjudicating Officer under Section 46 IT Act for compensation up to ₹5 crores.", durationHint: "Filed in parallel" },
+      { step: "Chargeback / refund recovery", description: "If money is traced and recovered, court orders return; otherwise compensation may be ordered as part of conviction.", durationHint: "Varies" }
+    ],
+    requiredDocuments: [
+      "Screenshots of fraudulent transactions, WhatsApp / e-mail / app conversations",
+      "Bank statement showing the disputed debits and dispute lodgement entry",
+      "SMS, OTP, and call-history extracts with timestamps",
+      "Copy of FIR / NCR receipt from the Cyber Crime Police Station",
+      "Acknowledgement number from cybercrime.gov.in or call to 1930",
+      "Identity proof (Aadhaar, PAN, passport) of the victim",
+      "KYC documents for the bank account / wallet used by the fraudster (if known)",
+      "Section 65B Bharatiya Sakshya Adhiniyam certificate for electronic evidence",
+      "Digital-forensic image / hash of any seized device",
+      "Copy of the bank's response and Banking Ombudsman complaint (if filed)",
+      "URL / domain registration details (WHOIS) for defamatory / fake-website cases",
+      "Vakalatnama in favour of the cyber-crime advocate"
+    ],
+    timeline: [
+      { stage: "Reporting & FIR", duration: "1–3 days" },
+      { stage: "Bank refund (where eligible)", duration: "10–90 days" },
+      { stage: "Police investigation & chargesheet", duration: "60–90 days" },
+      { stage: "Trial — special court", duration: "1–4 years" }
+    ],
+    outboundReferences: [
+      { label: "Information Technology Act, 2000 — full text", url: "https://www.indiacode.nic.in/handle/123456789/1999", source: "India Code" },
+      { label: "Digital Personal Data Protection Act, 2023", url: "https://www.indiacode.nic.in/handle/123456789/20065", source: "India Code" },
+      { label: "National Cyber Crime Reporting Portal", url: "https://cybercrime.gov.in/", source: "cybercrime.gov.in" },
+      { label: "CERT-In (Indian Computer Emergency Response Team)", url: "https://www.cert-in.org.in/", source: "cert-in.org.in" },
+      { label: "RBI Integrated Ombudsman (UPI / banking fraud)", url: "https://cms.rbi.org.in/", source: "rbi.org.in" }
     ]
   },
 
@@ -983,12 +1482,61 @@ const part1Content: Record<string, PracticeAreaContent> = {
       { stat: "160+", label: "Countries party to the New York Convention" },
       { stat: "Zero", label: "Court fees in Lok Adalat proceedings" },
       { stat: "Non-Appealable", label: "Lok Adalat awards are final" }
+    ],
+    commonProblems: [
+      "Commercial contract dispute with an arbitration clause — invoking arbitration",
+      "Need to draft an arbitration clause in a new commercial agreement",
+      "Court application under Section 11 for arbitrator appointment when other side stonewalls",
+      "Section 9 application — urgent interim relief before / during arbitration",
+      "Section 34 application — challenging or defending a domestic arbitral award",
+      "Section 36 — enforcement of an arbitral award as a decree",
+      "Section 48 — enforcement of a foreign award under the New York Convention",
+      "Institutional arbitration under MCIA / DIAC / ICA / SIAC / ICC / LCIA rules",
+      "Mediation under the Mediation Act 2023 / court-annexed mediation",
+      "Lok Adalat settlement and award (cheque-bounce, MV claims, family matters)"
+    ],
+    legalProcess: [
+      { step: "Section 21 — notice invoking arbitration", description: "Claimant serves written notice on respondent invoking arbitration clause; arbitration is commenced on date of receipt of notice. Limitation under Article 137 Limitation Act starts running.", durationHint: "Same day" },
+      { step: "Appointment of arbitrator(s)", description: "By mutual agreement, by institutional nomination (MCIA / DIAC), or by Section 11 application to High Court / Supreme Court Chief Justice's designate.", durationHint: "30 days mutual / 3–6 months Section 11" },
+      { step: "Preliminary hearing", description: "Arbitrator(s) fix the seat, venue, language, procedural timeline, and confidentiality protocols. Statement of claim filed within 30 days.", durationHint: "1–2 months" },
+      { step: "Pleadings — claim, defence, counter-claim", description: "Statement of claim, statement of defence and counter-claim, reply, and rejoinder. Documents disclosed and inspected.", durationHint: "3–6 months" },
+      { step: "Evidence — affidavit and cross-examination", description: "Witness affidavits filed; oral cross-examination; expert evidence where required. Documents exhibited.", durationHint: "3–9 months" },
+      { step: "Final arguments and award", description: "Statutory time limit — 12 months from completion of pleadings (extendable by 6 months by parties' consent; further extension only by court).", durationHint: "Within 12 months of pleadings" },
+      { step: "Section 34 challenge to award", description: "Aggrieved party can apply under Section 34 within 3 months (extendable by 30 days) — grounds limited to incapacity, invalid agreement, lack of notice, beyond jurisdiction, procedural irregularity, conflict with Indian public policy.", durationHint: "3 months + 30 days" },
+      { step: "Section 36 / 48 enforcement", description: "Award enforceable as a decree once the Section 34 challenge fails or limitation expires. Foreign awards enforced under Part II after satisfying Section 48 grounds.", durationHint: "6 months – 2 years" }
+    ],
+    requiredDocuments: [
+      "The underlying contract / agreement containing the arbitration clause",
+      "Section 21 notice invoking arbitration and proof of dispatch (RPAD AD)",
+      "All correspondence, e-mails, invoices, and dispute-related documents",
+      "Statement of claim with computation of damages and interest",
+      "Witness affidavits, expert reports, and supporting documentation",
+      "Arbitration agreement (if separate) or supplementary agreement",
+      "Institutional rules (where institutional arbitration — MCIA / DIAC / ICC)",
+      "Power of attorney and vakalatnama for counsel",
+      "List of authorities and case-law compilation",
+      "Award copy (for Section 34 / Section 36 / Section 48 proceedings)",
+      "Foreign award and certified translation (for Section 48)",
+      "Pre-deposit / security details (for award challenge)"
+    ],
+    timeline: [
+      { stage: "Section 21 notice to first hearing", duration: "1–6 months" },
+      { stage: "Pleadings & evidence", duration: "6–12 months" },
+      { stage: "Award (statutory cap)", duration: "12 months (+ 6 month extension)" },
+      { stage: "Section 34 challenge and enforcement", duration: "1–3 years" }
+    ],
+    outboundReferences: [
+      { label: "Arbitration and Conciliation Act, 1996 — full text", url: "https://www.indiacode.nic.in/handle/123456789/1978", source: "India Code" },
+      { label: "Mediation Act, 2023 — full text", url: "https://www.indiacode.nic.in/handle/123456789/20066", source: "India Code" },
+      { label: "Mumbai Centre for International Arbitration (MCIA)", url: "https://mcia.org.in/", source: "mcia.org.in" },
+      { label: "India International Arbitration Centre (IIAC)", url: "https://iiac.gov.in/", source: "iiac.gov.in" },
+      { label: "National Legal Services Authority (NALSA) — Lok Adalats", url: "https://nalsa.gov.in/", source: "nalsa.gov.in" }
     ]
   },
 
   "documentation": {
     detailedOverview: [
-      "Legal documentation services form the essential foundation of all civil, commercial, and personal legal transactions in India. From the simplest affidavit to complex power of attorney instruments, from property sale deeds to apostilled documents for international use, every legal document must be drafted with precision, comply with applicable stamping and registration requirements, and withstand judicial scrutiny. At NyaySevak, our documentation practice provides comprehensive, end-to-end legal document preparation services with a focus on accuracy, compliance, and quick turnaround.",
+      "Need a legal document drafted, notarised, or attested in India? NyaySevak's verified documentation lawyers prepare affidavits, sale deeds, gift deeds, lease deeds, power of attorney (general and special), wills, partnership deeds, MOUs, NDAs, employment contracts, and legal notices — with proper stamp duty, registration, and notarisation across every Indian state. From simple affidavits and POA drafting to Ministry of External Affairs (MEA) apostille and embassy attestation for international use, gazette notifications for name changes, e-stamp procurement, and certified legal translation, our team delivers same-day turnaround for urgent requirements and supports individuals, families, businesses, NRIs, and foreign nationals. Free first consultation.",
       "India's documentation framework is governed by multiple statutes including the Registration Act, 1908 (mandating registration of certain documents), the Indian Stamp Act, 1899 (requiring stamp duty on instruments), the Notaries Act, 1952, the Indian Evidence Act/Bharatiya Sakshya Adhiniyam (governing the admissibility of documents as evidence), and the Apostille Convention for international document authentication. Each state has its own stamp duty rates, registration procedures, and documentation requirements, making it essential to work with legal professionals who understand the local regulatory landscape.",
       "Our documentation services extend beyond mere drafting to include document verification, notarization, attestation by the Ministry of External Affairs (MEA) for apostille, gazette notifications for name changes, e-stamp procurement, legal translation (for documents in regional languages), and guidance on stamp duty optimization. We serve individuals, families, businesses, NRIs, and foreign nationals requiring legal documents for use in India or abroad. Our digital-first approach allows clients across India to access our documentation services remotely, with physical document delivery through secure courier."
     ],
@@ -1070,6 +1618,157 @@ const part1Content: Record<string, PracticeAreaContent> = {
       { stat: "24-48 Hrs", label: "Typical affidavit turnaround time" },
       { stat: "15+", label: "Languages supported for legal translation" },
       { stat: "100%", label: "Digital-ready documentation process" }
+    ],
+    commonProblems: [
+      "Need a property sale deed, gift deed, or lease deed drafted with correct stamp duty",
+      "General or Special Power of Attorney for property / banking / litigation matters",
+      "Drafting a will, codicil, or trust deed with proper succession planning",
+      "Affidavit for name change, address change, lost document, or income declaration",
+      "Partnership deed, LLP agreement, MOU, NDA, or service agreement for business",
+      "Apostille / MEA attestation of educational certificates for use abroad",
+      "Gazette notification for legal name change",
+      "Certified translation of documents into / from regional languages",
+      "Notarisation, e-stamping, and stamp-duty payment guidance for any state",
+      "Probate of will or letters of administration for intestate succession"
+    ],
+    legalProcess: [
+      { step: "Requirement intake and scope clarification", description: "Lawyer captures parties, purpose, jurisdiction, and consideration to decide the correct document type and applicable stamp / registration treatment.", durationHint: "Same day" },
+      { step: "Stamp-duty and registration mapping", description: "Computation of state-specific stamp duty under the Indian Stamp Act 1899 + state amendments; decide whether registration is mandatory under Section 17 Registration Act 1908 or optional under Section 18.", durationHint: "Same day" },
+      { step: "Drafting", description: "Document drafted with all standard clauses (recitals, consideration, indemnity, jurisdiction, dispute resolution) and party-specific terms. Reviewed for ambiguity and enforceability.", durationHint: "24–48 hours" },
+      { step: "Client review and revisions", description: "Draft circulated for review; two rounds of revisions included. Parallel KYC and identity-proof verification of executants.", durationHint: "1–3 days" },
+      { step: "Stamping / e-stamp procurement", description: "Stamp paper purchased (or e-stamp from SHCIL) of correct denomination; document typed / printed on or affixed to the stamp.", durationHint: "Same day" },
+      { step: "Execution and notarisation", description: "Document signed by all parties before two witnesses; notarised by an advocate-notary under the Notaries Act 1952 where required.", durationHint: "Same day" },
+      { step: "Registration (where mandatory)", description: "Presentation before Sub-Registrar within 4 months of execution; biometric capture; registration fee paid; registered document issued.", durationHint: "Same day to 1 week" },
+      { step: "Apostille / attestation (for international use)", description: "Notary → State Home Department / HRD → MEA apostille (for Hague Convention countries) or embassy attestation (for non-Hague countries).", durationHint: "7–21 days" }
+    ],
+    requiredDocuments: [
+      "Identity proof of all parties (Aadhaar + PAN + passport-size photographs)",
+      "Address proof of all parties (utility bill, registered lease, voter ID)",
+      "Title deed / parent document (for property-related drafting)",
+      "Encumbrance certificate (for property sale / mortgage drafting)",
+      "Bank account details (for consideration / payment-clause documents)",
+      "Marriage / birth / death certificates (for succession-related documents)",
+      "Educational certificates / transcripts (for apostille and attestation)",
+      "Original document to be notarised / attested (with self-attested copy)",
+      "Affidavit of identity / no-objection from related parties (where applicable)",
+      "Stamp-duty payment proof (e-stamp / franking / treasury challan)",
+      "Two passport-size photographs of each executant (for registration)",
+      "Authorisation letter (if executed through a representative)"
+    ],
+    timeline: [
+      { stage: "Affidavits & simple POA", duration: "24–48 hours" },
+      { stage: "Drafting sale / lease / gift deed", duration: "2–5 days" },
+      { stage: "Stamping, registration & mutation", duration: "1–3 weeks" },
+      { stage: "MEA apostille / embassy attestation", duration: "1–3 weeks" }
+    ],
+    outboundReferences: [
+      { label: "Registration Act, 1908 — full text", url: "https://www.indiacode.nic.in/handle/123456789/2168", source: "India Code" },
+      { label: "Indian Stamp Act, 1899 — full text", url: "https://www.indiacode.nic.in/handle/123456789/2304", source: "India Code" },
+      { label: "Notaries Act, 1952 — full text", url: "https://www.indiacode.nic.in/handle/123456789/1564", source: "India Code" },
+      { label: "Ministry of External Affairs — Apostille service", url: "https://www.mea.gov.in/apostille.htm", source: "mea.gov.in" },
+      { label: "SHCIL e-Stamping portal", url: "https://www.shcilestamp.com/", source: "shcilestamp.com" }
+    ]
+  },
+
+  "legal-notices": {
+    detailedOverview: [
+      "Need to send or reply to a legal notice in India? NyaySevak's verified legal-notice lawyers draft and dispatch cheque-bounce notices under Section 138 NI Act, eviction notices, defamation notices, recovery notices, consumer notices, Section 80 CPC notices against the Government, and matrimonial / employment notices — with proper statutory wording, correct limitation periods, and registered-post / e-mail / courier dispatch tracking. A well-drafted notice resolves the majority of disputes pre-litigation, saves court fees, and creates the documentary record courts treat as serious intent. Free first consultation in 60 seconds.",
+      "A legal notice is the formal written demand sent by one party to another setting out a grievance, the legal basis for the claim, the relief sought, and a deadline — usually 15 to 30 days — within which compliance is expected. Under several Indian statutes the notice is a statutory pre-condition to filing suit (e.g., Section 138 NI Act for cheque-bounce, Section 80 CPC for suits against the Government, Section 12-A Commercial Courts Act for mandatory pre-institution mediation in commercial disputes, and Section 8 Consumer Protection Act 2019 for consumer complaints). A defective notice can lead to dismissal of the subsequent suit on a pure technicality.",
+      "Our notice practice covers both sides — sending notices to make a demand and replying to notices received (where the reply protects you from adverse inferences in subsequent litigation). We draft in plain language with the legal citations a court expects, dispatch by Registered Post with Acknowledgement Due (RPAD) and / or speed post and / or e-mail, retain the postal receipt and AD card as proof of service, and follow up if the notice is wilfully refused or undelivered — refusal is judicial deemed service under Section 27 General Clauses Act 1897."
+    ],
+    keyLegislation: [
+      "Negotiable Instruments Act, 1881 (Section 138 — cheque bounce)",
+      "Code of Civil Procedure, 1908 (Section 80 — notice to Government)",
+      "Commercial Courts Act, 2015 (Section 12-A — mandatory pre-institution mediation)",
+      "Consumer Protection Act, 2019 (Section 8 — pre-complaint notice)",
+      "Indian Contract Act, 1872 (notice of breach, repudiation)",
+      "Bharatiya Nyaya Sanhita, 2023 (defamation — Section 356)",
+      "Hindu Marriage Act, 1955 (divorce-ground intimation)",
+      "General Clauses Act, 1897 (Section 27 — service by post)",
+      "Information Technology Act, 2000 (notice via electronic record)",
+      "Industrial Disputes Act, 1947 (Section 9-A change-of-service notice)"
+    ],
+    serviceDetails: [
+      { title: "Cheque-Bounce Notice (Section 138 NI Act)", description: "Drafted within 30 days of bank dishonour memo, giving the drawer 15 days to make good. Failure starts the 30-day window to file a complaint under Section 138. We draft, dispatch by RPAD + speed post, and follow up." },
+      { title: "Eviction Notice to Tenant", description: "Drafted under the applicable state Rent-Control Act (Delhi Rent Control Act, Maharashtra Rent Control Act, Karnataka Rent Act, etc.) or the Model Tenancy Act 2021 where adopted. Specifies grounds — non-payment, breach, bona-fide need — and notice period (typically 1–3 months)." },
+      { title: "Defamation Notice", description: "Civil defamation notice claiming damages and injunction; criminal defamation notice under Section 356 BNS / Section 499 IPC where the imputation is per-se defamatory. Pre-publication injunction notices for social-media / press defamation." },
+      { title: "Recovery / Demand Notice", description: "For unpaid invoices, loans, salary, deposits, or contractual dues. Specifies amount, basis, limitation period (3 years for contract / 6 years for negotiable instrument), and demand for payment with interest." },
+      { title: "Consumer Protection Notice", description: "Statutory pre-complaint notice under Section 8 CPA 2019 for defective product / deficient service / unfair-trade-practice claims before filing at District / State / National Commission." },
+      { title: "Section 80 CPC Notice (Government & Public Officers)", description: "Mandatory 2-month notice before suing the Government or a public officer acting in official capacity. Failure renders the subsequent suit liable to be dismissed under Section 80(1)." },
+      { title: "Divorce / Matrimonial Notice", description: "Pre-petition notice to spouse setting out grounds under Section 13 HMA / SMA / IDA. Often the trigger that brings the other side to the settlement table for mutual-consent divorce." },
+      { title: "Employment / Wrongful-Termination Notice", description: "For sudden dismissal without notice pay, unpaid salary, withheld gratuity, denied PF/ESI, hostile work environment, or POSH-Act-related grievances. Often resolves without industrial tribunal proceedings." },
+      { title: "Reply to a Legal Notice", description: "Drafting a calibrated reply that admits what is true, denies what is false, raises lawful defences, asserts counter-claims if any, and avoids self-incrimination. Wrong silences become adverse inferences in court." },
+      { title: "RTI Notice & Second Appeal", description: "First appeal under Section 19(1) RTI Act and second appeal before the Central / State Information Commission for non-disclosure, evasive response, or excessive fee demand." }
+    ],
+    faqs: [
+      { question: "Is sending a legal notice mandatory before filing a case in India?", answer: "It depends on the statute. For Section 138 NI Act cheque-bounce cases, Section 80 CPC suits against the Government, Section 12-A Commercial Courts Act commercial disputes, and Section 8 Consumer Protection Act complaints, notice is a statutory pre-condition. For most other civil suits notice is not mandatory but is strategically advisable because (i) it can resolve the matter without litigation, (ii) it creates a documentary record of the demand, and (iii) it may save costs of mandatory mediation later." },
+      { question: "What is the standard notice period — 15 days or 30 days?", answer: "For Section 138 NI Act cheque-bounce: 15 days. For Section 80 CPC against Government: 2 months. For Section 12-A Commercial Courts Act mediation: the mediation period itself is 3 months. For most contractual notices, the standard is 15–30 days. The notice should explicitly state the period. Anything shorter than statutory minima is invalid." },
+      { question: "Can I send a legal notice by e-mail?", answer: "Yes — Section 4 IT Act 2000 recognises e-records, and courts have repeatedly accepted e-mail service where the recipient's e-mail is known and previously used. However, for statutory notices (Section 138 NI Act, Section 80 CPC) best practice is to send by Registered Post with Acknowledgement Due (RPAD) plus speed post plus e-mail to be unimpeachable. Retain all dispatch receipts and AD cards as evidence." },
+      { question: "What happens if the other party refuses to accept the notice?", answer: "Refusal is treated as deemed service under Section 27 General Clauses Act 1897 read with the postal endorsement \"refused\". Similarly an \"unclaimed\" notice properly addressed and dispatched is also deemed served. Courts have held in repeated rulings (most recently in cheque-bounce jurisprudence) that the addressee cannot defeat statutory notice by deliberately avoiding postal delivery." },
+      { question: "Should I reply to a legal notice I received?", answer: "Almost always yes — a calibrated reply admits what is true, denies what is false, raises your lawful defences, and avoids the adverse inference that silence often invites. Failure to reply is not itself a cause of action, but courts can and do treat unrebutted allegations as accepted. The exception is where the notice itself is illegal (e.g., demanding something a court has already adjudicated), in which case a one-paragraph dignified refusal is enough." },
+      { question: "How much does it cost to send a legal notice in India?", answer: "Lawyer drafting fees typically range from ₹500 (simple cheque-bounce / recovery notice) to ₹5,000–₹15,000 (complex commercial / defamation / Section 80 CPC notices). Dispatch costs add ₹50–₹200 per recipient (RPAD + speed post). NyaySevak's transparent fee structure shows the price up front before you book." }
+    ],
+    relevantCourts: [
+      "No court at this stage — pre-litigation route",
+      "Magistrate Court (post-Section 138 NI Act complaint)",
+      "District / High Court (suit after Section 80 CPC notice)",
+      "Consumer Disputes Redressal Commissions",
+      "Industrial / Labour Tribunal (post-employment notice)"
+    ],
+    highlights: [
+      { stat: "15 Days", label: "Statutory notice period for cheque bounce" },
+      { stat: "2 Months", label: "Mandatory notice period under Section 80 CPC" },
+      { stat: "24–48 Hrs", label: "Standard turnaround for notice drafting" },
+      { stat: "Pan-India", label: "Dispatch via RPAD + speed post + e-mail" }
+    ],
+    commonProblems: [
+      "Cheque issued in your favour has bounced and you need to act within 30 days",
+      "Tenant is in arrears or refuses to vacate after lease expiry",
+      "Online or press defamation that needs immediate take-down and apology",
+      "Unpaid invoice / loan / salary / deposit needs formal demand before suit",
+      "Defective product or deficient service that pre-complaint notice must precede",
+      "Government department's wrongful order — Section 80 CPC notice before writ / suit",
+      "Spouse is unreachable for mutual-consent talks — matrimonial notice opens dialogue",
+      "Sudden dismissal without notice pay / unpaid gratuity / PF dues",
+      "Notice has been served on you and you need a calibrated reply to protect your position",
+      "Public Information Officer is stonewalling an RTI — second appeal needed"
+    ],
+    legalProcess: [
+      { step: "Capture the facts and the relief sought", description: "Lawyer captures the dispute chronology, supporting documents, the legal claim, and the precise relief (refund / compliance / vacating / apology / damages).", durationHint: "Same day" },
+      { step: "Identify the statutory framework", description: "Decide whether the notice is statutory (Section 138 NI Act / Section 80 CPC / Section 12-A Commercial Courts Act / Section 8 CPA 2019) or contractual; this dictates the mandatory wording, period, and addressee.", durationHint: "Same day" },
+      { step: "Draft the notice", description: "Plain-language facts, statutory citations, computation of damages, the precise demand, and the deadline. Reviewed for ambiguity, limitation period, and missing parties.", durationHint: "24–48 hours" },
+      { step: "Client review and sign-off", description: "Draft circulated, two rounds of revisions, then signed by the advocate and counter-signed by the client (where appropriate).", durationHint: "1–2 days" },
+      { step: "Dispatch by multiple modes", description: "Registered Post with AD (RPAD) for statutory unimpeachability, speed post for tracking, courier for redundancy, and e-mail to all known IDs. Each mode generates an independent proof of dispatch.", durationHint: "Same day" },
+      { step: "Track service and acknowledgement", description: "Postal AD card is filed; speed-post tracking is monitored; e-mail read-receipts are saved. Refused / unclaimed endorsements treated as deemed service under Section 27 General Clauses Act.", durationHint: "7–14 days" },
+      { step: "Follow-up and reply analysis", description: "If the recipient replies, the reply is analysed and a rejoinder is drafted if needed. If no reply comes within the deadline, evidence of service is preserved for the subsequent suit.", durationHint: "Within the deadline" },
+      { step: "Escalation to suit / complaint", description: "If the demand is not met, suit / complaint is filed within the limitation period (30 days from cheque-bounce notice expiry; 2 years for CPA; 3 years for contract; etc.).", durationHint: "After the notice deadline lapses" }
+    ],
+    requiredDocuments: [
+      "Identity proof of sender (Aadhaar / PAN / Passport) and recipient details",
+      "All correspondence, e-mails, WhatsApp chats relating to the dispute",
+      "Invoices, contracts, agreements, or undertakings forming the basis of the demand",
+      "Bank statement / cheque image / dishonour memo (for Section 138 NI Act notices)",
+      "Lease deed, rent receipts, and arrears statement (for eviction notices)",
+      "Defamatory publication / screenshots / URL (for defamation notices)",
+      "Termination letter, last salary slip, PF / gratuity statements (for employment notices)",
+      "Order, application, RTI response, and PIO designation (for RTI second appeals)",
+      "Marriage certificate and grounds-evidence (for matrimonial notices)",
+      "Photographs and site plans for property / tenancy notices",
+      "Limitation calculation showing the demand is within time",
+      "Postal address proof of the recipient (for RPAD acceptance)"
+    ],
+    timeline: [
+      { stage: "Drafting and dispatch", duration: "24–72 hours" },
+      { stage: "Statutory notice period", duration: "15–60 days" },
+      { stage: "Reply analysis & follow-up", duration: "7–14 days" },
+      { stage: "Filing of suit / complaint (if needed)", duration: "Within statutory limitation" }
+    ],
+    outboundReferences: [
+      { label: "Negotiable Instruments Act, 1881 (Section 138)", url: "https://www.indiacode.nic.in/handle/123456789/2189", source: "India Code" },
+      { label: "Code of Civil Procedure, 1908 (Section 80 notice)", url: "https://www.indiacode.nic.in/handle/123456789/2191", source: "India Code" },
+      { label: "Commercial Courts Act, 2015 (Section 12-A)", url: "https://www.indiacode.nic.in/handle/123456789/2143", source: "India Code" },
+      { label: "Consumer Protection Act, 2019 (Section 8)", url: "https://www.indiacode.nic.in/handle/123456789/15256", source: "India Code" },
+      { label: "General Clauses Act, 1897 (Section 27 — deemed service)", url: "https://www.indiacode.nic.in/handle/123456789/2308", source: "India Code" }
     ]
   },
 

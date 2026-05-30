@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ContactButton from "@/components/ContactButton";
+import AnswerBlock from "@/components/AnswerBlock";
 import {
   ArrowRight, Landmark, MapPin, Scale, Building2, BadgeCheck,
   Phone, Star, Clock, ChevronRight, CheckCircle2, HelpCircle, Briefcase,
@@ -113,6 +114,15 @@ export default async function CityPracticePage(
   if (!content) notFound();
 
   const url = `${SITE_URL}/lawyers/${citySlug}/${slug}`;
+
+  // Week 11: AEO Quick Answer — a specific, locally-grounded direct answer to
+  // the "best <practice> lawyer in <city>" head query. Built from the city's
+  // own court, fee, and practice data so it is genuinely page-specific (not a
+  // generic template) — the kind of answer AI Overview / Perplexity extract
+  // and voice assistants read aloud.
+  const quickAnswerQuestion = `Where can I find a verified ${label.title.toLowerCase()} in ${city.name}?`;
+  const quickAnswer =
+    `NyaySevak connects you with Bar-Council-verified ${label.title.toLowerCase()}s across ${city.name}, ${city.state} — advocates who appear regularly before ${city.highCourt.name} and the local district courts for ${label.long.toLowerCase()} matters. Typical district-court fees here run ${content.feeRange.district}. Your first consultation is free, with all fees agreed upfront before any work begins.`;
 
   // Other practice areas for this city (for cross-linking)
   const otherPractices = cityPracticeSlugs
@@ -250,8 +260,9 @@ export default async function CityPracticePage(
       description: `${label.long.toLowerCase()} services across ${city.name}, ${city.state} — courts, fees, and local legal landscape.`,
     },
     speakable: {
+      // Week 11: prioritise the AnswerBlock card for voice/answer surfaces.
       "@type": "SpeakableSpecification",
-      cssSelector: ["h1", "h2"],
+      cssSelector: ["#answer", "h1"],
     },
   };
 
@@ -327,6 +338,13 @@ export default async function CityPracticePage(
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ===== Week 11: AEO Quick Answer (Speakable + AI-Overview extraction target) ===== */}
+      <section className="bg-dark border-y border-gold/[0.08]">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <AnswerBlock question={quickAnswerQuestion}>{quickAnswer}</AnswerBlock>
         </div>
       </section>
 

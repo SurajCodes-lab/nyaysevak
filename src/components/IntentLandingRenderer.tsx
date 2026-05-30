@@ -6,6 +6,7 @@ import Link from "next/link";
 import { ArrowRight, ChevronRight, CheckCircle2, Briefcase, MapPin } from "lucide-react";
 import type { IntentLandingPage } from "@/data/intent-landings";
 import ContactButton from "@/components/ContactButton";
+import AnswerBlock from "@/components/AnswerBlock";
 
 export default function IntentLandingRenderer({ data }: { data: IntentLandingPage }) {
   return (
@@ -41,6 +42,11 @@ export default function IntentLandingRenderer({ data }: { data: IntentLandingPag
       {/* Body */}
       <article className="pt-12 pb-16 lg:pt-16 lg:pb-24">
         <div className="mx-auto max-w-3xl px-6 lg:px-8">
+          {/* Week 11: AEO Quick Answer (Speakable + AI-Overview extraction target) */}
+          {data.quickAnswer && (
+            <AnswerBlock question={data.hero.h1}>{data.quickAnswer}</AnswerBlock>
+          )}
+
           {data.intro.map((p, i) => (
             <p key={i} className="text-base sm:text-lg text-gray-300 leading-[1.8] mb-5">
               {p}

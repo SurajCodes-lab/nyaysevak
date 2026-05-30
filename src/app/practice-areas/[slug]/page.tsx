@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ContactButton from "@/components/ContactButton";
-import { ArrowRight, CheckCircle2, Scale, BookOpen, Landmark, ChevronRight } from "lucide-react";
+import AnswerBlock from "@/components/AnswerBlock";
+import TableOfContents, { TocItem } from "@/components/TableOfContents";
+import { trimToSentences } from "@/lib/quick-answer";
+import { ArrowRight, CheckCircle2, Scale, BookOpen, Landmark, ChevronRight, AlertTriangle, ListOrdered, FileCheck, Clock, ExternalLink } from "lucide-react";
 import { practiceAreas } from "@/data/practice-areas";
 import { practiceAreaContent } from "@/data/practice-area-content";
 import { practiceAreaCategories } from "@/data/practice-area-categories";
@@ -36,9 +39,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const v = getVariantsForPractice(slug);
   const primaryLower = v.primary.toLowerCase();
 
+  // Title pattern: keyword-first → year → CTA → brand (kept under ~60 chars
+  // so Google does not truncate). Year + bracket bait improves CTR; brand
+  // suffix uses the canonical .com to disambiguate from similarly-spelled
+  // competitors.
   return {
-    title: `Best ${v.primary} in India — Verified Advocates Near You | Free Consultation | NyaySevak`,
-    description: `Find the best ${primaryLower} near you. ${overview}. Verified ${v.variants[1]?.toLowerCase() ?? primaryLower} across Supreme Court, High Courts & District Courts. ${area.services.slice(0, 3).join(", ")}. Free first consultation. Call +91-9868666715.`,
+    title: `${v.primary} India [2026] — Free Consultation | NyaySevak.com`,
+    description: `Looking for the best ${primaryLower} in India? ${overview}. Verified ${v.variants[1]?.toLowerCase() ?? primaryLower} across Supreme Court, High Courts & 700+ District Courts. ${area.services.slice(0, 3).join(", ")}. Free first consultation in 60 seconds. Call +91-9868666715.`,
     keywords: [
       ...v.variants.map((vv) => vv.toLowerCase()),
       `best ${primaryLower}`,
@@ -60,14 +67,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       canonical: `https://nyaysevak.com/practice-areas/${slug}`,
     },
     openGraph: {
-      title: `Best ${v.primary} in India — Verified Advocates Near You | NyaySevak`,
+      title: `${v.primary} India 2026 — Verified Advocates, Free Consultation | NyaySevak.com`,
       description: `Verified ${primaryLower}s across India. ${area.description}. Free first consultation on NyaySevak.`,
       type: "website",
       url: `https://nyaysevak.com/practice-areas/${slug}`,
     },
     twitter: {
       card: "summary_large_image",
-      title: `Best ${v.primary} in India | NyaySevak`,
+      title: `${v.primary} India 2026 | NyaySevak.com`,
       description: `Find verified ${primaryLower}s near you. ${area.services.slice(0, 2).join(", ")}. Free consultation.`,
     },
   };
@@ -86,6 +93,17 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ s
 
   const content = practiceAreaContent[slug];
   const currentIndex = practiceAreas.findIndex((a) => a.slug === slug);
+
+  // Week 11: AEO Quick Answer. The opening of the hand-written overview already
+  // reads as a direct answer ("…NyaySevak connects you with verified … across
+  // the Supreme Court, 25 High Courts…"), so we derive the 40-90-word answer
+  // from it rather than maintaining a second copy. Areas without long-form
+  // content fall back to a sentence built from the area description.
+  const primaryLower = variant.primary.toLowerCase();
+  const quickAnswer = content
+    ? trimToSentences(content.detailedOverview[0], 70)
+    : `NyaySevak connects you with Bar-Council-verified ${primaryLower}s across the Supreme Court, 25 High Courts, and 700+ District Courts. ${area.description} Your first consultation is free, with transparent fees agreed upfront.`;
+  const quickAnswerQuestion = `How do I find a verified ${primaryLower} in India?`;
 
   // Category-aware related areas: same category first, then adjacent
   const sameCategory = practiceAreaCategories.find((c) => c.slugs.includes(slug));
@@ -106,6 +124,34 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ s
       }
     }
   }
+
+  // ToC items — only include sections that will actually render
+  // (some are conditional on `content` existing or on optional new blocks).
+  const tocItems: TocItem[] = [
+    ...(content ? [{ id: "overview", label: "Overview" }] : []),
+    ...(content?.commonProblems
+      ? [{ id: "common-problems", label: "Common Problems" }]
+      : []),
+    ...(content ? [{ id: "legislation", label: "Key Legislation" }] : []),
+    { id: "services", label: `${area.title} Services` },
+    ...(content?.legalProcess
+      ? [{ id: "process", label: "Legal Process" }]
+      : []),
+    ...(content?.requiredDocuments
+      ? [{ id: "documents", label: "Required Documents" }]
+      : []),
+    ...(content?.timeline ? [{ id: "timeline", label: "Timeline" }] : []),
+    ...(content?.outboundReferences
+      ? [{ id: "statutes", label: "Statutory References" }]
+      : []),
+    ...(content ? [{ id: "courts", label: "Relevant Courts" }] : []),
+    { id: "recommended-services", label: "Recommended Services" },
+    ...(practiceAreaToCityPracticeSlug[slug]
+      ? [{ id: "city-lawyers", label: "Find Lawyers by City" }]
+      : []),
+    ...(content ? [{ id: "faqs", label: "FAQs" }] : []),
+    { id: "consultation", label: "Get Consultation" },
+  ];
 
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
@@ -166,6 +212,24 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ s
     })),
   } : null;
 
+  // HowTo schema unlocks rich-result "step-by-step" cards in SERP for queries
+  // like "process to file FIR" or "how to file consumer complaint". Emitted
+  // only when legalProcess is populated for this area.
+  const howToJsonLd = content?.legalProcess
+    ? {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        name: `${area.title} — Legal Process in India`,
+        description: `Step-by-step legal process for ${area.title.toLowerCase()} matters in India.`,
+        step: content.legalProcess.map((s, i) => ({
+          "@type": "HowToStep",
+          position: i + 1,
+          name: s.step,
+          text: s.description,
+        })),
+      }
+    : null;
+
   // Week 4 GEO: E-E-A-T authority signals for AI search engines
   const geoJsonLd = {
     "@context": "https://schema.org",
@@ -183,8 +247,10 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ s
     creditText: `NyaySevak - ${area.title} Legal Services India`,
     about: { "@type": "Thing", name: area.title, description: area.description },
     speakable: {
+      // Week 11: target the AnswerBlock card first so voice/answer surfaces read
+      // the curated direct answer rather than scraping the first H2.
       "@type": "SpeakableSpecification",
-      cssSelector: ["h1", "h2"],
+      cssSelector: ["#answer", "h1"],
     },
   };
 
@@ -194,6 +260,9 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ s
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }} />
       {faqJsonLd && (
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      )}
+      {howToJsonLd && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToJsonLd) }} />
       )}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(geoJsonLd) }} />
 
@@ -232,6 +301,16 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ s
         </div>
       </section>
 
+      {/* ===== Week 11: AEO Quick Answer (Speakable + AI-Overview extraction target) ===== */}
+      <section className="bg-dark border-y border-gold/[0.08]">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <AnswerBlock question={quickAnswerQuestion}>{quickAnswer}</AnswerBlock>
+        </div>
+      </section>
+
+      {/* ===== On-page Table of Contents (jump links for SERP sitelinks + dwell time) ===== */}
+      <TableOfContents items={tocItems} variant="dark" />
+
       {/* ===== Stat Highlights Strip ===== */}
       {content && (
         <section className="relative bg-dark border-y border-gold/[0.08]">
@@ -250,7 +329,7 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ s
 
       {/* ===== Detailed Overview ===== */}
       {content && (
-        <section className="bg-cream cream-pattern py-16 sm:py-20 lg:py-24">
+        <section id="overview" className="bg-cream cream-pattern py-16 sm:py-20 lg:py-24">
           <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
             <div className="flex items-center gap-3 mb-6 sm:mb-8">
               <div className="h-8 w-1 rounded-full bg-gold" />
@@ -267,9 +346,34 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ s
         </section>
       )}
 
+      {/* ===== Common Problems We Solve ===== */}
+      {content?.commonProblems && (
+        <section id="common-problems" className="bg-dark py-16 sm:py-20 lg:py-24 relative overflow-hidden">
+          <div className="glow-pulse pointer-events-none absolute top-[10%] right-[-5%] w-[400px] h-[400px] rounded-full bg-[radial-gradient(circle,rgba(201,168,76,0.05)_0%,transparent_60%)]" />
+          <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-10 sm:mb-14">
+              <p className="mb-2 text-[10px] sm:text-xs uppercase tracking-[0.3em] text-gold/60 font-semibold">Issues We Handle</p>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-white heading-glow">
+                Common {area.title} Problems in India
+              </h2>
+            </div>
+            <div className="grid gap-3 sm:gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {content.commonProblems.map((problem, i) => (
+                <div key={i} className="glass-card !rounded-xl p-4 sm:p-5">
+                  <div className="flex items-start gap-3">
+                    <AlertTriangle className="mt-0.5 h-4 w-4 shrink-0 text-gold/60" strokeWidth={1.5} />
+                    <span className="text-xs sm:text-sm text-gray-300 leading-relaxed">{problem}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* ===== Key Legislation ===== */}
       {content && (
-        <section className="bg-dark-deep py-16 sm:py-20 lg:py-24 relative overflow-hidden dark-section-depth">
+        <section id="legislation" className="bg-dark-deep py-16 sm:py-20 lg:py-24 relative overflow-hidden dark-section-depth">
           <div className="glow-pulse pointer-events-none absolute bottom-[20%] left-[5%] w-[400px] h-[400px] rounded-full bg-[radial-gradient(circle,rgba(201,168,76,0.05)_0%,transparent_55%)]" />
           <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-10 sm:mb-12">
@@ -294,7 +398,7 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ s
 
       {/* ===== Detailed Services ===== */}
       {content ? (
-        <section className="bg-cream cream-pattern py-16 sm:py-20 lg:py-24">
+        <section id="services" className="bg-cream cream-pattern py-16 sm:py-20 lg:py-24">
           <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-10 sm:mb-14">
               <p className="mb-2 text-[10px] sm:text-xs uppercase tracking-[0.3em] text-gold-dark/60 font-semibold">What We Offer</p>
@@ -324,7 +428,7 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ s
           </div>
         </section>
       ) : (
-        <section className="bg-cream cream-pattern py-16 sm:py-20 lg:py-24">
+        <section id="services" className="bg-cream cream-pattern py-16 sm:py-20 lg:py-24">
           <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
             <h2 className="mb-10 text-2xl sm:text-3xl font-heading font-bold text-gray-900">
               Our {area.title} Services
@@ -343,9 +447,144 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ s
         </section>
       )}
 
+      {/* ===== Legal Process (HowTo schema target) ===== */}
+      {content?.legalProcess && (
+        <section id="process" className="bg-dark py-16 sm:py-20 lg:py-24 relative overflow-hidden">
+          <div className="glow-pulse pointer-events-none absolute bottom-[15%] left-[-5%] w-[450px] h-[450px] rounded-full bg-[radial-gradient(circle,rgba(201,168,76,0.06)_0%,transparent_55%)]" />
+          <div className="relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-10 sm:mb-14">
+              <p className="mb-2 text-[10px] sm:text-xs uppercase tracking-[0.3em] text-gold/60 font-semibold">Step by Step</p>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-white heading-glow">
+                {area.title} Legal Process in India
+              </h2>
+              <p className="mx-auto mt-3 max-w-2xl text-sm text-gray-400 leading-relaxed">
+                The end-to-end procedural roadmap our advocates follow for {area.title.toLowerCase()} matters.
+              </p>
+            </div>
+            <ol className="space-y-4 sm:space-y-5">
+              {content.legalProcess.map((s, i) => (
+                <li key={i} className="glass-card !rounded-xl p-5 sm:p-6">
+                  <div className="flex items-start gap-4 sm:gap-5">
+                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl icon-gold text-sm font-heading font-bold text-black">
+                      {i + 1}
+                    </span>
+                    <div className="flex-1">
+                      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-2">
+                        <h3 className="text-sm sm:text-base font-semibold text-white">{s.step}</h3>
+                        {s.durationHint && (
+                          <span className="inline-flex items-center gap-1.5 text-[10px] sm:text-xs uppercase tracking-wider text-gold/70 font-semibold">
+                            <Clock className="h-3 w-3" strokeWidth={1.5} />
+                            {s.durationHint}
+                          </span>
+                        )}
+                      </div>
+                      <p className="text-xs sm:text-sm text-gray-400 leading-relaxed">{s.description}</p>
+                    </div>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </section>
+      )}
+
+      {/* ===== Required Documents ===== */}
+      {content?.requiredDocuments && (
+        <section id="documents" className="bg-cream cream-pattern py-16 sm:py-20 lg:py-24">
+          <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-10 sm:mb-14">
+              <p className="mb-2 text-[10px] sm:text-xs uppercase tracking-[0.3em] text-gold-dark/60 font-semibold">Paperwork Checklist</p>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-gray-900 heading-glow-cream">
+                Documents Required for {area.title} Cases
+              </h2>
+              <p className="mx-auto mt-3 max-w-2xl text-sm text-gray-600 leading-relaxed">
+                Keep these papers ready before your first consultation — it shortens timelines significantly.
+              </p>
+            </div>
+            <div className="grid gap-3 sm:gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {content.requiredDocuments.map((doc, i) => (
+                <div key={i} className="glass-cream p-4 sm:p-5">
+                  <div className="flex items-start gap-3">
+                    <FileCheck className="mt-0.5 h-4 w-4 shrink-0 text-gold-dark" strokeWidth={1.5} />
+                    <span className="text-xs sm:text-sm text-gray-700 leading-relaxed">{doc}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* ===== Timeline ===== */}
+      {content?.timeline && (
+        <section id="timeline" className="bg-dark-deep py-16 sm:py-20 lg:py-24 relative overflow-hidden dark-section-depth">
+          <div className="absolute top-0 left-0 right-0 section-separator" />
+          <div className="relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-10 sm:mb-14">
+              <p className="mb-2 text-[10px] sm:text-xs uppercase tracking-[0.3em] text-gold/60 font-semibold">Realistic Duration</p>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-white heading-glow">
+                How Long Does a {area.title} Case Take?
+              </h2>
+              <p className="mx-auto mt-3 max-w-2xl text-sm text-gray-400 leading-relaxed">
+                Benchmark timelines for each stage — actual durations vary by court load and case complexity.
+              </p>
+            </div>
+            <div className="grid gap-4 sm:gap-5 sm:grid-cols-2 lg:grid-cols-4">
+              {content.timeline.map((t, i) => (
+                <div key={i} className="glass-card !rounded-xl p-5 text-center">
+                  <span className="block text-[10px] uppercase tracking-widest text-gold/50 mb-2 font-semibold">Stage {i + 1}</span>
+                  <p className="text-sm font-semibold text-white mb-2">{t.stage}</p>
+                  <p className="text-xs sm:text-sm text-gold/80 font-medium">{t.duration}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* ===== Statutory References — outbound authority links lift YMYL ranking ===== */}
+      {content?.outboundReferences && (
+        <section id="statutes" className="bg-cream cream-pattern py-16 sm:py-20 lg:py-24">
+          <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-10 sm:mb-12">
+              <p className="mb-2 text-[10px] sm:text-xs uppercase tracking-[0.3em] text-gold-dark/60 font-semibold">Primary Sources</p>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-gray-900 heading-glow-cream">
+                Statutory References & Authority Sources
+              </h2>
+              <p className="mx-auto mt-3 max-w-2xl text-sm text-gray-600 leading-relaxed">
+                Read the underlying statutes and judgements directly from official Government of India sources.
+              </p>
+            </div>
+            <div className="grid gap-3 sm:gap-4 sm:grid-cols-2">
+              {content.outboundReferences.map((ref, i) => (
+                <a
+                  key={i}
+                  href={ref.url}
+                  target="_blank"
+                  rel="noopener"
+                  className="glass-cream p-4 sm:p-5 group hover:border-gold-dark/30 transition-colors duration-200"
+                >
+                  <div className="flex items-start gap-3">
+                    <ExternalLink className="mt-0.5 h-4 w-4 shrink-0 text-gold-dark group-hover:text-gold-dark transition-colors" strokeWidth={1.5} />
+                    <div className="flex-1 min-w-0">
+                      <p className="text-sm font-semibold text-gray-900 group-hover:text-gold-dark transition-colors leading-snug">
+                        {ref.label}
+                      </p>
+                      <p className="mt-1 text-[11px] uppercase tracking-wider text-gray-500 truncate">
+                        {ref.source}
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* ===== Relevant Courts & Jurisdictions ===== */}
       {content && (
-        <section className="bg-dark-deep py-16 sm:py-20 lg:py-24 relative overflow-hidden dark-section-depth">
+        <section id="courts" className="bg-dark-deep py-16 sm:py-20 lg:py-24 relative overflow-hidden dark-section-depth">
           <div className="absolute top-0 left-0 right-0 section-separator" />
           <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-10 sm:gap-12 lg:gap-16 items-start">
@@ -388,7 +627,7 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ s
       )}
 
       {/* ===== Week 5: Recommended Services cross-link (break the silo) ===== */}
-      <section className="bg-dark py-14 sm:py-16 relative overflow-hidden">
+      <section id="recommended-services" className="bg-dark py-14 sm:py-16 relative overflow-hidden">
         <div className="glow-pulse pointer-events-none absolute top-[20%] right-[-5%] w-[400px] h-[400px] rounded-full bg-[radial-gradient(circle,rgba(201,168,76,0.05)_0%,transparent_60%)]" />
         <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <p className="mb-2 text-[10px] sm:text-xs uppercase tracking-[0.3em] text-gold/60 font-semibold">How We Help</p>
@@ -413,7 +652,7 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ s
                   </h3>
                   <p className="mt-2 text-xs sm:text-sm text-gray-500 leading-relaxed">{rec.desc}</p>
                   <span className="mt-4 inline-flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-widest text-gold/50 group-hover:text-gold transition-colors">
-                    Learn more
+                    Explore {svc.title}
                     <ArrowRight className="h-3 w-3 group-hover:translate-x-1 transition-transform" strokeWidth={2} />
                   </span>
                 </Link>
@@ -425,7 +664,7 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ s
 
       {/* ===== Week 5: Find {Area} Lawyers by City (where mapping exists) ===== */}
       {practiceAreaToCityPracticeSlug[slug] && (
-        <section className="bg-dark-deep py-14 sm:py-16 border-t border-white/[0.04]">
+        <section id="city-lawyers" className="bg-dark-deep py-14 sm:py-16 border-t border-white/[0.04]">
           <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
             <p className="mb-2 text-[10px] sm:text-xs uppercase tracking-[0.3em] text-gold/60 font-semibold">Local Coverage</p>
             <h2 className="text-2xl sm:text-3xl font-heading font-bold text-white heading-glow mb-3">
@@ -457,7 +696,7 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ s
 
       {/* ===== FAQs — Glass Cards ===== */}
       {content && (
-        <section className="bg-cream cream-pattern py-16 sm:py-20 lg:py-24">
+        <section id="faqs" className="bg-cream cream-pattern py-16 sm:py-20 lg:py-24">
           <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-10 sm:mb-14">
               <p className="mb-2 text-[10px] sm:text-xs uppercase tracking-[0.3em] text-gold-dark/60 font-semibold">Common Questions</p>
@@ -489,7 +728,7 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ s
       )}
 
       {/* ===== CTA ===== */}
-      <section className="bg-dark-deep py-16 sm:py-20 lg:py-24 dark-section-depth">
+      <section id="consultation" className="bg-dark-deep py-16 sm:py-20 lg:py-24 dark-section-depth">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
           <div className="gradient-border-card">
             <div className="bg-dark-deep rounded-[calc(1.25rem-1.5px)] p-8 sm:p-10 lg:p-14">
@@ -547,7 +786,7 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ s
                 </div>
                 <p className="text-xs sm:text-sm text-gray-500 leading-relaxed">{r.description}</p>
                 <span className="mt-4 inline-flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-widest text-gold/50 group-hover:text-gold transition-colors">
-                  Learn More
+                  Best {r.title} Lawyers
                   <ArrowRight className="h-3 w-3 group-hover:translate-x-1 transition-transform" strokeWidth={2} />
                 </span>
               </Link>
@@ -560,7 +799,7 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ s
               className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-gold transition-colors duration-200"
             >
               <ArrowRight className="h-4 w-4 rotate-180" strokeWidth={1.5} />
-              View All Practice Areas
+              Browse All 29 Practice Areas of Indian Law
             </Link>
           </div>
         </div>

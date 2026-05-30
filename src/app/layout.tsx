@@ -9,6 +9,7 @@ import ContactModal from "@/components/ContactModal";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import FloatingContactBar from "@/components/FloatingContactBar";
 import EngagementTracker from "@/components/EngagementTracker";
+import ExitIntentModal from "@/components/ExitIntentModal";
 import { ContactModalProvider } from "@/context/ContactModalContext";
 import { reviews, aggregateRatingValue, aggregateRatingCount } from "@/data/reviews";
 
@@ -44,6 +45,16 @@ const organizationJsonLd = {
     "NyaySevak Lawyers",
     "NyaySevak Advocates",
     "NyaySevak.com",
+    // Brand-spelling variants users (and competing brands) type — explicitly
+    // bind every common misspelling and spacing to this entity so Google
+    // resolves "nyay sevak", "nyayasevak", etc. to nyaysevak.com.
+    "Nyay Sevak",
+    "Nyaya Sevak",
+    "Nyayasevak",
+    "NyaaySevak",
+    "Niyaysevak",
+    "Nyay Seva",
+    "न्याय सेवक",
   ],
   description:
     "India's first complete legal ecosystem. Access Supreme Court, 25 High Courts, 700+ District Courts, all Tribunals & Arbitration centres. Complete A-Z legal services for individuals and businesses.",
@@ -372,8 +383,10 @@ const professionalServiceJsonLd = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://nyaysevak.com"),
   title: {
-    default: "NyaySevak - Best Lawyer Consultation & Legal Services in India | Free First Consultation",
-    template: "%s | NyaySevak - India's Legal Services Platform",
+    // Disambiguates the brand from similarly-spelled competitors by binding
+    // the brand name to the canonical domain inside the title itself.
+    default: "NyaySevak.com — India's Verified Lawyer Platform | Free First Consultation",
+    template: "%s | NyaySevak.com",
   },
   description:
     "India's #1 legal services platform. Find & hire verified lawyers near you for Supreme Court, 25 High Courts, 700+ District Courts & all Tribunals. Online lawyer consultation, divorce lawyer, criminal lawyer, property lawyer, corporate advisory. 29 practice areas. Free first consultation. Call +91-9868666715.",
@@ -479,6 +492,7 @@ export default function RootLayout({
           <ContactModal />
           <FloatingContactBar />
           <EngagementTracker />
+          <ExitIntentModal />
         </ContactModalProvider>
       </body>
     </html>

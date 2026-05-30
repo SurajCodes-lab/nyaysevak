@@ -67,11 +67,27 @@ export default function Page() {
     audience: { "@type": "Audience", audienceType: "Indian residents seeking legal help" },
   };
 
+  // Week 11: Speakable target for the AnswerBlock rendered by IntentLandingRenderer.
+  const webPageJsonLd = data.quickAnswer
+    ? {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        name: data.hero.h1,
+        url,
+        inLanguage: "en-IN",
+        isAccessibleForFree: true,
+        speakable: { "@type": "SpeakableSpecification", cssSelector: ["#answer", "h1"] },
+      }
+    : null;
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }} />
+      {webPageJsonLd && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }} />
+      )}
       <IntentLandingRenderer data={data} />
     </>
   );

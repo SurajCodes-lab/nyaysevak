@@ -32,6 +32,11 @@ export type IntentLandingPage = {
     bullets?: string[];
   }>;
   cityTable?: CityCard[];      // optional city-by-city summary table
+  // Week 11: 40-90-word declarative direct answer rendered as the AnswerBlock
+  // (AEO) card near the top of the page and targeted by the route's Speakable
+  // JSON-LD. Distinct from hero.sub (a marketing strap-line): this reads as a
+  // standalone factual answer to the head query.
+  quickAnswer?: string;
   faqs: Array<{ question: string; answer: string }>;
   practiceCanonicalSlug?: string;  // existing practice-area to canonicalise behind
   ctaTitle: string;
@@ -44,6 +49,8 @@ export const intentLandings: IntentLandingPage[] = [
   // ============================================================
   {
     slug: "best-property-lawyers-in-india",
+    quickAnswer:
+      "The best property lawyers in India are Bar-Council-verified advocates with a documented practice history at the relevant city's Sub-Registrar offices and High Court, plus hands-on experience with that city's specific property regime. NyaySevak lists verified property advocates across Delhi, Mumbai, Bangalore, Chennai, Hyderabad, Pune, Kolkata, and Ahmedabad for title verification, RERA complaints, conveyancing, and partition — with a free first consultation.",
     title:
       "Best Property Lawyers in India 2026 — City-Wise Verified Advocates | NyaySevak",
     metaDescription:
@@ -221,6 +228,8 @@ export const intentLandings: IntentLandingPage[] = [
   // ============================================================
   {
     slug: "best-divorce-lawyers-in-india",
+    quickAnswer:
+      "The best divorce lawyers in India specialise in matrimonial law and the Family Courts, handling mutual-consent and contested divorce, maintenance, child custody, and alimony under the Hindu Marriage Act, Special Marriage Act, and applicable personal law. NyaySevak connects you with verified divorce advocates across the 8 largest metros, with transparent fees and a free first consultation to assess your matter confidentially.",
     title:
       "Best Divorce Lawyers in India 2026 — City-Wise Verified Family Advocates | NyaySevak",
     metaDescription:
@@ -397,6 +406,8 @@ export const intentLandings: IntentLandingPage[] = [
   // ============================================================
   {
     slug: "best-criminal-lawyers-in-india",
+    quickAnswer:
+      "The best criminal lawyers in India are advocates experienced in bail, trial, and appellate defence under the Bharatiya Nyaya Sanhita and Bharatiya Nagarik Suraksha Sanhita, 2023, who appear regularly before the relevant Sessions Court, High Court, and Supreme Court. NyaySevak connects you with verified criminal defence advocates across the 8 largest metros for FIRs, anticipatory and regular bail, and trials — with a free, confidential first consultation.",
     title:
       "Best Criminal Lawyers in India 2026 — City-Wise Verified Defence Advocates | NyaySevak",
     metaDescription:
@@ -577,6 +588,8 @@ export const intentLandings: IntentLandingPage[] = [
   // ============================================================
   {
     slug: "free-legal-consultation",
+    quickAnswer:
+      "Yes — you can get free legal advice in India. NyaySevak offers a free first consultation with a Bar-Council-verified lawyer for any matter, by phone, video, or chat, with no obligation to proceed. You describe your issue, get matched with a relevant advocate within 24 hours, and agree any further fees upfront before work begins. Government legal aid is also available via NALSA for eligible persons.",
     title:
       "Free Legal Consultation in India — Talk to a Verified Lawyer Today | NyaySevak",
     metaDescription:

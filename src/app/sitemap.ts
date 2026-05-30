@@ -42,6 +42,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/best-divorce-lawyers-in-india`, lastModified: corePageDate, changeFrequency: "weekly", priority: 0.9 },
     { url: `${BASE_URL}/best-criminal-lawyers-in-india`, lastModified: corePageDate, changeFrequency: "weekly", priority: 0.9 },
     { url: `${BASE_URL}/free-legal-consultation`, lastModified: corePageDate, changeFrequency: "weekly", priority: 0.9 },
+    // 2026 — Legal Tools hub + first live calculator
+    { url: `${BASE_URL}/legal-tools`, lastModified: corePageDate, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${BASE_URL}/legal-tools/court-fee-calculator`, lastModified: corePageDate, changeFrequency: "monthly", priority: 0.9 },
   ];
 
   // Service pages — boosted priority, these are high-conversion pages

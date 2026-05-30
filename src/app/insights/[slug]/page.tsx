@@ -8,7 +8,44 @@ import { practiceAreas } from "@/data/practice-areas";
 import { allServices } from "@/data/services";
 import { cities } from "@/data/cities";
 import ContactButton from "@/components/ContactButton";
+import AnswerBlock from "@/components/AnswerBlock";
+import TableOfContents, { TocItem } from "@/components/TableOfContents";
 import { SITE_URL } from "@/lib/site";
+import { trimToSentences } from "@/lib/quick-answer";
+
+// Week 11: hand-written AEO "Quick Answer" for each pillar article, keyed by
+// slug. These are the highest-traffic informational pages, so the direct
+// answer is authored (not derived) to maximise the chance an AI engine extracts
+// it verbatim. Any article without an entry falls back to a trimmed excerpt.
+const ARTICLE_QUICK_ANSWERS: Record<string, string> = {
+  "mutual-consent-divorce-india-procedure-2026":
+    "Mutual-consent divorce in India is filed jointly under Section 13B of the Hindu Marriage Act, 1955. Both spouses petition the Family Court, complete a first and second motion separated by a six-month cooling-off period (which courts can waive following the Supreme Court's Amardeep Singh ruling), and receive a decree. With the waiver, the entire process can conclude in roughly six months.",
+  "anticipatory-bail-india-section-482-bnss-guide-2026":
+    "Anticipatory bail is pre-arrest bail granted under Section 482 of the BNSS, 2023 (the successor to Section 438 CrPC). A person who apprehends arrest in a non-bailable case applies to the Sessions Court or High Court; if granted, they cannot be arrested except on the conditions the court sets. It guards against wrongful or motivated arrest while the investigation continues.",
+  "property-title-verification-india-checklist-2026":
+    "Title verification confirms that a property's seller holds clear, marketable, and transferable ownership before you buy. In India this means checking the mother deed and 30-year title chain, the encumbrance certificate, mutation and revenue records, the sanctioned plan, up-to-date tax receipts, and any litigation or RERA status. Skipping it is the leading cause of post-purchase property disputes.",
+  "filing-fir-india-procedure-rights-2026":
+    "A First Information Report (FIR) records a cognizable offence and is registered under Section 173 of the BNSS, 2023 at the police station with jurisdiction. Filing is free, the police must register it for a cognizable offence, and you are entitled to a free copy. If the police refuse, you can escalate to the Superintendent of Police or move a Magistrate under Section 175 BNSS.",
+  "rera-complaint-procedure-buyer-guide-2026":
+    "A RERA complaint lets a home-buyer act against a builder for delayed possession, misleading promises, or defects, under the Real Estate (Regulation and Development) Act, 2016. You file with your State RERA Authority for a nominal fee (around ₹1,000) and can seek a refund with interest, possession, or compensation. Most states allow online filing and aim to decide within about 60 days.",
+  "private-limited-company-incorporation-india-2026":
+    "A private limited company is registered in India through the MCA's SPICe+ form. You obtain Director Identification Numbers and digital signatures, reserve a company name, and file incorporation with the MoA and AoA — receiving a Certificate of Incorporation along with PAN and TAN. For two directors it typically takes 7-15 working days, with no minimum paid-up capital required.",
+  "section-138-ni-act-cheque-bounce-procedure-2026":
+    "A cheque-bounce case is prosecuted under Section 138 of the Negotiable Instruments Act, 1881. After dishonour, the payee must send a written demand notice within 30 days; if the drawer does not pay within 15 days, a complaint must be filed before a Magistrate within the following 30 days. Conviction can carry up to two years' imprisonment or a fine of up to twice the cheque amount.",
+  "lawyer-fees-india-benchmarks-2026":
+    "Lawyer fees in India vary with seniority, court, and city. In 2026 a first consultation is often free or ₹500-₹3,000; document drafting runs ₹1,000-₹25,000; district-court matters typically cost ₹15,000-₹75,000; and High Court or Supreme Court representation ranges from ₹50,000 to several lakh. Fees are higher in the metros and should be agreed upfront.",
+};
+
+// Build a kebab-case slug from a heading so each section has a stable
+// anchor id that can be linked from the on-page Table of Contents and
+// shared as a deep-link URL fragment.
+function slugify(s: string): string {
+  return s
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .slice(0, 60);
+}
 
 export function generateStaticParams() {
   return articles.map((a) => ({ slug: a.slug }));
@@ -68,6 +105,9 @@ export default async function InsightArticlePage({ params }: { params: Promise<{
 
   const otherArticles = articles.filter((a) => a.slug !== slug).slice(0, 3);
 
+  // Week 11: AEO Quick Answer — authored per-slug, with a trimmed-excerpt fallback.
+  const quickAnswer = ARTICLE_QUICK_ANSWERS[slug] ?? trimToSentences(article.excerpt, 70);
+
   // BlogPosting / Article schema
   const articleJsonLd = {
     "@context": "https://schema.org",
@@ -111,8 +151,9 @@ export default async function InsightArticlePage({ params }: { params: Promise<{
     },
     creditText: `${author?.name ?? "NyaySevak Legal Team"} · NyaySevak · ${article.category}`,
     speakable: {
+      // Week 11: lead with the AnswerBlock card, then H1 and the takeaways box.
       "@type": "SpeakableSpecification",
-      cssSelector: ["h1", "h2", ".article-takeaway"],
+      cssSelector: ["#answer", "h1", ".article-takeaway"],
     },
   };
 
@@ -234,9 +275,22 @@ export default async function InsightArticlePage({ params }: { params: Promise<{
 
       <div className="section-separator" />
 
+      {/* On-page Table of Contents — drives SERP jump-link sitelinks + dwell time */}
+      <TableOfContents
+        items={[
+          ...article.sections.map<TocItem>((s) => ({ id: slugify(s.heading), label: s.heading })),
+          { id: "takeaways", label: "Key Takeaways" },
+          { id: "faqs", label: "Frequently Asked Questions" },
+        ]}
+        variant="dark"
+      />
+
       {/* Article body */}
       <article className="pt-12 pb-16 lg:pt-16 lg:pb-24">
         <div className="mx-auto max-w-3xl px-6 lg:px-8">
+          {/* Week 11: AEO Quick Answer (Speakable + AI-Overview extraction target) */}
+          <AnswerBlock question={article.title}>{quickAnswer}</AnswerBlock>
+
           {/* Intro */}
           <div className="prose-invert space-y-5 mb-12">
             {article.intro.map((para, i) => (
@@ -248,7 +302,7 @@ export default async function InsightArticlePage({ params }: { params: Promise<{
 
           {/* Sections */}
           {article.sections.map((section, i) => (
-            <section key={i} className="mb-12">
+            <section key={i} id={slugify(section.heading)} className="mb-12 scroll-mt-24">
               <h2 className="text-2xl sm:text-3xl font-heading font-bold mb-5 text-white border-l-2 border-gold/60 pl-4">
                 {section.heading}
               </h2>
@@ -273,7 +327,7 @@ export default async function InsightArticlePage({ params }: { params: Promise<{
           ))}
 
           {/* Takeaways */}
-          <section className="mb-12 rounded-2xl border border-gold/20 bg-gold/[0.03] p-6 lg:p-8 article-takeaway">
+          <section id="takeaways" className="mb-12 rounded-2xl border border-gold/20 bg-gold/[0.03] p-6 lg:p-8 article-takeaway scroll-mt-24">
             <h2 className="text-xl sm:text-2xl font-heading font-bold mb-5 text-gold">
               Key Takeaways
             </h2>
@@ -288,7 +342,7 @@ export default async function InsightArticlePage({ params }: { params: Promise<{
           </section>
 
           {/* FAQs */}
-          <section className="mb-12">
+          <section id="faqs" className="mb-12 scroll-mt-24">
             <h2 className="text-2xl sm:text-3xl font-heading font-bold mb-6 text-white border-l-2 border-gold/60 pl-4">
               Frequently Asked Questions
             </h2>
