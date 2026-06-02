@@ -1964,4 +1964,344 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       "Gujarat HC commercial arbitration practice is among the most efficient in India.",
     ],
   },
+
+  // ────────────────────────────── JAIPUR ──────────────────────────────
+  "jaipur__criminal-law": {
+    lead:
+      "Jaipur's criminal matters move through the District & Sessions Court at Jaipur, the city's Metropolitan Magistrate courts, and — for bail, quashing, and appeals — the Jaipur Bench of the Rajasthan High Court. NyaySevak connects you with Bar-Council-of-Rajasthan-verified Jaipur criminal lawyers who appear regularly across these forums for bail, FIR matters, and trials under the BNSS.",
+    landscape: [
+      "Criminal cases in Jaipur begin at the police station that registers the FIR and are tried, depending on the offence, before the Metropolitan Magistrate courts or the District & Sessions Court, Jaipur. Sessions-triable offences, appeals from magistrate orders, and the more serious matters are heard on the Sessions side, while bail, quashing under Section 528 BNSS, and criminal appeals can travel to the Jaipur Bench of the Rajasthan High Court.",
+      "Bail is the highest-volume criminal practice in Jaipur. Regular bail is moved before the Magistrate or Sessions Court depending on the offence; anticipatory bail under Section 482 BNSS (formerly Section 438 CrPC) is filed before the Sessions Court or directly before the Rajasthan High Court at Jaipur. Quashing of FIRs and proceedings under Section 528 BNSS (formerly Section 482 CrPC) lies exclusively with the High Court.",
+      "Jaipur also sees a steady volume of economic-offence, NDPS, POCSO, SC/ST Act, and matrimonial-cruelty (Section 85 BNS / former 498A) prosecutions, several of which are tried before designated special courts. Experienced local counsel who know the Jaipur court rosters and investigating agencies materially affect how quickly a matter is listed and heard.",
+    ],
+    courtsForThisMatter: [
+      "Rajasthan High Court, Jaipur Bench (bail, quashing, criminal appeals)",
+      "District & Sessions Court, Jaipur (Sessions trials & appeals)",
+      "Metropolitan Magistrate Courts, Jaipur (magistrate-triable offences)",
+      "Designated Special Courts (NDPS, POCSO, SC/ST Act)",
+      "Juvenile Justice Board, Jaipur",
+    ],
+    caseTypes: [
+      { title: "Bail Applications", desc: "Regular, interim and anticipatory bail across Magistrate, Sessions and the Jaipur Bench." },
+      { title: "FIR Quashing (S. 528 BNSS)", desc: "Quashing of settled or frivolous FIRs before the Rajasthan High Court at Jaipur." },
+      { title: "Matrimonial Cruelty (S. 85 BNS)", desc: "Defence and prosecution of cruelty/dowry-harassment complaints (former 498A)." },
+      { title: "NDPS Defence", desc: "Defence in narcotics matters before the designated NDPS special court." },
+      { title: "Economic & Cheating Offences", desc: "Cheating, criminal breach of trust, and forgery prosecutions and defences." },
+      { title: "Criminal Appeals & Revisions", desc: "Appeals and revisions from trial courts to the Sessions Court and High Court." },
+    ],
+    feeRange: {
+      consultation: "₹1,000 – ₹5,000 (free first consultation on NyaySevak)",
+      district: "₹6,000 – ₹30,000 per appearance",
+      highCourt: "₹20,000 – ₹1,25,000 per appearance; senior counsel higher",
+      note: "Indicative ranges only. Bail matters before the Jaipur Bench commonly run ₹35,000–₹1,00,000 all-inclusive for drafting and a single hearing. Your lawyer agrees the exact fee upfront before any work begins.",
+    },
+    faqs: [
+      {
+        question: "How do I find the best criminal lawyer near me in Jaipur?",
+        answer:
+          "Use NyaySevak's Jaipur criminal-law listings, shortlist by Bar Council of Rajasthan verification, years of practice before the Jaipur courts, and ratings, and book a free first consultation. Every listed advocate appears regularly before the Jaipur District & Sessions Court and the Rajasthan High Court's Jaipur Bench.",
+      },
+      {
+        question: "Which court handles my criminal case in Jaipur?",
+        answer:
+          "It depends on the offence and the police station that registered the FIR. Magistrate-triable offences are heard by the Metropolitan Magistrate courts; serious, Sessions-triable offences and appeals go to the District & Sessions Court, Jaipur. Bail, quashing, and criminal appeals can be taken to the Jaipur Bench of the Rajasthan High Court.",
+      },
+      {
+        question: "Can I get anticipatory bail in Jaipur?",
+        answer:
+          "Yes. Anticipatory bail under Section 482 BNSS (earlier Section 438 CrPC) can be filed before the Sessions Court, Jaipur, or directly before the Rajasthan High Court at Jaipur, depending on the offence. Our Jaipur criminal lawyers regularly handle anticipatory-bail applications across both forums.",
+      },
+      {
+        question: "How much does a criminal lawyer cost in Jaipur?",
+        answer:
+          "Fees vary by court and seniority. District-court appearances commonly range ₹6,000–₹30,000, while a Rajasthan High Court (Jaipur Bench) hearing ranges from ₹20,000 to over ₹1,25,000. These are indicative ranges — every lawyer's fee is agreed upfront on NyaySevak with no hidden charges.",
+      },
+      {
+        question: "How long does a criminal trial take in Jaipur?",
+        answer:
+          "Magistrate trials may conclude in roughly 1–2 years; Sessions trials typically take 2–4 years depending on complexity and witnesses. Bail applications are usually decided within a few weeks at the Sessions Court and somewhat longer at the High Court.",
+      },
+      {
+        question: "Do you handle NDPS and POCSO cases in Jaipur?",
+        answer:
+          "Yes. Our panel includes Jaipur criminal lawyers experienced before the designated NDPS and POCSO special courts, covering both defence and the procedural protections that apply to these special enactments.",
+      },
+    ],
+    localNotes: [
+      "Jaipur is served by the Rajasthan High Court's Jaipur Bench — for bail and quashing you do not need to travel to the principal seat at Jodhpur.",
+      "Settle jurisdiction early: which magistrate or Sessions court hears your matter depends on the offence and the registering police station.",
+      "Local counsel familiar with the Jaipur court rosters can materially speed up listing of urgent bail matters.",
+    ],
+  },
+
+  "jaipur__civil-law": {
+    lead:
+      "Jaipur's civil disputes — property and partition suits, money-recovery actions, injunctions, and contract disputes — are heard before the Civil Courts and the District Court at Jaipur, with commercial matters routed to the Commercial Court and appeals to the Rajasthan High Court's Jaipur Bench. NyaySevak's Jaipur civil lawyers handle the full lifecycle from legal notice to decree and execution.",
+    landscape: [
+      "Civil litigation in Jaipur follows the standard hierarchy under the Code of Civil Procedure, 1908 — Civil Judge (Junior and Senior Division) courts at the lower tier, the District Court for higher-value and appellate matters, and the Rajasthan High Court at Jaipur for second appeals, writs, and revisions. Suits are filed based on territorial jurisdiction and pecuniary value.",
+      "Property is the dominant civil subject in Jaipur. Rapid expansion along Ajmer Road, Tonk Road, Jagatpura, and Mansarovar has produced a steady flow of title disputes, partition suits over ancestral and JDA-allotted property, specific-performance actions on sale agreements, and injunctions to protect possession. Conversion, lease, and revenue-record questions frequently overlap with civil suits here.",
+      "Commercial disputes of a specified value are heard by the Commercial Court at Jaipur under the Commercial Courts Act, 2015, with its pre-institution mediation requirement. Consumer matters are filed before the District Consumer Commission, Jaipur and the Rajasthan State Consumer Commission, both of which sit in the city.",
+    ],
+    courtsForThisMatter: [
+      "Rajasthan High Court, Jaipur Bench (second appeals, writs, revisions)",
+      "District Court, Jaipur (higher-value & appellate civil matters)",
+      "Civil Courts (Junior & Senior Division), Jaipur",
+      "Commercial Court, Jaipur (Commercial Courts Act matters)",
+      "District & State Consumer Commissions, Jaipur",
+    ],
+    caseTypes: [
+      { title: "Property & Title Suits", desc: "Declaration, title disputes, specific performance and partition of property." },
+      { title: "Money Recovery", desc: "Recovery suits, summary suits under Order XXXVII, and execution of decrees." },
+      { title: "Injunctions", desc: "Temporary, permanent and mandatory injunctions to protect rights and possession." },
+      { title: "Contract Disputes", desc: "Breach-of-contract claims, damages, and specific-performance actions." },
+      { title: "Landlord–Tenant Disputes", desc: "Eviction, rent recovery, and possession matters under the applicable rent law." },
+      { title: "Consumer Disputes", desc: "Builder-buyer, deficiency-of-service and product complaints before the consumer commissions." },
+    ],
+    feeRange: {
+      consultation: "₹1,000 – ₹5,000 (free first consultation on NyaySevak)",
+      district: "₹5,000 – ₹25,000 per appearance / drafting stage",
+      highCourt: "₹20,000 – ₹1,00,000 per appearance; senior counsel higher",
+      note: "Indicative ranges only. Civil retainers in Jaipur are commonly structured stage-wise (filing, evidence, arguments). Your lawyer confirms the exact fee structure upfront before any work begins.",
+    },
+    faqs: [
+      {
+        question: "How long does a civil case take in Jaipur?",
+        answer:
+          "It varies widely. Simple money-recovery suits may conclude in 1–3 years, while contested property and partition suits can run considerably longer through trial and appeal. Summary suits under Order XXXVII CPC and mediation can shorten timelines for suitable matters.",
+      },
+      {
+        question: "Which court handles property disputes in Jaipur?",
+        answer:
+          "Property and partition suits are filed before the Civil Courts or the District Court at Jaipur depending on the value and nature of the dispute, with second appeals and writs going to the Rajasthan High Court's Jaipur Bench. Revenue and mutation questions may also involve the revenue authorities.",
+      },
+      {
+        question: "How much does a civil lawyer cost in Jaipur?",
+        answer:
+          "Fees depend on the court, value, and complexity. District-level work commonly ranges ₹5,000–₹25,000 per stage, while High Court appearances range from ₹20,000 to over ₹1,00,000. These are indicative — every fee is agreed upfront on NyaySevak.",
+      },
+      {
+        question: "Do I have to attempt mediation before filing a commercial suit in Jaipur?",
+        answer:
+          "For commercial disputes of a specified value under the Commercial Courts Act, 2015, pre-institution mediation is generally required unless urgent interim relief is sought. Our Jaipur civil lawyers will advise whether your matter must go through pre-institution mediation first.",
+      },
+      {
+        question: "Can I file a consumer complaint in Jaipur?",
+        answer:
+          "Yes. Depending on the value of the claim, consumer complaints are filed before the District Consumer Commission, Jaipur, or the Rajasthan State Consumer Commission, both located in the city, with further appeal to the National Commission.",
+      },
+      {
+        question: "What is the first step in a civil dispute in Jaipur?",
+        answer:
+          "Most civil disputes begin with a legal notice setting out your claim and demand. If it is not resolved, a suit is filed before the appropriate Jaipur court. A free first consultation on NyaySevak will help you decide the right forum and strategy.",
+      },
+    ],
+    localNotes: [
+      "Jaipur's rapid real-estate growth (Ajmer Road, Tonk Road, Jagatpura, Mansarovar) drives a high volume of title, possession, and builder-buyer disputes.",
+      "Both the District and State Consumer Commissions sit in Jaipur, making consumer remedies relatively accessible.",
+      "Commercial disputes of the notified value are heard by the dedicated Commercial Court at Jaipur with pre-institution mediation.",
+    ],
+  },
+
+  "jaipur__family-matrimonial": {
+    lead:
+      "Divorce, maintenance, custody, and domestic-violence matters in Jaipur are heard primarily before the Family Court at Jaipur, with appeals to the Rajasthan High Court's Jaipur Bench. NyaySevak connects you with verified Jaipur divorce and family lawyers who handle mutual-consent and contested divorce, maintenance, and protection-order matters with sensitivity and discretion.",
+    landscape: [
+      "Most matrimonial disputes in Jaipur are filed before the Family Court at Jaipur, constituted under the Family Courts Act, 1984, which has exclusive jurisdiction over divorce, judicial separation, restitution of conjugal rights, maintenance, and custody. Appeals from the Family Court lie to the Rajasthan High Court at Jaipur.",
+      "Mutual-consent divorce under Section 13B of the Hindu Marriage Act (and the equivalents under other personal laws) is the most common route where both spouses agree, involving two motions with a statutory cooling-off period that courts may waive in suitable cases. Contested divorces proceed on grounds such as cruelty or desertion and take longer.",
+      "Parallel proceedings frequently accompany matrimonial disputes in Jaipur — maintenance under Section 144 BNSS (formerly Section 125 CrPC), protection and residence orders under the Protection of Women from Domestic Violence Act, 2005, and at times cruelty complaints under Section 85 BNS. Coordinating these matters strategically is central to good family-law representation.",
+    ],
+    courtsForThisMatter: [
+      "Family Court, Jaipur (divorce, maintenance, custody)",
+      "Rajasthan High Court, Jaipur Bench (matrimonial appeals)",
+      "Magistrate Courts, Jaipur (Domestic Violence Act & maintenance)",
+      "Mediation & Conciliation Centre, Jaipur",
+    ],
+    caseTypes: [
+      { title: "Mutual-Consent Divorce", desc: "Two-motion divorce under S.13B HMA with settlement of alimony, custody and property." },
+      { title: "Contested Divorce", desc: "Divorce on grounds such as cruelty or desertion before the Family Court, Jaipur." },
+      { title: "Maintenance & Alimony", desc: "Interim and permanent maintenance under S.144 BNSS and personal law." },
+      { title: "Child Custody", desc: "Custody, guardianship and visitation in the child's best interests." },
+      { title: "Domestic Violence", desc: "Protection, residence and monetary orders under the DV Act, 2005." },
+      { title: "Restitution / Judicial Separation", desc: "Restitution of conjugal rights and judicial-separation petitions." },
+    ],
+    feeRange: {
+      consultation: "₹1,000 – ₹5,000 (free first consultation on NyaySevak)",
+      district: "₹6,000 – ₹30,000 per appearance / stage",
+      highCourt: "₹20,000 – ₹1,00,000 per appearance; senior counsel higher",
+      note: "Indicative ranges only. Uncontested mutual-consent divorces in Jaipur are often handled on a fixed all-inclusive package; contested matters are billed stage-wise. Fees are agreed upfront before any work begins.",
+    },
+    faqs: [
+      {
+        question: "How long does a mutual-consent divorce take in Jaipur?",
+        answer:
+          "A mutual-consent divorce before the Family Court, Jaipur usually takes around 6–12 months, involving two motions with a statutory cooling-off period between them. Courts may waive the cooling-off period in suitable cases where the parties have already lived apart and settled all issues.",
+      },
+      {
+        question: "Where do I file for divorce in Jaipur?",
+        answer:
+          "Divorce petitions are filed before the Family Court at Jaipur, which has jurisdiction based on where the marriage was solemnised, where the couple last resided together, or where the respondent resides. A NyaySevak family lawyer will confirm the correct jurisdiction for your case.",
+      },
+      {
+        question: "Can I claim maintenance in Jaipur, and how much?",
+        answer:
+          "Yes. Maintenance can be claimed under Section 144 BNSS (formerly Section 125 CrPC) and under personal law. The amount depends on the spouse's income, the claimant's needs and standard of living, and the children's requirements — there is no fixed formula, and courts decide on the facts.",
+      },
+      {
+        question: "How much does a divorce lawyer cost in Jaipur?",
+        answer:
+          "It depends on whether the divorce is mutual or contested. Mutual-consent matters are often handled on a fixed package, while contested divorces are billed stage-wise, commonly ₹6,000–₹30,000 per stage at the Family Court. All fees are agreed upfront on NyaySevak.",
+      },
+      {
+        question: "Who gets custody of the child in a Jaipur divorce?",
+        answer:
+          "Custody is decided on the child's best interests, not automatically in favour of either parent. Courts consider the child's age, schooling, emotional needs, and each parent's circumstances, and frequently provide for visitation for the non-custodial parent.",
+      },
+      {
+        question: "Is domestic violence handled together with divorce in Jaipur?",
+        answer:
+          "They are separate proceedings but are often pursued together. A Domestic Violence Act application for protection, residence, and monetary relief is filed before the Magistrate, while the divorce proceeds before the Family Court. A Jaipur family lawyer will coordinate both strategically.",
+      },
+    ],
+    localNotes: [
+      "Jaipur has a dedicated Family Court with an attached mediation/conciliation facility, which courts often use to attempt settlement first.",
+      "Mutual-consent divorces, where both spouses agree, are the fastest and most cost-effective route.",
+      "Maintenance and domestic-violence proceedings often run in parallel with divorce — coordinate them with one counsel where possible.",
+    ],
+  },
+
+  "jaipur__property-real-estate": {
+    lead:
+      "Property buyers, owners, and investors in Jaipur rely on title verification, sale-deed and agreement drafting, RERA remedies, and dispute resolution across the city's fast-growing corridors. NyaySevak's Jaipur property lawyers handle due diligence, registration, builder-buyer disputes before Rajasthan RERA, and litigation before the civil courts and the Rajasthan High Court's Jaipur Bench.",
+    landscape: [
+      "Jaipur's real-estate market has expanded rapidly along Ajmer Road, Tonk Road, Jagatpura, Mansarovar, and Vidhyadhar Nagar, with a mix of JDA (Jaipur Development Authority) schemes, private colonies, and agricultural-to-residential conversions. This makes thorough title verification — checking the chain of ownership, JDA approvals, land-use conversion, and encumbrances — essential before any purchase.",
+      "Registration of sale deeds, gift deeds, and agreements is done before the Sub-Registrar with applicable Rajasthan stamp duty, and accurate drafting plus correct stamping is critical to avoid future disputes. Lease deeds, partition deeds, and family settlements are also routinely handled by Jaipur property lawyers.",
+      "Buyer disputes against developers — delayed possession, deviation from sanctioned plans, and refund claims — are filed before the Rajasthan Real Estate Regulatory Authority (RERA), which is based in Jaipur, with appeals to the Real Estate Appellate Tribunal. Title and possession disputes are litigated before the civil courts at Jaipur.",
+    ],
+    courtsForThisMatter: [
+      "Rajasthan RERA, Jaipur (builder-buyer disputes)",
+      "Real Estate Appellate Tribunal, Rajasthan",
+      "Civil Courts & District Court, Jaipur (title & possession suits)",
+      "Rajasthan High Court, Jaipur Bench (writs & appeals)",
+      "Sub-Registrar Offices, Jaipur (registration)",
+    ],
+    caseTypes: [
+      { title: "Title Verification & Due Diligence", desc: "Chain-of-title search, JDA approval and encumbrance checks before purchase." },
+      { title: "Sale Deed & Agreement Drafting", desc: "Drafting and registration of sale, gift, lease and agreement-to-sell deeds." },
+      { title: "RERA Complaints", desc: "Delayed possession, refund and plan-deviation claims before Rajasthan RERA." },
+      { title: "Partition & Family Settlement", desc: "Partition suits and settlement deeds for ancestral and co-owned property." },
+      { title: "Possession & Injunction Suits", desc: "Protecting possession and challenging illegal dispossession or encroachment." },
+      { title: "Conversion & Regularisation", desc: "Land-use conversion and regularisation guidance for residential property." },
+    ],
+    feeRange: {
+      consultation: "₹1,000 – ₹5,000 (free first consultation on NyaySevak)",
+      district: "₹5,000 – ₹30,000 per stage (suit / RERA matter)",
+      highCourt: "₹20,000 – ₹1,00,000 per appearance; senior counsel higher",
+      note: "Indicative ranges only. Title-verification and drafting work in Jaipur is usually charged as a fixed fee, while litigation and RERA matters are billed stage-wise. Stamp duty and registration charges are separate statutory costs. Fees are agreed upfront.",
+    },
+    faqs: [
+      {
+        question: "How do I verify property title before buying in Jaipur?",
+        answer:
+          "A Jaipur property lawyer examines the chain of ownership, the relevant JDA/colony approvals and land-use conversion, the latest mutation and revenue records, and any encumbrances or pending litigation, then issues a title opinion. This due diligence is the single most important step before paying any advance.",
+      },
+      {
+        question: "Where do I file a complaint against a builder in Jaipur?",
+        answer:
+          "Builder-buyer disputes — delayed possession, refunds, or deviation from the sanctioned plan — are filed before the Rajasthan Real Estate Regulatory Authority (RERA) in Jaipur, with appeals to the Real Estate Appellate Tribunal. Our Jaipur property lawyers prepare and prosecute RERA complaints end-to-end.",
+      },
+      {
+        question: "How much is stamp duty on property registration in Jaipur?",
+        answer:
+          "Stamp duty and registration charges are set by the Rajasthan government and depend on the property's value, type, and the buyer's category (with concessions in certain cases). Your lawyer will calculate the exact statutory duty for your transaction before registration at the Sub-Registrar.",
+      },
+      {
+        question: "How much does a property lawyer cost in Jaipur?",
+        answer:
+          "Title verification and deed drafting are usually fixed-fee, while RERA matters and property suits are billed stage-wise (commonly ₹5,000–₹30,000 per stage at the district level). These are indicative ranges — every fee is agreed upfront on NyaySevak, separate from statutory stamp duty.",
+      },
+      {
+        question: "What documents are needed to register a sale deed in Jaipur?",
+        answer:
+          "Typically the title documents and prior chain, identity and PAN of the parties, the draft sale deed on correct stamp value, JDA/approval and conversion documents where applicable, and the latest tax receipts. Requirements vary by property — your lawyer will give you a precise checklist.",
+      },
+      {
+        question: "Can NRIs buy and register property in Jaipur through your lawyers?",
+        answer:
+          "Yes. NRIs can purchase most non-agricultural property in India subject to FEMA rules, and our Jaipur property lawyers handle due diligence, drafting, and registration — including through a registered power of attorney where the buyer cannot be physically present.",
+      },
+    ],
+    localNotes: [
+      "JDA approvals and land-use conversion status are critical checks in Jaipur — verify them before paying any advance.",
+      "Rajasthan RERA is headquartered in Jaipur, making builder-buyer remedies locally accessible.",
+      "Correct stamp value and drafting at registration prevents most future title disputes.",
+    ],
+  },
+
+  "jaipur__corporate-business": {
+    lead:
+      "Jaipur's businesses — from tourism, gems and jewellery, and textiles to a growing IT and startup base — need company incorporation, contracts, compliance, and commercial dispute resolution. NyaySevak's Jaipur corporate lawyers advise on formation, agreements, regulatory compliance, and litigation before the Commercial Court at Jaipur, the NCLT, and the Rajasthan High Court's Jaipur Bench.",
+    landscape: [
+      "Jaipur has a diverse commercial base — gems and jewellery, handicrafts and textiles, tourism and hospitality, real estate, and an expanding IT/startup ecosystem around Sitapura and the city's tech corridors. This generates demand for company and LLP formation, founder and shareholder agreements, vendor and employment contracts, and ongoing regulatory compliance.",
+      "Commercial disputes of the notified value are heard by the Commercial Court at Jaipur under the Commercial Courts Act, 2015, with pre-institution mediation. Company-law and insolvency matters for Rajasthan are heard by the National Company Law Tribunal (NCLT) Jaipur Bench, while writs and appeals go to the Rajasthan High Court at Jaipur.",
+      "Routine corporate compliance — MCA/ROC filings, GST, income-tax and TDS, labour-law registrations (PF, ESI, POSH), and FEMA where foreign investment is involved — is a continuous requirement for Jaipur businesses. Many also favour arbitration clauses for faster, confidential resolution of commercial disputes.",
+    ],
+    courtsForThisMatter: [
+      "Commercial Court, Jaipur (Commercial Courts Act matters)",
+      "NCLT, Jaipur Bench (company law & insolvency)",
+      "Rajasthan High Court, Jaipur Bench (writs & company appeals)",
+      "Arbitration (institutional & ad-hoc)",
+      "GST & Tax Appellate Authorities, Rajasthan",
+    ],
+    caseTypes: [
+      { title: "Company & LLP Incorporation", desc: "Private limited, LLP and OPC formation with MCA filings and drafting." },
+      { title: "Contracts & Agreements", desc: "Founder, shareholder, vendor, employment and service agreements." },
+      { title: "Regulatory Compliance", desc: "ROC, GST, income-tax, labour-law and FEMA compliance management." },
+      { title: "Commercial Disputes", desc: "Recovery, breach and shareholder disputes before the Commercial Court." },
+      { title: "Arbitration & ADR", desc: "Drafting arbitration clauses and conducting arbitral proceedings." },
+      { title: "Insolvency (IBC)", desc: "Creditor and debtor representation before the NCLT, Jaipur Bench." },
+    ],
+    feeRange: {
+      consultation: "₹1,500 – ₹7,500 (free first consultation on NyaySevak)",
+      district: "₹10,000 – ₹50,000 per matter / stage",
+      highCourt: "₹25,000 – ₹1,50,000 per appearance; senior counsel higher",
+      note: "Indicative ranges only. Incorporation and standard contracts in Jaipur are usually fixed-fee; retainer-based compliance and litigation are billed monthly or stage-wise. Government and filing fees are separate. Fees are agreed upfront.",
+    },
+    faqs: [
+      {
+        question: "How do I register a company in Jaipur?",
+        answer:
+          "Company incorporation is a central MCA process — name reservation, drafting the MOA/AOA, obtaining DSC and DIN, and filing the SPICe+ form. A Jaipur corporate lawyer handles the end-to-end filing and post-incorporation compliance (PAN, TAN, GST, bank account) so you can start operating quickly.",
+      },
+      {
+        question: "Which court handles company disputes in Jaipur?",
+        answer:
+          "Company-law and insolvency matters for Rajasthan are heard by the NCLT Jaipur Bench, commercial disputes of the notified value by the Commercial Court at Jaipur, and writs and appeals by the Rajasthan High Court's Jaipur Bench. The right forum depends on the nature of the dispute.",
+      },
+      {
+        question: "How much does a corporate lawyer cost in Jaipur?",
+        answer:
+          "Incorporation and standard agreements are usually fixed-fee, while ongoing advisory and compliance are retainer-based and litigation is billed stage-wise (commonly ₹10,000–₹50,000 per matter at the lower level). These are indicative ranges agreed upfront on NyaySevak, separate from statutory and filing fees.",
+      },
+      {
+        question: "Do small businesses in Jaipur need ongoing legal compliance?",
+        answer:
+          "Yes. Even small companies and LLPs have recurring obligations — ROC annual filings, GST returns, TDS, and applicable labour-law registrations. Missing deadlines attracts penalties, so many Jaipur businesses use a managed compliance retainer to stay on top of them.",
+      },
+      {
+        question: "Should my Jaipur business contracts include an arbitration clause?",
+        answer:
+          "Often, yes. A well-drafted arbitration clause allows faster, confidential resolution of commercial disputes outside the regular courts. Our Jaipur corporate lawyers will advise whether arbitration suits your contracts and draft an enforceable clause with the seat and rules specified.",
+      },
+      {
+        question: "Can you help raise funding or onboard investors for a Jaipur startup?",
+        answer:
+          "Yes. We assist with term sheets, shareholder and share-subscription agreements, due-diligence readiness, and the corporate approvals and filings required to bring an investor on board, coordinating with your CA on the financial and tax aspects.",
+      },
+    ],
+    localNotes: [
+      "Jaipur's gems-and-jewellery, handicrafts, tourism, and growing IT/startup sectors create varied corporate-advisory demand.",
+      "The NCLT Jaipur Bench hears company-law and insolvency matters for Rajasthan locally.",
+      "Arbitration clauses are increasingly preferred by Jaipur businesses for faster, confidential dispute resolution.",
+    ],
+  },
 };

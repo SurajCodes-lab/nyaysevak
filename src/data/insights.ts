@@ -1347,6 +1347,281 @@ export const articles: Article[] = [
     relatedServiceSlugs: ["lawyer-consultation", "find-hire-lawyers", "legal-aid"],
     relatedCitySlugs: ["delhi", "mumbai", "bangalore", "chennai", "hyderabad"],
   },
+
+  // ============================================================
+  // 9. How to send a legal notice in India
+  // ============================================================
+  {
+    slug: "how-to-send-legal-notice-india-format-procedure-2026",
+    title: "How to Send a Legal Notice in India: Format, Process & Cost (2026)",
+    metaTitle: "How to Send a Legal Notice in India (2026) — Format, Process & Cost",
+    metaDescription:
+      "Step-by-step guide to sending a legal notice in India: when it's required, format, how to send it, cost, replies, and what happens next. Free first consultation.",
+    excerpt:
+      "A legal notice is the formal first step before most disputes go to court. Here's exactly when you need one, what it must contain, how to send it correctly, and what it costs.",
+    category: "Practical Guidance",
+    authorSlug: "nyaysevak-legal-team",
+    reviewerSlug: "nyaysevak-legal-team",
+    datePublished: "2026-05-20",
+    dateModified: "2026-05-20",
+    readTimeMinutes: 9,
+    primaryKeyword: "how to send a legal notice in India",
+    secondaryKeywords: [
+      "legal notice format",
+      "legal notice procedure India",
+      "how to reply to a legal notice",
+      "legal notice cost India",
+      "is a legal notice mandatory",
+    ],
+    hero: {
+      eyebrow: "Practical Guidance",
+      title: "How to Send a Legal Notice in India",
+      subtitle:
+        "When it's required, what it must say, how to send it the right way, and what happens after — a complete 2026 walk-through.",
+    },
+    intro: [
+      "A legal notice is a formal, written intimation that you intend to take legal action unless a grievance is addressed. In India it is the practical first step in most civil disputes — money recovery, property and tenancy matters, consumer complaints, employment dues, and cheque dishonour — and in some cases it is a statutory pre-condition before you can even file a suit.",
+      "Sending a well-drafted notice often resolves the matter without litigation, and where it doesn't, it creates a clear, dated record of your demand that strengthens your case. This guide explains when a legal notice is required, what it must contain, how to send it correctly, what it costs, and how to deal with a notice you have received.",
+    ],
+    sections: [
+      {
+        heading: "What is a legal notice and when do you need one?",
+        body: [
+          "A legal notice formally communicates a grievance and a demand to the other party, along with a deadline to comply and a warning of legal consequences if they don't. It is usually drafted and sent through an advocate on your behalf.",
+          "In several situations a notice is not just advisable but legally mandatory before filing:",
+        ],
+        bullets: [
+          "Cheque bounce: a demand notice under Section 138 of the Negotiable Instruments Act must be sent within 30 days of receiving the cheque-return memo, giving the drawer 15 days to pay.",
+          "Suits against the government or public officers: a notice under Section 80 of the Code of Civil Procedure is generally required before filing.",
+          "Tenancy and eviction: many state rent laws require a notice to the tenant before eviction proceedings.",
+          "Consumer disputes, employment dues, and contract breaches: a notice is standard practice and often prompts settlement.",
+        ],
+      },
+      {
+        heading: "What a legal notice must contain",
+        body: [
+          "There is no single prescribed form, but a sound legal notice is precise, factual, and free of exaggeration. A poorly drafted notice can weaken your position, so the contents matter.",
+        ],
+        bullets: [
+          "Sender's details and, where sent through a lawyer, the advocate's name and address.",
+          "Full name and address of the recipient.",
+          "A clear, chronological statement of the relevant facts and dates.",
+          "The specific legal grievance and the relief or action demanded.",
+          "A reasonable time to comply — commonly 15 to 30 days (15 days is fixed by statute for cheque-bounce notices).",
+          "A statement that legal proceedings will follow if the demand is not met.",
+        ],
+      },
+      {
+        heading: "Step-by-step: how to send a legal notice",
+        body: [
+          "The process is straightforward when handled correctly. Proof of dispatch and delivery is critical, because you may later need to show the court that the notice was duly served.",
+        ],
+        bullets: [
+          "Step 1 — Consult a lawyer and share all documents (agreements, receipts, messages, the cheque-return memo, etc.).",
+          "Step 2 — The advocate drafts the notice on their letterhead, setting out facts, the demand, and the compliance period.",
+          "Step 3 — You review and approve the draft for accuracy.",
+          "Step 4 — Send it by Registered Post with Acknowledgement Due (and often by email/courier in addition), and retain the postal receipt and tracking.",
+          "Step 5 — Preserve the acknowledgement and a copy of the notice as proof of service.",
+          "Step 6 — Await a reply within the deadline; if there is no satisfactory response, proceed to file the appropriate case.",
+        ],
+      },
+      {
+        heading: "How much does a legal notice cost?",
+        body: [
+          "Costs vary with the complexity of the matter and the lawyer's experience. Drafting and sending a straightforward notice is typically an affordable fixed fee, with postage as a small additional cost. Complex commercial matters cost more because they require detailed drafting.",
+          "On NyaySevak the exact fee is shown and agreed upfront, and your first consultation is free — so you can understand your position before committing to anything.",
+        ],
+      },
+      {
+        heading: "What to do if you receive a legal notice",
+        body: [
+          "Receiving a notice is not the same as being sued, but ignoring it is risky. A measured, timely response often prevents escalation and protects your interests.",
+        ],
+        bullets: [
+          "Do not ignore it — note the deadline and act within it.",
+          "Read it carefully and gather your own documents and version of events.",
+          "Consult a lawyer before responding; an admission or a careless reply can be used against you.",
+          "Send a considered reply through your advocate, or comply if the demand is justified.",
+        ],
+      },
+    ],
+    takeaways: [
+      "A legal notice is the formal first step before most civil disputes reach court.",
+      "It is mandatory in specific cases — notably a Section 138 cheque-bounce demand and a Section 80 CPC notice against the government.",
+      "Keep it factual and precise, and always send it by Registered Post AD with proof retained.",
+      "Never ignore a notice you receive — respond within the deadline, ideally through a lawyer.",
+    ],
+    faqs: [
+      {
+        question: "Is a legal notice mandatory before filing a case in India?",
+        answer:
+          "Not always. It is mandatory in specific situations — for example, a Section 138 cheque-bounce demand notice, a Section 80 CPC notice before suing the government, and notices required under many tenancy laws. In most other civil disputes it is not strictly mandatory but is strongly advisable, as it can resolve the matter and strengthens your case if litigation follows.",
+      },
+      {
+        question: "Can I send a legal notice myself without a lawyer?",
+        answer:
+          "Legally you can, but it is not recommended. The wording, facts, and legal basis of a notice affect your eventual case, and errors can weaken your position. Most people send notices through an advocate, which also signals seriousness to the other side.",
+      },
+      {
+        question: "How should a legal notice be sent?",
+        answer:
+          "Send it by Registered Post with Acknowledgement Due so you have proof of dispatch and delivery, and keep the postal receipt and tracking. Many lawyers also send a copy by email or courier. The acknowledgement is important evidence of service if the dispute reaches court.",
+      },
+      {
+        question: "How much time does the recipient get to respond?",
+        answer:
+          "The notice itself sets a reasonable compliance period, commonly 15 to 30 days. For cheque-bounce notices under Section 138 NI Act, the drawer must be given 15 days to make payment after receiving the notice.",
+      },
+      {
+        question: "What happens if the recipient ignores the legal notice?",
+        answer:
+          "If the recipient does not comply within the stated time, you can proceed to file the appropriate case — a civil suit, a complaint, or a criminal complaint depending on the matter. The unanswered notice becomes useful evidence of your demand and the other party's failure to respond.",
+      },
+      {
+        question: "How much does it cost to send a legal notice in India?",
+        answer:
+          "It depends on the complexity of the matter and the lawyer's experience. A simple notice is usually an affordable fixed fee plus a small postage cost, while complex commercial notices cost more. On NyaySevak the fee is agreed upfront and your first consultation is free.",
+      },
+    ],
+    relatedPracticeAreaSlugs: ["civil-law", "property-real-estate", "consumer-protection", "banking-finance"],
+    relatedServiceSlugs: ["lawyer-consultation", "document-services", "find-hire-lawyers"],
+    relatedCitySlugs: ["delhi", "mumbai", "bangalore", "jaipur"],
+  },
+
+  // ============================================================
+  // 10. How to report cyber crime and online fraud in India
+  // ============================================================
+  {
+    slug: "report-cyber-crime-online-fraud-india-procedure-2026",
+    title: "How to Report Cyber Crime & Online Fraud in India (2026)",
+    metaTitle: "How to Report Cyber Crime & Online Fraud in India (2026) — Step by Step",
+    metaDescription:
+      "Victim of online fraud or a cyber crime in India? Here's how to report it on the 1930 helpline and cybercrime.gov.in, freeze stolen money, file an FIR, and recover funds.",
+    excerpt:
+      "If you've lost money to online fraud, the first hour matters most. Here's exactly how to report cyber crime in India, freeze stolen funds, and file your complaint.",
+    category: "Practical Guidance",
+    authorSlug: "nyaysevak-legal-team",
+    reviewerSlug: "criminal-law-desk",
+    datePublished: "2026-05-22",
+    dateModified: "2026-05-22",
+    readTimeMinutes: 8,
+    primaryKeyword: "how to report cyber crime in India",
+    secondaryKeywords: [
+      "report online fraud India",
+      "cyber crime helpline 1930",
+      "cybercrime.gov.in complaint",
+      "online fraud money recovery India",
+      "cyber crime FIR",
+    ],
+    hero: {
+      eyebrow: "Practical Guidance",
+      title: "How to Report Cyber Crime & Online Fraud in India",
+      subtitle:
+        "The first hour decides whether you recover your money. A step-by-step 2026 guide to reporting, freezing funds, and filing your complaint.",
+    },
+    intro: [
+      "Online fraud — UPI and card scams, fake investment and trading apps, job and loan frauds, phishing, and digital-arrest scams — has surged in India. If money has left your account, speed is everything: reporting within the first hour (the 'golden hour') gives banks and police the best chance of freezing the funds before they are withdrawn.",
+      "This guide explains exactly how to report a cyber crime in India through the national helpline and reporting portal, how to try to freeze stolen money, when and how to file an FIR, and the evidence you should preserve.",
+    ],
+    sections: [
+      {
+        heading: "Act in the 'golden hour' — call 1930 first",
+        body: [
+          "For any financial cyber fraud, the single most important step is to report immediately on the national cyber-crime helpline so a freeze request can be sent to the banks and payment intermediaries in the transaction chain.",
+        ],
+        bullets: [
+          "Call 1930 (the national cyber-crime financial-fraud helpline) as soon as you realise money has been lost.",
+          "Keep your transaction details ready: amount, date and time, UPI/transaction reference numbers, and the beneficiary details if known.",
+          "The sooner you report, the higher the chance the receiving account can be frozen before withdrawal.",
+          "Also inform your own bank immediately and ask them to flag the transaction.",
+        ],
+      },
+      {
+        heading: "File a complaint on cybercrime.gov.in",
+        body: [
+          "The National Cyber Crime Reporting Portal lets you file a complaint online for financial fraud as well as other cyber crimes such as social-media offences, online harassment, and content-related crimes.",
+        ],
+        bullets: [
+          "Go to the National Cyber Crime Reporting Portal (cybercrime.gov.in).",
+          "Choose the appropriate category — 'financial fraud' for money-loss cases, or the relevant category for harassment/social-media crimes.",
+          "Register/verify with your mobile number and fill in the incident details.",
+          "Upload your evidence (see below) and submit; note the acknowledgement/complaint number for follow-up.",
+        ],
+      },
+      {
+        heading: "Preserve your evidence",
+        body: [
+          "Digital evidence is fragile and easy to lose. Collect and back it up before accounts or messages are deleted.",
+        ],
+        bullets: [
+          "Screenshots of the fraudulent messages, chats, emails, profiles, or websites.",
+          "Transaction IDs, UPI reference numbers, bank statements, and payment receipts.",
+          "Phone numbers, UPI IDs, account numbers, and URLs used by the fraudster.",
+          "Any call recordings, and a written timeline of what happened and when.",
+        ],
+      },
+      {
+        heading: "When and how to file an FIR",
+        body: [
+          "For serious cases — significant financial loss, identity theft, sextortion, or where the online complaint is not progressing — you can file an FIR at the local cyber-crime police station or any police station, which can transfer it to the cyber cell.",
+          "Cyber offences are typically registered under provisions of the Information Technology Act, 2000 (such as identity theft and cheating by personation) together with the relevant provisions of the Bharatiya Nyaya Sanhita for cheating and fraud. A lawyer can ensure the complaint is framed under the correct provisions and followed up effectively.",
+        ],
+      },
+      {
+        heading: "Recovering your money and protecting yourself",
+        body: [
+          "Recovery depends largely on how quickly the funds were reported and whether the receiving account could be frozen. Persistent follow-up with the bank, the cyber cell, and the portal complaint improves your chances.",
+        ],
+        bullets: [
+          "Follow up on your portal complaint number and with the bank's nodal officer.",
+          "Raise a dispute with your bank and, if needed, escalate to the RBI Ombudsman for unresolved grievances.",
+          "Change passwords, enable two-factor authentication, and freeze or block compromised cards and accounts.",
+          "Never share OTPs, never install remote-access apps on a stranger's instruction, and treat 'digital arrest' calls as scams.",
+        ],
+      },
+    ],
+    takeaways: [
+      "For financial fraud, call 1930 immediately — the 'golden hour' decides whether funds can be frozen.",
+      "File a complaint on the National Cyber Crime Reporting Portal (cybercrime.gov.in) and save the complaint number.",
+      "Preserve all digital evidence — screenshots, transaction IDs, URLs, and a timeline.",
+      "For serious cases, file an FIR with the cyber cell; a lawyer ensures the right IT Act and BNS provisions are invoked.",
+    ],
+    faqs: [
+      {
+        question: "What is the fastest way to report online financial fraud in India?",
+        answer:
+          "Call the national cyber-crime helpline 1930 immediately and inform your bank. Reporting within the first hour gives the best chance of freezing the stolen money in the receiving account before it is withdrawn. Then file a detailed complaint on cybercrime.gov.in.",
+      },
+      {
+        question: "Can I report cyber crime online without going to a police station?",
+        answer:
+          "Yes. You can file a complaint on the National Cyber Crime Reporting Portal (cybercrime.gov.in) from home. For serious matters or where the online complaint stalls, you can also file an FIR at a cyber-crime police station or any police station.",
+      },
+      {
+        question: "Will I get my money back after online fraud?",
+        answer:
+          "Recovery is possible but not guaranteed and depends heavily on how quickly you reported. If the funds were flagged early and the receiving account was frozen, the chances improve. Persistent follow-up with the bank, the cyber cell, and your portal complaint is important, and unresolved bank grievances can be escalated to the RBI Ombudsman.",
+      },
+      {
+        question: "What evidence do I need to report a cyber crime?",
+        answer:
+          "Keep screenshots of messages, chats, and websites; transaction IDs, UPI reference numbers, and bank statements; the fraudster's phone numbers, UPI IDs, account numbers, and URLs; and a written timeline. Back everything up before anything is deleted.",
+      },
+      {
+        question: "Under which laws are cyber crimes registered in India?",
+        answer:
+          "Cyber offences are typically registered under the Information Technology Act, 2000 (for example, identity theft and cheating by personation) along with the relevant cheating and fraud provisions of the Bharatiya Nyaya Sanhita. A lawyer ensures the complaint is framed under the correct provisions.",
+      },
+      {
+        question: "Do I need a lawyer to report cyber crime?",
+        answer:
+          "You can report it yourself through 1930 and the portal. However, for serious losses, identity theft, harassment, or when a case has to be pursued through an FIR and the courts, a cyber-crime lawyer helps frame the complaint correctly, follow up with agencies, and pursue recovery. Your first consultation on NyaySevak is free.",
+      },
+    ],
+    relatedPracticeAreaSlugs: ["cyber-law", "criminal-law", "consumer-protection"],
+    relatedServiceSlugs: ["lawyer-consultation", "find-hire-lawyers", "legal-aid"],
+    relatedCitySlugs: ["delhi", "mumbai", "bangalore", "jaipur"],
+  },
 ];
 
 export const articlesBySlug = Object.fromEntries(

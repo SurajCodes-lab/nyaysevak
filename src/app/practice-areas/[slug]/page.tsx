@@ -185,13 +185,6 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ s
       description: "Free first consultation for all practice areas",
       availability: "https://schema.org/InStock",
     },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.9",
-      bestRating: "5",
-      ratingCount: "1247",
-      reviewCount: "689",
-    },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: `${area.title} Services`,
@@ -236,7 +229,7 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ s
     "@type": "WebPage",
     name: `Best ${area.title} Lawyer in India`,
     url: `https://nyaysevak.com/practice-areas/${slug}`,
-    dateModified: new Date().toISOString().split("T")[0],
+    dateModified: "2026-04-01", // stable — bump only when content actually changes (see sitemap.ts)
     inLanguage: "en-IN",
     isAccessibleForFree: true,
     reviewedBy: {

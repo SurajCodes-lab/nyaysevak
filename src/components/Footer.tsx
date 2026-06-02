@@ -6,6 +6,7 @@ import { Phone, Mail, MapPin, ArrowRight } from "lucide-react";
 import { practiceAreas } from "@/data/practice-areas";
 import { allServices } from "@/data/services";
 import { highCourts } from "@/data/courts";
+import { cities } from "@/data/cities";
 import { practiceAreaKeywordVariants } from "@/data/practice-area-keyword-variants";
 import ContactButton from "./ContactButton";
 import { trackPhoneClick } from "@/lib/analytics";
@@ -34,6 +35,18 @@ const quickLinks = [
   { label: "Lawyers by City", href: "/lawyers" },
   { label: "Legal Insights", href: "/insights" },
   { label: "Legal Glossary", href: "/legal-glossary" },
+  { label: "Legal Tools", href: "/legal-tools" },
+  { label: "Free Consultation", href: "/free-legal-consultation" },
+];
+
+// Internal links into the local landing-page cluster + high-intent pages that
+// were previously reachable only via the sitemap.
+const popularSearches = [
+  { label: "Best Property Lawyers in India", href: "/best-property-lawyers-in-india" },
+  { label: "Best Divorce Lawyers in India", href: "/best-divorce-lawyers-in-india" },
+  { label: "Best Criminal Lawyers in India", href: "/best-criminal-lawyers-in-india" },
+  { label: "Free Legal Consultation", href: "/free-legal-consultation" },
+  { label: "Court Fee Calculator", href: "/legal-tools/court-fee-calculator" },
 ];
 
 // High-traffic practice areas for SEO internal linking
@@ -204,6 +217,46 @@ export default function Footer() {
                   </Link>
                 </li>
               </ul>
+            </div>
+          </div>
+
+          {/* Lawyers by City — internal links into the local landing-page cluster */}
+          <div className="mt-12 border-t border-white/[0.06] pt-8">
+            <h4 className="mb-4 text-[10px] sm:text-xs font-bold uppercase tracking-[0.25em] text-gold/70">
+              Lawyers by City
+            </h4>
+            <div className="flex flex-wrap gap-x-5 gap-y-2.5">
+              {cities.map((city) => (
+                <Link
+                  key={city.slug}
+                  href={`/lawyers/${city.slug}`}
+                  className="text-sm text-gray-400 transition-colors duration-200 hover:text-white link-underline"
+                >
+                  Lawyers in {city.name}
+                </Link>
+              ))}
+              <Link href="/lawyers" className="inline-flex items-center gap-1.5 text-sm text-gold/70 font-semibold hover:text-gold transition-colors duration-200">
+                All Cities
+                <ArrowRight className="h-3 w-3" strokeWidth={2} />
+              </Link>
+            </div>
+          </div>
+
+          {/* Popular Searches — high-intent landing pages + tools */}
+          <div className="mt-8">
+            <h4 className="mb-4 text-[10px] sm:text-xs font-bold uppercase tracking-[0.25em] text-gold/70">
+              Popular Searches
+            </h4>
+            <div className="flex flex-wrap gap-x-5 gap-y-2.5">
+              {popularSearches.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="text-sm text-gray-400 transition-colors duration-200 hover:text-white link-underline"
+                >
+                  {item.label}
+                </Link>
+              ))}
             </div>
           </div>
 

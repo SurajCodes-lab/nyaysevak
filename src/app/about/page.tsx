@@ -33,7 +33,7 @@ const aboutPageJsonLd = {
     "@type": "SpeakableSpecification",
     cssSelector: ["h1", "h2", ".vision-text"],
   },
-  dateModified: new Date().toISOString().split("T")[0],
+  dateModified: "2026-04-05", // stable — bump only when content actually changes (see sitemap.ts)
   inLanguage: "en-IN",
 };
 

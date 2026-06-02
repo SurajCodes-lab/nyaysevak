@@ -229,7 +229,7 @@ const geoAuthorityJsonLd = {
     description: "Team of Bar Council verified lawyers with expertise across 29 practice areas of Indian law",
   },
   datePublished: "2024-01-01",
-  dateModified: new Date().toISOString().split("T")[0],
+  dateModified: "2026-04-05", // stable — bump only when content actually changes (see sitemap.ts)
   inLanguage: "en-IN",
   isAccessibleForFree: true,
   creditText: "NyaySevak - India's #1 Legal Services Platform",

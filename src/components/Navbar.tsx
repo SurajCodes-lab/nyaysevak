@@ -8,11 +8,13 @@ import ContactButton from "./ContactButton";
 
 const navLinks = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
-  { label: "How\u00A0It\u00A0Works", href: "/platform" },
   { label: "Practice Areas", href: "/practice-areas" },
+  { label: "Lawyers", href: "/lawyers" },
   { label: "Courts", href: "/courts" },
+  { label: "Insights", href: "/insights" },
+  { label: "Legal Tools", href: "/legal-tools" },
+  { label: "About", href: "/about" },
 ];
 
 export default function Navbar() {

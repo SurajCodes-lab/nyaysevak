@@ -49,29 +49,17 @@ export async function generateMetadata(
   return {
     title,
     description,
+    // Focused, non-spammy keyword set. (The meta keywords tag is ignored by
+    // Google anyway; a tight list avoids the over-optimization pattern that a
+    // 40-variant neighbourhood-stuffed list creates.)
     keywords: [
-      `${kw} in ${cityLower}`,
       `best ${kw} in ${cityLower}`,
-      `${kw} near me`,
       `${kw} near me ${cityLower}`,
-      `top ${kw} ${cityLower}`,
-      `${cityLower} ${kw}`,
-      `${label.title.toLowerCase()} ${cityLower}`,
       `${altKw} in ${cityLower}`,
-      `best ${altKw} in ${cityLower}`,
-      `${altKw} near me ${cityLower}`,
+      `top ${kw} ${cityLower}`,
       `${kw} ${stateLower}`,
-      `affordable ${kw} ${cityLower}`,
-      `online ${kw} ${cityLower}`,
-      `free consultation ${kw} ${cityLower}`,
       `${city.highCourt.name.toLowerCase()} ${kw}`,
-      ...city.neighbourhoods.slice(0, 14).flatMap((n) => [
-        `${kw} ${n.toLowerCase()}`,
-        `${kw} near me ${n.toLowerCase()}`,
-      ]),
-      "verified lawyer India",
       "NyaySevak",
-      "free legal consultation",
     ].join(", "),
     alternates: { canonical: url },
     openGraph: {
@@ -175,13 +163,6 @@ export default async function CityPracticePage(
       description: "Free first consultation",
       availability: "https://schema.org/InStock",
     },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.8",
-      bestRating: "5",
-      ratingCount: "1247",
-      reviewCount: "689",
-    },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: `${label.title} Services in ${city.name}`,
@@ -214,12 +195,6 @@ export default async function CityPracticePage(
       longitude: city.geo.lng,
     },
     areaServed: { "@type": "City", name: city.name },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.8",
-      bestRating: "5",
-      ratingCount: "1247",
-    },
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
@@ -246,7 +221,7 @@ export default async function CityPracticePage(
     "@type": "WebPage",
     name: `Best ${label.title} in ${city.name}`,
     url,
-    dateModified: new Date().toISOString().split("T")[0],
+    dateModified: "2026-04-05", // stable — bump only when content actually changes (see sitemap.ts)
     inLanguage: "en-IN",
     isAccessibleForFree: true,
     reviewedBy: {

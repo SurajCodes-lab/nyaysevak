@@ -229,13 +229,6 @@ export default async function CourtDetailPage({ params }: { params: Promise<{ sl
       description: "Free first consultation",
       availability: "https://schema.org/InStock",
     },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.8",
-      bestRating: "5",
-      ratingCount: "956",
-      reviewCount: "512",
-    },
   };
 
   return (

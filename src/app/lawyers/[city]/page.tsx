@@ -28,34 +28,15 @@ export async function generateMetadata({ params }: { params: Promise<{ city: str
   return {
     title,
     description,
+    // Focused keyword set — the meta keywords tag is ignored by Google, so a
+    // tight list avoids the over-optimization pattern of a 60-variant,
+    // neighbourhood-stuffed string.
     keywords: [
-      `lawyer in ${cityLower}`,
       `best lawyer ${cityLower}`,
-      `advocate ${cityLower}`,
-      `attorney ${cityLower}`,
-      `lawyer near me`,
       `lawyer near me ${cityLower}`,
-      `advocate near me ${cityLower}`,
-      `${cityLower} lawyers`,
-      `${cityLower} advocate`,
-      `${cityLower} attorney`,
-      `criminal lawyer ${cityLower}`,
-      `divorce lawyer ${cityLower}`,
-      `property lawyer ${cityLower}`,
-      `corporate lawyer ${cityLower}`,
-      `civil lawyer ${cityLower}`,
-      `cyber crime lawyer ${cityLower}`,
-      `tax lawyer ${cityLower}`,
-      `consumer court lawyer ${cityLower}`,
+      `advocate ${cityLower}`,
       `${city.highCourt.name.toLowerCase()} lawyer`,
-      `${city.highCourt.name.toLowerCase()} advocate`,
       `free legal consultation ${cityLower}`,
-      `free lawyer consultation ${cityLower}`,
-      `online lawyer consultation ${cityLower}`,
-      ...city.neighbourhoods.slice(0, 14).flatMap((n) => {
-        const nLower = n.toLowerCase();
-        return [`lawyer ${nLower}`, `lawyer near me ${nLower}`, `advocate ${nLower}`];
-      }),
       "verified lawyer India",
       "NyaySevak",
     ].join(", "),
@@ -136,7 +117,6 @@ export default async function CityHubPage({ params }: { params: Promise<{ city: 
       { "@type": "City", name: city.name },
       { "@type": "State", name: city.state },
     ],
-    aggregateRating: { "@type": "AggregateRating", ratingValue: "4.8", bestRating: "5", ratingCount: "1247" },
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",

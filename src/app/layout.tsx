@@ -11,7 +11,6 @@ import FloatingContactBar from "@/components/FloatingContactBar";
 import EngagementTracker from "@/components/EngagementTracker";
 import ExitIntentModal from "@/components/ExitIntentModal";
 import { ContactModalProvider } from "@/context/ContactModalContext";
-import { reviews, aggregateRatingValue, aggregateRatingCount } from "@/data/reviews";
 
 const playfair = Playfair_Display({
   variable: "--font-heading",
@@ -40,20 +39,17 @@ const organizationJsonLd = {
   name: "NyaySevak",
   // Week 8: expanded alternateName so search engines and AI engines
   // associate every common user-vocabulary brand variant with this entity.
+  // Only genuine forms of OUR OWN brand. The previous list included competitor
+  // spellings ("Nyaya Sevak", "Nyayasevak") and random misspellings — that
+  // REINFORCES Google conflating us with the established nyayasevak.com instead
+  // of separating the two entities. Keep this list strictly to real variants
+  // of nyaysevak.
   alternateName: [
     "NyaySevak Legal Services",
     "NyaySevak Lawyers",
     "NyaySevak Advocates",
     "NyaySevak.com",
-    // Brand-spelling variants users (and competing brands) type — explicitly
-    // bind every common misspelling and spacing to this entity so Google
-    // resolves "nyay sevak", "nyayasevak", etc. to nyaysevak.com.
     "Nyay Sevak",
-    "Nyaya Sevak",
-    "Nyayasevak",
-    "NyaaySevak",
-    "Niyaysevak",
-    "Nyay Seva",
     "न्याय सेवक",
   ],
   description:
@@ -339,25 +335,11 @@ const professionalServiceJsonLd = {
     eligibleRegion: { "@type": "Country", name: "India" },
     offeredBy: { "@id": "https://nyaysevak.com/#organization" },
   },
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: aggregateRatingValue,
-    bestRating: "5",
-    worstRating: "1",
-    ratingCount: "2847",
-    reviewCount: String(aggregateRatingCount),
-  },
-  // Week 7: Named reviews — verifiable, dated, geographic. Stronger signal than
-  // raw AggregateRating; required by Google for legitimate Review-rich-results.
-  review: reviews.map((r) => ({
-    "@type": "Review",
-    author: { "@type": "Person", name: r.reviewerName, address: r.reviewerCity ? { "@type": "PostalAddress", addressLocality: r.reviewerCity } : undefined },
-    reviewRating: { "@type": "Rating", ratingValue: r.rating, bestRating: 5, worstRating: 1 },
-    datePublished: r.datePublished,
-    reviewBody: r.reviewBody,
-    itemReviewed: { "@type": "Service", name: r.serviceCategory },
-    publisher: { "@type": "Organization", name: "NyaySevak" },
-  })),
+  // NOTE: aggregateRating + named reviews intentionally removed. Self-authored
+  // review/rating schema about your own organization violates Google's review
+  // snippet guidelines and is a low-trust signal for a new domain. Reinstate
+  // ONLY when ratings come from a verifiable third party (Google Business
+  // Profile, Trustpilot, etc.).
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",

@@ -79,7 +79,7 @@ const serviceContent: Record<string, { overview: string; benefits: string[]; pro
     overview: "NyaySevak's Lawyer Consultation service connects you with verified, experienced lawyers across India for instant or scheduled consultations. Whether you need quick legal advice on a property matter, guidance on a criminal case, or consultation for a business dispute — our platform ensures you get expert help via secure video, audio, or chat channels with complete transparency in pricing.",
     benefits: ["Access to Bar Council-verified lawyers across all practice areas", "Choose between instant and scheduled consultations", "Secure video, audio, and chat communication channels", "Transparent pricing displayed before booking — no hidden fees", "Consultations available in multiple Indian languages", "Follow-up support and documentation after consultation"],
     process: ["Browse lawyers by specialization, court, or location", "Review profiles, ratings, fees, and availability", "Book an instant or scheduled consultation slot", "Connect via secure video, audio, or chat", "Receive expert legal advice and documented summary", "Get follow-up support or hire for full representation"],
-    whyChoose: ["1,000+ verified advocates across all 29 practice areas", "Average response time under 2 hours for urgent matters", "Consultations in 15+ Indian languages including Hindi, Tamil, Bengali", "4.8/5 average client satisfaction rating", "Confidential and encrypted communication", "Free first consultation for new clients"],
+    whyChoose: ["Bar-Council-verified advocates across all 29 practice areas", "Quick response, including for urgent matters", "Consultations available in major Indian languages including Hindi, Tamil, Bengali", "Honest, upfront guidance with fees agreed before any work", "Confidential and encrypted communication", "Free first consultation for new clients"],
     faqs: [
       { q: "How do I choose the right lawyer?", a: "Use our advanced filters to search by practice area, court, location, language, and fee range. Each lawyer profile shows Bar Council verification, client ratings, success metrics, and experience details." },
       { q: "What are the consultation modes available?", a: "We offer video calls, audio calls, and text chat consultations. You can choose the mode that works best for you during the booking process." },
@@ -138,7 +138,7 @@ const serviceContent: Record<string, { overview: string; benefits: string[]; pro
     overview: "E-filing has become mandatory in many Indian courts, including the Supreme Court, High Courts, and select District Courts. NyaySevak's E-filing Assistance service provides complete support — from document preparation and format conversion to portal navigation, submission, and filing status tracking. Our experts are familiar with all major e-filing portals including ICMS, eCourts, and individual High Court systems.",
     benefits: ["Complete court e-filing support across all portals", "Document preparation and format conversion for e-filing", "Expert navigation of ICMS, eCourts, and other portals", "Filing status tracking with real-time updates", "Assistance with defect rectification if filings are returned", "Support for both advocates and litigants-in-person"],
     process: ["Share your case details and documents", "We prepare and format documents for e-filing", "Navigate the appropriate court e-filing portal", "Submit the filing on your behalf or with your assistance", "Receive filing confirmation and acknowledgment", "Track filing status and receive hearing date updates"],
-    whyChoose: ["Expertise across all major e-filing platforms", "99.5% first-attempt acceptance rate", "Same-day filing for urgent matters", "Defect rectification support within 24 hours", "Filing status updates via SMS and email", "Competitive pricing with no hidden charges"],
+    whyChoose: ["Expertise across all major e-filing platforms", "Careful pre-submission checks to minimise defects", "Same-day filing for urgent matters", "Defect rectification support if a filing is returned", "Filing status updates via SMS and email", "Competitive pricing with no hidden charges"],
     faqs: [
       { q: "Which courts' e-filing do you support?", a: "We support e-filing at the Supreme Court, all 25 High Courts, NCLT, NCLAT, and all District Courts that have adopted e-filing systems." },
       { q: "Can you handle urgent filings?", a: "Yes. We offer same-day filing service for urgent matters including bail applications, stay petitions, and other time-sensitive filings." },
@@ -158,7 +158,7 @@ const serviceContent: Record<string, { overview: string; benefits: string[]; pro
     overview: "Regulatory compliance in India spans GST, MCA, Income Tax, labor laws, FEMA, and industry-specific regulations. Missing a deadline can result in heavy penalties and legal consequences. NyaySevak's Compliance Management service provides automated compliance calendars, real-time alerts, filing assistance, and a comprehensive dashboard to track your compliance status across all applicable regulations.",
     benefits: ["Automated compliance calendar with deadline alerts", "GST return filing and reconciliation support", "MCA annual filings and ROC compliance", "Income Tax compliance and TDS management", "Labor law compliance (PF, ESI, Minimum Wages, POSH)", "Real-time compliance status dashboard"],
     process: ["Onboard your company details and compliance profile", "Receive your customized compliance calendar", "Get automated alerts before every deadline", "Our team handles filings or reviews your submissions", "Track all compliance status on your dashboard", "Quarterly compliance reviews and risk reports"],
-    whyChoose: ["Zero penalty guarantee with our managed compliance plans", "Single dashboard for all regulatory requirements", "Dedicated compliance manager for your account", "Pre-emptive alerts 30, 15, and 7 days before deadlines", "Quarterly compliance health reports with risk scoring", "Support for 50+ types of regulatory filings"],
+    whyChoose: ["Proactive deadline tracking to help you avoid penalties", "Single dashboard for all regulatory requirements", "Dedicated compliance manager for your account", "Pre-emptive alerts 30, 15, and 7 days before deadlines", "Quarterly compliance health reports with risk scoring", "Support for 50+ types of regulatory filings"],
     faqs: [
       { q: "Which compliance areas do you cover?", a: "We cover GST, Income Tax, TDS, MCA/ROC filings, labor laws (PF, ESI, POSH, Minimum Wages), FEMA, industry-specific regulations, and environmental compliance." },
       { q: "What happens if a deadline is missed?", a: "With our managed plans, we guarantee zero missed deadlines. In the rare event of a miss, we handle all rectification filings and penalty mitigation at no additional cost." },
@@ -178,7 +178,7 @@ const serviceContent: Record<string, { overview: string; benefits: string[]; pro
     overview: "Intellectual property is among the most valuable assets for any business. NyaySevak provides comprehensive IP management — from trademark, patent, and copyright registration to ongoing protection, infringement monitoring, licensing, and portfolio strategy. Our IP specialists have experience with the Indian Patent Office, Trademark Registry, and Copyright Office.",
     benefits: ["Complete trademark registration and opposition handling", "Patent filing, prosecution, and grant support", "Copyright and design registration services", "IP infringement monitoring and enforcement", "Licensing agreements and technology transfer support", "IP portfolio strategy, valuation, and audit"],
     process: ["IP audit to identify protectable assets", "Filing strategy based on business objectives", "Application preparation and filing with IPO/TMR", "Prosecution and examination response handling", "Registration certificate procurement", "Ongoing monitoring, renewal, and enforcement"],
-    whyChoose: ["95%+ success rate in trademark registrations", "Experience with PCT and international filings", "Dedicated IP watch service for infringement detection", "Portfolio management for 500+ active clients", "Expert representation at IP Appellate Board", "Competitive flat-fee pricing for standard filings"],
+    whyChoose: ["Experienced trademark, patent & copyright practitioners", "Experience with PCT and international filings", "Dedicated IP watch service for infringement detection", "End-to-end IP portfolio management", "Representation in IP matters before the High Courts (post-IPAB abolition, 2021)", "Competitive flat-fee pricing for standard filings"],
     faqs: [
       { q: "How long does trademark registration take?", a: "The complete trademark registration process in India typically takes 12-18 months. However, you get TM protection from the date of filing itself." },
       { q: "Do you handle international IP filings?", a: "Yes. We handle PCT patent applications, Madrid Protocol trademark filings, and coordinate with foreign associates for national phase entries worldwide." },
@@ -267,13 +267,6 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
       description: "Free first consultation",
       availability: "https://schema.org/InStock",
     },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.8",
-      bestRating: "5",
-      ratingCount: "847",
-      reviewCount: "423",
-    },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: service.title,
@@ -337,7 +330,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                   { icon: Shield, label: "Verified Experts" },
                   { icon: Clock, label: "Fast Turnaround" },
                   { icon: Users, label: "Pan-India Coverage" },
-                  { icon: Star, label: "4.8/5 Rating" },
+                  { icon: Star, label: "Free First Consultation" },
                 ].map((stat) => {
                   const StatIcon = stat.icon;
                   return (

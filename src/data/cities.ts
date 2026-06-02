@@ -204,6 +204,29 @@ export const cities: City[] = [
     blurb:
       "Gujarat's commercial capital — a major centre for corporate, textile, and real-estate matters, with the Gujarat High Court handling high volumes of writ and tax litigation.",
   },
+  {
+    slug: "jaipur",
+    name: "Jaipur",
+    state: "Rajasthan",
+    geo: { lat: 26.9124, lng: 75.7873 },
+    population: "40+ lakh (metro)",
+    neighbourhoods: [
+      "C-Scheme", "Malviya Nagar", "Vaishali Nagar", "Mansarovar", "Raja Park",
+      "Bani Park", "Tonk Road", "Jagatpura", "Sodala", "Jhotwara",
+      "Sanganer", "Vidhyadhar Nagar", "Civil Lines", "Ajmer Road",
+    ],
+    localBar: "Bar Council of Rajasthan",
+    highCourt: { name: "Rajasthan High Court (Jaipur Bench)", slug: "rajasthan-high-court" },
+    districtCourts: [
+      "Jaipur District & Sessions Court",
+      "Jaipur Metropolitan Magistrate Courts",
+      "Commercial Court, Jaipur",
+      "Family Court, Jaipur",
+      "Motor Accident Claims Tribunal (MACT), Jaipur",
+    ],
+    blurb:
+      "Rajasthan's capital and the seat of the Rajasthan High Court's Jaipur Bench — a fast-growing centre for real-estate, consumer, family, and commercial litigation.",
+  },
 ];
 
 // The 5 practice-area slugs we target per city.
