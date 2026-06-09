@@ -14,8 +14,8 @@ const steps = [
     number: "01",
     Icon: Search,
     title: "Connect",
-    description: "Browse our verified lawyer directory with Bar Council-registered professionals. Search by specialization, court, or location. Compare fees, ratings, and success metrics.",
-    details: ["Search by practice area, court & location", "Verified Bar Council registration", "Client ratings & success metrics", "Transparent fee comparison"],
+    description: "Tell us about your legal matter. Our team matches you with a Bar Council–verified lawyer who specialises in your case and practises in the relevant court.",
+    details: ["Share your matter in confidence", "Verified Bar Council registration", "Matched to your court & specialisation", "Transparent fees agreed upfront"],
   },
   {
     number: "02",
@@ -35,7 +35,7 @@ const steps = [
 
 const b2cServiceCards = [
   { Icon: Users, title: "Lawyer Consultation", desc: "Connect with verified, experienced lawyers for instant or scheduled consultations via video, audio, or chat with transparent pricing." },
-  { Icon: Search, title: "Find & Hire Lawyers", desc: "Search lawyers by specialization, location, and court. View verified profiles with Bar Council registration, ratings, and fee comparison." },
+  { Icon: Search, title: "Find & Hire Lawyers", desc: "Tell us your matter and we match you with a Bar Council–verified lawyer who takes your case from filing through to court resolution." },
   { Icon: FileText, title: "Document Services", desc: "Ready-to-use legal templates, custom drafting by qualified professionals, thorough document review, and secure digital storage." },
   { Icon: HeartHandshake, title: "Legal Aid", desc: "Free legal aid for eligible citizens. Pro bono lawyer network access. Support for women, SC/ST, and economically weaker sections." },
   { Icon: BookOpen, title: "Legal Knowledge", desc: "Comprehensive case law database, expert-written articles and guides, full acts and statutes repository, and know-your-rights resources." },
@@ -62,8 +62,8 @@ const platformStats = [
 
 const whyChooseItems = [
   { title: "Pan-India Coverage", desc: "Supreme Court to District Courts. All 25 High Courts, 700+ District Courts, 20+ Tribunals across every state and union territory." },
-  { title: "Verified Professionals", desc: "Every lawyer verified with Bar Council registration. Transparent profiles with ratings, reviews, and success metrics." },
-  { title: "Transparent Pricing", desc: "No hidden fees. Compare lawyer fees upfront before booking. Pay only for what you need." },
+  { title: "Verified Professionals", desc: "Every lawyer is Bar Council–verified and matched to your matter — with experience and fees shared before your free first consultation." },
+  { title: "Transparent Pricing", desc: "No hidden fees. Your lawyer's fees are agreed upfront before any work begins. Pay only for what you need." },
   { title: "Dual B2B + B2C Model", desc: "Serving individual citizens and enterprises alike. One platform for personal legal needs and corporate legal operations." },
   { title: "A-Z Legal Services", desc: "From simple notary and affidavits to high-stakes Supreme Court litigation and international arbitration." },
   { title: "Secure & Compliant", desc: "SSL encryption, IT Act 2000 compliance, secure form submissions, and privacy policy adherence." },

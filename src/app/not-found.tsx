@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { Scale } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Page Not Found",
@@ -25,11 +26,25 @@ const suggestedLinks = [
 
 export default function NotFound() {
   return (
-    <main className="min-h-screen bg-dark-deep flex flex-col items-center justify-center px-4 sm:px-6 text-center">
+    <main className="relative min-h-screen bg-dark-deep flex flex-col items-center justify-center px-4 sm:px-6 text-center overflow-hidden">
       {/* Decorative glow */}
       <div className="pointer-events-none absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-[radial-gradient(circle,rgba(201,168,76,0.06)_0%,transparent_60%)]" />
 
+      {/* Faint scales-of-justice watermark (law-themed) */}
+      <Scale
+        className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[420px] w-[420px] text-gold/[0.04]"
+        strokeWidth={1}
+        aria-hidden="true"
+      />
+
       <div className="relative z-10 max-w-2xl">
+        {/* Scales motif above the code */}
+        <div className="mb-4 flex justify-center">
+          <span className="flex h-14 w-14 items-center justify-center rounded-2xl icon-box-dark">
+            <Scale className="h-7 w-7 text-gold" strokeWidth={1.5} aria-hidden="true" />
+          </span>
+        </div>
+
         {/* 404 Number */}
         <p className="text-8xl sm:text-9xl font-heading font-bold gradient-text-gold tracking-tight">
           404
@@ -43,11 +58,11 @@ export default function NotFound() {
         </div>
 
         <h1 className="text-2xl sm:text-3xl font-heading font-bold text-white mb-3">
-          Page Not Found
+          Objection — This Page Is Out of Order
         </h1>
         <p className="text-sm sm:text-base text-gray-400 mb-10 max-w-md mx-auto leading-relaxed">
           The page you&apos;re looking for doesn&apos;t exist or has been moved.
-          Let us help you find what you need.
+          Let us help you find the right counsel for your matter.
         </p>
 
         {/* Suggested links */}

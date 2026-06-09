@@ -60,7 +60,7 @@ export default function Courts() {
                               <span className="text-2xl sm:text-3xl font-heading font-bold stat-gradient">{tier.count}</span>
                               <span className="text-sm text-gray-200 font-semibold">{tier.label}</span>
                             </div>
-                            <p className="text-xs text-gray-500 mt-0.5">{tier.sub}</p>
+                            <p className="text-xs text-gray-400 mt-0.5">{tier.sub}</p>
                           </div>
                         </div>
                         {i < 3 && (

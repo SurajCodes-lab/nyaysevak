@@ -53,7 +53,7 @@ const organizationJsonLd = {
     "न्याय सेवक",
   ],
   description:
-    "India's first complete legal ecosystem. Access Supreme Court, 25 High Courts, 700+ District Courts, all Tribunals & Arbitration centres. Complete A-Z legal services for individuals and businesses.",
+    "India's complete legal ecosystem. Access the Supreme Court, 25 High Courts, 700+ District Courts, all Tribunals & Arbitration centres. Complete A-Z legal services for individuals and businesses.",
   url: "https://nyaysevak.com",
   logo: {
     "@type": "ImageObject",
@@ -221,7 +221,7 @@ const siteNavigationJsonLd = {
     { "@type": "SiteNavigationElement", name: "Legal Services", url: "https://nyaysevak.com/services", description: "B2B & B2C legal services for individuals and businesses" },
     { "@type": "SiteNavigationElement", name: "Practice Areas", url: "https://nyaysevak.com/practice-areas", description: "29 practice areas covering every domain of Indian law" },
     { "@type": "SiteNavigationElement", name: "Court Coverage", url: "https://nyaysevak.com/courts", description: "Supreme Court, 25 High Courts, 700+ District Courts & Tribunals" },
-    { "@type": "SiteNavigationElement", name: "Platform Features", url: "https://nyaysevak.com/features", description: "AI-powered legal technology platform features" },
+    { "@type": "SiteNavigationElement", name: "Platform Features", url: "https://nyaysevak.com/features", description: "Verified lawyer matching and legal services platform features" },
     { "@type": "SiteNavigationElement", name: "About NyaySevak", url: "https://nyaysevak.com/about", description: "About India's premier legal services platform" },
     { "@type": "SiteNavigationElement", name: "Contact Us", url: "https://nyaysevak.com/contact", description: "Get in touch for legal consultation" },
   ],
@@ -233,7 +233,7 @@ const professionalServiceJsonLd = {
   "@type": "ProfessionalService",
   "@id": "https://nyaysevak.com/#professionalservice",
   name: "NyaySevak Legal Services",
-  description: "India's first complete legal ecosystem offering verified lawyer consultation, document services, corporate advisory, and court representation across all Indian courts and tribunals.",
+  description: "India's complete legal ecosystem offering verified lawyer consultation, document services, corporate advisory, and court representation across all Indian courts and tribunals.",
   url: "https://nyaysevak.com",
   telephone: "+91-9868666715",
   email: "nyaysevak@gmail.com",
@@ -284,7 +284,7 @@ const professionalServiceJsonLd = {
           priceCurrency: "INR",
         },
         availability: "https://schema.org/InStock",
-        itemOffered: { "@type": "Service", name: "Find & Hire Lawyers", description: "Search verified advocates by specialization, court & location" },
+        itemOffered: { "@type": "Service", name: "Find & Hire Lawyers", description: "Get matched with a verified advocate by specialization, court & location" },
       },
       {
         "@type": "Offer",
@@ -371,7 +371,7 @@ export const metadata: Metadata = {
     template: "%s | NyaySevak.com",
   },
   description:
-    "India's #1 legal services platform. Find & hire verified lawyers near you for Supreme Court, 25 High Courts, 700+ District Courts & all Tribunals. Online lawyer consultation, divorce lawyer, criminal lawyer, property lawyer, corporate advisory. 29 practice areas. Free first consultation. Call +91-9868666715.",
+    "India's trusted legal-services platform. Get matched with verified lawyers near you for the Supreme Court, 25 High Courts, 700+ District Courts & all Tribunals. Online lawyer consultation, divorce lawyer, criminal lawyer, property lawyer, corporate advisory. 29 practice areas. Free first consultation. Call +91-9868666715.",
   keywords:
     "lawyer near me, advocate near me, best lawyer India, online lawyer consultation, find lawyer India, hire lawyer online, legal services India, free legal consultation, divorce lawyer, criminal lawyer, property lawyer, bail lawyer, corporate lawyer, cyber crime lawyer, Supreme Court advocate, High Court lawyer, District Court lawyer, NCLT lawyer, NyaySevak, legal aid India, family lawyer India, tax lawyer, IP lawyer India, consumer court lawyer, labour lawyer, arbitration lawyer, RERA lawyer, documentation lawyer, affordable lawyer India, verified advocate India, court representation India",
   authors: [{ name: "NyaySevak" }],
@@ -414,7 +414,7 @@ export const metadata: Metadata = {
     creator: "@nyaysevak",
     title: "NyaySevak - Find Best Lawyers Near You in India | Free Consultation",
     description:
-      "India's #1 legal platform. Verified lawyers for all courts. Criminal, divorce, property, corporate, cyber crime & more. Free first consultation.",
+      "India's trusted legal platform. Verified lawyers for all courts. Criminal, divorce, property, corporate, cyber crime & more. Free first consultation.",
     images: ["https://nyaysevak.com/logo.png"],
   },
   verification: {

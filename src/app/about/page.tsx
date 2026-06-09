@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description:
     "NyaySevak is India's most trusted legal platform connecting you with verified lawyers across Supreme Court, 25 High Courts, 700+ District Courts & all Tribunals. 29 practice areas, transparent pricing, free first consultation. Serving individuals & businesses pan-India.",
   keywords:
-    "about NyaySevak, best legal services India, trusted lawyer platform, verified lawyer directory India, legal services platform, online legal consultation India, find lawyer near me, hire advocate online, pan-India legal coverage",
+    "about NyaySevak, best legal services India, trusted lawyer platform, verified lawyer matching India, legal services platform, online legal consultation India, find lawyer near me, hire advocate online, pan-India legal coverage",
   alternates: { canonical: "https://nyaysevak.com/about" },
   openGraph: {
     title: "About NyaySevak - India's Most Trusted Legal Services Platform",
@@ -25,7 +25,7 @@ const aboutPageJsonLd = {
   "@id": "https://nyaysevak.com/about/#aboutpage",
   name: "About NyaySevak - India's #1 Legal Services Platform",
   description:
-    "India's first complete legal ecosystem connecting citizens, businesses, and legal professionals across the entire Indian judicial system. Verified lawyers across Supreme Court, 25 High Courts, 700+ District Courts & all Tribunals.",
+    "India's complete legal ecosystem connecting citizens, businesses, and legal professionals across the entire Indian judicial system. Verified lawyers across Supreme Court, 25 High Courts, 700+ District Courts & all Tribunals.",
   url: "https://nyaysevak.com/about",
   mainEntity: { "@id": "https://nyaysevak.com/#organization" },
   isPartOf: { "@id": "https://nyaysevak.com/#website" },

@@ -16,7 +16,30 @@ import {
   defaultServiceRecommendations,
 } from "@/data/practice-area-cross-links";
 import { getVariantsForPractice } from "@/data/practice-area-keyword-variants";
+import { authorsBySlug } from "@/data/authors";
 import { notFound } from "next/navigation";
+
+// E-E-A-T: map each practice area to the in-house editorial desk that reviews
+// its content. Named, credentialed reviewers are the strongest trust signal
+// Google's Quality Rater Guidelines reward on YMYL (legal) pages.
+const PRACTICE_DESK: Record<string, string> = {
+  "criminal-law": "criminal-law-desk",
+  "cbi-cases": "criminal-law-desk",
+  "ed-cases": "criminal-law-desk",
+  "ndps-cases": "criminal-law-desk",
+  "family-matrimonial": "matrimonial-family-desk",
+  "property-real-estate": "property-real-estate-desk",
+  "corporate-business": "corporate-commercial-desk",
+  "banking-finance": "corporate-commercial-desk",
+  "intellectual-property": "corporate-commercial-desk",
+  "tax-law": "corporate-commercial-desk",
+  "arbitration-adr": "corporate-commercial-desk",
+  "insurance-law": "corporate-commercial-desk",
+  "mergers-acquisitions": "corporate-commercial-desk",
+};
+function deskForPractice(slug: string): string {
+  return PRACTICE_DESK[slug] ?? "nyaysevak-legal-team";
+}
 
 export function generateStaticParams() {
   return practiceAreas.map((area) => ({ slug: area.slug }));
@@ -223,6 +246,9 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ s
       }
     : null;
 
+  // E-E-A-T: the editorial desk that reviews this practice area's content.
+  const desk = authorsBySlug[deskForPractice(slug)];
+
   // Week 4 GEO: E-E-A-T authority signals for AI search engines
   const geoJsonLd = {
     "@context": "https://schema.org",
@@ -234,8 +260,9 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ s
     isAccessibleForFree: true,
     reviewedBy: {
       "@type": "Organization",
-      name: "NyaySevak Legal Team",
-      url: "https://nyaysevak.com/about",
+      name: desk?.name ?? "NyaySevak Legal Team",
+      url: `https://nyaysevak.com/authors/${deskForPractice(slug)}`,
+      knowsAbout: desk?.expertise ?? [],
     },
     creditText: `NyaySevak - ${area.title} Legal Services India`,
     about: { "@type": "Thing", name: area.title, description: area.description },
@@ -715,6 +742,41 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ s
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* ===== Reviewed-by editorial desk (E-E-A-T / YMYL trust) ===== */}
+      {desk && (
+        <section className="bg-dark py-12 sm:py-14 border-t border-white/[0.04]">
+          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+            <div className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6 lg:p-8">
+              <p className="text-[10px] sm:text-xs uppercase tracking-[0.25em] text-gold/70 font-semibold mb-3">
+                Reviewed by the {desk.designation}
+              </p>
+              <Link
+                href={`/authors/${deskForPractice(slug)}`}
+                className="text-lg sm:text-xl font-heading font-semibold text-white hover:text-gold transition-colors block mb-2"
+              >
+                {desk.name}
+              </Link>
+              <p className="text-sm text-gray-400 leading-relaxed mb-4">{desk.shortBio}</p>
+              <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-gray-500 mb-4">
+                <span>{desk.yearsOfExperience}+ years of practice</span>
+                {desk.barEnrolment && (
+                  <>
+                    <span aria-hidden="true">·</span>
+                    <span>{desk.barEnrolment}</span>
+                  </>
+                )}
+              </div>
+              <Link
+                href={`/authors/${deskForPractice(slug)}`}
+                className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-gold hover:text-gold-light transition-colors"
+              >
+                Full profile <ArrowRight className="h-3 w-3" />
+              </Link>
             </div>
           </div>
         </section>

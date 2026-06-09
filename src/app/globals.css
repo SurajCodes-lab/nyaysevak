@@ -674,6 +674,41 @@ img { transition: opacity 0.3s ease; }
 }
 
 /* =======================================================
+   LAW-THEME — Notary seal badge + balancing scales
+   ======================================================= */
+
+/* Notary/wax-seal style for "verified / Bar Council / confidential" badges.
+   Reinforces the single most important signal on a legal lead-gen site:
+   trust & verification. */
+.seal-badge {
+  position: relative;
+  background: radial-gradient(circle at 50% 35%, rgba(201, 168, 76, 0.18), rgba(201, 168, 76, 0.06));
+  border: 1.5px solid rgba(201, 168, 76, 0.35);
+  box-shadow:
+    0 0 0 3px rgba(201, 168, 76, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15),
+    0 4px 12px rgba(0, 0, 0, 0.25);
+}
+.seal-badge::after {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  border: 1px dashed rgba(201, 168, 76, 0.30);
+  border-radius: 9999px;
+  pointer-events: none;
+}
+
+/* Balancing scales-of-justice sway (loading / hero accents). */
+@keyframes scaleSway {
+  0%, 100% { transform: rotate(-7deg); }
+  50% { transform: rotate(7deg); }
+}
+.scales-sway {
+  animation: scaleSway 2.2s ease-in-out infinite;
+  transform-origin: 50% 18%;
+}
+
+/* =======================================================
    ACCESSIBILITY — Reduced Motion
    ======================================================= */
 
@@ -702,6 +737,9 @@ img { transition: opacity 0.3s ease; }
     transition: none;
   }
   .gradient-text-gold {
+    animation: none !important;
+  }
+  .scales-sway {
     animation: none !important;
   }
   * {

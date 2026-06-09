@@ -31,13 +31,13 @@ export const b2cServices: ServiceItem[] = [
     category: "b2c",
     iconPath: "M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z",
     lucideIcon: "Search",
-    description: "Search by specialization, location & court to find the right lawyer.",
+    description: "Tell us your matter and we match you with the right verified lawyer.",
     featured: true,
     bullets: [
-      "Search by specialization, location & court",
-      "Verified profiles with Bar Council registration",
-      "Client ratings, reviews & success metrics",
-      "Direct booking with fee comparison",
+      "Matched to your specialization, location & court",
+      "Every lawyer Bar Council–registered & verified",
+      "Full representation — from filing to court resolution",
+      "Transparent fees upfront, free first consultation",
     ],
   },
   {

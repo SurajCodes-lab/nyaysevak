@@ -95,7 +95,7 @@ export default function Footer() {
               Defending Your Rights
             </p>
             <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-gray-500">
-              India&apos;s first complete legal ecosystem. Connecting citizens, businesses, and legal
+              India&apos;s complete legal ecosystem. Connecting citizens, businesses, and legal
               professionals across the entire Indian judicial system.
             </p>
           </div>
@@ -263,13 +263,13 @@ export default function Footer() {
           {/* Bottom bar */}
           <div className="mt-14 border-t border-white/[0.06] pt-8">
             <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
-              <p className="text-xs text-gray-600">
+              <p className="text-xs text-gray-400">
                 &copy; 2026 NyaySevak. All rights reserved.
               </p>
               <div className="flex gap-6">
-                <Link href="/privacy-policy" className="text-xs text-gray-600 transition-colors hover:text-gray-300">Privacy Policy</Link>
-                <Link href="/terms-of-service" className="text-xs text-gray-600 transition-colors hover:text-gray-300">Terms of Service</Link>
-                <Link href="/disclaimer" className="text-xs text-gray-600 transition-colors hover:text-gray-300">Disclaimer</Link>
+                <Link href="/privacy-policy" className="text-xs text-gray-500 transition-colors hover:text-gray-300">Privacy Policy</Link>
+                <Link href="/terms-of-service" className="text-xs text-gray-500 transition-colors hover:text-gray-300">Terms of Service</Link>
+                <Link href="/disclaimer" className="text-xs text-gray-500 transition-colors hover:text-gray-300">Disclaimer</Link>
               </div>
             </div>
           </div>

@@ -618,7 +618,7 @@ export default async function CityPracticePage(
                 Talk to a {label.title} in {city.name} Today
               </h2>
               <p className="mx-auto mt-4 mb-8 max-w-xl text-sm sm:text-base text-gray-400 leading-relaxed">
-                Verified {city.name} {label.keyword}s are online now. Your first consultation is free — no obligation, no hidden fees.
+                Verified {city.name} {label.keyword}s are ready to help. Your first consultation is free — no obligation, no hidden fees.
               </p>
               <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4">
                 <ContactButton className="btn-gold-shine inline-flex items-center justify-center gap-2.5 rounded-xl bg-gradient-to-r from-gold to-gold-light px-8 sm:px-10 py-4 sm:py-5 text-sm font-semibold uppercase tracking-widest text-black cursor-pointer">

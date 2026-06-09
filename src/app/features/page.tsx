@@ -2,15 +2,15 @@ import type { Metadata } from "next";
 import Features from "@/components/Features";
 
 export const metadata: Metadata = {
-  title: "Platform Features - Verified Lawyer Directory, Instant Booking & Legal AI | NyaySevak",
+  title: "Platform Features - Verified Lawyer Matching, Consultation Booking & Legal Resources | NyaySevak",
   description:
-    "NyaySevak platform features: Bar Council verified lawyer directory, instant consultation booking, AI-powered lawyer matching, comprehensive legal guides, court information database, secure document vault, WhatsApp integration & 24/7 support. Find the best lawyer for your case.",
+    "NyaySevak platform features: Bar Council verified lawyer matching, instant consultation booking, comprehensive legal guides, court information database, secure document storage, WhatsApp integration & 24/7 support. Get matched with the right lawyer for your case.",
   keywords:
-    "lawyer directory India, book lawyer online, find lawyer near me, verified advocate directory, legal consultation booking, legal guides India, court information database, AI lawyer matching, online legal platform India, NyaySevak features",
+    "find a lawyer India, book lawyer online, lawyer near me, verified advocate India, legal consultation booking, legal guides India, court information database, lawyer matching India, online legal platform India, NyaySevak features",
   alternates: { canonical: "https://nyaysevak.com/features" },
   openGraph: {
     title: "Platform Features - Find Best Lawyers in India | NyaySevak",
-    description: "Verified lawyer directory, instant booking, AI matching, legal guides & more. Find the right lawyer for your case.",
+    description: "Verified lawyer matching, consultation booking, legal guides & more. Get matched with the right lawyer for your case.",
     type: "website",
     url: "https://nyaysevak.com/features",
   },

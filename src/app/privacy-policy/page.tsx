@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 export const metadata: Metadata = {
   title: "Privacy Policy | NyaySevak - India's Premier Legal Services Platform",
   description:
-    "Read NyaySevak's Privacy Policy. Learn how we collect, use, and protect your personal data on India's first complete legal ecosystem platform.",
+    "Read NyaySevak's Privacy Policy. Learn how we collect, use, and protect your personal data on India's complete legal ecosystem platform.",
   keywords:
     "NyaySevak privacy policy, legal services data protection, privacy policy India, IT Act 2000 compliance, user data protection legal platform",
   alternates: { canonical: "https://nyaysevak.com/privacy-policy" },

@@ -59,43 +59,43 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 const featureContent: Record<string, { longDesc: string; howItWorks: { title: string; desc: string }[]; highlights: { label: string; desc: string }[]; whyChoose: string[]; faqs: { q: string; a: string }[] }> = {
   "lawyer-directory": {
-    longDesc: "NyaySevak's Lawyer Directory is the most comprehensive, verified database of legal professionals in India. Every lawyer on our platform undergoes Bar Council registration verification, ensuring you only connect with legitimate, qualified advocates. Our advanced search engine lets you filter by practice area, court, location, language, fee range, and availability — making it effortless to find the perfect lawyer for your specific legal need.",
+    longDesc: "NyaySevak matches you with the right Bar Council–verified lawyer for your matter. Because Bar Council of India rules do not permit advocates to be publicly advertised, listed, or ranked, we don't run a browsable directory — instead, you tell us your practice area, court, location, and language, and our legal team privately connects you with a verified advocate who fits your case and takes it through to resolution, including full court representation.",
     howItWorks: [
-      { title: "Enter Your Legal Need", desc: "Describe your matter or browse by practice area to start your search." },
-      { title: "Apply Smart Filters", desc: "Narrow results by location, court, language, fee range, and availability." },
-      { title: "Review Verified Profiles", desc: "Check detailed lawyer profiles with Bar Council verification and credentials." },
-      { title: "Compare Side-by-Side", desc: "Compare multiple lawyers on experience, fees, ratings, and specializations." },
-      { title: "Read Client Reviews", desc: "Check genuine client feedback and success metrics for each lawyer." },
-      { title: "Book & Connect", desc: "Book a consultation or hire directly through the secure NyaySevak platform." },
+      { title: "Tell Us Your Matter", desc: "Describe your legal issue, your city, and the court involved." },
+      { title: "We Match You", desc: "Our team identifies a Bar Council–verified lawyer who specialises in your matter." },
+      { title: "Free First Consultation", desc: "Speak with your matched lawyer by video, audio, chat, or in person — free." },
+      { title: "See Credentials Upfront", desc: "We share the lawyer's experience, courts of practice, and fees before you commit." },
+      { title: "Agree Fees Transparently", desc: "Fees are agreed upfront with no hidden charges and no obligation." },
+      { title: "Full Representation", desc: "Engage your lawyer for end-to-end handling — including court appearances — until your matter is resolved." },
     ],
     highlights: [
       { label: "1,000+ Verified Lawyers", desc: "Bar Council verified professionals across India" },
       { label: "29 Practice Areas", desc: "Complete coverage of all legal specializations" },
       { label: "15+ Languages", desc: "Lawyers available in major Indian languages" },
-      { label: "Quarterly Verification", desc: "Profiles updated and verified every quarter" },
+      { label: "Ongoing Verification", desc: "Every lawyer's Bar Council status kept verified" },
       { label: "Under 2 Hour Response", desc: "Average response time for urgent matters" },
       { label: "Pan-India Coverage", desc: "Supreme Court to District Courts across India" },
     ],
     whyChoose: [
-      "Every lawyer undergoes rigorous Bar Council registration verification before listing",
-      "Transparent profiles with real client reviews, ratings, and success metrics",
-      "Advanced search with 10+ filter parameters for precise lawyer matching",
-      "Side-by-side comparison tool to evaluate multiple lawyers simultaneously",
-      "Secure in-platform communication and document sharing",
-      "100% satisfaction guarantee — if unhappy, we rematch you for free",
+      "Every lawyer undergoes rigorous Bar Council registration verification",
+      "Matched to a specialist for your exact matter, court, and language",
+      "Free first consultation — speak before you commit, with no obligation",
+      "Full court representation, from filing through to final resolution",
+      "Transparent fees agreed upfront — no hidden charges, no online payment required",
+      "Not satisfied? We'll match you with another verified lawyer at no extra cost",
     ],
     faqs: [
-      { q: "How do you verify lawyers on the platform?", a: "Every lawyer undergoes a multi-step verification process: Bar Council registration check, identity verification, qualification validation, and reference checks. We also verify their court enrollment and practice history." },
-      { q: "Can I search for lawyers who speak my language?", a: "Yes. Our directory supports filtering by 15+ Indian languages including Hindi, English, Tamil, Telugu, Bengali, Marathi, Gujarati, Kannada, Malayalam, Punjabi, and more." },
-      { q: "How are lawyer ratings calculated?", a: "Ratings are based on verified client reviews, case outcomes, response times, professionalism scores, and peer recommendations. Only clients who have actually engaged a lawyer can leave a review." },
-      { q: "Is there a cost to search the directory?", a: "Browsing and searching the directory is completely free. You only pay when you book a consultation or engage a lawyer's services." },
+      { q: "How do you verify lawyers in your network?", a: "Every lawyer undergoes a multi-step verification process: Bar Council registration check, identity verification, qualification validation, and reference checks. We also verify their court enrollment and practice history." },
+      { q: "Can I get a lawyer who speaks my language?", a: "Yes. Tell us your preferred language and we match you with a verified lawyer who speaks it — Hindi, English, Tamil, Telugu, Bengali, Marathi, Gujarati, Kannada, Malayalam, Punjabi, and more." },
+      { q: "Do you show lawyer profiles or ratings?", a: "No. Bar Council of India rules do not permit advocates to be publicly advertised, ranked, or rated, so we don't display profiles or star ratings. Instead, our team matches you privately with a verified lawyer and shares their credentials, experience, and fees before your free first consultation." },
+      { q: "Is there any cost to get matched?", a: "No. Getting matched and your first consultation are completely free. You only agree fees directly with your lawyer if you choose to engage them." },
     ],
   },
   "service-booking": {
-    longDesc: "Booking legal services should be as easy as booking a doctor's appointment. NyaySevak's Service Booking system allows you to schedule consultations, document services, and legal aid — all with transparent, upfront pricing and flexible scheduling. Our platform handles everything from slot selection to payment processing, reminders, and follow-ups.",
+    longDesc: "Booking a legal consultation should be as easy as booking a doctor's appointment. NyaySevak lets you request a consultation — instant or scheduled — for any legal matter, with transparent, upfront pricing and flexible timing. Our team handles everything from matching you with the right verified lawyer to slot selection, reminders, and follow-ups.",
     howItWorks: [
       { title: "Select Your Service", desc: "Choose from consultations, document services, representation, and more." },
-      { title: "Choose a Lawyer", desc: "Pick a verified lawyer or let our AI match you with the best fit." },
+      { title: "Get Matched", desc: "Tell us your matter and our team matches you with the best-fit verified lawyer." },
       { title: "Pick a Time Slot", desc: "Select instant availability or schedule for a convenient future time." },
       { title: "Transparent Pricing", desc: "See exact costs upfront before confirming — zero hidden charges." },
       { title: "Get Confirmations", desc: "Receive instant booking confirmation with automated reminders." },
@@ -104,22 +104,22 @@ const featureContent: Record<string, { longDesc: string; howItWorks: { title: st
     highlights: [
       { label: "Same-Day Booking", desc: "Available for urgent legal matters" },
       { label: "Zero Hidden Fees", desc: "Complete price transparency guaranteed" },
-      { label: "Secure Payments", desc: "Bank-grade encrypted payment gateway" },
+      { label: "Free First Consultation", desc: "No charge for your first session" },
       { label: "Free Rescheduling", desc: "Flexible rescheduling up to 4 hours before" },
       { label: "Auto Reminders", desc: "Email and SMS appointment notifications" },
       { label: "Post-Session Support", desc: "Follow-up assistance after consultation" },
     ],
     whyChoose: [
-      "Transparent, upfront pricing displayed before you commit to any booking",
+      "Transparent, upfront pricing shared before you commit to any consultation",
       "Multiple communication modes: video call, audio call, chat, and in-person",
       "Instant booking for urgent matters — connect with a lawyer within minutes",
-      "Bank-grade payment security with SSL encryption and PCI compliance",
+      "Your details kept private and secure — no online payment required",
       "Free rescheduling and hassle-free cancellation policies",
       "Automated reminders and follow-up support after every session",
     ],
     faqs: [
-      { q: "How quickly can I book a consultation?", a: "For urgent matters, you can connect with a lawyer within minutes through our instant booking feature. For scheduled appointments, you can book slots as early as 30 minutes from now." },
-      { q: "What payment methods are accepted?", a: "We accept UPI, debit/credit cards, net banking, and popular wallets like Paytm and PhonePe. All payments are processed through our secure, PCI-compliant gateway." },
+      { q: "How quickly can I book a consultation?", a: "For urgent matters, you can connect with a lawyer within minutes through our instant booking. For scheduled appointments, you can book slots as early as 30 minutes from now." },
+      { q: "How do I pay the lawyer?", a: "Fees are agreed directly with your matched lawyer and paid to them — there is no online payment on NyaySevak. Your first consultation is free, and all fees are shared transparently before you commit." },
       { q: "What if I need to cancel my booking?", a: "You can cancel free of charge up to 4 hours before your appointment. Cancellations within 4 hours may be subject to a nominal fee depending on the lawyer's policy." },
       { q: "Can I book for someone else (family member)?", a: "Yes. During booking, you can specify that the consultation is for another person. The lawyer will be informed accordingly." },
     ],
@@ -164,8 +164,8 @@ const featureContent: Record<string, { longDesc: string; howItWorks: { title: st
       { title: "Browse by Location", desc: "Filter by state, city, or jurisdiction to find relevant courts." },
       { title: "View Detailed Info", desc: "See jurisdiction, bench locations, case types, and filing details." },
       { title: "Check Procedures", desc: "Access filing procedures, required documents, and fee structures." },
-      { title: "Find Enrolled Lawyers", desc: "See verified lawyers who practice at your selected court." },
-      { title: "Book Representation", desc: "Hire a lawyer directly from the court information page." },
+      { title: "Get Matched for This Court", desc: "We connect you with a verified lawyer who practises at your selected court." },
+      { title: "Request Representation", desc: "Ask us to match you with a lawyer for that court, through to resolution." },
     ],
     highlights: [
       { label: "25 High Courts", desc: "Complete coverage with bench details" },
@@ -173,12 +173,12 @@ const featureContent: Record<string, { longDesc: string; howItWorks: { title: st
       { label: "20+ Tribunal Types", desc: "Financial, tax, regulatory, and more" },
       { label: "Arbitration Centres", desc: "All major arbitration institutions" },
       { label: "Filing Guides", desc: "Procedures and checklists for each court" },
-      { label: "Direct Booking", desc: "Hire lawyers for any court instantly" },
+      { label: "Court-Ready Lawyers", desc: "Matched for any court across India" },
     ],
     whyChoose: [
       "The most comprehensive court database covering India's entire judicial system",
       "Detailed information for every court: jurisdiction, benches, procedures, and fees",
-      "Direct integration with our lawyer directory for instant representation booking",
+      "Get matched with a verified lawyer for representation at any court",
       "Filing procedure guides with required documents checklist for each court type",
       "Regular updates to reflect new tribunal establishments and jurisdiction changes",
       "Free access — navigate India's judicial system with confidence",
@@ -186,7 +186,7 @@ const featureContent: Record<string, { longDesc: string; howItWorks: { title: st
     faqs: [
       { q: "Does the database cover all courts in India?", a: "Yes. We cover the Supreme Court, all 25 High Courts with bench locations, 700+ District Courts across 36 states and UTs, 20+ tribunal categories, and all major arbitration centres." },
       { q: "How accurate is the filing procedure information?", a: "Filing procedures are compiled by lawyers practicing in each court and updated regularly. However, we always recommend confirming with your advocate as procedures may change." },
-      { q: "Can I find lawyers for a specific court?", a: "Yes. Each court page shows verified lawyers who are enrolled and actively practicing at that court, making it easy to find representation." },
+      { q: "Can I get a lawyer for a specific court?", a: "Yes. Tell us the court where your matter is pending and we match you with a verified lawyer who practises there — from the Supreme Court to any District Court." },
       { q: "Is fee structure information included?", a: "Yes, we provide general court fee guidelines for common filing types. Actual fees may vary, and your lawyer will advise on the exact court fees applicable to your matter." },
     ],
   },
@@ -525,7 +525,7 @@ export default async function FeatureDetailPage({ params }: { params: Promise<{ 
               Try {feature.title} Now
             </h2>
             <p className="mx-auto mt-4 mb-8 max-w-lg text-sm text-gray-500 leading-relaxed">
-              Experience this feature and all other powerful tools on NyaySevak — India&apos;s first complete legal ecosystem.
+              Experience this feature and all other powerful tools on NyaySevak — India&apos;s complete legal ecosystem.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <ContactButton className="btn-gold-shine rounded-xl inline-flex items-center gap-2.5 bg-gradient-to-r from-gold to-gold-light px-8 py-4 text-sm font-semibold uppercase tracking-widest text-black transition-all duration-300 cursor-pointer">

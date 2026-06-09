@@ -7,6 +7,7 @@ import PlatformBanner from "@/components/PlatformBanner";
 import PracticeAreas from "@/components/PracticeAreas";
 import Courts from "@/components/Courts";
 import FeaturesPreview from "@/components/FeaturesPreview";
+import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
 import Link from "next/link";
 import ContactButton from "@/components/ContactButton";
@@ -15,7 +16,7 @@ import { cities, cityPracticeSlugs, cityPracticeLabels } from "@/data/cities";
 export const metadata: Metadata = {
   title: "NyaySevak - Best Lawyer Consultation & Legal Services in India | Free First Consultation",
   description:
-    "India's #1 legal services platform. Find & hire verified lawyers near you for Supreme Court, 25 High Courts, 700+ District Courts & all Tribunals. Online lawyer consultation, divorce lawyer, criminal lawyer, property lawyer, corporate advisory. 29 practice areas. Free first consultation.",
+    "India's trusted legal services platform. Get matched with verified lawyers near you for the Supreme Court, 25 High Courts, 700+ District Courts & all Tribunals. Online lawyer consultation, divorce lawyer, criminal lawyer, property lawyer, corporate advisory. 29 practice areas. Free first consultation.",
   alternates: {
     canonical: "https://nyaysevak.com",
   },
@@ -53,7 +54,7 @@ const webPageJsonLd = {
   "@id": "https://nyaysevak.com/#webpage",
   name: "NyaySevak - Defending Your Rights | India's Premier Legal Services Platform",
   description:
-    "India's first complete legal ecosystem. Access Supreme Court, 25 High Courts, 700+ District Courts, all Tribunals & Arbitration centres. Complete A-Z legal services for individuals and businesses.",
+    "India's complete legal ecosystem. Access Supreme Court, 25 High Courts, 700+ District Courts, all Tribunals & Arbitration centres. Complete A-Z legal services for individuals and businesses.",
   url: "https://nyaysevak.com",
   isPartOf: { "@id": "https://nyaysevak.com/#website" },
   about: { "@id": "https://nyaysevak.com/#organization" },
@@ -76,7 +77,7 @@ const homepageFaqJsonLd = {
       name: "What is NyaySevak?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "NyaySevak is India's first complete legal ecosystem that connects citizens and businesses with verified lawyers across the Supreme Court, 25 High Courts, 700+ District Courts, all Tribunals, and Arbitration centres. We offer both B2B and B2C legal services covering 29 practice areas.",
+        text: "NyaySevak is India's complete legal ecosystem that connects citizens and businesses with verified lawyers across the Supreme Court, 25 High Courts, 700+ District Courts, all Tribunals, and Arbitration centres. We offer both B2B and B2C legal services covering 29 practice areas.",
       },
     },
     {
@@ -84,7 +85,7 @@ const homepageFaqJsonLd = {
       name: "How can I find a lawyer on NyaySevak?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "You can browse our verified lawyer directory by practice area, court, location, or specialization. Each lawyer profile includes Bar Council verification, client ratings, experience details, and transparent pricing. You can book an instant or scheduled consultation.",
+        text: "Tell us about your legal matter through our free consultation form and NyaySevak matches you with a Bar Council–verified lawyer who specialises in your practice area and practises in the relevant court jurisdiction. Because Bar Council of India rules do not permit advocates to be publicly advertised or listed, there is no directory to sift through — we handle the matching, and you book a free first consultation with fees agreed upfront.",
       },
     },
     {
@@ -142,7 +143,7 @@ const homepageFaqJsonLd = {
       name: "How can I find a good lawyer near me in India?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Use NyaySevak's verified lawyer directory to find lawyers near you. Search by practice area (criminal, divorce, property, corporate, etc.), court, location, and language. Every lawyer is Bar Council verified with transparent fees. You can compare ratings, reviews, and experience before booking a free first consultation.",
+        text: "Share your matter and location with NyaySevak and we connect you with a Bar Council–verified lawyer near you who handles your practice area (criminal, divorce, property, corporate, etc.) in the relevant court. Every lawyer is Bar Council verified with transparent, upfront fees, and your first consultation is free — so you understand the scope and cost before you commit.",
       },
     },
     {
@@ -292,6 +293,7 @@ export default function Home() {
       <PracticeAreas />
       <Courts />
       <FeaturesPreview />
+      <Testimonials />
       <Contact />
 
       {/* Week 4: SEO Content Section — Keyword-rich internal linking for Google */}
@@ -409,7 +411,7 @@ export default function Home() {
                   <p className="text-[11px] uppercase tracking-widest text-gray-500 font-semibold mb-2">
                     {c.name}, {c.state}
                     <span className="ml-2 text-gold/50 font-normal normal-case tracking-normal">
-                      (<Link href={`/lawyers/${c.slug}`} className="hover:text-gold transition-colors">view all lawyers in {c.name}</Link>)
+                      (<Link href={`/lawyers/${c.slug}`} className="hover:text-gold transition-colors">find a lawyer in {c.name}</Link>)
                     </span>
                   </p>
                   <div className="flex flex-wrap gap-2">
@@ -433,7 +435,7 @@ export default function Home() {
 
           {/* SEO text content */}
           <div className="mt-12 pt-10 border-t border-white/[0.04]">
-            <p className="text-xs text-gray-600 leading-relaxed max-w-4xl">
+            <p className="text-xs text-gray-400 leading-relaxed max-w-4xl">
               NyaySevak is India&apos;s leading legal services platform connecting individuals and businesses with verified lawyers across the Supreme Court, 25 High Courts, 700+ District Courts, and all Tribunals. Whether you need a criminal lawyer, divorce lawyer, property lawyer, corporate lawyer, or specialist for CBI, ED, NDPS cases — NyaySevak provides access to Bar Council verified advocates with transparent pricing and free first consultation. Our platform covers 29 practice areas including civil law, family law, cyber law, consumer protection, tax law, banking &amp; finance, intellectual property, arbitration, and more. Available pan-India with support in Hindi, English, and regional languages.
             </p>
           </div>
@@ -475,7 +477,7 @@ export default function Home() {
             How NyaySevak Verifies Every Lawyer You Meet
           </h3>
           <p className="text-sm sm:text-base text-gray-400 leading-relaxed mb-4">
-            Every lawyer listed on NyaySevak is validated against their Bar Council registration number, their years of active practice, their specialisation claims (confirmed through reported judgments and peer references), and their client feedback on our platform. You see their Bar Council ID, their experience, their courts of practice, their fee structure, and their real ratings before you ever speak to them. There are no hidden commissions, no opaque matching — you choose the lawyer you trust, speak to them free for your first consultation, and decide whether to engage. For corporate clients, we go further, assembling dedicated legal teams tailored to your enterprise size and industry-specific regulatory needs.
+            Every lawyer in the NyaySevak network is validated against their Bar Council registration number, their years of active practice, their specialisation (confirmed through reported judgments and peer references), and their client feedback on our platform. Because Bar Council of India rules do not permit advocates to be publicly advertised or listed, we don&apos;t display individual profiles — instead, once we match you, we share that lawyer&apos;s Bar Council ID, experience, courts of practice, and fee structure before your free first consultation, so you know exactly who you&apos;re speaking with. There are no hidden commissions and no obligation: you speak to your matched lawyer free, then decide whether to engage. For corporate clients, we go further, assembling dedicated legal teams tailored to your enterprise size and industry-specific regulatory needs.
           </p>
 
           <h3 className="text-lg sm:text-xl font-heading font-bold text-white mb-3 mt-10">

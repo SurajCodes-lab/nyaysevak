@@ -11,9 +11,9 @@ const steps = [
     num: "01",
     title: "Connect",
     subtitle: "Find Your Expert",
-    desc: "Search 1,000+ verified lawyers by specialization, court, or city. Every advocate is verified with Bar Council credentials.",
+    desc: "Tell us your matter and we match you with one of 1,000+ verified lawyers by specialization, court, or city. Every advocate is verified with Bar Council credentials.",
     Icon: Users,
-    tags: ["Verified Profiles", "Specialist Match"],
+    tags: ["Verified Lawyers", "Specialist Match"],
   },
   {
     num: "02",

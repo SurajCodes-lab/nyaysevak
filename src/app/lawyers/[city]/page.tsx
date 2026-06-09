@@ -240,7 +240,7 @@ export default async function CityHubPage({ params }: { params: Promise<{ city: 
                     {content?.lead.split(". ").slice(0, 2).join(". ") + "."}
                   </p>
                   <span className="mt-4 inline-flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-widest text-gold-dark/60 group-hover:text-gold-dark transition-colors">
-                    View lawyers
+                    Get matched
                     <ArrowRight className="h-3 w-3 group-hover:translate-x-1 transition-transform" strokeWidth={2} />
                   </span>
                 </Link>

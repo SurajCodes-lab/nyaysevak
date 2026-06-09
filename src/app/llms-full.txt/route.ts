@@ -30,7 +30,7 @@ Schema: every listed URL emits Schema.org JSON-LD in the document head.
 - ${SITE_URL}/about — About NyaySevak: founding context (2024), mission, editorial desks.
 - ${SITE_URL}/contact — Contact: phone, WhatsApp, form, business hours.
 - ${SITE_URL}/free-legal-consultation — Free first consultation: scope, eligibility, how to claim.
-- ${SITE_URL}/lawyers — Lawyer directory entry point.
+- ${SITE_URL}/lawyers — Find-a-lawyer (lawyer matching) entry point, by city.
 - ${SITE_URL}/platform — Platform overview for B2B clients.
 - ${SITE_URL}/features — Platform features index.
 - ${SITE_URL}/insights — Long-form editorial articles.

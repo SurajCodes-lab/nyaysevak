@@ -4,7 +4,9 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { Phone } from "lucide-react";
 import ContactButton from "./ContactButton";
+import { trackPhoneClick } from "@/lib/analytics";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -85,12 +87,23 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* Desktop CTA */}
-          <ContactButton
-            className="btn-gold-shine hidden lg:inline-flex items-center rounded-xl bg-gradient-to-r from-gold to-gold-light px-6 py-2.5 text-xs font-semibold uppercase tracking-widest text-black transition-all duration-300 hover:shadow-lg hover:shadow-gold/20 cursor-pointer"
-          >
-            Get Consultation
-          </ContactButton>
+          {/* Desktop CTA + click-to-call */}
+          <div className="hidden lg:flex items-center gap-2">
+            <a
+              href="tel:+919868666715"
+              onClick={() => trackPhoneClick()}
+              aria-label="Call NyaySevak now"
+              className="inline-flex items-center gap-2 rounded-xl border border-gold/30 px-4 py-2.5 text-xs font-semibold uppercase tracking-widest text-gold hover:bg-gold/10 transition-all duration-300"
+            >
+              <Phone className="h-3.5 w-3.5" strokeWidth={2} />
+              Call
+            </a>
+            <ContactButton
+              className="btn-gold-shine inline-flex items-center rounded-xl bg-gradient-to-r from-gold to-gold-light px-6 py-2.5 text-xs font-semibold uppercase tracking-widest text-black transition-all duration-300 hover:shadow-lg hover:shadow-gold/20 cursor-pointer"
+            >
+              Get Consultation
+            </ContactButton>
+          </div>
 
           {/* Mobile Hamburger */}
           <button
@@ -141,6 +154,19 @@ export default function Navbar() {
           >
             Get Consultation
           </ContactButton>
+          <a
+            href="tel:+919868666715"
+            onClick={() => trackPhoneClick()}
+            className="inline-flex items-center gap-2 text-base font-semibold uppercase tracking-widest text-gray-300 hover:text-gold transition-colors"
+            style={{
+              transitionDelay: mobileOpen ? `${(navLinks.length + 1) * 60}ms` : "0ms",
+              opacity: mobileOpen ? 1 : 0,
+              transform: mobileOpen ? "translateY(0)" : "translateY(20px)",
+            }}
+          >
+            <Phone className="h-4 w-4" strokeWidth={2} />
+            Call +91 98686 66715
+          </a>
         </div>
       </div>
     </>

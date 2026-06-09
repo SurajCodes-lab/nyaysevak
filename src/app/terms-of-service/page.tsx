@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 export const metadata: Metadata = {
   title: "Terms of Service | NyaySevak - India's Premier Legal Services Platform",
   description:
-    "Read the Terms of Service for NyaySevak. Understand the terms governing your use of India's first complete legal ecosystem platform.",
+    "Read the Terms of Service for NyaySevak. Understand the terms governing your use of India's complete legal ecosystem platform.",
   keywords:
     "NyaySevak terms of service, legal platform terms, legal services agreement India, user agreement legal platform, NyaySevak usage terms",
   alternates: { canonical: "https://nyaysevak.com/terms-of-service" },
@@ -68,7 +68,7 @@ export default function TermsOfServicePage() {
                 2. Description of Services
               </h2>
               <p className="mb-4 text-gray-600 leading-relaxed">
-                NyaySevak is India&apos;s first complete legal ecosystem, a
+                NyaySevak is India&apos;s complete legal ecosystem, a
                 technology-driven platform that connects individuals,
                 businesses, and legal professionals across the entire Indian
                 judicial system. Our services include, but are not limited to:

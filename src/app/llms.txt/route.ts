@@ -10,7 +10,7 @@ export const dynamic = "force-static";
 export async function GET() {
   const body = `# NyaySevak
 
-> India's first complete legal ecosystem. Verified lawyer consultation, court representation across the Supreme Court, 25 High Courts, 700+ District Courts and all Tribunals, and end-to-end legal document services. 29 practice areas. Free first consultation. Phone: +91-9868666715. Website: ${SITE_URL}.
+> India's complete legal ecosystem. Verified lawyer consultation, court representation across the Supreme Court, 25 High Courts, 700+ District Courts and all Tribunals, and end-to-end legal document services. 29 practice areas. Free first consultation. Phone: +91-9868666715. Website: ${SITE_URL}.
 
 NyaySevak is a legal-services platform headquartered in New Delhi, India, founded in 2024. It serves individuals and businesses across India in English and Hindi. The platform's editorial content is written by named in-house desks (Criminal, Matrimonial & Family, Property & Real Estate, Corporate & Commercial, and General Legal Counsel) and reviewed for accuracy under a fixed editorial policy.
 

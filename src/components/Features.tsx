@@ -23,7 +23,7 @@ const additionalFeatures = [
   { Icon: Smartphone, title: "Mobile Responsive", desc: "Full-featured experience on any device — desktop, tablet, or smartphone." },
   { Icon: Lock, title: "Secure Document Vault", desc: "Encrypted cloud storage for all your legal documents with easy retrieval and sharing." },
   { Icon: BarChart3, title: "Case Status Tracking", desc: "Real-time updates on your case progress with hearing dates and milestone notifications." },
-  { Icon: CreditCard, title: "EMI Payment Options", desc: "Flexible payment plans for legal services — make legal help affordable for everyone." },
+  { Icon: CreditCard, title: "Transparent, Flexible Fees", desc: "Clear fees agreed upfront with flexible options — making legal help affordable, with no hidden charges." },
   { Icon: Headphones, title: "24/7 Support", desc: "Round-the-clock customer support via phone, email, and chat for urgent legal queries." },
 ];
 
@@ -54,7 +54,7 @@ export default function Features() {
               Everything You Need in One Platform
             </h1>
             <p className="mx-auto mt-8 max-w-2xl text-base leading-relaxed text-gray-400">
-              NyaySevak combines a verified lawyer directory, instant service booking, comprehensive legal resources,
+              NyaySevak combines verified lawyer matching, easy consultation booking, comprehensive legal resources,
               court information, and real-time support — all designed to make India&apos;s legal system accessible to everyone.
             </p>
           </div>
@@ -178,7 +178,7 @@ export default function Features() {
                 Experience NyaySevak Today
               </h3>
               <p className="mx-auto mt-4 mb-8 max-w-lg text-sm text-gray-400 leading-relaxed">
-                Join India&apos;s first complete legal ecosystem and get access to all features.
+                Join India&apos;s complete legal ecosystem and get access to all features.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <ContactButton

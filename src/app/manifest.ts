@@ -8,7 +8,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "NyaySevak — India's Legal Services Platform",
     short_name: "NyaySevak",
     description:
-      "India's first complete legal ecosystem. A-Z legal services across Supreme Court, 25 High Courts, 700+ District Courts, all Tribunals, Arbitration centres, and the entire 8-city geographic legal landscape.",
+      "India's complete legal ecosystem. A-Z legal services across Supreme Court, 25 High Courts, 700+ District Courts, all Tribunals, Arbitration centres, and the entire 8-city geographic legal landscape.",
     start_url: "/",
     scope: "/",
     display: "standalone",
@@ -42,7 +42,7 @@ export default function manifest(): MetadataRoute.Manifest {
       {
         name: "Find a lawyer",
         short_name: "Lawyers",
-        description: "Browse verified lawyers by city",
+        description: "Get matched with a verified lawyer by city",
         url: "/lawyers",
         icons: [{ src: "/logo.png", sizes: "192x192" }],
       },
