@@ -227,6 +227,53 @@ export const cities: City[] = [
     blurb:
       "Rajasthan's capital and the seat of the Rajasthan High Court's Jaipur Bench — a fast-growing centre for real-estate, consumer, family, and commercial litigation.",
   },
+  {
+    slug: "noida",
+    name: "Noida",
+    state: "Uttar Pradesh",
+    geo: { lat: 28.5355, lng: 77.3910 },
+    population: "65+ lakh (Gautam Buddh Nagar + Greater Noida)",
+    neighbourhoods: [
+      "Sector 18", "Sector 62", "Sector 137", "Sector 15", "Sector 50",
+      "Greater Noida", "Noida Extension (Greater Noida West)", "Sector 76",
+      "Film City (Sector 16A)", "Sector 27", "Sector 104", "Sector 168",
+      "Pari Chowk", "Knowledge Park",
+    ],
+    localBar: "Gautam Buddh Nagar Bar Association",
+    highCourt: { name: "Allahabad High Court", slug: "allahabad-high-court" },
+    districtCourts: [
+      "Gautam Buddh Nagar District & Sessions Court (Surajpur)",
+      "Commercial Court, Gautam Buddh Nagar",
+      "Family Court, Gautam Buddh Nagar",
+      "UP RERA (builder–buyer complaints)",
+      "Motor Accident Claims Tribunal (MACT), Gautam Buddh Nagar",
+    ],
+    blurb:
+      "NCR's fastest-growing real-estate and IT hub — ground zero for builder–buyer (RERA) disputes, with the Gautam Buddh Nagar courts at Surajpur and writs to the Allahabad High Court.",
+  },
+  {
+    slug: "gurgaon",
+    name: "Gurgaon",
+    state: "Haryana",
+    geo: { lat: 28.4595, lng: 77.0266 },
+    population: "30+ lakh (Gurugram district)",
+    neighbourhoods: [
+      "DLF Cyber City", "Golf Course Road", "Sohna Road", "MG Road", "Udyog Vihar",
+      "DLF Phase 1–5", "Sushant Lok", "Sector 14", "Sector 56", "New Gurgaon",
+      "Manesar", "Palam Vihar", "South City", "Sector 29",
+    ],
+    localBar: "Gurugram Bar Association",
+    highCourt: { name: "Punjab & Haryana High Court", slug: "punjab-haryana-high-court" },
+    districtCourts: [
+      "Gurugram District & Sessions Court",
+      "Commercial Court, Gurugram",
+      "Family Court, Gurugram",
+      "Haryana RERA, Gurugram Bench (builder–buyer complaints)",
+      "Motor Accident Claims Tribunal (MACT), Gurugram",
+    ],
+    blurb:
+      "India's corporate capital — home to most multinational India headquarters, driving heavy commercial, employment, and real-estate (RERA) litigation, with district courts in Gurugram and writs to the Punjab & Haryana High Court at Chandigarh.",
+  },
 ];
 
 // The 5 practice-area slugs we target per city.

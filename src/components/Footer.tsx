@@ -37,6 +37,7 @@ const quickLinks = [
   { label: "Legal Glossary", href: "/legal-glossary" },
   { label: "Legal Tools", href: "/legal-tools" },
   { label: "Free Consultation", href: "/free-legal-consultation" },
+  { label: "Site Index", href: "/site-index" },
 ];
 
 // Internal links into the local landing-page cluster + high-intent pages that
@@ -259,6 +260,7 @@ export default function Footer() {
               ))}
             </div>
           </div>
+
 
           {/* Bottom bar */}
           <div className="mt-14 border-t border-white/[0.06] pt-8">

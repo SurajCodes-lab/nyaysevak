@@ -65,10 +65,10 @@ export default function LegalGlossaryPage() {
     publisher: { "@id": `${SITE_URL}/#organization` },
     hasDefinedTerm: glossaryTerms.map((t) => ({
       "@type": "DefinedTerm",
-      "@id": `${url}#${t.slug}`,
+      "@id": `${url}/${t.slug}#term`,
       name: t.term,
       description: t.shortDefinition,
-      url: `${url}#${t.slug}`,
+      url: `${url}/${t.slug}`,
       inDefinedTermSet: `${url}#glossary`,
       termCode: t.statutoryReference,
     })),
@@ -158,7 +158,9 @@ export default function LegalGlossaryPage() {
                       >
                         <header className="flex items-baseline justify-between gap-4 mb-3 flex-wrap">
                           <h3 className="text-lg sm:text-xl font-heading font-semibold text-gold">
-                            {t.term}
+                            <Link href={`/legal-glossary/${t.slug}`} className="hover:underline">
+                              {t.term}
+                            </Link>
                           </h3>
                           {t.statutoryReference && (
                             <span className="text-[10px] uppercase tracking-[0.2em] text-gold/60 font-mono">
@@ -173,20 +175,29 @@ export default function LegalGlossaryPage() {
                         <p className="text-sm text-gray-400 leading-[1.75]">
                           {t.longDefinition}
                         </p>
-                        {related.length > 0 && (
-                          <div className="mt-4 pt-4 border-t border-white/[0.05] flex flex-wrap items-center gap-2">
-                            <span className="text-[10px] uppercase tracking-[0.2em] text-gray-500">Related practice areas:</span>
-                            {related.map((p) => (
-                              <Link
-                                key={p.slug}
-                                href={`/practice-areas/${p.slug}`}
-                                className="text-xs text-gold/80 hover:text-gold transition-colors"
-                              >
-                                {p.title}
-                              </Link>
-                            ))}
-                          </div>
-                        )}
+                        <div className="mt-4 pt-4 border-t border-white/[0.05] flex flex-wrap items-center gap-x-4 gap-y-2">
+                          <Link
+                            href={`/legal-glossary/${t.slug}`}
+                            className="inline-flex items-center gap-1 text-xs font-semibold text-gold/90 hover:text-gold transition-colors"
+                          >
+                            Read full definition
+                            <ChevronRight className="h-3 w-3" />
+                          </Link>
+                          {related.length > 0 && (
+                            <span className="flex flex-wrap items-center gap-2">
+                              <span className="text-[10px] uppercase tracking-[0.2em] text-gray-500">Related:</span>
+                              {related.map((p) => (
+                                <Link
+                                  key={p.slug}
+                                  href={`/practice-areas/${p.slug}`}
+                                  className="text-xs text-gold/80 hover:text-gold transition-colors"
+                                >
+                                  {p.title}
+                                </Link>
+                              ))}
+                            </span>
+                          )}
+                        </div>
                       </article>
                     );
                   })}

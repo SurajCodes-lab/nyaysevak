@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContactButton from "@/components/ContactButton";
 import AnswerBlock from "@/components/AnswerBlock";
+import TrustStrip from "@/components/TrustStrip";
 import TableOfContents, { TocItem } from "@/components/TableOfContents";
 import { trimToSentences } from "@/lib/quick-answer";
 import { ArrowRight, CheckCircle2, Scale, BookOpen, Landmark, ChevronRight, AlertTriangle, ListOrdered, FileCheck, Clock, ExternalLink } from "lucide-react";
@@ -325,6 +326,7 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ s
       <section className="bg-dark border-y border-gold/[0.08]">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <AnswerBlock question={quickAnswerQuestion}>{quickAnswer}</AnswerBlock>
+          <div className="pb-8 -mt-2"><TrustStrip /></div>
         </div>
       </section>
 

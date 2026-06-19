@@ -2,14 +2,17 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Shield, Users, MapPin, MessageCircle, ChevronDown, ArrowRight } from "lucide-react";
+import { Shield, Users, MapPin, MessageCircle, ChevronDown, ArrowRight, Phone } from "lucide-react";
 import ContactButton from "./ContactButton";
+import { trackPhoneClick } from "@/lib/analytics";
 
+// Trust signals must be factual and substantiable (BCI-safe). No invented
+// experience/headcount claims, no ratings.
 const trustItems = [
-  { icon: Shield, label: "15+ Years Experience" },
-  { icon: Users, label: "1,000+ Verified Lawyers" },
-  { icon: MapPin, label: "700+ Courts Covered" },
+  { icon: Shield, label: "Bar-Council-Verified Lawyers" },
+  { icon: MapPin, label: "Supreme Court · 25 HCs · 700+ Courts" },
   { icon: MessageCircle, label: "Free First Consultation" },
+  { icon: Users, label: "Callback within 24 hours" },
 ];
 
 export default function Hero() {
@@ -82,16 +85,23 @@ export default function Hero() {
             source="hero"
             className="btn-gold-shine inline-flex items-center justify-center gap-2.5 rounded-xl bg-gradient-to-r from-gold to-gold-light px-8 py-4 sm:px-10 sm:py-5 text-sm font-semibold uppercase tracking-widest text-black transition-all duration-300 cursor-pointer"
           >
-            Talk to a Lawyer Today
+            Get a Free Callback
             <ArrowRight className="h-4 w-4" strokeWidth={2} />
           </ContactButton>
-          <Link
-            href="/services"
+          <a
+            href="tel:+919868666715"
+            onClick={() => trackPhoneClick()}
             className="btn-premium inline-flex items-center justify-center gap-2 rounded-xl border border-gold/40 px-8 py-4.5 text-sm font-semibold uppercase tracking-widest text-gold transition-all duration-300"
           >
-            Explore Our Services
-          </Link>
+            <Phone className="h-4 w-4" strokeWidth={2} />
+            Call +91 98686 66715
+          </a>
         </div>
+
+        {/* Micro-trust line under the CTA — reduces hesitation at the decision point */}
+        <p className="hero-entrance hero-delay-5 mt-4 text-[11px] sm:text-xs text-gray-400">
+          Free &amp; confidential · No obligation · A verified advocate calls you back
+        </p>
       </div>
 
       {/* Trust bar — glassmorphism with gold glow */}

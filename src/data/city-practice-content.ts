@@ -2304,4 +2304,409 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       "Arbitration clauses are increasingly preferred by Jaipur businesses for faster, confidential dispute resolution.",
     ],
   },
+
+  // ────────────────────────────── NOIDA ──────────────────────────────
+  "noida__criminal-law": {
+    lead:
+      "Noida and Greater Noida fall under Gautam Buddh Nagar, with the District & Sessions Court at Surajpur and writ/appeal jurisdiction at the Allahabad High Court. NyaySevak connects you with Bar-Council-verified Noida criminal lawyers for bail, FIR quashing, cyber-crime and economic-offence defence — practitioners who appear daily at Surajpur and can file at Allahabad when the matter moves up.",
+    landscape: [
+      "Criminal cases in Noida are registered at the local police station and tried before the Gautam Buddh Nagar District & Sessions Court at Surajpur, Greater Noida. Bail under Section 483 BNSS and anticipatory bail under Section 482 BNSS are filed before the Sessions Court; FIR quashing under Section 528 BNSS lies only before the Allahabad High Court. Because the High Court's principal seat is in Prayagraj — far from the NCR — choosing a lawyer who can manage Allahabad filings is a genuine practical advantage for Noida litigants.",
+      "Noida has a distinctive criminal-litigation profile: it is one of India's busiest centres for cyber crime and economic offences, with the UP cyber-crime cells and the Noida Police regularly registering cases involving fake call-centres, online fraud, and data theft. White-collar matters — cheating, criminal breach of trust, and offences tied to the region's real-estate sector — are also common, alongside the usual run of bail, matrimonial-cruelty, and assault cases.",
+    ],
+    courtsForThisMatter: [
+      "Allahabad High Court (quashing, bail, criminal appeals)",
+      "Gautam Buddh Nagar District & Sessions Court, Surajpur",
+      "Chief Judicial Magistrate Courts, Gautam Buddh Nagar",
+      "Special POCSO / Fast Track Courts, Gautam Buddh Nagar",
+      "Cyber Crime Police Station, Noida",
+    ],
+    caseTypes: [
+      { title: "Bail Applications", desc: "Regular and anticipatory bail before the Gautam Buddh Nagar Sessions Court and Allahabad HC." },
+      { title: "FIR Quashing (S. 528 BNSS)", desc: "Quashing of frivolous or settled FIRs before the Allahabad High Court." },
+      { title: "Cyber Crime Defence", desc: "Defence in online-fraud, call-centre and data-theft cases registered by Noida cyber cells." },
+      { title: "Economic & White-Collar Offences", desc: "Cheating, criminal breach of trust, and forgery, often tied to property or business." },
+      { title: "Cheque Bounce (S. 138 NI Act)", desc: "Prosecution and defence of dishonoured-cheque complaints." },
+      { title: "Matrimonial & DV Defence", desc: "Defence and prosecution of 498A/BNS 85 and Domestic Violence Act cases." },
+    ],
+    feeRange: {
+      consultation: "₹1,000 – ₹5,000 (free first consultation on NyaySevak)",
+      district: "₹6,000 – ₹30,000 per appearance",
+      highCourt: "₹25,000 – ₹1,50,000 per appearance at Allahabad HC (plus travel)",
+      note: "Allahabad HC matters carry an extra cost because the principal seat is in Prayagraj; many Noida lawyers quote an all-inclusive package for HC bail/quashing.",
+    },
+    faqs: [
+      { question: "How do I find the best criminal lawyer near me in Noida?", answer: "Tell NyaySevak your matter and the police station involved, and we match you with a Bar-Council-verified Gautam Buddh Nagar criminal lawyer who appears at the Surajpur courts and can file at the Allahabad High Court when needed. Your first consultation is free." },
+      { question: "Which court handles my criminal case in Noida?", answer: "Cases are tried at the Gautam Buddh Nagar District & Sessions Court at Surajpur, Greater Noida, based on the police station that registered the FIR. Bail goes to the Sessions Court; FIR quashing and criminal appeals go to the Allahabad High Court." },
+      { question: "How much does a criminal lawyer cost in Noida?", answer: "A district-court appearance typically runs ₹6,000–₹30,000; Allahabad High Court bail or quashing runs ₹25,000–₹1,50,000 plus travel, since the principal seat is in Prayagraj. Your first consultation on NyaySevak is free and fees are agreed upfront." },
+      { question: "I have been cheated by an online fraud in Noida — what should I do?", answer: "Report it on the 1930 helpline and the cybercrime.gov.in portal immediately, then have a Noida cyber-crime lawyer help convert the complaint into an FIR and pursue recovery. Noida's cyber cells are active, and prompt action improves the chance of freezing the fraud accounts." },
+      { question: "Where do I apply for anticipatory bail if I fear arrest in Noida?", answer: "Anticipatory bail under Section 482 BNSS is filed before the Gautam Buddh Nagar Court of Session, or directly before the Allahabad High Court. A local criminal lawyer will advise the right forum based on the offence and the stage of investigation." },
+    ],
+    localNotes: [
+      "Noida's High Court (Allahabad, principal seat at Prayagraj) is geographically distant — factor in travel time and cost for any writ, quashing, or HC bail matter.",
+      "Noida is a national cyber-crime hotspot; specialist cyber-defence experience matters here more than in most cities.",
+    ],
+  },
+  "noida__civil-law": {
+    lead:
+      "Civil disputes in Noida — recovery, contract, injunction, and possession — are filed before the Gautam Buddh Nagar civil courts at Surajpur, with appeals and writs to the Allahabad High Court. NyaySevak connects you with verified Noida civil lawyers for property, recovery, and commercial-suit matters, including the builder-related civil litigation that dominates the district.",
+    landscape: [
+      "Civil litigation in Noida runs through the Gautam Buddh Nagar District Court at Surajpur, with commercial disputes above the prescribed value going to the Commercial Court under the Commercial Courts Act 2015. The most common civil matters here are recovery suits, suits for specific performance and injunction over property/builder agreements, and possession disputes — reflecting Noida's character as a high-volume real-estate market.",
+      "Because so many Noida disputes arise from builder–buyer agreements, civil practice overlaps heavily with consumer and RERA forums; a good Noida civil lawyer will advise whether a civil suit, a RERA complaint, or a consumer complaint is the faster route for your facts. Limitation is strictly applied, so early advice on the correct forum and timeline is critical.",
+    ],
+    courtsForThisMatter: [
+      "Allahabad High Court (civil appeals, writs, revisions)",
+      "Gautam Buddh Nagar District & Sessions Court, Surajpur",
+      "Commercial Court, Gautam Buddh Nagar",
+      "Civil Judge (Senior/Junior Division) Courts, Gautam Buddh Nagar",
+    ],
+    caseTypes: [
+      { title: "Recovery Suits", desc: "Recovery of money under contracts, loans, and unpaid dues." },
+      { title: "Specific Performance", desc: "Enforcing builder/seller agreements to sell or hand over possession." },
+      { title: "Injunctions", desc: "Temporary and permanent injunctions over property and contractual rights." },
+      { title: "Possession & Title Disputes", desc: "Suits for possession and declaration of title over plots and flats." },
+      { title: "Commercial Suits", desc: "Above-value commercial disputes under the Commercial Courts Act 2015." },
+      { title: "Partition Suits", desc: "Division of jointly-held family property." },
+    ],
+    feeRange: {
+      consultation: "₹1,000 – ₹5,000 (free first consultation on NyaySevak)",
+      district: "₹6,000 – ₹35,000 per appearance / stage",
+      highCourt: "₹30,000 – ₹1,50,000 per appearance at Allahabad HC",
+      note: "Civil suits are long-haul; most Noida lawyers work on a drafting fee plus per-appearance model. Ask whether a RERA or consumer route is faster before filing a civil suit.",
+    },
+    faqs: [
+      { question: "How do I find a good civil lawyer near me in Noida?", answer: "Describe your dispute to NyaySevak and we match you with a Bar-Council-verified Noida civil lawyer who practises at the Gautam Buddh Nagar courts. Your first consultation is free and fees are transparent." },
+      { question: "Which court handles a civil case in Noida?", answer: "Civil suits are filed at the Gautam Buddh Nagar District Court at Surajpur; higher-value commercial matters go to the Commercial Court, and appeals/writs go to the Allahabad High Court." },
+      { question: "Should I file a civil suit or a RERA/consumer complaint for my flat dispute?", answer: "For builder delays and defects, a RERA complaint or a consumer complaint is often faster and cheaper than a civil suit. A Noida lawyer will assess your agreement and timeline and recommend the route most likely to get you relief quickly." },
+      { question: "How long does a civil case take in Noida?", answer: "Straightforward matters can resolve in 1–3 years; contested title/partition suits take longer. The forum you choose (civil court vs RERA vs consumer) materially affects the timeline — get advice before filing." },
+      { question: "What is the cost of a civil lawyer in Noida?", answer: "Expect a drafting fee plus ₹6,000–₹35,000 per appearance at the district level, and ₹30,000+ for Allahabad HC matters. Your first consultation on NyaySevak is free." },
+    ],
+    localNotes: [
+      "Many Noida civil disputes have a faster parallel remedy in RERA or the consumer forum — always check before committing to a long civil suit.",
+      "Commercial disputes above the threshold are routed to the dedicated Commercial Court for quicker, structured timelines.",
+    ],
+  },
+  "noida__family-matrimonial": {
+    lead:
+      "Divorce, maintenance, custody and domestic-violence matters in Noida are heard by the Family Court at Gautam Buddh Nagar, with appeals to the Allahabad High Court. NyaySevak connects you with verified Noida divorce and family lawyers for mutual-consent and contested divorce, maintenance, custody, and DV Act protection.",
+    landscape: [
+      "Family disputes in Noida are handled by the dedicated Family Court at Gautam Buddh Nagar. Mutual-consent divorce under Section 13B of the Hindu Marriage Act is the fastest route and is regularly granted here, with the Supreme Court's Amardeep Singh waiver of the cooling-off period available in suitable cases. Contested divorce, maintenance under Section 144 BNSS, custody, and Domestic Violence Act applications are all filed before the Family Court or the Magistrate as applicable.",
+      "Noida's large population of working professionals and NRIs means cross-border and dual-income matrimonial matters are common — including maintenance disputes where both spouses earn, and custody matters involving travel and schooling. Experienced Noida family lawyers handle video-conference appearances for NRIs and structure settlement deeds that cover alimony, custody, and the withdrawal of connected criminal complaints.",
+    ],
+    courtsForThisMatter: [
+      "Family Court, Gautam Buddh Nagar",
+      "Allahabad High Court (matrimonial appeals)",
+      "Judicial Magistrate Courts (DV Act, maintenance)",
+      "Mediation Centre, Gautam Buddh Nagar",
+    ],
+    caseTypes: [
+      { title: "Mutual-Consent Divorce", desc: "Joint petition under Section 13B HMA with settlement deed and waiver application." },
+      { title: "Contested Divorce", desc: "Cruelty, desertion, and adultery petitions before the Family Court." },
+      { title: "Maintenance", desc: "Maintenance for spouse and children under Section 144 BNSS and the DV Act." },
+      { title: "Child Custody", desc: "Custody and visitation, including for NRI and dual-income families." },
+      { title: "Domestic Violence", desc: "Protection, residence, and monetary relief under the PWDVA 2005." },
+      { title: "498A / BNS 85 Defence", desc: "Defence and quashing strategy for matrimonial cruelty complaints." },
+    ],
+    feeRange: {
+      consultation: "₹1,000 – ₹5,000 (free first consultation on NyaySevak)",
+      district: "₹8,000 – ₹40,000 per stage (Family Court)",
+      highCourt: "₹30,000 – ₹1,50,000 per appearance at Allahabad HC",
+      note: "Mutual-consent divorce in Noida is often handled on a fixed package (both motions + drafting). Contested matters are billed per stage.",
+    },
+    faqs: [
+      { question: "How do I find a good divorce lawyer near me in Noida?", answer: "Tell NyaySevak whether your matter is mutual or contested and we match you with a Bar-Council-verified Noida family lawyer at the Gautam Buddh Nagar Family Court. Your first consultation is free." },
+      { question: "Which court handles divorce in Noida?", answer: "Divorce and most matrimonial matters are heard by the Family Court at Gautam Buddh Nagar; appeals go to the Allahabad High Court. DV Act and maintenance applications can also go before the Magistrate." },
+      { question: "How long does mutual-consent divorce take in Noida?", answer: "With the Amardeep Singh waiver of the six-month cooling-off period, a well-prepared mutual-consent divorce can conclude in roughly 4–6 months; without the waiver, around six months or more." },
+      { question: "Can NRIs get divorced through Noida courts?", answer: "Yes. Noida family lawyers regularly handle NRI matters with appearance by video-conference or through duly executed affidavits/power of attorney, especially for mutual-consent petitions." },
+      { question: "How much does a divorce lawyer cost in Noida?", answer: "Mutual-consent matters are often a fixed package; contested matters run ₹8,000–₹40,000 per stage at the Family Court. Your first consultation on NyaySevak is free." },
+    ],
+    localNotes: [
+      "Noida's professional and NRI population makes video-conference appearances and cross-border custody issues routine here.",
+      "A complete settlement deed (alimony, custody, withdrawal of criminal complaints) is the key to a fast mutual-consent decree.",
+    ],
+  },
+  "noida__property-real-estate": {
+    lead:
+      "Noida is India's epicentre of builder–buyer disputes. NyaySevak connects you with verified Noida property and RERA lawyers for delayed-possession claims, refunds, and defects against developers — through UP-RERA, the consumer forums, NCLT (for insolvent builders), and the Gautam Buddh Nagar courts, with appeals to the Allahabad High Court.",
+    landscape: [
+      "No city in India has produced more real-estate litigation than Noida and Greater Noida. The collapse or delay of major projects — and the resulting homebuyer movements — made UP-RERA and the consumer commissions the busiest forums for flat-buyers seeking possession, refunds, or compensation for delay. The Real Estate (Regulation and Development) Act 2016 gives buyers a fast track against registered projects, while insolvent developers are dragged to the NCLT under the Insolvency and Bankruptcy Code, where homebuyers are treated as financial creditors.",
+      "Beyond builder disputes, Noida property work covers title verification before purchase (critical given the area's leasehold-authority structure under NOIDA/Greater Noida/Yamuna authorities), registration and stamp duty, lease-deed and transfer-memorandum issues with the development authorities, and possession and partition suits. A good Noida property lawyer will steer you to the fastest forum — RERA, consumer, NCLT, or civil court — depending on whether your builder is registered, solvent, and the project ongoing.",
+    ],
+    courtsForThisMatter: [
+      "UP RERA (builder–buyer complaints)",
+      "State / District Consumer Commission, Gautam Buddh Nagar (deficiency, delay)",
+      "NCLT (insolvent builders — IBC, homebuyers as financial creditors)",
+      "Gautam Buddh Nagar District Court (title, possession, partition)",
+      "Allahabad High Court (writs, appeals)",
+      "NOIDA / Greater Noida / Yamuna development authorities",
+    ],
+    caseTypes: [
+      { title: "Delayed Possession Claims", desc: "RERA and consumer claims for possession, delay interest, and compensation." },
+      { title: "Refund & Cancellation", desc: "Refund with interest for stalled or mis-sold projects." },
+      { title: "Builder Insolvency (NCLT/IBC)", desc: "Homebuyer claims as financial creditors against insolvent developers." },
+      { title: "Title Verification & Due Diligence", desc: "Pre-purchase checks given the leasehold-authority structure." },
+      { title: "Registration & Stamp Duty", desc: "Sale deeds, transfer memoranda, and authority transfers." },
+      { title: "Possession & Partition Suits", desc: "Civil suits over plots, flats, and inherited property." },
+    ],
+    feeRange: {
+      consultation: "₹1,500 – ₹6,000 (free first consultation on NyaySevak)",
+      district: "₹8,000 – ₹40,000 per stage; RERA/consumer matters often packaged",
+      highCourt: "₹30,000 – ₹2,00,000 per appearance at Allahabad HC",
+      note: "RERA and consumer complaints are frequently handled on a fixed package; NCLT homebuyer matters are usually pooled across allottees to share cost.",
+    },
+    faqs: [
+      { question: "How do I claim a refund or possession from my Noida builder?", answer: "If the project is RERA-registered, file a complaint with UP-RERA for possession with delay interest or a refund; if the builder is insolvent, claims go to the NCLT under the IBC where homebuyers are financial creditors. A Noida RERA lawyer will pick the fastest forum for your facts — your first consultation is free." },
+      { question: "Which forum is fastest for a Noida flat dispute — RERA, consumer, or civil court?", answer: "For a registered, ongoing project, UP-RERA is usually fastest; for deficiency/compensation, the consumer commission; for an insolvent builder, the NCLT; and for pure title/possession disputes, the civil court. The right choice depends on the builder's status and your agreement." },
+      { question: "Do I need title verification before buying property in Noida?", answer: "Yes — strongly. Noida/Greater Noida/Yamuna properties are largely leasehold under the development authorities, so a lawyer must verify the lease, dues, transfer permissions, and encumbrances before you pay. It prevents the most common and costly Noida property disputes." },
+      { question: "How much does a property/RERA lawyer cost in Noida?", answer: "RERA and consumer complaints are often a fixed package; civil and HC matters run ₹8,000–₹40,000 per stage and more at the Allahabad HC. NCLT homebuyer matters are usually shared across allottees. Your first consultation on NyaySevak is free." },
+      { question: "Which court handles property disputes in Noida?", answer: "Depending on the issue: UP-RERA, the Gautam Buddh Nagar Consumer Commission, the NCLT (insolvent builders), or the Gautam Buddh Nagar civil courts, with writs and appeals to the Allahabad High Court." },
+    ],
+    localNotes: [
+      "Noida is the national hub of builder–buyer (RERA) and homebuyer-insolvency (NCLT) litigation — pick a lawyer who knows all four forums.",
+      "Most Noida property is leasehold under the development authorities — pre-purchase title and dues verification is essential.",
+      "Homebuyers often pool together for NCLT/RERA matters to share cost and strengthen the claim.",
+    ],
+  },
+  "noida__corporate-business": {
+    lead:
+      "Noida's IT, ITES, media and manufacturing base drives steady corporate and commercial work. NyaySevak connects you with verified Noida corporate lawyers for company incorporation, contracts, compliance, employment, and commercial-dispute resolution, with commercial suits before the Gautam Buddh Nagar Commercial Court and arbitration for higher-value matters.",
+    landscape: [
+      "Noida and Greater Noida host a dense cluster of IT/ITES companies, media and film businesses (Film City), e-commerce operations, and manufacturing in the industrial sectors and the Yamuna Expressway region. Corporate legal work here spans incorporation and structuring, commercial contracts and vendor agreements, regulatory and labour compliance, intellectual property for media/tech, and the resolution of commercial disputes.",
+      "Higher-value commercial disputes are increasingly resolved through arbitration for speed and confidentiality, while suits above the statutory threshold go to the Commercial Court at Gautam Buddh Nagar under the Commercial Courts Act 2015. Insolvency and recovery matters head to the NCLT and DRT respectively. For startups and SMEs, the most frequent needs are founder/shareholder agreements, employment and ESOP documentation, and contract enforcement.",
+    ],
+    courtsForThisMatter: [
+      "Commercial Court, Gautam Buddh Nagar (Commercial Courts Act 2015)",
+      "NCLT (company and insolvency matters)",
+      "DRT (bank and financial recovery)",
+      "Arbitration tribunals (commercial disputes)",
+      "Allahabad High Court (company appeals, writs)",
+    ],
+    caseTypes: [
+      { title: "Company Incorporation & Structuring", desc: "Private Limited, LLP, and OPC setup and shareholder agreements." },
+      { title: "Commercial Contracts", desc: "Drafting and enforcing vendor, services, and partnership agreements." },
+      { title: "Regulatory & Labour Compliance", desc: "Ongoing compliance for IT/ITES, manufacturing, and media businesses." },
+      { title: "Commercial Disputes & Arbitration", desc: "Above-value disputes via the Commercial Court or arbitration." },
+      { title: "Employment & ESOP", desc: "Employment contracts, POSH compliance, and ESOP documentation." },
+      { title: "Insolvency & Recovery", desc: "NCLT/IBC and DRT proceedings for distressed debts." },
+    ],
+    feeRange: {
+      consultation: "₹2,000 – ₹8,000 (free first consultation on NyaySevak)",
+      district: "₹15,000 – ₹75,000 per stage (Commercial Court)",
+      highCourt: "₹50,000 – ₹3,00,000 per appearance / arbitration sitting",
+      note: "Corporate advisory is often retainer-based; incorporation and contract packages are fixed-fee. Arbitration is preferred for confidential, higher-value disputes.",
+    },
+    faqs: [
+      { question: "How do I find a corporate lawyer near me in Noida?", answer: "Tell NyaySevak your business need — incorporation, contracts, compliance, or a dispute — and we match you with a Bar-Council-verified Noida corporate lawyer. Your first consultation is free and fees are agreed upfront." },
+      { question: "Which court handles commercial disputes in Noida?", answer: "Above-value commercial suits go to the Commercial Court at Gautam Buddh Nagar; company and insolvency matters to the NCLT; bank recovery to the DRT; and many higher-value disputes are resolved through arbitration." },
+      { question: "What is the best business structure for a Noida startup?", answer: "For startups planning to raise funding, a Private Limited Company is usually best; bootstrapped or professional firms often prefer an LLP. A corporate lawyer will match the structure to your funding and liability plans." },
+      { question: "How much does a corporate lawyer cost in Noida?", answer: "Advisory is often retainer-based; incorporation and contract work is usually fixed-fee; commercial-dispute appearances run ₹15,000–₹75,000 per stage. Your first consultation on NyaySevak is free." },
+      { question: "Do Noida companies need POSH and labour compliance?", answer: "Yes — any workplace with 10+ employees must have a POSH Internal Committee, and IT/ITES and manufacturing units carry labour-compliance obligations. A corporate lawyer can set up your compliance framework." },
+    ],
+    localNotes: [
+      "Noida's IT/ITES, media (Film City) and manufacturing mix makes contracts, IP, and employment the highest-volume corporate needs.",
+      "Arbitration is increasingly the default for confidential, higher-value commercial disputes in the region.",
+    ],
+  },
+
+  // ────────────────────────────── GURGAON ──────────────────────────────
+  "gurgaon__criminal-law": {
+    lead:
+      "Criminal matters in Gurgaon (Gurugram) are tried at the Gurugram District & Sessions Court, with writs, quashing and appeals to the Punjab & Haryana High Court at Chandigarh. NyaySevak connects you with Bar-Council-verified Gurgaon criminal lawyers for bail, FIR quashing, white-collar and cyber-crime defence, and cheque-bounce matters.",
+    landscape: [
+      "Gurgaon's criminal cases are registered across its many police stations and tried at the Gurugram District & Sessions Court. Regular bail under Section 483 BNSS and anticipatory bail under Section 482 BNSS are filed before the Sessions Court, while FIR quashing under Section 528 BNSS and criminal appeals go to the Punjab & Haryana High Court at Chandigarh — a manageable distance, but one that makes a lawyer with regular Chandigarh practice valuable.",
+      "As India's corporate capital, Gurgaon sees a high proportion of white-collar and economic offences — cheating, criminal breach of trust, and fraud connected to its corporate, real-estate, and fintech sectors — alongside cyber crime, cheque-bounce prosecutions, and the usual matrimonial and assault matters. The criminal bar here is experienced in commercial and corporate-adjacent crime.",
+    ],
+    courtsForThisMatter: [
+      "Punjab & Haryana High Court, Chandigarh (quashing, bail, appeals)",
+      "Gurugram District & Sessions Court",
+      "Chief Judicial Magistrate Courts, Gurugram",
+      "Special / Fast Track Courts, Gurugram",
+      "Cyber Crime Police Station, Gurugram",
+    ],
+    caseTypes: [
+      { title: "Bail Applications", desc: "Regular and anticipatory bail before the Gurugram Sessions Court and P&H High Court." },
+      { title: "FIR Quashing (S. 528 BNSS)", desc: "Quashing of frivolous or settled FIRs before the Punjab & Haryana High Court." },
+      { title: "White-Collar & Economic Offences", desc: "Corporate fraud, cheating, and breach of trust common in Gurgaon's business sector." },
+      { title: "Cyber Crime Defence", desc: "Online-fraud and data-related offences registered by Gurugram cyber cells." },
+      { title: "Cheque Bounce (S. 138 NI Act)", desc: "Prosecution and defence of dishonoured-cheque complaints." },
+      { title: "Matrimonial & DV Defence", desc: "Defence and prosecution of 498A/BNS 85 and Domestic Violence Act cases." },
+    ],
+    feeRange: {
+      consultation: "₹2,000 – ₹7,500 (free first consultation on NyaySevak)",
+      district: "₹10,000 – ₹50,000 per appearance",
+      highCourt: "₹35,000 – ₹2,50,000 per appearance at P&H High Court",
+      note: "Gurgaon fee levels are among the highest outside the metros, reflecting its corporate profile. Chandigarh HC bail/quashing is often quoted as an all-inclusive package.",
+    },
+    faqs: [
+      { question: "How do I find the best criminal lawyer near me in Gurgaon?", answer: "Tell NyaySevak your matter and the police station involved, and we match you with a Bar-Council-verified Gurugram criminal lawyer who appears at the district court and can file at the Punjab & Haryana High Court. Your first consultation is free." },
+      { question: "Which court handles my criminal case in Gurgaon?", answer: "Cases are tried at the Gurugram District & Sessions Court based on the registering police station; bail goes to the Sessions Court, and FIR quashing and appeals go to the Punjab & Haryana High Court at Chandigarh." },
+      { question: "How much does a criminal lawyer cost in Gurgaon?", answer: "District-court appearances typically run ₹10,000–₹50,000; P&H High Court bail or quashing ₹35,000–₹2,50,000. Gurgaon fees are higher than most non-metro cities. Your first consultation on NyaySevak is free." },
+      { question: "Where do I apply for anticipatory bail in Gurgaon?", answer: "Anticipatory bail under Section 482 BNSS is filed before the Gurugram Court of Session or directly before the Punjab & Haryana High Court. A local lawyer will advise the right forum for your facts." },
+      { question: "Is cheque bounce common in Gurgaon, and how do I act?", answer: "Yes — given the city's business density. Serve a demand notice within 30 days of the bank return memo and file the complaint within the statutory window; a Gurgaon cheque-bounce lawyer will manage the timeline so the case is not lost on a technicality." },
+    ],
+    localNotes: [
+      "Gurgaon's corporate density produces a high share of white-collar and economic-offence cases — choose a lawyer experienced in commercial crime.",
+      "The Punjab & Haryana High Court at Chandigarh is the appellate/writ forum — regular Chandigarh practice is an advantage.",
+    ],
+  },
+  "gurgaon__civil-law": {
+    lead:
+      "Civil disputes in Gurgaon — recovery, contract, injunction, and property — are filed at the Gurugram District Court, with commercial matters before the Commercial Court and appeals to the Punjab & Haryana High Court. NyaySevak connects you with verified Gurgaon civil lawyers for recovery, specific-performance, and possession suits.",
+    landscape: [
+      "Civil litigation in Gurgaon runs through the Gurugram District Court, with higher-value commercial disputes routed to the Commercial Court under the Commercial Courts Act 2015. The dominant civil matters reflect the city's economy: recovery suits, specific-performance and injunction suits over high-value real-estate and commercial agreements, and possession and title disputes in its fast-developing sectors.",
+      "Given Gurgaon's premium property market, many civil disputes overlap with RERA and consumer remedies, and experienced lawyers will advise the fastest forum before filing. Commercial leases, builder agreements, and developer–allottee disputes generate a steady civil and quasi-civil docket.",
+    ],
+    courtsForThisMatter: [
+      "Punjab & Haryana High Court, Chandigarh (civil appeals, writs)",
+      "Gurugram District Court",
+      "Commercial Court, Gurugram",
+      "Civil Judge (Senior/Junior Division) Courts, Gurugram",
+    ],
+    caseTypes: [
+      { title: "Recovery Suits", desc: "Recovery of money under contracts, loans, and unpaid commercial dues." },
+      { title: "Specific Performance", desc: "Enforcing high-value sale and builder agreements." },
+      { title: "Injunctions", desc: "Temporary and permanent injunctions over property and contracts." },
+      { title: "Possession & Title Disputes", desc: "Suits for possession and declaration over plots and flats." },
+      { title: "Commercial Suits", desc: "Above-value disputes under the Commercial Courts Act 2015." },
+      { title: "Partition Suits", desc: "Division of jointly-held family property." },
+    ],
+    feeRange: {
+      consultation: "₹2,000 – ₹7,500 (free first consultation on NyaySevak)",
+      district: "₹10,000 – ₹50,000 per stage",
+      highCourt: "₹40,000 – ₹2,50,000 per appearance at P&H High Court",
+      note: "Gurgaon civil fees sit at the higher end outside the metros. For property disputes, ask whether RERA or consumer is faster before filing a civil suit.",
+    },
+    faqs: [
+      { question: "How do I find a good civil lawyer near me in Gurgaon?", answer: "Describe your dispute to NyaySevak and we match you with a Bar-Council-verified Gurugram civil lawyer who practises at the district and commercial courts. Your first consultation is free." },
+      { question: "Which court handles a civil case in Gurgaon?", answer: "Civil suits are filed at the Gurugram District Court; higher-value commercial matters go to the Commercial Court; appeals and writs go to the Punjab & Haryana High Court at Chandigarh." },
+      { question: "Should I file a civil suit or a RERA/consumer complaint for my Gurgaon flat?", answer: "For builder delay or defects, RERA or the consumer forum is usually faster and cheaper than a civil suit. A Gurgaon lawyer will review your agreement and recommend the quickest route to relief." },
+      { question: "How much does a civil lawyer cost in Gurgaon?", answer: "Expect a drafting fee plus ₹10,000–₹50,000 per stage at the district level and more at the High Court. Your first consultation on NyaySevak is free." },
+      { question: "How long does a civil case take in Gurgaon?", answer: "Simple matters can resolve in 1–3 years; contested title/partition suits take longer. The forum you pick (civil vs RERA vs consumer) strongly affects the timeline." },
+    ],
+    localNotes: [
+      "Gurgaon's premium real-estate market means many civil disputes have a faster RERA or consumer alternative — check first.",
+      "Commercial disputes above the threshold are routed to the dedicated Commercial Court for structured timelines.",
+    ],
+  },
+  "gurgaon__family-matrimonial": {
+    lead:
+      "Divorce, maintenance, custody and domestic-violence matters in Gurgaon are heard by the Family Court at Gurugram, with appeals to the Punjab & Haryana High Court. NyaySevak connects you with verified Gurgaon divorce and family lawyers for mutual-consent and contested divorce, maintenance, custody, and DV Act protection.",
+    landscape: [
+      "Family matters in Gurgaon are handled by the dedicated Family Court at Gurugram. Mutual-consent divorce under Section 13B of the Hindu Marriage Act is the fastest route, with the Supreme Court's Amardeep Singh waiver of the cooling-off period available in suitable cases. Contested divorce, maintenance under Section 144 BNSS, custody, and Domestic Violence Act applications are filed before the Family Court or the Magistrate as applicable.",
+      "Gurgaon's affluent, mobile, and largely professional population produces a high volume of dual-income maintenance disputes, NRI matrimonial matters, and custody cases involving international schooling and travel. Experienced Gurgaon family lawyers handle video-conference appearances and draft comprehensive settlement deeds that address alimony, custody, and the withdrawal of connected criminal complaints.",
+    ],
+    courtsForThisMatter: [
+      "Family Court, Gurugram",
+      "Punjab & Haryana High Court, Chandigarh (matrimonial appeals)",
+      "Judicial Magistrate Courts (DV Act, maintenance)",
+      "Mediation Centre, Gurugram",
+    ],
+    caseTypes: [
+      { title: "Mutual-Consent Divorce", desc: "Joint petition under Section 13B HMA with settlement deed and waiver application." },
+      { title: "Contested Divorce", desc: "Cruelty, desertion, and adultery petitions before the Family Court." },
+      { title: "Maintenance", desc: "Maintenance for spouse and children under Section 144 BNSS and the DV Act." },
+      { title: "Child Custody", desc: "Custody and visitation, including NRI and international-schooling matters." },
+      { title: "Domestic Violence", desc: "Protection, residence, and monetary relief under the PWDVA 2005." },
+      { title: "498A / BNS 85 Defence", desc: "Defence and quashing strategy for matrimonial cruelty complaints." },
+    ],
+    feeRange: {
+      consultation: "₹2,000 – ₹7,500 (free first consultation on NyaySevak)",
+      district: "₹12,000 – ₹60,000 per stage (Family Court)",
+      highCourt: "₹40,000 – ₹2,00,000 per appearance at P&H High Court",
+      note: "Mutual-consent divorce is often a fixed package; Gurgaon contested matters are billed per stage at the higher end given the city's profile.",
+    },
+    faqs: [
+      { question: "How do I find a good divorce lawyer near me in Gurgaon?", answer: "Tell NyaySevak whether your matter is mutual or contested and we match you with a Bar-Council-verified Gurugram family lawyer at the Family Court. Your first consultation is free." },
+      { question: "Which court handles divorce in Gurgaon?", answer: "Divorce and most matrimonial matters are heard by the Family Court at Gurugram; appeals go to the Punjab & Haryana High Court. DV Act and maintenance applications can also go before the Magistrate." },
+      { question: "How long does mutual-consent divorce take in Gurgaon?", answer: "With the Amardeep Singh waiver of the cooling-off period, a well-prepared mutual-consent divorce can conclude in roughly 4–6 months; without the waiver, around six months or more." },
+      { question: "Can NRIs divorce through Gurgaon courts?", answer: "Yes. Gurgaon family lawyers regularly handle NRI matters with video-conference appearances or duly executed affidavits and power of attorney, especially for mutual-consent petitions." },
+      { question: "How much does a divorce lawyer cost in Gurgaon?", answer: "Mutual-consent matters are often a fixed package; contested matters run ₹12,000–₹60,000 per stage at the Family Court. Your first consultation on NyaySevak is free." },
+    ],
+    localNotes: [
+      "Gurgaon's affluent, mobile population makes dual-income maintenance and NRI custody disputes especially common.",
+      "A complete settlement deed is the key to a fast mutual-consent decree.",
+    ],
+  },
+  "gurgaon__property-real-estate": {
+    lead:
+      "Gurgaon's premium real-estate market generates heavy property litigation — builder delays, possession, and title disputes. NyaySevak connects you with verified Gurgaon property and RERA lawyers for delayed-possession and refund claims through Haryana RERA (Gurugram bench), the consumer forums, NCLT for insolvent builders, and the Gurugram civil courts.",
+    landscape: [
+      "Gurgaon is one of India's most active and expensive real-estate markets, and its disputes follow the money: delayed-possession and refund claims against major developers, defects and deficiency claims, and high-value title and possession disputes. The Haryana Real Estate Regulatory Authority (Gurugram bench) under the RERA Act 2016 is the primary fast-track forum for buyers of registered projects, while the consumer commissions handle deficiency and compensation, and insolvent developers are taken to the NCLT under the IBC where homebuyers rank as financial creditors.",
+      "Pre-purchase due diligence is critical in Gurgaon given its mix of licensed colonies, HUDA/HSVP plots, and private builder projects — a lawyer must verify the licence, title, approvals, and dues before you commit. Registration, stamp duty, collaboration and builder-buyer agreements, and commercial leasing in the DLF/Cyber City belt round out the property practice.",
+    ],
+    courtsForThisMatter: [
+      "Haryana RERA, Gurugram Bench (builder–buyer complaints)",
+      "State / District Consumer Commission, Gurugram (deficiency, delay)",
+      "NCLT (insolvent builders — IBC, homebuyers as financial creditors)",
+      "Gurugram District Court (title, possession, partition)",
+      "Punjab & Haryana High Court, Chandigarh (writs, appeals)",
+      "HSVP / DTCP Haryana (licensing and plots)",
+    ],
+    caseTypes: [
+      { title: "Delayed Possession Claims", desc: "RERA and consumer claims for possession, delay interest, and compensation." },
+      { title: "Refund & Cancellation", desc: "Refund with interest for stalled or mis-sold projects." },
+      { title: "Builder Insolvency (NCLT/IBC)", desc: "Homebuyer claims as financial creditors against insolvent developers." },
+      { title: "Title & Licence Due Diligence", desc: "Verification of licence, title, approvals, and dues before purchase." },
+      { title: "Registration & Stamp Duty", desc: "Sale deeds, collaboration agreements, and transfers." },
+      { title: "Commercial Leasing", desc: "Office and retail leasing in DLF/Cyber City and the commercial belt." },
+    ],
+    feeRange: {
+      consultation: "₹2,500 – ₹8,000 (free first consultation on NyaySevak)",
+      district: "₹12,000 – ₹60,000 per stage; RERA/consumer often packaged",
+      highCourt: "₹40,000 – ₹3,00,000 per appearance at P&H High Court",
+      note: "Given high property values, Gurgaon RERA/consumer claims can be substantial; complex title and commercial-lease work is billed at the higher end.",
+    },
+    faqs: [
+      { question: "How do I claim possession or a refund from my Gurgaon builder?", answer: "If the project is RERA-registered, file with the Haryana RERA Gurugram bench for possession with delay interest or a refund; if the builder is insolvent, claims go to the NCLT under the IBC. A Gurgaon RERA lawyer will choose the fastest forum — your first consultation is free." },
+      { question: "Which forum is fastest for a Gurgaon flat dispute?", answer: "For a registered, ongoing project, the Haryana RERA Gurugram bench is usually fastest; for deficiency/compensation, the consumer commission; for an insolvent builder, the NCLT; and for pure title disputes, the civil court." },
+      { question: "Do I need due diligence before buying property in Gurgaon?", answer: "Yes — essential. Gurgaon has a mix of licensed colonies, HSVP plots, and private projects, so a lawyer must verify the DTCP licence, title, approvals, and dues before you pay. It prevents the most common Gurgaon property disputes." },
+      { question: "How much does a property/RERA lawyer cost in Gurgaon?", answer: "RERA and consumer complaints are often packaged; civil and HC matters run ₹12,000–₹60,000 per stage and more at the P&H High Court. Your first consultation on NyaySevak is free." },
+      { question: "Which court handles property disputes in Gurgaon?", answer: "Depending on the issue: Haryana RERA (Gurugram bench), the Gurugram Consumer Commission, the NCLT (insolvent builders), or the Gurugram civil courts, with writs and appeals to the Punjab & Haryana High Court." },
+    ],
+    localNotes: [
+      "Gurgaon's high property values make RERA and consumer claims substantial — and worth pursuing properly.",
+      "DTCP licence and HSVP/title verification before purchase is the single best way to avoid Gurgaon property disputes.",
+      "Homebuyers frequently pool together for NCLT/RERA matters against large developers.",
+    ],
+  },
+  "gurgaon__corporate-business": {
+    lead:
+      "Gurgaon is India's corporate capital — home to most multinational India headquarters. NyaySevak connects you with verified Gurgaon corporate lawyers for incorporation, commercial contracts, compliance, employment/POSH, and dispute resolution, with commercial suits before the Gurugram Commercial Court and arbitration for high-value matters.",
+    landscape: [
+      "More Fortune 500 India headquarters sit in Gurgaon than anywhere else in the country, alongside a deep bench of startups, fintechs, BPOs, and consulting firms. This makes corporate and commercial law the city's signature practice: company incorporation and structuring, complex commercial and technology contracts, regulatory and data compliance, employment and ESOP documentation, POSH compliance, and the resolution of high-value commercial disputes.",
+      "Most significant commercial disputes in Gurgaon are resolved through arbitration for speed and confidentiality, with above-threshold suits going to the Commercial Court at Gurugram under the Commercial Courts Act 2015. Insolvency and recovery matters head to the NCLT and DRT. Employment disputes — wrongful termination, full-and-final settlement, and non-compete enforcement — are especially common given the city's large white-collar workforce.",
+    ],
+    courtsForThisMatter: [
+      "Commercial Court, Gurugram (Commercial Courts Act 2015)",
+      "NCLT (company and insolvency matters)",
+      "DRT (bank and financial recovery)",
+      "Arbitration tribunals (commercial disputes)",
+      "Punjab & Haryana High Court, Chandigarh (company appeals, writs)",
+      "Labour Court / Industrial Tribunal, Gurugram (employment disputes)",
+    ],
+    caseTypes: [
+      { title: "Company Incorporation & Structuring", desc: "Private Limited, LLP, OPC, and subsidiary setup for Indian and foreign businesses." },
+      { title: "Commercial & Technology Contracts", desc: "Drafting and enforcing complex vendor, SaaS, and services agreements." },
+      { title: "Employment, ESOP & POSH", desc: "Employment contracts, terminations, ESOPs, and POSH compliance." },
+      { title: "Commercial Disputes & Arbitration", desc: "High-value disputes via the Commercial Court or arbitration." },
+      { title: "Regulatory & Data Compliance", desc: "Sectoral, FDI, and data-protection compliance for MNCs and startups." },
+      { title: "Insolvency & Recovery", desc: "NCLT/IBC and DRT proceedings for distressed debts." },
+    ],
+    feeRange: {
+      consultation: "₹3,000 – ₹12,000 (free first consultation on NyaySevak)",
+      district: "₹25,000 – ₹1,50,000 per stage (Commercial Court)",
+      highCourt: "₹75,000 – ₹5,00,000+ per appearance / arbitration sitting",
+      note: "Gurgaon corporate fees are the highest outside the top metros. MNC and high-value mandates are retainer-based; arbitration is the default for confidential disputes.",
+    },
+    faqs: [
+      { question: "How do I find a corporate lawyer near me in Gurgaon?", answer: "Tell NyaySevak your business need — incorporation, contracts, compliance, employment, or a dispute — and we match you with a Bar-Council-verified Gurugram corporate lawyer experienced with MNCs and startups. Your first consultation is free." },
+      { question: "Which court handles commercial disputes in Gurgaon?", answer: "Above-value commercial suits go to the Commercial Court at Gurugram; company and insolvency matters to the NCLT; bank recovery to the DRT; employment disputes to the Labour Court/Industrial Tribunal; and many high-value disputes are resolved through arbitration." },
+      { question: "Can a Gurgaon lawyer help with wrongful termination or F&F settlement?", answer: "Yes. Given Gurgaon's large white-collar workforce, employment disputes are common. A lawyer can pursue dues, notice pay, gratuity, and damages, or defend the employer, through the appropriate forum." },
+      { question: "What does a corporate lawyer cost in Gurgaon?", answer: "Advisory is typically retainer-based; incorporation and contracts are often fixed-fee; commercial-dispute appearances run ₹25,000–₹1,50,000 per stage and more in arbitration. Your first consultation on NyaySevak is free." },
+      { question: "Do foreign companies set up subsidiaries through Gurgaon lawyers?", answer: "Routinely. Gurgaon corporate lawyers handle subsidiary and FDI structuring, regulatory approvals, and ongoing compliance for multinationals entering India." },
+    ],
+    localNotes: [
+      "As India's MNC hub, Gurgaon's highest-volume corporate needs are contracts, employment/POSH, and commercial-dispute resolution.",
+      "Arbitration is the default for confidential, high-value commercial disputes; employment disputes are unusually common here.",
+    ],
+  },
 };

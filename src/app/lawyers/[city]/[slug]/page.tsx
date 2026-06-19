@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContactButton from "@/components/ContactButton";
 import AnswerBlock from "@/components/AnswerBlock";
+import TrustStrip from "@/components/TrustStrip";
 import {
   ArrowRight, Landmark, MapPin, Scale, Building2, BadgeCheck,
-  Phone, Star, Clock, ChevronRight, CheckCircle2, HelpCircle, Briefcase,
+  Phone, Clock, ChevronRight, CheckCircle2, HelpCircle, Briefcase,
 } from "lucide-react";
 import { cities, cityPracticeSlugs, cityPracticeLabels, type CityPracticeSlug } from "@/data/cities";
 import { cityPracticeContent } from "@/data/city-practice-content";
@@ -284,7 +285,7 @@ export default async function CityPracticePage(
                 {[
                   { Icon: BadgeCheck, label: "Bar Council Verified" },
                   { Icon: Clock, label: "Response in 24hrs" },
-                  { Icon: Star, label: "4.8/5 Rating" },
+                  { Icon: CheckCircle2, label: "Free First Consultation" },
                   { Icon: MapPin, label: `${city.name} Courts` },
                 ].map((stat) => (
                   <span key={stat.label} className="glass-card !rounded-full !px-4 !py-2 inline-flex items-center gap-2 text-xs text-gray-300">
@@ -320,6 +321,7 @@ export default async function CityPracticePage(
       <section className="bg-dark border-y border-gold/[0.08]">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <AnswerBlock question={quickAnswerQuestion}>{quickAnswer}</AnswerBlock>
+          <div className="pb-8 -mt-2"><TrustStrip /></div>
         </div>
       </section>
 

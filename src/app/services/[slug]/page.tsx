@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContactButton from "@/components/ContactButton";
 import TableOfContents, { TocItem } from "@/components/TableOfContents";
+import AnswerBlock from "@/components/AnswerBlock";
+import TrustStrip from "@/components/TrustStrip";
 import {
   ArrowRight, CheckCircle2, Shield, Clock, Users, Star,
   Scale, Search, FileText, HeartHandshake, BookOpen, Upload,
@@ -10,6 +12,8 @@ import {
 import { allServices } from "@/data/services";
 import { practiceAreas } from "@/data/practice-areas";
 import { cities } from "@/data/cities";
+import { trimToSentences } from "@/lib/quick-answer";
+import { webPageSpeakableJsonLd } from "@/lib/schema";
 import { notFound } from "next/navigation";
 
 // Week 5: Map each service slug → 4 relevant practice-area slugs (mid-body cross-link)
@@ -287,11 +291,22 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
     })),
   } : null;
 
+  // AEO quick answer — derived from the service overview, trimmed to a clean
+  // snippet-eligible length (no bespoke copy needed per service).
+  const quickAnswerQuestion = `What is ${service.title} on NyaySevak?`;
+  const quickAnswer = trimToSentences(content.overview, 65);
+  const speakableJsonLd = webPageSpeakableJsonLd({
+    name: service.title,
+    path: `/services/${slug}`,
+    description: service.description,
+  });
+
   return (
     <main className="min-h-screen">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }} />
       {faqJsonLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableJsonLd) }} />
 
       {/* ===== Hero — Premium Dark ===== */}
       <section className="relative bg-dark-deep pt-28 sm:pt-32 pb-16 sm:pb-20 lg:pb-24 overflow-hidden dark-section-depth">
@@ -343,6 +358,14 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ===== AEO Quick Answer (Speakable + AI-Overview extraction target) ===== */}
+      <section className="bg-dark border-y border-gold/[0.08]">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <AnswerBlock question={quickAnswerQuestion}>{quickAnswer}</AnswerBlock>
+          <div className="pb-8 -mt-2"><TrustStrip /></div>
         </div>
       </section>
 

@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import {
   X, User, Phone, MapPin, Briefcase, FileText, Send,
-  ShieldCheck, Clock, Star, CheckCircle2, Loader2,
+  ShieldCheck, Clock, CheckCircle2, Loader2,
 } from "lucide-react";
 import { useContactModal } from "@/context/ContactModalContext";
 import { submitToSheet } from "@/lib/submitToSheet";
@@ -24,7 +24,7 @@ const legalIssueOptions = [
 const trustBadges = [
   { Icon: ShieldCheck, label: "100% Confidential" },
   { Icon: Clock, label: "Response within 24hrs" },
-  { Icon: Star, label: "4.8/5 Client Rating" },
+  { Icon: CheckCircle2, label: "Free First Consultation" },
 ];
 
 export default function ContactModal() {
@@ -225,12 +225,11 @@ export default function ContactModal() {
               <div>
                 <label className="mb-2 flex items-center gap-2 text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-gray-400">
                   <FileText className="h-3.5 w-3.5 text-gold/60" strokeWidth={1.5} />
-                  Brief Description
+                  Brief Description <span className="text-gray-600 normal-case tracking-normal">(optional)</span>
                 </label>
                 <textarea
                   rows={3}
-                  required
-                  placeholder="Describe your legal matter briefly..."
+                  placeholder="Describe your legal matter briefly... (optional)"
                   value={formData.description}
                   onChange={(e) => setFormData({ ...formData, description: e.target.value })}
                   className="w-full rounded-xl border border-white/[0.1] bg-dark-card px-4 py-3 sm:py-3.5 text-sm text-white placeholder-gray-600 transition-all duration-300 resize-none hover:border-gold/20 focus:border-gold/40 focus:ring-2 focus:ring-gold/15 focus:bg-dark-card/80"

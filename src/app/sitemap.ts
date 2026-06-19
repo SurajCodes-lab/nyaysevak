@@ -6,6 +6,7 @@ import { platformFeatures } from "@/data/features";
 import { cities, cityPracticeSlugs } from "@/data/cities";
 import { articles } from "@/data/insights";
 import { authors } from "@/data/authors";
+import { glossaryTerms } from "@/data/legal-glossary";
 import { SITE_URL } from "@/lib/site";
 
 const BASE_URL = SITE_URL;
@@ -17,6 +18,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const corePageDate = "2026-04-05";       // Last major content update
   const detailPageDate = "2026-04-01";     // Last detail page update
   const legalPageDate = "2025-12-01";      // Legal pages rarely change
+  const toolsPageDate = "2026-06-09";      // Legal-tools cluster (calculators) launch
+  const glossaryPageDate = "2026-06-09";   // Glossary split into individual pages
 
   // Static pages — boosted priorities for key conversion pages
   const staticPages: MetadataRoute.Sitemap = [
@@ -42,10 +45,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/best-divorce-lawyers-in-india`, lastModified: corePageDate, changeFrequency: "weekly", priority: 0.9 },
     { url: `${BASE_URL}/best-criminal-lawyers-in-india`, lastModified: corePageDate, changeFrequency: "weekly", priority: 0.9 },
     { url: `${BASE_URL}/free-legal-consultation`, lastModified: corePageDate, changeFrequency: "weekly", priority: 0.9 },
-    // 2026 — Legal Tools hub + first live calculator
-    { url: `${BASE_URL}/legal-tools`, lastModified: corePageDate, changeFrequency: "monthly", priority: 0.9 },
-    { url: `${BASE_URL}/legal-tools/court-fee-calculator`, lastModified: corePageDate, changeFrequency: "monthly", priority: 0.9 },
+    // 2026 — Legal Tools hub (individual calculators generated below from the registry)
+    { url: `${BASE_URL}/legal-tools`, lastModified: toolsPageDate, changeFrequency: "monthly", priority: 0.9 },
+    // Legal industry statistics — AEO cite-magnet
+    { url: `${BASE_URL}/legal-industry-statistics-india`, lastModified: corePageDate, changeFrequency: "monthly", priority: 0.7 },
+    // HTML site index — internal-link hub that funnels crawl equity to every leaf
+    { url: `${BASE_URL}/site-index`, lastModified: corePageDate, changeFrequency: "weekly", priority: 0.5 },
   ];
+
+  // Individual glossary term pages — definitional long-tail + AEO ("what is X")
+  const glossaryPages: MetadataRoute.Sitemap = glossaryTerms.map((term) => ({
+    url: `${BASE_URL}/legal-glossary/${term.slug}`,
+    lastModified: glossaryPageDate,
+    changeFrequency: "yearly" as const,
+    priority: 0.6,
+  }));
 
   // Service pages — boosted priority, these are high-conversion pages
   const servicePages: MetadataRoute.Sitemap = allServices.map((service) => ({
@@ -63,12 +77,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }));
 
-  // High Court pages — strong regional intent
+  // High Court pages — strong regional intent. Re-tiered to 0.6: real but
+  // secondary to money/hub pages, so crawl budget triages toward those first.
   const highCourtPages: MetadataRoute.Sitemap = highCourts.map((court) => ({
     url: `${BASE_URL}/courts/${court.slug}`,
     lastModified: detailPageDate,
     changeFrequency: "weekly" as const,
-    priority: 0.8,
+    priority: 0.6,
   }));
 
   // Tribunal pages
@@ -76,60 +91,63 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${BASE_URL}/courts/${group.slug}`,
     lastModified: detailPageDate,
     changeFrequency: "weekly" as const,
-    priority: 0.8,
+    priority: 0.6,
   }));
 
-  // District Court pages — massive long-tail keyword coverage
+  // District Court pages — re-tiered to 0.5 (thinnest programmatic pages; we
+  // don't want them competing for crawl budget with money pages).
   const districtCourtPages: MetadataRoute.Sitemap = districtCourts.map((dc) => ({
     url: `${BASE_URL}/courts/${dc.slug}`,
     lastModified: detailPageDate,
-    changeFrequency: "weekly" as const,
-    priority: 0.7,
+    changeFrequency: "monthly" as const,
+    priority: 0.5,
   }));
 
-  // Feature pages
+  // Feature pages — supporting, low priority
   const featurePages: MetadataRoute.Sitemap = platformFeatures.map((feature) => ({
     url: `${BASE_URL}/features/${feature.slug}`,
     lastModified: detailPageDate,
     changeFrequency: "monthly" as const,
-    priority: 0.7,
+    priority: 0.4,
   }));
 
-  // Week 5: City × practice-area landing pages — high local-intent traffic
+  // Week 5: City hubs — local intent
   const cityHubPages: MetadataRoute.Sitemap = cities.map((city) => ({
     url: `${BASE_URL}/lawyers/${city.slug}`,
     lastModified: corePageDate,
     changeFrequency: "weekly" as const,
-    priority: 0.85,
+    priority: 0.8,
   }));
 
+  // City × practice-area landing pages — high local-intent long-tail
   const cityPracticePages: MetadataRoute.Sitemap = cities.flatMap((city) =>
     cityPracticeSlugs.map((practice) => ({
       url: `${BASE_URL}/lawyers/${city.slug}/${practice}`,
       lastModified: corePageDate,
       changeFrequency: "weekly" as const,
-      priority: 0.85,
+      priority: 0.7,
     }))
   );
 
-  // Week 6: Insight articles (long-form pillar content) — high SEO priority
+  // Week 6: Insight articles (long-form pillar content)
   const insightPages: MetadataRoute.Sitemap = articles.map((a) => ({
     url: `${BASE_URL}/insights/${a.slug}`,
     lastModified: a.dateModified,
     changeFrequency: "monthly" as const,
-    priority: 0.85,
+    priority: 0.7,
   }));
 
-  // Week 6: Author profile pages — E-E-A-T signal
+  // Week 6: Author profile pages — E-E-A-T signal, supporting priority
   const authorPages: MetadataRoute.Sitemap = authors.map((a) => ({
     url: `${BASE_URL}/authors/${a.slug}`,
     lastModified: corePageDate,
     changeFrequency: "monthly" as const,
-    priority: 0.6,
+    priority: 0.4,
   }));
 
   return [
     ...staticPages,
+    ...glossaryPages,
     ...servicePages,
     ...practiceAreaPages,
     ...highCourtPages,

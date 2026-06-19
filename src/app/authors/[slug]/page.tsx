@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { ArrowRight, ChevronRight, Award, BookOpen, Languages, GraduationCap, Briefcase } from "lucide-react";
 import { authors, authorsBySlug, isAuthorSlug } from "@/data/authors";
 import { articles } from "@/data/insights";
+import RelatedLinks from "@/components/RelatedLinks";
 import { SITE_URL } from "@/lib/site";
 
 export function generateStaticParams() {
@@ -240,6 +241,26 @@ export default async function AuthorProfilePage({ params }: { params: Promise<{ 
           </div>
         </section>
       )}
+
+      <RelatedLinks
+        heading="Explore more"
+        groups={[
+          {
+            title: "Other editorial desks",
+            items: authors
+              .filter((a) => a.slug !== slug)
+              .map((a) => ({ label: a.name, href: `/authors/${a.slug}` })),
+          },
+          {
+            title: "Browse",
+            items: [
+              { label: "All Practice Areas", href: "/practice-areas" },
+              { label: "Legal Insights & Guides", href: "/insights" },
+              { label: "Legal Glossary", href: "/legal-glossary" },
+            ],
+          },
+        ]}
+      />
     </main>
   );
 }

@@ -1,13 +1,16 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ContactButton from "@/components/ContactButton";
+import AnswerBlock from "@/components/AnswerBlock";
 import {
   ArrowRight, Landmark, MapPin, Building2, Scale, Shield,
-  Users, Clock, Star, CheckCircle2, Phone, Gavel, BookOpen,
+  Users, Clock, CheckCircle2, Phone, Gavel, BookOpen,
   FileText, CircleCheck, ChevronRight, BadgeCheck, HelpCircle,
 } from "lucide-react";
 import { highCourts, tribunalGroups, districtCourts } from "@/data/courts";
 import { allServices } from "@/data/services";
+import { webPageSpeakableJsonLd } from "@/lib/schema";
+import { SITE_URL } from "@/lib/site";
 import { notFound } from "next/navigation";
 
 type CourtType = "hc" | "dc" | "tribunal";
@@ -119,53 +122,90 @@ const tribunalServices = [
   { title: "Execution & Enforcement", desc: "Enforce tribunal awards and orders, including contempt proceedings for non-compliance." },
 ];
 
-const hcWhyChoose = [
-  "Senior advocates with 10+ years of High Court practice experience",
-  "Track record of successful writ petitions and appeals across India",
-  "Regular appearances and established rapport with court registrars",
-  "End-to-end case management from filing to final hearing",
-  "Transparent fee structure — know the cost before you engage",
-  "Post-judgment advisory on implementation and compliance",
-];
+// ── Data-driven generators (replaces the old static arrays) ──
+// Every court page now produces FAQ / why-choose / overview text that bakes in
+// the court's own name, jurisdiction, benches, districts and governing High
+// Court — so the 69 court pages are genuinely unique instead of sharing ~28,000
+// words of verbatim boilerplate (the thin/duplicate-content issue from the audit).
+type HCData = (typeof highCourts)[number];
+type DCData = (typeof districtCourts)[number];
+type TRData = (typeof tribunalGroups)[number];
 
-const dcWhyChoose = [
-  "Local advocates with deep knowledge of district-specific procedures",
-  "Extensive network covering all district and sessions courts in the state",
-  "Expertise across civil, criminal, family, and revenue jurisdictions",
-  "Regular case status updates and hearing date notifications",
-  "Affordable fee structures designed for individual and family clients",
-  "Strong track record in trial advocacy and case preparation",
-];
+// Derive the appellate High Court for a state from the HC jurisdiction data.
+function governingHighCourt(state: string): string {
+  const hc = highCourts.find((c) => c.jurisdiction.toLowerCase().includes(state.toLowerCase()));
+  return hc ? hc.name.replace(/\bHC\b/, "High Court") : "the jurisdictional High Court";
+}
 
-const trWhyChoose = [
-  "Specialist tribunal lawyers with domain expertise in the relevant sector",
-  "Experience before specific tribunal benches across multiple locations",
-  "Understanding of specialized tribunal procedures and regulations",
-  "Quick turnaround on urgent applications and interim relief matters",
-  "Comprehensive case preparation including expert evidence management",
-  "Appeals strategy for challenging adverse tribunal orders",
-];
+function hcWhyChoose(hc: HCData): string[] {
+  const benchLine = hc.benches.length
+    ? `Representation at the principal seat and the ${hc.benches.join(", ")} bench${hc.benches.length > 1 ? "es" : ""}`
+    : `Representation at the principal seat of the ${hc.name}`;
+  return [
+    `Advocates who appear regularly before the ${hc.name} with a track record across ${hc.jurisdiction}`,
+    `Specialist drafting for writ petitions under Articles 226 & 227 and statutory appeals in ${hc.jurisdiction}`,
+    benchLine,
+    "End-to-end case management — drafting, filing, listing, and final hearing",
+    "Transparent, upfront fees with a free first consultation",
+    "Post-judgment advisory on compliance, execution, and further appeal to the Supreme Court",
+  ];
+}
 
-const hcFaqs = [
-  { q: "How do I file a case in the High Court?", a: "High Court cases are filed through the filing counter after preparing the required pleadings, paying court fees, and obtaining an advocate-on-record. NyaySevak connects you with experienced High Court advocates who handle the entire filing process for you." },
-  { q: "What is the difference between a writ petition and an appeal?", a: "A writ petition (Article 226) is filed to challenge government actions or enforce fundamental rights. An appeal challenges a lower court's judgment. Writs have broader scope and can be filed even without a prior court order." },
-  { q: "How long does a typical High Court case take?", a: "Timelines vary significantly by case type and court. Writ petitions can get interim relief within weeks, while regular appeals may take 1-3 years. Urgent matters can be heard the same day through mentioning." },
-  { q: "Can I get an urgent hearing at the High Court?", a: "Yes. Through a process called 'mentioning', your advocate can request the court to hear your matter on an urgent basis. This is available for matters involving immediate threat to liberty, property, or rights." },
-];
+function dcWhyChoose(dc: DCData): string[] {
+  const hcName = governingHighCourt(dc.state);
+  return [
+    `Local advocates with daily practice across the ${dc.districts.length} district courts of ${dc.state}`,
+    `Working knowledge of ${dc.state} filing procedure and the ${hcName}'s appellate practice`,
+    `On-ground coverage including ${dc.districts.slice(0, 3).join(", ")} and other districts`,
+    "Expertise across civil, criminal, family, consumer, and revenue jurisdictions",
+    "Regular hearing-date tracking and case-status updates via the eCourts system",
+    "Affordable, upfront fees for individuals and families — free first consultation",
+  ];
+}
 
-const dcFaqs = [
-  { q: "Which district court should I file my case in?", a: "Jurisdiction depends on where the cause of action arose, where the defendant resides, or where the property is located. Our lawyers will analyze your case and advise on the correct court with the appropriate jurisdiction." },
-  { q: "What documents do I need to file a district court case?", a: "Generally you need a signed plaint/complaint, relevant supporting documents, identity proof, court fee stamps, and vakalatnama (power of attorney for your lawyer). Requirements vary by case type." },
-  { q: "How much does it cost to hire a district court lawyer?", a: "Fees vary by case complexity, location, and lawyer experience. On NyaySevak, all fees are displayed upfront. District court matters typically range from ₹5,000 to ₹50,000 depending on the nature of the case." },
-  { q: "Can I track my case status online?", a: "Yes. Most district courts are now part of the e-Courts system. Our platform provides case tracking assistance and regular status updates through your dashboard." },
-];
+function trWhyChoose(tr: TRData): string[] {
+  return [
+    `Specialist advocates with domain expertise in ${tr.title.toLowerCase()} matters`,
+    `Hands-on experience before ${tr.items.slice(0, 3).join(", ")}${tr.items.length > 3 ? " and related benches" : ""}`,
+    "Command of the specialised procedure, limitation, and evidence rules these tribunals apply",
+    "Fast turnaround on urgent applications and interim-relief petitions",
+    "Thorough case preparation including expert and documentary evidence",
+    "A clear appeal strategy for challenging adverse tribunal orders",
+  ];
+}
 
-const trFaqs = [
-  { q: "What is the difference between a tribunal and a regular court?", a: "Tribunals are quasi-judicial bodies established by specific statutes to handle specialized matters. They follow their own procedural rules, are generally faster than regular courts, and have members with domain expertise in the relevant sector." },
-  { q: "Can a tribunal order be challenged?", a: "Yes. Most tribunal orders can be challenged through statutory appeals (e.g., NCLAT for NCLT orders) or through writ petitions in the High Court. The appeal route depends on the specific tribunal and its governing statute." },
-  { q: "Do I need a lawyer for tribunal proceedings?", a: "While some tribunals allow self-representation, having a specialized lawyer significantly improves your chances. Tribunal procedures, though less formal, still require expertise in drafting, evidence presentation, and legal arguments." },
-  { q: "How long do tribunal proceedings typically take?", a: "Tribunals are generally faster than regular courts. Simple matters may be resolved in 3-6 months, while complex cases involving multiple hearings could take 1-2 years. Many tribunals have mandated timelines for disposal." },
-];
+function hcFaqs(hc: HCData) {
+  const benchAnswer = hc.benches.length
+    ? `The ${hc.name} sits at its principal seat and at ${hc.benches.length} bench location${hc.benches.length > 1 ? "s" : ""} (${hc.benches.join(", ")}), so your matter can be filed at the seat nearest you within ${hc.jurisdiction}.`
+    : `The ${hc.name} sits at a single principal seat with jurisdiction over ${hc.jurisdiction}.`;
+  return [
+    { q: `How do I file a case in the ${hc.name}?`, a: `A matter is filed at the ${hc.name} filing counter after the pleadings are drafted, court fees paid, and (for certain matters) an advocate-on-record engaged. NyaySevak connects you with advocates who appear regularly before the ${hc.name} and handle the full filing process for you.` },
+    { q: `What types of cases does the ${hc.name} hear?`, a: `The ${hc.name} hears writ petitions under Articles 226 and 227, civil and criminal appeals from the district courts of ${hc.jurisdiction}, company and tax appeals, service matters, and cases in its original jurisdiction.` },
+    { q: `Where are the ${hc.name} benches located?`, a: benchAnswer },
+    { q: `How long does a case take at the ${hc.name}?`, a: `It varies by matter: writ petitions can secure interim relief within weeks, while regular appeals may run 1–3 years. Urgent matters can be mentioned for same-day or early listing before the ${hc.name}.` },
+    { q: `Can I get an urgent hearing at the ${hc.name}?`, a: `Yes. Through "mentioning", your advocate can request urgent listing before the ${hc.name} for matters involving an immediate threat to liberty, property, or fundamental rights.` },
+  ];
+}
+
+function dcFaqs(dc: DCData) {
+  const hcName = governingHighCourt(dc.state);
+  return [
+    { q: `How many district courts are there in ${dc.state}?`, a: `${dc.state} has ${dc.districts.length} district court establishments, including ${dc.districts.slice(0, 4).join(", ")} and others. NyaySevak connects you with verified lawyers practising across all of them.` },
+    { q: `Which district court should I file my case in within ${dc.state}?`, a: `Jurisdiction depends on where the cause of action arose, where the defendant resides, or where the property is located. A ${dc.state} lawyer will identify the correct district court and pecuniary forum for your matter.` },
+    { q: `Which High Court hears appeals from ${dc.state} district courts?`, a: `Appeals, revisions, and writs arising from the district courts of ${dc.state} lie before the ${hcName}.` },
+    { q: `How much does a district court lawyer cost in ${dc.state}?`, a: `Fees vary by district, case type, and experience; ${dc.state} district-court matters commonly range from ₹5,000 to ₹50,000 depending on complexity. On NyaySevak, fees are agreed upfront and the first consultation is free.` },
+    { q: `Can I track my ${dc.state} court case online?`, a: `Yes. The district courts of ${dc.state} are on the eCourts system, so case status and the next hearing date can be tracked by CNR number, and your lawyer will keep you updated.` },
+  ];
+}
+
+function trFaqs(tr: TRData) {
+  return [
+    { q: `What matters does the ${tr.title} tribunal group handle?`, a: `It covers ${tr.items.slice(0, 4).join(", ")}${tr.items.length > 4 ? " and related forums" : ""}. These are quasi-judicial bodies whose members have domain expertise in the relevant sector.` },
+    { q: `How do I challenge a ${tr.title} tribunal order?`, a: `Most ${tr.title.toLowerCase()} tribunal orders can be challenged through the statutory appeal prescribed by the governing Act (for example, an appellate tribunal) or by a writ petition before the High Court, depending on the forum.` },
+    { q: `Do I need a lawyer for ${tr.title} tribunal proceedings?`, a: `While some tribunals permit self-representation, specialised representation materially improves outcomes — ${tr.title.toLowerCase()} matters still require precise drafting, evidence handling, and legal argument.` },
+    { q: `How long do ${tr.title} tribunal proceedings take?`, a: `Tribunals are generally faster than regular courts: straightforward matters may resolve in 3–6 months, while complex ones can take 1–2 years. Many tribunals have statutory disposal timelines.` },
+  ];
+}
 
 export default async function CourtDetailPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
@@ -187,8 +227,27 @@ export default async function CourtDetailPage({ params }: { params: Promise<{ sl
     ],
   };
 
-  const courtFaqs = hc ? hcFaqs : dc ? dcFaqs : trFaqs;
-  const courtWhyChoose = hc ? hcWhyChoose : dc ? dcWhyChoose : trWhyChoose;
+  const courtFaqs = hc ? hcFaqs(hc) : dc ? dcFaqs(dc) : trFaqs(tr!);
+  const courtWhyChoose = hc ? hcWhyChoose(hc) : dc ? dcWhyChoose(dc) : trWhyChoose(tr!);
+
+  // AEO quick answer — court-type-specific, built from the court's own data so
+  // it is genuinely page-specific (the text AI Overviews / Perplexity extract).
+  const quickAnswerQuestion = hc
+    ? `How do I find a lawyer for the ${hc.name}?`
+    : dc
+    ? `How do I find a district court lawyer in ${dc.state}?`
+    : `How do I find a lawyer for ${tr?.title} tribunal matters?`;
+  const quickAnswer = hc
+    ? `NyaySevak matches you with Bar-Council-verified advocates who appear regularly before the ${hc.name}, which has jurisdiction over ${hc.jurisdiction}${hc.benches.length ? ` (benches at ${hc.benches.join(", ")})` : ""}. They handle writ petitions under Articles 226 and 227, civil and criminal appeals, bail applications, company matters and tax appeals. Your first consultation is free.`
+    : dc
+    ? `NyaySevak connects you with verified lawyers across all ${dc.districts.length} district courts in ${dc.state}, including ${dc.districts.slice(0, 4).join(", ")} and more. They handle civil suits, criminal trials, family and matrimonial matters, cheque-bounce cases under Section 138, and motor-accident claims. Your first consultation is free.`
+    : `NyaySevak matches you with specialist advocates for ${tr?.title} tribunal matters across India — application drafting, representation at hearings, written submissions, and appeals against tribunal orders. Your first consultation is free.`;
+
+  const speakableJsonLd = webPageSpeakableJsonLd({
+    name: quickAnswerQuestion,
+    path: `/courts/${slug}`,
+    description: quickAnswer.slice(0, 155),
+  });
 
   const faqJsonLd = {
     "@context": "https://schema.org",
@@ -236,6 +295,7 @@ export default async function CourtDetailPage({ params }: { params: Promise<{ sl
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courtServiceJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableJsonLd) }} />
 
       {/* ── Hero — Dark Premium ── */}
       <section className="relative bg-dark-deep overflow-hidden dark-section-depth">
@@ -312,14 +372,21 @@ export default async function CourtDetailPage({ params }: { params: Promise<{ sl
                   </span>
                 )}
                 <span className="glass-card !rounded-full !px-4 !py-2 inline-flex items-center gap-2 text-xs text-gray-300">
-                  <Star className="h-3.5 w-3.5 text-gold" strokeWidth={1.5} />
-                  4.8/5 Rating
+                  <CheckCircle2 className="h-3.5 w-3.5 text-gold" strokeWidth={1.5} />
+                  Free First Consultation
                 </span>
               </div>
             </div>
           </div>
         </div>
         <div className="section-separator" />
+      </section>
+
+      {/* ── AEO Quick Answer (Speakable + AI-Overview extraction target) ── */}
+      <section className="bg-dark border-y border-gold/[0.08]">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <AnswerBlock question={quickAnswerQuestion}>{quickAnswer}</AnswerBlock>
+        </div>
       </section>
 
       {/* ── High Court Content ── */}

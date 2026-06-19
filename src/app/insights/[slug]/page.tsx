@@ -9,6 +9,7 @@ import { allServices } from "@/data/services";
 import { cities } from "@/data/cities";
 import ContactButton from "@/components/ContactButton";
 import AnswerBlock from "@/components/AnswerBlock";
+import LeadCTA from "@/components/LeadCTA";
 import TableOfContents, { TocItem } from "@/components/TableOfContents";
 import { SITE_URL } from "@/lib/site";
 import { trimToSentences } from "@/lib/quick-answer";
@@ -340,6 +341,13 @@ export default async function InsightArticlePage({ params }: { params: Promise<{
               ))}
             </ul>
           </section>
+
+          {/* Mid-article lead capture — placed after the reader gets value */}
+          <LeadCTA
+            heading={`Need help with ${article.primaryKeyword.replace(/\b(india|procedure|process|guide|2026)\b/gi, "").trim() || "your matter"}?`}
+            waText={`Hi, I read your guide on "${article.title}" and need legal help.`}
+            context={`insight:${article.slug}`}
+          />
 
           {/* FAQs */}
           <section id="faqs" className="mb-12 scroll-mt-24">

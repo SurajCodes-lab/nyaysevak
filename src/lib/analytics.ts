@@ -182,6 +182,26 @@ export function trackExitCaptureDismiss(page?: string) {
   });
 }
 
+// ── 2026: Glossary & outbound engagement ──
+
+/** Fire when a visitor opens an individual glossary term page. */
+export function trackGlossaryView(termSlug: string) {
+  trackEvent({
+    action: "glossary_view",
+    category: "engagement",
+    label: termSlug,
+  });
+}
+
+/** Fire when a visitor clicks an outbound reference link (eCourts, SHCIL, statute). */
+export function trackOutboundClick(label: string) {
+  trackEvent({
+    action: "outbound_click",
+    category: "engagement",
+    label,
+  });
+}
+
 /** Fire when a user reaches a key practice-area or city-intent page from organic search. */
 export function trackOrganicLanding(slug: string) {
   trackEvent({

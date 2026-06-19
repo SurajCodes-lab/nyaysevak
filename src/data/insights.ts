@@ -1622,6 +1622,1751 @@ export const articles: Article[] = [
     relatedServiceSlugs: ["lawyer-consultation", "find-hire-lawyers", "legal-aid"],
     relatedCitySlugs: ["delhi", "mumbai", "bangalore", "jaipur"],
   },
+
+  // ============================================================
+  // 11. Bailable vs non-bailable & cognizable vs non-cognizable
+  // ============================================================
+  {
+    slug: "bailable-vs-non-bailable-cognizable-offences-india",
+    title: "Bailable vs Non-Bailable & Cognizable vs Non-Cognizable Offences",
+    metaTitle:
+      "Bailable vs Non-Bailable & Cognizable vs Non-Cognizable Offences (2026)",
+    metaDescription:
+      "Difference between bailable and non-bailable, and cognizable and non-cognizable offences in India under the BNSS 2023 — with examples, arrest and bail rules, and what each means for you.",
+    excerpt:
+      "Two separate classifications decide what happens after a crime is reported: cognizable vs non-cognizable controls the police's power to arrest and investigate, while bailable vs non-bailable controls your right to bail. This guide explains both — with current BNSS 2023 sections, worked examples, and a clear comparison.",
+    category: "Criminal Defence",
+    authorSlug: "criminal-law-desk",
+    reviewerSlug: "nyaysevak-legal-team",
+    datePublished: "2026-06-09",
+    dateModified: "2026-06-09",
+    readTimeMinutes: 11,
+    primaryKeyword: "difference between bailable and non-bailable offence",
+    secondaryKeywords: [
+      "cognizable vs non-cognizable offence",
+      "bailable and non-bailable offences list",
+      "what is a cognizable offence",
+      "non-bailable offence meaning",
+      "bnss 2023 bail sections",
+      "can police arrest without warrant",
+    ],
+    hero: {
+      eyebrow: "Criminal Law · Explainer",
+      title: "Bailable vs Non-Bailable & Cognizable vs Non-Cognizable Offences",
+      subtitle:
+        "Two independent classifications under the Bharatiya Nagarik Suraksha Sanhita 2023 that decide whether the police can arrest you without a warrant, and whether bail is your right or the court's discretion.",
+    },
+    intro: [
+      "When a crime is reported in India, two separate legal classifications immediately come into play, and people routinely confuse them. The first — cognizable versus non-cognizable — decides what the police can do: whether they can register an FIR, arrest without a warrant, and investigate on their own. The second — bailable versus non-bailable — decides what happens to the accused: whether bail is a matter of right or something the court grants at its discretion.",
+      "These two classifications are independent of each other. An offence can be cognizable and non-bailable (such as murder), cognizable and bailable, or non-cognizable and bailable (most minor offences). Knowing which boxes your offence falls into tells you almost everything about how the early stages of the case will unfold.",
+      "Both classifications are set out in the First Schedule to the Bharatiya Nagarik Suraksha Sanhita 2023 (BNSS), which replaced the Code of Criminal Procedure 1973 with effect from 1 July 2024. This guide explains each classification, the sections that govern it, and what it means in practice — for the person accused and for the complainant.",
+    ],
+    sections: [
+      {
+        heading: "1. Cognizable vs non-cognizable: the police-power classification",
+        body: [
+          "This classification answers a single question: can the police act on their own, or do they need a magistrate's permission first? It is about the powers of the police, not about bail.",
+          "In a cognizable offence, the police can register a First Information Report (FIR) under Section 173 BNSS, arrest the accused without a warrant, and investigate without obtaining a magistrate's order. These are the more serious offences — generally those punishable with three years' imprisonment or more.",
+          "In a non-cognizable offence, the police cannot register a regular FIR or arrest without a warrant, and they cannot investigate without the magistrate's permission under Section 174 BNSS. Instead, they record a Non-Cognizable Report (NCR) and refer the complainant to the magistrate, who may then order an investigation. These are the less serious offences.",
+        ],
+        bullets: [
+          "Cognizable — FIR registered (S.173 BNSS), arrest without warrant allowed, police investigate suo motu. Examples: murder, rape, robbery, dowry death, theft, kidnapping.",
+          "Non-cognizable — only an NCR is recorded, no arrest without warrant, investigation needs magistrate's order (S.174 BNSS). Examples: simple defamation, public nuisance, simple hurt in many cases, criminal intimidation in some forms.",
+          "Where to check: the First Schedule to the BNSS lists, against each offence, whether it is cognizable or non-cognizable and bailable or non-bailable.",
+        ],
+      },
+      {
+        heading: "2. Bailable vs non-bailable: the bail-right classification",
+        body: [
+          "This classification answers a different question: once a person is in custody, is bail a matter of right or of judicial discretion? It says nothing about how serious the offence is in the abstract — it is a statutory tag attached to each offence.",
+          "In a bailable offence, bail is a matter of right. Under Section 478 BNSS (formerly Section 436 CrPC), the police officer or the court must release the accused on bail once the required bond is furnished. The accused does not have to persuade anyone; release follows as of right.",
+          "In a non-bailable offence, bail is discretionary. The court decides under Section 480 BNSS (formerly Section 437) — and the Court of Session or High Court under Section 483 BNSS (formerly Section 439) — weighing factors such as the gravity of the offence, the strength of the prima facie evidence, the accused's antecedents, the risk of flight, and the risk of tampering with evidence or witnesses. 'Non-bailable' does not mean 'no bail'; it means bail is not automatic.",
+        ],
+        bullets: [
+          "Bailable — release on bail is a right (S.478 BNSS); the bond is furnished and the person is released.",
+          "Non-bailable — bail is at the court's discretion (S.480 / S.483 BNSS); the court weighs gravity, evidence, antecedents, flight risk, and tampering risk.",
+          "Anticipatory bail (S.482 BNSS, formerly S.438) is a separate, pre-arrest protection available in non-bailable cases — sought from the Court of Session or High Court before arrest.",
+        ],
+      },
+      {
+        heading: "3. The two classifications are independent — the four combinations",
+        body: [
+          "Because the classifications answer different questions, every offence carries one tag from each pair. Understanding the combination tells you both what the police can do and what your bail position is.",
+        ],
+        bullets: [
+          "Cognizable + non-bailable: the most serious category — police can arrest without warrant and bail is discretionary. Example: murder (BNS Section 103, formerly IPC 302).",
+          "Cognizable + bailable: police can register an FIR and investigate, but bail is a right once arrested.",
+          "Non-cognizable + bailable: the largest category of minor offences — no FIR/arrest without warrant, and bail is a right.",
+          "Non-cognizable + non-bailable: rare, but possible for specific offences.",
+        ],
+      },
+      {
+        heading: "4. What it means in practice — for the accused",
+        body: [
+          "If you are accused of a cognizable, non-bailable offence, the realistic priority is bail strategy. Because the police can arrest you without a warrant and bail is discretionary, the time to act is before arrest — through anticipatory bail under Section 482 BNSS — or immediately after, through a regular bail application under Section 480 or 483 BNSS.",
+          "If you are accused of a bailable offence, you are entitled to be released on furnishing the bond; if the police refuse, that refusal is itself challengeable. If the offence is non-cognizable, the police cannot arrest you without a warrant, and they cannot even investigate without the magistrate's order — improper police action in such cases can be resisted.",
+        ],
+      },
+      {
+        heading: "5. What it means in practice — for the complainant",
+        body: [
+          "If the offence you are reporting is cognizable, the police are obliged to register an FIR (Lalita Kumari v. Government of Uttar Pradesh, (2014) 2 SCC 1); a refusal can be escalated to the Superintendent of Police and then to the magistrate under Section 173(4) / Section 175 BNSS.",
+          "If the offence is non-cognizable, the police will only record an NCR and direct you to the magistrate. You will need to approach the magistrate to set the investigation in motion, or file a private complaint. Knowing this in advance avoids the frustration of expecting an immediate FIR and arrest in a matter the law classifies as minor.",
+        ],
+      },
+    ],
+    takeaways: [
+      "Cognizable vs non-cognizable is about POLICE POWER — whether the police can register an FIR, arrest without warrant, and investigate on their own (S.173 / S.174 BNSS).",
+      "Bailable vs non-bailable is about YOUR RIGHT TO BAIL — a right in bailable offences (S.478), discretionary in non-bailable (S.480 / S.483 BNSS).",
+      "The two are independent: every offence carries one tag from each pair; check the First Schedule to the BNSS.",
+      "'Non-bailable' does not mean no bail — it means bail is at the court's discretion. Anticipatory bail (S.482) is the pre-arrest remedy.",
+      "For a cognizable, non-bailable accusation, bail strategy is the immediate priority; for a complainant, a cognizable offence compels FIR registration.",
+    ],
+    faqs: [
+      {
+        question: "What is the main difference between bailable and non-bailable offences?",
+        answer:
+          "In a bailable offence, bail is a matter of right — the police or court must release the accused on furnishing a bond (Section 478 BNSS). In a non-bailable offence, bail is discretionary — the court decides under Section 480 or 483 BNSS based on the gravity of the offence, the evidence, the accused's antecedents, and the risk of flight or tampering.",
+      },
+      {
+        question: "What is the difference between cognizable and non-cognizable offences?",
+        answer:
+          "In a cognizable offence, the police can register an FIR, arrest without a warrant, and investigate on their own (Section 173 BNSS) — these are the more serious offences. In a non-cognizable offence, the police cannot arrest without a warrant or investigate without a magistrate's order (Section 174 BNSS); they only record a Non-Cognizable Report.",
+      },
+      {
+        question: "Is a non-bailable offence the same as a cognizable offence?",
+        answer:
+          "No. They are two independent classifications. Cognizable/non-cognizable is about police powers of arrest and investigation; bailable/non-bailable is about the right to bail. An offence can be cognizable and bailable, or non-cognizable and bailable, and so on. Many serious offences are both cognizable and non-bailable, which is why the two are often confused.",
+      },
+      {
+        question: "Can you get bail in a non-bailable offence?",
+        answer:
+          "Yes. 'Non-bailable' does not mean bail is impossible — it means bail is at the court's discretion rather than a right. The accused applies under Section 480 BNSS (Magistrate) or Section 483 BNSS (Court of Session or High Court). A pre-arrest application for anticipatory bail can also be made under Section 482 BNSS.",
+      },
+      {
+        question: "How do I know if my offence is cognizable or bailable?",
+        answer:
+          "The First Schedule to the Bharatiya Nagarik Suraksha Sanhita 2023 lists every offence with its classification — cognizable or non-cognizable, and bailable or non-bailable. A criminal lawyer can confirm the classification for the exact section you are charged under, since the consequences for arrest and bail flow directly from it.",
+      },
+      {
+        question: "Can the police arrest me without a warrant?",
+        answer:
+          "Only in a cognizable offence. For cognizable offences the police may arrest without a warrant. For non-cognizable offences they cannot arrest without a warrant and cannot investigate without the magistrate's permission. If you believe the police have acted beyond these powers, consult a criminal lawyer immediately — the first consultation on NyaySevak is free.",
+      },
+    ],
+    relatedPracticeAreaSlugs: ["criminal-law", "cbi-cases"],
+    relatedServiceSlugs: ["lawyer-consultation", "find-hire-lawyers"],
+    relatedCitySlugs: ["delhi", "mumbai", "bangalore"],
+  },
+
+  // ============================================================
+  // 12. Legal heir certificate vs succession certificate
+  // ============================================================
+  {
+    slug: "legal-heir-certificate-vs-succession-certificate-india",
+    title: "Legal Heir Certificate vs Succession Certificate in India",
+    metaTitle:
+      "Legal Heir Certificate vs Succession Certificate India (2026 Guide)",
+    metaDescription:
+      "Legal heir certificate vs succession certificate in India: what each is for, who issues it, the documents, cost, and timeline — plus when you need probate or letters of administration.",
+    excerpt:
+      "After a death in the family, two documents are constantly confused: the legal heir certificate (for pensions, PF, and benefits) and the succession certificate (for collecting the deceased's debts and securities). They are issued by different authorities for different purposes. This guide explains exactly which one you need.",
+    category: "Property & Real Estate",
+    authorSlug: "property-real-estate-desk",
+    reviewerSlug: "nyaysevak-legal-team",
+    datePublished: "2026-06-09",
+    dateModified: "2026-06-09",
+    readTimeMinutes: 12,
+    primaryKeyword: "legal heir certificate vs succession certificate",
+    secondaryKeywords: [
+      "difference between legal heir and succession certificate",
+      "succession certificate India",
+      "legal heir certificate how to apply",
+      "succession certificate indian succession act",
+      "letters of administration vs succession certificate",
+      "documents required for succession certificate",
+    ],
+    hero: {
+      eyebrow: "Property & Succession · Explainer",
+      title: "Legal Heir Certificate vs Succession Certificate in India",
+      subtitle:
+        "Two documents people constantly confuse after a bereavement — one issued by the revenue authorities for benefits and pensions, the other by a civil court for collecting debts and securities. Here is exactly which you need, and when.",
+    },
+    intro: [
+      "When a family member dies, the survivors quickly discover that accessing the deceased's assets and benefits requires paperwork — and that two documents with similar-sounding names do very different jobs. The legal heir certificate and the succession certificate are not interchangeable. Applying for the wrong one wastes weeks and is one of the most common, avoidable mistakes families make.",
+      "In short: a legal heir certificate identifies who the living heirs are and is used for benefits such as family pension, gratuity, provident fund, insurance, and transfer of utility connections. A succession certificate is a court order that authorises the heirs to collect the deceased's debts and securities — bank balances, fixed deposits, shares, and bonds — where the person died without a will.",
+      "This guide sets out what each document is, who issues it, the documents and cost involved, the realistic timeline, and the situations where you actually need probate or letters of administration instead. It applies to intestate succession (death without a will); where there is a valid will, the route is usually probate of the will rather than either certificate.",
+    ],
+    sections: [
+      {
+        heading: "1. The legal heir certificate — for benefits and entitlements",
+        body: [
+          "A legal heir certificate (in some states called a 'legal heirship certificate') establishes the relationship between the deceased and the surviving family members. It is primarily an administrative document used to claim benefits and to get records transferred into the heirs' names.",
+          "It is typically issued by the revenue administration — the Tahsildar, Revenue Officer, or in some states the municipal authority or district administration — after a local enquiry. It is relatively quick and inexpensive. It is the right document for family pension, gratuity, provident fund, salary arrears, employment on compassionate grounds, insurance claims, and the transfer of utility connections, property tax records (khata/mutation), and similar entitlements.",
+          "Its limitation: a legal heir certificate is an administrative identification of heirs, not a conclusive adjudication of title to disputed property. Where ownership of property is contested among claimants, the certificate alone will not settle the dispute.",
+        ],
+        bullets: [
+          "Issued by: Tahsildar / Revenue Officer / municipal or district authority (varies by state).",
+          "Used for: family pension, gratuity, PF, insurance, salary arrears, compassionate appointment, utility and tax-record transfers.",
+          "Typical cost: nominal (a small fee plus stamp); timeline usually around 2–4 weeks.",
+          "Limitation: not a conclusive determination of title to disputed property.",
+        ],
+      },
+      {
+        heading: "2. The succession certificate — for debts and securities",
+        body: [
+          "A succession certificate is a very different instrument. It is granted by a civil court (the District Judge) under Part X, Sections 370 to 390 of the Indian Succession Act, 1925. Its specific legal effect is to authorise the holder to collect debts and securities owed to a deceased person who died intestate, and to give a valid discharge to whoever pays.",
+          "'Debts and securities' is a defined idea: it covers things like bank deposits and fixed deposits, provident dues, shares, debentures, bonds, and money owed to the deceased. Banks, companies, and registrars typically insist on a succession certificate before releasing such assets to heirs where there is no nominee and no will.",
+          "The process is a court proceeding: the heir files a petition before the District Court having jurisdiction (usually where the deceased ordinarily resided or where the assets are), pays an ad-valorem court fee calculated on the value of the debts/securities, and the court issues a public notice (usually in a newspaper) inviting objections. After the objection period — commonly around 45 days — and any hearing, the court grants the certificate. The realistic timeline is generally three to seven months, longer if there are objections.",
+        ],
+        bullets: [
+          "Issued by: a Civil Court (District Judge) under Sections 370–390, Indian Succession Act 1925.",
+          "Used for: collecting the deceased's debts and securities — bank balances, FDs, shares, bonds, provident dues — where there is no will.",
+          "Process: petition + ad-valorem court fee + newspaper notice + ~45-day objection window + hearing.",
+          "Timeline: usually 3–7 months; cost is dominated by the ad-valorem court fee and counsel's fee.",
+        ],
+      },
+      {
+        heading: "3. Side-by-side: which document for which purpose",
+        body: [
+          "The simplest way to choose is to start from what you are trying to do, not from the document name.",
+        ],
+        bullets: [
+          "Claiming family pension, gratuity, PF, insurance, or compassionate appointment → legal heir certificate.",
+          "Releasing the deceased's bank deposits, FDs, shares, or bonds where there is no nominee and no will → succession certificate.",
+          "Transferring utility connections, khata, or property-tax records → legal heir certificate (subject to the asset's own transfer rules).",
+          "Establishing the right to administer the estate of someone who died without a will, especially immovable property → letters of administration (see next section).",
+          "Giving effect to a valid will → probate of the will, not either certificate.",
+        ],
+      },
+      {
+        heading: "4. Where probate or letters of administration come in",
+        body: [
+          "Two further instruments are often relevant and should not be confused with the certificates above. Probate is a court's certified copy of a will with a grant of administration to the executor — it is required to act on a will in certain cases (notably for wills made in the presidency towns of Kolkata, Chennai, and Mumbai, and for immovable property there). Letters of administration are granted by the court where a person dies intestate (or where a will exists but names no executor), authorising the administrator to manage and distribute the estate, including immovable property.",
+          "The practical distinction: a succession certificate is confined to debts and securities (movable financial assets); it does not by itself transfer immovable property. Where the estate includes immovable property and there is a dispute or a need to formally administer it, letters of administration (intestate) or probate (with a will) are the appropriate route, and a partition suit may follow where heirs cannot agree on division.",
+        ],
+      },
+      {
+        heading: "5. Documents you will typically need",
+        body: [
+          "Requirements vary by state and by issuing authority, but the core documents overlap.",
+        ],
+        bullets: [
+          "Death certificate of the deceased (mandatory in every case).",
+          "Identity and address proof of the applicant and of all legal heirs (Aadhaar, PAN, etc.).",
+          "Proof of relationship to the deceased (ration card, family records, school/employment records).",
+          "For a succession certificate: details and valuation of the debts and securities, the deceased's residence proof, and an affidavit; the court fee is calculated on that valuation.",
+          "An affidavit/self-declaration and, for the succession petition, the list of all heirs who must be made parties so they can consent or object.",
+        ],
+      },
+    ],
+    takeaways: [
+      "Legal heir certificate = administrative document from the revenue authorities for benefits (pension, gratuity, PF, insurance) and record transfers; quick and cheap.",
+      "Succession certificate = a civil-court order under Sections 370–390 of the Indian Succession Act 1925 to collect the deceased's debts and securities where there is no will.",
+      "They are not interchangeable — choose based on what you are trying to do, not the document name.",
+      "A succession certificate covers movable financial assets, not immovable property; for estate administration use letters of administration (intestate) or probate (with a will).",
+      "Always start from the death certificate; for the succession petition every heir must be made a party so they can consent or object.",
+    ],
+    faqs: [
+      {
+        question: "What is the difference between a legal heir certificate and a succession certificate?",
+        answer:
+          "A legal heir certificate is an administrative document issued by the revenue authorities (Tahsildar/municipal authority) to identify a deceased person's heirs, used for pensions, gratuity, PF, and insurance. A succession certificate is a civil-court order under the Indian Succession Act 1925 that authorises heirs to collect the deceased's debts and securities — bank deposits, FDs, shares, bonds — where there is no will.",
+      },
+      {
+        question: "Which one do I need to claim my deceased father's bank deposits?",
+        answer:
+          "If there is no nominee and no will, banks usually require a succession certificate to release deposits, fixed deposits, and similar securities. If a nominee is registered, the bank may release the funds to the nominee (who holds them in trust for the heirs). A legal heir certificate alone is generally not sufficient to compel a bank to release deposits.",
+      },
+      {
+        question: "Who issues a succession certificate and how long does it take?",
+        answer:
+          "A succession certificate is issued by the District Court under Sections 370–390 of the Indian Succession Act 1925. The process involves a petition, an ad-valorem court fee on the value of the assets, a newspaper notice inviting objections (commonly around 45 days), and a hearing. The realistic timeline is generally three to seven months, longer if there are objections.",
+      },
+      {
+        question: "Is a succession certificate enough to transfer property?",
+        answer:
+          "No. A succession certificate is confined to debts and securities (movable financial assets) and does not by itself transfer immovable property. To administer or transfer immovable property of someone who died without a will, you generally need letters of administration, and where heirs cannot agree on division, a partition suit may be required.",
+      },
+      {
+        question: "Do I need a succession certificate if there is a will?",
+        answer:
+          "Usually not. A succession certificate is for intestate cases (no will). Where there is a valid will, the route is generally probate of the will (in the cases where probate is required) or acting on the will directly. A lawyer can confirm whether probate is mandatory for your situation, which depends on where the will was made and the nature of the assets.",
+      },
+      {
+        question: "How much does a succession certificate cost?",
+        answer:
+          "The dominant cost is the ad-valorem court fee, which is calculated as a percentage of the value of the debts and securities involved (the percentage and any cap vary by state). On top of that are counsel's professional fees and incidental costs such as the newspaper publication. A legal heir certificate, by contrast, costs only a nominal fee. Your first consultation on NyaySevak is free, and the lawyer can estimate the court fee for your asset value.",
+      },
+    ],
+    relatedPracticeAreaSlugs: ["property-real-estate", "documentation", "family-matrimonial"],
+    relatedServiceSlugs: ["lawyer-consultation", "find-hire-lawyers", "document-services"],
+    relatedCitySlugs: ["delhi", "mumbai", "chennai", "kolkata"],
+  },
+
+  // ============================================================
+  // 13. How to file a consumer complaint (e-Daakhil)
+  // ============================================================
+  {
+    slug: "how-to-file-consumer-complaint-online-edaakhil-india-2026",
+    title: "How to File a Consumer Complaint Online in India (e-Daakhil)",
+    metaTitle:
+      "How to File a Consumer Complaint Online in India — e-Daakhil (2026)",
+    metaDescription:
+      "Step-by-step guide to filing a consumer complaint in India under the Consumer Protection Act 2019 — the e-Daakhil portal, which commission to approach, the 2-year limit, fees, and reliefs.",
+    excerpt:
+      "The Consumer Protection Act 2019 and the e-Daakhil portal let you file a consumer complaint online without a lawyer. This guide explains who qualifies as a consumer, which commission to approach based on the claim value, the two-year limitation, the documents and fees, and the reliefs you can claim.",
+    category: "Practical Guidance",
+    authorSlug: "nyaysevak-legal-team",
+    reviewerSlug: "nyaysevak-legal-team",
+    datePublished: "2026-06-09",
+    dateModified: "2026-06-09",
+    readTimeMinutes: 12,
+    primaryKeyword: "how to file consumer complaint online India",
+    secondaryKeywords: [
+      "e-daakhil portal consumer complaint",
+      "consumer protection act 2019 complaint",
+      "consumer court complaint procedure",
+      "consumer complaint limitation period",
+      "which consumer commission to approach",
+      "deficiency in service complaint",
+    ],
+    hero: {
+      eyebrow: "Consumer Law · Procedural Guide",
+      title: "How to File a Consumer Complaint Online in India (e-Daakhil)",
+      subtitle:
+        "A step-by-step walkthrough under the Consumer Protection Act 2019 — who can complain, which commission to approach, the e-Daakhil portal, the two-year limit, fees, and the reliefs available.",
+    },
+    intro: [
+      "The Consumer Protection Act 2019 modernised consumer redress in India, replacing the 1986 Act. It widened the definition of a consumer to include online and e-commerce transactions, created the Central Consumer Protection Authority, and — most usefully for an ordinary buyer — enabled online complaint filing through the e-Daakhil portal, so you no longer have to travel to a consumer forum to lodge a complaint.",
+      "A consumer complaint is the remedy when goods are defective or a service is deficient, when you are overcharged, or when you face an unfair or restrictive trade practice. You do not need a lawyer to file — consumers are allowed to represent themselves — though for higher-value or contested matters, professional help materially improves the outcome.",
+      "This guide explains who qualifies as a consumer, which of the three commissions you must approach (it depends on the value of your claim), the strict two-year limitation period, the documents and fees, and the reliefs a commission can grant. It reflects the current pecuniary limits as revised in 2021.",
+    ],
+    sections: [
+      {
+        heading: "1. Are you a 'consumer', and is this a valid complaint?",
+        body: [
+          "Under Section 2(7) of the Consumer Protection Act 2019, a consumer is a person who buys goods or avails services for consideration — but not someone who obtains goods for resale or for a commercial purpose (with a carve-out for goods/services bought to earn a livelihood through self-employment). Importantly, the 2019 Act expressly includes online and teleshopping transactions, so e-commerce purchases are covered.",
+          "A complaint is maintainable where there is a defect in goods, a deficiency in service, an unfair or restrictive trade practice, overcharging, or the sale of hazardous goods. 'Deficiency in service' is read broadly — it covers everything from a bank's negligence to a builder's delay, an airline's mishandling, an insurer's wrongful repudiation, or a hospital's administrative lapse.",
+        ],
+        bullets: [
+          "You bought goods or availed a service for consideration (payment) — including online.",
+          "There is a defect, deficiency, unfair trade practice, overcharging, or a hazardous product.",
+          "You are not buying for resale or purely commercial use (livelihood self-employment is protected).",
+        ],
+      },
+      {
+        heading: "2. Which commission do you approach? (it depends on the value)",
+        body: [
+          "Consumer disputes are heard by a three-tier system, and the tier is decided by the value of the goods/services paid as consideration (the pecuniary jurisdiction revised in December 2021).",
+        ],
+        bullets: [
+          "District Consumer Disputes Redressal Commission — where the consideration paid does not exceed ₹50 lakh.",
+          "State Consumer Disputes Redressal Commission — where it exceeds ₹50 lakh but not ₹2 crore.",
+          "National Consumer Disputes Redressal Commission (NCDRC) — where it exceeds ₹2 crore.",
+          "Territorial jurisdiction: you can file where the opposite party works/carries on business, or — a key 2019 reform — where you, the complainant, reside or personally work.",
+        ],
+      },
+      {
+        heading: "3. Mind the clock: the two-year limitation",
+        body: [
+          "Under Section 69 of the Act, a consumer complaint must be filed within two years from the date on which the cause of action arises. The 'cause of action' is usually the date of the defective delivery, the deficient service, or the final refusal by the opposite party.",
+          "The commission can condone a delay beyond two years if the complainant shows sufficient cause and records its reasons in writing — but condonation is discretionary and never guaranteed. The safe course is to file well within the two-year window.",
+        ],
+      },
+      {
+        heading: "4. Send a notice first (recommended, not always mandatory)",
+        body: [
+          "Although the Act does not in every case require a pre-litigation notice, sending a written demand/legal notice to the opposite party before filing is good practice. It creates a clear record of the deficiency and your demand, often prompts a settlement, and demonstrates to the commission that you gave the other side an opportunity to remedy the problem.",
+          "Keep the notice factual: identify the transaction, describe the defect or deficiency, state what you want (refund, replacement, compensation), and give a reasonable deadline to comply.",
+        ],
+      },
+      {
+        heading: "5. Filing online through e-Daakhil — step by step",
+        body: [
+          "The e-Daakhil portal (edaakhil.nic.in) allows electronic filing before the District, State, and National Commissions. The broad flow is the same at each tier.",
+        ],
+        bullets: [
+          "Register on the e-Daakhil portal with your email and mobile, and verify via OTP.",
+          "Create a new case and select the correct commission based on the claim value and your location.",
+          "Enter the complainant and opposite-party details, the facts of the complaint, and the reliefs sought.",
+          "Upload the complaint (with an affidavit verifying it), an index, and supporting documents (invoice, receipts, warranty, correspondence, the demand notice, and proof of payment).",
+          "Pay the prescribed fee online; the portal generates a case/diary number to track the matter.",
+          "The commission scrutinises the complaint, issues notice to the opposite party, and lists the matter for hearing.",
+        ],
+      },
+      {
+        heading: "6. Fees, documents, and what you can claim",
+        body: [
+          "The court fee for a consumer complaint is modest and slab-based on the value of the claim (lower-value claims attract a small fee; very low-value claims may be exempt). The dominant out-of-pocket cost in contested or higher-value matters is professional representation, which is optional.",
+          "On the merits, a commission can order a range of reliefs under the Act: removal of the defect or deficiency, replacement of the goods, refund of the price paid, compensation for loss or injury (including for negligence), discontinuance of an unfair trade practice, and in appropriate cases punitive damages and the cost of litigation.",
+        ],
+        bullets: [
+          "Core documents: invoice/receipt, proof of payment, warranty/guarantee, all correspondence, the demand notice, and a verifying affidavit.",
+          "Reliefs available: repair, replacement, refund, compensation, discontinuance of unfair practice, and litigation costs.",
+          "Representation: optional — you may appear in person; for complex or high-value matters a consumer lawyer improves the outcome.",
+        ],
+      },
+    ],
+    takeaways: [
+      "The Consumer Protection Act 2019 covers online/e-commerce transactions and allows online filing via the e-Daakhil portal.",
+      "Choose the commission by claim value: District (≤ ₹50 lakh), State (₹50 lakh–₹2 crore), National/NCDRC (> ₹2 crore).",
+      "File within two years of the cause of action (Section 69); delay can be condoned only for sufficient cause.",
+      "You can file where YOU reside or work — a key reform that removes the need to chase the seller's location.",
+      "A lawyer is optional; reliefs include refund, replacement, compensation, and removal of the deficiency.",
+    ],
+    faqs: [
+      {
+        question: "Can I file a consumer complaint online in India?",
+        answer:
+          "Yes. The e-Daakhil portal (edaakhil.nic.in) allows you to file consumer complaints electronically before the District, State, and National Commissions. You register with your email and mobile, enter the complaint details, upload supporting documents and an affidavit, pay the fee online, and receive a case number to track the matter.",
+      },
+      {
+        question: "Which consumer commission should I approach?",
+        answer:
+          "It depends on the value of the goods or services paid for. If the consideration is up to ₹50 lakh, approach the District Commission; above ₹50 lakh and up to ₹2 crore, the State Commission; above ₹2 crore, the National Commission (NCDRC). You can file where you reside or work, not only where the seller is located.",
+      },
+      {
+        question: "What is the time limit to file a consumer complaint?",
+        answer:
+          "Under Section 69 of the Consumer Protection Act 2019, a complaint must be filed within two years from the date the cause of action arises. The commission can condone a longer delay only if you show sufficient cause and it records reasons in writing, so it is safest to file within two years.",
+      },
+      {
+        question: "Do I need a lawyer to file a consumer complaint?",
+        answer:
+          "No. Consumers are permitted to file and argue their own complaints, and the procedure on e-Daakhil is designed to be accessible. For higher-value claims, medical-negligence or insurance disputes, or where the opposite party is well-represented, a consumer lawyer materially improves the outcome. The first consultation on NyaySevak is free.",
+      },
+      {
+        question: "What reliefs can a consumer commission grant?",
+        answer:
+          "A commission can order removal of the defect or deficiency, replacement of the goods, refund of the price, compensation for loss or injury (including for negligence), discontinuance of an unfair trade practice, and the costs of litigation. In appropriate cases it can also award punitive damages.",
+      },
+      {
+        question: "Is a legal notice mandatory before filing a consumer complaint?",
+        answer:
+          "It is not mandatory in every case, but sending a written demand or legal notice first is strongly recommended. It records the deficiency and your demand, often leads to a settlement, and shows the commission you gave the opposite party a chance to fix the problem before approaching it.",
+      },
+    ],
+    relatedPracticeAreaSlugs: ["consumer-protection", "civil-law", "banking-finance"],
+    relatedServiceSlugs: ["lawyer-consultation", "find-hire-lawyers", "legal-aid"],
+    relatedCitySlugs: ["delhi", "mumbai", "bangalore", "chennai"],
+  },
+
+  // ============================================================
+  // 14. GST registration — documents, threshold, process
+  // ============================================================
+  {
+    slug: "gst-registration-india-documents-process-threshold-2026",
+    title: "GST Registration in India: Threshold, Documents & Process",
+    metaTitle:
+      "GST Registration in India 2026 — Threshold, Documents & Process",
+    metaDescription:
+      "GST registration in India: turnover thresholds, who must register compulsorily, documents required, the step-by-step process on the GST portal, timeline, and penalties for not registering.",
+    excerpt:
+      "GST registration is mandatory once your turnover crosses the threshold — and in several cases regardless of turnover. This guide covers the ₹40 lakh / ₹20 lakh limits, compulsory-registration triggers, the exact documents, the GST-portal process, the GSTIN timeline, and the penalty for trading without registration.",
+    category: "Corporate & Commercial",
+    authorSlug: "corporate-commercial-desk",
+    reviewerSlug: "nyaysevak-legal-team",
+    datePublished: "2026-06-09",
+    dateModified: "2026-06-09",
+    readTimeMinutes: 12,
+    primaryKeyword: "GST registration process India",
+    secondaryKeywords: [
+      "documents required for GST registration",
+      "GST registration threshold limit",
+      "GST registration online",
+      "who needs GST registration",
+      "GSTIN how to apply",
+      "composition scheme GST",
+    ],
+    hero: {
+      eyebrow: "Tax & Compliance · Guide",
+      title: "GST Registration in India: Threshold, Documents & Process",
+      subtitle:
+        "When GST registration is mandatory, the documents you need, the step-by-step process on the GST portal, the GSTIN timeline, and the penalty for operating without it.",
+    },
+    intro: [
+      "Goods and Services Tax (GST) registration is the gateway to lawful taxable supply in India. Once registered, a business gets a 15-digit GST Identification Number (GSTIN), can collect GST, claim input tax credit, and issue tax invoices. Operating above the threshold without registration is an offence that attracts penalties — so getting this right early matters.",
+      "Registration is governed by the Central Goods and Services Tax Act 2017 and the corresponding State GST Acts. It is mandatory once your aggregate turnover crosses the prescribed threshold, and — importantly — it is mandatory in several situations regardless of turnover, such as inter-state supply and selling through e-commerce.",
+      "This guide explains the turnover thresholds, the cases where registration is compulsory irrespective of turnover, the documents required, the online process on the GST portal, the realistic timeline, and the consequences of not registering.",
+    ],
+    sections: [
+      {
+        heading: "1. Turnover thresholds — when registration becomes mandatory",
+        body: [
+          "The basic rule is turnover-based, and it differs for goods and services. 'Aggregate turnover' is computed on an all-India PAN basis and includes taxable, exempt, export, and inter-state supplies.",
+        ],
+        bullets: [
+          "Suppliers of goods: registration is mandatory once aggregate turnover exceeds ₹40 lakh in a financial year (₹20 lakh for special-category/north-eastern states).",
+          "Suppliers of services: the threshold is ₹20 lakh (₹10 lakh for special-category states).",
+          "You may also register voluntarily below the threshold — useful where customers want to claim input tax credit on your invoices.",
+        ],
+      },
+      {
+        heading: "2. Compulsory registration regardless of turnover",
+        body: [
+          "Section 24 of the CGST Act lists categories that must register even if turnover is below the threshold. If you fall in any of these, the turnover limits do not help you.",
+        ],
+        bullets: [
+          "Persons making any inter-state taxable supply of goods.",
+          "E-commerce operators, and (in many cases) persons supplying through an e-commerce operator.",
+          "Casual taxable persons and non-resident taxable persons.",
+          "Persons required to pay tax under reverse charge.",
+          "Input service distributors and agents supplying on behalf of others.",
+        ],
+      },
+      {
+        heading: "3. Documents required",
+        body: [
+          "The exact set depends on the constitution of the business (proprietorship, partnership, LLP, company), but the core documents are consistent.",
+        ],
+        bullets: [
+          "PAN of the business and of the proprietor/partners/directors, and Aadhaar of the authorised signatory.",
+          "Photographs of the proprietor/partners/directors and the authorised signatory.",
+          "Proof of constitution: partnership deed, certificate of incorporation, or LLP agreement as applicable.",
+          "Proof of principal place of business: latest electricity bill, municipal/property-tax receipt, rent agreement, and an NOC from the owner where premises are rented.",
+          "Bank account proof: a cancelled cheque, bank statement, or the first page of the passbook.",
+          "Digital Signature Certificate (DSC) for companies and LLPs (others can verify via Aadhaar-based EVC).",
+        ],
+      },
+      {
+        heading: "4. The step-by-step process on the GST portal",
+        body: [
+          "Registration is fully online on the GST portal (gst.gov.in). The application is Form GST REG-01, filed in two parts.",
+        ],
+        bullets: [
+          "Part A: enter PAN, mobile number, and email; verify via OTP to receive a Temporary Reference Number (TRN).",
+          "Part B: using the TRN, fill business details, promoter/partner details, the authorised signatory, the principal (and any additional) place of business, the goods/services, and bank details; upload the documents.",
+          "Complete Aadhaar authentication for the authorised signatory (this speeds up approval and reduces the chance of physical verification).",
+          "Submit with DSC or EVC. The portal generates an Application Reference Number (ARN) to track status.",
+          "On approval, the GSTIN and the registration certificate (Form GST REG-06) are issued and downloadable from the portal.",
+        ],
+      },
+      {
+        heading: "5. Timeline, the composition scheme, and penalties",
+        body: [
+          "Where Aadhaar authentication is completed and no red flags arise, approval typically comes within about three to seven working days. If the department opts for physical verification of premises or raises queries (Form GST REG-03), the timeline extends while you respond (Form GST REG-04).",
+          "Small taxpayers may opt for the composition scheme (broadly, aggregate turnover up to ₹1.5 crore for goods), which allows a lower flat rate of tax with simpler quarterly compliance — but a composition dealer cannot claim input tax credit, cannot make inter-state outward supplies, and cannot collect tax from customers in the normal way.",
+          "Operating above the threshold without registering, or failing to register when compulsorily required, attracts a penalty — broadly 10% of the tax due (subject to a minimum), rising to 100% of the tax due where there is deliberate evasion. Beyond the penalty, you also lose the ability to pass on input tax credit, which damages B2B relationships.",
+        ],
+      },
+    ],
+    takeaways: [
+      "Mandatory turnover thresholds: ₹40 lakh for goods and ₹20 lakh for services (₹20 lakh / ₹10 lakh in special-category states).",
+      "Registration is compulsory regardless of turnover for inter-state suppliers, e-commerce, casual/non-resident taxable persons, and reverse-charge cases (Section 24 CGST Act).",
+      "Core documents: PAN, Aadhaar, photos, constitution proof, place-of-business proof (with NOC if rented), and bank proof.",
+      "Apply online via Form GST REG-01 on gst.gov.in; Aadhaar authentication speeds approval to roughly 3–7 working days.",
+      "Trading above the threshold without registration attracts a penalty (broadly 10% of tax due, 100% for evasion) and blocks input tax credit.",
+    ],
+    faqs: [
+      {
+        question: "What is the turnover limit for GST registration in India?",
+        answer:
+          "For suppliers of goods, registration becomes mandatory once aggregate turnover crosses ₹40 lakh in a financial year (₹20 lakh for special-category states). For suppliers of services, the threshold is ₹20 lakh (₹10 lakh for special-category states). Businesses below these limits can still register voluntarily.",
+      },
+      {
+        question: "Who must register for GST regardless of turnover?",
+        answer:
+          "Under Section 24 of the CGST Act, certain persons must register even below the threshold — including anyone making inter-state taxable supplies of goods, e-commerce operators (and many sellers on e-commerce platforms), casual and non-resident taxable persons, and persons liable to pay tax under reverse charge.",
+      },
+      {
+        question: "What documents are required for GST registration?",
+        answer:
+          "Typically: PAN of the business and proprietor/partners/directors; Aadhaar of the authorised signatory; photographs; proof of constitution (incorporation certificate, partnership deed, or LLP agreement); proof of the principal place of business (electricity bill, rent agreement, and NOC if rented); bank account proof; and a DSC for companies and LLPs.",
+      },
+      {
+        question: "How long does GST registration take?",
+        answer:
+          "With Aadhaar authentication completed and no issues, the GSTIN is usually issued within about three to seven working days. If the department orders physical verification of premises or raises queries, the timeline extends while you respond through the portal.",
+      },
+      {
+        question: "What is the penalty for not registering under GST?",
+        answer:
+          "Operating above the threshold without registration, or failing to register when compulsorily required, attracts a penalty of broadly 10% of the tax due (subject to a minimum), rising to 100% of the tax due where evasion is deliberate. You also cannot pass on input tax credit. A tax lawyer can help regularise the position — your first consultation on NyaySevak is free.",
+      },
+      {
+        question: "What is the GST composition scheme?",
+        answer:
+          "The composition scheme lets small taxpayers (broadly, turnover up to ₹1.5 crore for goods) pay GST at a lower flat rate with simpler quarterly compliance. The trade-off: a composition dealer cannot claim input tax credit, cannot make inter-state outward supplies, and cannot collect tax from customers as a regular registrant does.",
+      },
+    ],
+    relatedPracticeAreaSlugs: ["tax-law", "corporate-business", "banking-finance"],
+    relatedServiceSlugs: ["corporate-legal-advisory", "compliance-management", "lawyer-consultation"],
+    relatedCitySlugs: ["delhi", "mumbai", "bangalore", "ahmedabad"],
+  },
+
+  // ============================================================
+  // 15. Trademark registration — process, cost, classes
+  // ============================================================
+  {
+    slug: "trademark-registration-india-process-cost-classes-2026",
+    title: "Trademark Registration in India: Process, Cost & Classes",
+    metaTitle:
+      "Trademark Registration in India 2026 — Process, Cost & Classes",
+    metaDescription:
+      "How to register a trademark in India under the Trade Marks Act 1999: search, classes, the TM-A application, examination, journal publication, opposition, fees, the ™ vs ® symbols, and renewal.",
+    excerpt:
+      "A registered trademark gives you the exclusive right to your brand and the ® symbol. This guide walks through the Trade Marks Act 1999 process — searching, choosing the right class, filing Form TM-A, examination, journal publication, the four-month opposition window, fees, and ten-year renewal.",
+    category: "Corporate & Commercial",
+    authorSlug: "corporate-commercial-desk",
+    reviewerSlug: "nyaysevak-legal-team",
+    datePublished: "2026-06-09",
+    dateModified: "2026-06-09",
+    readTimeMinutes: 12,
+    primaryKeyword: "trademark registration process India",
+    secondaryKeywords: [
+      "how to register a trademark in India",
+      "trademark registration cost",
+      "trademark classes India",
+      "trademark search",
+      "TM vs R symbol",
+      "trade marks act 1999",
+    ],
+    hero: {
+      eyebrow: "Intellectual Property · Guide",
+      title: "Trademark Registration in India: Process, Cost & Classes",
+      subtitle:
+        "From a clearance search to the registration certificate — the Trade Marks Act 1999 process, the 45 classes, government fees, the ™ vs ® symbols, and renewal.",
+    },
+    intro: [
+      "A trademark is the brand identity that distinguishes your goods or services — a name, logo, tagline, or combination. Registering it under the Trade Marks Act 1999 gives you the exclusive right to use it for the goods/services in your class, the right to use the ® symbol, and a far stronger position to stop copycats than an unregistered mark.",
+      "Registration is administered by the Controller General of Patents, Designs and Trade Marks through the Trade Marks Registry, and most of the process is online. It is methodical rather than difficult, but two things trip up applicants: choosing the wrong class, and filing a mark that is not distinctive or that conflicts with an existing one.",
+      "This guide explains the end-to-end process — the clearance search, choosing the right class, filing Form TM-A, examination, publication in the Trade Marks Journal, the opposition window, fees, the difference between the ™ and ® symbols, and how renewal works.",
+    ],
+    sections: [
+      {
+        heading: "1. Start with a trademark search",
+        body: [
+          "Before filing, run a clearance search on the public trademark database on the IP India portal to check whether an identical or deceptively similar mark already exists in your class. Skipping this is the most common cause of objections and oppositions later.",
+          "Distinctiveness also matters: invented or arbitrary marks (coined words, or common words used in an unrelated context) are the strongest; purely descriptive or generic words are weak and often refused under the Act.",
+        ],
+      },
+      {
+        heading: "2. Choose the right class (the NICE classification)",
+        body: [
+          "Trademarks are registered class-wise under the NICE classification, which has 45 classes in total — Classes 1 to 34 cover goods and Classes 35 to 45 cover services. You register your mark in the class(es) that match your actual business.",
+          "If your business spans multiple categories (for example, a clothing brand that also runs retail stores), you may need a multi-class application or separate applications. Choosing too narrowly leaves gaps a competitor can exploit; choosing too broadly increases cost and the risk of objections in classes you don't really use.",
+        ],
+      },
+      {
+        heading: "3. File the application (Form TM-A)",
+        body: [
+          "The application is filed in Form TM-A, normally online through the IP India e-filing portal. You provide the applicant's details, the representation of the mark, the class(es), the goods/services description, and the date of first use (or 'proposed to be used' if not yet used).",
+          "On filing, you receive an application number, and you can immediately begin using the ™ symbol next to your mark to signal that an application is pending.",
+        ],
+      },
+      {
+        heading: "4. Examination, journal publication, and opposition",
+        body: [
+          "The Registry examines the application and issues an examination report. If there are objections (for example, on distinctiveness or a conflicting mark), you file a written reply and, if needed, attend a show-cause hearing.",
+          "Once the mark clears examination, it is published in the Trade Marks Journal. There is then a four-month window during which any third party can oppose the registration. If no opposition is filed (or any opposition is decided in your favour), the mark proceeds to registration and the registration certificate is issued.",
+        ],
+        bullets: [
+          "Examination → reply to objections → (if needed) hearing.",
+          "Publication in the Trade Marks Journal.",
+          "Four-month opposition window for third parties.",
+          "Registration and certificate if unopposed or opposition fails.",
+        ],
+      },
+      {
+        heading: "5. Fees, the ™ vs ® symbols, and renewal",
+        body: [
+          "Government filing fees are charged per class. For an individual, startup, or small enterprise filing online, the official fee is ₹4,500 per class; for other applicants (such as larger companies), it is ₹9,000 per class. Professional/attorney fees are separate and vary with complexity.",
+          "Use ™ as soon as you have applied (it signals a claim, even before registration); use ® only after the mark is actually registered — using ® on an unregistered mark is itself an offence.",
+          "A registered trademark is valid for ten years from the date of application and can be renewed indefinitely for further ten-year periods by filing Form TM-R and paying the renewal fee. Letting it lapse risks removal from the register, so diarise the renewal well in advance.",
+        ],
+      },
+    ],
+    takeaways: [
+      "Run a clearance search first and choose a distinctive mark — descriptive/generic marks are often refused.",
+      "Register class-wise under the NICE classification (45 classes: 1–34 goods, 35–45 services); use a multi-class application if your business spans categories.",
+      "File Form TM-A online; you can use ™ immediately, but ® only after registration.",
+      "After examination, the mark is published in the Trade Marks Journal with a four-month opposition window.",
+      "Government fee is ₹4,500 per class for individuals/startups/small enterprises and ₹9,000 for others; registration lasts 10 years and is renewable indefinitely.",
+    ],
+    faqs: [
+      {
+        question: "How do I register a trademark in India?",
+        answer:
+          "Run a clearance search on the IP India database, choose the correct class under the NICE classification, file Form TM-A online with the mark and goods/services, respond to any examination objections, and — once the mark is published in the Trade Marks Journal and the four-month opposition window passes without a successful opposition — collect the registration certificate.",
+      },
+      {
+        question: "How much does trademark registration cost in India?",
+        answer:
+          "The government filing fee is per class: ₹4,500 per class for an individual, startup, or small enterprise filing online, and ₹9,000 per class for other applicants such as larger companies. Professional or attorney fees are separate. Filing in more than one class multiplies the government fee.",
+      },
+      {
+        question: "What is the difference between the ™ and ® symbols?",
+        answer:
+          "You may use ™ as soon as you have filed a trademark application — it signals that you claim the mark. The ® symbol may be used only after the mark is actually registered. Using ® on an unregistered mark is an offence under the Trade Marks Act 1999.",
+      },
+      {
+        question: "How long does trademark registration take in India?",
+        answer:
+          "If the application is unopposed and clears examination smoothly, registration commonly takes around 12 to 18 months, much of which is the publication and four-month opposition period. Objections or oppositions extend the timeline while they are resolved.",
+      },
+      {
+        question: "How long is a registered trademark valid?",
+        answer:
+          "A registered trademark is valid for ten years from the date of application and can be renewed indefinitely for successive ten-year periods by filing Form TM-R with the renewal fee. If you miss the renewal, the mark can be removed from the register, so it is important to track the renewal date.",
+      },
+      {
+        question: "What are trademark classes?",
+        answer:
+          "Trademarks are registered class-wise under the NICE classification, which divides goods and services into 45 classes (Classes 1–34 for goods, Classes 35–45 for services). You register in the class(es) that match your business; an IP lawyer can confirm the right class to avoid gaps or wasted fees. Your first consultation on NyaySevak is free.",
+      },
+    ],
+    relatedPracticeAreaSlugs: ["intellectual-property", "corporate-business", "media-entertainment"],
+    relatedServiceSlugs: ["ip-management", "corporate-legal-advisory", "lawyer-consultation"],
+    relatedCitySlugs: ["delhi", "mumbai", "bangalore", "hyderabad"],
+  },
+
+  // ============================================================
+  // 16. Wrongful termination & full and final settlement
+  // ============================================================
+  {
+    slug: "wrongful-termination-full-final-settlement-rights-india-2026",
+    title: "Wrongful Termination & Full-and-Final Settlement: Your Rights",
+    metaTitle:
+      "Wrongful Termination in India 2026 — Rights & Full-and-Final Settlement",
+    metaDescription:
+      "Employee rights on wrongful termination in India — notice and retrenchment compensation under the Industrial Disputes Act, due process, full-and-final settlement components, and how to challenge an unfair dismissal.",
+    excerpt:
+      "Losing a job unfairly is not the end of the road. This guide explains when a termination is lawful, the notice and retrenchment compensation a workman is owed, the components of a full-and-final settlement, and the routes to challenge a wrongful dismissal in India.",
+    category: "Practical Guidance",
+    authorSlug: "nyaysevak-legal-team",
+    reviewerSlug: "nyaysevak-legal-team",
+    datePublished: "2026-06-09",
+    dateModified: "2026-06-09",
+    readTimeMinutes: 12,
+    primaryKeyword: "wrongful termination India employee rights",
+    secondaryKeywords: [
+      "full and final settlement rules India",
+      "retrenchment compensation calculation",
+      "illegal termination remedy",
+      "notice pay termination India",
+      "industrial disputes act termination",
+      "how to challenge wrongful dismissal",
+    ],
+    hero: {
+      eyebrow: "Employment & Labour · Guide",
+      title: "Wrongful Termination & Full-and-Final Settlement: Your Rights",
+      subtitle:
+        "When a termination is lawful, the notice and compensation you are owed, what a full-and-final settlement must include, and how to challenge an unfair dismissal in India.",
+    },
+    intro: [
+      "Termination of employment in India is not at the employer's unfettered will. For a large class of employees, the law requires due process, notice, and compensation — and a termination that ignores these can be challenged as illegal, with reinstatement and back wages as possible outcomes.",
+      "The protections depend on who you are. For a 'workman' (broadly, employees doing manual, skilled, technical, clerical, or operational work, as distinct from those in genuine managerial or supervisory roles above a wage threshold), the Industrial Disputes Act 1947 provides strong safeguards. For others, the applicable state Shops and Establishments Act and the employment contract govern. The Industrial Relations Code 2020 is set to consolidate these industrial-relations laws once it is brought into force.",
+      "This guide explains when a termination is lawful, the notice and retrenchment compensation a workman is owed, the components of a full-and-final (F&F) settlement, and the routes available to challenge a wrongful termination.",
+    ],
+    sections: [
+      {
+        heading: "1. When is a termination lawful?",
+        body: [
+          "A lawful termination generally falls into one of a few buckets: termination for proven misconduct (after a fair domestic enquiry), retrenchment (termination for reasons such as redundancy, not as punishment), termination on completion of a contract or probation per its terms, or resignation. The common thread is that the employer must follow the process the law and the contract require.",
+          "A termination for misconduct without a fair enquiry, or a retrenchment that ignores the statutory notice-and-compensation requirements, is vulnerable to challenge. 'Hire and fire at will' is not the Indian legal position for protected employees.",
+        ],
+      },
+      {
+        heading: "2. Notice and retrenchment compensation (the Industrial Disputes Act)",
+        body: [
+          "Where a workman who has been in continuous service for at least one year is retrenched, Section 25F of the Industrial Disputes Act 1947 requires the employer to give one month's written notice (or wages in lieu of notice) and to pay retrenchment compensation equal to fifteen days' average pay for every completed year of continuous service, along with notice to the appropriate government.",
+          "Larger establishments (broadly those employing 100 or more workmen) face a higher bar under Section 25N — they generally need prior government permission before retrenchment. Compliance with 'last come, first go' (Section 25G) is also expected unless there is a valid reason to depart from it.",
+        ],
+        bullets: [
+          "One month's notice or pay in lieu (Section 25F).",
+          "Retrenchment compensation = 15 days' average pay × completed years of continuous service.",
+          "Notice to the appropriate government; for 100+ workman establishments, prior permission (Section 25N).",
+          "'Last come, first go' principle (Section 25G) unless validly departed from.",
+        ],
+      },
+      {
+        heading: "3. Due process for misconduct dismissals",
+        body: [
+          "If you are dismissed for alleged misconduct, the employer must ordinarily follow the principles of natural justice: a written charge-sheet, an opportunity to respond, a fair domestic enquiry where you can defend yourself and cross-examine, and a reasoned finding before any punishment.",
+          "A dismissal imposed without a fair enquiry, or one that is disproportionate to the misconduct, can be set aside by a Labour Court or Industrial Tribunal, which has the power to order reinstatement, back wages, or a lesser punishment.",
+        ],
+      },
+      {
+        heading: "4. Full-and-final settlement: what you are owed",
+        body: [
+          "On exit — whether by resignation, retrenchment, or dismissal — you are entitled to a full-and-final settlement of all dues. The settlement should be paid within a reasonable time of the last working day, and the employer should provide a breakdown.",
+        ],
+        bullets: [
+          "Unpaid salary up to the last working day, and any pending reimbursements.",
+          "Pay in lieu of notice where applicable (depending on who terminated and the contract).",
+          "Encashment of accrued, unused paid leave as per policy/law.",
+          "Gratuity, if you have completed five years of continuous service (Payment of Gratuity Act 1972).",
+          "Any statutory or contractual bonus, and provident fund balance/transfer.",
+          "Retrenchment compensation where the exit is a retrenchment under the Industrial Disputes Act.",
+        ],
+      },
+      {
+        heading: "5. How to challenge a wrongful termination",
+        body: [
+          "If you believe your termination was illegal, a workman can raise an industrial dispute. The matter typically goes first to conciliation before the labour authorities; if conciliation fails, it can be referred to (or, under current procedure, taken to) the Labour Court or Industrial Tribunal, which can order reinstatement with continuity of service and back wages.",
+          "Employees outside the 'workman' category (genuine managerial/supervisory roles) usually pursue remedies through a civil suit for breach of the employment contract — claiming dues and damages rather than statutory reinstatement. Act promptly: delay weakens the claim, and limitation periods apply. Preserve your appointment letter, salary slips, the termination letter, and all correspondence.",
+        ],
+      },
+    ],
+    takeaways: [
+      "Indian law does not permit 'hire and fire at will' for protected employees — termination must follow due process and, for retrenchment, notice + compensation.",
+      "A retrenched workman with 1+ year of service is owed one month's notice (or pay in lieu) plus 15 days' average pay per completed year (Section 25F, Industrial Disputes Act 1947).",
+      "Misconduct dismissals require a fair domestic enquiry; an unfair or disproportionate dismissal can be set aside with reinstatement and back wages.",
+      "A full-and-final settlement should include salary dues, leave encashment, gratuity (after 5 years), bonus, PF, and any retrenchment compensation.",
+      "A workman can challenge an illegal termination via an industrial dispute; managerial employees usually sue for breach of contract. Act promptly and keep your documents.",
+    ],
+    faqs: [
+      {
+        question: "Can an employer terminate an employee without notice in India?",
+        answer:
+          "Generally no, for protected employees. A retrenchment of a workman with at least one year of continuous service requires one month's written notice or pay in lieu, plus retrenchment compensation, under Section 25F of the Industrial Disputes Act 1947. A misconduct dismissal requires a fair enquiry. The contract and the applicable Shops and Establishments Act govern other cases.",
+      },
+      {
+        question: "How is retrenchment compensation calculated?",
+        answer:
+          "Under Section 25F of the Industrial Disputes Act 1947, retrenchment compensation is fifteen days' average pay for every completed year of continuous service, in addition to one month's notice or pay in lieu of notice. Establishments with 100 or more workmen generally also need prior government permission to retrench.",
+      },
+      {
+        question: "What should a full-and-final settlement include?",
+        answer:
+          "It should include unpaid salary up to the last working day, any pay in lieu of notice, encashment of accrued unused leave, gratuity (if you completed five years of service), any statutory or contractual bonus, your provident fund balance, pending reimbursements, and retrenchment compensation where applicable. The employer should provide a clear breakdown.",
+      },
+      {
+        question: "How do I challenge a wrongful termination in India?",
+        answer:
+          "A workman can raise an industrial dispute, which goes through conciliation and, if unresolved, to the Labour Court or Industrial Tribunal — which can order reinstatement with back wages. Employees in genuine managerial/supervisory roles usually file a civil suit for breach of contract claiming dues and damages. Act promptly and preserve all employment documents.",
+      },
+      {
+        question: "Is gratuity part of the full-and-final settlement?",
+        answer:
+          "Yes, if you have completed at least five years of continuous service (the five-year condition is waived on death or disablement). Gratuity is payable under the Payment of Gratuity Act 1972 and forms part of your exit dues, alongside salary, leave encashment, and other components.",
+      },
+      {
+        question: "What if my employer refuses to pay my settlement?",
+        answer:
+          "Unpaid dues can be recovered — gratuity through the Controlling Authority under the Payment of Gratuity Act, wages through the authorities under the wage law, and the balance through an industrial dispute or a civil claim depending on your category. A labour-law advocate can identify the fastest route for your facts; your first consultation on NyaySevak is free.",
+      },
+    ],
+    relatedPracticeAreaSlugs: ["labour-employment", "civil-law", "corporate-business"],
+    relatedServiceSlugs: ["lawyer-consultation", "find-hire-lawyers", "legal-aid"],
+    relatedCitySlugs: ["delhi", "mumbai", "bangalore", "pune"],
+  },
+
+  // ============================================================
+  // 17. How to register a will in India
+  // ============================================================
+  {
+    slug: "how-to-register-a-will-in-india-procedure-2026",
+    title: "How to Register a Will in India: Procedure & Validity",
+    metaTitle:
+      "How to Register a Will in India 2026 — Procedure, Validity & Cost",
+    metaDescription:
+      "How to make and register a will in India: the Section 63 requirements, two-witness rule, whether registration is mandatory, the Sub-Registrar procedure, cost, and when probate is needed.",
+    excerpt:
+      "A valid will does not legally have to be registered — but registration adds powerful evidentiary weight. This guide covers the Section 63 requirements for a valid will, the two-witness rule, the Sub-Registrar registration procedure, cost, and when probate is required.",
+    category: "Practical Guidance",
+    authorSlug: "property-real-estate-desk",
+    reviewerSlug: "nyaysevak-legal-team",
+    datePublished: "2026-06-10",
+    dateModified: "2026-06-10",
+    readTimeMinutes: 11,
+    primaryKeyword: "how to register a will in India",
+    secondaryKeywords: [
+      "is will registration mandatory in India",
+      "will registration procedure",
+      "requirements for a valid will India",
+      "section 63 indian succession act",
+      "will registration cost",
+      "probate of will India",
+    ],
+    hero: {
+      eyebrow: "Estate Planning · Guide",
+      title: "How to Register a Will in India: Procedure & Validity",
+      subtitle:
+        "What makes a will valid under Section 63 of the Indian Succession Act, whether registration is mandatory, the Sub-Registrar procedure, cost, and when probate is required.",
+    },
+    intro: [
+      "A will is the simplest, most powerful estate-planning document there is — it lets you decide who inherits what, appoint an executor, and avoid the intestate-succession default that often splits assets in ways the family did not intend. Yet most Indians die without one, and many who make a will are unsure whether it must be registered.",
+      "Here is the key point up front: under Indian law a will does not have to be registered to be valid. A properly executed unregistered will is fully legal. But registration adds significant evidentiary weight — a registered will is far harder to challenge as a forgery, because it has been signed before a public official and kept in official records.",
+      "This guide explains what makes a will valid under Section 63 of the Indian Succession Act 1925, the two-witness requirement, the step-by-step registration procedure before the Sub-Registrar, the cost, and the separate question of when probate is required to act on the will.",
+    ],
+    sections: [
+      {
+        heading: "1. What makes a will valid (Section 63)",
+        body: [
+          "The validity of a will turns on execution, not registration. Section 63 of the Indian Succession Act 1925 sets out the requirements for a valid unprivileged will.",
+        ],
+        bullets: [
+          "The testator (the person making the will) must be of sound mind and not a minor.",
+          "The will must be signed (or marked) by the testator, or by someone in the testator's presence and by their direction.",
+          "The signature must be placed so as to give effect to the will (typically at the end).",
+          "The will must be attested by two or more witnesses, each of whom has seen the testator sign and has signed in the testator's presence.",
+          "A beneficiary should not be a witness — it can jeopardise the gift to that witness (independent witnesses are strongly preferred).",
+        ],
+      },
+      {
+        heading: "2. Is registration mandatory?",
+        body: [
+          "No. Registration of a will is optional under the Registration Act 1908 (Section 18 lists wills among documents whose registration is not compulsory). An unregistered will that satisfies Section 63 is perfectly valid and enforceable.",
+          "So why register? Because a registered will carries strong evidentiary value. It is executed before the Sub-Registrar, who verifies the testator's identity, which makes later allegations of forgery or coercion much harder to sustain. The registered copy is preserved in government records and cannot be tampered with, lost, or suppressed by an unhappy heir.",
+        ],
+      },
+      {
+        heading: "3. The registration procedure",
+        body: [
+          "Registration is done at the office of the Sub-Registrar. The testator should attend in person.",
+        ],
+        bullets: [
+          "Prepare the will on plain paper (no stamp duty is payable on a will) and have it attested by two witnesses.",
+          "The testator visits the Sub-Registrar's office with the will, identity proof, passport-size photographs, and the two witnesses.",
+          "The Sub-Registrar verifies the testator's identity and records the registration; the witnesses confirm the attestation.",
+          "The registered will is entered in the records and a registered copy is provided; the original can be deposited in a sealed cover under Section 42 of the Registration Act if desired.",
+        ],
+      },
+      {
+        heading: "4. Cost, updating, and safe custody",
+        body: [
+          "The cost of registering a will is modest — a nominal registration fee (a few hundred rupees in most states); no stamp duty applies to a will. The substantive cost, if any, is the lawyer's fee for drafting a clean, unambiguous will.",
+          "A will can be changed any number of times during the testator's life, either by a fresh will (which should expressly revoke earlier wills) or by a codicil (a supplement executed with the same Section 63 formalities). The latest validly executed will prevails. Keep the will somewhere safe and tell the executor where it is — a perfectly valid will that no one can find achieves nothing.",
+        ],
+      },
+      {
+        heading: "5. When is probate required?",
+        body: [
+          "Probate is a court's certification of the will and the executor's authority to administer it. Probate is not required for every will. It is mandatory where the will was made within the territorial limits of the former presidency towns of Kolkata, Chennai, and Mumbai, or relates to immovable property situated there; elsewhere it is often not strictly required, though banks and registrars may still ask for it or for letters of administration in disputed cases.",
+          "Where there is no will at all, the estate devolves by intestate succession, and heirs typically need a succession certificate (for debts and securities) or letters of administration (for broader estate administration). A clear, registered will avoids most of this friction — which is precisely its value.",
+        ],
+      },
+    ],
+    takeaways: [
+      "A will is valid if it meets Section 63 of the Indian Succession Act 1925: sound-mind testator, signed, and attested by two witnesses — registration is NOT required for validity.",
+      "Registration is optional (Registration Act 1908) but adds strong evidentiary value and protects against forgery and suppression.",
+      "No stamp duty applies to a will; the registration fee is nominal.",
+      "Use independent witnesses (not beneficiaries); the latest validly executed will or codicil prevails.",
+      "Probate is required mainly for wills made in/relating to Kolkata, Chennai, and Mumbai; a registered will avoids most intestate-succession friction.",
+    ],
+    faqs: [
+      {
+        question: "Is it mandatory to register a will in India?",
+        answer:
+          "No. A will is valid without registration as long as it meets the Section 63 requirements (sound-mind testator, signature, and two attesting witnesses). Registration is optional under the Registration Act 1908, but it is strongly advisable because a registered will is much harder to challenge as a forgery and is preserved in government records.",
+      },
+      {
+        question: "What are the requirements for a valid will?",
+        answer:
+          "Under Section 63 of the Indian Succession Act 1925, the testator must be of sound mind and not a minor, must sign the will (or mark it, or have someone sign in their presence by their direction), and the will must be attested by two or more witnesses who saw the testator sign and signed in the testator's presence. Beneficiaries should not act as witnesses.",
+      },
+      {
+        question: "How much does it cost to register a will?",
+        answer:
+          "The registration fee is nominal — typically a few hundred rupees, varying by state — and no stamp duty is payable on a will. The main cost, if any, is a lawyer's fee for drafting a clear, unambiguous will, which is money well spent to avoid disputes later.",
+      },
+      {
+        question: "Can I change my will after registering it?",
+        answer:
+          "Yes. You can revoke or change your will any time while you are alive, either by making a fresh will that expressly revokes earlier ones or by executing a codicil with the same formalities. The latest validly executed will or codicil prevails. If the earlier will was registered, registering the new one too keeps the record consistent.",
+      },
+      {
+        question: "Is probate of a will always required?",
+        answer:
+          "No. Probate is mandatory mainly where the will was made within, or relates to immovable property in, the former presidency towns of Kolkata, Chennai, and Mumbai. Elsewhere it is often not strictly required, though some banks or registrars may insist on probate or letters of administration, especially in disputed cases. A lawyer can confirm whether probate applies to you — your first consultation on NyaySevak is free.",
+      },
+      {
+        question: "What happens if I die without a will?",
+        answer:
+          "Your estate devolves by intestate succession under the personal law that applies to you, which may not match your wishes. Heirs typically need a succession certificate to collect debts and securities, or letters of administration for broader estate administration — a slower, costlier court process that a clear registered will largely avoids.",
+      },
+    ],
+    relatedPracticeAreaSlugs: ["documentation", "property-real-estate", "family-matrimonial"],
+    relatedServiceSlugs: ["document-services", "lawyer-consultation", "find-hire-lawyers"],
+    relatedCitySlugs: ["delhi", "mumbai", "chennai", "kolkata"],
+  },
+
+  // ============================================================
+  // 18. Domestic Violence Act — reliefs & how to file
+  // ============================================================
+  {
+    slug: "domestic-violence-act-india-reliefs-how-to-file-2026",
+    title: "Domestic Violence Act: Reliefs and How to File a Complaint",
+    metaTitle:
+      "Domestic Violence Act India 2026 — Reliefs & How to File a Complaint",
+    metaDescription:
+      "The Protection of Women from Domestic Violence Act 2005 explained: who can file, what counts as domestic violence, the protection, residence, monetary, custody and compensation reliefs, and the filing procedure.",
+    excerpt:
+      "The Protection of Women from Domestic Violence Act 2005 is a civil law that gives fast, practical reliefs — protection orders, the right to stay in the shared household, maintenance, custody, and compensation. This guide explains who can file, what qualifies as domestic violence, and the step-by-step procedure.",
+    category: "Family & Matrimonial",
+    authorSlug: "matrimonial-family-desk",
+    reviewerSlug: "nyaysevak-legal-team",
+    datePublished: "2026-06-10",
+    dateModified: "2026-06-10",
+    readTimeMinutes: 12,
+    primaryKeyword: "domestic violence act India how to file",
+    secondaryKeywords: [
+      "protection of women from domestic violence act 2005",
+      "domestic violence complaint procedure",
+      "reliefs under domestic violence act",
+      "protection order residence order",
+      "who can file domestic violence case",
+      "DIR domestic incident report",
+    ],
+    hero: {
+      eyebrow: "Family Law · Guide",
+      title: "Domestic Violence Act: Reliefs and How to File a Complaint",
+      subtitle:
+        "A civil remedy under the Protection of Women from Domestic Violence Act 2005 — who can file, what counts as domestic violence, the five categories of relief, and the step-by-step procedure.",
+    },
+    intro: [
+      "The Protection of Women from Domestic Violence Act 2005 (PWDVA) is one of the most practical protective laws in India. Unlike a criminal prosecution, it is a civil remedy designed to give an aggrieved woman fast, concrete relief — a protection order to stop further abuse, the right to remain in the shared household, maintenance, custody of children, and compensation — without first having to secure a criminal conviction.",
+      "Crucially, the Act recognises that domestic violence is not only physical. It covers physical, sexual, verbal, emotional, and economic abuse, and it protects women in a range of domestic relationships — wives, live-in partners, mothers, sisters, and other female relatives sharing a household.",
+      "This guide explains who can file, what qualifies as domestic violence, the five categories of relief the Magistrate can grant, and the step-by-step procedure including the role of the Protection Officer and the Domestic Incident Report.",
+    ],
+    sections: [
+      {
+        heading: "1. Who can file, and against whom",
+        body: [
+          "The Act protects an 'aggrieved person' — a woman who is, or has been, in a domestic relationship with the respondent and alleges domestic violence. This includes a wife, a woman in a relationship 'in the nature of marriage' (a live-in relationship), mothers, sisters, daughters, and other women sharing a household.",
+          "The complaint is made against the 'respondent' — an adult who is, or has been, in a domestic relationship with the aggrieved person. Following later judicial interpretation, a complaint can lie against male and female members of the household (for example, in-laws), not only the husband.",
+        ],
+      },
+      {
+        heading: "2. What counts as domestic violence",
+        body: [
+          "Section 3 of the Act defines domestic violence broadly. It is not limited to physical assault.",
+        ],
+        bullets: [
+          "Physical abuse — assault, criminal force, or any act causing bodily pain or harm.",
+          "Sexual abuse — any sexually abusive, humiliating, or degrading conduct.",
+          "Verbal and emotional abuse — insults, ridicule, humiliation, threats, and similar conduct.",
+          "Economic abuse — depriving the woman of financial resources she is entitled to, disposing of her assets, or restricting access to shared resources.",
+        ],
+      },
+      {
+        heading: "3. The five categories of relief",
+        body: [
+          "The Magistrate can grant a combination of reliefs tailored to the situation. This breadth is the Act's great strength.",
+        ],
+        bullets: [
+          "Protection order (Section 18) — restrains the respondent from committing or aiding any act of domestic violence, contacting, or entering the aggrieved person's workplace.",
+          "Residence order (Section 19) — secures the aggrieved person's right to live in the shared household; she cannot be evicted, and the respondent may be directed to provide alternative accommodation.",
+          "Monetary relief (Section 20) — maintenance and compensation for expenses and losses, including medical costs and loss of earnings.",
+          "Custody order (Section 21) — temporary custody of children to the aggrieved person, with visitation as appropriate.",
+          "Compensation order (Section 22) — compensation for injuries, including mental torture and emotional distress.",
+        ],
+      },
+      {
+        heading: "4. How to file — step by step",
+        body: [
+          "The Act provides an accessible procedure, and a woman can approach the system directly or through a Protection Officer.",
+        ],
+        bullets: [
+          "Approach a Protection Officer, a registered service provider, the police, or the Magistrate directly.",
+          "A Domestic Incident Report (DIR) is prepared recording the incidents of domestic violence.",
+          "An application under Section 12 is filed before the Judicial Magistrate (First Class) / Metropolitan Magistrate having jurisdiction.",
+          "The Magistrate can pass interim and ex-parte orders quickly where there is urgency (Section 23).",
+          "The Act requires the application to be disposed of, as far as possible, within a defined timeframe, and hearings are meant to be expeditious.",
+        ],
+      },
+      {
+        heading: "5. How it fits with other remedies",
+        body: [
+          "The PWDVA is civil and protective, and it can run alongside other remedies. A woman may simultaneously pursue maintenance under Section 144 BNSS (formerly Section 125 CrPC), a criminal complaint for cruelty under Section 85 of the Bharatiya Nyaya Sanhita 2023 (formerly Section 498A IPC) where applicable, and matrimonial proceedings such as divorce or judicial separation.",
+          "Breach of a protection order is itself an offence under Section 31 of the Act, punishable with imprisonment and/or fine — which gives the civil protection order real teeth.",
+        ],
+      },
+    ],
+    takeaways: [
+      "The PWDVA 2005 is a civil remedy giving fast, concrete relief — it does not require a criminal conviction first.",
+      "Domestic violence includes physical, sexual, verbal/emotional, and economic abuse (Section 3).",
+      "Five reliefs: protection (S.18), residence (S.19), monetary/maintenance (S.20), custody (S.21), and compensation (S.22).",
+      "File via a Protection Officer, police, or directly before the Magistrate; a Domestic Incident Report records the abuse, and ex-parte interim orders are available for urgency (S.23).",
+      "It runs alongside maintenance (S.144 BNSS), cruelty proceedings (S.85 BNS), and divorce; breach of a protection order is itself an offence (S.31).",
+    ],
+    faqs: [
+      {
+        question: "Who can file a case under the Domestic Violence Act?",
+        answer:
+          "An 'aggrieved person' — a woman who is or has been in a domestic relationship with the respondent and alleges domestic violence. This includes wives, women in live-in relationships, mothers, sisters, and daughters sharing a household. The complaint can be made against adult members of the household, including in-laws.",
+      },
+      {
+        question: "What types of abuse are covered?",
+        answer:
+          "Section 3 of the Act covers physical abuse, sexual abuse, verbal and emotional abuse (insults, threats, humiliation), and economic abuse (depriving a woman of financial resources or her assets). It is deliberately broad and is not limited to physical violence.",
+      },
+      {
+        question: "What reliefs can the court grant?",
+        answer:
+          "The Magistrate can grant a protection order (Section 18), a residence order securing the right to live in the shared household (Section 19), monetary relief and maintenance (Section 20), custody of children (Section 21), and compensation including for mental distress (Section 22). These can be combined and interim orders can be passed quickly.",
+      },
+      {
+        question: "How do I file a domestic violence complaint?",
+        answer:
+          "You can approach a Protection Officer, a service provider, the police, or the Magistrate directly. A Domestic Incident Report is prepared, and an application under Section 12 is filed before the Magistrate, who can pass interim and ex-parte orders where there is urgency. A family lawyer can prepare a strong application — your first consultation on NyaySevak is free.",
+      },
+      {
+        question: "Is the Domestic Violence Act a criminal or civil law?",
+        answer:
+          "It is primarily a civil law that provides protective and monetary reliefs without requiring a criminal conviction. However, breach of a protection order is a criminal offence under Section 31, and the Act can run alongside criminal proceedings for cruelty (Section 85 BNS) and maintenance proceedings.",
+      },
+      {
+        question: "Can I claim maintenance under the Domestic Violence Act?",
+        answer:
+          "Yes. Section 20 allows the Magistrate to order monetary relief, including maintenance for the aggrieved person and her children, compensation for expenses and losses, and medical costs. This can be claimed in addition to, or instead of, maintenance under Section 144 BNSS (formerly Section 125 CrPC).",
+      },
+    ],
+    relatedPracticeAreaSlugs: ["family-matrimonial", "criminal-law", "civil-law"],
+    relatedServiceSlugs: ["lawyer-consultation", "find-hire-lawyers", "legal-aid"],
+    relatedCitySlugs: ["delhi", "mumbai", "bangalore", "pune"],
+  },
+
+  // ============================================================
+  // 19. How to quash an FIR (Section 528 BNSS)
+  // ============================================================
+  {
+    slug: "how-to-quash-fir-india-section-528-bnss-2026",
+    title: "How to Quash an FIR in India (Section 528 BNSS)",
+    metaTitle:
+      "How to Quash an FIR in India 2026 — Section 528 BNSS Procedure & Grounds",
+    metaDescription:
+      "How to quash an FIR in India under Section 528 BNSS (former Section 482 CrPC): the grounds from Bhajan Lal, the High Court procedure, quashing on settlement, and realistic timelines.",
+    excerpt:
+      "An FIR that discloses no offence, is malicious, or has been settled between the parties can be quashed by the High Court under its inherent powers. This guide explains Section 528 BNSS, the Bhajan Lal grounds, the procedure, quashing on the basis of a compromise, and what to expect.",
+    category: "Criminal Defence",
+    authorSlug: "criminal-law-desk",
+    reviewerSlug: "nyaysevak-legal-team",
+    datePublished: "2026-06-10",
+    dateModified: "2026-06-10",
+    readTimeMinutes: 11,
+    primaryKeyword: "how to quash FIR India",
+    secondaryKeywords: [
+      "section 528 bnss quashing",
+      "quashing of fir grounds",
+      "bhajan lal guidelines",
+      "fir quashing on settlement",
+      "high court quash fir procedure",
+      "482 crpc quashing",
+    ],
+    hero: {
+      eyebrow: "Criminal Law · Procedural Guide",
+      title: "How to Quash an FIR in India (Section 528 BNSS)",
+      subtitle:
+        "The High Court's inherent power to terminate an FIR or criminal proceeding — the Bhajan Lal grounds, the procedure, quashing on settlement, and realistic timelines.",
+    },
+    intro: [
+      "Not every FIR should go to trial. Some are filed where the allegations, even if taken at face value, disclose no offence; some are malicious or motivated by a private dispute dressed up as a crime; and some are filed before the parties later settle. For these situations, the law provides a powerful remedy: quashing of the FIR by the High Court.",
+      "The power comes from Section 528 of the Bharatiya Nagarik Suraksha Sanhita 2023 (BNSS), which preserves the inherent powers of the High Court and replaced Section 482 of the old Code of Criminal Procedure. It allows the High Court to make such orders as are necessary to prevent abuse of the process of any court or otherwise to secure the ends of justice — including quashing an FIR or criminal proceeding.",
+      "This guide explains the grounds on which an FIR can be quashed (anchored in the Supreme Court's classic Bhajan Lal guidelines), the High Court procedure, quashing on the basis of a compromise, and what timeline and outcome to realistically expect.",
+    ],
+    sections: [
+      {
+        heading: "1. The source of the power — Section 528 BNSS",
+        body: [
+          "Section 528 BNSS preserves the High Court's inherent jurisdiction. It is not a routine appeal or revision; it is an extraordinary power exercised sparingly and in the rarest of cases where allowing the proceeding to continue would be an abuse of process or a failure of justice.",
+          "Because it is discretionary and exceptional, the High Court will not conduct a mini-trial or weigh evidence at the quashing stage. It examines whether, accepting the allegations in the FIR at face value, any offence is made out and whether continuing the case would serve any legitimate purpose.",
+        ],
+      },
+      {
+        heading: "2. The grounds — the Bhajan Lal categories",
+        body: [
+          "The Supreme Court in State of Haryana v. Bhajan Lal, 1992 Supp (1) SCC 335, laid down the now-classic categories where quashing is appropriate. These remain the touchstone under Section 528 BNSS.",
+        ],
+        bullets: [
+          "The allegations, even taken at face value, do not make out any offence or constitute the offence alleged.",
+          "The FIR discloses a non-cognizable offence, where investigation without a Magistrate's order is impermissible.",
+          "The allegations are absurd or inherently improbable, so that no prudent person could conclude there is a sufficient ground to proceed.",
+          "There is an express legal bar to the proceeding, or the complaint is manifestly attended with mala fides / is instituted with an ulterior motive (for example, to wreak vengeance in a private dispute).",
+        ],
+      },
+      {
+        heading: "3. Quashing on the basis of a settlement",
+        body: [
+          "A large share of quashing petitions arise where the parties have settled — common in matrimonial disputes, cheque-bounce matters, and other essentially private disputes. The Supreme Court in Gian Singh v. State of Punjab, (2012) 10 SCC 303, and later decisions held that the High Court can quash even non-compoundable offences if they are predominantly private/civil in nature and the parties have genuinely compromised.",
+          "However, the court will not quash serious offences that have a grave societal impact — such as murder, rape, dacoity, or offences under special statutes — merely because the parties have settled. The dividing line is whether the offence is essentially private or genuinely public in character.",
+        ],
+      },
+      {
+        heading: "4. The procedure",
+        body: [
+          "A quashing petition is filed before the High Court of the state where the FIR is registered.",
+        ],
+        bullets: [
+          "File a petition under Section 528 BNSS before the High Court, impleading the State and the complainant.",
+          "Annex the FIR, the relevant documents, and (where applicable) the settlement/compromise deed and affidavits of the parties.",
+          "The High Court issues notice to the State (through the Public Prosecutor) and the complainant; in settlement cases, the parties' presence or affidavits may be required to confirm the compromise is voluntary.",
+          "The court hears arguments and, if satisfied, passes an order quashing the FIR/proceeding; it may decline where any Bhajan Lal ground is absent.",
+        ],
+      },
+      {
+        heading: "5. Realistic expectations and timeline",
+        body: [
+          "Quashing is not automatic. The High Court applies a high threshold, and in non-settlement cases success depends on the FIR genuinely failing the Bhajan Lal test. In settlement cases involving private disputes, the prospects are considerably better, provided the compromise is genuine and properly placed before the court.",
+          "Timelines vary by High Court and docket. A straightforward settlement-based quashing can be decided in a few hearings over a few months; a contested quashing on the merits can take longer. Interim protection from arrest can sometimes be sought while the petition is pending.",
+        ],
+      },
+    ],
+    takeaways: [
+      "Quashing is the High Court's inherent power under Section 528 BNSS (former Section 482 CrPC) to terminate an abusive or meritless FIR.",
+      "The grounds are the Bhajan Lal categories — no offence made out, absurd/improbable allegations, legal bar, or mala fide/motivated complaints.",
+      "The court does not weigh evidence at this stage; it takes the FIR at face value and asks whether any offence is disclosed.",
+      "FIRs in predominantly private disputes can be quashed on a genuine settlement (Gian Singh) — but not serious public offences like murder or rape.",
+      "File before the High Court of the state where the FIR is registered, impleading the State and the complainant.",
+    ],
+    faqs: [
+      {
+        question: "Can an FIR be quashed in India?",
+        answer:
+          "Yes. The High Court can quash an FIR under its inherent powers in Section 528 BNSS (formerly Section 482 CrPC) where continuing the case would be an abuse of process or fail to serve justice — for example, where the allegations disclose no offence, are absurd, are barred by law, or are malicious.",
+      },
+      {
+        question: "On what grounds can an FIR be quashed?",
+        answer:
+          "The grounds follow the Supreme Court's Bhajan Lal guidelines: the allegations do not make out any offence even if accepted as true; they are inherently absurd or improbable; there is a legal bar to the proceeding; or the FIR is manifestly mala fide and filed with an ulterior motive. The court takes the FIR at face value without weighing evidence.",
+      },
+      {
+        question: "Can an FIR be quashed after a settlement between the parties?",
+        answer:
+          "Yes, in many cases. Following Gian Singh v. State of Punjab, the High Court can quash even some non-compoundable offences where the dispute is predominantly private or civil in nature and the parties have genuinely settled. But serious offences with a grave societal impact — such as murder or rape — are not quashed merely because of a compromise.",
+      },
+      {
+        question: "Which court do I approach to quash an FIR?",
+        answer:
+          "You file a quashing petition before the High Court of the state in which the FIR is registered, under Section 528 BNSS, impleading the State and the complainant. A criminal lawyer who practises before that High Court will draft the petition and argue the Bhajan Lal grounds.",
+      },
+      {
+        question: "How long does it take to quash an FIR?",
+        answer:
+          "It depends on the High Court and whether the matter is contested. A settlement-based quashing in a private dispute can often be decided in a few hearings over a few months; a contested quashing on the merits takes longer. Interim protection from arrest can sometimes be sought while the petition is pending.",
+      },
+      {
+        question: "Is quashing the same as bail or acquittal?",
+        answer:
+          "No. Bail secures release while a case continues; acquittal comes at the end of a trial. Quashing terminates the FIR or proceeding itself at an early stage, so the case does not go to trial at all. It is the strongest early remedy where the FIR should never have proceeded. Your first consultation on NyaySevak is free.",
+      },
+    ],
+    relatedPracticeAreaSlugs: ["criminal-law", "cbi-cases", "family-matrimonial"],
+    relatedServiceSlugs: ["lawyer-consultation", "find-hire-lawyers", "legal-aid"],
+    relatedCitySlugs: ["delhi", "mumbai", "bangalore", "hyderabad"],
+  },
+
+  // ============================================================
+  // 20. Rent agreement — 11-month rule, registration & key clauses
+  // ============================================================
+  {
+    slug: "rent-agreement-india-11-month-rule-registration-2026",
+    title: "Rent Agreement in India: The 11-Month Rule, Registration & Key Clauses",
+    metaTitle:
+      "Rent Agreement India 2026 — 11-Month Rule, Registration & Format",
+    metaDescription:
+      "Why rent agreements in India are for 11 months, when registration is mandatory, stamp duty, leave-and-license vs lease, and the key clauses every rent agreement must contain.",
+    excerpt:
+      "Almost every Indian rent agreement is for 11 months — and there is a precise legal reason. This guide explains the 11-month rule, when registration becomes compulsory, stamp duty, the difference between a lease and a leave-and-license, and the clauses your agreement must include.",
+    category: "Property & Real Estate",
+    authorSlug: "property-real-estate-desk",
+    reviewerSlug: "nyaysevak-legal-team",
+    datePublished: "2026-06-10",
+    dateModified: "2026-06-10",
+    readTimeMinutes: 11,
+    primaryKeyword: "rent agreement 11 month rule India",
+    secondaryKeywords: [
+      "is rent agreement registration mandatory",
+      "rent agreement stamp duty",
+      "leave and license vs lease",
+      "rent agreement key clauses",
+      "11 month rent agreement reason",
+      "rent agreement format India",
+    ],
+    hero: {
+      eyebrow: "Property & Tenancy · Guide",
+      title: "Rent Agreement in India: The 11-Month Rule, Registration & Key Clauses",
+      subtitle:
+        "Why 11 months, when registration is compulsory, stamp duty, lease vs leave-and-license, and the clauses every agreement should contain.",
+    },
+    intro: [
+      "If you have ever rented a home in India, your agreement was almost certainly for eleven months — not twelve, not twenty-four. This is not a coincidence or a superstition; it is a deliberate response to the registration law, and understanding it helps both landlords and tenants protect themselves.",
+      "A rent agreement is the contract that governs the tenancy — the rent, the deposit, the duration, and what each side can and cannot do. Get it wrong, and disputes over the deposit, eviction, or maintenance become slow and expensive. Get it right, and most disputes never arise.",
+      "This guide explains the 11-month rule and the registration law behind it, when registration becomes compulsory, stamp duty, the important distinction between a lease and a leave-and-license, and the clauses every rent agreement should contain.",
+    ],
+    sections: [
+      {
+        heading: "1. Why 11 months? The registration law explained",
+        body: [
+          "The answer lies in the Registration Act 1908. Section 17 requires that a lease of immovable property from year to year, or for any term exceeding one year, or reserving a yearly rent, must be compulsorily registered. A lease for a term of less than one year is not compulsorily registrable.",
+          "Eleven months is simply the longest round term that stays under the one-year threshold. By keeping the agreement to 11 months (often with a renewal clause), landlords and tenants avoid mandatory registration and the associated registration charges and stamp duty on a longer instrument. This is the entire reason the 11-month tenancy became the Indian default.",
+        ],
+      },
+      {
+        heading: "2. When registration becomes compulsory",
+        body: [
+          "The 11-month workaround only goes so far. The moment the agreed term is twelve months or more, or the lease is from year to year, registration becomes compulsory under Section 17, and an unregistered long lease is generally inadmissible as evidence of its terms (Section 49).",
+          "Some states add their own requirements. Notably, Maharashtra's rent law requires the registration of leave-and-license agreements regardless of duration, so the 11-month exemption does not apply there in the same way. Always check the position in the state where the property is located.",
+        ],
+        bullets: [
+          "Term under 12 months (e.g. 11 months): registration not compulsory under the Registration Act.",
+          "Term of 12 months or more, or year-to-year: registration compulsory (Section 17).",
+          "State exceptions exist — e.g. Maharashtra requires registration of leave-and-license agreements irrespective of duration.",
+        ],
+      },
+      {
+        heading: "3. Stamp duty and notarisation",
+        body: [
+          "Stamp duty is separate from registration and is payable on rent agreements in every state, calculated on a state-specific formula (often a function of the rent and the term, sometimes including the deposit). A rent agreement should be executed on stamp paper of the correct value or e-stamped.",
+          "Notarisation is not the same as registration. A notarised 11-month agreement is common and convenient, but notarisation does not give the agreement the legal standing that registration does. For longer or higher-value tenancies, registration is the safer course even where it is technically optional.",
+        ],
+      },
+      {
+        heading: "4. Lease vs leave-and-license — an important distinction",
+        body: [
+          "A lease (governed by Section 105 of the Transfer of Property Act 1882) transfers an interest in the property and a right to enjoy it; a lessee enjoys greater protection and the relationship can attract rent-control laws. A leave-and-license (rooted in the Indian Easements Act 1882) merely permits the licensee to use the premises without transferring an interest, and is generally easier for the owner to terminate.",
+          "Most urban residential tenancies are structured as leave-and-license precisely because owners want easier recovery of possession and want to avoid rent-control complications. The label alone is not conclusive — courts look at the substance of the arrangement — but the distinction materially affects each side's rights.",
+        ],
+      },
+      {
+        heading: "5. Clauses every rent agreement should contain",
+        body: [
+          "A good agreement is specific. The most disputed issues are the deposit and its return, the notice period, and responsibility for repairs — so address each clearly.",
+        ],
+        bullets: [
+          "Parties, property description, and the term (start and end dates).",
+          "Rent amount, due date, mode of payment, and any escalation on renewal.",
+          "Security deposit — amount, and the exact conditions and timeline for its refund.",
+          "Lock-in period and the notice period for termination by either side.",
+          "Responsibility for maintenance, repairs, and society/utility charges.",
+          "Permitted use, restrictions (subletting, alterations), and inspection rights.",
+          "Renewal terms and the consequences of holding over after expiry.",
+        ],
+      },
+    ],
+    takeaways: [
+      "The 11-month term exists to stay under the Registration Act 1908's one-year threshold (Section 17), avoiding compulsory registration.",
+      "A term of 12 months or more must be registered; an unregistered long lease is largely inadmissible to prove its terms (Section 49).",
+      "Stamp duty is payable in every state regardless of term; notarisation is not a substitute for registration.",
+      "Most urban tenancies are leave-and-license (Easements Act) rather than leases (Transfer of Property Act) because they are easier to terminate.",
+      "The deposit-refund, notice-period, and repairs clauses cause the most disputes — make them specific.",
+    ],
+    faqs: [
+      {
+        question: "Why are rent agreements made for 11 months in India?",
+        answer:
+          "Because Section 17 of the Registration Act 1908 makes registration compulsory only for leases of one year or more. An 11-month term stays under that threshold, so the agreement does not have to be registered, saving registration charges and stamp duty on a longer instrument. It is the longest round term that avoids compulsory registration.",
+      },
+      {
+        question: "Is it mandatory to register a rent agreement?",
+        answer:
+          "Only if the term is 12 months or more (or it is a year-to-year lease) — then registration is compulsory under Section 17 of the Registration Act 1908. An 11-month agreement is not compulsorily registrable under that Act, though some states (such as Maharashtra for leave-and-license agreements) require registration regardless of duration.",
+      },
+      {
+        question: "Is stamp duty payable on an 11-month rent agreement?",
+        answer:
+          "Yes. Stamp duty is separate from registration and is payable on rent agreements in every state, calculated under a state-specific formula based on the rent and term (sometimes the deposit). The agreement should be on stamp paper of the correct value or e-stamped, even if it is not registered.",
+      },
+      {
+        question: "What is the difference between a lease and a leave-and-license?",
+        answer:
+          "A lease (Section 105, Transfer of Property Act 1882) transfers an interest in the property and gives the tenant stronger rights, sometimes attracting rent-control laws. A leave-and-license (Easements Act 1882) only permits use without transferring an interest and is generally easier for the owner to terminate. Courts look at the substance, not just the label.",
+      },
+      {
+        question: "Does an unregistered rent agreement have legal value?",
+        answer:
+          "An 11-month agreement that is properly stamped is valid and enforceable for that term. But for tenancies of a year or more, an unregistered lease is largely inadmissible to prove its terms under Section 49 of the Registration Act. For longer or higher-value tenancies, registration is the safer course — a property lawyer can advise; your first consultation on NyaySevak is free.",
+      },
+      {
+        question: "What clauses should a rent agreement include?",
+        answer:
+          "At minimum: the parties and property, the term, rent and due date, the security deposit and its refund conditions, lock-in and notice periods, responsibility for maintenance and charges, permitted use and restrictions, and renewal terms. Clear deposit-refund, notice, and repair clauses prevent the most common disputes.",
+      },
+    ],
+    relatedPracticeAreaSlugs: ["property-real-estate", "documentation", "civil-law"],
+    relatedServiceSlugs: ["document-services", "lawyer-consultation", "find-hire-lawyers"],
+    relatedCitySlugs: ["delhi", "mumbai", "bangalore", "pune"],
+  },
+
+  // ============================================================
+  // 21. Pvt Ltd vs LLP vs OPC vs Partnership
+  // ============================================================
+  {
+    slug: "private-limited-vs-llp-vs-opc-vs-partnership-india-2026",
+    title: "Pvt Ltd vs LLP vs OPC vs Partnership: Which to Choose",
+    metaTitle:
+      "Pvt Ltd vs LLP vs OPC vs Partnership India 2026 — Which to Choose",
+    metaDescription:
+      "Compare Private Limited, LLP, One Person Company, and Partnership in India — liability, compliance, taxation, fundraising, and which business structure suits founders, professionals, and small firms.",
+    excerpt:
+      "Choosing the wrong business structure is expensive to undo. This guide compares the Private Limited Company, LLP, One Person Company, and Partnership across liability, compliance burden, taxation, and fundraising — so you can pick the right vehicle for your stage and goals.",
+    category: "Corporate & Commercial",
+    authorSlug: "corporate-commercial-desk",
+    reviewerSlug: "nyaysevak-legal-team",
+    datePublished: "2026-06-10",
+    dateModified: "2026-06-10",
+    readTimeMinutes: 12,
+    primaryKeyword: "Pvt Ltd vs LLP vs OPC vs partnership",
+    secondaryKeywords: [
+      "difference between private limited and LLP",
+      "which business structure to choose India",
+      "LLP vs private limited company",
+      "one person company vs private limited",
+      "partnership vs LLP",
+      "best company type for startup India",
+    ],
+    hero: {
+      eyebrow: "Corporate Law · Comparison",
+      title: "Pvt Ltd vs LLP vs OPC vs Partnership: Which to Choose",
+      subtitle:
+        "Liability, compliance, taxation, and fundraising compared across the four most common business structures in India.",
+    },
+    intro: [
+      "One of the first and most consequential decisions a founder makes is the legal structure of the business. It determines your personal liability, how much compliance you carry, how you are taxed, and — critically — whether you can raise outside investment. Changing structure later is possible but costly and disruptive, so it pays to choose well at the start.",
+      "The four most common vehicles in India are the Private Limited Company and One Person Company (both under the Companies Act 2013), the Limited Liability Partnership (LLP Act 2008), and the traditional Partnership (Indian Partnership Act 1932). Each suits a different kind of business and stage.",
+      "This guide compares them across the dimensions that actually matter — liability, compliance burden, taxation, and fundraising — and then gives a simple rule of thumb for who should choose what.",
+    ],
+    sections: [
+      {
+        heading: "1. Private Limited Company",
+        body: [
+          "A Private Limited Company is a separate legal entity incorporated under the Companies Act 2013, with limited liability for its shareholders. It needs a minimum of two directors and two shareholders (up to 200 shareholders), and it offers perpetual succession independent of its owners.",
+          "Its great strength is fundraising: venture capital and angel investors almost always require a Private Limited structure because shares are easy to issue and transfer. The trade-off is the highest compliance burden — ROC filings, statutory audit, board and general meetings, and director-level obligations.",
+        ],
+        bullets: [
+          "Law: Companies Act 2013 · separate legal entity · limited liability.",
+          "Minimum 2 directors and 2 shareholders (max 200 shareholders).",
+          "Best for: startups raising (or planning to raise) external equity.",
+          "Trade-off: highest compliance — audit, ROC filings, board meetings.",
+        ],
+      },
+      {
+        heading: "2. Limited Liability Partnership (LLP)",
+        body: [
+          "An LLP, under the LLP Act 2008, combines the limited liability of a company with the operational flexibility of a partnership. It is a separate legal entity, partners are not personally liable for the LLP's debts (beyond their agreed contribution), and it needs a minimum of two partners with no upper limit.",
+          "Its compliance is lighter than a company's — notably, an audit is not required unless turnover or contribution crosses prescribed thresholds. The limitation is fundraising: LLPs cannot issue equity shares, so they are unattractive to venture capital. They suit professional firms and bootstrapped businesses that value limited liability without the company overhead.",
+        ],
+        bullets: [
+          "Law: LLP Act 2008 · separate legal entity · limited liability.",
+          "Minimum 2 partners, no maximum; lighter compliance (audit only above thresholds).",
+          "Best for: professional firms and bootstrapped businesses not seeking equity investors.",
+          "Trade-off: cannot raise equity from VCs/angels.",
+        ],
+      },
+      {
+        heading: "3. One Person Company (OPC)",
+        body: [
+          "The One Person Company, introduced by the Companies Act 2013, lets a single founder enjoy limited liability and a corporate identity without needing a co-founder. The sole member must nominate a nominee who takes over on the member's death or incapacity.",
+          "It is ideal for a solo entrepreneur who wants the credibility and liability protection of a company. Its constraints: there are restrictions on certain activities, and an OPC must convert into a Private Limited Company once it crosses prescribed turnover or capital thresholds.",
+        ],
+        bullets: [
+          "Law: Companies Act 2013 · single member · limited liability · requires a nominee.",
+          "Best for: solo founders wanting corporate status without a co-founder.",
+          "Trade-off: activity restrictions and mandatory conversion above thresholds.",
+        ],
+      },
+      {
+        heading: "4. Partnership (and a word on sole proprietorship)",
+        body: [
+          "A traditional Partnership under the Indian Partnership Act 1932 is the easiest and cheapest to form, governed by a partnership deed. Registration is optional (though an unregistered firm cannot sue to enforce certain rights). Its decisive drawback is unlimited personal liability — partners are personally liable for the firm's debts — and it is not a separate legal entity.",
+          "A sole proprietorship is simpler still but offers no liability protection and no separate legal identity; it suits the smallest, lowest-risk businesses. For anything with meaningful liability exposure or growth ambition, an LLP or company is usually the better choice.",
+        ],
+        bullets: [
+          "Law: Indian Partnership Act 1932 · NOT a separate entity · unlimited liability.",
+          "Easiest and cheapest to set up; registration optional but advisable.",
+          "Best for: small, low-risk ventures among people who trust each other.",
+          "Trade-off: partners are personally liable for the firm's debts.",
+        ],
+      },
+      {
+        heading: "5. A simple rule of thumb",
+        body: [
+          "Match the vehicle to your stage and risk. If you plan to raise external equity, choose a Private Limited Company. If you are a professional firm or a bootstrapped business that wants limited liability without the company overhead, choose an LLP. If you are a solo founder who wants a corporate identity, consider an OPC. If you are running a small, low-risk venture and want minimal formality, a Partnership may suffice — but accept the unlimited liability that comes with it.",
+        ],
+      },
+    ],
+    takeaways: [
+      "Private Limited (Companies Act 2013): separate entity, limited liability, best for raising equity — but highest compliance.",
+      "LLP (LLP Act 2008): limited liability + flexibility, lighter compliance — but cannot raise equity from investors.",
+      "OPC (Companies Act 2013): solo founder, limited liability, needs a nominee, converts to Pvt Ltd above thresholds.",
+      "Partnership (Act 1932): cheapest and simplest, but unlimited personal liability and not a separate legal entity.",
+      "Rule of thumb: raising equity → Pvt Ltd; professional/bootstrapped → LLP; solo with corporate status → OPC; small/low-risk → Partnership.",
+    ],
+    faqs: [
+      {
+        question: "What is the difference between a Private Limited Company and an LLP?",
+        answer:
+          "Both are separate legal entities with limited liability. A Private Limited Company (Companies Act 2013) can issue shares and raise equity from investors but carries heavier compliance (audit, ROC filings, board meetings). An LLP (LLP Act 2008) has lighter compliance and flexibility but cannot raise equity, making it better for professional firms and bootstrapped businesses.",
+      },
+      {
+        question: "Which business structure is best for a startup in India?",
+        answer:
+          "If you intend to raise venture capital or angel investment, a Private Limited Company is almost always the right choice because investors require it to hold and transfer shares. If you are bootstrapping and want limited liability with less compliance, an LLP works well. A solo founder wanting corporate status without a co-founder can consider a One Person Company.",
+      },
+      {
+        question: "What is a One Person Company (OPC)?",
+        answer:
+          "An OPC, introduced by the Companies Act 2013, allows a single individual to run a company with limited liability and a separate corporate identity. The sole member must nominate a nominee to take over on death or incapacity. OPCs face some activity restrictions and must convert to a Private Limited Company once they cross prescribed turnover or capital thresholds.",
+      },
+      {
+        question: "Is a partnership firm a separate legal entity?",
+        answer:
+          "No. A traditional partnership under the Indian Partnership Act 1932 is not a separate legal entity, and the partners have unlimited personal liability for the firm's debts. This is its main drawback compared with an LLP or a company. Registration of the firm is optional but advisable, as an unregistered firm cannot enforce certain rights in court.",
+      },
+      {
+        question: "Can an LLP raise funding from investors?",
+        answer:
+          "Not easily. An LLP cannot issue equity shares, so venture capital and angel investors — who invest in exchange for shares — generally will not fund an LLP. Businesses that anticipate raising external equity should incorporate as a Private Limited Company instead. A corporate lawyer can advise on the right structure for your plans.",
+      },
+      {
+        question: "Can I convert my business structure later?",
+        answer:
+          "Yes, conversions are possible — for example, an LLP or partnership to a Private Limited Company, or an OPC to a Private Limited Company — but they involve regulatory filings, time, and cost, and can have tax implications. It is far better to choose the right structure at the outset. Your first consultation on NyaySevak is free.",
+      },
+    ],
+    relatedPracticeAreaSlugs: ["corporate-business", "tax-law", "intellectual-property"],
+    relatedServiceSlugs: ["corporate-legal-advisory", "compliance-management", "lawyer-consultation"],
+    relatedCitySlugs: ["delhi", "mumbai", "bangalore", "hyderabad"],
+  },
+
+  // ============================================================
+  // 22. Anticipatory bail rejected — what next
+  // ============================================================
+  {
+    slug: "anticipatory-bail-rejected-what-next-india-2026",
+    title: "Anticipatory Bail Rejected: What Are Your Options Next?",
+    metaTitle:
+      "Anticipatory Bail Rejected in India 2026 — What to Do Next",
+    metaDescription:
+      "Anticipatory bail rejected? Your options under the BNSS 2023 — approaching the High Court or Supreme Court, regular bail after arrest, fresh applications on changed circumstances, and avoiding a proclamation.",
+    excerpt:
+      "A rejected anticipatory bail application is a setback, not the end. This guide explains the escalation ladder — Sessions Court to High Court to Supreme Court — plus regular bail after arrest, fresh applications on changed circumstances, and the mistakes (like absconding) that make things worse.",
+    category: "Criminal Defence",
+    authorSlug: "criminal-law-desk",
+    reviewerSlug: "nyaysevak-legal-team",
+    datePublished: "2026-06-10",
+    dateModified: "2026-06-10",
+    readTimeMinutes: 10,
+    primaryKeyword: "anticipatory bail rejected what next",
+    secondaryKeywords: [
+      "options after anticipatory bail rejected",
+      "anticipatory bail high court after sessions",
+      "regular bail after arrest",
+      "fresh anticipatory bail application",
+      "section 482 bnss anticipatory bail",
+      "slp supreme court bail",
+    ],
+    hero: {
+      eyebrow: "Criminal Law · Guide",
+      title: "Anticipatory Bail Rejected: What Are Your Options Next?",
+      subtitle:
+        "The escalation ladder under the BNSS 2023, regular bail after arrest, fresh applications, and the mistakes that make a rejection worse.",
+    },
+    intro: [
+      "Having an anticipatory bail application rejected is frightening — it can feel as though arrest is now inevitable and there is nothing left to do. That is not the legal reality. A rejection by one court is rarely the final word; the law provides a clear ladder of further remedies, and a calm, correctly-sequenced response often still secures protection.",
+      "Anticipatory bail is the pre-arrest protection under Section 482 of the Bharatiya Nagarik Suraksha Sanhita 2023 (BNSS), which replaced Section 438 of the old CrPC. It can be sought from the Court of Session or the High Court. When one forum rejects it, the question is simply: where do you go next, and how?",
+      "This guide sets out the escalation options, the role of regular bail after arrest, when a fresh anticipatory bail application is possible, and the mistakes — above all, absconding — that turn a manageable situation into a much worse one.",
+    ],
+    sections: [
+      {
+        heading: "1. Move up the ladder: Sessions → High Court → Supreme Court",
+        body: [
+          "Anticipatory bail can be sought concurrently from the Court of Session or the High Court. In practice, applicants usually approach the Sessions Court first. If the Sessions Court rejects the application, the next step is to approach the High Court under Section 482 BNSS with a fresh anticipatory bail application — the High Court considers it on its own merits and is not bound by the Sessions Court's refusal.",
+          "If the High Court also rejects anticipatory bail, the applicant can approach the Supreme Court by way of a Special Leave Petition under Article 136 of the Constitution. Each higher court applies its independent mind, so a rejection below does not foreclose relief above.",
+        ],
+        bullets: [
+          "Sessions Court rejects → apply afresh to the High Court (Section 482 BNSS).",
+          "High Court rejects → Special Leave Petition to the Supreme Court (Article 136).",
+          "Each forum decides on merits; a lower court's refusal does not bind the higher court.",
+        ],
+      },
+      {
+        heading: "2. If arrest happens: regular bail",
+        body: [
+          "If anticipatory bail is exhausted or unavailable and arrest takes place, the remedy shifts to regular bail. For a non-bailable offence, the accused applies for regular bail under Section 480 BNSS before the Magistrate, or under Section 483 BNSS before the Court of Session or High Court.",
+          "Regular bail is decided on factors such as the nature and gravity of the offence, the strength of the prima facie evidence, the accused's antecedents, the risk of flight, and the risk of tampering with evidence or witnesses. Many accused who are refused anticipatory bail are later granted regular bail once the investigation has progressed and the need for custodial interrogation has passed.",
+        ],
+      },
+      {
+        heading: "3. A fresh anticipatory bail application on changed circumstances",
+        body: [
+          "A rejection is not necessarily permanent. A fresh anticipatory bail application can be maintainable before the same court if there is a genuine change in circumstances — for example, new material that weakens the prosecution case, a co-accused on similar facts being granted bail, or developments in the investigation.",
+          "This is not a route to simply re-argue the same points; courts discourage repetitive applications. There must be a real and substantial change that justifies a fresh look. A criminal lawyer will assess whether your facts have moved enough to support a renewed application.",
+        ],
+      },
+      {
+        heading: "4. The mistakes that make things worse",
+        body: [
+          "The single worst response to a rejection is to abscond. Evading the process invites a non-bailable warrant and, ultimately, proclamation and attachment proceedings under Section 84 BNSS, which not only worsen the bail prospects but can become separate offences. Courts take a dim view of absconders, and it undermines every future application.",
+          "Equally damaging are delay (letting the rejection sit while arrest looms instead of escalating quickly) and inconsistency (filing scattered applications without a coherent strategy). The right approach is fast, sequenced escalation with sound legal advice, while remaining available to the process.",
+        ],
+      },
+    ],
+    takeaways: [
+      "A rejection is not the end — anticipatory bail can be pursued up the ladder: Sessions → High Court (S.482 BNSS) → Supreme Court (Article 136 SLP).",
+      "Each higher court decides on merits and is not bound by the refusal below.",
+      "If arrested, the remedy becomes regular bail under Section 480 (Magistrate) or 483 (Sessions/High Court) BNSS.",
+      "A fresh anticipatory bail application is possible only on a genuine change of circumstances, not to re-argue the same points.",
+      "Never abscond — it triggers proclamation/attachment under Section 84 BNSS and destroys future bail prospects.",
+    ],
+    faqs: [
+      {
+        question: "What happens if anticipatory bail is rejected by the Sessions Court?",
+        answer:
+          "You can approach the High Court with a fresh anticipatory bail application under Section 482 BNSS. The High Court decides the matter on its own merits and is not bound by the Sessions Court's refusal. If the High Court also rejects it, you can move the Supreme Court by a Special Leave Petition under Article 136.",
+      },
+      {
+        question: "Can I get regular bail after anticipatory bail is rejected?",
+        answer:
+          "Yes. If you are arrested, the remedy shifts to regular bail — applied for under Section 480 BNSS before the Magistrate or Section 483 BNSS before the Court of Session or High Court. Many accused refused anticipatory bail are later granted regular bail once the investigation progresses and custodial interrogation is no longer needed.",
+      },
+      {
+        question: "Can I file anticipatory bail again after rejection?",
+        answer:
+          "A fresh anticipatory bail application can be maintainable only if there is a genuine, substantial change in circumstances — such as new material weakening the prosecution case or a similarly placed co-accused getting bail. Courts discourage repetitive applications that simply re-argue the same grounds.",
+      },
+      {
+        question: "Should I surrender if my anticipatory bail is rejected?",
+        answer:
+          "That is a strategic decision to take with a criminal lawyer. In some cases, surrendering and immediately applying for regular bail is the right move; in others, escalating to a higher court for anticipatory bail first is better. What you must not do is abscond, which triggers a warrant and proclamation proceedings and worsens your position.",
+      },
+      {
+        question: "What is the risk of absconding after a bail rejection?",
+        answer:
+          "Absconding invites a non-bailable warrant and proclamation and attachment proceedings under Section 84 BNSS, can constitute a separate offence, and severely damages all future bail applications, since courts view absconders unfavourably. Always remain available to the legal process and pursue lawful remedies instead.",
+      },
+      {
+        question: "How quickly should I act after a rejection?",
+        answer:
+          "Immediately. With arrest looming, the escalation to the High Court or the decision to surrender-and-seek-regular-bail should be made without delay, since every day increases the risk. Engage a criminal lawyer the same day — your first consultation on NyaySevak is free.",
+      },
+    ],
+    relatedPracticeAreaSlugs: ["criminal-law", "cbi-cases", "ed-cases"],
+    relatedServiceSlugs: ["lawyer-consultation", "find-hire-lawyers", "legal-aid"],
+    relatedCitySlugs: ["delhi", "mumbai", "bangalore", "hyderabad"],
+  },
+
+  // ============================================================
+  // 23. POSH Act — workplace harassment compliance & complaint
+  // ============================================================
+  {
+    slug: "posh-act-india-workplace-harassment-complaint-2026",
+    title: "POSH Act: Workplace Sexual Harassment — Rights & How to Complain",
+    metaTitle:
+      "POSH Act India 2026 — Workplace Harassment Rights & How to Complain",
+    metaDescription:
+      "The POSH Act 2013 explained: what counts as workplace sexual harassment, the Internal Committee, who can complain, the 3-month time limit, the inquiry process, reliefs, and employer obligations.",
+    excerpt:
+      "The POSH Act 2013 gives every working woman a clear redress mechanism for workplace sexual harassment. This guide covers what qualifies as harassment, the Internal Committee employers must set up, who can complain and within what time, the inquiry process, and the reliefs available.",
+    category: "Practical Guidance",
+    authorSlug: "nyaysevak-legal-team",
+    reviewerSlug: "nyaysevak-legal-team",
+    datePublished: "2026-06-10",
+    dateModified: "2026-06-10",
+    readTimeMinutes: 11,
+    primaryKeyword: "POSH act complaint procedure India",
+    secondaryKeywords: [
+      "workplace sexual harassment law India",
+      "internal committee POSH",
+      "how to file POSH complaint",
+      "POSH act 2013 explained",
+      "sexual harassment at workplace act",
+      "POSH time limit to complain",
+    ],
+    hero: {
+      eyebrow: "Employment & Workplace · Guide",
+      title: "POSH Act: Workplace Sexual Harassment — Rights & How to Complain",
+      subtitle:
+        "What counts as harassment, the Internal Committee employers must set up, who can complain and within what time, the inquiry, and the reliefs available under the POSH Act 2013.",
+    },
+    intro: [
+      "The Sexual Harassment of Women at Workplace (Prevention, Prohibition and Redressal) Act 2013 — universally called the POSH Act — gives every working woman in India a statutory mechanism to complain about workplace sexual harassment and obtain redress. It grew out of the Supreme Court's Vishaka guidelines and made what were once judicial directions into binding law.",
+      "The Act places real obligations on employers and gives complainants a confidential, time-bound process that does not require them to first launch a criminal case. Understanding how it works protects both employees who face harassment and employers who must comply.",
+      "This guide explains what qualifies as workplace sexual harassment, the Internal Committee that employers must constitute, who can complain and within what time, the inquiry process, the reliefs available, and the employer's duties.",
+    ],
+    sections: [
+      {
+        heading: "1. What counts as workplace sexual harassment",
+        body: [
+          "The Act defines sexual harassment broadly to include unwelcome acts or behaviour — whether direct or by implication — such as physical contact and advances, a demand or request for sexual favours, sexually coloured remarks, showing pornography, and any other unwelcome physical, verbal, or non-verbal conduct of a sexual nature.",
+          "It also covers implied or explicit promises or threats connected to the woman's employment, and conduct that creates a hostile or intimidating work environment or is humiliating and may affect her health or safety. 'Workplace' is read widely, extending beyond the office to places visited during employment and, increasingly, to remote and online work settings.",
+        ],
+      },
+      {
+        heading: "2. The Internal Committee (IC)",
+        body: [
+          "Every employer with ten or more employees must constitute an Internal Committee (IC) at each office or branch. The IC must be headed by a senior woman employee, include at least two members committed to the cause of women or with relevant experience, and crucially include one external member from an NGO or association familiar with sexual-harassment issues — to guard against internal bias.",
+          "Where an organisation has fewer than ten employees, or where the complaint is against the employer themselves, the complaint goes instead to the Local Committee (LC) constituted at the district level by the government.",
+        ],
+        bullets: [
+          "Mandatory for every workplace with 10+ employees.",
+          "Chaired by a senior woman; includes an external (NGO) member.",
+          "Fewer than 10 employees, or complaint against the employer → Local Committee (district level).",
+        ],
+      },
+      {
+        heading: "3. Who can complain, and the time limit",
+        body: [
+          "Any aggrieved woman — whether a regular employee, contractor, intern, or even a visitor to the workplace — can file a written complaint of sexual harassment to the IC (or LC). Where she is unable to do so herself (for example, due to physical or mental incapacity), the Act allows others to file on her behalf.",
+          "The complaint must ordinarily be filed within three months of the incident, extendable by a further three months if the IC is satisfied that circumstances prevented earlier filing. Filing promptly preserves evidence and strengthens the case.",
+        ],
+      },
+      {
+        heading: "4. The inquiry process and reliefs",
+        body: [
+          "On receiving a complaint, the IC may first attempt conciliation if the complainant requests it (but not a monetary settlement as the basis of conciliation). If conciliation is not opted for or fails, the IC conducts an inquiry following principles of natural justice — giving both sides a hearing — and is to complete the inquiry within ninety days.",
+          "During the pendency, the IC can recommend interim measures such as transferring the complainant or the respondent or granting leave. On completing the inquiry, the IC submits its report; if the allegation is proved, it recommends action against the respondent under the service rules and can recommend compensation to the complainant.",
+        ],
+        bullets: [
+          "Optional conciliation at the complainant's request (no monetary settlement as basis).",
+          "Inquiry following natural justice, to be completed within 90 days.",
+          "Interim relief (transfer/leave) available during the inquiry.",
+          "If proved: action against the respondent + compensation to the complainant.",
+        ],
+      },
+      {
+        heading: "5. Employer obligations and safeguards",
+        body: [
+          "Employers must constitute the IC, display the penal consequences of harassment, organise awareness and orientation, assist the complainant if she chooses to file a criminal complaint, and file an annual report. Failure to comply attracts a penalty, and repeated non-compliance can lead to cancellation of licences or registration.",
+          "The Act protects confidentiality — the identity of the parties and the proceedings cannot be published — and prohibits retaliation against a complainant or witness. It also contains a provision against malicious or false complaints, but mere inability to prove a complaint does not amount to a false complaint.",
+        ],
+      },
+    ],
+    takeaways: [
+      "The POSH Act 2013 makes the Vishaka guidelines binding law and covers a broad range of unwelcome sexual conduct, including hostile-environment harassment.",
+      "Every employer with 10+ employees must constitute an Internal Committee chaired by a senior woman and including an external NGO member.",
+      "Any aggrieved woman (employee, contractor, intern, visitor) can complain — ordinarily within 3 months, extendable by 3 more.",
+      "The IC inquiry follows natural justice and is to finish within 90 days; interim relief is available, and proven cases lead to action plus compensation.",
+      "Employers must ensure confidentiality, prevent retaliation, run awareness programmes, and file annual reports — non-compliance attracts penalties.",
+    ],
+    faqs: [
+      {
+        question: "What is the POSH Act?",
+        answer:
+          "The POSH Act is the Sexual Harassment of Women at Workplace (Prevention, Prohibition and Redressal) Act 2013. It gives working women a statutory mechanism to complain about workplace sexual harassment and obtain redress, building on the Supreme Court's Vishaka guidelines. It applies to all workplaces and places obligations on employers.",
+      },
+      {
+        question: "Who can file a complaint under the POSH Act?",
+        answer:
+          "Any aggrieved woman connected to the workplace — a regular employee, contractor, intern, apprentice, or even a visitor — can file a written complaint to the Internal Committee (or the Local Committee where there are fewer than 10 employees or the complaint is against the employer). If she cannot file herself due to incapacity, others may file on her behalf.",
+      },
+      {
+        question: "What is the time limit to file a POSH complaint?",
+        answer:
+          "A complaint should ordinarily be filed within three months of the incident (or the last incident in a series). The Internal Committee can extend this by a further three months if satisfied that circumstances prevented the woman from filing earlier. Filing promptly helps preserve evidence.",
+      },
+      {
+        question: "Is every company required to have an Internal Committee?",
+        answer:
+          "Yes, every employer with ten or more employees must constitute an Internal Committee at each office or branch, headed by a senior woman and including an external member from an NGO. Workplaces with fewer than ten employees are covered by the Local Committee constituted at the district level.",
+      },
+      {
+        question: "What reliefs can a POSH complaint result in?",
+        answer:
+          "If the allegation is proved, the Internal Committee recommends action against the respondent under the applicable service rules (which can include warning, transfer, or termination) and can recommend compensation to the complainant. During the inquiry, interim measures such as transfer or leave can be granted.",
+      },
+      {
+        question: "Can I also file a criminal case for workplace harassment?",
+        answer:
+          "Yes. The POSH process is separate from and additional to criminal remedies — sexual harassment can also attract offences under the Bharatiya Nyaya Sanhita 2023. The employer is required to assist the complainant if she chooses to file a criminal complaint. A lawyer can help you pursue both tracks; your first consultation on NyaySevak is free.",
+      },
+    ],
+    relatedPracticeAreaSlugs: ["labour-employment", "criminal-law", "corporate-business"],
+    relatedServiceSlugs: ["lawyer-consultation", "find-hire-lawyers", "legal-aid"],
+    relatedCitySlugs: ["delhi", "mumbai", "bangalore", "pune"],
+  },
 ];
 
 export const articlesBySlug = Object.fromEntries(

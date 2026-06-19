@@ -5,8 +5,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "node scripts/indexnow.mjs --auto",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "indexnow": "node scripts/indexnow.mjs"
   },
   "dependencies": {
     "lucide-react": "^0.576.0",
