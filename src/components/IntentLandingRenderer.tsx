@@ -4,11 +4,16 @@
 
 import Link from "next/link";
 import { ArrowRight, ChevronRight, CheckCircle2, Briefcase, MapPin } from "lucide-react";
-import type { IntentLandingPage } from "@/data/intent-landings";
+import { type IntentLandingPage, intentLandings } from "@/data/intent-landings";
 import ContactButton from "@/components/ContactButton";
 import AnswerBlock from "@/components/AnswerBlock";
 
 export default function IntentLandingRenderer({ data }: { data: IntentLandingPage }) {
+  // Week 15: cross-link the sibling "best <practice> lawyers in India" guides so
+  // the listicle pages form a mutually-linked hub cluster (instead of being
+  // dead-ends reachable only from the footer). Equity flows between all of them,
+  // and each new guide instantly inherits inbound links from the others.
+  const relatedGuides = intentLandings.filter((g) => g.slug !== data.slug);
   return (
     <main className="bg-dark-deep text-white">
       {/* Hero */}
@@ -143,6 +148,30 @@ export default function IntentLandingRenderer({ data }: { data: IntentLandingPag
               ))}
             </div>
           </section>
+
+          {/* Week 15: Related guides — internal-link hub cluster across the
+              "best <practice> lawyers in India" landing pages. */}
+          {relatedGuides.length > 0 && (
+            <section className="mb-4">
+              <h2 className="text-2xl sm:text-3xl font-heading font-bold mb-6 text-white border-l-2 border-gold/60 pl-4">
+                Related Guides
+              </h2>
+              <div className="grid gap-3 sm:grid-cols-2">
+                {relatedGuides.map((g) => (
+                  <Link
+                    key={g.slug}
+                    href={`/${g.slug}`}
+                    className="group flex items-center justify-between gap-4 rounded-xl border border-white/[0.06] bg-white/[0.015] px-5 py-4 hover:border-gold/30 hover:bg-white/[0.03] transition-all duration-300"
+                  >
+                    <span className="text-sm font-semibold text-white group-hover:text-gold transition-colors">
+                      {g.hero.h1}
+                    </span>
+                    <ArrowRight className="h-4 w-4 text-gold/60 shrink-0 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                ))}
+              </div>
+            </section>
+          )}
         </div>
       </article>
     </main>

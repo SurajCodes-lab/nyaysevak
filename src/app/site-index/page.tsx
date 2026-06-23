@@ -55,8 +55,10 @@ export default function SiteIndexPage() {
     title: "Find a lawyer",
     links: [
       { label: "Best Criminal Lawyers in India", href: "/best-criminal-lawyers-in-india" },
+      { label: "Best Civil Lawyers in India", href: "/best-civil-lawyers-in-india" },
       { label: "Best Divorce Lawyers in India", href: "/best-divorce-lawyers-in-india" },
       { label: "Best Property Lawyers in India", href: "/best-property-lawyers-in-india" },
+      { label: "Best Corporate Lawyers in India", href: "/best-corporate-lawyers-in-india" },
     ],
   };
 

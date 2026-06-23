@@ -10,7 +10,7 @@ import { practiceAreas } from "@/data/practice-areas";
 import { practiceAreaContent } from "@/data/practice-area-content";
 import { practiceAreaCategories } from "@/data/practice-area-categories";
 import { allServices } from "@/data/services";
-import { cities } from "@/data/cities";
+import { cities, cityPracticeLabels, type CityPracticeSlug } from "@/data/cities";
 import {
   practiceAreaToServices,
   practiceAreaToCityPracticeSlug,
@@ -19,6 +19,17 @@ import {
 import { getVariantsForPractice } from "@/data/practice-area-keyword-variants";
 import { authorsBySlug } from "@/data/authors";
 import { notFound } from "next/navigation";
+
+// Week 15: maps the five city-mapped practice areas to their India-wide
+// "Best <practice> Lawyers in India" intent-landing guide, so these pos-1–2
+// pillar pages pass equity to the listicle hub cluster (and vice-versa).
+const PRACTICE_TO_BEST_GUIDE: Record<string, { href: string; label: string }> = {
+  "criminal-law": { href: "/best-criminal-lawyers-in-india", label: "Best Criminal Lawyers in India" },
+  "civil-law": { href: "/best-civil-lawyers-in-india", label: "Best Civil Lawyers in India" },
+  "family-matrimonial": { href: "/best-divorce-lawyers-in-india", label: "Best Divorce Lawyers in India" },
+  "property-real-estate": { href: "/best-property-lawyers-in-india", label: "Best Property Lawyers in India" },
+  "corporate-business": { href: "/best-corporate-lawyers-in-india", label: "Best Corporate Lawyers in India" },
+};
 
 // E-E-A-T: map each practice area to the in-house editorial desk that reviews
 // its content. Named, credentialed reviewers are the strongest trust signal
@@ -692,12 +703,30 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ s
             <h2 className="text-2xl sm:text-3xl font-heading font-bold text-white heading-glow mb-3">
               Find {area.title} Lawyers in Top Indian Cities
             </h2>
-            <p className="text-sm text-gray-400 max-w-2xl mb-8">
+            <p className="text-sm text-gray-400 max-w-2xl mb-4">
               Connect with verified {area.title.toLowerCase()} specialists local to your city.
             </p>
+            {(() => {
+              const guide = PRACTICE_TO_BEST_GUIDE[practiceAreaToCityPracticeSlug[slug]!];
+              return guide ? (
+                <p className="mb-8">
+                  <Link href={guide.href} className="inline-flex items-center gap-2 text-sm text-gold hover:text-gold-light transition-colors">
+                    Read our {guide.label} guide
+                    <ArrowRight className="h-4 w-4" strokeWidth={2} />
+                  </Link>
+                </p>
+              ) : null;
+            })()}
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
               {cities.map((c) => {
                 const cityPractice = practiceAreaToCityPracticeSlug[slug]!;
+                // Week 15: anchor text uses the city × practice head keyword
+                // ("Best Property Lawyer in Mumbai") instead of the long practice
+                // title ("Property & Real Estate Lawyers in Mumbai"), so the
+                // internal link's anchor exactly matches the query GSC shows
+                // these pages getting impressions for — and routes equity from
+                // this pos-1–2 pillar page to the pos-23–46 city × practice page.
+                const cityKwTitle = cityPracticeLabels[cityPractice as CityPracticeSlug]?.title ?? `${area.title} Lawyer`;
                 return (
                   <Link
                     key={c.slug}
@@ -705,7 +734,7 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ s
                     className="glass-card !rounded-xl p-4 group hover:border-gold/30 transition-all duration-300"
                   >
                     <p className="text-sm font-semibold text-white group-hover:text-gold transition-colors">
-                      {area.title} Lawyers in {c.name}
+                      Best {cityKwTitle} in {c.name}
                     </p>
                     <p className="mt-1 text-xs text-gray-500">{c.state}</p>
                   </Link>

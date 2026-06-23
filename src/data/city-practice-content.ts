@@ -65,7 +65,7 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       {
         question: "How do I find the best criminal lawyer near me in Delhi?",
         answer:
-          "Use NyaySevak's Delhi criminal-law directory, filter by the relevant district court complex (Tis Hazari, Patiala House, Karkardooma, Saket, Rohini, or Dwarka), and shortlist by Bar Council verification, years of practice, and ratings. Every listed lawyer appears regularly before Delhi courts, and your first consultation is free.",
+          "Tell NyaySevak about your matter and the police station or district court complex involved (Tis Hazari, Patiala House, Karkardooma, Saket, Rohini, or Dwarka). We match you within 24 hours with a Bar-Council-verified Delhi criminal lawyer who appears regularly before that court. Your first consultation is free and all fees are agreed upfront.",
       },
       {
         question: "Which court handles my criminal case in Delhi?",
@@ -1999,7 +1999,7 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       {
         question: "How do I find the best criminal lawyer near me in Jaipur?",
         answer:
-          "Use NyaySevak's Jaipur criminal-law listings, shortlist by Bar Council of Rajasthan verification, years of practice before the Jaipur courts, and ratings, and book a free first consultation. Every listed advocate appears regularly before the Jaipur District & Sessions Court and the Rajasthan High Court's Jaipur Bench.",
+          "Tell NyaySevak about your matter and we match you within 24 hours with a Bar-Council-of-Rajasthan-verified Jaipur criminal lawyer who appears regularly before the Jaipur District & Sessions Court and the Rajasthan High Court's Jaipur Bench. Your first consultation is free and all fees are agreed upfront.",
       },
       {
         question: "Which court handles my criminal case in Jaipur?",

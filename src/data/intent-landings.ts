@@ -52,7 +52,7 @@ export const intentLandings: IntentLandingPage[] = [
     quickAnswer:
       "The best property lawyers in India are Bar-Council-verified advocates with a documented practice history at the relevant city's Sub-Registrar offices and High Court, plus hands-on experience with that city's specific property regime. NyaySevak lists verified property advocates across Delhi, Mumbai, Bangalore, Chennai, Hyderabad, Pune, Kolkata, and Ahmedabad for title verification, RERA complaints, conveyancing, and partition — with a free first consultation.",
     title:
-      "Best Property Lawyers in India 2026 — City-Wise Verified Advocates | NyaySevak",
+      "Best Property Lawyers in India 2026 — City-Wise Verified Advocates",
     metaDescription:
       "Find the best property lawyers in India 2026 — verified advocates across Delhi, Mumbai, Bangalore, Chennai, Hyderabad, Pune, Kolkata, Ahmedabad. Title verification, RERA, conveyancing, partition. Free first consultation.",
     primaryKeyword: "best property lawyers in India",
@@ -231,7 +231,7 @@ export const intentLandings: IntentLandingPage[] = [
     quickAnswer:
       "The best divorce lawyers in India specialise in matrimonial law and the Family Courts, handling mutual-consent and contested divorce, maintenance, child custody, and alimony under the Hindu Marriage Act, Special Marriage Act, and applicable personal law. NyaySevak connects you with verified divorce advocates across the 8 largest metros, with transparent fees and a free first consultation to assess your matter confidentially.",
     title:
-      "Best Divorce Lawyers in India 2026 — City-Wise Verified Family Advocates | NyaySevak",
+      "Best Divorce Lawyers in India 2026 — City-Wise Verified Family Advocates",
     metaDescription:
       "Find the best divorce lawyers in India 2026 — verified family advocates across Delhi, Mumbai, Bangalore, Chennai, Hyderabad, Pune, Kolkata, Ahmedabad. Mutual consent, contested, custody, maintenance. Free first consultation.",
     primaryKeyword: "best divorce lawyers in India",
@@ -409,7 +409,7 @@ export const intentLandings: IntentLandingPage[] = [
     quickAnswer:
       "The best criminal lawyers in India are advocates experienced in bail, trial, and appellate defence under the Bharatiya Nyaya Sanhita and Bharatiya Nagarik Suraksha Sanhita, 2023, who appear regularly before the relevant Sessions Court, High Court, and Supreme Court. NyaySevak connects you with verified criminal defence advocates across the 8 largest metros for FIRs, anticipatory and regular bail, and trials — with a free, confidential first consultation.",
     title:
-      "Best Criminal Lawyers in India 2026 — City-Wise Verified Defence Advocates | NyaySevak",
+      "Best Criminal Lawyers in India 2026 — City-Wise Verified Defence Advocates",
     metaDescription:
       "Find the best criminal lawyers in India 2026 — verified defence advocates across Delhi, Mumbai, Bangalore, Chennai, Hyderabad, Pune, Kolkata, Ahmedabad. Bail, FIR quashing, trial defence, PMLA, NDPS, CBI cases. Free first consultation.",
     primaryKeyword: "best criminal lawyers in India",
@@ -591,7 +591,7 @@ export const intentLandings: IntentLandingPage[] = [
     quickAnswer:
       "Yes — you can get free legal advice in India. NyaySevak offers a free first consultation with a Bar-Council-verified lawyer for any matter, by phone, video, or chat, with no obligation to proceed. You describe your issue, get matched with a relevant advocate within 24 hours, and agree any further fees upfront before work begins. Government legal aid is also available via NALSA for eligible persons.",
     title:
-      "Free Legal Consultation in India — Talk to a Verified Lawyer Today | NyaySevak",
+      "Free Legal Consultation in India — Talk to a Verified Lawyer Today",
     metaDescription:
       "Free first legal consultation in India. Talk to a verified Bar-Council-checked lawyer for criminal, divorce, property, corporate, civil, or any other matter. No obligation, no card required, response within 4 hours.",
     primaryKeyword: "free legal consultation",
@@ -700,6 +700,368 @@ export const intentLandings: IntentLandingPage[] = [
     ctaTitle: "Get your free consultation now",
     ctaCopy:
       "Tell us about your matter — a verified Bar-Council-enrolled lawyer will be matched to you within 4 hours. No card required, no obligation, complete confidentiality.",
+  },
+
+  // ============================================================
+  // Best Civil Lawyers in India  (Week 15 — completes the "best <practice>
+  // lawyers in India" set; targets the bangalore-civil + property-civil
+  // impression cluster GSC shows ranking pos 30+ on the city × practice pages)
+  // ============================================================
+  {
+    slug: "best-civil-lawyers-in-india",
+    quickAnswer:
+      "The best civil lawyers in India are Bar-Council-verified litigators with a documented record before the relevant city's District Civil Courts, the High Court, and (for high-value commercial suits) the Commercial Courts under the Commercial Courts Act, 2015. They handle property and partition suits, money recovery, specific performance, injunctions, declaration suits, and consumer and RERA matters. NyaySevak matches you with a verified civil advocate across the 8 largest metros — with a free first consultation and fees agreed upfront.",
+    title:
+      "Best Civil Lawyers in India 2026 — City-Wise Verified Advocates",
+    metaDescription:
+      "Find the best civil lawyers in India 2026 — verified civil litigation advocates across Delhi, Mumbai, Bangalore, Chennai, Hyderabad, Pune, Kolkata, Ahmedabad. Property suits, recovery, injunctions, specific performance, partition. Free first consultation.",
+    primaryKeyword: "best civil lawyers in India",
+    secondaryKeywords: [
+      "best civil lawyer India",
+      "top civil advocates India",
+      "civil lawyer near me",
+      "civil litigation lawyer India",
+      "civil court advocate",
+      "property suit lawyer",
+      "recovery suit lawyer",
+      "civil lawyer fees India",
+    ],
+    hero: {
+      eyebrow: "Civil Litigation · India · 2026",
+      h1: "Best Civil Lawyers in India",
+      sub: "Verified, Bar-Council-checked civil litigation advocates across the 8 largest Indian metros. Property and partition suits, money recovery, specific performance, injunctions, declaration, consumer and RERA matters. Free first consultation.",
+    },
+    intro: [
+      "Civil litigation is the widest category in Indian practice — anything that is not a crime and not purely a regulatory matter ultimately resolves through a civil suit. Money recovery, breach of contract, property title and partition, specific performance of an agreement to sell, injunctions to stop a wrong before it happens, and declaratory suits to settle a legal status all run through the civil courts under the Code of Civil Procedure, 1908. The single biggest determinant of a civil outcome is procedural: which forum, what valuation, what limitation period, and whether interim relief is secured early.",
+      "This page lists NyaySevak's network of verified civil lawyers across the 8 largest Indian litigation markets — Delhi, Mumbai, Bangalore, Chennai, Hyderabad, Pune, Kolkata, Ahmedabad. Every civil advocate listed is Bar-Council verified, has a documented practice history before the relevant District Civil Court and High Court, and understands the city's specific civil-jurisdiction quirks (the Delhi and Bombay High Court original-side pecuniary thresholds, the Madras and Calcutta High Court original civil jurisdiction, and the Commercial Courts that now hear most high-value contractual disputes).",
+      "Below: what civil litigation actually covers; how to evaluate a civil lawyer; the limitation traps that quietly defeat valid claims; realistic 2026 fee benchmarks; and — at the bottom — direct links to our city-specific civil-lawyer hubs.",
+    ],
+    sections: [
+      {
+        heading: "What does a 'civil lawyer' actually handle?",
+        body: [
+          "The civil brief is broad: (i) money recovery — suits for unpaid dues, loans, and receivables, including summary suits under Order XXXVII CPC for negotiable instruments and written contracts; (ii) property suits — title declaration, partition, possession, and mesne profits; (iii) specific performance — compelling completion of an agreement to sell under the Specific Relief Act, 1963 (substantially strengthened by the 2018 amendment, which made specific performance the rule rather than the exception); (iv) injunctions — temporary (Order XXXIX CPC) and permanent, to restrain a defendant from causing irreversible harm; (v) declaratory suits — to establish a right, status, or the invalidity of a document; (vi) consumer and RERA matters, which run on civil principles before specialised fora.",
+          "Securing interim relief early frequently matters more than the final decree. A well-pleaded temporary injunction or an Order XXXVIII attachment-before-judgment can preserve the subject matter for the years a suit takes to reach trial.",
+        ],
+      },
+      {
+        heading: "How to evaluate a civil lawyer",
+        body: [
+          "Four signals matter most:",
+        ],
+        bullets: [
+          "Bar Council enrolment and current practising status — verifiable on the State Bar Council's website.",
+          "A documented record at the right forum — District Civil Court, the High Court's original or appellate side, and the Commercial Court for suits above the ₹3-lakh commercial threshold. Pecuniary and territorial jurisdiction decide where your suit even can be filed.",
+          "Command of limitation. The Limitation Act, 1963 quietly defeats more valid civil claims than any defence on merits — three years for most contract and recovery actions, twelve for possession based on title. A lawyer who diaries limitation correctly is worth more than one who argues eloquently after the period has lapsed.",
+          "A transparent, written fee structure — drafting, per-appearance, and interim-application fees stated upfront. Long-running suits with vague fee terms are a recurring source of client disputes.",
+        ],
+      },
+      {
+        heading: "City × city expertise — what differs",
+        body: [
+          "Civil procedure is federal in form but heavily city-specific in operation. The jurisdictional thresholds and the choice between the District Court and the High Court's original side vary materially by city:",
+        ],
+      },
+    ],
+    cityTable: [
+      {
+        city: "Delhi",
+        citySlug: "delhi",
+        highlights: [
+          "Delhi HC original side hears suits above ₹2 crore — rare in India; lower-value suits go to the District Courts.",
+          "Dedicated Commercial Courts at each district complex under the Commercial Courts Act.",
+          "Heavy property, recovery, and builder-buyer civil dockets.",
+        ],
+        feeRange: "District suit: ₹10,000–₹45,000/appearance · HC: ₹30,000–₹2,50,000",
+      },
+      {
+        city: "Mumbai",
+        citySlug: "mumbai",
+        highlights: [
+          "Bombay HC original civil jurisdiction for high-value suits; City Civil Court at Fort otherwise.",
+          "Small Causes Court has exclusive tenancy jurisdiction (MRC Act).",
+          "Commercial Division is among the busiest in India.",
+        ],
+        feeRange: "City Civil: ₹15,000–₹75,000/appearance · HC: ₹50,000–₹5,00,000",
+      },
+      {
+        city: "Bangalore",
+        citySlug: "bangalore",
+        highlights: [
+          "City Civil & Sessions Court (Mayo Hall / Bengaluru Urban) handles the bulk of civil suits.",
+          "Commercial Courts handle IT/contract disputes — a large share of the docket.",
+          "Khata and conversion issues frequently surface inside civil property suits.",
+        ],
+        feeRange: "Civil suit: ₹12,000–₹60,000/appearance · HC: ₹35,000–₹2,50,000",
+      },
+      {
+        city: "Chennai",
+        citySlug: "chennai",
+        highlights: [
+          "Madras HC has original civil jurisdiction (City Civil limit aside) — one of the heaviest dockets in India.",
+          "Patta-chitta revenue records overlay civil title suits.",
+          "Strong tradition of specific-performance and partition litigation.",
+        ],
+        feeRange: "City Civil: ₹12,000–₹55,000/appearance · HC: ₹35,000–₹2,50,000",
+      },
+      {
+        city: "Hyderabad",
+        citySlug: "hyderabad",
+        highlights: [
+          "City Civil Court and Ranga Reddy District Court carry most civil filings.",
+          "Dharani-portal land-record disputes feature heavily in title suits.",
+          "GPA-transfer restrictions (post-2015 Telangana) shape property-suit strategy.",
+        ],
+        feeRange: "Civil suit: ₹10,000–₹50,000/appearance · HC: ₹30,000–₹2,00,000",
+      },
+      {
+        city: "Pune",
+        citySlug: "pune",
+        highlights: [
+          "District & Sessions Court (Shivajinagar) and Senior-Division Civil Court for valued suits.",
+          "Co-operative Court has dedicated jurisdiction over society disputes.",
+          "Bombay HC (appellate) for writs and high-value appeals.",
+        ],
+        feeRange: "Civil suit: ₹12,000–₹55,000/appearance · HC: ₹35,000–₹2,25,000",
+      },
+      {
+        city: "Kolkata",
+        citySlug: "kolkata",
+        highlights: [
+          "Calcutta HC original civil jurisdiction for suits above ₹10 lakh — India's oldest chartered HC.",
+          "City Civil Court and Alipore for lower-value matters.",
+          "Strong testamentary and partition practice.",
+        ],
+        feeRange: "City Civil: ₹10,000–₹50,000/appearance · HC: ₹30,000–₹2,00,000",
+      },
+      {
+        city: "Ahmedabad",
+        citySlug: "ahmedabad",
+        highlights: [
+          "City Civil & Sessions Court (Bhadra) for valued civil suits.",
+          "Gujarat HC handles writs and high-value appeals/original matters.",
+          "Heavy real-estate and recovery civil docket.",
+        ],
+        feeRange: "Civil suit: ₹10,000–₹45,000/appearance · HC: ₹30,000–₹2,00,000",
+      },
+    ],
+    faqs: [
+      {
+        question: "What is the best way to find a civil lawyer in India?",
+        answer:
+          "Choose a Bar-Council-verified advocate with a documented record at the exact forum your matter belongs to — District Civil Court, the High Court's original or appellate side, or the Commercial Court. Confirm enrolment on the State Bar Council website, and get a written engagement letter stating scope and fees. Tell NyaySevak about your matter and we match you within 24 hours with a verified civil advocate in your city; the first consultation is free.",
+      },
+      {
+        question: "How much do civil lawyers charge in India in 2026?",
+        answer:
+          "Civil-court appearances typically run ₹10,000–₹60,000 each at the District/City Civil Court level and ₹30,000–₹5,00,000 at the High Court, depending on the city and counsel seniority. Drafting a plaint or written statement is usually ₹15,000–₹75,000. Mumbai and Delhi rates are the highest; Hyderabad, Kolkata, and Ahmedabad run 30–50% lower for ordinary practice. Through NyaySevak the first consultation is free and all fees are agreed upfront.",
+      },
+      {
+        question: "How long does a civil suit take in India?",
+        answer:
+          "A straightforward recovery or injunction suit at the District Court often takes 2–4 years to decree; contested title or partition suits commonly run 4–8 years, and appeals add further time. This is exactly why securing interim relief — a temporary injunction or attachment before judgment — early in the suit usually matters more than the final decree. Summary suits under Order XXXVII CPC for written contracts and cheques are materially faster.",
+      },
+      {
+        question: "What is the difference between a civil and a criminal lawyer?",
+        answer:
+          "A civil lawyer handles disputes between private parties over rights, money, property, and contracts, where the remedy is compensation, possession, or an injunction. A criminal lawyer handles offences prosecuted by the State, where the outcome is acquittal, conviction, bail, or sentence. Some matters run in parallel — a cheque-bounce case is criminal (S.138 NI Act) while recovery of the same debt can also be a civil summary suit.",
+      },
+      {
+        question: "Can I file a civil suit without a lawyer?",
+        answer:
+          "You may appear in person ('party-in-person'), and small consumer matters are often run that way. But civil procedure is unforgiving — a wrongly valued suit, a missed limitation period, a defective interim application, or improper pleadings can sink an otherwise strong claim before it is heard on merits. For anything beyond a simple, low-value matter, experienced civil counsel materially improves the outcome.",
+      },
+      {
+        question: "What is specific performance and when can I claim it?",
+        answer:
+          "Specific performance is a decree compelling a party to actually perform a contract — most commonly, to complete an agreement to sell immovable property — instead of merely paying damages. After the Specific Relief (Amendment) Act, 2018, specific performance is the rule rather than a discretionary exception, provided you have performed (or are ready and willing to perform) your part and file within the three-year limitation. It is one of the most powerful civil remedies in property transactions.",
+      },
+    ],
+    practiceCanonicalSlug: "civil-law",
+    ctaTitle: "Need a civil lawyer right now?",
+    ctaCopy:
+      "Get a free first consultation with a verified civil litigation advocate in your city. Tell us your matter and the court involved — we match you to a lawyer with documented experience in that exact forum, typically within 4 hours.",
+  },
+
+  // ============================================================
+  // Best Corporate Lawyers in India  (Week 15 — targets the corporate-law-firm
+  // /corporate-lawyer impression cluster GSC shows for Hyderabad, Ahmedabad,
+  // Kolkata, and Bangalore)
+  // ============================================================
+  {
+    slug: "best-corporate-lawyers-in-india",
+    quickAnswer:
+      "The best corporate lawyers in India advise companies and founders on incorporation, contracts, compliance, fundraising, and M&A, and litigate before the NCLT, the High Court's Commercial Division, and regulators such as SEBI, the RBI, and the CCI. NyaySevak matches you with a verified corporate and business advocate — or a corporate law firm — across the 8 largest metros, with a free first consultation and fees agreed upfront.",
+    title:
+      "Best Corporate Lawyers in India 2026 — City-Wise Verified Advocates & Law Firms",
+    metaDescription:
+      "Find the best corporate lawyers and law firms in India 2026 — verified business advocates across Delhi, Mumbai, Bangalore, Chennai, Hyderabad, Pune, Kolkata, Ahmedabad. Incorporation, contracts, NCLT, IBC, M&A, compliance. Free first consultation.",
+    primaryKeyword: "best corporate lawyers in India",
+    secondaryKeywords: [
+      "best corporate lawyer India",
+      "top corporate law firms India",
+      "corporate lawyer near me",
+      "business lawyer India",
+      "company lawyer",
+      "NCLT lawyer",
+      "startup lawyer India",
+      "corporate lawyer fees India",
+    ],
+    hero: {
+      eyebrow: "Corporate & Business Law · India · 2026",
+      h1: "Best Corporate Lawyers in India",
+      sub: "Verified, Bar-Council-checked corporate and business advocates and law firms across the 8 largest Indian metros. Incorporation, shareholder and commercial contracts, compliance, fundraising, M&A, NCLT and IBC litigation. Free first consultation.",
+    },
+    intro: [
+      "Corporate legal work splits into two very different streams, and the best lawyer for one is rarely the best for the other. Transactional and advisory work — incorporation, founders' and shareholders' agreements, commercial contracts, employment and ESOP structuring, fundraising, due diligence, and M&A — is preventive and document-heavy. Disputes and regulatory work — oppression and mismanagement and insolvency before the NCLT, commercial arbitration, and proceedings before SEBI, the RBI, and the Competition Commission — is adversarial and forum-specific. Knowing which stream your matter falls into is the first decision.",
+      "This page lists NyaySevak's network of verified corporate lawyers and law firms across the 8 largest Indian commercial centres — Delhi, Mumbai, Bangalore, Chennai, Hyderabad, Pune, Kolkata, Ahmedabad. Whether you need an individual business advocate for a contract review or a corporate law firm for a financing round or an NCLT dispute, every lawyer listed is Bar-Council verified, with a documented record before the relevant NCLT bench, Registrar of Companies, and High Court Commercial Division.",
+      "Below: what corporate lawyers actually do; how to choose between an individual advocate and a firm; the compliance calendar that quietly creates the most corporate liability; realistic 2026 fee benchmarks; and — at the bottom — direct links to our city-specific corporate-lawyer hubs.",
+    ],
+    sections: [
+      {
+        heading: "What does a 'corporate lawyer' actually do?",
+        body: [
+          "The corporate brief spans the company's whole life: (i) formation — incorporation (Pvt Ltd, LLP, OPC), founders' agreements, and the constitutional documents; (ii) contracts — shareholders' agreements, share-subscription and share-purchase agreements, commercial supply, services, distribution, and SaaS contracts; (iii) fundraising — seed to growth-stage equity, convertible notes, SAFEs, and the term-sheet-to-closing process; (iv) compliance — Companies Act 2013 filings, board and general-meeting governance, FEMA/FDI for foreign investment, and sector-specific licences; (v) M&A — due diligence, transaction structuring, CCI merger notification, and post-closing integration; (vi) disputes — oppression and mismanagement, IBC insolvency, and commercial arbitration.",
+          "For most early-stage companies the highest-value work is preventive: a clean cap table, a well-drafted shareholders' agreement, and disciplined Companies Act compliance prevent the disputes that later cost far more to litigate.",
+        ],
+      },
+      {
+        heading: "Individual advocate or a corporate law firm?",
+        body: [
+          "Both are valid — the right choice depends on the matter:",
+        ],
+        bullets: [
+          "An individual corporate advocate is usually the most cost-effective choice for contract review, a single agreement, routine compliance, or representation in one NCLT or arbitration matter.",
+          "A corporate law firm is better suited to multi-workstream transactions — a financing round, an acquisition, or a cross-border deal — where corporate, tax, IP, and employment specialists must work in parallel under deadline.",
+          "For litigation before the NCLT or the High Court Commercial Division, what matters most is documented bench experience, not the size of the masthead — a focused advocate who appears there weekly often outperforms a generalist team.",
+          "Whichever you choose, insist on a written engagement letter with a clear fee basis (fixed, retainer, or per-appearance) and a defined scope.",
+        ],
+      },
+      {
+        heading: "City × city expertise — what differs",
+        body: [
+          "Corporate forums are geographically fixed: your NCLT bench, Registrar of Companies, and the High Court Commercial Division are determined by your registered office. The depth of the specialist bar also varies sharply by city:",
+        ],
+      },
+    ],
+    cityTable: [
+      {
+        city: "Delhi",
+        citySlug: "delhi",
+        highlights: [
+          "NCLT Principal Bench + NCLAT (the appellate tribunal) both sit in Delhi.",
+          "SEBI Northern Regional Office, CCI, and MCA Regional Director (North).",
+          "Delhi HC Commercial Division is highly active for arbitration and IPR.",
+        ],
+        feeRange: "Advisory retainer: ₹40,000–₹3,00,000/mo · NCLT: ₹30,000–₹2,00,000/hearing",
+      },
+      {
+        city: "Mumbai",
+        citySlug: "mumbai",
+        highlights: [
+          "India's corporate HQ — SEBI, RBI, BSE/NSE, and the second-busiest NCLT bench.",
+          "Highest IBC filing volume in India; MCIA for institutional arbitration.",
+          "Deepest M&A, PE, and securities bar in the country.",
+        ],
+        feeRange: "Advisory retainer: ₹50,000–₹5,00,000/mo · HC/NCLT: ₹75,000–₹7,50,000",
+      },
+      {
+        city: "Bangalore",
+        citySlug: "bangalore",
+        highlights: [
+          "India's startup capital — the deepest venture-financing and ESOP practice.",
+          "NCLT Bengaluru Bench for Karnataka companies.",
+          "Heavy SaaS, IP-licensing, and tech-M&A contract work.",
+        ],
+        feeRange: "Advisory retainer: ₹40,000–₹3,50,000/mo · NCLT: ₹35,000–₹2,50,000/hearing",
+      },
+      {
+        city: "Chennai",
+        citySlug: "chennai",
+        highlights: [
+          "NCLT Chennai Bench covers Tamil Nadu, Kerala, and the UTs of the south.",
+          "Strong manufacturing, auto-ancillary, and family-business advisory practice.",
+          "Madras HC Commercial Division for high-value contract disputes.",
+        ],
+        feeRange: "Advisory retainer: ₹35,000–₹2,50,000/mo · NCLT: ₹30,000–₹2,00,000/hearing",
+      },
+      {
+        city: "Hyderabad",
+        citySlug: "hyderabad",
+        highlights: [
+          "NCLT Hyderabad Bench for Telangana and Andhra Pradesh companies.",
+          "Fast-growing IT, pharma, and life-sciences corporate base.",
+          "Rising corporate-law-firm presence around HITEC City and the financial district.",
+        ],
+        feeRange: "Advisory retainer: ₹30,000–₹2,50,000/mo · NCLT: ₹25,000–₹1,75,000/hearing",
+      },
+      {
+        city: "Pune",
+        citySlug: "pune",
+        highlights: [
+          "Companies in Pune are filed before the NCLT Mumbai Bench.",
+          "Strong auto, manufacturing, and IT-services corporate practice.",
+          "Commercial disputes route through the Bombay HC (appellate).",
+        ],
+        feeRange: "Advisory retainer: ₹30,000–₹2,50,000/mo · NCLT: ₹30,000–₹2,00,000/hearing",
+      },
+      {
+        city: "Kolkata",
+        citySlug: "kolkata",
+        highlights: [
+          "NCLT Kolkata Bench covers West Bengal and the east/north-east.",
+          "Deep tradition in company, testamentary, and commercial litigation at the Calcutta HC.",
+          "Strong family-conglomerate and trading-house advisory base.",
+        ],
+        feeRange: "Advisory retainer: ₹30,000–₹2,25,000/mo · NCLT/HC: ₹30,000–₹2,00,000",
+      },
+      {
+        city: "Ahmedabad",
+        citySlug: "ahmedabad",
+        highlights: [
+          "NCLT Ahmedabad Bench for Gujarat companies.",
+          "GIFT City IFSC — India's only international financial-services centre.",
+          "Heavy corporate, textile, and real-estate-company advisory and tax-writ work.",
+        ],
+        feeRange: "Advisory retainer: ₹30,000–₹2,25,000/mo · NCLT/HC: ₹25,000–₹1,75,000",
+      },
+    ],
+    faqs: [
+      {
+        question: "What is the best way to find a corporate lawyer in India?",
+        answer:
+          "Match the lawyer to the matter: an individual business advocate for a contract or single dispute, or a corporate law firm for a multi-workstream transaction. Confirm Bar Council enrolment, and for litigation insist on documented experience before your NCLT bench or the High Court Commercial Division. Tell NyaySevak whether you need an advocate or a firm and what the matter is — we match you within 24 hours, with a free first consultation and fees agreed upfront.",
+      },
+      {
+        question: "How much do corporate lawyers charge in India in 2026?",
+        answer:
+          "Advisory work is usually a monthly retainer (₹30,000–₹5,00,000 depending on city, scope, and firm tier) or a fixed fee per document (₹15,000–₹1,50,000 for a shareholders' agreement or contract suite). NCLT and Commercial Division litigation runs ₹25,000–₹7,50,000+ per hearing by seniority. Mumbai and Delhi are the highest; Hyderabad, Kolkata, and Ahmedabad are materially lower. Through NyaySevak the first consultation is free.",
+      },
+      {
+        question: "Which NCLT bench handles my company?",
+        answer:
+          "Your NCLT bench is fixed by the state of your company's registered office — for example, Maharashtra (including Pune) goes to NCLT Mumbai; Karnataka to Bengaluru; Telangana and Andhra Pradesh to Hyderabad; Tamil Nadu and Kerala to Chennai; West Bengal to Kolkata; Gujarat to Ahmedabad; and Delhi to the Principal Bench. Appeals from any bench go to the NCLAT. Matching your lawyer to the correct bench is essential.",
+      },
+      {
+        question: "Do I need a corporate lawyer to register a company in India?",
+        answer:
+          "Incorporation itself can be done through the MCA portal with a company secretary or CA, and many founders do. A corporate lawyer adds the most value on what comes after incorporation — the founders' agreement, the shareholders' agreement, ESOP pool, IP assignment, and the cap-table structure. These documents prevent the disputes that are far more expensive to litigate later, so legal involvement at formation is a high-return, low-cost investment.",
+      },
+      {
+        question: "What is the difference between a corporate lawyer and a company secretary?",
+        answer:
+          "A company secretary (CS) handles statutory compliance and filings under the Companies Act and is the in-house governance officer. A corporate lawyer (advocate) drafts and negotiates contracts, advises on legal risk and transactions, and — critically — can represent the company in litigation before the NCLT, tribunals, and courts, which a CS cannot. Growing companies typically use both.",
+      },
+      {
+        question: "Can a startup afford a corporate lawyer?",
+        answer:
+          "Yes — and the cost of not having one is usually higher. Many corporate advocates offer fixed-fee startup packages (incorporation-to-shareholders'-agreement) and flexible retainers scaled to stage. The founders' and shareholders' agreements, a clean cap table, and proper IP assignment are exactly the documents investors diligence — getting them right early protects valuation at the next round. NyaySevak's first consultation is free, so you can scope the cost before committing.",
+      },
+    ],
+    practiceCanonicalSlug: "corporate-business",
+    ctaTitle: "Need a corporate lawyer or law firm right now?",
+    ctaCopy:
+      "Get a free first consultation with a verified corporate and business advocate — or a corporate law firm — in your city. Tell us whether it's advisory, transactional, or a dispute, and we match you to the right lawyer for that work, typically within 4 hours.",
   },
 ];
 

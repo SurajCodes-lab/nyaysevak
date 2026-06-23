@@ -34,12 +34,20 @@ export async function generateMetadata(
   const content = cityPracticeContent[`${citySlug}__${slug}`];
   const url = `${SITE_URL}/lawyers/${citySlug}/${slug}`;
 
-  // Week 8: title now surfaces "Near You" to capture "near me" search intent.
-  // Keywords expanded to include the term-variant ("advocate"/"attorney") and
-  // ~14 neighbourhoods (was 5) so neighbourhood-specific "near me" queries map.
-  const title = `Best ${label.title} in ${city.name} — Verified Advocates Near You | Free Consultation | NyaySevak`;
+  // Week 15: title tightened. The previous title (~92 chars) pushed the brand
+  // and the money keyword past Google's ~60-char SERP truncation. GSC showed
+  // these pages stuck at pos 23–46 for "best <kw> in <city>" / "<kw> in <city>"
+  // — so we front-load the exact head query and drop the trailing fluff
+  // ("Verified Advocates Near You" now lives in the description instead).
+  // NB: the root layout applies a `%s | NyaySevak.com` title template, so we do
+  // NOT append the brand here (the old title did, producing a double "| NyaySevak
+  // | NyaySevak.com" suffix that ate SERP character budget).
+  const title = `Best ${label.title} in ${city.name} — Free Consultation`;
+  // Week 15: description now leads with the "near you" + advocate variant that
+  // the title dropped, then folds in the page-specific lead.
+  const descAltKw = label.keyword.replace("lawyer", "advocate");
   const description = content
-    ? `${content.lead.slice(0, 155)}…`
+    ? `Find a verified ${label.keyword} / ${descAltKw} near you in ${city.name}, ${city.state}. ${content.lead.slice(0, 105).trimEnd()}… Free first consultation.`
     : `Find the best ${label.keyword}s near you in ${city.name}, ${city.state}. Verified advocates for ${label.long.toLowerCase()} matters across ${city.highCourt.name} and district courts. Free first consultation. Call +91-9868666715.`;
 
   const cityLower = city.name.toLowerCase();
@@ -112,6 +120,29 @@ export default async function CityPracticePage(
   const quickAnswerQuestion = `Where can I find a verified ${label.title.toLowerCase()} in ${city.name}?`;
   const quickAnswer =
     `NyaySevak connects you with Bar-Council-verified ${label.title.toLowerCase()}s across ${city.name}, ${city.state} — advocates who appear regularly before ${city.highCourt.name} and the local district courts for ${label.long.toLowerCase()} matters. Typical district-court fees here run ${content.feeRange.district}. Your first consultation is free, with all fees agreed upfront before any work begins.`;
+
+  // Week 15: two data-driven FAQs appended to every city × practice page,
+  // built from the page's own fee + court data (so they stay page-specific,
+  // not boilerplate). They target the two query patterns GSC proved are
+  // winnable here: (1) the ONLY non-brand queries earning clicks were
+  // "<kw> fees in <city>" (e.g. divorce lawyer fees in ahmedabad, pos 2.6),
+  // and (2) the synonym spread Google maps to these pages — "advocate",
+  // "law firm", "best/top <kw> in <city>". Surfacing both in FAQ copy + FAQ
+  // schema widens the query surface without diluting the hand-written content.
+  const altKeyword = label.keyword.replace("lawyer", "advocate");
+  const generatedFaqs = [
+    {
+      question: `How much does a ${label.keyword} charge in ${city.name}?`,
+      answer:
+        `${city.name} ${label.keyword} fees typically run ${content.feeRange.consultation} for a consultation, ${content.feeRange.district} per district-court appearance, and ${content.feeRange.highCourt} at ${city.highCourt.name}. ${content.feeRange.note} Through NyaySevak your first consultation is free and every fee is agreed upfront before any work begins.`,
+    },
+    {
+      question: `How do I find the best ${label.keyword} or ${altKeyword} in ${city.name}?`,
+      answer:
+        `Tell NyaySevak about your ${label.short.toLowerCase()} matter and we match you within 24 hours with a Bar-Council-verified ${label.keyword} in ${city.name} — an advocate who appears regularly before ${city.highCourt.name} and the local district courts. Whether you want an individual ${altKeyword} or a ${label.short.toLowerCase()} law firm, the first consultation is free with all fees agreed upfront.`,
+    },
+  ];
+  const augmentedFaqs = [...content.faqs, ...generatedFaqs];
 
   // Other practice areas for this city (for cross-linking)
   const otherPractices = cityPracticeSlugs
@@ -210,7 +241,7 @@ export default async function CityPracticePage(
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: content.faqs.map((f) => ({
+    mainEntity: augmentedFaqs.map((f) => ({
       "@type": "Question",
       name: f.question,
       acceptedAnswer: { "@type": "Answer", text: f.answer },
@@ -528,7 +559,7 @@ export default async function CityPracticePage(
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-            {content.faqs.map((faq, i) => (
+            {augmentedFaqs.map((faq, i) => (
               <div key={i} className="faq-card-dark group">
                 <div className="flex items-start gap-4">
                   <span className="shrink-0 h-8 w-8 rounded-lg bg-gold/[0.08] border border-gold/10 flex items-center justify-center">
