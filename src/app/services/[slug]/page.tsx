@@ -62,13 +62,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       "free legal consultation",
     ].join(", "),
     alternates: {
-      canonical: `https://nyaysevak.com/services/${slug}`,
+      canonical: `https://www.nyaysevak.com/services/${slug}`,
     },
     openGraph: {
       title: `${service.title} India 2026 — Free Consultation | NyaySevak.com`,
       description: `${service.title} ${catLabel.toLowerCase()}. ${service.bullets[0]}. Free first consultation.`,
       type: "website",
-      url: `https://nyaysevak.com/services/${slug}`,
+      url: `https://www.nyaysevak.com/services/${slug}`,
     },
     twitter: {
       card: "summary_large_image",
@@ -242,9 +242,9 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://nyaysevak.com/" },
-      { "@type": "ListItem", position: 2, name: "Services", item: "https://nyaysevak.com/services" },
-      { "@type": "ListItem", position: 3, name: service.title, item: `https://nyaysevak.com/services/${slug}` },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.nyaysevak.com/" },
+      { "@type": "ListItem", position: 2, name: "Services", item: "https://www.nyaysevak.com/services" },
+      { "@type": "ListItem", position: 3, name: service.title, item: `https://www.nyaysevak.com/services/${slug}` },
     ],
   };
 
@@ -256,13 +256,13 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
     provider: {
       "@type": "ProfessionalService",
       name: "NyaySevak",
-      url: "https://nyaysevak.com",
+      url: "https://www.nyaysevak.com",
       telephone: "+91-9868666715",
       address: { "@type": "PostalAddress", addressLocality: "New Delhi", addressRegion: "Delhi", addressCountry: "IN" },
     },
     areaServed: { "@type": "Country", name: "India" },
     serviceType: service.title,
-    url: `https://nyaysevak.com/services/${slug}`,
+    url: `https://www.nyaysevak.com/services/${slug}`,
     category: service.category === "b2c" ? "Individual Legal Services" : "Business Legal Services",
     offers: {
       "@type": "Offer",

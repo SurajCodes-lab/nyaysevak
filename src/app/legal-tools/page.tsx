@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     "Free legal calculators for India — court fee, stamp duty, limitation period, motor-accident compensation, cheque-bounce claim. Instant results, state-wise schedules, no signup required.",
   keywords:
     "legal tools India, court fee calculator, stamp duty calculator, limitation period checker, motor accident compensation calculator, cheque bounce calculator, CNR case lookup, NyaySevak",
-  alternates: { canonical: "https://nyaysevak.com/legal-tools" },
+  alternates: { canonical: "https://www.nyaysevak.com/legal-tools" },
 };
 
 const tools: { slug: string; title: string; description: string; icon: React.ComponentType<{ className?: string; strokeWidth?: number }>; status: "live" | "soon" }[] = [

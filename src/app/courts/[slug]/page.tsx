@@ -35,11 +35,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: `Best ${hc.name} Lawyers - Verified Advocates in ${hc.jurisdiction} | NyaySevak`,
     description: `Find the best verified lawyers for ${hc.name} in ${hc.jurisdiction}. Writ petitions, appeals, bail, criminal, civil, family, corporate & tax matters. ${hc.benches.length > 0 ? `Benches: ${hc.benches.join(", ")}. ` : ""}Free first consultation. Call +91-9868666715.`,
     keywords: `${hc.name} lawyer, best advocate ${hc.jurisdiction}, ${hc.jurisdiction} lawyer, high court lawyer ${hc.jurisdiction}, bail lawyer ${hc.jurisdiction}, writ petition lawyer, ${hc.name} advocate, NyaySevak, free legal consultation`,
-    alternates: { canonical: `https://nyaysevak.com/courts/${slug}` },
+    alternates: { canonical: `https://www.nyaysevak.com/courts/${slug}` },
     openGraph: {
       title: `Best ${hc.name} Lawyers | Free Consultation | NyaySevak`,
       description: `Verified advocates for ${hc.name}. Jurisdiction: ${hc.jurisdiction}. All practice areas. Free first consultation.`,
-      url: `https://nyaysevak.com/courts/${slug}`,
+      url: `https://www.nyaysevak.com/courts/${slug}`,
       type: "website",
     },
     twitter: {
@@ -54,11 +54,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: `Best District Court Lawyers in ${dc.state} - ${dc.districts.length} Courts Covered | NyaySevak`,
     description: `Find the best verified lawyers for all ${dc.districts.length} district courts in ${dc.state}. ${dc.districts.slice(0, 5).join(", ")} & more. Criminal, civil, family, property, consumer & labour cases. Free first consultation.`,
     keywords: `district court lawyer ${dc.state}, best lawyer ${dc.districts[0]}, advocate near me ${dc.state}, ${dc.districts.slice(0, 3).map(d => `lawyer ${d}`).join(", ")}, NyaySevak, free legal consultation`,
-    alternates: { canonical: `https://nyaysevak.com/courts/${slug}` },
+    alternates: { canonical: `https://www.nyaysevak.com/courts/${slug}` },
     openGraph: {
       title: `District Court Lawyers in ${dc.state} | NyaySevak`,
       description: `Verified lawyers for all ${dc.districts.length} district courts in ${dc.state}. Free first consultation.`,
-      url: `https://nyaysevak.com/courts/${slug}`,
+      url: `https://www.nyaysevak.com/courts/${slug}`,
       type: "website",
     },
     twitter: {
@@ -73,11 +73,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: `Best ${tr.title} Tribunal Lawyers in India - Expert Advocates | NyaySevak`,
     description: `Find the best verified lawyers for ${tr.title} tribunals in India. ${tr.items.slice(0, 4).join(", ")} & more. Expert tribunal representation. Free first consultation. Call +91-9868666715.`,
     keywords: `${tr.title} tribunal lawyer, ${tr.items.slice(0, 3).map(i => `${i} lawyer`).join(", ")}, best tribunal advocate India, NyaySevak, free legal consultation`,
-    alternates: { canonical: `https://nyaysevak.com/courts/${slug}` },
+    alternates: { canonical: `https://www.nyaysevak.com/courts/${slug}` },
     openGraph: {
       title: `${tr.title} Tribunal Lawyers India | NyaySevak`,
       description: `Expert ${tr.title.toLowerCase()} tribunal lawyers across India. Free first consultation.`,
-      url: `https://nyaysevak.com/courts/${slug}`,
+      url: `https://www.nyaysevak.com/courts/${slug}`,
       type: "website",
     },
     twitter: {
@@ -221,9 +221,9 @@ export default async function CourtDetailPage({ params }: { params: Promise<{ sl
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://nyaysevak.com/" },
-      { "@type": "ListItem", position: 2, name: "Courts", item: "https://nyaysevak.com/courts" },
-      { "@type": "ListItem", position: 3, name: pageTitle, item: `https://nyaysevak.com/courts/${slug}` },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.nyaysevak.com/" },
+      { "@type": "ListItem", position: 2, name: "Courts", item: "https://www.nyaysevak.com/courts" },
+      { "@type": "ListItem", position: 3, name: pageTitle, item: `https://www.nyaysevak.com/courts/${slug}` },
     ],
   };
 
@@ -269,11 +269,11 @@ export default async function CourtDetailPage({ params }: { params: Promise<{ sl
       : dc
       ? `Find verified lawyers for all ${dc.districts.length} district courts in ${dc.state}. Criminal, civil, family & property cases.`
       : `Expert lawyers for ${tr?.title} tribunal matters across India.`,
-    url: `https://nyaysevak.com/courts/${slug}`,
+    url: `https://www.nyaysevak.com/courts/${slug}`,
     provider: {
       "@type": "ProfessionalService",
       name: "NyaySevak",
-      url: "https://nyaysevak.com",
+      url: "https://www.nyaysevak.com",
       telephone: "+91-9868666715",
     },
     areaServed: hc

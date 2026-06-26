@@ -18,17 +18,17 @@ export const metadata: Metadata = {
   description:
     "India's trusted legal services platform. Get matched with verified lawyers near you for the Supreme Court, 25 High Courts, 700+ District Courts & all Tribunals. Online lawyer consultation, divorce lawyer, criminal lawyer, property lawyer, corporate advisory. 29 practice areas. Free first consultation.",
   alternates: {
-    canonical: "https://nyaysevak.com",
+    canonical: "https://www.nyaysevak.com",
   },
   openGraph: {
     title: "NyaySevak - Best Lawyer Consultation & Legal Services in India",
     description:
       "Find verified lawyers near you. Online consultation, court representation across Supreme Court, High Courts, District Courts & Tribunals. 29 practice areas. Free first consultation.",
-    url: "https://nyaysevak.com",
+    url: "https://www.nyaysevak.com",
     type: "website",
     images: [
       {
-        url: "https://nyaysevak.com/logo.png",
+        url: "https://www.nyaysevak.com/logo.png",
         width: 800,
         height: 800,
         alt: "NyaySevak - Best Legal Services Platform in India",
@@ -51,16 +51,16 @@ export const metadata: Metadata = {
 const webPageJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "@id": "https://nyaysevak.com/#webpage",
+  "@id": "https://www.nyaysevak.com/#webpage",
   name: "NyaySevak - Defending Your Rights | India's Premier Legal Services Platform",
   description:
     "India's complete legal ecosystem. Access Supreme Court, 25 High Courts, 700+ District Courts, all Tribunals & Arbitration centres. Complete A-Z legal services for individuals and businesses.",
-  url: "https://nyaysevak.com",
-  isPartOf: { "@id": "https://nyaysevak.com/#website" },
-  about: { "@id": "https://nyaysevak.com/#organization" },
+  url: "https://www.nyaysevak.com",
+  isPartOf: { "@id": "https://www.nyaysevak.com/#website" },
+  about: { "@id": "https://www.nyaysevak.com/#organization" },
   primaryImageOfPage: {
     "@type": "ImageObject",
-    url: "https://nyaysevak.com/logo.png",
+    url: "https://www.nyaysevak.com/logo.png",
   },
   speakable: {
     "@type": "SpeakableSpecification",
@@ -218,7 +218,7 @@ const howToJsonLd = {
 const geoAuthorityJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "@id": "https://nyaysevak.com/#authority",
+  "@id": "https://www.nyaysevak.com/#authority",
   mainContentOfPage: {
     "@type": "WebPageElement",
     cssSelector: "#main-content",
@@ -226,7 +226,7 @@ const geoAuthorityJsonLd = {
   reviewedBy: {
     "@type": "Organization",
     name: "NyaySevak Legal Team",
-    url: "https://nyaysevak.com/about",
+    url: "https://www.nyaysevak.com/about",
     description: "Team of Bar Council verified lawyers with expertise across 29 practice areas of Indian law",
   },
   datePublished: "2024-01-01",
@@ -234,7 +234,7 @@ const geoAuthorityJsonLd = {
   inLanguage: "en-IN",
   isAccessibleForFree: true,
   creditText: "NyaySevak - India's #1 Legal Services Platform",
-  copyrightHolder: { "@id": "https://nyaysevak.com/#organization" },
+  copyrightHolder: { "@id": "https://www.nyaysevak.com/#organization" },
   // Week 4 AEO: Enhanced citation and authority signals
   citation: [
     "Bar Council of India",

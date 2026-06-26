@@ -35,7 +35,7 @@ export const viewport: Viewport = {
 const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": ["Organization", "LegalService"],
-  "@id": "https://nyaysevak.com/#organization",
+  "@id": "https://www.nyaysevak.com/#organization",
   name: "NyaySevak",
   // Week 8: expanded alternateName so search engines and AI engines
   // associate every common user-vocabulary brand variant with this entity.
@@ -54,14 +54,14 @@ const organizationJsonLd = {
   ],
   description:
     "India's complete legal ecosystem. Access the Supreme Court, 25 High Courts, 700+ District Courts, all Tribunals & Arbitration centres. Complete A-Z legal services for individuals and businesses.",
-  url: "https://nyaysevak.com",
+  url: "https://www.nyaysevak.com",
   logo: {
     "@type": "ImageObject",
-    url: "https://nyaysevak.com/logo.png",
+    url: "https://www.nyaysevak.com/logo.png",
     width: 800,
     height: 800,
   },
-  image: "https://nyaysevak.com/logo.png",
+  image: "https://www.nyaysevak.com/logo.png",
   foundingDate: "2024",
   founder: {
     "@type": "Person",
@@ -195,17 +195,17 @@ const organizationJsonLd = {
 const websiteJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "@id": "https://nyaysevak.com/#website",
+  "@id": "https://www.nyaysevak.com/#website",
   name: "NyaySevak",
   alternateName: "NyaySevak - Defending Your Rights",
-  url: "https://nyaysevak.com",
-  publisher: { "@id": "https://nyaysevak.com/#organization" },
+  url: "https://www.nyaysevak.com",
+  publisher: { "@id": "https://www.nyaysevak.com/#organization" },
   inLanguage: "en-IN",
   potentialAction: {
     "@type": "SearchAction",
     target: {
       "@type": "EntryPoint",
-      urlTemplate: "https://nyaysevak.com/practice-areas?q={search_term_string}",
+      urlTemplate: "https://www.nyaysevak.com/practice-areas?q={search_term_string}",
     },
     "query-input": "required name=search_term_string",
   },
@@ -216,14 +216,14 @@ const siteNavigationJsonLd = {
   "@context": "https://schema.org",
   "@type": "SiteNavigationElement",
   name: "Main Navigation",
-  url: "https://nyaysevak.com",
+  url: "https://www.nyaysevak.com",
   hasPart: [
-    { "@type": "SiteNavigationElement", name: "Legal Services", url: "https://nyaysevak.com/services", description: "B2B & B2C legal services for individuals and businesses" },
-    { "@type": "SiteNavigationElement", name: "Practice Areas", url: "https://nyaysevak.com/practice-areas", description: "29 practice areas covering every domain of Indian law" },
-    { "@type": "SiteNavigationElement", name: "Court Coverage", url: "https://nyaysevak.com/courts", description: "Supreme Court, 25 High Courts, 700+ District Courts & Tribunals" },
-    { "@type": "SiteNavigationElement", name: "Platform Features", url: "https://nyaysevak.com/features", description: "Verified lawyer matching and legal services platform features" },
-    { "@type": "SiteNavigationElement", name: "About NyaySevak", url: "https://nyaysevak.com/about", description: "About India's premier legal services platform" },
-    { "@type": "SiteNavigationElement", name: "Contact Us", url: "https://nyaysevak.com/contact", description: "Get in touch for legal consultation" },
+    { "@type": "SiteNavigationElement", name: "Legal Services", url: "https://www.nyaysevak.com/services", description: "B2B & B2C legal services for individuals and businesses" },
+    { "@type": "SiteNavigationElement", name: "Practice Areas", url: "https://www.nyaysevak.com/practice-areas", description: "29 practice areas covering every domain of Indian law" },
+    { "@type": "SiteNavigationElement", name: "Court Coverage", url: "https://www.nyaysevak.com/courts", description: "Supreme Court, 25 High Courts, 700+ District Courts & Tribunals" },
+    { "@type": "SiteNavigationElement", name: "Platform Features", url: "https://www.nyaysevak.com/features", description: "Verified lawyer matching and legal services platform features" },
+    { "@type": "SiteNavigationElement", name: "About NyaySevak", url: "https://www.nyaysevak.com/about", description: "About India's premier legal services platform" },
+    { "@type": "SiteNavigationElement", name: "Contact Us", url: "https://www.nyaysevak.com/contact", description: "Get in touch for legal consultation" },
   ],
 };
 
@@ -231,13 +231,13 @@ const siteNavigationJsonLd = {
 const professionalServiceJsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  "@id": "https://nyaysevak.com/#professionalservice",
+  "@id": "https://www.nyaysevak.com/#professionalservice",
   name: "NyaySevak Legal Services",
   description: "India's complete legal ecosystem offering verified lawyer consultation, document services, corporate advisory, and court representation across all Indian courts and tribunals.",
-  url: "https://nyaysevak.com",
+  url: "https://www.nyaysevak.com",
   telephone: "+91-9868666715",
   email: "nyaysevak@gmail.com",
-  image: "https://nyaysevak.com/logo.png",
+  image: "https://www.nyaysevak.com/logo.png",
   priceRange: "Free - ₹₹₹",
   address: {
     "@type": "PostalAddress",
@@ -266,7 +266,7 @@ const professionalServiceJsonLd = {
       {
         "@type": "Offer",
         name: "Free First Lawyer Consultation",
-        url: "https://nyaysevak.com/free-legal-consultation",
+        url: "https://www.nyaysevak.com/free-legal-consultation",
         price: "0",
         priceCurrency: "INR",
         availability: "https://schema.org/InStock",
@@ -276,7 +276,7 @@ const professionalServiceJsonLd = {
       {
         "@type": "Offer",
         name: "Online Lawyer Consultation (Paid)",
-        url: "https://nyaysevak.com/services/lawyer-consultation",
+        url: "https://www.nyaysevak.com/services/lawyer-consultation",
         priceSpecification: {
           "@type": "PriceSpecification",
           minPrice: "499",
@@ -333,7 +333,7 @@ const professionalServiceJsonLd = {
     priceCurrency: "INR",
     availability: "https://schema.org/InStock",
     eligibleRegion: { "@type": "Country", name: "India" },
-    offeredBy: { "@id": "https://nyaysevak.com/#organization" },
+    offeredBy: { "@id": "https://www.nyaysevak.com/#organization" },
   },
   // NOTE: aggregateRating + named reviews intentionally removed. Self-authored
   // review/rating schema about your own organization violates Google's review
@@ -363,7 +363,7 @@ const professionalServiceJsonLd = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://nyaysevak.com"),
+  metadataBase: new URL("https://www.nyaysevak.com"),
   title: {
     // Disambiguates the brand from similarly-spelled competitors by binding
     // the brand name to the canonical domain inside the title itself.
@@ -378,7 +378,7 @@ export const metadata: Metadata = {
   creator: "NyaySevak",
   publisher: "NyaySevak",
   alternates: {
-    canonical: "https://nyaysevak.com",
+    canonical: "https://www.nyaysevak.com",
   },
   robots: {
     index: true,
@@ -394,14 +394,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://nyaysevak.com",
+    url: "https://www.nyaysevak.com",
     siteName: "NyaySevak",
     title: "NyaySevak - Best Lawyer Consultation & Legal Services in India",
     description:
       "Find verified lawyers near you. Online consultation, court representation across Supreme Court, High Courts, District Courts & Tribunals. 29 practice areas. Free first consultation.",
     images: [
       {
-        url: "https://nyaysevak.com/logo.png",
+        url: "https://www.nyaysevak.com/logo.png",
         width: 800,
         height: 800,
         alt: "NyaySevak - Best Legal Services Platform in India - Find Lawyers Near You",
@@ -415,7 +415,7 @@ export const metadata: Metadata = {
     title: "NyaySevak - Find Best Lawyers Near You in India | Free Consultation",
     description:
       "India's trusted legal platform. Verified lawyers for all courts. Criminal, divorce, property, corporate, cyber crime & more. Free first consultation.",
-    images: ["https://nyaysevak.com/logo.png"],
+    images: ["https://www.nyaysevak.com/logo.png"],
   },
   verification: {
     google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "",

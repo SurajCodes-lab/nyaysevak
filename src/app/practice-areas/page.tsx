@@ -11,13 +11,13 @@ export const metadata: Metadata = {
     "Find the best lawyers in India across 29 practice areas. Criminal lawyer, divorce lawyer, property lawyer, corporate lawyer, cyber crime lawyer, bail lawyer, CBI/ED/NDPS defense, consumer protection, IP, tax & more. Verified advocates with free first consultation.",
   keywords:
     "best lawyer India, criminal lawyer near me, divorce lawyer India, property lawyer, corporate lawyer, cyber crime lawyer, bail lawyer, CBI lawyer, ED lawyer, NDPS lawyer, consumer court lawyer, IP lawyer, tax lawyer India, family lawyer, advocate near me, legal services India, NyaySevak",
-  alternates: { canonical: "https://nyaysevak.com/practice-areas" },
+  alternates: { canonical: "https://www.nyaysevak.com/practice-areas" },
   openGraph: {
     title: "29 Practice Areas - Find Best Lawyers in India | NyaySevak",
     description:
       "Find verified lawyers across 29 practice areas. Criminal, civil, family, corporate, IP, tax, cyber crime, CBI, ED, NDPS & more. Free first consultation.",
     type: "website",
-    url: "https://nyaysevak.com/practice-areas",
+    url: "https://www.nyaysevak.com/practice-areas",
   },
 };
 
@@ -47,13 +47,13 @@ const breadcrumbJsonLd = {
       "@type": "ListItem",
       position: 1,
       name: "Home",
-      item: "https://nyaysevak.com",
+      item: "https://www.nyaysevak.com",
     },
     {
       "@type": "ListItem",
       position: 2,
       name: "Practice Areas",
-      item: "https://nyaysevak.com/practice-areas",
+      item: "https://www.nyaysevak.com/practice-areas",
     },
   ],
 };
@@ -63,9 +63,9 @@ const practiceAreaItemListJsonLd = {
   "@type": "CollectionPage",
   name: "29 Practice Areas - Best Lawyers for Every Legal Need in India",
   description: "Complete A-Z legal services across every domain of Indian law with verified lawyers.",
-  url: "https://nyaysevak.com/practice-areas",
-  isPartOf: { "@id": "https://nyaysevak.com/#website" },
-  provider: { "@id": "https://nyaysevak.com/#organization" },
+  url: "https://www.nyaysevak.com/practice-areas",
+  isPartOf: { "@id": "https://www.nyaysevak.com/#website" },
+  provider: { "@id": "https://www.nyaysevak.com/#organization" },
   mainEntity: {
     "@type": "ItemList",
     itemListOrder: "https://schema.org/ItemListOrderAscending",
@@ -75,7 +75,7 @@ const practiceAreaItemListJsonLd = {
       position: i + 1,
       name: area.title,
       description: area.description,
-      url: `https://nyaysevak.com/practice-areas/${area.slug}`,
+      url: `https://www.nyaysevak.com/practice-areas/${area.slug}`,
     })),
   },
 };

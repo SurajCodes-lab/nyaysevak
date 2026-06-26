@@ -99,13 +99,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       "free legal consultation",
     ].join(", "),
     alternates: {
-      canonical: `https://nyaysevak.com/practice-areas/${slug}`,
+      canonical: `https://www.nyaysevak.com/practice-areas/${slug}`,
     },
     openGraph: {
       title: `${v.primary} India 2026 — Verified Advocates, Free Consultation | NyaySevak.com`,
       description: `Verified ${primaryLower}s across India. ${area.description}. Free first consultation on NyaySevak.`,
       type: "website",
-      url: `https://nyaysevak.com/practice-areas/${slug}`,
+      url: `https://www.nyaysevak.com/practice-areas/${slug}`,
     },
     twitter: {
       card: "summary_large_image",
@@ -192,9 +192,9 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ s
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://nyaysevak.com/" },
-      { "@type": "ListItem", position: 2, name: "Practice Areas", item: "https://nyaysevak.com/practice-areas" },
-      { "@type": "ListItem", position: 3, name: area.title, item: `https://nyaysevak.com/practice-areas/${slug}` },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.nyaysevak.com/" },
+      { "@type": "ListItem", position: 2, name: "Practice Areas", item: "https://www.nyaysevak.com/practice-areas" },
+      { "@type": "ListItem", position: 3, name: area.title, item: `https://www.nyaysevak.com/practice-areas/${slug}` },
     ],
   };
 
@@ -203,12 +203,12 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ s
     "@type": "LegalService",
     name: `Best ${area.title} Lawyers in India - NyaySevak`,
     description: content?.detailedOverview[0] || area.description,
-    url: `https://nyaysevak.com/practice-areas/${slug}`,
+    url: `https://www.nyaysevak.com/practice-areas/${slug}`,
     areaServed: { "@type": "Country", name: "India" },
     provider: {
       "@type": "ProfessionalService",
       name: "NyaySevak",
-      url: "https://nyaysevak.com",
+      url: "https://www.nyaysevak.com",
       telephone: "+91-9868666715",
       address: { "@type": "PostalAddress", addressLocality: "New Delhi", addressRegion: "Delhi", addressCountry: "IN" },
     },
@@ -266,14 +266,14 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ s
     "@context": "https://schema.org",
     "@type": "WebPage",
     name: `Best ${area.title} Lawyer in India`,
-    url: `https://nyaysevak.com/practice-areas/${slug}`,
+    url: `https://www.nyaysevak.com/practice-areas/${slug}`,
     dateModified: "2026-04-01", // stable — bump only when content actually changes (see sitemap.ts)
     inLanguage: "en-IN",
     isAccessibleForFree: true,
     reviewedBy: {
       "@type": "Organization",
       name: desk?.name ?? "NyaySevak Legal Team",
-      url: `https://nyaysevak.com/authors/${deskForPractice(slug)}`,
+      url: `https://www.nyaysevak.com/authors/${deskForPractice(slug)}`,
       knowsAbout: desk?.expertise ?? [],
     },
     creditText: `NyaySevak - ${area.title} Legal Services India`,

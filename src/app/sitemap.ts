@@ -4,6 +4,7 @@ import { practiceAreas } from "@/data/practice-areas";
 import { highCourts, tribunalGroups, districtCourts } from "@/data/courts";
 import { platformFeatures } from "@/data/features";
 import { cities, cityPracticeSlugs } from "@/data/cities";
+import { cityPracticeContent } from "@/data/city-practice-content";
 import { articles } from "@/data/insights";
 import { authors } from "@/data/authors";
 import { glossaryTerms } from "@/data/legal-glossary";
@@ -121,14 +122,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  // City × practice-area landing pages — high local-intent long-tail
+  // City × practice-area landing pages — high local-intent long-tail.
+  // IMPORTANT: only emit combos that actually have hand-written content. The
+  // page route calls notFound() for any combo missing a cityPracticeContent
+  // entry (returns HTTP 404), so listing every city×practice would advertise
+  // ~75 URLs that 404. A sitemap full of "Submitted URL not found (404)" entries
+  // erodes Google's trust in the entire sitemap and wastes crawl budget —
+  // directly harming indexation of the pages that ARE good. Filter to 200-only.
   const cityPracticePages: MetadataRoute.Sitemap = cities.flatMap((city) =>
-    cityPracticeSlugs.map((practice) => ({
-      url: `${BASE_URL}/lawyers/${city.slug}/${practice}`,
-      lastModified: corePageDate,
-      changeFrequency: "weekly" as const,
-      priority: 0.7,
-    }))
+    cityPracticeSlugs
+      .filter((practice) => Boolean(cityPracticeContent[`${city.slug}__${practice}`]))
+      .map((practice) => ({
+        url: `${BASE_URL}/lawyers/${city.slug}/${practice}`,
+        lastModified: corePageDate,
+        changeFrequency: "weekly" as const,
+        priority: 0.7,
+      }))
   );
 
   // Week 6: Insight articles (long-form pillar content)

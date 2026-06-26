@@ -11,7 +11,7 @@ import { reviews, aggregateRatingValue, aggregateRatingCount } from "@/data/revi
 const reviewSchema = {
   "@context": "https://schema.org",
   "@type": "LegalService",
-  "@id": "https://nyaysevak.com/#organization",
+  "@id": "https://www.nyaysevak.com/#organization",
   name: "NyaySevak",
   aggregateRating: {
     "@type": "AggregateRating",

@@ -127,7 +127,7 @@ export default async function CityHubPage({ params }: { params: Promise<{ city: 
       },
       { "@type": "OpeningHoursSpecification", dayOfWeek: "Sunday", opens: "10:00", closes: "18:00" },
     ],
-    parentOrganization: { "@id": "https://nyaysevak.com/#organization" },
+    parentOrganization: { "@id": "https://www.nyaysevak.com/#organization" },
     sameAs: [
       "https://www.facebook.com/nyaysevak",
       "https://www.linkedin.com/company/nyaysevak",

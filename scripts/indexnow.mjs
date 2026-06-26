@@ -13,10 +13,10 @@
 //
 // Usage:
 //   node scripts/indexnow.mjs                 # uses SITE_URL default
-//   SITE_URL=https://nyaysevak.com node scripts/indexnow.mjs
+//   SITE_URL=https://www.nyaysevak.com node scripts/indexnow.mjs
 // Runs automatically after a production build via the guarded "postbuild" script.
 
-const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || process.env.SITE_URL || "https://nyaysevak.com").replace(/\/+$/, "");
+const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || process.env.SITE_URL || "https://www.nyaysevak.com").replace(/\/+$/, "");
 const KEY = "9f2c7b1e4a6d8c3f5e0b7a9d1c4f6e83";
 const KEY_LOCATION = `${SITE_URL}/${KEY}.txt`;
 const HOST = new URL(SITE_URL).host;

@@ -4,7 +4,7 @@ export const dynamic = "force-static";
 export async function GET() {
   const body = `/* TEAM */
 NyaySevak Editorial Team
-  Site: https://nyaysevak.com
+  Site: https://www.nyaysevak.com
   Location: New Delhi, India
 
 NyaySevak Legal Team — Editorial Counsel

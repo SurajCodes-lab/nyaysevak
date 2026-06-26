@@ -11,11 +11,11 @@ export const metadata: Metadata = {
     "Find verified lawyers for Supreme Court, all 25 High Courts, 700+ District Courts, NCLT, NGT, RERA, NCDRC & 20+ Tribunals across India. Book court representation with expert advocates. Free first consultation.",
   keywords:
     "Supreme Court advocate, Supreme Court lawyer India, High Court lawyer, District Court lawyer near me, NCLT lawyer, NGT lawyer, RERA lawyer, tribunal lawyer India, court lawyer near me, find advocate for court, legal representation India, bail lawyer court, NyaySevak",
-  alternates: { canonical: "https://nyaysevak.com/courts" },
+  alternates: { canonical: "https://www.nyaysevak.com/courts" },
   openGraph: {
     title: "Find Lawyers for Any Court in India | NyaySevak",
     description: "Verified lawyers for Supreme Court, 25 High Courts, 700+ District Courts & all Tribunals. Free first consultation.",
-    url: "https://nyaysevak.com/courts",
+    url: "https://www.nyaysevak.com/courts",
     type: "website",
   },
 };
@@ -24,8 +24,8 @@ const breadcrumbJsonLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://nyaysevak.com" },
-    { "@type": "ListItem", position: 2, name: "Courts", item: "https://nyaysevak.com/courts" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.nyaysevak.com" },
+    { "@type": "ListItem", position: 2, name: "Courts", item: "https://www.nyaysevak.com/courts" },
   ],
 };
 
@@ -34,8 +34,8 @@ const courtItemListJsonLd = {
   "@type": "CollectionPage",
   name: "Court Coverage - Find Lawyers for Any Court in India",
   description: "Pan-India court coverage with verified lawyers for Supreme Court, High Courts, District Courts, and Tribunals.",
-  url: "https://nyaysevak.com/courts",
-  isPartOf: { "@id": "https://nyaysevak.com/#website" },
+  url: "https://www.nyaysevak.com/courts",
+  isPartOf: { "@id": "https://www.nyaysevak.com/#website" },
   mainEntity: {
     "@type": "ItemList",
     itemListOrder: "https://schema.org/ItemListOrderDescending",
@@ -46,14 +46,14 @@ const courtItemListJsonLd = {
         position: i + 1,
         name: court.name,
         description: `Lawyers for ${court.name} - Jurisdiction: ${court.jurisdiction}`,
-        url: `https://nyaysevak.com/courts/${court.slug}`,
+        url: `https://www.nyaysevak.com/courts/${court.slug}`,
       })),
       ...tribunalGroups.map((tribunal, i) => ({
         "@type": "ListItem",
         position: highCourts.length + i + 1,
         name: `${tribunal.title} Tribunals`,
         description: `Lawyers for ${tribunal.title} Tribunals - ${tribunal.items.join(", ")}`,
-        url: `https://nyaysevak.com/courts/${tribunal.slug}`,
+        url: `https://www.nyaysevak.com/courts/${tribunal.slug}`,
       })),
     ],
   },

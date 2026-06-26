@@ -12,14 +12,14 @@ export const metadata: Metadata = {
   keywords:
     "court fee calculator India, court fee Delhi, court fee Maharashtra, court fee Karnataka, court fee Tamil Nadu, ad valorem court fee, civil suit court fee, court fees act 1870, e-stamping court fee, NyaySevak",
   alternates: {
-    canonical: "https://nyaysevak.com/legal-tools/court-fee-calculator",
+    canonical: "https://www.nyaysevak.com/legal-tools/court-fee-calculator",
   },
   openGraph: {
     title: "Court Fee Calculator India 2026 — State-wise | NyaySevak.com",
     description:
       "Compute Indian civil-suit court fees in seconds. State-wise ad-valorem schedule for Delhi, Maharashtra, Karnataka, Tamil Nadu, U.P. and beyond.",
     type: "website",
-    url: "https://nyaysevak.com/legal-tools/court-fee-calculator",
+    url: "https://www.nyaysevak.com/legal-tools/court-fee-calculator",
   },
 };
 
@@ -63,9 +63,9 @@ const breadcrumbJsonLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://nyaysevak.com/" },
-    { "@type": "ListItem", position: 2, name: "Legal Tools", item: "https://nyaysevak.com/legal-tools" },
-    { "@type": "ListItem", position: 3, name: "Court Fee Calculator", item: "https://nyaysevak.com/legal-tools/court-fee-calculator" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.nyaysevak.com/" },
+    { "@type": "ListItem", position: 2, name: "Legal Tools", item: "https://www.nyaysevak.com/legal-tools" },
+    { "@type": "ListItem", position: 3, name: "Court Fee Calculator", item: "https://www.nyaysevak.com/legal-tools/court-fee-calculator" },
   ],
 };
 
@@ -73,7 +73,7 @@ const webApplicationJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebApplication",
   name: "Court Fee Calculator India",
-  url: "https://nyaysevak.com/legal-tools/court-fee-calculator",
+  url: "https://www.nyaysevak.com/legal-tools/court-fee-calculator",
   applicationCategory: "FinanceApplication",
   operatingSystem: "Web",
   description: "Free online court fee calculator for India. State-wise ad-valorem schedule under the Court Fees Act 1870.",

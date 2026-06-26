@@ -11,11 +11,11 @@ export const metadata: Metadata = {
     "Best legal services in India for individuals & businesses. Online lawyer consultation, find & hire verified advocates, document drafting, corporate legal advisory, compliance management, contract management, IP registration, litigation support. Free first consultation.",
   keywords:
     "legal services India, lawyer consultation online, find lawyer near me, best advocate India, corporate legal advisory, compliance management, contract management, IP management, B2B legal services, B2C legal services, online lawyer India, legal help online, hire lawyer online, verified lawyer India, affordable legal services, free legal consultation",
-  alternates: { canonical: "https://nyaysevak.com/services" },
+  alternates: { canonical: "https://www.nyaysevak.com/services" },
   openGraph: {
     title: "Legal Services India - B2B & B2C Solutions | NyaySevak",
     description: "India's most comprehensive legal services platform. Lawyer consultation, document services, corporate advisory & more. Free first consultation.",
-    url: "https://nyaysevak.com/services",
+    url: "https://www.nyaysevak.com/services",
     type: "website",
   },
 };
@@ -24,8 +24,8 @@ const breadcrumbJsonLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://nyaysevak.com" },
-    { "@type": "ListItem", position: 2, name: "Services", item: "https://nyaysevak.com/services" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.nyaysevak.com" },
+    { "@type": "ListItem", position: 2, name: "Services", item: "https://www.nyaysevak.com/services" },
   ],
 };
 
@@ -34,9 +34,9 @@ const itemListJsonLd = {
   "@type": "CollectionPage",
   name: "Legal Services India - B2B & B2C Solutions",
   description: "Comprehensive legal services for individuals and businesses across India.",
-  url: "https://nyaysevak.com/services",
-  isPartOf: { "@id": "https://nyaysevak.com/#website" },
-  provider: { "@id": "https://nyaysevak.com/#organization" },
+  url: "https://www.nyaysevak.com/services",
+  isPartOf: { "@id": "https://www.nyaysevak.com/#website" },
+  provider: { "@id": "https://www.nyaysevak.com/#organization" },
   mainEntity: {
     "@type": "ItemList",
     itemListOrder: "https://schema.org/ItemListOrderDescending",
@@ -46,7 +46,7 @@ const itemListJsonLd = {
       position: i + 1,
       name: service.title,
       description: service.description,
-      url: `https://nyaysevak.com/services/${service.slug}`,
+      url: `https://www.nyaysevak.com/services/${service.slug}`,
     })),
   },
 };

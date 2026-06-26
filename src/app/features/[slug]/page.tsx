@@ -41,13 +41,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       "free legal consultation",
     ].join(", "),
     alternates: {
-      canonical: `https://nyaysevak.com/features/${slug}`,
+      canonical: `https://www.nyaysevak.com/features/${slug}`,
     },
     openGraph: {
       title: `${feature.title} - India's Best Legal Platform | NyaySevak`,
       description: `${feature.description}. Free first consultation with verified lawyers.`,
       type: "website",
-      url: `https://nyaysevak.com/features/${slug}`,
+      url: `https://www.nyaysevak.com/features/${slug}`,
     },
     twitter: {
       card: "summary_large_image",
@@ -280,9 +280,9 @@ export default async function FeatureDetailPage({ params }: { params: Promise<{ 
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://nyaysevak.com/" },
-      { "@type": "ListItem", position: 2, name: "Features", item: "https://nyaysevak.com/features" },
-      { "@type": "ListItem", position: 3, name: feature.title, item: `https://nyaysevak.com/features/${slug}` },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.nyaysevak.com/" },
+      { "@type": "ListItem", position: 2, name: "Features", item: "https://www.nyaysevak.com/features" },
+      { "@type": "ListItem", position: 3, name: feature.title, item: `https://www.nyaysevak.com/features/${slug}` },
     ],
   };
 
