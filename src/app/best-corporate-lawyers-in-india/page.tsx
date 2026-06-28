@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import IntentLandingRenderer from "@/components/IntentLandingRenderer";
 import { intentLandings } from "@/data/intent-landings";
 import { SITE_URL } from "@/lib/site";
+import RelatedLinks from "@/components/RelatedLinks";
+import { relatedGroupsForPractice } from "@/data/internal-links";
 import { notFound } from "next/navigation";
 
 const SLUG = "best-corporate-lawyers-in-india";
@@ -87,6 +89,7 @@ export default function Page() {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }} />
       )}
       <IntentLandingRenderer data={data} />
+      <RelatedLinks groups={relatedGroupsForPractice("corporate-business")} />
     </>
   );
 }

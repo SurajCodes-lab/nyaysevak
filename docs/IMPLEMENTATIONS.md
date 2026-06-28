@@ -32,10 +32,32 @@ pages and advanced on-page SEO. Google Search Console state confirmed by owner:
 | 04 | Sitemap: drop 75 soft-404 city×practice URLs | ✅ Shipped (code) | [04-sitemap-soft-404-fix.md](./04-sitemap-soft-404-fix.md) |
 | 03 | Off-page authority + brand-disambiguation playbook (incl. old #02) | ✅ Delivered (owner executes off-site) | [03-offpage-authority-and-brand-playbook.md](./03-offpage-authority-and-brand-playbook.md) |
 
-> Implementation **02** (brand disambiguation) was merged into **03** — disambiguation
-> is won off-site (GBP, Wikidata, real social profiles, consistent NAP), not by adding
-> more on-page schema. One open code follow-up: confirm the 4 `sameAs` social profiles
-> in `src/app/layout.tsx` are real & owned; if not, drop/replace them.
+> Implementation **02** (brand disambiguation) was merged into **06** (on-site) + **03**
+> (off-site). One open code follow-up blocking a clean batch deploy: confirm the 4
+> `sameAs` social profiles in `src/app/layout.tsx` are real & owned; if not, drop/replace.
+
+---
+
+## Next-phase plan (SEO Architect) — specs ready, awaiting batch implementation + deploy
+
+See **[SEO-ARCHITECTURE-ROADMAP.md](./SEO-ARCHITECTURE-ROADMAP.md)** for the full phased
+plan, sequencing, KPIs, and the bi-weekly reanalyse→reimplement loop.
+
+| Spec | Title | Phase | Effort | Impact | Status |
+|------|-------|-------|--------|--------|--------|
+| [05](./05-internal-linking-architecture.md) | Internal-linking architecture (crawl-equity mesh) | 2 | M | 🔥 High | ✅ Implemented (11 templates) |
+| [06](./06-brand-entity-onsite-hardening.md) | Brand entity on-site hardening | 2 | S | Med | ✅ Implemented (1 open: `sameAs`) |
+| [07](./07-winnable-content-expansion.md) | Winnable content expansion | 3 | L | 🔥 High | ⚙️ Infra-ready, content pending |
+| [08](./08-aeo-geo-deepening.md) | AEO/GEO deepening | 4 | S | Med | 🟡 City-hub FAQ done; hubs pending |
+| [09](./09-core-web-vitals-technical.md) | Core Web Vitals & technical hygiene | 5 | M | Med | 🔎 Audit-gated (common fixes already in place) |
+
+### Batch deploy contents (this session, in-code, build-verified)
+- **Spec 05** — `src/data/internal-links.ts` (new) + `<RelatedLinks>` on 11 templates.
+- **Spec 06** — `layout.tsx` org entity hardening (`legalName`, `disambiguatingDescription`, `brand`, `knowsLanguage`).
+- **Spec 08 (8A)** — `FAQPage` + visible FAQ on the city hub (26 pages).
+
+**Open decision before deploy:** confirm the 4 `sameAs` social handles are real & owned (Spec 06).
+**Not code (run after):** 07 content production, 09 Lighthouse audit, 03 off-page (owner-led).
 
 ---
 

@@ -18,6 +18,8 @@ import {
 } from "@/data/practice-area-cross-links";
 import { getVariantsForPractice } from "@/data/practice-area-keyword-variants";
 import { authorsBySlug } from "@/data/authors";
+import RelatedLinks from "@/components/RelatedLinks";
+import { relatedGroupsForPractice } from "@/data/internal-links";
 import { notFound } from "next/navigation";
 
 // Week 15: maps the five city-mapped practice areas to their India-wide
@@ -890,6 +892,7 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ s
           </div>
         </div>
       </section>
+      <RelatedLinks groups={relatedGroupsForPractice(slug)} />
     </main>
   );
 }

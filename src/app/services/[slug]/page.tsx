@@ -14,6 +14,8 @@ import { practiceAreas } from "@/data/practice-areas";
 import { cities } from "@/data/cities";
 import { trimToSentences } from "@/lib/quick-answer";
 import { webPageSpeakableJsonLd } from "@/lib/schema";
+import RelatedLinks from "@/components/RelatedLinks";
+import { relatedGroupsForService } from "@/data/internal-links";
 import { notFound } from "next/navigation";
 
 // Week 5: Map each service slug → 4 relevant practice-area slugs (mid-body cross-link)
@@ -627,6 +629,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
           </div>
         </div>
       </section>
+      <RelatedLinks groups={relatedGroupsForService(slug)} />
     </main>
   );
 }

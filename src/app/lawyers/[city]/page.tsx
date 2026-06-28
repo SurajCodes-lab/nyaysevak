@@ -2,10 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ContactButton from "@/components/ContactButton";
 import AnswerBlock from "@/components/AnswerBlock";
-import { ArrowRight, MapPin, Landmark, Scale, Briefcase, ChevronRight } from "lucide-react";
+import { ArrowRight, MapPin, Landmark, Scale, Briefcase, ChevronRight, HelpCircle } from "lucide-react";
 import { cities, cityPracticeSlugs, cityPracticeLabels } from "@/data/cities";
 import { cityPracticeContent } from "@/data/city-practice-content";
 import { SITE_URL } from "@/lib/site";
+import RelatedLinks from "@/components/RelatedLinks";
+import { relatedGroupsForCity } from "@/data/internal-links";
+import { faqPageJsonLd } from "@/lib/schema";
 import { notFound } from "next/navigation";
 
 export function generateStaticParams() {
@@ -140,6 +143,28 @@ export default async function CityHubPage({ params }: { params: Promise<{ city: 
   const quickAnswer =
     `NyaySevak connects you with Bar-Council-verified lawyers in ${city.name}, ${city.state} for criminal, civil, family and divorce, property, and corporate matters. Our ${city.name} advocates practise before ${city.highCourt.name} and the city's district courts, cover all ${city.neighbourhoods.length}+ localities, and offer a free first consultation with fees agreed upfront.`;
 
+  // Week 15 (Phase 4 / AEO): genuine FAQ derived from the city's own data — no
+  // fabrication. Gives the hub structured Q&A for AI-Overview / featured-snippet
+  // eligibility (the hub previously had Quick Answer but no FAQPage).
+  const cityFaqs = [
+    {
+      question: `How do I find a verified lawyer in ${city.name}?`,
+      answer: `Tell NyaySevak about your matter and we match you within 24 hours with a Bar-Council-verified ${city.name} lawyer who practises before ${city.highCourt.name} and the relevant district court. Your first consultation is free and all fees are agreed upfront.`,
+    },
+    {
+      question: `What does a lawyer consultation cost in ${city.name}?`,
+      answer: `Your first consultation through NyaySevak is free. After that, ${city.name} lawyers charge based on the matter, seniority, and court; fees are always agreed upfront before any work begins.`,
+    },
+    {
+      question: `Which courts do ${city.name} lawyers handle?`,
+      answer: `NyaySevak's ${city.name} advocates appear before ${city.highCourt.name}, ${city.districtCourts.slice(0, 3).join(", ")}, and the specialty and tribunal forums relevant to your case.`,
+    },
+    {
+      question: `Can I consult a ${city.name} lawyer online?`,
+      answer: `Yes. You can consult a verified ${city.name} lawyer by phone or video through NyaySevak, or meet in person — whichever suits your matter and timeline.`,
+    },
+  ];
+
   const webPageJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
@@ -159,6 +184,7 @@ export default async function CityHubPage({ params }: { params: Promise<{ city: 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageJsonLd(cityFaqs)) }} />
 
       {/* Hero */}
       <section className="relative bg-dark-deep pt-28 sm:pt-32 pb-16 sm:pb-20 overflow-hidden dark-section-depth">
@@ -339,6 +365,27 @@ export default async function CityHubPage({ params }: { params: Promise<{ city: 
           </div>
         </div>
       </section>
+      {/* FAQ — visible content mirroring the FAQPage schema (AEO) */}
+      <section className="bg-dark py-14 sm:py-16">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-xl sm:text-2xl font-heading font-bold text-white mb-8">
+            Frequently asked questions — lawyers in {city.name}
+          </h2>
+          <div className="space-y-4">
+            {cityFaqs.map((f) => (
+              <details key={f.question} className="group rounded-xl border border-white/[0.06] bg-white/[0.015] p-5">
+                <summary className="cursor-pointer list-none text-sm sm:text-base font-semibold text-white flex items-start gap-2">
+                  <HelpCircle className="mt-0.5 h-4 w-4 shrink-0 text-gold" strokeWidth={1.5} />
+                  {f.question}
+                </summary>
+                <p className="mt-3 pl-6 text-sm text-gray-400 leading-relaxed">{f.answer}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <RelatedLinks groups={relatedGroupsForCity(citySlug)} />
     </main>
   );
 }

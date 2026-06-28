@@ -6,6 +6,7 @@ import { glossaryTerms } from "@/data/legal-glossary";
 import { practiceAreas } from "@/data/practice-areas";
 import AnswerBlock from "@/components/AnswerBlock";
 import RelatedLinks from "@/components/RelatedLinks";
+import { relatedGroupsForGlossary } from "@/data/internal-links";
 import TrustStrip from "@/components/TrustStrip";
 import LeadCTA from "@/components/LeadCTA";
 import {
@@ -80,11 +81,6 @@ export default async function GlossaryTermPage({
   const related = term.relatedPracticeAreaSlugs
     .map((s) => practiceAreas.find((p) => p.slug === s))
     .filter(Boolean) as typeof practiceAreas;
-
-  // Sibling terms in the same category — internal linking between glossary leaves.
-  const siblings = glossaryTerms
-    .filter((t) => t.category === term.category && t.slug !== term.slug)
-    .slice(0, 8);
 
   // Build a small, genuine FAQ so the page has structured Q&A (AEO) and clears
   // the thin-content bar — derived from the term's own data, no fabrication.
@@ -227,17 +223,11 @@ export default async function GlossaryTermPage({
         </div>
       </section>
 
-      {/* Sibling terms + back to glossary */}
+      {/* Mesh: related terms, practice areas, guides + back to glossary */}
       <RelatedLinks
-        heading="More terms in this category"
+        heading="Explore related pages"
         groups={[
-          {
-            title: term.category,
-            items: siblings.map((s) => ({
-              label: plainTerm(s.term),
-              href: `/legal-glossary/${s.slug}`,
-            })),
-          },
+          ...relatedGroupsForGlossary(slug),
           {
             title: "Reference",
             items: [{ label: "Full Legal Glossary (A–Z)", href: "/legal-glossary" }],

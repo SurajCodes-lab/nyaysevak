@@ -11,6 +11,8 @@ import ContactButton from "@/components/ContactButton";
 import AnswerBlock from "@/components/AnswerBlock";
 import LeadCTA from "@/components/LeadCTA";
 import TableOfContents, { TocItem } from "@/components/TableOfContents";
+import RelatedLinks from "@/components/RelatedLinks";
+import { relatedGroupsForInsight } from "@/data/internal-links";
 import { SITE_URL } from "@/lib/site";
 import { trimToSentences } from "@/lib/quick-answer";
 
@@ -489,6 +491,7 @@ export default async function InsightArticlePage({ params }: { params: Promise<{
           )}
         </div>
       </article>
+      <RelatedLinks groups={relatedGroupsForInsight(slug)} />
     </main>
   );
 }

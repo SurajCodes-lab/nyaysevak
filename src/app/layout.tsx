@@ -37,6 +37,19 @@ const organizationJsonLd = {
   "@type": ["Organization", "LegalService"],
   "@id": "https://www.nyaysevak.com/#organization",
   name: "NyaySevak",
+  legalName: "NyaySevak",
+  // Week 15: explicit entity disambiguation. An established competitor,
+  // nyayasevak.com (extra "a"), dominates the brand SERP and Google conflates
+  // the two near-identical names. disambiguatingDescription is the schema field
+  // designed to separate same-name entities; brand + knowsLanguage add corroborating
+  // entity facts. The real disambiguation lever is OFF-SITE (GBP, Wikidata, owned
+  // social profiles, consistent NAP) — see docs/06 + docs/03.
+  disambiguatingDescription:
+    "NyaySevak (nyaysevak.com) is an online platform that matches individuals and " +
+    "businesses across India with verified, independent advocates. It is operated " +
+    "independently and is not affiliated with any similarly named service.",
+  knowsLanguage: ["en-IN", "hi-IN"],
+  brand: { "@type": "Brand", name: "NyaySevak", url: "https://www.nyaysevak.com" },
   // Week 8: expanded alternateName so search engines and AI engines
   // associate every common user-vocabulary brand variant with this entity.
   // Only genuine forms of OUR OWN brand. The previous list included competitor

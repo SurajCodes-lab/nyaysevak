@@ -10,6 +10,8 @@ import {
 import { cities, cityPracticeSlugs, cityPracticeLabels, type CityPracticeSlug } from "@/data/cities";
 import { cityPracticeContent } from "@/data/city-practice-content";
 import { SITE_URL } from "@/lib/site";
+import RelatedLinks from "@/components/RelatedLinks";
+import { relatedGroupsForCityPractice } from "@/data/internal-links";
 import { notFound } from "next/navigation";
 
 export function generateStaticParams() {
@@ -670,6 +672,7 @@ export default async function CityPracticePage(
           </div>
         </div>
       </section>
+      <RelatedLinks groups={relatedGroupsForCityPractice(citySlug, practice)} />
     </main>
   );
 }
