@@ -55,6 +55,7 @@ plan, sequencing, KPIs, and the bi-weekly reanalyse→reimplement loop.
 - **Spec 05** — `src/data/internal-links.ts` (new) + `<RelatedLinks>` on 11 templates.
 - **Spec 06** — `layout.tsx` org entity hardening (`legalName`, `disambiguatingDescription`, `brand`, `knowsLanguage`).
 - **Spec 08 (8A)** — `FAQPage` + visible FAQ on the city hub (26 pages).
+- **[Impl 10](./10-llms-txt-geo-accuracy-fix.md)** — `llms.txt` / `llms-full.txt` GEO accuracy fix: real city URLs only (killed ~150 dead-URL listings), correct counts/schema, entity-disambiguation statement.
 
 **Open decision before deploy:** confirm the 4 `sameAs` social handles are real & owned (Spec 06).
 **Not code (run after):** 07 content production, 09 Lighthouse audit, 03 off-page (owner-led).

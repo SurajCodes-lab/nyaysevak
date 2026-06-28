@@ -6,7 +6,8 @@ import { SITE_URL } from "@/lib/site";
 import { practiceAreas } from "@/data/practice-areas";
 import { allServices } from "@/data/services";
 import { highCourts } from "@/data/courts";
-import { cities } from "@/data/cities";
+import { cities, cityPracticeSlugs, cityPracticeLabels } from "@/data/cities";
+import { cityPracticeContent } from "@/data/city-practice-content";
 import { articles } from "@/data/insights";
 import { glossaryTerms } from "@/data/legal-glossary";
 
@@ -67,15 +68,18 @@ ${highCourts
   .join("\n")}
 `;
 
-  const citiesBlock = `## City × practice intent pages
+  const citiesBlock = `## City × practice pages
 
-NyaySevak runs intent-aliased landing pages for major Indian metros across the highest-volume practice areas. URL pattern: ${SITE_URL}/{practice}-lawyer-in-{city}
+NyaySevak runs city × practice-area pages for major Indian metros. URL pattern: ${SITE_URL}/lawyers/{city}/{practice}. Only combinations with full hand-written local content are published and listed here; other combinations are intentionally not live.
 
 ${cities
-  .map(
-    (c) =>
-      `- ${c.name} (${c.state}): /criminal-lawyer-in-${c.slug}, /divorce-lawyer-in-${c.slug}, /property-lawyer-in-${c.slug}, /corporate-lawyer-in-${c.slug}, /cyber-crime-lawyer-in-${c.slug}, /tax-lawyer-in-${c.slug}`,
-  )
+  .map((c) => {
+    const links = cityPracticeSlugs
+      .filter((p) => cityPracticeContent[`${c.slug}__${p}`])
+      .map((p) => `${SITE_URL}/lawyers/${c.slug}/${p} (${cityPracticeLabels[p].keyword})`);
+    return links.length ? `- ${c.name} (${c.state}): ${links.join(", ")}` : null;
+  })
+  .filter(Boolean)
   .join("\n")}
 `;
 
