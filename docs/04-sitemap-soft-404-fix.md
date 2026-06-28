@@ -1,8 +1,18 @@
-# Implementation 04 — Remove 75 Soft-404 URLs from the Sitemap
+# Implementation 04 — Sitemap city×practice filter (defensive)
 
-**Status:** ✅ Shipped
-**Date:** 2026-06-26
-**Severity addressed:** ⚠️ Medium-High — sitemap trust drag that suppresses indexation of good pages.
+**Status:** ✅ Shipped · **Date:** 2026-06-26
+
+> ## ⚠️ CORRECTION (2026-06-26, later same day)
+> The original version of this doc claimed this fix removed **75 soft-404 URLs**. **That
+> was wrong** — it came from a `grep -c "slug:"` miscount that counted the nested
+> `highCourt.slug` of each city as a separate city, inflating 11 cities → "26".
+>
+> **The truth:** there are **11 cities**, and **all 11 × 5 = 55 combos have content** and
+> return 200. The pre-fix sitemap listed those same 55 URLs — **none were 404**. This
+> change therefore removed **0 URLs**. It is still worth keeping as a **defensive /
+> future-proofing filter** (a city added later without content can never enter the
+> sitemap), but it fixed no live problem. The real impression fix was **Implementation 01
+> (canonical host)**. Apologies for the inaccuracy; the numbers below are corrected.
 
 ---
 

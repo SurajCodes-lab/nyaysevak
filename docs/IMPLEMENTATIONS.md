@@ -55,7 +55,13 @@ plan, sequencing, KPIs, and the bi-weekly reanalyse→reimplement loop.
 - **Spec 05** — `src/data/internal-links.ts` (new) + `<RelatedLinks>` on 11 templates.
 - **Spec 06** — `layout.tsx` org entity hardening (`legalName`, `disambiguatingDescription`, `brand`, `knowsLanguage`).
 - **Spec 08 (8A)** — `FAQPage` + visible FAQ on the city hub (26 pages).
-- **[Impl 10](./10-llms-txt-geo-accuracy-fix.md)** — `llms.txt` / `llms-full.txt` GEO accuracy fix: real city URLs only (killed ~150 dead-URL listings), correct counts/schema, entity-disambiguation statement.
+- **[Impl 10](./10-llms-txt-geo-accuracy-fix.md)** — `llms.txt`/`llms-full.txt` GEO accuracy fix: canonical city URLs, correct counts/schema, entity statement.
+- **[Impl 11](./11-sameas-dead-link-fix.md)** — `sameAs` dead-link cleanup (removed 404 Twitter/X + LinkedIn; kept live FB + IG).
+- **[Impl 12](./12-hub-faqs.md)** — reusable `FaqBlock` + `FAQPage` on `/courts`, `/legal-tools`, statistics hub.
+- **[Impl 13](./13-image-optimization.md)** — re-encoded heavy PNG-as-jpg assets → real JPEG; **~2.9 MB saved** (hero −94%, courts −90%, contact −78%).
+
+### ⚠️ Corrections this session (see [CORRECTIONS.md](./CORRECTIONS.md))
+- City count was miscounted (26 → **actually 11**). Consequences: **Impl 04 removed 0 URLs, not 75** (kept as defensive filter); **Diagnosis Cause 4 retracted** (no thin/404 city pages exist — all 55 combos have content); **"75 missing city pages" do not exist** — content expansion = net-new cities/guides, not gap-filling. Total site = **326 pages**.
 
 **Open decision before deploy:** confirm the 4 `sameAs` social handles are real & owned (Spec 06).
 **Not code (run after):** 07 content production, 09 Lighthouse audit, 03 off-page (owner-led).

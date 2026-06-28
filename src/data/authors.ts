@@ -75,8 +75,7 @@ export const authors: Author[] = [
       "NyaySevak Court Coverage — Supreme Court, 25 High Courts, 700+ District Courts, all major Tribunals",
     ],
     socialProfiles: [
-      { platform: "LinkedIn", url: "https://www.linkedin.com/company/nyaysevak" },
-      { platform: "Twitter", url: "https://www.twitter.com/nyaysevak" },
+      // LinkedIn + Twitter removed (both 404). Only live profiles retained.
       { platform: "Facebook", url: "https://www.facebook.com/nyaysevak" },
     ],
   },
@@ -123,7 +122,7 @@ export const authors: Author[] = [
       "NyaySevak FIR Quashing Guide",
       "NyaySevak Criminal Trial Walk-through (10-stage)",
     ],
-    socialProfiles: [{ platform: "LinkedIn", url: "https://www.linkedin.com/company/nyaysevak" }],
+    socialProfiles: [],
   },
   {
     slug: "matrimonial-family-desk",
@@ -168,7 +167,7 @@ export const authors: Author[] = [
       "NyaySevak Contested-Divorce Pathway",
       "NyaySevak Child-Custody Primer",
     ],
-    socialProfiles: [{ platform: "LinkedIn", url: "https://www.linkedin.com/company/nyaysevak" }],
+    socialProfiles: [],
   },
   {
     slug: "property-real-estate-desk",
@@ -215,7 +214,7 @@ export const authors: Author[] = [
       "NyaySevak RERA Procedure Walk-through",
       "NyaySevak Partition-Suit Guide",
     ],
-    socialProfiles: [{ platform: "LinkedIn", url: "https://www.linkedin.com/company/nyaysevak" }],
+    socialProfiles: [],
   },
   {
     slug: "corporate-commercial-desk",
@@ -262,7 +261,7 @@ export const authors: Author[] = [
       "NyaySevak IBC Application Walk-through",
       "NyaySevak Shareholder-Agreement Primer",
     ],
-    socialProfiles: [{ platform: "LinkedIn", url: "https://www.linkedin.com/company/nyaysevak" }],
+    socialProfiles: [],
   },
 ];
 

@@ -70,20 +70,21 @@ Vakilsearch, LegalKart) have thousands of referring domains and years of trust.
 With ~0 referring domains, even our *winnable* informational pages cannot crack
 page 1 yet. **This is the real long-term ceiling.** No on-page change removes it.
 
-### ⚠️ Cause 4 — Sitemap advertises 75 URLs that return HTTP 404 *(FIXED, see 04)*
-**Correction to an earlier estimate:** the city×practice grid is **26 cities × 5
-practice slugs = 130 pages**, NOT the ~884 first estimated (an early grep
-miscounted the slug list). Of those 130:
-- **55 combos (11 cities × 5 practices)** have rich, genuinely differentiated
-  hand-written content (verified — e.g. the Delhi criminal-law page cites specific
-  court complexes, BNSS sections, and local fee bands; this is **not** doorway spam).
-- **75 combos** have no content, so the route calls `notFound()` → **HTTP 404**.
+### ✅ Cause 4 — RETRACTED: there is no thin/404 city-page problem
+**This "cause" was a measurement error and does not exist.** Two successive `grep`
+miscounts inflated the city count (counting each city's nested `highCourt.slug` and
+`districtCourtsSlug` as separate cities). The verified reality:
 
-The bug: `sitemap.ts` listed **all 130** city×practice URLs, so **75 of them
-return 404 to Googlebot**. A sitemap full of "Submitted URL not found (404)"
-entries erodes Google's trust in the *entire* sitemap and wastes crawl budget —
-which suppresses indexation of the pages that ARE good. Total real pages on the
-site is ~**326**, not 1,000+.
+- **11 cities** (Delhi, Mumbai, Bangalore, Chennai, Hyderabad, Pune, Kolkata,
+  Ahmedabad, Jaipur, Noida, Gurgaon) — confirmed by counting top-level `name:` fields.
+- **5 city-practice verticals** → **11 × 5 = 55 combos**, and **all 55 have rich,
+  hand-written, genuinely differentiated content** (verified). **Zero 404s, zero thin
+  pages.** The city×practice section is actually a *strength*, not a liability.
+- Total real pages on the site: **326**.
+
+So the only real causes are **1 (canonical — fixed)**, **2 (brand twin)**, and
+**3 (zero off-page authority)**. Implementation 04 (sitemap filter) was kept as
+defensive future-proofing but corrected nothing live. See `docs/CORRECTIONS.md`.
 
 ---
 

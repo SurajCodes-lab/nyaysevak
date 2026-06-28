@@ -133,7 +133,6 @@ export default async function CityHubPage({ params }: { params: Promise<{ city: 
     parentOrganization: { "@id": "https://www.nyaysevak.com/#organization" },
     sameAs: [
       "https://www.facebook.com/nyaysevak",
-      "https://www.linkedin.com/company/nyaysevak",
       "https://www.instagram.com/nyaysevak",
     ],
   };

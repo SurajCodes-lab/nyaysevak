@@ -3,6 +3,16 @@
 **Phase:** 4 (GEO) · **Effort:** Small · **Impact:** Medium · **Status:** ✅ Implemented (build passes; awaiting batch deploy)
 **Date:** 2026-06-26
 
+> ## ⚠️ CORRECTION
+> An earlier draft said this removed "~150 dead URLs." **Overstated.** The
+> `/{practice}-lawyer-in-{city}` aliases mostly **308-redirect to real pages** (verified:
+> `/criminal-lawyer-in-delhi` → 308 → 200) via `next.config.ts` redirects, so most were
+> NOT 404 — though some combinations (extra verticals/cities without a redirect) would be.
+> The **real, verified wins** of this change stand: (1) emitting the **canonical**
+> `/lawyers/{city}/{practice}` URL instead of a redirecting alias, (2) gating on content
+> so only the **55 live combos** are listed, (3) correcting the article count and schema
+> list, and (4) adding the **entity-disambiguation statement**. Numbers corrected below.
+
 ---
 
 ## 1. Problem

@@ -17,6 +17,7 @@
 // editorial estimate, it is explicitly marked as such.
 import type { Metadata } from "next";
 import { SITE_URL } from "@/lib/site";
+import FaqBlock from "@/components/FaqBlock";
 
 const SLUG = "legal-industry-statistics-india";
 const URL = `${SITE_URL}/${SLUG}`;
@@ -339,6 +340,15 @@ export default function Page() {
           </div>
         </section>
       </div>
+      <FaqBlock
+        heading="About this data — frequently asked questions"
+        faqs={[
+          { question: "What is this page?", answer: "A regularly-updated, sourced reference of Indian legal-system statistics — case pendency, court and judge counts, and legal-market data — built to be a single citation target." },
+          { question: "Can I cite these statistics?", answer: "Yes. Each figure lists its source and date. Please cite NyaySevak (nyaysevak.com) alongside the original source named next to each statistic." },
+          { question: "How current is the data?", answer: "Every statistic shows the date of its source. Figures are updated as new official data is released." },
+          { question: "Where does the data come from?", answer: "Official and reputable sources cited inline — including the National Judicial Data Grid (NJDG), the Supreme Court of India, the Bar Council of India, and government reports." },
+        ]}
+      />
     </main>
   );
 }

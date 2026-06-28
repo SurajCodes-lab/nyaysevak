@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Calculator, ArrowRight, Clock, Scale, Search, FileText } from "lucide-react";
+import FaqBlock from "@/components/FaqBlock";
 
 export const metadata: Metadata = {
   title: "Free Legal Tools & Calculators India [2026] | NyaySevak.com",
@@ -111,6 +112,15 @@ export default function LegalToolsIndexPage() {
           </div>
         </div>
       </section>
+      <FaqBlock
+        heading="Legal tools & calculators — frequently asked questions"
+        faqs={[
+          { question: "Are NyaySevak's legal calculators free?", answer: "Yes. Every calculator — court fee, stamp duty, limitation period, motor-accident compensation, and cheque-bounce claim — is free, instant, and needs no signup." },
+          { question: "How accurate are the calculators?", answer: "They use published statutory schedules (court-fee acts, state stamp-duty rates, the Limitation Act) current for 2026, so they give a reliable estimate. Confirm edge cases with a lawyer." },
+          { question: "Do I need an account to use them?", answer: "No. All tools run in your browser with no login and no personal data required." },
+          { question: "Can a lawyer help interpret the results?", answer: "Yes — book a free first consultation and a verified lawyer will explain how the numbers apply to your specific matter." },
+        ]}
+      />
     </main>
   );
 }

@@ -163,9 +163,11 @@ const organizationJsonLd = {
   ],
   slogan: "Defending Your Rights",
   sameAs: [
+    // Week 15: removed twitter/x.com/nyaysevak and linkedin.com/company/nyaysevak
+    // — both return 404 (the profiles do not exist). A sameAs pointing at a dead
+    // URL is a negative trust signal and weakens entity disambiguation. Only
+    // profiles confirmed live (HTTP 200) remain. Re-add others once created.
     "https://www.facebook.com/nyaysevak",
-    "https://www.twitter.com/nyaysevak",
-    "https://www.linkedin.com/company/nyaysevak",
     "https://www.instagram.com/nyaysevak",
   ],
   contactPoint: [
@@ -368,9 +370,11 @@ const professionalServiceJsonLd = {
     },
   ],
   sameAs: [
+    // Week 15: removed twitter/x.com/nyaysevak and linkedin.com/company/nyaysevak
+    // — both return 404 (the profiles do not exist). A sameAs pointing at a dead
+    // URL is a negative trust signal and weakens entity disambiguation. Only
+    // profiles confirmed live (HTTP 200) remain. Re-add others once created.
     "https://www.facebook.com/nyaysevak",
-    "https://www.twitter.com/nyaysevak",
-    "https://www.linkedin.com/company/nyaysevak",
     "https://www.instagram.com/nyaysevak",
   ],
 };
@@ -422,9 +426,10 @@ export const metadata: Metadata = {
     ],
   },
   twitter: {
+    // site/creator "@nyaysevak" removed — the X/Twitter handle 404s (does not
+    // exist). Pointing card attribution at a dead handle adds no value; re-add
+    // once the account is created.
     card: "summary_large_image",
-    site: "@nyaysevak",
-    creator: "@nyaysevak",
     title: "NyaySevak - Find Best Lawyers Near You in India | Free Consultation",
     description:
       "India's trusted legal platform. Verified lawyers for all courts. Criminal, divorce, property, corporate, cyber crime & more. Free first consultation.",

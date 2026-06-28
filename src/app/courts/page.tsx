@@ -4,6 +4,7 @@ import ContactButton from "@/components/ContactButton";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { highCourts, tribunalGroups, districtCourts } from "@/data/courts";
+import FaqBlock from "@/components/FaqBlock";
 
 export const metadata: Metadata = {
   title: "Find Lawyers for Any Court in India - Supreme Court, High Courts, District Courts | NyaySevak",
@@ -186,6 +187,15 @@ export default function CourtsPage() {
           </p>
         </div>
       </section>
+      <FaqBlock
+        heading="Courts in India — frequently asked questions"
+        faqs={[
+          { question: "Which courts does NyaySevak cover?", answer: "The Supreme Court of India, all 25 High Courts, 700+ District Courts across 36 states and union territories, and 20+ tribunals including NCLT, NCLAT, NGT, RERA, NCDRC, ITAT, CAT, DRT and SAT." },
+          { question: "How do I find a lawyer for a specific court?", answer: "Tell NyaySevak your court and matter; we match you within 24 hours with a verified advocate who regularly appears before that court. Your first consultation is free." },
+          { question: "Can NyaySevak help with Supreme Court or High Court matters?", answer: "Yes — we connect you with advocates-on-record and senior counsel for the Supreme Court, and with High Court practitioners for writs, appeals, bail, and quashing petitions." },
+          { question: "What does court representation cost in India?", answer: "It varies by court, matter, and counsel seniority. The first consultation is free; full representation is quoted upfront after that consultation." },
+        ]}
+      />
     </main>
   );
 }
