@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   const hc = highCourts.find((c) => c.slug === slug);
   if (hc) return {
-    title: `Best ${hc.name} Lawyers - Verified Advocates in ${hc.jurisdiction} | NyaySevak`,
+    title: `${hc.name.replace(/ HC$/, " High Court")} Lawyers — Free Consultation`,
     description: `Find the best verified lawyers for ${hc.name} in ${hc.jurisdiction}. Writ petitions, appeals, bail, criminal, civil, family, corporate & tax matters. ${hc.benches.length > 0 ? `Benches: ${hc.benches.join(", ")}. ` : ""}Free first consultation. Call +91-9868666715.`,
     keywords: `${hc.name} lawyer, best advocate ${hc.jurisdiction}, ${hc.jurisdiction} lawyer, high court lawyer ${hc.jurisdiction}, bail lawyer ${hc.jurisdiction}, writ petition lawyer, ${hc.name} advocate, NyaySevak, free legal consultation`,
     alternates: { canonical: `https://www.nyaysevak.com/courts/${slug}` },
@@ -53,7 +53,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   const dc = districtCourts.find((d) => d.slug === slug);
   if (dc) return {
-    title: `Best District Court Lawyers in ${dc.state} - ${dc.districts.length} Courts Covered | NyaySevak`,
+    title: `District Court Lawyers in ${dc.state}`,
     description: `Find the best verified lawyers for all ${dc.districts.length} district courts in ${dc.state}. ${dc.districts.slice(0, 5).join(", ")} & more. Criminal, civil, family, property, consumer & labour cases. Free first consultation.`,
     keywords: `district court lawyer ${dc.state}, best lawyer ${dc.districts[0]}, advocate near me ${dc.state}, ${dc.districts.slice(0, 3).map(d => `lawyer ${d}`).join(", ")}, NyaySevak, free legal consultation`,
     alternates: { canonical: `https://www.nyaysevak.com/courts/${slug}` },
@@ -72,7 +72,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   const tr = tribunalGroups.find((t) => t.slug === slug);
   if (tr) return {
-    title: `Best ${tr.title} Tribunal Lawyers in India - Expert Advocates | NyaySevak`,
+    title: `${tr.title} Tribunal Lawyers in India`,
     description: `Find the best verified lawyers for ${tr.title} tribunals in India. ${tr.items.slice(0, 4).join(", ")} & more. Expert tribunal representation. Free first consultation. Call +91-9868666715.`,
     keywords: `${tr.title} tribunal lawyer, ${tr.items.slice(0, 3).map(i => `${i} lawyer`).join(", ")}, best tribunal advocate India, NyaySevak, free legal consultation`,
     alternates: { canonical: `https://www.nyaysevak.com/courts/${slug}` },

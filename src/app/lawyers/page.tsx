@@ -8,7 +8,7 @@ import { SITE_URL } from "@/lib/site";
 const url = `${SITE_URL}/lawyers`;
 
 export const metadata: Metadata = {
-  title: "Find Lawyers by City in India - Verified Advocates in Top Metros | NyaySevak",
+  title: "Find Lawyers by City in India",
   description:
     "Find the best verified lawyers across India's top cities — Delhi, Mumbai, Bangalore, Chennai, Hyderabad, Pune, Kolkata, and Ahmedabad. Criminal, civil, divorce, property, and corporate advocates. Free first consultation.",
   keywords:

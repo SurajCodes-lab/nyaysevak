@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: { params: Promise<{ city: str
   // Keywords expanded with the per-practice variants ("criminal lawyer Delhi",
   // "divorce lawyer Delhi" etc.) and neighbourhood-level near-me variants.
   // Week 15: tightened + de-duplicated brand (root layout adds "| NyaySevak.com").
-  const title = `Best Lawyers in ${city.name} — Verified Advocates, Free Consultation`;
+  const title = `Best Lawyers in ${city.name} — Free Consultation`;
   const description = `Find the best verified lawyers near you in ${city.name}, ${city.state}. Criminal lawyer, civil lawyer, divorce lawyer, property lawyer, corporate lawyer & more. Covering ${city.highCourt.name} and all ${city.name} district courts. Free first consultation.`;
   const url = `${SITE_URL}/lawyers/${citySlug}`;
   const cityLower = city.name.toLowerCase();

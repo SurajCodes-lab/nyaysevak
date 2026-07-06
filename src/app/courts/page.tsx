@@ -7,7 +7,7 @@ import { highCourts, tribunalGroups, districtCourts } from "@/data/courts";
 import FaqBlock from "@/components/FaqBlock";
 
 export const metadata: Metadata = {
-  title: "Find Lawyers for Any Court in India - Supreme Court, High Courts, District Courts | NyaySevak",
+  title: "Find Lawyers for Any Court in India",
   description:
     "Find verified lawyers for Supreme Court, all 25 High Courts, 700+ District Courts, NCLT, NGT, RERA, NCDRC & 20+ Tribunals across India. Book court representation with expert advocates. Free first consultation.",
   keywords:

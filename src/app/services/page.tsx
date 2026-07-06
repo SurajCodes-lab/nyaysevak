@@ -6,7 +6,7 @@ import { ArrowRight } from "lucide-react";
 import { allServices } from "@/data/services";
 
 export const metadata: Metadata = {
-  title: "Legal Services India - Lawyer Consultation, Corporate Advisory & More | NyaySevak",
+  title: "Legal Services in India — Lawyers & Advisory",
   description:
     "Best legal services in India for individuals & businesses. Online lawyer consultation, find & hire verified advocates, document drafting, corporate legal advisory, compliance management, contract management, IP registration, litigation support. Free first consultation.",
   keywords:

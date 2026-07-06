@@ -51,7 +51,7 @@ export async function generateMetadata({
   const ref = term.statutoryReference ? `, ${term.statutoryReference}` : "";
   const url = `${SITE_URL}/legal-glossary/${term.slug}`;
   return {
-    title: `What is ${name}? Meaning${ref} [2026] | NyaySevak`,
+    title: `What is ${name}? Meaning [2026]`,
     description: term.shortDefinition.slice(0, 158),
     keywords: `what is ${name}, ${name} meaning, ${name} in law India, ${name} definition${
       term.statutoryReference ? `, ${term.statutoryReference}` : ""

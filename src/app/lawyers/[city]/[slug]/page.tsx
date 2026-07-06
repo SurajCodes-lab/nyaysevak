@@ -44,7 +44,7 @@ export async function generateMetadata(
   // NB: the root layout applies a `%s | NyaySevak.com` title template, so we do
   // NOT append the brand here (the old title did, producing a double "| NyaySevak
   // | NyaySevak.com" suffix that ate SERP character budget).
-  const title = `Best ${label.title} in ${city.name} — Free Consultation`;
+  const title = `Best ${label.title} in ${city.name}`;
   // Week 15: description now leads with the "near you" + advocate variant that
   // the title dropped, then folds in the page-specific lead.
   const descAltKw = label.keyword.replace("lawyer", "advocate");

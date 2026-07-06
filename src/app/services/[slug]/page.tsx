@@ -52,7 +52,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const catKeyword = service.category === "b2c" ? "online" : "corporate";
   // Title pattern: keyword-first → year → CTA → brand (under ~60 chars).
   return {
-    title: `${service.title} India [2026] — Free Consultation | NyaySevak.com`,
+    // Week 17: keyword-first, single-brand (layout adds `| NyaySevak.com`; the
+    // hardcoded ".com" here was doubling it and truncating the SERP title).
+    title: `${service.title} in India — Free Consultation`,
     description: `Best ${service.title.toLowerCase()} ${catLabel.toLowerCase()} in India. ${service.bullets.join(". ")}. Verified professionals across all courts. Free first consultation in 60 seconds. Call +91-9868666715.`,
     keywords: [
       `${service.title.toLowerCase()} India`,

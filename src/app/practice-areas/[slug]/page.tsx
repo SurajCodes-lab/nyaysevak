@@ -81,7 +81,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   // suffix uses the canonical .com to disambiguate from similarly-spelled
   // competitors.
   return {
-    title: `${v.primary} India [2026] — Free Consultation | NyaySevak.com`,
+    // Week 17: title trimmed to keyword-first, single-brand. The layout applies
+    // `%s | NyaySevak.com`, so hardcoding ".com" here produced a DOUBLE ".com"
+    // suffix (verified live) that truncated the title and crushed CTR (GSC showed
+    // money pages ranking well but CTR ~1%). No brand here — the template adds it.
+    title: `${v.primary} in India — Free Consultation`,
     description: `Looking for the best ${primaryLower} in India? ${overview}. Verified ${v.variants[1]?.toLowerCase() ?? primaryLower} across Supreme Court, High Courts & 700+ District Courts. ${area.services.slice(0, 3).join(", ")}. Free first consultation in 60 seconds. Call +91-9868666715.`,
     keywords: [
       ...v.variants.map((vv) => vv.toLowerCase()),

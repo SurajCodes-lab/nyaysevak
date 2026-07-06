@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Features from "@/components/Features";
 
 export const metadata: Metadata = {
-  title: "Platform Features - Verified Lawyer Matching, Consultation Booking & Legal Resources | NyaySevak",
+  title: "Platform Features — Verified Lawyer Matching",
   description:
     "NyaySevak platform features: Bar Council verified lawyer matching, instant consultation booking, comprehensive legal guides, court information database, secure document storage, WhatsApp integration & 24/7 support. Get matched with the right lawyer for your case.",
   keywords:

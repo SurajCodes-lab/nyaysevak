@@ -5,7 +5,7 @@ import ContactButton from "@/components/ContactButton";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About NyaySevak - India's #1 Legal Services Platform | Verified Lawyers Across All Courts",
+  title: "About NyaySevak — Verified Lawyer Platform",
   description:
     "NyaySevak is India's most trusted legal platform connecting you with verified lawyers across Supreme Court, 25 High Courts, 700+ District Courts & all Tribunals. 29 practice areas, transparent pricing, free first consultation. Serving individuals & businesses pan-India.",
   keywords:

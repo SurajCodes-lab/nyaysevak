@@ -6,7 +6,7 @@ import { BookOpen, MapPin, ShieldCheck, ArrowRight, ChevronRight, Search } from 
 import { practiceAreas as practiceAreasData } from "@/data/practice-areas";
 
 export const metadata: Metadata = {
-  title: "29 Practice Areas - Best Lawyers for Every Legal Need in India | NyaySevak",
+  title: "29 Practice Areas of Indian Law",
   description:
     "Find the best lawyers in India across 29 practice areas. Criminal lawyer, divorce lawyer, property lawyer, corporate lawyer, cyber crime lawyer, bail lawyer, CBI/ED/NDPS defense, consumer protection, IP, tax & more. Verified advocates with free first consultation.",
   keywords:
