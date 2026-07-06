@@ -11,6 +11,8 @@ import { highCourts, tribunalGroups, districtCourts } from "@/data/courts";
 import { allServices } from "@/data/services";
 import { webPageSpeakableJsonLd } from "@/lib/schema";
 import { SITE_URL } from "@/lib/site";
+import RelatedLinks from "@/components/RelatedLinks";
+import { relatedGroupsForCourt } from "@/data/internal-links";
 import { notFound } from "next/navigation";
 
 type CourtType = "hc" | "dc" | "tribunal";
@@ -791,6 +793,8 @@ export default async function CourtDetailPage({ params }: { params: Promise<{ sl
           </div>
         </div>
       </section>
+
+      <RelatedLinks groups={relatedGroupsForCourt(slug)} />
     </main>
   );
 }

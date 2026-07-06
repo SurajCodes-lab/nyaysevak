@@ -19,6 +19,7 @@ import { glossaryTerms } from "./legal-glossary";
 import { cities, cityPracticeSlugs, cityPracticeLabels, type CityPracticeSlug } from "./cities";
 import { cityPracticeContent } from "./city-practice-content";
 import { practiceAreaToServices, practiceAreaToCityPracticeSlug } from "./practice-area-cross-links";
+import { highCourts, tribunalGroups, districtCourts } from "./courts";
 
 // ── O(1) lookup maps (built once at module load) ──
 const practiceBySlug = new Map(practiceAreas.map((p) => [p.slug, p]));
@@ -191,5 +192,43 @@ export function relatedGroupsForCityPractice(citySlug: string, cps: CityPractice
     group(`${cityPracticeLabels[cps].title}s in other cities`, sameInOtherCities, 6),
     group("Understand this area", [pillar, ...guides], 4),
     group("Key terms", gloss, 5)
+  );
+}
+
+/** /courts/[slug] — High Courts, tribunal groups, and district-court pages.
+ *  These were the largest orphan set (reachable only from the sitemap); this
+ *  meshes them to city hubs, practice pillars, sibling courts, and guides. */
+export function relatedGroupsForCourt(slug: string): RelatedLinksGroup[] {
+  const hc = highCourts.find((c) => c.slug === slug);
+  const tr = tribunalGroups.find((t) => t.slug === slug);
+  const dc = districtCourts.find((d) => d.slug === slug);
+  if (!hc && !tr && !dc) return [];
+
+  // Cities whose High Court is this court → their city hubs (HC pages only).
+  const cityLinks = hc
+    ? cities.filter((c) => c.highCourt?.slug === slug).map((c) => cityItem(c.slug))
+    : [];
+
+  // The five highest-volume practice pillars.
+  const practiceLinks = cityPracticeSlugs.map((p) => practiceItem(p));
+
+  // Sibling courts of the same type.
+  const otherCourts: (RelatedLinkItem | null)[] = hc
+    ? highCourts.filter((c) => c.slug !== slug).slice(0, 8).map((c) => ({ label: c.name, href: `/courts/${c.slug}` }))
+    : tr
+      ? tribunalGroups.filter((t) => t.slug !== slug).map((t) => ({ label: t.title, href: `/courts/${t.slug}` }))
+      : districtCourts.filter((d) => d.slug !== slug).slice(0, 8).map((d) => ({ label: `${d.state} District Courts`, href: `/courts/${d.slug}` }));
+
+  // A few general procedure guides.
+  const guides = articles
+    .filter((a) => a.relatedPracticeAreaSlugs.some((s) => (cityPracticeSlugs as readonly string[]).includes(s)))
+    .slice(0, 4)
+    .map((a) => articleItem(a.slug));
+
+  return groups(
+    group("Lawyers in cities under this court", cityLinks, 6),
+    group("Practice areas", practiceLinks, 5),
+    group("Other courts", otherCourts, 8),
+    group("Related guides", guides, 4)
   );
 }
