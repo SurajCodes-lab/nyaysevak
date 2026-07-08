@@ -3367,6 +3367,517 @@ export const articles: Article[] = [
     relatedServiceSlugs: ["lawyer-consultation", "find-hire-lawyers", "legal-aid"],
     relatedCitySlugs: ["delhi", "mumbai", "bangalore", "pune"],
   },
+  // ============================================================
+  // Week 18 focus-matter guides (high-value, high-intent)
+  // ============================================================
+  {
+    slug: "nclt-ibc-insolvency-recovery-india-2026",
+    title: "NCLT & IBC: How Businesses Recover Money Through Insolvency",
+    metaTitle: "NCLT & IBC Process India 2026 — Section 7/9 Petitions & Recovery",
+    metaDescription:
+      "How the NCLT and the Insolvency & Bankruptcy Code work for creditors in India: Section 7, 9 and 10 petitions, the CIRP timeline, moratorium, the CoC, oppression & mismanagement, and how to recover money owed by a company.",
+    excerpt:
+      "When a company owes you money or is being mismanaged, the National Company Law Tribunal (NCLT) and the Insolvency & Bankruptcy Code are the most powerful tools available. This guide explains the Section 7, 9 and 10 routes, the corporate-insolvency timeline, and what a creditor should actually do.",
+    category: "Corporate & Commercial",
+    authorSlug: "corporate-commercial-desk",
+    reviewerSlug: "nyaysevak-legal-team",
+    datePublished: "2026-07-07",
+    dateModified: "2026-07-07",
+    readTimeMinutes: 12,
+    primaryKeyword: "NCLT IBC process India",
+    secondaryKeywords: [
+      "section 9 IBC operational creditor",
+      "NCLT lawyer",
+      "corporate insolvency resolution process",
+      "how to recover money from a company",
+      "oppression and mismanagement NCLT",
+      "IBC petition procedure",
+    ],
+    hero: {
+      eyebrow: "Corporate & Commercial · Guide",
+      title: "NCLT & IBC: How Businesses Recover Money Through Insolvency",
+      subtitle:
+        "The Section 7, 9 and 10 routes, the corporate-insolvency timeline, the moratorium and Committee of Creditors, and the oppression & mismanagement remedy — explained for creditors.",
+    },
+    intro: [
+      "The National Company Law Tribunal (NCLT) is the specialised forum for company-law and insolvency disputes in India, and the Insolvency and Bankruptcy Code, 2016 (IBC) is the framework that lets creditors force a defaulting company into a time-bound resolution or recovery process. For a business owed a serious sum, an IBC petition is often the single most effective pressure point available.",
+      "Unlike an ordinary recovery suit that can drag on for years, the IBC works on a strict clock and hands control of the defaulting company to an independent professional. The mere admission of a petition can concentrate a debtor's mind faster than any other remedy — which is why the IBC is used as much for leverage as for liquidation.",
+      "This guide explains who can file, the three petition routes (Sections 7, 9 and 10), the Corporate Insolvency Resolution Process (CIRP) timeline, the moratorium and Committee of Creditors, and the separate oppression-and-mismanagement remedy for shareholders. It is general information, not advice on your specific matter.",
+    ],
+    sections: [
+      {
+        heading: "1. What the NCLT does, and when the IBC applies",
+        body: [
+          "The NCLT hears company-law matters — incorporation disputes, oppression and mismanagement, mergers and, most importantly, corporate insolvency under the IBC. Appeals go to the National Company Law Appellate Tribunal (NCLAT) and onward to the Supreme Court.",
+          "The IBC applies where a company (the 'corporate debtor') has committed a default. The minimum default threshold to trigger the IBC is ₹1 crore. Below that, creditors must use ordinary civil recovery (see our money-recovery guide). The IBC is a collective process: once it begins, it is run for all creditors, not just the one who filed.",
+        ],
+      },
+      {
+        heading: "2. The three routes: Sections 7, 9 and 10",
+        body: [
+          "Who can file, and how, depends on the type of creditor. A financial creditor (a bank, NBFC, or anyone owed a debt with interest/time-value of money) files under Section 7. An operational creditor (a supplier, vendor, employee, or service provider owed for goods or services) must first send a demand notice under Section 8 and, if unpaid within ten days, files under Section 9. A company that is itself in default can file to initiate its own insolvency under Section 10.",
+        ],
+        bullets: [
+          "Section 7 — Financial creditor (banks, lenders): direct petition on proof of default.",
+          "Section 8 + 9 — Operational creditor (suppliers, employees): 10-day demand notice first, then petition.",
+          "Section 10 — Corporate applicant: the company initiates its own resolution.",
+          "Minimum default: ₹1 crore.",
+        ],
+      },
+      {
+        heading: "3. The CIRP timeline, moratorium and Committee of Creditors",
+        body: [
+          "Once the NCLT admits the petition, the Corporate Insolvency Resolution Process (CIRP) begins. An Interim Resolution Professional (IRP), later confirmed or replaced as the Resolution Professional (RP), takes over management of the company; the board is suspended. A moratorium under Section 14 immediately freezes all suits, recovery actions and asset transfers against the company — this is what gives the IBC its bite.",
+          "A Committee of Creditors (CoC), made up of the financial creditors, is formed and effectively controls the outcome. Resolution applicants submit plans; a plan approved by 66% of the CoC's voting share and sanctioned by the NCLT binds everyone. The CIRP is meant to conclude within 330 days including litigation. If no plan is approved, the company goes into liquidation.",
+        ],
+        bullets: [
+          "Moratorium (Section 14) freezes all claims and asset transfers the moment CIRP starts.",
+          "Management passes to an independent Resolution Professional; the board is suspended.",
+          "The Committee of Creditors (financial creditors) approves a resolution plan by 66% vote.",
+          "Outer limit: 330 days, failing which — liquidation.",
+        ],
+      },
+      {
+        heading: "4. Oppression & mismanagement — the shareholder remedy",
+        body: [
+          "The IBC is about debt. Where the problem is instead a minority shareholder being squeezed out, funds being siphoned, or the company being run to the prejudice of members or the public interest, the remedy is a petition for oppression and mismanagement under Sections 241–242 of the Companies Act, 2013, before the NCLT.",
+          "The NCLT has wide powers here: it can restrain conduct, set aside transactions, remove directors, regulate the company's affairs, or order the purchase of a member's shares. This is the route for founders and investors in a dispute over control, rather than for creditors chasing money.",
+        ],
+      },
+      {
+        heading: "5. What a creditor should actually do",
+        body: [
+          "Before filing, confirm the debt crosses ₹1 crore, that it is a genuine undisputed default (a pre-existing dispute can defeat an operational-creditor petition), and gather the paper trail — invoices, ledgers, contracts, and proof of demand. For operational creditors, the Section 8 demand notice is mandatory and is often the moment the debtor settles.",
+          "Because an admitted IBC petition is so disruptive, it frequently produces a settlement before or shortly after admission — which is a perfectly good outcome. The strategy, the drafting, and the choice between IBC pressure and an ordinary recovery suit are matters to work through with a specialist. Your case assessment on NyaySevak is free, and we match you with an advocate experienced before the NCLT.",
+        ],
+      },
+    ],
+    takeaways: [
+      "The NCLT + IBC is the most powerful recovery tool against a defaulting company, working on a strict 330-day clock with an independent professional in charge.",
+      "Financial creditors file under Section 7; operational creditors send a Section 8 notice then file under Section 9; a company can self-initiate under Section 10. The minimum default is ₹1 crore.",
+      "The Section 14 moratorium freezes all claims and asset transfers the instant CIRP begins — the source of the IBC's leverage.",
+      "The Committee of Creditors controls the outcome, approving a resolution plan by a 66% vote; no plan means liquidation.",
+      "For shareholder squeeze-outs and mismanagement, the remedy is Sections 241–242 of the Companies Act, not the IBC.",
+    ],
+    faqs: [
+      { question: "What is the minimum amount to file an IBC case?", answer: "The minimum default to trigger the Insolvency and Bankruptcy Code against a company is ₹1 crore. Below that threshold you must use ordinary civil recovery — a summary suit or a regular recovery suit — rather than the IBC." },
+      { question: "What is the difference between a financial and an operational creditor?", answer: "A financial creditor is owed a debt that carries interest or time-value of money — typically a bank or lender — and files directly under Section 7. An operational creditor is owed for goods or services (a supplier, vendor, or employee), must first send a Section 8 demand notice, and files under Section 9 if unpaid within ten days." },
+      { question: "How long does the IBC process take?", answer: "The Corporate Insolvency Resolution Process is meant to conclude within 330 days, including any litigation. In practice, an admitted petition often produces a settlement much sooner, because the moratorium and the loss of management control put intense pressure on the debtor company." },
+      { question: "What is a moratorium under the IBC?", answer: "Once the NCLT admits a petition and CIRP begins, Section 14 imposes a moratorium that freezes all suits, recovery actions, and transfers of the company's assets. This protects the company's value during resolution and is the main reason an IBC petition is such effective leverage." },
+      { question: "Can I use the NCLT if I am a minority shareholder being pushed out?", answer: "Yes, but through a different provision. Oppression and mismanagement are dealt with under Sections 241–242 of the Companies Act, 2013, before the NCLT, which can remove directors, set aside transactions, or order a buy-out of your shares. This is separate from the IBC, which deals with debt default." },
+      { question: "Do I need a lawyer to file at the NCLT?", answer: "Practically, yes — IBC and NCLT petitions are technical, and a defective petition (for example, one ignoring a pre-existing dispute) is easily dismissed. A specialist ensures the route, threshold, and evidence are right. Your case assessment on NyaySevak is free, and we match you with an advocate who practises before the NCLT." },
+    ],
+    relatedPracticeAreaSlugs: ["corporate-business", "banking-finance", "civil-law"],
+    relatedServiceSlugs: ["corporate-legal-advisory", "litigation-management", "find-hire-lawyers"],
+    relatedCitySlugs: ["delhi", "mumbai", "bangalore", "hyderabad"],
+  },
+  {
+    slug: "money-recovery-commercial-suit-india-2026",
+    title: "Money Recovery in India: Legal Notice, Summary Suit & Commercial Courts",
+    metaTitle: "Money Recovery Suit India 2026 — Order 37, Commercial Courts & Notice",
+    metaDescription:
+      "How to recover money owed in India: the legal demand notice, the Order XXXVII summary suit, the Commercial Courts Act and pre-institution mediation, cheque-bounce leverage, and choosing the fastest route to recover a debt.",
+    excerpt:
+      "When a business or person owes you money and won't pay, India gives you several routes — a legal notice, a fast-track summary suit under Order XXXVII, a commercial court, or cheque-bounce action. This guide explains each and how to choose the fastest one.",
+    category: "Civil & Litigation",
+    authorSlug: "corporate-commercial-desk",
+    reviewerSlug: "nyaysevak-legal-team",
+    datePublished: "2026-07-07",
+    dateModified: "2026-07-07",
+    readTimeMinutes: 11,
+    primaryKeyword: "money recovery suit India",
+    secondaryKeywords: [
+      "summary suit order 37 CPC",
+      "commercial courts act recovery",
+      "how to recover money legally India",
+      "legal notice for money recovery",
+      "debt recovery lawyer",
+      "pre-institution mediation commercial suit",
+    ],
+    hero: {
+      eyebrow: "Civil & Litigation · Guide",
+      title: "Money Recovery in India: Legal Notice, Summary Suit & Commercial Courts",
+      subtitle:
+        "The legal demand notice, the fast-track Order XXXVII summary suit, the Commercial Courts Act and mandatory mediation, and how to pick the quickest route to recover a debt.",
+    },
+    intro: [
+      "Recovering money that is genuinely owed to you is one of the most common commercial problems in India — and one where choosing the right route matters more than anything. The same debt can be pursued through a simple legal notice, a fast-track summary suit, a commercial court, arbitration, or (for cheques) a criminal-flavoured Section 138 action. Picking well can be the difference between recovery in months and litigation for years.",
+      "The key variables are the size of the debt, whether it rests on a clear written document (an invoice, a bill of exchange, a signed contract or acknowledgement), and whether there is a genuine dispute or just non-payment. Undisputed, document-backed debts have the fastest routes.",
+      "This guide walks through the legal notice, the Order XXXVII summary suit, the Commercial Courts Act framework with its mandatory pre-institution mediation, the cheque-bounce lever, and how to choose. It is general information, not advice on your specific matter.",
+    ],
+    sections: [
+      {
+        heading: "1. Start with a legal demand notice",
+        body: [
+          "Almost every recovery begins with a formal legal notice — a lawyer's letter stating the amount owed, the basis, and a deadline (typically 15 days) to pay before legal action. It is cheap, fast, and frequently works on its own, because it signals that you are serious and it creates a documentary record you will rely on later.",
+          "A well-drafted notice also crystallises the claim and interest, and for some routes it is a legal precondition. It is the single highest-return first step in any recovery.",
+        ],
+      },
+      {
+        heading: "2. The Order XXXVII summary suit — the fast track",
+        body: [
+          "Where the debt arises from a written contract, a bill of exchange, a promissory note, or a written acknowledgement of a liquidated (fixed) sum, you can file a summary suit under Order XXXVII of the Code of Civil Procedure. Its power is that the defendant cannot defend as of right — they must first apply for 'leave to defend' and satisfy the court there is a genuine triable issue. If they cannot, judgment is passed straightaway.",
+          "This flips the usual delay in your favour: a defendant with no real defence has nowhere to hide, and undisputed debts can be decreed far faster than in an ordinary suit. It is the route of choice for clear, document-backed money claims.",
+        ],
+        bullets: [
+          "For debts on written contracts, cheques, promissory notes, or acknowledgements of a fixed sum.",
+          "The defendant needs the court's leave to defend — no automatic defence.",
+          "No genuine triable issue → judgment straightaway.",
+        ],
+      },
+      {
+        heading: "3. The Commercial Courts Act & mandatory mediation",
+        body: [
+          "If your dispute is a 'commercial dispute' (broadly, arising out of ordinary trade or business) and its value is ₹3 lakh or more, it is governed by the Commercial Courts Act, 2015, and heard by a designated Commercial Court with a faster, case-managed procedure.",
+          "Critically, Section 12A makes pre-institution mediation mandatory before filing such a suit — unless you need urgent interim relief (for example, an injunction or attachment). Skipping mediation without an urgency plea can get your suit rejected, so this step must be planned, not overlooked.",
+        ],
+        bullets: [
+          "Applies to commercial disputes of ₹3 lakh or more.",
+          "Faster, case-managed procedure before a designated Commercial Court.",
+          "Section 12A: pre-institution mediation is mandatory unless urgent interim relief is sought.",
+        ],
+      },
+      {
+        heading: "4. The cheque-bounce lever, arbitration, and the IBC",
+        body: [
+          "If the debt is backed by a cheque that bounced, you have a powerful parallel route: a Section 138 Negotiable Instruments Act complaint, which carries the threat of criminal liability and often produces payment quickly (see our dedicated cheque-bounce guide). Where the contract has an arbitration clause, the dispute must go to arbitration instead of court, which can be faster and private.",
+          "For debts of ₹1 crore or more owed by a company, the Insolvency and Bankruptcy Code is often the strongest lever of all — the mere threat of an insolvency petition concentrates a corporate debtor's mind (see our NCLT & IBC guide). Choosing among these is a strategy decision, not a formality.",
+        ],
+      },
+      {
+        heading: "5. How to choose the fastest route",
+        body: [
+          "Match the route to the debt. A clear, document-backed fixed sum → Order XXXVII summary suit. A commercial debt of ₹3 lakh+ → Commercial Court (after mediation). A bounced cheque → add a Section 138 complaint. A company owing ₹1 crore+ → consider an IBC petition. A contract with an arbitration clause → arbitration.",
+          "Getting this right at the start avoids years of wasted litigation. A recovery specialist will pick the route, draft the notice, and preserve interest and limitation. Your case assessment on NyaySevak is free, and we match you with an advocate who handles commercial recovery.",
+        ],
+      },
+    ],
+    takeaways: [
+      "Start every recovery with a formal legal demand notice — it is cheap, fast, often works, and builds your record.",
+      "For clear, document-backed fixed debts, the Order XXXVII summary suit is the fast track: the defendant needs the court's leave to defend.",
+      "Commercial disputes of ₹3 lakh+ go to a Commercial Court under the 2015 Act, with mandatory pre-institution mediation (Section 12A) unless urgent interim relief is needed.",
+      "A bounced cheque adds a Section 138 criminal-flavoured lever; a company owing ₹1 crore+ can be pressured via the IBC; an arbitration clause forces arbitration.",
+      "Choosing the right route at the outset is the single biggest factor in how fast you recover.",
+    ],
+    faqs: [
+      { question: "What is the fastest way to recover money legally in India?", answer: "For a clear, document-backed debt of a fixed amount, the fastest route is usually a summary suit under Order XXXVII of the CPC, because the defendant cannot defend as of right and must obtain the court's leave to defend. Where a cheque is involved, a parallel Section 138 complaint often produces payment quickly." },
+      { question: "What is a summary suit under Order 37?", answer: "A summary suit is a fast-track civil recovery for debts based on written contracts, cheques, promissory notes, or written acknowledgements of a fixed sum. Unlike an ordinary suit, the defendant cannot defend automatically — they must apply for leave to defend and show a genuine triable issue, failing which judgment is passed for the claimant." },
+      { question: "Is mediation compulsory before a commercial recovery suit?", answer: "Yes. Under Section 12A of the Commercial Courts Act, 2015, pre-institution mediation is mandatory before filing a commercial suit of ₹3 lakh or more, unless the suit contemplates urgent interim relief (such as an injunction or attachment). Skipping it without an urgency plea can lead to the suit being rejected." },
+      { question: "Can I use a cheque bounce case to recover money?", answer: "Yes. If the debt is backed by a cheque that was dishonoured, a complaint under Section 138 of the Negotiable Instruments Act carries the threat of criminal liability and frequently produces faster payment than a civil suit. It can be run alongside civil recovery. See our dedicated cheque-bounce guide for the procedure and timelines." },
+      { question: "What is the minimum value for a commercial court case?", answer: "The Commercial Courts Act applies to commercial disputes with a specified value of ₹3 lakh or more. Such disputes are heard by designated Commercial Courts with a faster, case-managed procedure, and are subject to mandatory pre-institution mediation under Section 12A." },
+      { question: "Should I send a legal notice before filing a recovery suit?", answer: "In almost all cases, yes. A legal demand notice is inexpensive, often prompts payment on its own, crystallises your claim and interest, and for some routes is a precondition. It is the highest-return first step in any recovery. A lawyer can draft it correctly — your case assessment on NyaySevak is free." },
+    ],
+    relatedPracticeAreaSlugs: ["civil-law", "banking-finance", "corporate-business"],
+    relatedServiceSlugs: ["find-hire-lawyers", "litigation-management", "document-services"],
+    relatedCitySlugs: ["delhi", "mumbai", "bangalore", "chennai"],
+  },
+  {
+    slug: "co-founders-agreement-india-guide-2026",
+    title: "Co-founders' Agreement in India: Equity, Vesting, IP & Exit",
+    metaTitle: "Co-founders' Agreement India 2026 — Equity, Vesting & IP Clauses",
+    metaDescription:
+      "What a co-founders' agreement must contain in India: equity split, vesting with a cliff, roles and decision rights, IP assignment to the company, good/bad-leaver clauses, non-compete and confidentiality — and how it fits with the shareholders' agreement.",
+    excerpt:
+      "The co-founders' agreement is the single most important document a startup signs — and the one most often skipped. This guide covers equity split, vesting, roles, IP assignment, leaver clauses and exit, so founders protect the company and themselves before things go wrong.",
+    category: "Corporate & Commercial",
+    authorSlug: "corporate-commercial-desk",
+    reviewerSlug: "nyaysevak-legal-team",
+    datePublished: "2026-07-07",
+    dateModified: "2026-07-07",
+    readTimeMinutes: 11,
+    primaryKeyword: "co-founders agreement India",
+    secondaryKeywords: [
+      "founders agreement India",
+      "equity vesting schedule startup",
+      "startup co-founder equity split",
+      "IP assignment founders",
+      "good leaver bad leaver clause",
+      "founders agreement clauses",
+    ],
+    hero: {
+      eyebrow: "Corporate & Commercial · Guide",
+      title: "Co-founders' Agreement in India: Equity, Vesting, IP & Exit",
+      subtitle:
+        "Equity split, vesting with a cliff, roles and decision rights, IP assignment to the company, good/bad-leaver clauses, and how it fits with the shareholders' agreement.",
+    },
+    intro: [
+      "A co-founders' agreement is the contract that governs the relationship between the people starting a company — how equity is split, who decides what, what happens to a founder's shares if they leave, and who owns the intellectual property. It is the single most important document a startup signs, and the one most commonly postponed until a dispute makes it impossible to agree.",
+      "The reason it matters is simple: founders fall out. Without vesting, a co-founder who quits in month three can walk away with a large chunk of equity forever. Without IP assignment, the code or brand may not even belong to the company. Without leaver and decision clauses, a deadlock can paralyse the business. The agreement is cheap insurance against expensive, company-ending disputes.",
+      "This guide covers what a robust co-founders' agreement should contain in India — equity, vesting, roles, IP, leaver clauses, restrictive covenants — and how it relates to the shareholders' agreement investors will later require. It is general information, not advice on your specific arrangement.",
+    ],
+    sections: [
+      {
+        heading: "1. Equity split and vesting (with a cliff)",
+        body: [
+          "The agreement records how founder equity is divided — ideally reflecting contribution, risk, and role rather than a reflexive equal split. But the split alone is not enough. The most important protective mechanism is vesting: founders earn their equity over time (a common structure is four years with a one-year 'cliff'), so a founder who leaves early forfeits the unvested portion.",
+          "Vesting is what stops an early-departing co-founder from keeping equity they never earned, and it is what serious investors expect to see. The cliff means nothing vests in the first year, protecting the company if a founder proves to be the wrong fit early on.",
+        ],
+        bullets: [
+          "Split by contribution/role/risk, not a reflexive 50-50.",
+          "Vesting over ~4 years with a 1-year cliff (nothing vests in year one).",
+          "Unvested equity returns to the company if a founder leaves early.",
+        ],
+      },
+      {
+        heading: "2. Roles, decision rights and deadlock",
+        body: [
+          "The agreement should define each founder's role and authority, which decisions need unanimity or a super-majority (issuing shares, taking debt, selling the company, changing the business), and how day-to-day calls are made. Clear decision rights prevent the slow paralysis that kills startups where 'everyone' owns 'everything'.",
+          "Equally important is a deadlock mechanism — a pre-agreed way to break an impasse between an even number of founders (a casting vote, a mediator, or a buy-sell 'shotgun' clause). Deciding this while everyone is friendly is far easier than during a fight.",
+        ],
+      },
+      {
+        heading: "3. IP assignment — everything belongs to the company",
+        body: [
+          "Every founder must assign all intellectual property they create for the venture — code, designs, brand, content, inventions — to the company itself. This sounds obvious, but its absence is one of the most common and dangerous defects: if the IP sits personally with a founder who later leaves, the company may not own its own product, and any investor's due diligence will flag it.",
+          "The clause should be present-assignment (assigning IP as it is created), cover pre-incorporation work, and include a duty to sign further documents. Without it, the company's core asset is legally unstable.",
+        ],
+      },
+      {
+        heading: "4. Leaver clauses — good leaver vs bad leaver",
+        body: [
+          "The agreement must say what happens to a departing founder's shares. 'Good leaver / bad leaver' provisions distinguish an honourable exit (illness, mutual agreement) from a departure for cause (misconduct, breach) and set different consequences — typically, a good leaver may keep vested shares while a bad leaver can be required to sell some or all shares back, often at a lower valuation.",
+          "Coupled with vesting and a company right of first refusal on any share transfer, leaver clauses ensure that equity stays with people building the company, not with those who have exited.",
+        ],
+        bullets: [
+          "Good leaver (illness, mutual exit) vs bad leaver (misconduct, breach) — different outcomes.",
+          "Bad leavers can be required to sell shares back, often at a discount.",
+          "Pair with vesting + company/founder right of first refusal on transfers.",
+        ],
+      },
+      {
+        heading: "5. Restrictive covenants and the shareholders' agreement",
+        body: [
+          "Confidentiality is essential and fully enforceable. Non-compete and non-solicit clauses are used, but note that in India a post-employment non-compete that restrains a person's trade is generally unenforceable under Section 27 of the Indian Contract Act — so these must be drafted narrowly (protecting confidential information and soliciting of staff/clients) to have effect.",
+          "Finally, the co-founders' agreement is not the same as the shareholders' agreement (SHA) that investors will require at a funding round, which adds investor-protection terms (board seats, reserved matters, liquidation preference, drag/tag-along). A well-drafted founders' agreement anticipates the SHA so the two align. Getting all of this right is exactly the kind of matter to run past a specialist — your case assessment on NyaySevak is free.",
+        ],
+      },
+    ],
+    takeaways: [
+      "A co-founders' agreement is the most important — and most often skipped — startup document; put it in place before any dispute, not after.",
+      "Vesting over ~4 years with a 1-year cliff is the key protection: a founder who leaves early forfeits unvested equity.",
+      "Every founder must assign all IP to the company; its absence can mean the company doesn't own its own product.",
+      "Good-leaver/bad-leaver clauses, plus a right of first refusal, keep equity with those actually building the company.",
+      "In India, blanket non-competes are largely unenforceable (Section 27, Contract Act) — protect via narrow confidentiality and non-solicit clauses instead, and align the agreement with the later shareholders' agreement.",
+    ],
+    faqs: [
+      { question: "What is a co-founders' agreement?", answer: "It is the contract between the people starting a company that governs how equity is split, who makes which decisions, what happens to a founder's shares if they leave, and who owns the intellectual property. It protects both the company and the individual founders against the disputes that commonly arise as a startup grows." },
+      { question: "Why is vesting important for founders?", answer: "Vesting means founders earn their equity over time — commonly four years with a one-year cliff — rather than owning it all from day one. This prevents a co-founder who leaves early from walking away with a large stake they never earned, and it is something serious investors expect to see before they fund a company." },
+      { question: "Who owns the IP created by founders?", answer: "The company should — but only if each founder has signed an IP-assignment clause transferring all work (code, designs, brand, inventions) to the company. Without it, the intellectual property can remain personally with a founder, which destabilises the company's core asset and is a red flag in any investor due diligence." },
+      { question: "Are non-compete clauses enforceable against founders in India?", answer: "Largely not. Under Section 27 of the Indian Contract Act, an agreement that restrains a person from carrying on a lawful trade or profession is generally void, so a blanket post-exit non-compete is usually unenforceable. Confidentiality and narrowly-drafted non-solicit clauses are enforceable and are the practical way to protect the company." },
+      { question: "Is a co-founders' agreement the same as a shareholders' agreement?", answer: "No. The co-founders' agreement governs the relationship between the founders. The shareholders' agreement (SHA) is a wider document, usually required by investors at a funding round, that adds investor protections such as board seats, reserved matters, liquidation preference, and drag/tag-along rights. A good founders' agreement is drafted to align with the future SHA." },
+      { question: "When should we sign a co-founders' agreement?", answer: "As early as possible — ideally at or before incorporation, while the founders are aligned and friendly. Agreeing equity, vesting, IP, and exit terms upfront is far easier than during a dispute, and it prevents the most common company-ending fallouts. A specialist can draft it to fit your specific arrangement; your case assessment on NyaySevak is free." },
+    ],
+    relatedPracticeAreaSlugs: ["corporate-business", "intellectual-property", "civil-law"],
+    relatedServiceSlugs: ["corporate-legal-advisory", "contract-management", "document-services"],
+    relatedCitySlugs: ["bangalore", "delhi", "mumbai", "pune"],
+  },
+  {
+    slug: "high-net-worth-alimony-settlement-india-2026",
+    title: "High-Net-Worth Alimony & Settlements in India: How Amounts Are Decided",
+    metaTitle: "Alimony Settlement India 2026 — Section 25, HNW Divorce & Amounts",
+    metaDescription:
+      "How alimony and maintenance are decided in India: Section 24 and 25 HMA, the Supreme Court's Rajnesh v. Neha factors, lump-sum vs periodic, and the special issues in high-net-worth divorces — business valuation, hidden assets and one-time settlements.",
+    excerpt:
+      "In a high-net-worth divorce, the alimony settlement is the whole game. This guide explains how Indian courts decide the amount (the Rajnesh v. Neha factors), interim vs permanent maintenance, lump-sum vs periodic, and the special issues of asset valuation and disclosure.",
+    category: "Family & Matrimonial",
+    authorSlug: "matrimonial-family-desk",
+    reviewerSlug: "nyaysevak-legal-team",
+    datePublished: "2026-07-07",
+    dateModified: "2026-07-07",
+    readTimeMinutes: 11,
+    primaryKeyword: "alimony settlement India",
+    secondaryKeywords: [
+      "permanent alimony section 25 HMA",
+      "high net worth divorce India",
+      "how is alimony decided in India",
+      "one-time alimony settlement",
+      "interim maintenance section 24",
+      "Rajnesh v Neha maintenance",
+    ],
+    hero: {
+      eyebrow: "Family & Matrimonial · Guide",
+      title: "High-Net-Worth Alimony & Settlements in India: How Amounts Are Decided",
+      subtitle:
+        "Interim vs permanent maintenance, the Supreme Court's Rajnesh v. Neha factors, lump-sum vs periodic settlements, and the disclosure and valuation issues unique to affluent divorces.",
+    },
+    intro: [
+      "In most divorces the alimony question is difficult; in a high-net-worth divorce it is the whole case. Where there are businesses, real estate, investments, and a high standard of living, the settlement can dwarf every other issue — and the way it is negotiated and documented determines whether both parties move on cleanly or litigate for a decade.",
+      "Indian law does not use a fixed formula. Alimony (also called maintenance or permanent alimony) is decided on statutory factors and, since the Supreme Court's guidance in Rajnesh v. Neha, on a mandatory disclosure of each party's income, assets and liabilities. Understanding those factors — and the special problems of valuing a business and uncovering hidden assets — is essential to a fair outcome.",
+      "This guide explains interim versus permanent maintenance, how courts decide the amount, lump-sum versus periodic settlements, and the issues that make affluent divorces different. It is general information, not advice on your specific matter.",
+    ],
+    sections: [
+      {
+        heading: "1. Interim vs permanent maintenance",
+        body: [
+          "There are two distinct stages. Interim (pendente lite) maintenance under Section 24 of the Hindu Marriage Act is support paid during the case, so a spouse without independent income can sustain themselves and fund the litigation. Permanent alimony under Section 25 is the final settlement decided at or after the decree — a lump sum or a periodic payment intended to provide for the spouse going forward.",
+          "Similar provisions exist across personal laws and under Section 144 of the Bharatiya Nagarik Suraksha Sanhita (the successor to Section 125 CrPC), which provides maintenance regardless of religion. In a high-value matter, interim maintenance itself can be substantial and is often the first battleground.",
+        ],
+        bullets: [
+          "Section 24 HMA — interim (pendente lite) maintenance during the case.",
+          "Section 25 HMA — permanent alimony at/after the decree (lump sum or periodic).",
+          "Section 144 BNSS (ex-125 CrPC) — maintenance available across religions.",
+        ],
+      },
+      {
+        heading: "2. How courts decide the amount (Rajnesh v. Neha)",
+        body: [
+          "There is no fixed percentage. Courts weigh the income and earning capacity of both spouses, their assets and liabilities, the standard of living enjoyed during the marriage, the duration of the marriage, the age and health of the parties, the needs of any children, and the reasonable needs of the claimant spouse. The aim is that the dependent spouse can maintain a standard of living reasonably comparable to that during the marriage — not to punish or to equalise wealth.",
+          "The Supreme Court's decision in Rajnesh v. Neha made a detailed affidavit of assets and liabilities mandatory from both sides, precisely so that these factors are decided on real financial disclosure rather than guesswork. In a high-net-worth case, the quality and honesty of that disclosure is everything.",
+        ],
+      },
+      {
+        heading: "3. Lump-sum vs periodic settlement",
+        body: [
+          "Permanent alimony can be a one-time lump sum or a recurring monthly payment. In high-net-worth divorces a one-time lump-sum settlement is often preferred by both sides: it gives the receiving spouse security and independence, and it gives the paying spouse a clean break with no ongoing entanglement or risk of future variation.",
+          "A lump-sum settlement is usually recorded in a settlement deed and, in a mutual-consent divorce, folded into the terms placed before the court. Structuring it well — including how assets like property or shares are transferred — is where good advice pays for itself many times over.",
+        ],
+      },
+      {
+        heading: "4. The high-net-worth complications",
+        body: [
+          "Affluent divorces raise problems ordinary ones do not. A privately-held business must be valued — and valuation is contestable. Assets may be held through companies, trusts, HUFs, relatives, or offshore, making a full picture hard to obtain. One spouse may understate income or conceal assets, which is why the mandatory disclosure affidavit, and sometimes forensic accounting, matter so much.",
+          "Getting an accurate, honest financial picture is the foundation of a fair settlement; without it, the dependent spouse can be short-changed and the paying spouse can be exposed to reopening later. This is specialist work — the difference between a good and a poor outcome is often the diligence behind the numbers.",
+        ],
+        bullets: [
+          "Business valuation is contestable and often the biggest dispute.",
+          "Assets may sit in companies, trusts, HUFs, relatives' names, or offshore.",
+          "Concealment is common — the disclosure affidavit and forensic accounting are key.",
+        ],
+      },
+      {
+        heading: "5. Prenups, settlements and a clean exit",
+        body: [
+          "Prenuptial and postnuptial agreements are not yet automatically binding in India — courts treat them as a relevant factor rather than a conclusive contract — but a clearly-documented, fair settlement, especially in a mutual-consent divorce, is generally upheld and is the cleanest way to close a high-value matter.",
+          "The practical route in most amicable HNW cases is a negotiated one-time settlement recorded in a deed and presented to the court within a mutual-consent divorce, avoiding years of contested litigation. Structuring the disclosure, valuation, and settlement is exactly where a specialist adds value — your case assessment on NyaySevak is free, and we match you with an advocate experienced in high-value matrimonial settlements.",
+        ],
+      },
+    ],
+    takeaways: [
+      "Indian law has no fixed alimony formula; interim maintenance (S.24 HMA) supports a spouse during the case, and permanent alimony (S.25 HMA) is the final settlement.",
+      "Courts decide the amount on the Rajnesh v. Neha factors — income, assets, standard of living, duration of marriage, needs — and both sides must file a mandatory assets-and-liabilities affidavit.",
+      "In high-net-worth cases a one-time lump-sum settlement is often preferred, giving security to one spouse and a clean break to the other.",
+      "The hard part in affluent divorces is honest disclosure and valuation — businesses, trusts, and offshore holdings make the real financial picture difficult, so forensic diligence matters.",
+      "Prenups are not automatically binding in India, but a fair, well-documented settlement within a mutual-consent divorce is generally upheld and is the cleanest exit.",
+    ],
+    faqs: [
+      { question: "How is alimony calculated in India?", answer: "There is no fixed percentage or formula. Courts weigh both spouses' income and earning capacity, their assets and liabilities, the standard of living during the marriage, the duration of the marriage, age and health, and the needs of any children. Since Rajnesh v. Neha, both parties must file a detailed affidavit of assets and liabilities so the decision rests on real disclosure." },
+      { question: "What is the difference between interim and permanent alimony?", answer: "Interim (pendente lite) maintenance under Section 24 of the Hindu Marriage Act is paid during the case so a spouse without independent income can sustain themselves and fund the litigation. Permanent alimony under Section 25 is the final settlement decided at or after the decree — either a lump sum or a periodic payment." },
+      { question: "Is a one-time alimony settlement better than monthly payments?", answer: "In high-net-worth divorces it often is. A one-time lump-sum settlement gives the receiving spouse security and independence and gives the paying spouse a clean break with no ongoing entanglement or risk of future variation. It is usually recorded in a settlement deed and, in a mutual-consent divorce, placed before the court." },
+      { question: "What happens if my spouse hides assets in a divorce?", answer: "Concealment is a real risk in affluent divorces, which is why the Supreme Court made a full assets-and-liabilities affidavit mandatory. Where concealment is suspected, forensic accounting and tracing through companies, trusts, HUFs, and relatives' holdings can be used to build an accurate picture. An honest financial disclosure is the foundation of a fair settlement." },
+      { question: "Are prenuptial agreements valid in India?", answer: "Prenuptial and postnuptial agreements are not yet automatically binding in India — courts treat them as a relevant factor rather than a conclusive contract. However, a clearly documented, fair settlement reached during the divorce, especially in a mutual-consent case, is generally upheld by the court and is the cleanest way to conclude a high-value matter." },
+      { question: "Do I need a specialist lawyer for a high-net-worth divorce settlement?", answer: "Strongly recommended. The outcome in an affluent divorce turns on accurate valuation, honest disclosure, and careful structuring of the settlement and asset transfers — technical work where the diligence behind the numbers decides the result. Your case assessment on NyaySevak is free, and we match you with an advocate experienced in high-value matrimonial settlements." },
+    ],
+    relatedPracticeAreaSlugs: ["family-matrimonial", "civil-law", "corporate-business"],
+    relatedServiceSlugs: ["lawyer-consultation", "find-hire-lawyers", "document-services"],
+    relatedCitySlugs: ["delhi", "mumbai", "bangalore", "gurgaon"],
+  },
+  {
+    slug: "patent-registration-filing-india-process-2026",
+    title: "Patent Registration in India: Process, Cost & Timeline",
+    metaTitle: "Patent Filing India 2026 — Process, Cost, Provisional & Timeline",
+    metaDescription:
+      "How to file a patent in India: what is patentable, provisional vs complete specification, the filing forms, publication and examination request, the First Examination Report, grant and the 20-year term, plus PCT for international protection.",
+    excerpt:
+      "A patent gives you a 20-year monopoly over your invention — but only if you file it correctly and in time. This guide explains what is patentable in India, provisional vs complete filing, the process and forms, examination, grant, cost, and international protection.",
+    category: "Corporate & Commercial",
+    authorSlug: "corporate-commercial-desk",
+    reviewerSlug: "nyaysevak-legal-team",
+    datePublished: "2026-07-07",
+    dateModified: "2026-07-07",
+    readTimeMinutes: 11,
+    primaryKeyword: "patent filing India process",
+    secondaryKeywords: [
+      "how to patent an idea in India",
+      "provisional patent application India",
+      "patent registration cost India",
+      "patentability criteria India",
+      "patent process timeline",
+      "PCT international patent India",
+    ],
+    hero: {
+      eyebrow: "Corporate & Commercial · Guide",
+      title: "Patent Registration in India: Process, Cost & Timeline",
+      subtitle:
+        "What is patentable, provisional vs complete specification, the filing forms, publication and examination, grant and the 20-year term, and PCT for international protection.",
+    },
+    intro: [
+      "A patent is a legal monopoly — the exclusive right, for twenty years, to make, use and sell an invention, in exchange for disclosing how it works. For a startup or inventor, it can be the most valuable asset the business owns. But a patent is only as good as the filing behind it: file late, disclose publicly first, or draft the claims poorly, and the protection can be lost.",
+      "India's patent system is governed by the Patents Act, 1970, and administered by the Indian Patent Office. The process rewards moving early and carefully — an early filing date secures priority, a provisional application buys time, and a well-drafted specification defines exactly what you own.",
+      "This guide explains what can be patented, the difference between provisional and complete specifications, the filing and examination process, timelines and cost, and how to protect an invention internationally. It is general information, not advice on your specific invention.",
+    ],
+    sections: [
+      {
+        heading: "1. What can be patented (and what cannot)",
+        body: [
+          "To be patentable in India an invention must satisfy three tests: novelty (it must be new and not already disclosed anywhere in the world), an inventive step (it must not be obvious to a person skilled in the field), and industrial applicability (it must be capable of being made or used in an industry).",
+          "Crucially, certain things are excluded by Sections 3 and 4 of the Patents Act — including mere discoveries, abstract ideas, mathematical or business methods, computer programs per se, methods of medical treatment, and inventions contrary to public order or morality. Software and business models therefore face particular hurdles. And because novelty is destroyed by prior public disclosure, you must file before you publish, present, or sell.",
+        ],
+        bullets: [
+          "Novelty + inventive step + industrial applicability = patentable.",
+          "Excluded (S.3/4): abstract ideas, business methods, software per se, methods of treatment.",
+          "Public disclosure before filing destroys novelty — file first.",
+        ],
+      },
+      {
+        heading: "2. Provisional vs complete specification",
+        body: [
+          "You can file a provisional specification first — a preliminary description that secures your priority date while the invention is still being developed. It gives you twelve months to file the complete specification, and it is a common, cost-effective way for startups to lock in an early date before the full technical detail is finalised.",
+          "The complete specification is the full document with the claims that legally define the scope of protection. If you are ready, you can file the complete specification directly. Either way, the quality of the claims is what determines how strong and enforceable the patent is — this is the part where professional drafting matters most.",
+        ],
+      },
+      {
+        heading: "3. The filing process",
+        body: [
+          "Filing begins with a prior-art search to check novelty, then submission of the application (Form 1) with the specification (Form 2), a statement and undertaking regarding foreign filings (Form 3), and, for a startup or small entity, the relevant proof to claim reduced fees. Applicants who need speed can request expedited examination in eligible categories.",
+          "The application can be filed by the inventor or an assignee (for a startup, the company should be the applicant, with the inventors assigning rights to it). Getting the applicant, forms, and entity status right at filing avoids problems later.",
+        ],
+        bullets: [
+          "Prior-art / patentability search first.",
+          "Form 1 (application) + Form 2 (specification) + Form 3 (foreign-filing statement).",
+          "Startups/small entities pay reduced official fees with the right proof.",
+          "The company (not the individual) should usually be the applicant.",
+        ],
+      },
+      {
+        heading: "4. Publication, examination and grant",
+        body: [
+          "The application is published in the Patent Office journal after eighteen months (early publication can be requested). Examination is not automatic — you must file a Request for Examination (Form 18) within forty-eight months of the priority date, or the application is treated as withdrawn. The examiner then issues a First Examination Report (FER) raising objections, to which you must respond, usually within the prescribed period.",
+          "Once objections are resolved (sometimes after a hearing), the patent is granted and published. The term of a patent in India is twenty years from the date of filing, subject to payment of annual renewal fees. Miss the examination-request window or the renewal fees, and the patent can be lost.",
+        ],
+        bullets: [
+          "Publication after 18 months (or on request).",
+          "Request for Examination (Form 18) within 48 months — mandatory, or the application lapses.",
+          "First Examination Report → responses → possible hearing → grant.",
+          "Term: 20 years from filing, subject to renewal fees.",
+        ],
+      },
+      {
+        heading: "5. Cost, timeline and international protection",
+        body: [
+          "Official fees are tiered — a natural person, startup, or small entity pays significantly less than a large entity — and are separate from professional drafting and prosecution charges, which vary with the complexity of the invention. The process from filing to grant commonly takes a few years, though expedited examination can shorten it.",
+          "A patent is territorial: an Indian patent protects you only in India. To protect an invention abroad you typically file a Patent Cooperation Treaty (PCT) application within twelve months of your priority date, which preserves your date across most countries while you decide where to pursue national patents. Because so much turns on timing, claim drafting, and entity status, this is specialist work — your case assessment on NyaySevak is free, and we match you with an IP practitioner.",
+        ],
+      },
+    ],
+    takeaways: [
+      "A patent gives a 20-year monopoly over an invention that is novel, involves an inventive step, and is industrially applicable — but public disclosure before filing destroys novelty, so file first.",
+      "A provisional specification secures your priority date and gives you 12 months to file the complete specification with the claims that define your protection.",
+      "Filing uses Form 1, 2 and 3; startups and small entities pay reduced official fees; the company should usually be the applicant.",
+      "A Request for Examination (Form 18) must be filed within 48 months or the application lapses; the examiner's First Examination Report must be answered before grant.",
+      "An Indian patent protects you only in India — use a PCT application within 12 months of priority to preserve rights internationally.",
+    ],
+    faqs: [
+      { question: "What can be patented in India?", answer: "An invention that is new (novel), involves an inventive step (is not obvious to a skilled person), and is capable of industrial application. Sections 3 and 4 of the Patents Act exclude things like abstract ideas, mathematical and business methods, computer programs per se, and methods of medical treatment. Public disclosure before filing destroys novelty, so you must file before you publish or sell." },
+      { question: "What is a provisional patent application?", answer: "A provisional specification is a preliminary description filed to secure your priority date while the invention is still being developed. It gives you twelve months to file the complete specification with the full claims. It is a common, cost-effective way for startups to lock in an early filing date before all the technical detail is finalised." },
+      { question: "How long does a patent take in India?", answer: "It commonly takes a few years from filing to grant. The application is published after 18 months, you must request examination within 48 months of priority, and the examiner then issues a First Examination Report that must be answered before grant. Expedited examination is available in eligible categories and can shorten the timeline." },
+      { question: "How much does it cost to file a patent in India?", answer: "Official fees are tiered — a natural person, startup, or small entity pays significantly less than a large entity — and are separate from professional drafting and prosecution charges, which depend on the complexity of the invention. Because the claim drafting largely determines the patent's strength, professional help is where most of the value lies." },
+      { question: "How long does patent protection last?", answer: "A patent in India lasts twenty years from the date of filing, subject to payment of annual renewal fees. If the renewal fees are not paid, the patent lapses. The examination request and renewal deadlines are strict, so tracking dates is essential." },
+      { question: "Does an Indian patent protect my invention abroad?", answer: "No — a patent is territorial, so an Indian patent protects you only in India. To protect an invention internationally you typically file a Patent Cooperation Treaty (PCT) application within twelve months of your Indian priority date, which preserves your date across most countries while you decide where to pursue national patents. Your case assessment on NyaySevak is free, and we match you with an IP practitioner." },
+    ],
+    relatedPracticeAreaSlugs: ["intellectual-property", "corporate-business", "civil-law"],
+    relatedServiceSlugs: ["ip-management", "corporate-legal-advisory", "find-hire-lawyers"],
+    relatedCitySlugs: ["bangalore", "delhi", "mumbai", "hyderabad"],
+  },
 ];
 
 export const articlesBySlug = Object.fromEntries(
