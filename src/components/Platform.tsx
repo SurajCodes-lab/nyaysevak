@@ -62,7 +62,7 @@ const platformStats = [
 
 const whyChooseItems = [
   { title: "Pan-India Coverage", desc: "Supreme Court to District Courts. All 25 High Courts, 700+ District Courts, 20+ Tribunals across every state and union territory." },
-  { title: "Verified Professionals", desc: "Every lawyer is Bar Council–verified and matched to your matter — with experience and fees shared before your paid case assessment." },
+  { title: "Verified Professionals", desc: "Every lawyer is Bar Council–verified and matched to your matter — with experience and fees shared before your free case assessment." },
   { title: "Transparent Pricing", desc: "No hidden fees. Your lawyer's fees are agreed upfront before any work begins. Pay only for what you need." },
   { title: "Dual B2B + B2C Model", desc: "Serving individual citizens and enterprises alike. One platform for personal legal needs and corporate legal operations." },
   { title: "A-Z Legal Services", desc: "From simple notary and affidavits to high-stakes Supreme Court litigation and international arbitration." },

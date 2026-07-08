@@ -9,13 +9,13 @@ import FaqBlock from "@/components/FaqBlock";
 export const metadata: Metadata = {
   title: "Find Lawyers for Any Court in India",
   description:
-    "Find verified lawyers for Supreme Court, all 25 High Courts, 700+ District Courts, NCLT, NGT, RERA, NCDRC & 20+ Tribunals across India. Book court representation with expert advocates. Paid case assessment available.",
+    "Find verified lawyers for Supreme Court, all 25 High Courts, 700+ District Courts, NCLT, NGT, RERA, NCDRC & 20+ Tribunals across India. Book court representation with expert advocates. Free case assessment available.",
   keywords:
     "Supreme Court advocate, Supreme Court lawyer India, High Court lawyer, District Court lawyer near me, NCLT lawyer, NGT lawyer, RERA lawyer, tribunal lawyer India, court lawyer near me, find advocate for court, legal representation India, bail lawyer court, NyaySevak",
   alternates: { canonical: "https://www.nyaysevak.com/courts" },
   openGraph: {
     title: "Find Lawyers for Any Court in India | NyaySevak",
-    description: "Verified lawyers for Supreme Court, 25 High Courts, 700+ District Courts & all Tribunals. Paid case assessment available.",
+    description: "Verified lawyers for Supreme Court, 25 High Courts, 700+ District Courts & all Tribunals. Free case assessment available.",
     url: "https://www.nyaysevak.com/courts",
     type: "website",
   },
@@ -183,7 +183,7 @@ export default function CourtsPage() {
       <section className="bg-dark-deep py-10 border-t border-white/[0.04]">
         <div className="mx-auto max-w-4xl px-6 lg:px-8">
           <p className="text-xs text-gray-600 leading-relaxed">
-            NyaySevak provides verified lawyers for every court in India&apos;s judicial system. From the Supreme Court of India to all 25 High Courts (Delhi, Bombay, Madras, Calcutta, Karnataka, Allahabad, Gujarat, Punjab &amp; Haryana, Telangana, Rajasthan, and more), 700+ District Courts across 36 States and Union Territories, and 20+ specialized Tribunals including NCLT, NCLAT, NGT, RERA, NCDRC, ITAT, CAT, DRT, SAT, and Armed Forces Tribunal. Our advocates handle writ petitions, appeals, bail applications, criminal trials, civil suits, family matters, corporate disputes, tax appeals, consumer complaints, and all other court proceedings. Paid case assessment available.
+            NyaySevak provides verified lawyers for every court in India&apos;s judicial system. From the Supreme Court of India to all 25 High Courts (Delhi, Bombay, Madras, Calcutta, Karnataka, Allahabad, Gujarat, Punjab &amp; Haryana, Telangana, Rajasthan, and more), 700+ District Courts across 36 States and Union Territories, and 20+ specialized Tribunals including NCLT, NCLAT, NGT, RERA, NCDRC, ITAT, CAT, DRT, SAT, and Armed Forces Tribunal. Our advocates handle writ petitions, appeals, bail applications, criminal trials, civil suits, family matters, corporate disputes, tax appeals, consumer complaints, and all other court proceedings. Free case assessment available.
           </p>
         </div>
       </section>
@@ -191,9 +191,9 @@ export default function CourtsPage() {
         heading="Courts in India — frequently asked questions"
         faqs={[
           { question: "Which courts does NyaySevak cover?", answer: "The Supreme Court of India, all 25 High Courts, 700+ District Courts across 36 states and union territories, and 20+ tribunals including NCLT, NCLAT, NGT, RERA, NCDRC, ITAT, CAT, DRT and SAT." },
-          { question: "How do I find a lawyer for a specific court?", answer: "Tell NyaySevak your court and matter; we match you within 24 hours with a verified advocate who regularly appears before that court. Your first step is a paid case assessment." },
+          { question: "How do I find a lawyer for a specific court?", answer: "Tell NyaySevak your court and matter; we match you within 24 hours with a verified advocate who regularly appears before that court. Your first step is a free case assessment." },
           { question: "Can NyaySevak help with Supreme Court or High Court matters?", answer: "Yes — we connect you with advocates-on-record and senior counsel for the Supreme Court, and with High Court practitioners for writs, appeals, bail, and quashing petitions." },
-          { question: "What does court representation cost in India?", answer: "It varies by court, matter, and counsel seniority. The first step is a paid case assessment; full representation is quoted upfront after that consultation." },
+          { question: "What does court representation cost in India?", answer: "It varies by court, matter, and counsel seniority. The first step is a free case assessment; full representation is quoted upfront after that consultation." },
         ]}
       />
     </main>

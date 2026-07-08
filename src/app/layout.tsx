@@ -253,7 +253,7 @@ const professionalServiceJsonLd = {
   telephone: "+91-9868666715",
   email: "nyaysevak@gmail.com",
   image: "https://www.nyaysevak.com/logo.png",
-  priceRange: "₹499 – ₹₹₹",
+  priceRange: "Free - ₹₹₹",
   address: {
     "@type": "PostalAddress",
     addressLocality: "New Delhi",
@@ -280,13 +280,13 @@ const professionalServiceJsonLd = {
     itemListElement: [
       {
         "@type": "Offer",
-        name: "Case Assessment (from ₹499)",
+        name: "Free Case Assessment",
         url: "https://www.nyaysevak.com/case-assessment",
-        price: "499",
+        price: "0",
         priceCurrency: "INR",
         availability: "https://schema.org/InStock",
         eligibleRegion: { "@type": "Country", name: "India" },
-        itemOffered: { "@type": "Service", name: "Case Assessment", description: "First consultation with a verified lawyer for a nominal fee." },
+        itemOffered: { "@type": "Service", name: "Case Assessment", description: "A free case assessment with a verified lawyer — a diagnosis of your matter and a written next-step plan." },
       },
       {
         "@type": "Offer",
@@ -343,7 +343,7 @@ const professionalServiceJsonLd = {
   makesOffer: {
     "@type": "AggregateOffer",
     offerCount: 5,
-    lowPrice: "499",
+    lowPrice: "0",
     highPrice: "25000",
     priceCurrency: "INR",
     availability: "https://schema.org/InStock",
@@ -384,11 +384,11 @@ export const metadata: Metadata = {
   title: {
     // Disambiguates the brand from similarly-spelled competitors by binding
     // the brand name to the canonical domain inside the title itself.
-    default: "NyaySevak.com — India's Verified Lawyer Platform | Case Assessment from ₹499",
+    default: "NyaySevak.com — India's Verified Lawyer Platform | Free Case Assessment",
     template: "%s | NyaySevak.com",
   },
   description:
-    "India's trusted legal-services platform. Get matched with verified lawyers near you for the Supreme Court, 25 High Courts, 700+ District Courts & all Tribunals. Online lawyer consultation, divorce lawyer, criminal lawyer, property lawyer, corporate advisory. 29 practice areas. Paid case assessment. Call +91-9868666715.",
+    "India's trusted legal-services platform. Get matched with verified lawyers near you for the Supreme Court, 25 High Courts, 700+ District Courts & all Tribunals. Online lawyer consultation, divorce lawyer, criminal lawyer, property lawyer, corporate advisory. 29 practice areas. Free case assessment. Call +91-9868666715.",
   keywords:
     "lawyer near me, advocate near me, best lawyer India, online lawyer consultation, find lawyer India, hire lawyer online, legal services India, free legal consultation, divorce lawyer, criminal lawyer, property lawyer, bail lawyer, corporate lawyer, cyber crime lawyer, Supreme Court advocate, High Court lawyer, District Court lawyer, NCLT lawyer, NyaySevak, legal aid India, family lawyer India, tax lawyer, IP lawyer India, consumer court lawyer, labour lawyer, arbitration lawyer, RERA lawyer, documentation lawyer, affordable lawyer India, verified advocate India, court representation India",
   authors: [{ name: "NyaySevak" }],
@@ -415,7 +415,7 @@ export const metadata: Metadata = {
     siteName: "NyaySevak",
     title: "NyaySevak - Best Lawyer Consultation & Legal Services in India",
     description:
-      "Find verified lawyers near you. Online consultation, court representation across Supreme Court, High Courts, District Courts & Tribunals. 29 practice areas. Paid case assessment.",
+      "Find verified lawyers near you. Online consultation, court representation across Supreme Court, High Courts, District Courts & Tribunals. 29 practice areas. Free case assessment.",
     images: [
       {
         url: "https://www.nyaysevak.com/logo.png",
@@ -432,7 +432,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "NyaySevak - Find Best Lawyers Near You in India | Case Assessment",
     description:
-      "India's trusted legal platform. Verified lawyers for all courts. Criminal, divorce, property, corporate, cyber crime & more. Paid case assessment.",
+      "India's trusted legal platform. Verified lawyers for all courts. Criminal, divorce, property, corporate, cyber crime & more. Free case assessment.",
     images: ["https://www.nyaysevak.com/logo.png"],
   },
   verification: {

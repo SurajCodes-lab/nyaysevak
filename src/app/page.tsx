@@ -16,14 +16,14 @@ import { cities, cityPracticeSlugs, cityPracticeLabels } from "@/data/cities";
 export const metadata: Metadata = {
   title: "NyaySevak - Best Lawyer Consultation & Legal Services in India | Expert Case Assessment",
   description:
-    "India's trusted legal services platform. Get matched with verified lawyers near you for the Supreme Court, 25 High Courts, 700+ District Courts & all Tribunals. Online lawyer consultation, divorce lawyer, criminal lawyer, property lawyer, corporate advisory. 29 practice areas. Paid case assessment available.",
+    "India's trusted legal services platform. Get matched with verified lawyers near you for the Supreme Court, 25 High Courts, 700+ District Courts & all Tribunals. Online lawyer consultation, divorce lawyer, criminal lawyer, property lawyer, corporate advisory. 29 practice areas. Free case assessment available.",
   alternates: {
     canonical: "https://www.nyaysevak.com",
   },
   openGraph: {
     title: "NyaySevak - Best Lawyer Consultation & Legal Services in India",
     description:
-      "Find verified lawyers near you. Online consultation, court representation across Supreme Court, High Courts, District Courts & Tribunals. 29 practice areas. Paid case assessment available.",
+      "Find verified lawyers near you. Online consultation, court representation across Supreme Court, High Courts, District Courts & Tribunals. 29 practice areas. Free case assessment available.",
     url: "https://www.nyaysevak.com",
     type: "website",
     images: [
@@ -85,7 +85,7 @@ const homepageFaqJsonLd = {
       name: "How can I find a lawyer on NyaySevak?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Tell us about your legal matter through our case assessment form and NyaySevak matches you with a Bar Council–verified lawyer who specialises in your practice area and practises in the relevant court jurisdiction. Because Bar Council of India rules do not permit advocates to be publicly advertised or listed, there is no directory to sift through — we handle the matching, and you book a paid case assessment with fees agreed upfront.",
+        text: "Tell us about your legal matter through our case assessment form and NyaySevak matches you with a Bar Council–verified lawyer who specialises in your practice area and practises in the relevant court jurisdiction. Because Bar Council of India rules do not permit advocates to be publicly advertised or listed, there is no directory to sift through — we handle the matching, and you book a free case assessment with fees agreed upfront.",
       },
     },
     {
@@ -106,10 +106,10 @@ const homepageFaqJsonLd = {
     },
     {
       "@type": "Question",
-      name: "What is the paid case assessment on NyaySevak?",
+      name: "What is the free case assessment on NyaySevak?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, NyaySevak offers a paid case assessment for new clients. You can connect with verified legal professionals via secure video, audio, or chat channels to discuss your legal matter before proceeding.",
+        text: "Yes, NyaySevak offers a free case assessment for new clients. You can connect with verified legal professionals via secure video, audio, or chat channels to discuss your legal matter before proceeding.",
       },
     },
     {
@@ -117,7 +117,7 @@ const homepageFaqJsonLd = {
       name: "How much does a lawyer cost in India?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Lawyer fees in India vary by specialization, court level, and case complexity. District Court lawyers typically charge ₹5,000-₹25,000 per hearing, High Court lawyers ₹15,000-₹1,00,000, and Supreme Court advocates ₹50,000-₹5,00,000+. NyaySevak offers transparent pricing with no hidden fees, and your first step is a paid case assessment.",
+        text: "Lawyer fees in India vary by specialization, court level, and case complexity. District Court lawyers typically charge ₹5,000-₹25,000 per hearing, High Court lawyers ₹15,000-₹1,00,000, and Supreme Court advocates ₹50,000-₹5,00,000+. NyaySevak offers transparent pricing with no hidden fees, and your first step is a free case assessment.",
       },
     },
     {
@@ -143,7 +143,7 @@ const homepageFaqJsonLd = {
       name: "How can I find a good lawyer near me in India?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Share your matter and location with NyaySevak and we connect you with a Bar Council–verified lawyer near you who handles your practice area (criminal, divorce, property, corporate, etc.) in the relevant court. Every lawyer is Bar Council verified with transparent, upfront fees, and your first step is a paid case assessment — so you understand the scope and cost before you commit.",
+        text: "Share your matter and location with NyaySevak and we connect you with a Bar Council–verified lawyer near you who handles your practice area (criminal, divorce, property, corporate, etc.) in the relevant court. Every lawyer is Bar Council verified with transparent, upfront fees, and your first step is a free case assessment — so you understand the scope and cost before you commit.",
       },
     },
     {
@@ -167,7 +167,7 @@ const homepageFaqJsonLd = {
       name: "How much does it cost to consult a lawyer on NyaySevak?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "NyaySevak offers a paid case assessment for all new clients. After that, lawyer fees vary by specialization, experience, and court level. District Court lawyers typically charge ₹5,000-₹25,000 per hearing, High Court lawyers ₹15,000-₹1,00,000, and Supreme Court advocates ₹50,000-₹5,00,000+. All fees are displayed transparently with no hidden charges.",
+        text: "NyaySevak offers a free case assessment for all new clients. After that, lawyer fees vary by specialization, experience, and court level. District Court lawyers typically charge ₹5,000-₹25,000 per hearing, High Court lawyers ₹15,000-₹1,00,000, and Supreme Court advocates ₹50,000-₹5,00,000+. All fees are displayed transparently with no hidden charges.",
       },
     },
   ],
@@ -203,7 +203,7 @@ const howToJsonLd = {
       "@type": "HowToStep",
       position: 3,
       name: "Book Your Case Assessment",
-      text: "Schedule a paid case assessment via secure video call, phone, or chat. Discuss your case, understand your legal options, and get a transparent fee quote with no hidden charges.",
+      text: "Schedule a free case assessment via secure video call, phone, or chat. Discuss your case, understand your legal options, and get a transparent fee quote with no hidden charges.",
     },
     {
       "@type": "HowToStep",
@@ -436,7 +436,7 @@ export default function Home() {
           {/* SEO text content */}
           <div className="mt-12 pt-10 border-t border-white/[0.04]">
             <p className="text-xs text-gray-400 leading-relaxed max-w-4xl">
-              NyaySevak is India&apos;s leading legal services platform connecting individuals and businesses with verified lawyers across the Supreme Court, 25 High Courts, 700+ District Courts, and all Tribunals. Whether you need a criminal lawyer, divorce lawyer, property lawyer, corporate lawyer, or specialist for CBI, ED, NDPS cases — NyaySevak provides access to Bar Council verified advocates with transparent pricing and paid case assessment. Our platform covers 29 practice areas including civil law, family law, cyber law, consumer protection, tax law, banking &amp; finance, intellectual property, arbitration, and more. Available pan-India with support in Hindi, English, and regional languages.
+              NyaySevak is India&apos;s leading legal services platform connecting individuals and businesses with verified lawyers across the Supreme Court, 25 High Courts, 700+ District Courts, and all Tribunals. Whether you need a criminal lawyer, divorce lawyer, property lawyer, corporate lawyer, or specialist for CBI, ED, NDPS cases — NyaySevak provides access to Bar Council verified advocates with transparent pricing and free case assessment. Our platform covers 29 practice areas including civil law, family law, cyber law, consumer protection, tax law, banking &amp; finance, intellectual property, arbitration, and more. Available pan-India with support in Hindi, English, and regional languages.
             </p>
           </div>
         </div>
@@ -456,7 +456,7 @@ export default function Home() {
             India&apos;s Legal Services Landscape — What Every Citizen and Business Should Know
           </h2>
           <p className="text-sm sm:text-base text-gray-400 leading-relaxed mb-8">
-            India&apos;s legal system is one of the largest and most complex in the world. With 29 distinct practice areas, 25 High Courts, over 700 District Courts, and dozens of specialised tribunals, finding the right lawyer for your specific matter can be overwhelming. NyaySevak simplifies this by connecting you directly with Bar Council verified advocates who specialise in exactly the area of law you need — at fees you can see upfront, with a paid case assessment so you&apos;re never locked in before you understand the scope of your matter.
+            India&apos;s legal system is one of the largest and most complex in the world. With 29 distinct practice areas, 25 High Courts, over 700 District Courts, and dozens of specialised tribunals, finding the right lawyer for your specific matter can be overwhelming. NyaySevak simplifies this by connecting you directly with Bar Council verified advocates who specialise in exactly the area of law you need — at fees you can see upfront, with a free case assessment so you&apos;re never locked in before you understand the scope of your matter.
           </p>
 
           <h3 className="text-lg sm:text-xl font-heading font-bold text-white mb-3 mt-10">
@@ -477,7 +477,7 @@ export default function Home() {
             How NyaySevak Verifies Every Lawyer You Meet
           </h3>
           <p className="text-sm sm:text-base text-gray-400 leading-relaxed mb-4">
-            Every lawyer in the NyaySevak network is validated against their Bar Council registration number, their years of active practice, their specialisation (confirmed through reported judgments and peer references), and their client feedback on our platform. Because Bar Council of India rules do not permit advocates to be publicly advertised or listed, we don&apos;t display individual profiles — instead, once we match you, we share that lawyer&apos;s Bar Council ID, experience, courts of practice, and fee structure before your paid case assessment, so you know exactly who you&apos;re speaking with. There are no hidden commissions and no obligation: you speak to your matched lawyer in a paid case assessment, then decide whether to engage. For corporate clients, we go further, assembling dedicated legal teams tailored to your enterprise size and industry-specific regulatory needs.
+            Every lawyer in the NyaySevak network is validated against their Bar Council registration number, their years of active practice, their specialisation (confirmed through reported judgments and peer references), and their client feedback on our platform. Because Bar Council of India rules do not permit advocates to be publicly advertised or listed, we don&apos;t display individual profiles — instead, once we match you, we share that lawyer&apos;s Bar Council ID, experience, courts of practice, and fee structure before your free case assessment, so you know exactly who you&apos;re speaking with. There are no hidden commissions and no obligation: you speak to your matched lawyer in a free case assessment, then decide whether to engage. For corporate clients, we go further, assembling dedicated legal teams tailored to your enterprise size and industry-specific regulatory needs.
           </p>
 
           <h3 className="text-lg sm:text-xl font-heading font-bold text-white mb-3 mt-10">
@@ -491,7 +491,7 @@ export default function Home() {
             Understanding Lawyer Fees in India
           </h3>
           <p className="text-sm sm:text-base text-gray-400 leading-relaxed">
-            Lawyer fees in India vary widely. District Court lawyers typically charge ₹5,000–₹50,000 per hearing depending on case complexity and city. High Court lawyers range from ₹15,000 to ₹3 lakh or more per appearance, with senior advocates at the Bombay, Delhi, Madras, and Calcutta High Courts commanding ₹5 lakh and upwards. Supreme Court advocates and senior counsel in major metros can charge ₹10 lakh+ per appearance for complex matters. On NyaySevak, every fee is shown upfront, and your first step is a paid case assessment regardless of which lawyer you choose — so you can make an informed decision about scope, timeline, and budget before committing to representation.
+            Lawyer fees in India vary widely. District Court lawyers typically charge ₹5,000–₹50,000 per hearing depending on case complexity and city. High Court lawyers range from ₹15,000 to ₹3 lakh or more per appearance, with senior advocates at the Bombay, Delhi, Madras, and Calcutta High Courts commanding ₹5 lakh and upwards. Supreme Court advocates and senior counsel in major metros can charge ₹10 lakh+ per appearance for complex matters. On NyaySevak, every fee is shown upfront, and your first step is a free case assessment regardless of which lawyer you choose — so you can make an informed decision about scope, timeline, and budget before committing to representation.
           </p>
 
           <div className="mt-10 flex flex-wrap gap-4">

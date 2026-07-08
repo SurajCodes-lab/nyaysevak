@@ -63,21 +63,21 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       ...service.bullets.map(b => b.toLowerCase()).slice(0, 4),
       "verified lawyer India",
       "NyaySevak",
-      "paid case assessment",
+      "free case assessment",
     ].join(", "),
     alternates: {
       canonical: `https://www.nyaysevak.com/services/${slug}`,
     },
     openGraph: {
       title: `${service.title} India 2026 — Case Assessment | NyaySevak.com`,
-      description: `${service.title} ${catLabel.toLowerCase()}. ${service.bullets[0]}. Paid case assessment available.`,
+      description: `${service.title} ${catLabel.toLowerCase()}. ${service.bullets[0]}. Free case assessment available.`,
       type: "website",
       url: `https://www.nyaysevak.com/services/${slug}`,
     },
     twitter: {
       card: "summary_large_image",
       title: `${service.title} India 2026 | NyaySevak.com`,
-      description: `${service.description}. Paid case assessment available.`,
+      description: `${service.description}. Free case assessment available.`,
     },
   };
 }
@@ -87,9 +87,9 @@ const serviceContent: Record<string, { overview: string; benefits: string[]; pro
     overview: "NyaySevak's Lawyer Consultation service connects you with verified, experienced lawyers across India for instant or scheduled consultations. Whether you need quick legal advice on a property matter, guidance on a criminal case, or consultation for a business dispute — our platform ensures you get expert help via secure video, audio, or chat channels with complete transparency in pricing.",
     benefits: ["Access to Bar Council-verified lawyers across all practice areas", "Choose between instant and scheduled consultations", "Secure video, audio, and chat communication channels", "Transparent pricing displayed before booking — no hidden fees", "Consultations available in multiple Indian languages", "Follow-up support and documentation after consultation"],
     process: ["Tell us your legal matter and city", "Our team matches you with a verified specialist lawyer", "Book an instant or scheduled consultation slot", "Connect via secure video, audio, or chat", "Receive expert legal advice and a documented summary", "Continue with the same lawyer for full representation"],
-    whyChoose: ["Bar-Council-verified advocates across all 29 practice areas", "Quick response, including for urgent matters", "Consultations available in major Indian languages including Hindi, Tamil, Bengali", "Honest, upfront guidance with fees agreed before any work", "Confidential and encrypted communication", "Paid case assessment for new clients"],
+    whyChoose: ["Bar-Council-verified advocates across all 29 practice areas", "Quick response, including for urgent matters", "Consultations available in major Indian languages including Hindi, Tamil, Bengali", "Honest, upfront guidance with fees agreed before any work", "Confidential and encrypted communication", "Free case assessment for new clients"],
     faqs: [
-      { q: "How are you matched with the right lawyer?", a: "Tell us your practice area, court, location, and preferred language, and our team matches you with a Bar Council–verified lawyer who fits your matter. We share their experience and fees before your paid case assessment. (Bar Council of India rules do not permit advocates to be publicly advertised, listed, or rated, so we don't display lawyer profiles or star ratings.)" },
+      { q: "How are you matched with the right lawyer?", a: "Tell us your practice area, court, location, and preferred language, and our team matches you with a Bar Council–verified lawyer who fits your matter. We share their experience and fees before your free case assessment. (Bar Council of India rules do not permit advocates to be publicly advertised, listed, or rated, so we don't display lawyer profiles or star ratings.)" },
       { q: "What are the consultation modes available?", a: "We offer video calls, audio calls, and text chat consultations. You can choose the mode that works best for you during the booking process." },
       { q: "Is the pricing transparent?", a: "Yes. Every lawyer's consultation fee is displayed upfront before booking. There are no hidden charges or surprise fees." },
       { q: "Can I get a consultation in my regional language?", a: "Yes. Many of our lawyers offer consultations in Hindi, Tamil, Telugu, Bengali, Marathi, Gujarati, Kannada, and other regional languages." },
@@ -98,14 +98,14 @@ const serviceContent: Record<string, { overview: string; benefits: string[]; pro
     ],
   },
   "find-hire-lawyers": {
-    overview: "Finding the right lawyer can be overwhelming. NyaySevak makes it simple — tell us your matter, your city, and the court involved, and our legal team matches you with a Bar Council–verified lawyer who specialises in exactly what you need and takes your case through to resolution, including full court representation. Bar Council of India rules do not permit advocates to be publicly advertised or ranked, so there is no directory to browse — just a private match, a paid case assessment, and fees agreed upfront.",
-    benefits: ["Matched with a Bar Council–verified lawyer for your exact matter", "Specialists for every court — Supreme Court to District Courts", "Full representation: filing, hearings, and court resolution", "Paid case assessment with no obligation", "Transparent fees agreed upfront — no hidden charges", "Support in major Indian languages"],
-    process: ["Tell us your legal need, city, and court", "Our team matches you with a verified specialist lawyer", "Consult your matched lawyer in a paid case assessment — video, audio, chat, or in person", "Review the lawyer's experience and fees before you commit", "Engage the lawyer for full representation if you're satisfied", "Get updates at every stage until your matter is resolved"],
-    whyChoose: ["Every lawyer verified with Bar Council registration number", "Matched privately to your matter — no public profiles or ratings, in line with Bar Council rules", "No middlemen — fees agreed directly and transparently with your lawyer", "Lawyers for all courts from Supreme Court to District Courts", "Specialists for niche areas like maritime, sports, or IP law", "Paid case assessment and dedicated support"],
+    overview: "Finding the right lawyer can be overwhelming. NyaySevak makes it simple — tell us your matter, your city, and the court involved, and our legal team matches you with a Bar Council–verified lawyer who specialises in exactly what you need and takes your case through to resolution, including full court representation. Bar Council of India rules do not permit advocates to be publicly advertised or ranked, so there is no directory to browse — just a private match, a free case assessment, and fees agreed upfront.",
+    benefits: ["Matched with a Bar Council–verified lawyer for your exact matter", "Specialists for every court — Supreme Court to District Courts", "Full representation: filing, hearings, and court resolution", "Free case assessment with no obligation", "Transparent fees agreed upfront — no hidden charges", "Support in major Indian languages"],
+    process: ["Tell us your legal need, city, and court", "Our team matches you with a verified specialist lawyer", "Consult your matched lawyer in a free case assessment — video, audio, chat, or in person", "Review the lawyer's experience and fees before you commit", "Engage the lawyer for full representation if you're satisfied", "Get updates at every stage until your matter is resolved"],
+    whyChoose: ["Every lawyer verified with Bar Council registration number", "Matched privately to your matter — no public profiles or ratings, in line with Bar Council rules", "No middlemen — fees agreed directly and transparently with your lawyer", "Lawyers for all courts from Supreme Court to District Courts", "Specialists for niche areas like maritime, sports, or IP law", "Free case assessment and dedicated support"],
     faqs: [
       { q: "Are all lawyers on NyaySevak verified?", a: "Yes. Every lawyer in our network undergoes Bar Council registration verification. We also validate their practice experience and specialization." },
       { q: "Can I get a lawyer for a specific court?", a: "Absolutely. Tell us the court where your matter is pending — from the Supreme Court to any District Court across India — and we match you with a verified lawyer who practises there." },
-      { q: "How are fees decided?", a: "Your matched lawyer shares their fee structure — consultation, retainer, and per-appearance — transparently before you commit. There is no online payment on NyaySevak; you agree and pay fees directly with the lawyer. Your first step is a paid case assessment." },
+      { q: "How are fees decided?", a: "Your matched lawyer shares their fee structure — consultation, retainer, and per-appearance — transparently before you commit. There is no online payment on NyaySevak; you agree and pay fees directly with the lawyer. Your first step is a free case assessment." },
       { q: "What if I'm not satisfied with my lawyer?", a: "If you're not satisfied, we'll match you with another verified lawyer at no extra cost. We also welcome your feedback to maintain quality and accountability." },
     ],
   },
@@ -239,7 +239,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
     { id: "practice-areas", label: "Practice Areas" },
     { id: "cities", label: "Available in Cities" },
     ...(content.faqs.length > 0 ? [{ id: "faqs", label: "FAQs" }] : []),
-    { id: "consultation", label: "Get Consultation" },
+    { id: "consultation", label: "Get Free Assessment" },
   ];
 
   const breadcrumbJsonLd = {
@@ -270,9 +270,9 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
     category: service.category === "b2c" ? "Individual Legal Services" : "Business Legal Services",
     offers: {
       "@type": "Offer",
-      price: "499",
+      price: "0",
       priceCurrency: "INR",
-      description: "Paid case assessment",
+      description: "Free case assessment",
       availability: "https://schema.org/InStock",
     },
     hasOfferCatalog: {
@@ -566,7 +566,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
             Get {service.title} Today
           </h2>
           <p className="mx-auto mt-4 mb-8 sm:mb-10 max-w-lg text-sm sm:text-base text-gray-500 leading-relaxed">
-            Connect with verified legal professionals for expert {service.title.toLowerCase()} services across India. Your first step is a paid case assessment.
+            Connect with verified legal professionals for expert {service.title.toLowerCase()} services across India. Your first step is a free case assessment.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <ContactButton

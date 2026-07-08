@@ -30,7 +30,7 @@ const ARTICLE_QUICK_ANSWERS: Record<string, string> = {
   "filing-fir-india-procedure-rights-2026":
     "A First Information Report (FIR) records a cognizable offence and is registered under Section 173 of the BNSS, 2023 at the police station with jurisdiction. Filing is free, the police must register it for a cognizable offence, and you are entitled to a free copy. If the police refuse, you can escalate to the Superintendent of Police or move a Magistrate under Section 175 BNSS.",
   "rera-complaint-procedure-buyer-guide-2026":
-    "A RERA complaint lets a home-buyer act against a builder for delayed possession, misleading promises, or defects, under the Real Estate (Regulation and Development) Act, 2016. You file with your State RERA Authority for a nominal fee (around ₹1,000) and can seek a refund with interest, possession, or compensation. Most states allow online filing and aim to decide within about 60 days.",
+    "A RERA complaint lets a home-buyer act against a builder for delayed possession, misleading promises, or defects, under the Real Estate (Regulation and Development) Act, 2016. You file with your State RERA Authority for free (around ₹1,000) and can seek a refund with interest, possession, or compensation. Most states allow online filing and aim to decide within about 60 days.",
   "private-limited-company-incorporation-india-2026":
     "A private limited company is registered in India through the MCA's SPICe+ form. You obtain Director Identification Numbers and digital signatures, reserve a company name, and file incorporation with the MoA and AoA — receiving a Certificate of Incorporation along with PAN and TAN. For two directors it typically takes 7-15 working days, with no minimum paid-up capital required.",
   "section-138-ni-act-cheque-bounce-procedure-2026":
@@ -396,7 +396,7 @@ export default async function InsightArticlePage({ params }: { params: Promise<{
               Need help with this matter?
             </h3>
             <p className="text-sm text-gray-400 mb-5 max-w-xl mx-auto">
-              Connect with a verified NyaySevak advocate experienced in {article.category.toLowerCase()}. First step is a paid case assessment.
+              Connect with a verified NyaySevak advocate experienced in {article.category.toLowerCase()}. First step is a free case assessment.
             </p>
             <ContactButton className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-gold to-gold-light px-6 py-3 text-sm font-semibold uppercase tracking-widest text-black hover:shadow-lg hover:shadow-gold/20 transition-all duration-300 cursor-pointer">
               Book your assessment

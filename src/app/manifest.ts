@@ -61,9 +61,9 @@ export default function manifest(): MetadataRoute.Manifest {
         icons: [{ src: "/logo.png", sizes: "192x192" }],
       },
       {
-        name: "Get consultation",
+        name: "Get free assessment",
         short_name: "Contact",
-        description: "Paid case assessment",
+        description: "Free case assessment",
         url: "/contact",
         icons: [{ src: "/logo.png", sizes: "192x192" }],
       },

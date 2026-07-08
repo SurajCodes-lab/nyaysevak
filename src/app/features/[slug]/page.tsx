@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   return {
     title: `${feature.title} - Find Best Lawyers in India | NyaySevak Platform`,
-    description: `${feature.description} ${feature.bullets.join(". ")}. India's most advanced legal platform with verified lawyers across all courts. Paid case assessment available.`,
+    description: `${feature.description} ${feature.bullets.join(". ")}. India's most advanced legal platform with verified lawyers across all courts. Free case assessment available.`,
     keywords: [
       feature.title.toLowerCase(),
       `best ${feature.title.toLowerCase()} India`,
@@ -38,14 +38,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       "verified lawyer platform",
       "legal services platform India",
       "NyaySevak",
-      "paid case assessment",
+      "free case assessment",
     ].join(", "),
     alternates: {
       canonical: `https://www.nyaysevak.com/features/${slug}`,
     },
     openGraph: {
       title: `${feature.title} - India's Best Legal Platform | NyaySevak`,
-      description: `${feature.description}. Paid case assessment with verified lawyers.`,
+      description: `${feature.description}. Free case assessment with verified lawyers.`,
       type: "website",
       url: `https://www.nyaysevak.com/features/${slug}`,
     },
@@ -79,7 +79,7 @@ const featureContent: Record<string, { longDesc: string; howItWorks: { title: st
     whyChoose: [
       "Every lawyer undergoes rigorous Bar Council registration verification",
       "Matched to a specialist for your exact matter, court, and language",
-      "Paid case assessment — speak before you commit, with no obligation",
+      "Free case assessment — speak before you commit, with no obligation",
       "Full court representation, from filing through to final resolution",
       "Transparent fees agreed upfront — no hidden charges, no online payment required",
       "Not satisfied? We'll match you with another verified lawyer at no extra cost",
@@ -87,8 +87,8 @@ const featureContent: Record<string, { longDesc: string; howItWorks: { title: st
     faqs: [
       { q: "How do you verify lawyers in your network?", a: "Every lawyer undergoes a multi-step verification process: Bar Council registration check, identity verification, qualification validation, and reference checks. We also verify their court enrollment and practice history." },
       { q: "Can I get a lawyer who speaks my language?", a: "Yes. Tell us your preferred language and we match you with a verified lawyer who speaks it — Hindi, English, Tamil, Telugu, Bengali, Marathi, Gujarati, Kannada, Malayalam, Punjabi, and more." },
-      { q: "Do you show lawyer profiles or ratings?", a: "No. Bar Council of India rules do not permit advocates to be publicly advertised, ranked, or rated, so we don't display profiles or star ratings. Instead, our team matches you privately with a verified lawyer and shares their credentials, experience, and fees before your paid case assessment." },
-      { q: "Is there any cost to get matched?", a: "Getting matched is free; the case assessment with your matched lawyer is a nominal paid step. You agree any further fees directly with the lawyer if you engage them." },
+      { q: "Do you show lawyer profiles or ratings?", a: "No. Bar Council of India rules do not permit advocates to be publicly advertised, ranked, or rated, so we don't display profiles or star ratings. Instead, our team matches you privately with a verified lawyer and shares their credentials, experience, and fees before your free case assessment." },
+      { q: "Is there any cost to get matched?", a: "Getting matched is free; the case assessment with your matched lawyer is free and comes with no obligation. You agree any further fees directly with the lawyer if you engage them." },
     ],
   },
   "service-booking": {
@@ -104,7 +104,7 @@ const featureContent: Record<string, { longDesc: string; howItWorks: { title: st
     highlights: [
       { label: "Same-Day Booking", desc: "Available for urgent legal matters" },
       { label: "Zero Hidden Fees", desc: "Complete price transparency guaranteed" },
-      { label: "Expert Case Assessment", desc: "Nominal fee — includes a clear next-step plan" },
+      { label: "Expert Case Assessment", desc: "Free — includes a clear next-step plan" },
       { label: "Free Rescheduling", desc: "Flexible rescheduling up to 4 hours before" },
       { label: "Auto Reminders", desc: "Email and SMS appointment notifications" },
       { label: "Post-Session Support", desc: "Follow-up assistance after consultation" },
@@ -119,8 +119,8 @@ const featureContent: Record<string, { longDesc: string; howItWorks: { title: st
     ],
     faqs: [
       { q: "How quickly can I book a consultation?", a: "For urgent matters, you can connect with a lawyer within minutes through our instant booking. For scheduled appointments, you can book slots as early as 30 minutes from now." },
-      { q: "How do I pay the lawyer?", a: "Fees are agreed directly with your matched lawyer and paid to them — there is no online payment on NyaySevak. Your first step is a paid case assessment, and all fees are shared transparently before you commit." },
-      { q: "What if I need to cancel my booking?", a: "You can cancel free of charge up to 4 hours before your appointment. Cancellations within 4 hours may be subject to a nominal fee depending on the lawyer's policy." },
+      { q: "How do I pay the lawyer?", a: "Fees are agreed directly with your matched lawyer and paid to them — there is no online payment on NyaySevak. Your first step is a free case assessment, and all fees are shared transparently before you commit." },
+      { q: "What if I need to cancel my booking?", a: "You can cancel free of charge up to 4 hours before your appointment. Cancellations within 4 hours may be subject to free depending on the lawyer's policy." },
       { q: "Can I book for someone else (family member)?", a: "Yes. During booking, you can specify that the consultation is for another person. The lawyer will be informed accordingly." },
     ],
   },

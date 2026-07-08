@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://www.nyaysevak.com/platform" },
   openGraph: {
     title: "How to Hire a Lawyer Online in India | NyaySevak",
-    description: "Simple 4-step process to find & hire verified lawyers. Paid case assessment available. B2B + B2C legal services across all courts in India.",
+    description: "Simple 4-step process to find & hire verified lawyers. Free case assessment available. B2B + B2C legal services across all courts in India.",
     type: "website",
     url: "https://www.nyaysevak.com/platform",
   },

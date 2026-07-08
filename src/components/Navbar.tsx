@@ -11,7 +11,6 @@ import { trackPhoneClick } from "@/lib/analytics";
 const navLinks = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/services" },
-  { label: "Pricing", href: "/pricing" },
   { label: "Practice Areas", href: "/practice-areas" },
   { label: "Lawyers", href: "/lawyers" },
   { label: "Courts", href: "/courts" },
@@ -102,7 +101,7 @@ export default function Navbar() {
             <ContactButton
               className="btn-gold-shine inline-flex items-center rounded-xl bg-gradient-to-r from-gold to-gold-light px-6 py-2.5 text-xs font-semibold uppercase tracking-widest text-black transition-all duration-300 hover:shadow-lg hover:shadow-gold/20 cursor-pointer"
             >
-              Get Consultation
+              Get Free Assessment
             </ContactButton>
           </div>
 
@@ -153,7 +152,7 @@ export default function Navbar() {
               transform: mobileOpen ? "translateY(0)" : "translateY(20px)",
             }}
           >
-            Get Consultation
+            Get Free Assessment
           </ContactButton>
           <a
             href="tel:+919868666715"

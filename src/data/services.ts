@@ -37,7 +37,7 @@ export const b2cServices: ServiceItem[] = [
       "Matched to your specialization, location & court",
       "Every lawyer Bar Council–registered & verified",
       "Full representation — from filing to court resolution",
-      "Transparent fees upfront, paid case assessment",
+      "Transparent fees upfront, free case assessment",
     ],
   },
   {

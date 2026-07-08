@@ -10,9 +10,9 @@ const url = `${SITE_URL}/lawyers`;
 export const metadata: Metadata = {
   title: "Find Lawyers by City in India",
   description:
-    "Find the best verified lawyers across India's top cities — Delhi, Mumbai, Bangalore, Chennai, Hyderabad, Pune, Kolkata, and Ahmedabad. Criminal, civil, divorce, property, and corporate advocates. Paid case assessment available.",
+    "Find the best verified lawyers across India's top cities — Delhi, Mumbai, Bangalore, Chennai, Hyderabad, Pune, Kolkata, and Ahmedabad. Criminal, civil, divorce, property, and corporate advocates. Free case assessment available.",
   keywords:
-    "lawyer near me, lawyer in Delhi, lawyer in Mumbai, lawyer in Bangalore, lawyer in Chennai, lawyer in Hyderabad, lawyer in Pune, lawyer in Kolkata, lawyer in Ahmedabad, best lawyer India, verified advocate India, paid case assessment, NyaySevak",
+    "lawyer near me, lawyer in Delhi, lawyer in Mumbai, lawyer in Bangalore, lawyer in Chennai, lawyer in Hyderabad, lawyer in Pune, lawyer in Kolkata, lawyer in Ahmedabad, best lawyer India, verified advocate India, free case assessment, NyaySevak",
   alternates: { canonical: url },
   openGraph: {
     title: "Find Lawyers by City Across India | NyaySevak",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Find Lawyers by City in India | NyaySevak",
-    description: "Verified advocates across India's top 8 cities. Paid case assessment available.",
+    description: "Verified advocates across India's top 8 cities. Free case assessment available.",
   },
 };
 

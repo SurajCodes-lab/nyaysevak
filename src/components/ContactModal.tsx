@@ -32,7 +32,7 @@ export default function ContactModal() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
-    name: "", phone: "", city: "", legalIssue: "", description: "",
+    name: "", phone: "", city: "", legalIssue: "", intent: "", description: "",
   });
 
   // Lock body scroll when modal is open
@@ -66,7 +66,7 @@ export default function ContactModal() {
       await submitToSheet(formData);
       trackContactFormSubmit("modal");
       setSubmitted(true);
-      setFormData({ name: "", phone: "", city: "", legalIssue: "", description: "" });
+      setFormData({ name: "", phone: "", city: "", legalIssue: "", intent: "", description: "" });
       // Keep the modal open on success so the user can act on the next-step
       // CTAs (call / WhatsApp) instead of being dropped back to the page.
     } catch {
@@ -217,6 +217,31 @@ export default function ContactModal() {
                         <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                       </svg>
                     </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Qualifier — flags buying intent so the team prioritises ready-to-act matters (filters freebie-seekers without a price barrier) */}
+              <div>
+                <label className="mb-2 flex items-center gap-2 text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-gray-400">
+                  <Briefcase className="h-3.5 w-3.5 text-gold/60" strokeWidth={1.5} />
+                  Where are you in the process?
+                </label>
+                <div className="relative">
+                  <select
+                    value={formData.intent}
+                    onChange={(e) => setFormData({ ...formData, intent: e.target.value })}
+                    className="w-full rounded-xl border border-white/[0.1] bg-dark-card px-4 py-3 sm:py-3.5 pr-10 text-sm text-gray-500 transition-all duration-300 appearance-none hover:border-gold/20 focus:border-gold/40 focus:ring-2 focus:ring-gold/15 [&>option]:bg-[#1a1a2e] [&>option]:text-white [&>option]:py-2"
+                  >
+                    <option value="">Select one</option>
+                    <option value="ready-to-hire">I&apos;m ready to take action / hire a lawyer</option>
+                    <option value="need-next-steps">I need a clear plan for my next steps</option>
+                    <option value="exploring">Just exploring my options for now</option>
+                  </select>
+                  <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
+                    <svg className="h-4 w-4 text-gold/50" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
                   </div>
                 </div>
               </div>

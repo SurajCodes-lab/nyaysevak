@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: { params: Promise<{ city: str
   // "divorce lawyer Delhi" etc.) and neighbourhood-level near-me variants.
   // Week 15: tightened + de-duplicated brand (root layout adds "| NyaySevak.com").
   const title = `Best Lawyers in ${city.name} — Case Assessment`;
-  const description = `Find the best verified lawyers near you in ${city.name}, ${city.state}. Criminal lawyer, civil lawyer, divorce lawyer, property lawyer, corporate lawyer & more. Covering ${city.highCourt.name} and all ${city.name} district courts. Paid case assessment available.`;
+  const description = `Find the best verified lawyers near you in ${city.name}, ${city.state}. Criminal lawyer, civil lawyer, divorce lawyer, property lawyer, corporate lawyer & more. Covering ${city.highCourt.name} and all ${city.name} district courts. Free case assessment available.`;
   const url = `${SITE_URL}/lawyers/${citySlug}`;
   const cityLower = city.name.toLowerCase();
 
@@ -40,21 +40,21 @@ export async function generateMetadata({ params }: { params: Promise<{ city: str
       `lawyer near me ${cityLower}`,
       `advocate ${cityLower}`,
       `${city.highCourt.name.toLowerCase()} lawyer`,
-      `paid case assessment ${cityLower}`,
+      `free case assessment ${cityLower}`,
       "verified lawyer India",
       "NyaySevak",
     ].join(", "),
     alternates: { canonical: url },
     openGraph: {
       title: `Best Lawyers Near You in ${city.name} | Case Assessment | NyaySevak`,
-      description: `Verified advocates near you across ${city.name}, ${city.state}. Every practice area. Paid case assessment available.`,
+      description: `Verified advocates near you across ${city.name}, ${city.state}. Every practice area. Free case assessment available.`,
       url,
       type: "website",
     },
     twitter: {
       card: "summary_large_image",
       title: `Best Lawyers Near You in ${city.name} | NyaySevak`,
-      description: `Find verified ${city.name} lawyers near you. Paid case assessment available.`,
+      description: `Find verified ${city.name} lawyers near you. Free case assessment available.`,
     },
   };
 }
@@ -109,7 +109,7 @@ export default async function CityHubPage({ params }: { params: Promise<{ city: 
     "@type": "LegalService",
     "@id": `${url}#localbusiness`,
     name: `NyaySevak — Lawyers in ${city.name}`,
-    description: `Bar-Council-verified lawyers in ${city.name}, ${city.state} across criminal, civil, family, property, and corporate law. Paid case assessment available.`,
+    description: `Bar-Council-verified lawyers in ${city.name}, ${city.state} across criminal, civil, family, property, and corporate law. Free case assessment available.`,
     image: `${SITE_URL}/logo.png`,
     url,
     telephone: "+91-9868666715",
@@ -140,7 +140,7 @@ export default async function CityHubPage({ params }: { params: Promise<{ city: 
   // Week 11: AEO Quick Answer for the city hub + WebPage Speakable target.
   const quickAnswerQuestion = `Who are the best lawyers in ${city.name}?`;
   const quickAnswer =
-    `NyaySevak connects you with Bar-Council-verified lawyers in ${city.name}, ${city.state} for criminal, civil, family and divorce, property, and corporate matters. Our ${city.name} advocates practise before ${city.highCourt.name} and the city's district courts, cover all ${city.neighbourhoods.length}+ localities, and offer a paid case assessment with fees agreed upfront.`;
+    `NyaySevak connects you with Bar-Council-verified lawyers in ${city.name}, ${city.state} for criminal, civil, family and divorce, property, and corporate matters. Our ${city.name} advocates practise before ${city.highCourt.name} and the city's district courts, cover all ${city.neighbourhoods.length}+ localities, and offer a free case assessment with fees agreed upfront.`;
 
   // Week 15 (Phase 4 / AEO): genuine FAQ derived from the city's own data — no
   // fabrication. Gives the hub structured Q&A for AI-Overview / featured-snippet
@@ -148,11 +148,11 @@ export default async function CityHubPage({ params }: { params: Promise<{ city: 
   const cityFaqs = [
     {
       question: `How do I find a verified lawyer in ${city.name}?`,
-      answer: `Tell NyaySevak about your matter and we match you within 24 hours with a Bar-Council-verified ${city.name} lawyer who practises before ${city.highCourt.name} and the relevant district court. Your first step is a paid case assessment and all fees are agreed upfront.`,
+      answer: `Tell NyaySevak about your matter and we match you within 24 hours with a Bar-Council-verified ${city.name} lawyer who practises before ${city.highCourt.name} and the relevant district court. Your first step is a free case assessment and all fees are agreed upfront.`,
     },
     {
       question: `What does a lawyer consultation cost in ${city.name}?`,
-      answer: `Your case assessment through NyaySevak is a nominal paid step. After that, ${city.name} lawyers charge based on the matter, seniority, and court; fees are always agreed upfront before any work begins.`,
+      answer: `Your case assessment through NyaySevak is free and comes with no obligation. After that, ${city.name} lawyers charge based on the matter, seniority, and court; fees are always agreed upfront before any work begins.`,
     },
     {
       question: `Which courts do ${city.name} lawyers handle?`,
@@ -354,7 +354,7 @@ export default async function CityHubPage({ params }: { params: Promise<{ city: 
                 Ready to Speak With a {city.name} Lawyer?
               </h2>
               <p className="mx-auto mt-4 mb-8 max-w-lg text-sm sm:text-base text-gray-400 leading-relaxed">
-                Tell us about your matter in 30 seconds. We&apos;ll match you with a verified {city.name} lawyer within 24 hours. First step is a paid case assessment.
+                Tell us about your matter in 30 seconds. We&apos;ll match you with a verified {city.name} lawyer within 24 hours. First step is a free case assessment.
               </p>
               <ContactButton className="btn-gold-shine inline-flex items-center justify-center gap-2.5 rounded-xl bg-gradient-to-r from-gold to-gold-light px-8 sm:px-10 py-4 sm:py-5 text-sm font-semibold uppercase tracking-widest text-black cursor-pointer">
                 Book Your Assessment

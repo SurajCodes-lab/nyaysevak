@@ -35,31 +35,31 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const hc = highCourts.find((c) => c.slug === slug);
   if (hc) return {
     title: `${hc.name.replace(/ HC$/, " High Court")} Lawyers — Case Assessment`,
-    description: `Find the best verified lawyers for ${hc.name} in ${hc.jurisdiction}. Writ petitions, appeals, bail, criminal, civil, family, corporate & tax matters. ${hc.benches.length > 0 ? `Benches: ${hc.benches.join(", ")}. ` : ""}Paid case assessment available. Call +91-9868666715.`,
-    keywords: `${hc.name} lawyer, best advocate ${hc.jurisdiction}, ${hc.jurisdiction} lawyer, high court lawyer ${hc.jurisdiction}, bail lawyer ${hc.jurisdiction}, writ petition lawyer, ${hc.name} advocate, NyaySevak, paid case assessment`,
+    description: `Find the best verified lawyers for ${hc.name} in ${hc.jurisdiction}. Writ petitions, appeals, bail, criminal, civil, family, corporate & tax matters. ${hc.benches.length > 0 ? `Benches: ${hc.benches.join(", ")}. ` : ""}Free case assessment available. Call +91-9868666715.`,
+    keywords: `${hc.name} lawyer, best advocate ${hc.jurisdiction}, ${hc.jurisdiction} lawyer, high court lawyer ${hc.jurisdiction}, bail lawyer ${hc.jurisdiction}, writ petition lawyer, ${hc.name} advocate, NyaySevak, free case assessment`,
     alternates: { canonical: `https://www.nyaysevak.com/courts/${slug}` },
     openGraph: {
       title: `Best ${hc.name} Lawyers | Case Assessment | NyaySevak`,
-      description: `Verified advocates for ${hc.name}. Jurisdiction: ${hc.jurisdiction}. All practice areas. Paid case assessment available.`,
+      description: `Verified advocates for ${hc.name}. Jurisdiction: ${hc.jurisdiction}. All practice areas. Free case assessment available.`,
       url: `https://www.nyaysevak.com/courts/${slug}`,
       type: "website",
     },
     twitter: {
       card: "summary_large_image",
       title: `${hc.name} Lawyers | NyaySevak`,
-      description: `Find verified advocates for ${hc.name}. Paid case assessment available.`,
+      description: `Find verified advocates for ${hc.name}. Free case assessment available.`,
     },
   };
 
   const dc = districtCourts.find((d) => d.slug === slug);
   if (dc) return {
     title: `District Court Lawyers in ${dc.state}`,
-    description: `Find the best verified lawyers for all ${dc.districts.length} district courts in ${dc.state}. ${dc.districts.slice(0, 5).join(", ")} & more. Criminal, civil, family, property, consumer & labour cases. Paid case assessment available.`,
-    keywords: `district court lawyer ${dc.state}, best lawyer ${dc.districts[0]}, advocate near me ${dc.state}, ${dc.districts.slice(0, 3).map(d => `lawyer ${d}`).join(", ")}, NyaySevak, paid case assessment`,
+    description: `Find the best verified lawyers for all ${dc.districts.length} district courts in ${dc.state}. ${dc.districts.slice(0, 5).join(", ")} & more. Criminal, civil, family, property, consumer & labour cases. Free case assessment available.`,
+    keywords: `district court lawyer ${dc.state}, best lawyer ${dc.districts[0]}, advocate near me ${dc.state}, ${dc.districts.slice(0, 3).map(d => `lawyer ${d}`).join(", ")}, NyaySevak, free case assessment`,
     alternates: { canonical: `https://www.nyaysevak.com/courts/${slug}` },
     openGraph: {
       title: `District Court Lawyers in ${dc.state} | NyaySevak`,
-      description: `Verified lawyers for all ${dc.districts.length} district courts in ${dc.state}. Paid case assessment available.`,
+      description: `Verified lawyers for all ${dc.districts.length} district courts in ${dc.state}. Free case assessment available.`,
       url: `https://www.nyaysevak.com/courts/${slug}`,
       type: "website",
     },
@@ -73,12 +73,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const tr = tribunalGroups.find((t) => t.slug === slug);
   if (tr) return {
     title: `${tr.title} Tribunal Lawyers in India`,
-    description: `Find the best verified lawyers for ${tr.title} tribunals in India. ${tr.items.slice(0, 4).join(", ")} & more. Expert tribunal representation. Paid case assessment available. Call +91-9868666715.`,
-    keywords: `${tr.title} tribunal lawyer, ${tr.items.slice(0, 3).map(i => `${i} lawyer`).join(", ")}, best tribunal advocate India, NyaySevak, paid case assessment`,
+    description: `Find the best verified lawyers for ${tr.title} tribunals in India. ${tr.items.slice(0, 4).join(", ")} & more. Expert tribunal representation. Free case assessment available. Call +91-9868666715.`,
+    keywords: `${tr.title} tribunal lawyer, ${tr.items.slice(0, 3).map(i => `${i} lawyer`).join(", ")}, best tribunal advocate India, NyaySevak, free case assessment`,
     alternates: { canonical: `https://www.nyaysevak.com/courts/${slug}` },
     openGraph: {
       title: `${tr.title} Tribunal Lawyers India | NyaySevak`,
-      description: `Expert ${tr.title.toLowerCase()} tribunal lawyers across India. Paid case assessment available.`,
+      description: `Expert ${tr.title.toLowerCase()} tribunal lawyers across India. Free case assessment available.`,
       url: `https://www.nyaysevak.com/courts/${slug}`,
       type: "website",
     },
@@ -148,7 +148,7 @@ function hcWhyChoose(hc: HCData): string[] {
     `Specialist drafting for writ petitions under Articles 226 & 227 and statutory appeals in ${hc.jurisdiction}`,
     benchLine,
     "End-to-end case management — drafting, filing, listing, and final hearing",
-    "Transparent, upfront fees with a paid case assessment",
+    "Transparent, upfront fees with a free case assessment",
     "Post-judgment advisory on compliance, execution, and further appeal to the Supreme Court",
   ];
 }
@@ -161,7 +161,7 @@ function dcWhyChoose(dc: DCData): string[] {
     `On-ground coverage including ${dc.districts.slice(0, 3).join(", ")} and other districts`,
     "Expertise across civil, criminal, family, consumer, and revenue jurisdictions",
     "Regular hearing-date tracking and case-status updates via the eCourts system",
-    "Affordable, upfront fees for individuals and families — paid case assessment",
+    "Affordable, upfront fees for individuals and families — free case assessment",
   ];
 }
 
@@ -195,7 +195,7 @@ function dcFaqs(dc: DCData) {
     { q: `How many district courts are there in ${dc.state}?`, a: `${dc.state} has ${dc.districts.length} district court establishments, including ${dc.districts.slice(0, 4).join(", ")} and others. NyaySevak connects you with verified lawyers practising across all of them.` },
     { q: `Which district court should I file my case in within ${dc.state}?`, a: `Jurisdiction depends on where the cause of action arose, where the defendant resides, or where the property is located. A ${dc.state} lawyer will identify the correct district court and pecuniary forum for your matter.` },
     { q: `Which High Court hears appeals from ${dc.state} district courts?`, a: `Appeals, revisions, and writs arising from the district courts of ${dc.state} lie before the ${hcName}.` },
-    { q: `How much does a district court lawyer cost in ${dc.state}?`, a: `Fees vary by district, case type, and experience; ${dc.state} district-court matters commonly range from ₹5,000 to ₹50,000 depending on complexity. On NyaySevak, fees are agreed upfront and the first step is a paid case assessment.` },
+    { q: `How much does a district court lawyer cost in ${dc.state}?`, a: `Fees vary by district, case type, and experience; ${dc.state} district-court matters commonly range from ₹5,000 to ₹50,000 depending on complexity. On NyaySevak, fees are agreed upfront and the first step is a free case assessment.` },
     { q: `Can I track my ${dc.state} court case online?`, a: `Yes. The district courts of ${dc.state} are on the eCourts system, so case status and the next hearing date can be tracked by CNR number, and your lawyer will keep you updated.` },
   ];
 }
@@ -240,10 +240,10 @@ export default async function CourtDetailPage({ params }: { params: Promise<{ sl
     ? `How do I find a district court lawyer in ${dc.state}?`
     : `How do I find a lawyer for ${tr?.title} tribunal matters?`;
   const quickAnswer = hc
-    ? `NyaySevak matches you with Bar-Council-verified advocates who appear regularly before the ${hc.name}, which has jurisdiction over ${hc.jurisdiction}${hc.benches.length ? ` (benches at ${hc.benches.join(", ")})` : ""}. They handle writ petitions under Articles 226 and 227, civil and criminal appeals, bail applications, company matters and tax appeals. Your first step is a paid case assessment.`
+    ? `NyaySevak matches you with Bar-Council-verified advocates who appear regularly before the ${hc.name}, which has jurisdiction over ${hc.jurisdiction}${hc.benches.length ? ` (benches at ${hc.benches.join(", ")})` : ""}. They handle writ petitions under Articles 226 and 227, civil and criminal appeals, bail applications, company matters and tax appeals. Your first step is a free case assessment.`
     : dc
-    ? `NyaySevak connects you with verified lawyers across all ${dc.districts.length} district courts in ${dc.state}, including ${dc.districts.slice(0, 4).join(", ")} and more. They handle civil suits, criminal trials, family and matrimonial matters, cheque-bounce cases under Section 138, and motor-accident claims. Your first step is a paid case assessment.`
-    : `NyaySevak matches you with specialist advocates for ${tr?.title} tribunal matters across India — application drafting, representation at hearings, written submissions, and appeals against tribunal orders. Your first step is a paid case assessment.`;
+    ? `NyaySevak connects you with verified lawyers across all ${dc.districts.length} district courts in ${dc.state}, including ${dc.districts.slice(0, 4).join(", ")} and more. They handle civil suits, criminal trials, family and matrimonial matters, cheque-bounce cases under Section 138, and motor-accident claims. Your first step is a free case assessment.`
+    : `NyaySevak matches you with specialist advocates for ${tr?.title} tribunal matters across India — application drafting, representation at hearings, written submissions, and appeals against tribunal orders. Your first step is a free case assessment.`;
 
   const speakableJsonLd = webPageSpeakableJsonLd({
     name: quickAnswerQuestion,
@@ -285,9 +285,9 @@ export default async function CourtDetailPage({ params }: { params: Promise<{ sl
       : { "@type": "Country", name: "India" },
     offers: {
       "@type": "Offer",
-      price: "499",
+      price: "0",
       priceCurrency: "INR",
-      description: "Paid case assessment",
+      description: "Free case assessment",
       availability: "https://schema.org/InStock",
     },
   };

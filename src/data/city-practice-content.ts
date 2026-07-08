@@ -56,7 +56,7 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       { title: "Criminal Appeals", desc: "Appeals from Sessions Court to Delhi HC, and to the Supreme Court." },
     ],
     feeRange: {
-      consultation: "₹1,500 – ₹7,500 (paid case assessment on NyaySevak)",
+      consultation: "₹1,500 – ₹7,500 (free case assessment on NyaySevak)",
       district: "₹8,000 – ₹40,000 per appearance",
       highCourt: "₹25,000 – ₹2,00,000 per appearance; senior counsel ₹3,00,000+",
       note: "Bail matters at the Delhi HC typically run ₹50,000–₹1,50,000 all-inclusive for a single-bench hearing with drafting. Fast-track trial retainers start around ₹75,000.",
@@ -65,7 +65,7 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       {
         question: "How do I find the best criminal lawyer near me in Delhi?",
         answer:
-          "Tell NyaySevak about your matter and the police station or district court complex involved (Tis Hazari, Patiala House, Karkardooma, Saket, Rohini, or Dwarka). We match you within 24 hours with a Bar-Council-verified Delhi criminal lawyer who appears regularly before that court. Your first step is a paid case assessment and all fees are agreed upfront.",
+          "Tell NyaySevak about your matter and the police station or district court complex involved (Tis Hazari, Patiala House, Karkardooma, Saket, Rohini, or Dwarka). We match you within 24 hours with a Bar-Council-verified Delhi criminal lawyer who appears regularly before that court. Your first step is a free case assessment and all fees are agreed upfront.",
       },
       {
         question: "Which court handles my criminal case in Delhi?",
@@ -125,7 +125,7 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       { title: "Consumer Complaints", desc: "District Commission, State Commission, and NCDRC representation." },
     ],
     feeRange: {
-      consultation: "₹1,500 – ₹6,000 (paid case assessment on NyaySevak)",
+      consultation: "₹1,500 – ₹6,000 (free case assessment on NyaySevak)",
       district: "₹10,000 – ₹45,000 per appearance",
       highCourt: "₹30,000 – ₹2,50,000 per appearance",
       note: "Large commercial suits are often billed on a hybrid retainer + success-fee model. Simple recovery suits under Order 37 may be filed for a flat fee of ₹35,000–₹75,000 plus court fee (Delhi court fee is ad valorem, capped at ₹1.5 lakh per suit).",
@@ -192,7 +192,7 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       { title: "498A / Dowry Defence", desc: "Quashing, bail, and anticipatory bail in matrimonial cruelty cases." },
     ],
     feeRange: {
-      consultation: "₹1,500 – ₹5,000 (paid case assessment on NyaySevak)",
+      consultation: "₹1,500 – ₹5,000 (free case assessment on NyaySevak)",
       district: "₹8,000 – ₹35,000 per hearing",
       highCourt: "₹30,000 – ₹1,50,000 per appearance",
       note: "Mutual-consent divorce retainers in Delhi typically run ₹35,000–₹85,000 all-inclusive. Contested divorces are charged on a per-appearance basis with total case costs of ₹1.5–₹5 lakh depending on complexity and duration.",
@@ -262,7 +262,7 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       { title: "Unauthorised Colony Regularisation", desc: "PTM-cum-freehold conversion and regularisation advisories." },
     ],
     feeRange: {
-      consultation: "₹2,000 – ₹7,500 (paid case assessment on NyaySevak)",
+      consultation: "₹2,000 – ₹7,500 (free case assessment on NyaySevak)",
       district: "₹15,000 – ₹50,000 per appearance",
       highCourt: "₹40,000 – ₹3,00,000 per appearance",
       note: "Title due-diligence packages for a single Delhi property start at ₹25,000. Sale-deed drafting plus registration assistance typically ₹15,000–₹40,000 plus stamp duty (6% for men, 4% for women in Delhi) and registration charges (1%).",
@@ -333,7 +333,7 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       { title: "FIR Quashing", desc: "S. 528 BNSS petitions before the Bombay High Court." },
     ],
     feeRange: {
-      consultation: "₹2,000 – ₹8,000 (paid case assessment on NyaySevak)",
+      consultation: "₹2,000 – ₹8,000 (free case assessment on NyaySevak)",
       district: "₹10,000 – ₹50,000 per appearance",
       highCourt: "₹30,000 – ₹2,50,000 per appearance; senior counsel ₹5,00,000+",
       note: "Mumbai senior-counsel rates are the highest in India after Delhi. Cheque-bouncing cases are often handled on a flat-fee basis of ₹35,000–₹1,00,000 depending on stages covered.",
@@ -378,7 +378,7 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       { title: "Commercial Arbitration", desc: "S. 9/11/34 petitions before Bombay HC Commercial Division." },
     ],
     feeRange: {
-      consultation: "₹2,000 – ₹7,500 (paid case assessment on NyaySevak)",
+      consultation: "₹2,000 – ₹7,500 (free case assessment on NyaySevak)",
       district: "₹10,000 – ₹45,000 per appearance",
       highCourt: "₹40,000 – ₹3,00,000 per appearance",
       note: "Mumbai HC Original Side filing fees are ad-valorem and among the highest in India. Commercial arbitrations are often on hybrid retainer + success-fee models; Mumbai is India's leading institutional arbitration seat.",
@@ -423,7 +423,7 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       { title: "498A Defence", desc: "Quashing, anticipatory bail, and regular bail under BNSS." },
     ],
     feeRange: {
-      consultation: "₹1,500 – ₹6,000 (paid case assessment on NyaySevak)",
+      consultation: "₹1,500 – ₹6,000 (free case assessment on NyaySevak)",
       district: "₹10,000 – ₹40,000 per hearing",
       highCourt: "₹30,000 – ₹1,50,000 per appearance",
       note: "Mutual-consent divorce retainers in Mumbai run ₹40,000–₹1 lakh. Contested matrimonial cases are typically billed per appearance with total costs of ₹2–₹6 lakh over the life of the case.",
@@ -468,7 +468,7 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       { title: "Tenancy (MRC Act)", desc: "Eviction, standard-rent, and repair disputes at Small Causes Court." },
     ],
     feeRange: {
-      consultation: "₹2,500 – ₹10,000 (paid case assessment on NyaySevak)",
+      consultation: "₹2,500 – ₹10,000 (free case assessment on NyaySevak)",
       district: "₹15,000 – ₹75,000 per appearance",
       highCourt: "₹50,000 – ₹5,00,000 per appearance",
       note: "Mumbai stamp duty is 5–6% (with female-buyer concessions in select periods) plus 1% registration and 1% metro cess in many municipal areas. Title diligence for a Mumbai flat: ₹35,000–₹1 lakh depending on complexity.",
@@ -515,7 +515,7 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       { title: "Cross-Border Contracts", desc: "FEMA, FDI, ODI advisory and disputes; ECB structuring." },
     ],
     feeRange: {
-      consultation: "₹3,500 – ₹20,000 (paid case assessment on NyaySevak)",
+      consultation: "₹3,500 – ₹20,000 (free case assessment on NyaySevak)",
       district: "Not applicable — NCLT: ₹30,000–₹2,00,000 per hearing",
       highCourt: "₹75,000 – ₹7,50,000 per appearance; senior counsel ₹15 lakh+",
       note: "Mumbai senior-counsel rates are the highest in India for commercial matters. SEBI defence work is typically retainer-based (₹10 lakh+). Institutional arbitrations at MCIA follow tribunal-set fee structures plus counsel fees.",
@@ -563,7 +563,7 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       { title: "MCA / ROC Compliance", desc: "Annual filings, strike-off, restoration, and RD-level approvals." },
     ],
     feeRange: {
-      consultation: "₹3,000 – ₹15,000 (paid case assessment on NyaySevak)",
+      consultation: "₹3,000 – ₹15,000 (free case assessment on NyaySevak)",
       district: "Not applicable — NCLT: ₹25,000–₹1,50,000 per hearing",
       highCourt: "₹50,000 – ₹5,00,000 per appearance; senior counsel ₹10 lakh+",
       note: "Private Limited incorporation runs ₹15,000–₹35,000 all-inclusive. NCLT oppression/mismanagement retainers start at ₹5 lakh. IBC admission petitions ₹75,000–₹2 lakh plus court fee. Commercial arbitrations are typically billed on a hybrid retainer + success-fee basis.",
@@ -633,7 +633,7 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       { title: "Quashing Petitions", desc: "S. 528 BNSS petitions before Karnataka HC." },
     ],
     feeRange: {
-      consultation: "₹1,500 – ₹6,000 (paid case assessment on NyaySevak)",
+      consultation: "₹1,500 – ₹6,000 (free case assessment on NyaySevak)",
       district: "₹7,000 – ₹30,000 per appearance",
       highCourt: "₹20,000 – ₹1,50,000 per appearance; senior counsel ₹2,50,000+",
       note: "Bangalore criminal-lawyer fees are 15–25% lower than Delhi/Mumbai. Cyber-crime retainers ₹50,000–₹2 lakh; bail matters at Karnataka HC typically ₹40,000–₹1 lakh all-inclusive.",
@@ -678,7 +678,7 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       { title: "Consumer Cases", desc: "District Consumer Commission and Karnataka State Commission filings." },
     ],
     feeRange: {
-      consultation: "₹1,500 – ₹6,500 (paid case assessment on NyaySevak)",
+      consultation: "₹1,500 – ₹6,500 (free case assessment on NyaySevak)",
       district: "₹8,000 – ₹35,000 per appearance",
       highCourt: "₹25,000 – ₹1,75,000 per appearance",
       note: "Karnataka court fees are ad-valorem and among the lower slabs in India. Title diligence for a Bengaluru property: ₹20,000–₹60,000 depending on layout complexity. K-RERA filings start at ₹30,000 retainer.",
@@ -722,7 +722,7 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       { title: "498A Defence", desc: "Quashing, anticipatory bail, regular bail." },
     ],
     feeRange: {
-      consultation: "₹1,200 – ₹5,000 (paid case assessment on NyaySevak)",
+      consultation: "₹1,200 – ₹5,000 (free case assessment on NyaySevak)",
       district: "₹7,000 – ₹30,000 per hearing",
       highCourt: "₹20,000 – ₹1,25,000 per appearance",
       note: "Mutual-consent divorce retainers in Bangalore run ₹30,000–₹65,000 all-inclusive. NRI-custody matters are more specialised and billed on retainer + per-appearance basis.",
@@ -767,7 +767,7 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       { title: "Apartment-Association Disputes", desc: "Common areas, maintenance, developer-handover." },
     ],
     feeRange: {
-      consultation: "₹2,000 – ₹7,500 (paid case assessment on NyaySevak)",
+      consultation: "₹2,000 – ₹7,500 (free case assessment on NyaySevak)",
       district: "₹12,000 – ₹40,000 per appearance",
       highCourt: "₹30,000 – ₹2,00,000 per appearance",
       note: "Karnataka stamp duty is 5% (3% for women in specific slabs) plus 1% registration and 0.5% cess. Title diligence for a single Bangalore property: ₹20,000–₹60,000. Full-service conveyancing including drafting and registration: ₹30,000–₹75,000 plus duties.",
@@ -813,7 +813,7 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       { title: "Cross-Border M&A", desc: "Due diligence, SPA, regulatory approvals (CCI, RBI, MCA)." },
     ],
     feeRange: {
-      consultation: "₹2,500 – ₹12,500 (paid case assessment on NyaySevak)",
+      consultation: "₹2,500 – ₹12,500 (free case assessment on NyaySevak)",
       district: "NCLT: ₹25,000–₹1,25,000 per hearing",
       highCourt: "₹40,000 – ₹3,50,000 per appearance",
       note: "Bangalore corporate-law fees are 10–20% below Mumbai/Delhi. Pvt Ltd incorporation: ₹15,000–₹30,000. SSA+SHA drafting: ₹1.5–₹5 lakh depending on complexity. ESOP plan drafting: ₹1–₹3 lakh.",
@@ -859,7 +859,7 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       { title: "Economic Offences", desc: "Cheating, fraud, S.138 NI Act, and SEBI matters." },
     ],
     feeRange: {
-      consultation: "₹1,500 – ₹5,500 (paid case assessment on NyaySevak)",
+      consultation: "₹1,500 – ₹5,500 (free case assessment on NyaySevak)",
       district: "₹6,000 – ₹28,000 per appearance",
       highCourt: "₹20,000 – ₹1,50,000 per appearance; senior counsel ₹3,00,000+",
       note: "Chennai criminal lawyer fees are 10–20% below Mumbai/Delhi for comparable experience. Goondas Act habeas corpus filings at Madras HC: ₹50,000–₹1.5 lakh retainer typical.",
@@ -904,7 +904,7 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       { title: "Consumer Cases", desc: "District Consumer Commission and TN State Commission filings." },
     ],
     feeRange: {
-      consultation: "₹1,500 – ₹6,000 (paid case assessment on NyaySevak)",
+      consultation: "₹1,500 – ₹6,000 (free case assessment on NyaySevak)",
       district: "₹8,000 – ₹32,000 per appearance",
       highCourt: "₹25,000 – ₹1,75,000 per appearance",
       note: "Tamil Nadu court fees are ad-valorem with moderate slabs. Title diligence for a Chennai property: ₹20,000–₹50,000. TNRERA retainer: ₹30,000–₹75,000 typical.",
@@ -948,7 +948,7 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       { title: "498A Defence", desc: "Quashing, AB, regular bail." },
     ],
     feeRange: {
-      consultation: "₹1,200 – ₹5,000 (paid case assessment on NyaySevak)",
+      consultation: "₹1,200 – ₹5,000 (free case assessment on NyaySevak)",
       district: "₹7,000 – ₹28,000 per hearing",
       highCourt: "₹20,000 – ₹1,25,000 per appearance",
       note: "Mutual-consent divorce retainers in Chennai run ₹25,000–₹60,000. NRI matters are typically higher due to complexity and cross-border coordination.",
@@ -993,7 +993,7 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       { title: "Partition Suits", desc: "Co-owner partition of ancestral property." },
     ],
     feeRange: {
-      consultation: "₹2,000 – ₹7,500 (paid case assessment on NyaySevak)",
+      consultation: "₹2,000 – ₹7,500 (free case assessment on NyaySevak)",
       district: "₹10,000 – ₹35,000 per appearance",
       highCourt: "₹25,000 – ₹1,75,000 per appearance",
       note: "TN total property-registration cost is 11% (7% stamp + 4% registration). Title diligence for a Chennai property: ₹20,000–₹50,000. Conveyancing including drafting and registration: ₹25,000–₹60,000 plus duties.",
@@ -1039,7 +1039,7 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       { title: "Infrastructure Disputes", desc: "EPC, concession, and government-contract arbitration." },
     ],
     feeRange: {
-      consultation: "₹2,500 – ₹12,500 (paid case assessment on NyaySevak)",
+      consultation: "₹2,500 – ₹12,500 (free case assessment on NyaySevak)",
       district: "NCLT: ₹25,000–₹1,25,000 per hearing",
       highCourt: "₹40,000 – ₹3,00,000 per appearance",
       note: "Chennai corporate-law fees are 10–20% below Mumbai/Delhi. Incorporation ₹15,000–₹30,000. NCLAT appeals: ₹75,000–₹2 lakh per appearance. Infrastructure arbitrations often on hybrid retainer + success-fee basis.",
@@ -1085,7 +1085,7 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       { title: "PMLA / ED Defence", desc: "Special PMLA Court representation." },
     ],
     feeRange: {
-      consultation: "₹1,500 – ₹5,500 (paid case assessment on NyaySevak)",
+      consultation: "₹1,500 – ₹5,500 (free case assessment on NyaySevak)",
       district: "₹6,000 – ₹28,000 per appearance",
       highCourt: "₹20,000 – ₹1,50,000 per appearance; senior counsel ₹3,00,000+",
       note: "Hyderabad criminal lawyer fees track Bengaluru levels — 15–20% below Mumbai/Delhi. Bail matters at Telangana HC typically ₹35,000–₹1 lakh all-inclusive.",
@@ -1130,7 +1130,7 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       { title: "Tenancy Matters", desc: "Under TS Buildings (Lease, Rent, and Eviction) Control Act." },
     ],
     feeRange: {
-      consultation: "₹1,500 – ₹6,000 (paid case assessment on NyaySevak)",
+      consultation: "₹1,500 – ₹6,000 (free case assessment on NyaySevak)",
       district: "₹8,000 – ₹30,000 per appearance",
       highCourt: "₹22,000 – ₹1,50,000 per appearance",
       note: "Telangana stamp duty is 6% + 1% transfer duty + 0.5% registration (7.5% total). Title diligence: ₹20,000–₹50,000. TSRERA retainer: ₹30,000–₹75,000.",
@@ -1174,7 +1174,7 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       { title: "498A Defence", desc: "Quashing, AB, regular bail." },
     ],
     feeRange: {
-      consultation: "₹1,200 – ₹5,000 (paid case assessment on NyaySevak)",
+      consultation: "₹1,200 – ₹5,000 (free case assessment on NyaySevak)",
       district: "₹6,000 – ₹25,000 per hearing",
       highCourt: "₹20,000 – ₹1,25,000 per appearance",
       note: "Mutual-consent divorce retainers in Hyderabad: ₹25,000–₹55,000. NRI matters higher due to cross-border coordination.",
@@ -1219,7 +1219,7 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       { title: "Partition Suits", desc: "Co-owner partition of ancestral property." },
     ],
     feeRange: {
-      consultation: "₹2,000 – ₹7,500 (paid case assessment on NyaySevak)",
+      consultation: "₹2,000 – ₹7,500 (free case assessment on NyaySevak)",
       district: "₹10,000 – ₹35,000 per appearance",
       highCourt: "₹25,000 – ₹1,75,000 per appearance",
       note: "Total Telangana registration cost: 7.5% (6% stamp + 1% transfer + 0.5% registration). Title diligence: ₹20,000–₹50,000. Conveyancing: ₹25,000–₹60,000 + duties.",
@@ -1265,7 +1265,7 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       { title: "M&A Transactions", desc: "Due diligence, SPA, regulatory approvals." },
     ],
     feeRange: {
-      consultation: "₹2,500 – ₹12,500 (paid case assessment on NyaySevak)",
+      consultation: "₹2,500 – ₹12,500 (free case assessment on NyaySevak)",
       district: "NCLT: ₹25,000–₹1,25,000 per hearing",
       highCourt: "₹40,000 – ₹3,00,000 per appearance; senior counsel ₹7 lakh+",
       note: "Hyderabad corporate fees track Chennai/Bengaluru levels. Pharma regulatory work is typically retainer-based (₹3 lakh+). Incorporation ₹15,000–₹30,000.",
@@ -1311,7 +1311,7 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       { title: "MCOCA / UAPA", desc: "Organised-crime and terror-related defences." },
     ],
     feeRange: {
-      consultation: "₹1,200 – ₹5,000 (paid case assessment on NyaySevak)",
+      consultation: "₹1,200 – ₹5,000 (free case assessment on NyaySevak)",
       district: "₹6,000 – ₹25,000 per appearance",
       highCourt: "₹25,000 – ₹1,75,000 per appearance (Bombay HC)",
       note: "Pune criminal-lawyer fees are 20–30% below Mumbai. Bombay HC appearance requires Mumbai-based advocates or Pune lawyers with Mumbai HC practice. Our panel covers both.",
@@ -1356,7 +1356,7 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       { title: "Tenancy (MRC Act)", desc: "Eviction, rent fixation for pre-1999 tenancies." },
     ],
     feeRange: {
-      consultation: "₹1,200 – ₹5,500 (paid case assessment on NyaySevak)",
+      consultation: "₹1,200 – ₹5,500 (free case assessment on NyaySevak)",
       district: "₹7,000 – ₹30,000 per appearance",
       highCourt: "₹40,000 – ₹2,50,000 (Bombay HC)",
       note: "Pune civil-law fees are 25–35% below Mumbai rates. Title diligence for Pune property: ₹15,000–₹45,000. MahaRERA retainer: ₹30,000–₹65,000.",
@@ -1399,7 +1399,7 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       { title: "498A Defence", desc: "Quashing, AB, regular bail." },
     ],
     feeRange: {
-      consultation: "₹1,000 – ₹4,500 (paid case assessment on NyaySevak)",
+      consultation: "₹1,000 – ₹4,500 (free case assessment on NyaySevak)",
       district: "₹6,000 – ₹22,000 per hearing",
       highCourt: "₹30,000 – ₹1,25,000 (Bombay HC)",
       note: "Pune mutual-consent divorce retainers: ₹20,000–₹50,000. NRI matters higher due to cross-border coordination.",
@@ -1444,7 +1444,7 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       { title: "NA Conversion", desc: "Agricultural to non-agricultural conversion advisories." },
     ],
     feeRange: {
-      consultation: "₹1,500 – ₹6,000 (paid case assessment on NyaySevak)",
+      consultation: "₹1,500 – ₹6,000 (free case assessment on NyaySevak)",
       district: "₹8,000 – ₹28,000 per appearance",
       highCourt: "₹30,000 – ₹2,00,000 (Bombay HC)",
       note: "Total registration cost in Pune: ~7–8% (stamp 5–6% + registration 1% + metro cess 1%). Title diligence: ₹15,000–₹45,000. MahaRERA retainer: ₹30,000–₹65,000.",
@@ -1489,7 +1489,7 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       { title: "M&A Transactions", desc: "Due diligence, SPA, regulatory approvals." },
     ],
     feeRange: {
-      consultation: "₹2,000 – ₹10,000 (paid case assessment on NyaySevak)",
+      consultation: "₹2,000 – ₹10,000 (free case assessment on NyaySevak)",
       district: "NCLT: ₹25,000–₹1,25,000 per hearing (Mumbai)",
       highCourt: "₹40,000 – ₹3,00,000 (Bombay HC at Mumbai)",
       note: "Pune corporate fees are 20–30% below Mumbai. Incorporation ₹15,000–₹30,000. Contract drafting ₹35,000–₹2 lakh depending on complexity.",
@@ -1536,7 +1536,7 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       { title: "PMLA / ED Defence", desc: "Special PMLA Court representation." },
     ],
     feeRange: {
-      consultation: "₹1,200 – ₹5,000 (paid case assessment on NyaySevak)",
+      consultation: "₹1,200 – ₹5,000 (free case assessment on NyaySevak)",
       district: "₹5,000 – ₹22,000 per appearance",
       highCourt: "₹15,000 – ₹1,25,000 per appearance; senior counsel ₹2,50,000+",
       note: "Kolkata criminal-lawyer fees are among the lower-mid India-wide — 30–40% below Mumbai/Delhi. Bail at Calcutta HC: ₹30,000–₹85,000 all-inclusive typical.",
@@ -1581,7 +1581,7 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       { title: "Consumer Cases", desc: "District and State Commission filings." },
     ],
     feeRange: {
-      consultation: "₹1,200 – ₹5,500 (paid case assessment on NyaySevak)",
+      consultation: "₹1,200 – ₹5,500 (free case assessment on NyaySevak)",
       district: "₹6,000 – ₹25,000 per appearance",
       highCourt: "₹20,000 – ₹1,50,000 per appearance",
       note: "West Bengal stamp duty is 5% + 1% registration = 6% total. Title diligence for Kolkata property: ₹15,000–₹45,000. Testamentary matters (probate of ordinary estates) ₹50,000–₹2 lakh depending on asset value and complexity.",
@@ -1626,7 +1626,7 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       { title: "Maintenance & Alimony", desc: "S.144 BNSS, S.24 HMA, DV Act." },
     ],
     feeRange: {
-      consultation: "₹1,000 – ₹4,500 (paid case assessment on NyaySevak)",
+      consultation: "₹1,000 – ₹4,500 (free case assessment on NyaySevak)",
       district: "₹5,000 – ₹20,000 per hearing",
       highCourt: "₹18,000 – ₹1,00,000 per appearance",
       note: "Mutual-consent divorce retainers in Kolkata: ₹20,000–₹45,000. Contested divorces typically ₹1.5–₹4 lakh over the life of the case.",
@@ -1671,7 +1671,7 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       { title: "HIDCO / Salt Lake Matters", desc: "Allotment and transfer advisory." },
     ],
     feeRange: {
-      consultation: "₹1,500 – ₹6,000 (paid case assessment on NyaySevak)",
+      consultation: "₹1,500 – ₹6,000 (free case assessment on NyaySevak)",
       district: "₹7,000 – ₹28,000 per appearance",
       highCourt: "₹20,000 – ₹1,50,000 per appearance",
       note: "Total WB registration cost: 6% (5% stamp + 1% registration). Title diligence: ₹15,000–₹45,000. Testamentary-linked title matters: higher due to complexity.",
@@ -1717,7 +1717,7 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       { title: "M&A Transactions", desc: "Due diligence, SPA, regulatory approvals." },
     ],
     feeRange: {
-      consultation: "₹1,500 – ₹10,000 (paid case assessment on NyaySevak)",
+      consultation: "₹1,500 – ₹10,000 (free case assessment on NyaySevak)",
       district: "NCLT: ₹20,000–₹1,00,000 per hearing",
       highCourt: "₹30,000 – ₹2,00,000 per appearance; senior counsel ₹5 lakh+",
       note: "Kolkata corporate fees are 25–35% below Mumbai/Delhi. Incorporation ₹12,000–₹28,000. Family-business dispute representation is often on retainer + success-fee basis.",
@@ -1763,7 +1763,7 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       { title: "PMLA / ED Defence", desc: "Special PMLA Court representation." },
     ],
     feeRange: {
-      consultation: "₹1,200 – ₹5,000 (paid case assessment on NyaySevak)",
+      consultation: "₹1,200 – ₹5,000 (free case assessment on NyaySevak)",
       district: "₹5,000 – ₹22,000 per appearance",
       highCourt: "₹18,000 – ₹1,25,000 per appearance; senior counsel ₹2,50,000+",
       note: "Ahmedabad criminal-lawyer fees are 25–35% below Mumbai/Delhi. Bail at Gujarat HC: ₹30,000–₹85,000 all-inclusive typical.",
@@ -1809,7 +1809,7 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       { title: "Commercial Arbitration", desc: "S. 9/11/34 at Gujarat HC Commercial Division." },
     ],
     feeRange: {
-      consultation: "₹1,500 – ₹6,000 (paid case assessment on NyaySevak)",
+      consultation: "₹1,500 – ₹6,000 (free case assessment on NyaySevak)",
       district: "₹7,000 – ₹25,000 per appearance",
       highCourt: "₹20,000 – ₹1,50,000 per appearance",
       note: "Gujarat total stamp and registration: 4.9% (4.9% stamp + 1% registration with female buyer rebate reducing stamp). Title diligence ₹15,000–₹40,000. GujRERA retainer ₹25,000–₹60,000.",
@@ -1853,7 +1853,7 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       { title: "498A Defence", desc: "Quashing, AB, regular bail." },
     ],
     feeRange: {
-      consultation: "₹1,000 – ₹4,500 (paid case assessment on NyaySevak)",
+      consultation: "₹1,000 – ₹4,500 (free case assessment on NyaySevak)",
       district: "₹5,000 – ₹20,000 per hearing",
       highCourt: "₹18,000 – ₹1,00,000 per appearance",
       note: "Ahmedabad mutual-consent divorce retainers: ₹20,000–₹45,000. NRI matters higher due to cross-border coordination.",
@@ -1898,7 +1898,7 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       { title: "Partition Suits", desc: "Co-owner partition of ancestral and jointly-held properties." },
     ],
     feeRange: {
-      consultation: "₹1,500 – ₹6,000 (paid case assessment on NyaySevak)",
+      consultation: "₹1,500 – ₹6,000 (free case assessment on NyaySevak)",
       district: "₹7,000 – ₹25,000 per appearance",
       highCourt: "₹22,000 – ₹1,50,000 per appearance",
       note: "Gujarat registration: 4.9% stamp + 1% registration (female buyer rebate reduces stamp further). Title diligence: ₹15,000–₹40,000. GujRERA retainer: ₹25,000–₹60,000.",
@@ -1945,7 +1945,7 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       { title: "M&A Transactions", desc: "Due diligence, SPA, regulatory approvals." },
     ],
     feeRange: {
-      consultation: "₹2,000 – ₹12,000 (paid case assessment on NyaySevak)",
+      consultation: "₹2,000 – ₹12,000 (free case assessment on NyaySevak)",
       district: "NCLT: ₹20,000–₹1,00,000 per hearing",
       highCourt: "₹30,000 – ₹2,50,000 per appearance; senior counsel ₹6 lakh+",
       note: "Ahmedabad corporate fees are 20–30% below Mumbai/Delhi. Incorporation ₹12,000–₹28,000. IFSC-related regulatory work is specialised and typically retainer-based.",
@@ -1990,7 +1990,7 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       { title: "Criminal Appeals & Revisions", desc: "Appeals and revisions from trial courts to the Sessions Court and High Court." },
     ],
     feeRange: {
-      consultation: "₹1,000 – ₹5,000 (paid case assessment on NyaySevak)",
+      consultation: "₹1,000 – ₹5,000 (free case assessment on NyaySevak)",
       district: "₹6,000 – ₹30,000 per appearance",
       highCourt: "₹20,000 – ₹1,25,000 per appearance; senior counsel higher",
       note: "Indicative ranges only. Bail matters before the Jaipur Bench commonly run ₹35,000–₹1,00,000 all-inclusive for drafting and a single hearing. Your lawyer agrees the exact fee upfront before any work begins.",
@@ -1999,7 +1999,7 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       {
         question: "How do I find the best criminal lawyer near me in Jaipur?",
         answer:
-          "Tell NyaySevak about your matter and we match you within 24 hours with a Bar-Council-of-Rajasthan-verified Jaipur criminal lawyer who appears regularly before the Jaipur District & Sessions Court and the Rajasthan High Court's Jaipur Bench. Your first step is a paid case assessment and all fees are agreed upfront.",
+          "Tell NyaySevak about your matter and we match you within 24 hours with a Bar-Council-of-Rajasthan-verified Jaipur criminal lawyer who appears regularly before the Jaipur District & Sessions Court and the Rajasthan High Court's Jaipur Bench. Your first step is a free case assessment and all fees are agreed upfront.",
       },
       {
         question: "Which court handles my criminal case in Jaipur?",
@@ -2058,7 +2058,7 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       { title: "Consumer Disputes", desc: "Builder-buyer, deficiency-of-service and product complaints before the consumer commissions." },
     ],
     feeRange: {
-      consultation: "₹1,000 – ₹5,000 (paid case assessment on NyaySevak)",
+      consultation: "₹1,000 – ₹5,000 (free case assessment on NyaySevak)",
       district: "₹5,000 – ₹25,000 per appearance / drafting stage",
       highCourt: "₹20,000 – ₹1,00,000 per appearance; senior counsel higher",
       note: "Indicative ranges only. Civil retainers in Jaipur are commonly structured stage-wise (filing, evidence, arguments). Your lawyer confirms the exact fee structure upfront before any work begins.",
@@ -2092,7 +2092,7 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       {
         question: "What is the first step in a civil dispute in Jaipur?",
         answer:
-          "Most civil disputes begin with a legal notice setting out your claim and demand. If it is not resolved, a suit is filed before the appropriate Jaipur court. A paid case assessment on NyaySevak will help you decide the right forum and strategy.",
+          "Most civil disputes begin with a legal notice setting out your claim and demand. If it is not resolved, a suit is filed before the appropriate Jaipur court. A free case assessment on NyaySevak will help you decide the right forum and strategy.",
       },
     ],
     localNotes: [
@@ -2125,7 +2125,7 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       { title: "Restitution / Judicial Separation", desc: "Restitution of conjugal rights and judicial-separation petitions." },
     ],
     feeRange: {
-      consultation: "₹1,000 – ₹5,000 (paid case assessment on NyaySevak)",
+      consultation: "₹1,000 – ₹5,000 (free case assessment on NyaySevak)",
       district: "₹6,000 – ₹30,000 per appearance / stage",
       highCourt: "₹20,000 – ₹1,00,000 per appearance; senior counsel higher",
       note: "Indicative ranges only. Uncontested mutual-consent divorces in Jaipur are often handled on a fixed all-inclusive package; contested matters are billed stage-wise. Fees are agreed upfront before any work begins.",
@@ -2193,7 +2193,7 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       { title: "Conversion & Regularisation", desc: "Land-use conversion and regularisation guidance for residential property." },
     ],
     feeRange: {
-      consultation: "₹1,000 – ₹5,000 (paid case assessment on NyaySevak)",
+      consultation: "₹1,000 – ₹5,000 (free case assessment on NyaySevak)",
       district: "₹5,000 – ₹30,000 per stage (suit / RERA matter)",
       highCourt: "₹20,000 – ₹1,00,000 per appearance; senior counsel higher",
       note: "Indicative ranges only. Title-verification and drafting work in Jaipur is usually charged as a fixed fee, while litigation and RERA matters are billed stage-wise. Stamp duty and registration charges are separate statutory costs. Fees are agreed upfront.",
@@ -2261,7 +2261,7 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       { title: "Insolvency (IBC)", desc: "Creditor and debtor representation before the NCLT, Jaipur Bench." },
     ],
     feeRange: {
-      consultation: "₹1,500 – ₹7,500 (paid case assessment on NyaySevak)",
+      consultation: "₹1,500 – ₹7,500 (free case assessment on NyaySevak)",
       district: "₹10,000 – ₹50,000 per matter / stage",
       highCourt: "₹25,000 – ₹1,50,000 per appearance; senior counsel higher",
       note: "Indicative ranges only. Incorporation and standard contracts in Jaipur are usually fixed-fee; retainer-based compliance and litigation are billed monthly or stage-wise. Government and filing fees are separate. Fees are agreed upfront.",
@@ -2329,15 +2329,15 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       { title: "Matrimonial & DV Defence", desc: "Defence and prosecution of 498A/BNS 85 and Domestic Violence Act cases." },
     ],
     feeRange: {
-      consultation: "₹1,000 – ₹5,000 (paid case assessment on NyaySevak)",
+      consultation: "₹1,000 – ₹5,000 (free case assessment on NyaySevak)",
       district: "₹6,000 – ₹30,000 per appearance",
       highCourt: "₹25,000 – ₹1,50,000 per appearance at Allahabad HC (plus travel)",
       note: "Allahabad HC matters carry an extra cost because the principal seat is in Prayagraj; many Noida lawyers quote an all-inclusive package for HC bail/quashing.",
     },
     faqs: [
-      { question: "How do I find the best criminal lawyer near me in Noida?", answer: "Tell NyaySevak your matter and the police station involved, and we match you with a Bar-Council-verified Gautam Buddh Nagar criminal lawyer who appears at the Surajpur courts and can file at the Allahabad High Court when needed. Your first step is a paid case assessment." },
+      { question: "How do I find the best criminal lawyer near me in Noida?", answer: "Tell NyaySevak your matter and the police station involved, and we match you with a Bar-Council-verified Gautam Buddh Nagar criminal lawyer who appears at the Surajpur courts and can file at the Allahabad High Court when needed. Your first step is a free case assessment." },
       { question: "Which court handles my criminal case in Noida?", answer: "Cases are tried at the Gautam Buddh Nagar District & Sessions Court at Surajpur, Greater Noida, based on the police station that registered the FIR. Bail goes to the Sessions Court; FIR quashing and criminal appeals go to the Allahabad High Court." },
-      { question: "How much does a criminal lawyer cost in Noida?", answer: "A district-court appearance typically runs ₹6,000–₹30,000; Allahabad High Court bail or quashing runs ₹25,000–₹1,50,000 plus travel, since the principal seat is in Prayagraj. Your case assessment on NyaySevak is a nominal ₹499 and fees are agreed upfront." },
+      { question: "How much does a criminal lawyer cost in Noida?", answer: "A district-court appearance typically runs ₹6,000–₹30,000; Allahabad High Court bail or quashing runs ₹25,000–₹1,50,000 plus travel, since the principal seat is in Prayagraj. Your case assessment on NyaySevak is free of charge and fees are agreed upfront." },
       { question: "I have been cheated by an online fraud in Noida — what should I do?", answer: "Report it on the 1930 helpline and the cybercrime.gov.in portal immediately, then have a Noida cyber-crime lawyer help convert the complaint into an FIR and pursue recovery. Noida's cyber cells are active, and prompt action improves the chance of freezing the fraud accounts." },
       { question: "Where do I apply for anticipatory bail if I fear arrest in Noida?", answer: "Anticipatory bail under Section 482 BNSS is filed before the Gautam Buddh Nagar Court of Session, or directly before the Allahabad High Court. A local criminal lawyer will advise the right forum based on the offence and the stage of investigation." },
     ],
@@ -2368,17 +2368,17 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       { title: "Partition Suits", desc: "Division of jointly-held family property." },
     ],
     feeRange: {
-      consultation: "₹1,000 – ₹5,000 (paid case assessment on NyaySevak)",
+      consultation: "₹1,000 – ₹5,000 (free case assessment on NyaySevak)",
       district: "₹6,000 – ₹35,000 per appearance / stage",
       highCourt: "₹30,000 – ₹1,50,000 per appearance at Allahabad HC",
       note: "Civil suits are long-haul; most Noida lawyers work on a drafting fee plus per-appearance model. Ask whether a RERA or consumer route is faster before filing a civil suit.",
     },
     faqs: [
-      { question: "How do I find a good civil lawyer near me in Noida?", answer: "Describe your dispute to NyaySevak and we match you with a Bar-Council-verified Noida civil lawyer who practises at the Gautam Buddh Nagar courts. Your first step is a paid case assessment and fees are transparent." },
+      { question: "How do I find a good civil lawyer near me in Noida?", answer: "Describe your dispute to NyaySevak and we match you with a Bar-Council-verified Noida civil lawyer who practises at the Gautam Buddh Nagar courts. Your first step is a free case assessment and fees are transparent." },
       { question: "Which court handles a civil case in Noida?", answer: "Civil suits are filed at the Gautam Buddh Nagar District Court at Surajpur; higher-value commercial matters go to the Commercial Court, and appeals/writs go to the Allahabad High Court." },
       { question: "Should I file a civil suit or a RERA/consumer complaint for my flat dispute?", answer: "For builder delays and defects, a RERA complaint or a consumer complaint is often faster and cheaper than a civil suit. A Noida lawyer will assess your agreement and timeline and recommend the route most likely to get you relief quickly." },
       { question: "How long does a civil case take in Noida?", answer: "Straightforward matters can resolve in 1–3 years; contested title/partition suits take longer. The forum you choose (civil court vs RERA vs consumer) materially affects the timeline — get advice before filing." },
-      { question: "What is the cost of a civil lawyer in Noida?", answer: "Expect a drafting fee plus ₹6,000–₹35,000 per appearance at the district level, and ₹30,000+ for Allahabad HC matters. Your case assessment on NyaySevak is a nominal ₹499." },
+      { question: "What is the cost of a civil lawyer in Noida?", answer: "Expect a drafting fee plus ₹6,000–₹35,000 per appearance at the district level, and ₹30,000+ for Allahabad HC matters. Your case assessment on NyaySevak is free of charge." },
     ],
     localNotes: [
       "Many Noida civil disputes have a faster parallel remedy in RERA or the consumer forum — always check before committing to a long civil suit.",
@@ -2407,17 +2407,17 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       { title: "498A / BNS 85 Defence", desc: "Defence and quashing strategy for matrimonial cruelty complaints." },
     ],
     feeRange: {
-      consultation: "₹1,000 – ₹5,000 (paid case assessment on NyaySevak)",
+      consultation: "₹1,000 – ₹5,000 (free case assessment on NyaySevak)",
       district: "₹8,000 – ₹40,000 per stage (Family Court)",
       highCourt: "₹30,000 – ₹1,50,000 per appearance at Allahabad HC",
       note: "Mutual-consent divorce in Noida is often handled on a fixed package (both motions + drafting). Contested matters are billed per stage.",
     },
     faqs: [
-      { question: "How do I find a good divorce lawyer near me in Noida?", answer: "Tell NyaySevak whether your matter is mutual or contested and we match you with a Bar-Council-verified Noida family lawyer at the Gautam Buddh Nagar Family Court. Your first step is a paid case assessment." },
+      { question: "How do I find a good divorce lawyer near me in Noida?", answer: "Tell NyaySevak whether your matter is mutual or contested and we match you with a Bar-Council-verified Noida family lawyer at the Gautam Buddh Nagar Family Court. Your first step is a free case assessment." },
       { question: "Which court handles divorce in Noida?", answer: "Divorce and most matrimonial matters are heard by the Family Court at Gautam Buddh Nagar; appeals go to the Allahabad High Court. DV Act and maintenance applications can also go before the Magistrate." },
       { question: "How long does mutual-consent divorce take in Noida?", answer: "With the Amardeep Singh waiver of the six-month cooling-off period, a well-prepared mutual-consent divorce can conclude in roughly 4–6 months; without the waiver, around six months or more." },
       { question: "Can NRIs get divorced through Noida courts?", answer: "Yes. Noida family lawyers regularly handle NRI matters with appearance by video-conference or through duly executed affidavits/power of attorney, especially for mutual-consent petitions." },
-      { question: "How much does a divorce lawyer cost in Noida?", answer: "Mutual-consent matters are often a fixed package; contested matters run ₹8,000–₹40,000 per stage at the Family Court. Your case assessment on NyaySevak is a nominal ₹499." },
+      { question: "How much does a divorce lawyer cost in Noida?", answer: "Mutual-consent matters are often a fixed package; contested matters run ₹8,000–₹40,000 per stage at the Family Court. Your case assessment on NyaySevak is free of charge." },
     ],
     localNotes: [
       "Noida's professional and NRI population makes video-conference appearances and cross-border custody issues routine here.",
@@ -2448,16 +2448,16 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       { title: "Possession & Partition Suits", desc: "Civil suits over plots, flats, and inherited property." },
     ],
     feeRange: {
-      consultation: "₹1,500 – ₹6,000 (paid case assessment on NyaySevak)",
+      consultation: "₹1,500 – ₹6,000 (free case assessment on NyaySevak)",
       district: "₹8,000 – ₹40,000 per stage; RERA/consumer matters often packaged",
       highCourt: "₹30,000 – ₹2,00,000 per appearance at Allahabad HC",
       note: "RERA and consumer complaints are frequently handled on a fixed package; NCLT homebuyer matters are usually pooled across allottees to share cost.",
     },
     faqs: [
-      { question: "How do I claim a refund or possession from my Noida builder?", answer: "If the project is RERA-registered, file a complaint with UP-RERA for possession with delay interest or a refund; if the builder is insolvent, claims go to the NCLT under the IBC where homebuyers are financial creditors. A Noida RERA lawyer will pick the fastest forum for your facts — your first step is a paid case assessment." },
+      { question: "How do I claim a refund or possession from my Noida builder?", answer: "If the project is RERA-registered, file a complaint with UP-RERA for possession with delay interest or a refund; if the builder is insolvent, claims go to the NCLT under the IBC where homebuyers are financial creditors. A Noida RERA lawyer will pick the fastest forum for your facts — your first step is a free case assessment." },
       { question: "Which forum is fastest for a Noida flat dispute — RERA, consumer, or civil court?", answer: "For a registered, ongoing project, UP-RERA is usually fastest; for deficiency/compensation, the consumer commission; for an insolvent builder, the NCLT; and for pure title/possession disputes, the civil court. The right choice depends on the builder's status and your agreement." },
       { question: "Do I need title verification before buying property in Noida?", answer: "Yes — strongly. Noida/Greater Noida/Yamuna properties are largely leasehold under the development authorities, so a lawyer must verify the lease, dues, transfer permissions, and encumbrances before you pay. It prevents the most common and costly Noida property disputes." },
-      { question: "How much does a property/RERA lawyer cost in Noida?", answer: "RERA and consumer complaints are often a fixed package; civil and HC matters run ₹8,000–₹40,000 per stage and more at the Allahabad HC. NCLT homebuyer matters are usually shared across allottees. Your case assessment on NyaySevak is a nominal ₹499." },
+      { question: "How much does a property/RERA lawyer cost in Noida?", answer: "RERA and consumer complaints are often a fixed package; civil and HC matters run ₹8,000–₹40,000 per stage and more at the Allahabad HC. NCLT homebuyer matters are usually shared across allottees. Your case assessment on NyaySevak is free of charge." },
       { question: "Which court handles property disputes in Noida?", answer: "Depending on the issue: UP-RERA, the Gautam Buddh Nagar Consumer Commission, the NCLT (insolvent builders), or the Gautam Buddh Nagar civil courts, with writs and appeals to the Allahabad High Court." },
     ],
     localNotes: [
@@ -2489,16 +2489,16 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       { title: "Insolvency & Recovery", desc: "NCLT/IBC and DRT proceedings for distressed debts." },
     ],
     feeRange: {
-      consultation: "₹2,000 – ₹8,000 (paid case assessment on NyaySevak)",
+      consultation: "₹2,000 – ₹8,000 (free case assessment on NyaySevak)",
       district: "₹15,000 – ₹75,000 per stage (Commercial Court)",
       highCourt: "₹50,000 – ₹3,00,000 per appearance / arbitration sitting",
       note: "Corporate advisory is often retainer-based; incorporation and contract packages are fixed-fee. Arbitration is preferred for confidential, higher-value disputes.",
     },
     faqs: [
-      { question: "How do I find a corporate lawyer near me in Noida?", answer: "Tell NyaySevak your business need — incorporation, contracts, compliance, or a dispute — and we match you with a Bar-Council-verified Noida corporate lawyer. Your first step is a paid case assessment and fees are agreed upfront." },
+      { question: "How do I find a corporate lawyer near me in Noida?", answer: "Tell NyaySevak your business need — incorporation, contracts, compliance, or a dispute — and we match you with a Bar-Council-verified Noida corporate lawyer. Your first step is a free case assessment and fees are agreed upfront." },
       { question: "Which court handles commercial disputes in Noida?", answer: "Above-value commercial suits go to the Commercial Court at Gautam Buddh Nagar; company and insolvency matters to the NCLT; bank recovery to the DRT; and many higher-value disputes are resolved through arbitration." },
       { question: "What is the best business structure for a Noida startup?", answer: "For startups planning to raise funding, a Private Limited Company is usually best; bootstrapped or professional firms often prefer an LLP. A corporate lawyer will match the structure to your funding and liability plans." },
-      { question: "How much does a corporate lawyer cost in Noida?", answer: "Advisory is often retainer-based; incorporation and contract work is usually fixed-fee; commercial-dispute appearances run ₹15,000–₹75,000 per stage. Your case assessment on NyaySevak is a nominal ₹499." },
+      { question: "How much does a corporate lawyer cost in Noida?", answer: "Advisory is often retainer-based; incorporation and contract work is usually fixed-fee; commercial-dispute appearances run ₹15,000–₹75,000 per stage. Your case assessment on NyaySevak is free of charge." },
       { question: "Do Noida companies need POSH and labour compliance?", answer: "Yes — any workplace with 10+ employees must have a POSH Internal Committee, and IT/ITES and manufacturing units carry labour-compliance obligations. A corporate lawyer can set up your compliance framework." },
     ],
     localNotes: [
@@ -2531,15 +2531,15 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       { title: "Matrimonial & DV Defence", desc: "Defence and prosecution of 498A/BNS 85 and Domestic Violence Act cases." },
     ],
     feeRange: {
-      consultation: "₹2,000 – ₹7,500 (paid case assessment on NyaySevak)",
+      consultation: "₹2,000 – ₹7,500 (free case assessment on NyaySevak)",
       district: "₹10,000 – ₹50,000 per appearance",
       highCourt: "₹35,000 – ₹2,50,000 per appearance at P&H High Court",
       note: "Gurgaon fee levels are among the highest outside the metros, reflecting its corporate profile. Chandigarh HC bail/quashing is often quoted as an all-inclusive package.",
     },
     faqs: [
-      { question: "How do I find the best criminal lawyer near me in Gurgaon?", answer: "Tell NyaySevak your matter and the police station involved, and we match you with a Bar-Council-verified Gurugram criminal lawyer who appears at the district court and can file at the Punjab & Haryana High Court. Your first step is a paid case assessment." },
+      { question: "How do I find the best criminal lawyer near me in Gurgaon?", answer: "Tell NyaySevak your matter and the police station involved, and we match you with a Bar-Council-verified Gurugram criminal lawyer who appears at the district court and can file at the Punjab & Haryana High Court. Your first step is a free case assessment." },
       { question: "Which court handles my criminal case in Gurgaon?", answer: "Cases are tried at the Gurugram District & Sessions Court based on the registering police station; bail goes to the Sessions Court, and FIR quashing and appeals go to the Punjab & Haryana High Court at Chandigarh." },
-      { question: "How much does a criminal lawyer cost in Gurgaon?", answer: "District-court appearances typically run ₹10,000–₹50,000; P&H High Court bail or quashing ₹35,000–₹2,50,000. Gurgaon fees are higher than most non-metro cities. Your case assessment on NyaySevak is a nominal ₹499." },
+      { question: "How much does a criminal lawyer cost in Gurgaon?", answer: "District-court appearances typically run ₹10,000–₹50,000; P&H High Court bail or quashing ₹35,000–₹2,50,000. Gurgaon fees are higher than most non-metro cities. Your case assessment on NyaySevak is free of charge." },
       { question: "Where do I apply for anticipatory bail in Gurgaon?", answer: "Anticipatory bail under Section 482 BNSS is filed before the Gurugram Court of Session or directly before the Punjab & Haryana High Court. A local lawyer will advise the right forum for your facts." },
       { question: "Is cheque bounce common in Gurgaon, and how do I act?", answer: "Yes — given the city's business density. Serve a demand notice within 30 days of the bank return memo and file the complaint within the statutory window; a Gurgaon cheque-bounce lawyer will manage the timeline so the case is not lost on a technicality." },
     ],
@@ -2570,16 +2570,16 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       { title: "Partition Suits", desc: "Division of jointly-held family property." },
     ],
     feeRange: {
-      consultation: "₹2,000 – ₹7,500 (paid case assessment on NyaySevak)",
+      consultation: "₹2,000 – ₹7,500 (free case assessment on NyaySevak)",
       district: "₹10,000 – ₹50,000 per stage",
       highCourt: "₹40,000 – ₹2,50,000 per appearance at P&H High Court",
       note: "Gurgaon civil fees sit at the higher end outside the metros. For property disputes, ask whether RERA or consumer is faster before filing a civil suit.",
     },
     faqs: [
-      { question: "How do I find a good civil lawyer near me in Gurgaon?", answer: "Describe your dispute to NyaySevak and we match you with a Bar-Council-verified Gurugram civil lawyer who practises at the district and commercial courts. Your first step is a paid case assessment." },
+      { question: "How do I find a good civil lawyer near me in Gurgaon?", answer: "Describe your dispute to NyaySevak and we match you with a Bar-Council-verified Gurugram civil lawyer who practises at the district and commercial courts. Your first step is a free case assessment." },
       { question: "Which court handles a civil case in Gurgaon?", answer: "Civil suits are filed at the Gurugram District Court; higher-value commercial matters go to the Commercial Court; appeals and writs go to the Punjab & Haryana High Court at Chandigarh." },
       { question: "Should I file a civil suit or a RERA/consumer complaint for my Gurgaon flat?", answer: "For builder delay or defects, RERA or the consumer forum is usually faster and cheaper than a civil suit. A Gurgaon lawyer will review your agreement and recommend the quickest route to relief." },
-      { question: "How much does a civil lawyer cost in Gurgaon?", answer: "Expect a drafting fee plus ₹10,000–₹50,000 per stage at the district level and more at the High Court. Your case assessment on NyaySevak is a nominal ₹499." },
+      { question: "How much does a civil lawyer cost in Gurgaon?", answer: "Expect a drafting fee plus ₹10,000–₹50,000 per stage at the district level and more at the High Court. Your case assessment on NyaySevak is free of charge." },
       { question: "How long does a civil case take in Gurgaon?", answer: "Simple matters can resolve in 1–3 years; contested title/partition suits take longer. The forum you pick (civil vs RERA vs consumer) strongly affects the timeline." },
     ],
     localNotes: [
@@ -2609,17 +2609,17 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       { title: "498A / BNS 85 Defence", desc: "Defence and quashing strategy for matrimonial cruelty complaints." },
     ],
     feeRange: {
-      consultation: "₹2,000 – ₹7,500 (paid case assessment on NyaySevak)",
+      consultation: "₹2,000 – ₹7,500 (free case assessment on NyaySevak)",
       district: "₹12,000 – ₹60,000 per stage (Family Court)",
       highCourt: "₹40,000 – ₹2,00,000 per appearance at P&H High Court",
       note: "Mutual-consent divorce is often a fixed package; Gurgaon contested matters are billed per stage at the higher end given the city's profile.",
     },
     faqs: [
-      { question: "How do I find a good divorce lawyer near me in Gurgaon?", answer: "Tell NyaySevak whether your matter is mutual or contested and we match you with a Bar-Council-verified Gurugram family lawyer at the Family Court. Your first step is a paid case assessment." },
+      { question: "How do I find a good divorce lawyer near me in Gurgaon?", answer: "Tell NyaySevak whether your matter is mutual or contested and we match you with a Bar-Council-verified Gurugram family lawyer at the Family Court. Your first step is a free case assessment." },
       { question: "Which court handles divorce in Gurgaon?", answer: "Divorce and most matrimonial matters are heard by the Family Court at Gurugram; appeals go to the Punjab & Haryana High Court. DV Act and maintenance applications can also go before the Magistrate." },
       { question: "How long does mutual-consent divorce take in Gurgaon?", answer: "With the Amardeep Singh waiver of the cooling-off period, a well-prepared mutual-consent divorce can conclude in roughly 4–6 months; without the waiver, around six months or more." },
       { question: "Can NRIs divorce through Gurgaon courts?", answer: "Yes. Gurgaon family lawyers regularly handle NRI matters with video-conference appearances or duly executed affidavits and power of attorney, especially for mutual-consent petitions." },
-      { question: "How much does a divorce lawyer cost in Gurgaon?", answer: "Mutual-consent matters are often a fixed package; contested matters run ₹12,000–₹60,000 per stage at the Family Court. Your case assessment on NyaySevak is a nominal ₹499." },
+      { question: "How much does a divorce lawyer cost in Gurgaon?", answer: "Mutual-consent matters are often a fixed package; contested matters run ₹12,000–₹60,000 per stage at the Family Court. Your case assessment on NyaySevak is free of charge." },
     ],
     localNotes: [
       "Gurgaon's affluent, mobile population makes dual-income maintenance and NRI custody disputes especially common.",
@@ -2650,16 +2650,16 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       { title: "Commercial Leasing", desc: "Office and retail leasing in DLF/Cyber City and the commercial belt." },
     ],
     feeRange: {
-      consultation: "₹2,500 – ₹8,000 (paid case assessment on NyaySevak)",
+      consultation: "₹2,500 – ₹8,000 (free case assessment on NyaySevak)",
       district: "₹12,000 – ₹60,000 per stage; RERA/consumer often packaged",
       highCourt: "₹40,000 – ₹3,00,000 per appearance at P&H High Court",
       note: "Given high property values, Gurgaon RERA/consumer claims can be substantial; complex title and commercial-lease work is billed at the higher end.",
     },
     faqs: [
-      { question: "How do I claim possession or a refund from my Gurgaon builder?", answer: "If the project is RERA-registered, file with the Haryana RERA Gurugram bench for possession with delay interest or a refund; if the builder is insolvent, claims go to the NCLT under the IBC. A Gurgaon RERA lawyer will choose the fastest forum — your first step is a paid case assessment." },
+      { question: "How do I claim possession or a refund from my Gurgaon builder?", answer: "If the project is RERA-registered, file with the Haryana RERA Gurugram bench for possession with delay interest or a refund; if the builder is insolvent, claims go to the NCLT under the IBC. A Gurgaon RERA lawyer will choose the fastest forum — your first step is a free case assessment." },
       { question: "Which forum is fastest for a Gurgaon flat dispute?", answer: "For a registered, ongoing project, the Haryana RERA Gurugram bench is usually fastest; for deficiency/compensation, the consumer commission; for an insolvent builder, the NCLT; and for pure title disputes, the civil court." },
       { question: "Do I need due diligence before buying property in Gurgaon?", answer: "Yes — essential. Gurgaon has a mix of licensed colonies, HSVP plots, and private projects, so a lawyer must verify the DTCP licence, title, approvals, and dues before you pay. It prevents the most common Gurgaon property disputes." },
-      { question: "How much does a property/RERA lawyer cost in Gurgaon?", answer: "RERA and consumer complaints are often packaged; civil and HC matters run ₹12,000–₹60,000 per stage and more at the P&H High Court. Your case assessment on NyaySevak is a nominal ₹499." },
+      { question: "How much does a property/RERA lawyer cost in Gurgaon?", answer: "RERA and consumer complaints are often packaged; civil and HC matters run ₹12,000–₹60,000 per stage and more at the P&H High Court. Your case assessment on NyaySevak is free of charge." },
       { question: "Which court handles property disputes in Gurgaon?", answer: "Depending on the issue: Haryana RERA (Gurugram bench), the Gurugram Consumer Commission, the NCLT (insolvent builders), or the Gurugram civil courts, with writs and appeals to the Punjab & Haryana High Court." },
     ],
     localNotes: [
@@ -2692,16 +2692,16 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       { title: "Insolvency & Recovery", desc: "NCLT/IBC and DRT proceedings for distressed debts." },
     ],
     feeRange: {
-      consultation: "₹3,000 – ₹12,000 (paid case assessment on NyaySevak)",
+      consultation: "₹3,000 – ₹12,000 (free case assessment on NyaySevak)",
       district: "₹25,000 – ₹1,50,000 per stage (Commercial Court)",
       highCourt: "₹75,000 – ₹5,00,000+ per appearance / arbitration sitting",
       note: "Gurgaon corporate fees are the highest outside the top metros. MNC and high-value mandates are retainer-based; arbitration is the default for confidential disputes.",
     },
     faqs: [
-      { question: "How do I find a corporate lawyer near me in Gurgaon?", answer: "Tell NyaySevak your business need — incorporation, contracts, compliance, employment, or a dispute — and we match you with a Bar-Council-verified Gurugram corporate lawyer experienced with MNCs and startups. Your first step is a paid case assessment." },
+      { question: "How do I find a corporate lawyer near me in Gurgaon?", answer: "Tell NyaySevak your business need — incorporation, contracts, compliance, employment, or a dispute — and we match you with a Bar-Council-verified Gurugram corporate lawyer experienced with MNCs and startups. Your first step is a free case assessment." },
       { question: "Which court handles commercial disputes in Gurgaon?", answer: "Above-value commercial suits go to the Commercial Court at Gurugram; company and insolvency matters to the NCLT; bank recovery to the DRT; employment disputes to the Labour Court/Industrial Tribunal; and many high-value disputes are resolved through arbitration." },
       { question: "Can a Gurgaon lawyer help with wrongful termination or F&F settlement?", answer: "Yes. Given Gurgaon's large white-collar workforce, employment disputes are common. A lawyer can pursue dues, notice pay, gratuity, and damages, or defend the employer, through the appropriate forum." },
-      { question: "What does a corporate lawyer cost in Gurgaon?", answer: "Advisory is typically retainer-based; incorporation and contracts are often fixed-fee; commercial-dispute appearances run ₹25,000–₹1,50,000 per stage and more in arbitration. Your case assessment on NyaySevak is a nominal ₹499." },
+      { question: "What does a corporate lawyer cost in Gurgaon?", answer: "Advisory is typically retainer-based; incorporation and contracts are often fixed-fee; commercial-dispute appearances run ₹25,000–₹1,50,000 per stage and more in arbitration. Your case assessment on NyaySevak is free of charge." },
       { question: "Do foreign companies set up subsidiaries through Gurgaon lawyers?", answer: "Routinely. Gurgaon corporate lawyers handle subsidiary and FDI structuring, regulatory approvals, and ongoing compliance for multinationals entering India." },
     ],
     localNotes: [

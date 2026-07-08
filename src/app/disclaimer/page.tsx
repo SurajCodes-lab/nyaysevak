@@ -325,7 +325,7 @@ export default function DisclaimerPage() {
           <ContactButton
             className="btn-gold-shine rounded-xl inline-flex items-center gap-2.5 bg-gradient-to-r from-gold to-gold-light px-8 py-4 text-sm font-semibold uppercase tracking-widest text-black transition-all duration-300 cursor-pointer"
           >
-            Get Consultation
+            Get Free Assessment
             <ArrowRight className="h-4 w-4" strokeWidth={2} />
           </ContactButton>
         </div>

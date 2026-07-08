@@ -95,7 +95,7 @@ export const reviews: Review[] = [
     rating: 5,
     datePublished: "2026-04-15",
     reviewBody:
-      "Domestic Violence Act protection-and-residence orders at the Madras Family Court. Counsel was sensitive, fast, and obtained the protection order at the very first hearing. Paid case assessment made the process accessible.",
+      "Domestic Violence Act protection-and-residence orders at the Madras Family Court. Counsel was sensitive, fast, and obtained the protection order at the very first hearing. Free case assessment made the process accessible.",
     serviceCategory: "Lawyer Consultation",
   },
   {

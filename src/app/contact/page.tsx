@@ -4,13 +4,13 @@ import Contact from "@/components/Contact";
 export const metadata: Metadata = {
   title: "Case Assessment - Talk to a Lawyer Now | NyaySevak",
   description:
-    "Get paid case assessment from verified lawyers. Call +91 98686 66715 or fill the form. Available for criminal, divorce, property, corporate, cyber crime & all legal matters. 24/7 emergency legal help across India.",
+    "Get free case assessment from verified lawyers. Call +91 98686 66715 or fill the form. Available for criminal, divorce, property, corporate, cyber crime & all legal matters. 24/7 emergency legal help across India.",
   keywords:
-    "paid case assessment, talk to lawyer online, legal consultation India, hire lawyer online, emergency lawyer India, free lawyer advice, book lawyer appointment, legal help near me, lawyer phone consultation, NyaySevak contact",
+    "free case assessment, talk to lawyer online, legal consultation India, hire lawyer online, emergency lawyer India, free lawyer advice, book lawyer appointment, legal help near me, lawyer phone consultation, NyaySevak contact",
   alternates: { canonical: "https://www.nyaysevak.com/contact" },
   openGraph: {
     title: "Case Assessment - Talk to a Verified Lawyer Now | NyaySevak",
-    description: "Get paid case assessment from verified lawyers across India. Call +91 98686 66715. 24/7 for emergencies.",
+    description: "Get free case assessment from verified lawyers across India. Call +91 98686 66715. 24/7 for emergencies.",
     url: "https://www.nyaysevak.com/contact",
     type: "website",
   },

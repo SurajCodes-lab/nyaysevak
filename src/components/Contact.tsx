@@ -112,7 +112,7 @@ export default function Contact() {
               Get Expert Legal Help
             </h2>
             <p className="mt-3 text-sm text-gray-400 leading-relaxed max-w-md">
-              Connect with verified legal professionals and get the guidance you deserve. Your case assessment is a nominal paid step with a verified lawyer.
+              Connect with verified legal professionals and get the guidance you deserve. Your case assessment is free, with a verified lawyer, and no obligation.
             </p>
 
             {/* Process steps */}

@@ -102,7 +102,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       ...area.services.slice(0, 4).map((s) => s.toLowerCase()),
       "verified lawyer India",
       "NyaySevak",
-      "paid case assessment",
+      "free case assessment",
     ].join(", "),
     alternates: {
       canonical: `https://www.nyaysevak.com/practice-areas/${slug}`,
@@ -143,7 +143,7 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ s
   const primaryLower = variant.primary.toLowerCase();
   const quickAnswer = content
     ? trimToSentences(content.detailedOverview[0], 70)
-    : `NyaySevak connects you with Bar-Council-verified ${primaryLower}s across the Supreme Court, 25 High Courts, and 700+ District Courts. ${area.description} Your first step is a paid case assessment, with transparent fees agreed upfront.`;
+    : `NyaySevak connects you with Bar-Council-verified ${primaryLower}s across the Supreme Court, 25 High Courts, and 700+ District Courts. ${area.description} Your first step is a free case assessment, with transparent fees agreed upfront.`;
   const quickAnswerQuestion = `How do I find a verified ${primaryLower} in India?`;
 
   // Category-aware related areas: same category first, then adjacent
@@ -191,7 +191,7 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ s
       ? [{ id: "city-lawyers", label: "Find Lawyers by City" }]
       : []),
     ...(content ? [{ id: "faqs", label: "FAQs" }] : []),
-    { id: "consultation", label: "Get Consultation" },
+    { id: "consultation", label: "Get Free Assessment" },
   ];
 
   const breadcrumbJsonLd = {
@@ -221,9 +221,9 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ s
     serviceType: area.title,
     offers: {
       "@type": "Offer",
-      price: "499",
+      price: "0",
       priceCurrency: "INR",
-      description: "Paid case assessment for all practice areas",
+      description: "Free case assessment for all practice areas",
       availability: "https://schema.org/InStock",
     },
     hasOfferCatalog: {
@@ -834,7 +834,7 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ s
                 <ContactButton
                   className="btn-gold-shine inline-flex items-center justify-center gap-2.5 rounded-xl bg-gradient-to-r from-gold to-gold-light px-8 sm:px-10 py-4 sm:py-5 text-sm font-semibold uppercase tracking-widest text-black cursor-pointer"
                 >
-                  Get Consultation
+                  Get Free Assessment
                   <ArrowRight className="h-4 w-4" strokeWidth={2} />
                 </ContactButton>
                 <a

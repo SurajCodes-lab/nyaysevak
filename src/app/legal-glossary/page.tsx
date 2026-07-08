@@ -212,7 +212,7 @@ export default function LegalGlossaryPage() {
               Need help applying these to your case?
             </h3>
             <p className="text-sm text-gray-400 mb-5 max-w-xl mx-auto">
-              The terms in this glossary describe the framework. Real cases live in their facts. Talk to a verified NyaySevak advocate — book a paid case assessment.
+              The terms in this glossary describe the framework. Real cases live in their facts. Talk to a verified NyaySevak advocate — book a free case assessment.
             </p>
             <Link
               href="/insights"

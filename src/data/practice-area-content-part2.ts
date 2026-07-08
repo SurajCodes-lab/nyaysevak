@@ -58,7 +58,7 @@ export const part2Content: Record<string, PracticeAreaContent> = {
       },
       {
         question: "How do I file a complaint at the National Green Tribunal?",
-        answer: "Any person aggrieved by an act or omission causing environmental damage can file an original application before the NGT under Section 14 or Section 15 of the National Green Tribunal Act, 2010. The application must be filed within the limitation period (generally 5 years from the date of the cause of action) and must include details of the environmental violation, the relief sought, and supporting documents. Filing can be done at the Principal Bench in New Delhi or at any of the four Zonal Benches (Bhopal, Pune, Kolkata, Chennai). No court fee is required for individuals, though a nominal fee applies to corporate entities."
+        answer: "Any person aggrieved by an act or omission causing environmental damage can file an original application before the NGT under Section 14 or Section 15 of the National Green Tribunal Act, 2010. The application must be filed within the limitation period (generally 5 years from the date of the cause of action) and must include details of the environmental violation, the relief sought, and supporting documents. Filing can be done at the Principal Bench in New Delhi or at any of the four Zonal Benches (Bhopal, Pune, Kolkata, Chennai). No court fee is required for individuals, though free applies to corporate entities."
       },
       {
         question: "What are the penalties for violating pollution control norms in India?",
