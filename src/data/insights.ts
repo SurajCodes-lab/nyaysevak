@@ -3878,6 +3878,211 @@ export const articles: Article[] = [
     relatedServiceSlugs: ["ip-management", "corporate-legal-advisory", "find-hire-lawyers"],
     relatedCitySlugs: ["bangalore", "delhi", "mumbai", "hyderabad"],
   },
+  {
+    slug: "cheque-bounce-legal-notice-format-section-138-india-2026",
+    title: "Cheque Bounce Legal Notice: Format, Sample & Timeline (Section 138)",
+    metaTitle: "Cheque Bounce Notice Format 2026 — Section 138 Sample & Timeline",
+    metaDescription:
+      "The exact format and timeline for a cheque-bounce legal notice under Section 138 of the NI Act: the 30-day window, what the notice must contain, a sample structure, and what happens if it is not paid.",
+    excerpt:
+      "A cheque-bounce case stands or falls on the demand notice. This guide gives the exact Section 138 timeline, everything the notice must contain, a clear sample structure, and the mistakes that get cases dismissed.",
+    category: "Practical Guidance",
+    authorSlug: "corporate-commercial-desk",
+    reviewerSlug: "nyaysevak-legal-team",
+    datePublished: "2026-07-07",
+    dateModified: "2026-07-07",
+    readTimeMinutes: 8,
+    primaryKeyword: "cheque bounce notice format",
+    secondaryKeywords: [
+      "section 138 legal notice sample",
+      "cheque bounce demand notice",
+      "cheque bounce notice time limit",
+      "how to send cheque bounce notice",
+      "cheque dishonour legal notice",
+      "cheque bounce notice draft",
+    ],
+    hero: {
+      eyebrow: "Practical Guidance · Guide",
+      title: "Cheque Bounce Legal Notice: Format, Sample & Timeline (Section 138)",
+      subtitle:
+        "The 30-day window, what the notice must contain, a clear sample structure, and the mistakes that get a cheque-bounce case dismissed before it starts.",
+    },
+    intro: [
+      "When a cheque bounces, the single most important step — and the one most people get wrong — is the demand notice. Under Section 138 of the Negotiable Instruments Act, 1881, the notice is a legal precondition: get its contents or timing wrong and the entire case can be thrown out, however genuine the debt.",
+      "The good news is that the requirements are precise and mechanical. If you send the right notice with the right content in the right window, you preserve your right to prosecute — and very often the drawer simply pays, because the threat of a criminal-flavoured Section 138 proceeding is a strong incentive.",
+      "This guide sets out the exact timeline, everything the notice must contain, a sample structure you can follow, and the common mistakes to avoid. It is general information, not advice on your specific matter.",
+    ],
+    sections: [
+      {
+        heading: "1. The Section 138 timeline — get the dates right",
+        body: [
+          "The whole procedure runs on strict clocks, and missing any of them is usually fatal to the case. First, the cheque must be presented to the bank within its validity (three months). If it is returned unpaid, you must send a written demand notice within thirty days of receiving the bank's dishonour memo. The drawer then has fifteen days from receiving the notice to pay. If they do not, a complaint must be filed before a Magistrate within the next thirty days.",
+        ],
+        bullets: [
+          "Present the cheque within 3 months (its validity).",
+          "Send the demand notice within 30 days of the bank's dishonour memo.",
+          "Drawer has 15 days from receiving the notice to pay.",
+          "If unpaid, file the complaint within the next 30 days.",
+        ],
+      },
+      {
+        heading: "2. What the notice must contain",
+        body: [
+          "The notice must make the demand unambiguous. It should identify the cheque (number, date, amount, drawee bank), state the transaction or liability the cheque was issued for, record the fact and date of dishonour and the bank's reason, and demand payment of the exact cheque amount within fifteen days. It should be addressed to the drawer at their correct address and sent by a method that proves delivery.",
+          "The demand must be for the cheque amount itself — over-demanding (adding damages or interest as the demand) can create a defence. Keep the demand clean and let any additional claims follow separately.",
+        ],
+        bullets: [
+          "Cheque details: number, date, amount, drawee bank.",
+          "The underlying debt/liability the cheque was for.",
+          "Fact, date and bank's reason for dishonour.",
+          "A clear demand for the exact cheque amount within 15 days.",
+          "Sent by registered post (RPAD) / courier with proof of dispatch and delivery.",
+        ],
+      },
+      {
+        heading: "3. A sample structure to follow",
+        body: [
+          "A workable notice runs in this order: your advocate's letterhead and the date; the drawer's name and address; a subject line ('Legal notice under Section 138 of the Negotiable Instruments Act, 1881'); a recital of the transaction and the cheque issued; the presentation and dishonour with the bank's memo reason; the statutory demand to pay the cheque amount within fifteen days; a statement that failure will lead to criminal proceedings under Section 138 and any civil recovery; and the advocate's signature.",
+          "Keeping to this structure ensures every statutory ingredient is present. A lawyer typically drafts and dispatches it the same day, and retains the postal receipts and tracking as proof — which you will need in court.",
+        ],
+      },
+      {
+        heading: "4. What happens after the notice",
+        body: [
+          "If the drawer pays within fifteen days, the matter ends — which is the outcome in a large share of cases, because a well-drafted notice signals you are serious and the consequences are real. If they do not pay, your right to file the complaint crystallises, and you must file within thirty days before the Magistrate having jurisdiction (broadly, where the payee's bank branch is located).",
+          "Conviction under Section 138 can carry imprisonment of up to two years, a fine of up to twice the cheque amount, or both — and the court can order compensation. That exposure is why the notice alone frequently produces payment.",
+        ],
+      },
+      {
+        heading: "5. Common mistakes that get cases dismissed",
+        body: [
+          "The recurring, avoidable errors are: sending the notice after the thirty-day window; demanding more than the cheque amount; sending to a wrong or incomplete address; failing to keep dispatch and delivery proof; and filing the complaint outside the thirty-day window after the fifteen-day payment period. Any one of these can end an otherwise strong case.",
+          "Because the procedure is unforgiving on dates and content, most people have the notice drafted and dispatched by a lawyer who tracks the deadlines. Your case assessment on NyaySevak is free, and we can match you with an advocate the same day so the notice goes out in time.",
+        ],
+      },
+    ],
+    takeaways: [
+      "The Section 138 demand notice is a legal precondition — wrong content or timing can end the case regardless of the debt.",
+      "Send the notice within 30 days of the bank's dishonour memo; the drawer then has 15 days to pay; file the complaint within the next 30 days if unpaid.",
+      "The notice must identify the cheque, the underlying liability, the dishonour, and demand the exact cheque amount within 15 days — sent with proof of dispatch and delivery.",
+      "Demand only the cheque amount; over-demanding creates a defence.",
+      "A well-drafted notice often produces payment on its own, because Section 138 exposes the drawer to up to two years' imprisonment or a fine of up to twice the cheque amount.",
+    ],
+    faqs: [
+      { question: "What is the time limit to send a cheque bounce notice?", answer: "You must send the written demand notice within 30 days of receiving the bank's cheque-return (dishonour) memo. The drawer then has 15 days from receiving the notice to pay, and if they do not, the complaint must be filed before a Magistrate within the following 30 days. Missing any of these windows usually defeats the case." },
+      { question: "What must a Section 138 notice contain?", answer: "It must identify the cheque (number, date, amount, drawee bank), state the debt or liability it was issued for, record the fact, date and bank's reason for dishonour, and demand payment of the exact cheque amount within 15 days. It should be sent to the drawer's correct address by a method that proves dispatch and delivery." },
+      { question: "Can I demand interest or damages in the cheque bounce notice?", answer: "The statutory demand should be for the cheque amount only. Over-demanding — adding interest or damages to the demand itself — can create a defence for the drawer and weaken the Section 138 case. Any additional civil claim for interest or damages can be pursued separately." },
+      { question: "How should I send the cheque bounce notice?", answer: "Send it by registered post with acknowledgement due (RPAD) or a courier that provides tracking, and keep the dispatch receipt and delivery proof. This documentary trail is essential — in court you must show that the notice was sent to the correct address within the 30-day window." },
+      { question: "What if the drawer does not pay after the notice?", answer: "If the 15-day payment period lapses without payment, your right to prosecute crystallises and you must file a complaint under Section 138 before the Magistrate within the next 30 days. Conviction can carry up to two years' imprisonment or a fine of up to twice the cheque amount, plus compensation. A lawyer can file and pursue the case — your case assessment on NyaySevak is free." },
+    ],
+    relatedPracticeAreaSlugs: ["banking-finance", "civil-law", "corporate-business"],
+    relatedServiceSlugs: ["document-services", "find-hire-lawyers", "litigation-management"],
+    relatedCitySlugs: ["delhi", "mumbai", "bangalore", "hyderabad"],
+  },
+  {
+    slug: "documents-required-company-registration-india-2026",
+    title: "Documents Required for Company Registration in India (Pvt Ltd & LLP)",
+    metaTitle: "Documents for Company Registration India 2026 — Pvt Ltd & LLP Checklist",
+    metaDescription:
+      "The full checklist of documents required to register a Private Limited company or LLP in India: director KYC, DSC and DIN, registered-office proof, MoA/AoA, and the extra documents for NRIs and foreign nationals.",
+    excerpt:
+      "Company registration is delayed far more often by missing or wrong documents than by anything else. This is the complete, current checklist for a Private Limited company and an LLP — including the NRI and foreign-national extras.",
+    category: "Corporate & Commercial",
+    authorSlug: "corporate-commercial-desk",
+    reviewerSlug: "nyaysevak-legal-team",
+    datePublished: "2026-07-07",
+    dateModified: "2026-07-07",
+    readTimeMinutes: 8,
+    primaryKeyword: "documents required for company registration India",
+    secondaryKeywords: [
+      "private limited company registration documents",
+      "LLP registration documents",
+      "documents for company incorporation",
+      "company registration checklist India",
+      "registered office proof company",
+      "DSC DIN documents",
+    ],
+    hero: {
+      eyebrow: "Corporate & Commercial · Guide",
+      title: "Documents Required for Company Registration in India (Pvt Ltd & LLP)",
+      subtitle:
+        "The full checklist — director KYC, DSC and DIN, registered-office proof, MoA/AoA — plus the extra documents NRIs and foreign nationals must provide.",
+    },
+    intro: [
+      "More company registrations are held up by document problems than by anything else — a mismatched name, an out-of-date utility bill, an unnotarised foreign document. Getting the paperwork right the first time is the difference between an incorporation that clears in a week and one that bounces back from the MCA repeatedly.",
+      "The documents fall into three groups: identity and address proof for the directors/partners, proof for the registered office, and the constitutional documents of the company itself. The requirements are broadly the same for a Private Limited company and an LLP, with a few differences, and there are additional steps for NRIs and foreign nationals.",
+      "This guide gives the complete, current checklist so you can assemble everything before you file. It is general information, not advice on your specific registration.",
+    ],
+    sections: [
+      {
+        heading: "1. Documents for every director / partner",
+        body: [
+          "Each proposed director (or designated partner in an LLP) needs identity and address proof. These are used to obtain the Digital Signature Certificate (DSC) and Director Identification Number (DIN) and to complete the incorporation form.",
+        ],
+        bullets: [
+          "PAN card (mandatory for Indian nationals).",
+          "Identity proof — Aadhaar, passport, voter ID, or driving licence.",
+          "Address proof — a bank statement, or electricity/telephone/mobile bill, not older than two months.",
+          "Passport-size photograph.",
+          "Email ID and mobile number (for OTP verification).",
+        ],
+      },
+      {
+        heading: "2. Documents for the registered office",
+        body: [
+          "Every company must have a registered office address in India, and you must prove your right to use it. The address can be commercial or residential, owned or rented.",
+        ],
+        bullets: [
+          "Proof of address — a recent electricity/utility bill or property tax receipt (not older than two months).",
+          "If rented — the rent/lease agreement.",
+          "A No-Objection Certificate (NOC) from the owner of the premises.",
+        ],
+      },
+      {
+        heading: "3. The company's own documents (MoA / AoA / LLP Agreement)",
+        body: [
+          "For a Private Limited company, the constitutional documents — the Memorandum of Association (MoA) and Articles of Association (AoA) — are prepared and filed as part of the SPICe+ form; you do not draft them separately in most cases, but you must decide the objects, authorised capital, and shareholding. For an LLP, the equivalent is the LLP Agreement, which sets out the partners' rights, profit-sharing, and management, and must be filed after incorporation.",
+          "You will also settle the proposed company/LLP name (with one or two alternatives, checked against existing names and trademarks), the business activity, and the capital contribution before filing.",
+        ],
+      },
+      {
+        heading: "4. Extra documents for NRIs and foreign nationals",
+        body: [
+          "A foreign national or NRI director must provide a passport as identity proof, and their identity and address documents must be notarised and apostilled (or consularised) in their home country — a step that is frequently missed and causes rejection. If documents are in a language other than English, a certified translation is required.",
+          "Where a foreign company or individual is a shareholder, additional board resolutions and proof of the entity may be needed, and FDI/FEMA considerations can apply. These matters benefit from professional handling to avoid delays.",
+        ],
+        bullets: [
+          "Passport (mandatory) for the foreign national / NRI.",
+          "Documents notarised + apostilled/consularised in the home country.",
+          "Certified English translation of any non-English document.",
+        ],
+      },
+      {
+        heading: "5. Avoiding the common rejections",
+        body: [
+          "The most frequent causes of rejection are address proofs older than two months, a name that clashes with an existing company or a registered trademark, a missing owner's NOC, and un-apostilled foreign documents. Assembling the full set correctly before filing avoids the back-and-forth that turns a one-week incorporation into a one-month ordeal.",
+          "A professional handling the SPICe+ filing will validate every document, run the name check, and file cleanly. Your case assessment on NyaySevak is free, and we can match you with a specialist who handles incorporations end to end.",
+        ],
+      },
+    ],
+    takeaways: [
+      "Registrations are delayed by document problems more than anything else — assemble the complete set before filing.",
+      "Every director/partner needs PAN, identity proof, recent address proof (under 2 months), a photo, and email/mobile for DSC and DIN.",
+      "The registered office needs a recent utility bill/property document, the rent agreement if rented, and the owner's NOC.",
+      "Pvt Ltd uses the MoA/AoA within SPICe+; an LLP files an LLP Agreement after incorporation — decide name, objects, capital, and shareholding upfront.",
+      "NRIs/foreign nationals must have documents notarised and apostilled (or consularised) — a commonly missed step that causes rejection.",
+    ],
+    faqs: [
+      { question: "What documents are required to register a company in India?", answer: "For each director: PAN, identity proof (Aadhaar/passport/voter ID/driving licence), address proof under two months old (bank statement or utility bill), a photograph, and email/mobile. For the registered office: a recent utility bill or property document, the rent agreement if rented, and the owner's No-Objection Certificate. Plus the company name, objects, capital, and shareholding for the SPICe+ filing." },
+      { question: "What is the difference in documents for a Pvt Ltd vs an LLP?", answer: "The director/partner and registered-office documents are broadly the same. The key difference is the constitutional document: a Private Limited company's MoA and AoA are prepared within the SPICe+ form, while an LLP files an LLP Agreement (setting out partners' rights and profit-sharing) after incorporation." },
+      { question: "How recent must the address proof be for company registration?", answer: "Address proofs — such as a bank statement or an electricity, telephone, or mobile bill — should generally not be older than two months at the time of filing. Out-of-date address proof is one of the most common reasons an incorporation application is sent back by the MCA." },
+      { question: "What extra documents do NRIs or foreign nationals need?", answer: "A foreign national or NRI director must provide a passport as identity proof, and their identity and address documents must be notarised and apostilled (or consularised) in their home country. Any document not in English needs a certified translation. Missing the apostille step is a frequent cause of rejection." },
+      { question: "Do I need to draft the MoA and AoA myself?", answer: "In most standard incorporations the MoA and AoA are generated as part of the SPICe+ filing rather than drafted separately, but you must decide the company's objects, authorised capital, and shareholding. For non-standard structures, tailored articles may be prepared. A professional handling the filing will get this right — your case assessment on NyaySevak is free." },
+    ],
+    relatedPracticeAreaSlugs: ["corporate-business", "intellectual-property", "civil-law"],
+    relatedServiceSlugs: ["corporate-legal-advisory", "document-services", "compliance-management"],
+    relatedCitySlugs: ["bangalore", "delhi", "mumbai", "pune"],
+  },
 ];
 
 export const articlesBySlug = Object.fromEntries(
