@@ -252,6 +252,52 @@ export const cities: City[] = [
       "NCR's fastest-growing real-estate and IT hub — ground zero for builder–buyer (RERA) disputes, with the Gautam Buddh Nagar courts at Surajpur and writs to the Allahabad High Court.",
   },
   {
+    slug: "ghaziabad",
+    name: "Ghaziabad",
+    state: "Uttar Pradesh",
+    geo: { lat: 28.6692, lng: 77.4538 },
+    population: "50+ lakh (Ghaziabad district)",
+    neighbourhoods: [
+      "Indirapuram", "Vaishali", "Kaushambi", "Vasundhara", "Raj Nagar",
+      "Raj Nagar Extension", "Sahibabad", "Crossings Republik", "Wave City",
+      "Nyay Khand", "Kavi Nagar", "Govindpuram", "Loni", "Modinagar",
+    ],
+    localBar: "Ghaziabad Bar Association",
+    highCourt: { name: "Allahabad High Court", slug: "allahabad-high-court" },
+    districtCourts: [
+      "Ghaziabad District & Sessions Court (Kacheri)",
+      "Commercial Court, Ghaziabad",
+      "Family Court, Ghaziabad",
+      "UP RERA (builder–buyer complaints)",
+      "Motor Accident Claims Tribunal (MACT), Ghaziabad",
+    ],
+    blurb:
+      "A major NCR industrial and residential district in Uttar Pradesh — high volumes of cheque-bounce, commercial-recovery and builder–buyer (RERA) matters, heard at the Ghaziabad district courts with writs to the Allahabad High Court.",
+  },
+  {
+    slug: "faridabad",
+    name: "Faridabad",
+    state: "Haryana",
+    geo: { lat: 28.4089, lng: 77.3178 },
+    population: "22+ lakh (Faridabad district)",
+    neighbourhoods: [
+      "Sector 15", "Sector 16", "NIT Faridabad", "Old Faridabad", "Ballabgarh",
+      "Neharpar (Greater Faridabad)", "Sector 21", "Sector 37", "Badkhal",
+      "Sector 88", "Sector 82", "Surajkund", "Tigaon", "Sector 46",
+    ],
+    localBar: "Faridabad Bar Association",
+    highCourt: { name: "Punjab & Haryana High Court", slug: "punjab-haryana-high-court" },
+    districtCourts: [
+      "Faridabad District & Sessions Court (Sector 12)",
+      "Ballabgarh Sub-Divisional Courts",
+      "Commercial Court, Faridabad",
+      "Family Court, Faridabad",
+      "Haryana RERA (Panchkula/Gurugram bench) — builder–buyer complaints",
+    ],
+    blurb:
+      "Haryana's largest industrial city and a core NCR market — a hub for manufacturing, labour and commercial-recovery disputes, heard at the Faridabad and Ballabgarh courts with writs to the Punjab & Haryana High Court.",
+  },
+  {
     slug: "gurgaon",
     name: "Gurgaon",
     state: "Haryana",

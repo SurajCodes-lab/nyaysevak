@@ -247,9 +247,9 @@ export default async function CityHubPage({ params }: { params: Promise<{ city: 
             </h2>
           </div>
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {cityPracticeSlugs.map((p) => {
+            {cityPracticeSlugs.filter((p) => cityPracticeContent[`${citySlug}__${p}`]).map((p) => {
               const label = cityPracticeLabels[p];
-              const content = cityPracticeContent[`${citySlug}__${p}`];
+              const content = cityPracticeContent[`${citySlug}__${p}`]!;
               return (
                 <Link
                   key={p}

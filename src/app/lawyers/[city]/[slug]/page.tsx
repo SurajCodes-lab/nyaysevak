@@ -121,7 +121,7 @@ export default async function CityPracticePage(
   // and voice assistants read aloud.
   const quickAnswerQuestion = `Where can I find a verified ${label.title.toLowerCase()} in ${city.name}?`;
   const quickAnswer =
-    `NyaySevak connects you with Bar-Council-verified ${label.title.toLowerCase()}s across ${city.name}, ${city.state} — advocates who appear regularly before ${city.highCourt.name} and the local district courts for ${label.long.toLowerCase()} matters. Typical district-court fees here run ${content.feeRange.district}. Your first step is a free case assessment, with all fees agreed upfront before any work begins.`;
+    `NyaySevak connects you with Bar-Council-verified ${label.title.toLowerCase()}s across ${city.name}, ${city.state} — advocates who appear regularly before ${city.highCourt.name} and the local district courts for ${label.long.toLowerCase()} matters.${content.feeRange ? ` Typical district-court fees here run ${content.feeRange.district}.` : ""} Your first step is a free case assessment, with all fees agreed upfront before any work begins.`;
 
   // Week 15: two data-driven FAQs appended to every city × practice page,
   // built from the page's own fee + court data (so they stay page-specific,
@@ -136,7 +136,9 @@ export default async function CityPracticePage(
     {
       question: `How much does a ${label.keyword} charge in ${city.name}?`,
       answer:
-        `${city.name} ${label.keyword} fees typically run ${content.feeRange.consultation} for a consultation, ${content.feeRange.district} per district-court appearance, and ${content.feeRange.highCourt} at ${city.highCourt.name}. ${content.feeRange.note} Through NyaySevak your first step is a free case assessment and every fee is agreed upfront before any work begins.`,
+        content.feeRange
+          ? `${city.name} ${label.keyword} fees typically run ${content.feeRange.consultation} for a consultation, ${content.feeRange.district} per district-court appearance, and ${content.feeRange.highCourt} at ${city.highCourt.name}. ${content.feeRange.note} Through NyaySevak your first step is a free case assessment and every fee is agreed upfront before any work begins.`
+          : `Through NyaySevak, your first step in ${city.name} is a free case assessment with a verified ${label.keyword}: they diagnose your matter and give a clear next-step plan, and any advocate fees are agreed with you in writing before work begins.`,
     },
     {
       question: `How do I find the best ${label.keyword} or ${altKeyword} in ${city.name}?`,
@@ -462,10 +464,11 @@ export default async function CityPracticePage(
         </div>
       </section>
 
-      {/* ===== Typical fees ===== */}
+      {/* ===== Typical fees (rendered only when fee data is present) ===== */}
+      {content.feeRange && (
       <section className="bg-cream cream-pattern py-16 sm:py-20">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <p className="mb-2 text-[10px] sm:text-xs uppercase tracking-[0.3em] text-gold-dark/60 font-semibold">Transparent Pricing</p>
+          <p className="mb-2 text-[10px] sm:text-xs uppercase tracking-[0.3em] text-gold-dark/60 font-semibold">Indicative Fees</p>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-gray-900 heading-glow-cream mb-8">
             Typical {label.title} Fees in {city.name}
           </h2>
@@ -491,6 +494,7 @@ export default async function CityPracticePage(
           </div>
         </div>
       </section>
+      )}
 
       {/* ===== How it works in this city ===== */}
       <section className="bg-dark py-16 sm:py-20 relative overflow-hidden">

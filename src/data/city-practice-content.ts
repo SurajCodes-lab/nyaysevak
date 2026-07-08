@@ -14,7 +14,9 @@ export interface CityPracticeContent {
   landscape: string[];       // 2–3 paragraphs of local legal landscape
   courtsForThisMatter: string[]; // Practice-specific courts within the city
   caseTypes: { title: string; desc: string }[]; // 5-6 case types handled
-  feeRange: {
+  // Optional. BCI-safe cities omit this (no advocate-fee display). When present,
+  // the city×practice page renders a "typical fees" section; when absent, it does not.
+  feeRange?: {
     consultation: string;    // e.g. "₹1,500–₹5,000"
     district: string;        // per appearance at district level
     highCourt: string;       // per appearance at HC
@@ -2707,6 +2709,202 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
     localNotes: [
       "As India's MNC hub, Gurgaon's highest-volume corporate needs are contracts, employment/POSH, and commercial-dispute resolution.",
       "Arbitration is the default for confidential, high-value commercial disputes; employment disputes are unusually common here.",
+    ],
+  },
+
+  // ────────────────────────── GHAZIABAD (NCR / UP) ──────────────────────────
+  "ghaziabad__criminal-law": {
+    lead:
+      "Ghaziabad's dense industrial and residential belt generates a high volume of criminal matters — from FIRs and bail at the Ghaziabad district courts to cheque-dishonour and economic-offence cases. NyaySevak connects you with Bar-Council-verified Ghaziabad criminal lawyers who appear regularly at the Ghaziabad District & Sessions Court and file bail, quashing and appeals before the Allahabad High Court.",
+    landscape: [
+      "Criminal cases in Ghaziabad originate at the police stations across Indirapuram, Vaishali, Sahibabad, Kavi Nagar, Loni and the industrial areas, and are tried at the District & Sessions Court at the Ghaziabad Kacheri, with Chief Judicial Magistrate and Additional Sessions courts handling the bulk of trials and bail.",
+      "Regular and anticipatory bail under the BNSS is filed before the Sessions Court, with anticipatory bail and quashing petitions going to the Allahabad High Court. Ghaziabad's industrial character means a high share of cheque-bounce, fraud, and property-linked criminal complaints alongside general offences.",
+    ],
+    courtsForThisMatter: [
+      "Ghaziabad District & Sessions Court (Kacheri) — bail, trials, appeals",
+      "Chief Judicial Magistrate & ACJM Courts, Ghaziabad",
+      "Allahabad High Court — anticipatory bail, quashing (S.528 BNSS), appeals",
+      "Special courts for economic and NDPS offences",
+    ],
+    caseTypes: [
+      { title: "Bail Applications", desc: "Regular, anticipatory and interim bail before the Ghaziabad Sessions Court and Allahabad HC." },
+      { title: "FIR Quashing (S.528 BNSS)", desc: "Quashing of frivolous or settled FIRs before the Allahabad High Court." },
+      { title: "Cheque Bounce & Fraud", desc: "S.138 NI Act and cheating/fraud complaints common in this industrial belt." },
+      { title: "Domestic Violence & 498A", desc: "Defence and prosecution of matrimonial cruelty and DV Act matters." },
+      { title: "Criminal Appeals", desc: "Appeals from the Sessions Court to the Allahabad High Court." },
+    ],
+    faqs: [
+      { question: "How do I find a criminal lawyer in Ghaziabad?", answer: "Tell NyaySevak about your matter and the police station or area involved (Indirapuram, Sahibabad, Vaishali, Loni and others). We match you within 24 hours with a Bar-Council-verified Ghaziabad criminal lawyer who appears at the Ghaziabad district courts. Your first step is a free case assessment." },
+      { question: "Where is bail filed in Ghaziabad?", answer: "Regular bail is filed before the Sessions Court at the Ghaziabad Kacheri; anticipatory bail goes to the Sessions Court or directly to the Allahabad High Court. A local lawyer who appears there daily can move it quickly." },
+      { question: "Which court hears criminal appeals from Ghaziabad?", answer: "Appeals from the Ghaziabad Sessions Court lie to the Allahabad High Court, and onward to the Supreme Court. Quashing petitions under Section 528 BNSS are exclusive to the High Court." },
+      { question: "Can a Ghaziabad lawyer handle cheque bounce cases?", answer: "Yes — given the industrial base, cheque-bounce (Section 138) matters are very common in Ghaziabad. A lawyer can send the statutory notice and prosecute the complaint before the Magistrate. See our cheque-bounce guide for the timeline." },
+      { question: "What does a criminal lawyer in Ghaziabad charge?", answer: "Fees vary with the matter and stage, and are set by the advocate and agreed in writing before work begins. Your first step through NyaySevak is a free case assessment with no obligation." },
+    ],
+    localNotes: [
+      "Ghaziabad's industrial and residential density drives high volumes of bail, cheque-bounce and property-linked criminal matters.",
+      "Anticipatory bail and quashing are handled at the Allahabad High Court; day-to-day trials at the Ghaziabad Kacheri.",
+    ],
+  },
+  "ghaziabad__property-real-estate": {
+    lead:
+      "Ghaziabad is one of the NCR's biggest real-estate markets — and one of its biggest sources of builder–buyer disputes. NyaySevak connects you with verified Ghaziabad property lawyers for RERA complaints against delayed projects, title verification before you buy, and civil property suits at the Ghaziabad courts.",
+    landscape: [
+      "The explosion of housing across Raj Nagar Extension, Indirapuram, Crossings Republik and Wave City has produced a large volume of delayed-possession and defect disputes, which are pursued before the Uttar Pradesh RERA. Title and possession disputes are litigated at the Ghaziabad civil courts, with writs to the Allahabad High Court.",
+      "Pre-purchase due diligence is especially important here given the number of stalled and litigated projects; a proper title check and RERA-status verification before buying prevents most post-purchase disputes.",
+    ],
+    courtsForThisMatter: [
+      "Uttar Pradesh RERA — builder–buyer complaints (delay, refund, possession)",
+      "Ghaziabad Civil Courts — title, partition and possession suits",
+      "Commercial Court, Ghaziabad — high-value property/commercial disputes",
+      "Allahabad High Court — writs and appeals",
+    ],
+    caseTypes: [
+      { title: "RERA Complaints", desc: "Delayed possession, refund-with-interest and defect claims against Ghaziabad builders before UP RERA." },
+      { title: "Property Due Diligence", desc: "Title chain, encumbrance and RERA-status verification before purchase." },
+      { title: "Title & Possession Suits", desc: "Civil suits over ownership, possession and partition." },
+      { title: "Sale/Lease Deed Drafting", desc: "Drafting and registration of sale, gift and lease deeds." },
+      { title: "Builder Disputes", desc: "Action for stalled projects, one-sided agreements and hidden charges." },
+    ],
+    faqs: [
+      { question: "How do I file a RERA complaint in Ghaziabad?", answer: "Builder–buyer complaints for Ghaziabad projects are filed before the Uttar Pradesh RERA. A lawyer drafts the complaint seeking refund-with-interest, possession or compensation. Your first step through NyaySevak is a free case assessment; see our RERA guide for the process." },
+      { question: "Should I do due diligence before buying property in Ghaziabad?", answer: "Strongly — given the number of stalled and litigated projects, a title-chain, encumbrance and RERA-status check before buying is essential. Our property due-diligence guide sets out the full checklist, and we can match you with a Ghaziabad property lawyer to do it." },
+      { question: "Which court handles property disputes in Ghaziabad?", answer: "Builder–buyer matters go to UP RERA; title, possession and partition suits to the Ghaziabad civil courts; high-value commercial-property disputes to the Commercial Court; and writs to the Allahabad High Court." },
+      { question: "Can a lawyer help against a delayed Ghaziabad project?", answer: "Yes. A RERA complaint can seek a refund with interest, possession, or compensation for delay. Given the concentration of delayed projects in Raj Nagar Extension and Crossings Republik, Ghaziabad lawyers handle these frequently." },
+      { question: "What does a property lawyer in Ghaziabad charge?", answer: "It depends on whether it is due diligence, a RERA complaint or a civil suit; fees are set by the advocate and agreed upfront. Your first step through NyaySevak is a free case assessment." },
+    ],
+    localNotes: [
+      "Ghaziabad is a builder–buyer (RERA) hotspot — delayed-possession disputes dominate the property caseload.",
+      "Pre-purchase due diligence matters more here than almost anywhere, given the number of stalled projects.",
+    ],
+  },
+  "ghaziabad__family-matrimonial": {
+    lead:
+      "For divorce, maintenance and custody in Ghaziabad, NyaySevak connects you with verified family lawyers who appear before the Ghaziabad Family Court — handling mutual-consent and contested divorce, maintenance, custody and domestic-violence matters with discretion.",
+    landscape: [
+      "Matrimonial matters in Ghaziabad are heard by the Family Court, which deals with divorce, maintenance, custody and guardianship, while domestic-violence reliefs are sought before the Magistrate. Mutual-consent divorce is the fastest route where both spouses agree.",
+      "Contested matters — cruelty, desertion, maintenance and custody — are more involved, and a local lawyer who appears at the Ghaziabad Family Court can manage timelines and appearances efficiently.",
+    ],
+    courtsForThisMatter: [
+      "Family Court, Ghaziabad — divorce, maintenance, custody, guardianship",
+      "Judicial Magistrate — Domestic Violence Act reliefs, 498A",
+      "Ghaziabad District Court — appeals and connected civil matters",
+      "Allahabad High Court — matrimonial appeals and writs",
+    ],
+    caseTypes: [
+      { title: "Mutual Consent Divorce", desc: "Joint petition to decree under S.13B HMA at the Ghaziabad Family Court." },
+      { title: "Contested Divorce", desc: "Cruelty, desertion and other grounds, with maintenance and custody." },
+      { title: "Maintenance & Alimony", desc: "Interim (S.24) and permanent (S.25) maintenance claims and defence." },
+      { title: "Child Custody", desc: "Custody, visitation and guardianship matters." },
+      { title: "Domestic Violence & 498A", desc: "Protection, residence and maintenance orders; and defence of complaints." },
+    ],
+    faqs: [
+      { question: "How do I file for divorce in Ghaziabad?", answer: "Divorce petitions are filed before the Ghaziabad Family Court. Mutual-consent divorce under Section 13B is the fastest where both spouses agree; contested divorce is filed on grounds such as cruelty or desertion. Your first step through NyaySevak is a free case assessment." },
+      { question: "How long does mutual consent divorce take in Ghaziabad?", answer: "With the six-month cooling-off period (which courts can waive following the Supreme Court's Amardeep Singh ruling), a mutual-consent divorce can conclude in roughly six months. See our mutual-consent divorce guide for the full procedure." },
+      { question: "Where is maintenance decided in Ghaziabad?", answer: "Interim maintenance is claimed under Section 24 and permanent alimony under Section 25 of the Hindu Marriage Act before the Family Court, and maintenance is also available under Section 144 BNSS. Amounts turn on income, assets and needs." },
+      { question: "Can a Ghaziabad lawyer handle custody disputes?", answer: "Yes. Custody, visitation and guardianship are decided by the Family Court on the welfare of the child. A family lawyer can pursue or defend a custody claim and negotiate workable arrangements." },
+      { question: "What does a divorce lawyer in Ghaziabad charge?", answer: "It depends on whether the divorce is mutual or contested and the issues involved; fees are set by the advocate and agreed in writing before work begins. Your first step through NyaySevak is a free case assessment with no obligation." },
+    ],
+    localNotes: [
+      "The Ghaziabad Family Court handles divorce, maintenance and custody; DV Act reliefs go before the Magistrate.",
+      "Mutual-consent divorce is the fastest route; contested matters benefit from a lawyer who appears at the Family Court regularly.",
+    ],
+  },
+
+  // ────────────────────────── FARIDABAD (NCR / HARYANA) ──────────────────────────
+  "faridabad__criminal-law": {
+    lead:
+      "Faridabad, Haryana's largest industrial city, generates a steady volume of criminal and economic-offence matters. NyaySevak connects you with verified Faridabad criminal lawyers who appear at the Faridabad District & Sessions Court (Sector 12) and Ballabgarh courts, and file bail, quashing and appeals before the Punjab & Haryana High Court.",
+    landscape: [
+      "Criminal cases in Faridabad originate at police stations across NIT, Old Faridabad, Ballabgarh, Sector 15/16 and the industrial areas, and are tried at the District & Sessions Court in Sector 12, with sub-divisional courts at Ballabgarh handling their jurisdiction.",
+      "Regular and anticipatory bail under the BNSS is filed before the Sessions Court, with anticipatory bail and quashing going to the Punjab & Haryana High Court at Chandigarh. The industrial base drives a high share of cheque-bounce, fraud and labour-linked criminal matters.",
+    ],
+    courtsForThisMatter: [
+      "Faridabad District & Sessions Court (Sector 12) — bail, trials, appeals",
+      "Ballabgarh Sub-Divisional Courts",
+      "Punjab & Haryana High Court (Chandigarh) — anticipatory bail, quashing, appeals",
+      "Special courts for economic offences",
+    ],
+    caseTypes: [
+      { title: "Bail Applications", desc: "Regular, anticipatory and interim bail before the Faridabad Sessions Court and the Punjab & Haryana HC." },
+      { title: "FIR Quashing (S.528 BNSS)", desc: "Quashing of frivolous or settled FIRs before the Punjab & Haryana High Court." },
+      { title: "Cheque Bounce & Fraud", desc: "S.138 NI Act and cheating/fraud complaints common in this industrial city." },
+      { title: "Domestic Violence & 498A", desc: "Defence and prosecution of matrimonial cruelty and DV Act matters." },
+      { title: "Criminal Appeals", desc: "Appeals from the Sessions Court to the Punjab & Haryana High Court." },
+    ],
+    faqs: [
+      { question: "How do I find a criminal lawyer in Faridabad?", answer: "Tell NyaySevak about your matter and the police station or area (NIT, Old Faridabad, Ballabgarh, Sector 15/16). We match you within 24 hours with a Bar-Council-verified Faridabad criminal lawyer who appears at the Sector 12 courts. Your first step is a free case assessment." },
+      { question: "Where is bail filed in Faridabad?", answer: "Regular bail is filed before the Sessions Court at Sector 12; anticipatory bail goes to the Sessions Court or the Punjab & Haryana High Court at Chandigarh. A local lawyer can move it quickly." },
+      { question: "Which High Court covers Faridabad?", answer: "Faridabad falls under the Punjab & Haryana High Court at Chandigarh, which hears anticipatory bail, quashing (S.528 BNSS) and criminal appeals from the Faridabad courts." },
+      { question: "Can a Faridabad lawyer handle cheque bounce cases?", answer: "Yes — with its large industrial base, cheque-bounce (Section 138) matters are common in Faridabad. A lawyer can send the statutory notice and prosecute the complaint. See our cheque-bounce guide for the timeline." },
+      { question: "What does a criminal lawyer in Faridabad charge?", answer: "Fees vary with the matter and stage and are set by the advocate, agreed in writing before work begins. Your first step through NyaySevak is a free case assessment with no obligation." },
+    ],
+    localNotes: [
+      "Faridabad's manufacturing base drives high volumes of cheque-bounce, fraud and labour-linked criminal matters.",
+      "Anticipatory bail and quashing are handled at the Punjab & Haryana High Court, Chandigarh; trials at the Sector 12 courts.",
+    ],
+  },
+  "faridabad__property-real-estate": {
+    lead:
+      "From Greater Faridabad (Neharpar) developments to older sectors, property disputes are common in Faridabad. NyaySevak connects you with verified Faridabad property lawyers for RERA complaints against builders, pre-purchase title verification, and civil property suits.",
+    landscape: [
+      "New housing across Neharpar (Greater Faridabad) and the sectors has produced builder–buyer disputes pursued before the Haryana RERA, while title, possession and partition suits are litigated at the Faridabad civil courts, with writs to the Punjab & Haryana High Court.",
+      "Given the mix of new projects and older freehold/leasehold plots, pre-purchase due diligence — title chain, encumbrance and RERA status — is essential before buying in Faridabad.",
+    ],
+    courtsForThisMatter: [
+      "Haryana RERA — builder–buyer complaints (delay, refund, possession)",
+      "Faridabad Civil Courts — title, partition and possession suits",
+      "Commercial Court, Faridabad — high-value property/commercial disputes",
+      "Punjab & Haryana High Court — writs and appeals",
+    ],
+    caseTypes: [
+      { title: "RERA Complaints", desc: "Delayed possession, refund and defect claims against Faridabad builders before Haryana RERA." },
+      { title: "Property Due Diligence", desc: "Title chain, encumbrance and RERA-status verification before purchase." },
+      { title: "Title & Possession Suits", desc: "Civil suits over ownership, possession and partition." },
+      { title: "Sale/Lease Deed Drafting", desc: "Drafting and registration of sale, gift and lease deeds." },
+      { title: "Builder Disputes", desc: "Action for stalled projects, one-sided agreements and hidden charges." },
+    ],
+    faqs: [
+      { question: "How do I file a RERA complaint in Faridabad?", answer: "Builder–buyer complaints for Faridabad projects are filed before the Haryana RERA. A lawyer drafts the complaint seeking refund-with-interest, possession or compensation. Your first step through NyaySevak is a free case assessment; see our RERA guide." },
+      { question: "Should I verify title before buying property in Faridabad?", answer: "Yes — a title-chain, encumbrance and RERA-status check before buying prevents most disputes, especially with the mix of new Neharpar projects and older plots. Our due-diligence guide has the checklist, and we can match you with a Faridabad property lawyer." },
+      { question: "Which court handles property disputes in Faridabad?", answer: "Builder–buyer matters go to Haryana RERA; title and possession suits to the Faridabad civil courts; high-value commercial-property disputes to the Commercial Court; and writs to the Punjab & Haryana High Court." },
+      { question: "Can a lawyer help against a delayed Faridabad project?", answer: "Yes. A RERA complaint can seek a refund with interest, possession or compensation for delay. Faridabad lawyers handle Greater Faridabad (Neharpar) builder disputes regularly." },
+      { question: "What does a property lawyer in Faridabad charge?", answer: "It depends on whether it is due diligence, a RERA complaint or a civil suit; fees are set by the advocate and agreed upfront. Your first step through NyaySevak is a free case assessment." },
+    ],
+    localNotes: [
+      "Greater Faridabad (Neharpar) is the main source of new builder–buyer (RERA) disputes; older sectors bring title matters.",
+      "Due diligence before purchase is essential given the mix of new projects and older freehold/leasehold plots.",
+    ],
+  },
+  "faridabad__family-matrimonial": {
+    lead:
+      "For divorce, maintenance and custody in Faridabad, NyaySevak connects you with verified family lawyers who appear before the Faridabad Family Court — handling mutual-consent and contested divorce, maintenance, custody and domestic-violence matters discreetly.",
+    landscape: [
+      "Matrimonial matters in Faridabad are heard by the Family Court, covering divorce, maintenance, custody and guardianship, while domestic-violence reliefs are sought before the Magistrate. Mutual-consent divorce is the quickest route where both spouses agree.",
+      "Contested matters involving cruelty, desertion, maintenance and custody are more involved; a local lawyer who appears at the Faridabad Family Court manages timelines and appearances efficiently.",
+    ],
+    courtsForThisMatter: [
+      "Family Court, Faridabad — divorce, maintenance, custody, guardianship",
+      "Judicial Magistrate — Domestic Violence Act reliefs, 498A",
+      "Faridabad District Court — appeals and connected civil matters",
+      "Punjab & Haryana High Court — matrimonial appeals and writs",
+    ],
+    caseTypes: [
+      { title: "Mutual Consent Divorce", desc: "Joint petition to decree under S.13B HMA at the Faridabad Family Court." },
+      { title: "Contested Divorce", desc: "Cruelty, desertion and other grounds, with maintenance and custody." },
+      { title: "Maintenance & Alimony", desc: "Interim (S.24) and permanent (S.25) maintenance claims and defence." },
+      { title: "Child Custody", desc: "Custody, visitation and guardianship matters." },
+      { title: "Domestic Violence & 498A", desc: "Protection, residence and maintenance orders; and defence of complaints." },
+    ],
+    faqs: [
+      { question: "How do I file for divorce in Faridabad?", answer: "Divorce petitions are filed before the Faridabad Family Court. Mutual-consent divorce under Section 13B is the fastest where both spouses agree; contested divorce is filed on grounds such as cruelty or desertion. Your first step through NyaySevak is a free case assessment." },
+      { question: "How long does mutual consent divorce take in Faridabad?", answer: "With the six-month cooling-off period (waivable following the Supreme Court's Amardeep Singh ruling), a mutual-consent divorce can conclude in roughly six months. See our mutual-consent divorce guide for the procedure." },
+      { question: "Where is maintenance decided in Faridabad?", answer: "Interim maintenance is claimed under Section 24 and permanent alimony under Section 25 of the Hindu Marriage Act before the Family Court, with maintenance also available under Section 144 BNSS. Amounts turn on income, assets and needs." },
+      { question: "Can a Faridabad lawyer handle custody disputes?", answer: "Yes. Custody, visitation and guardianship are decided by the Family Court on the welfare of the child. A family lawyer can pursue or defend a custody claim and negotiate arrangements." },
+      { question: "What does a divorce lawyer in Faridabad charge?", answer: "It depends on whether the divorce is mutual or contested and the issues involved; fees are set by the advocate and agreed in writing before work begins. Your first step through NyaySevak is a free case assessment with no obligation." },
+    ],
+    localNotes: [
+      "The Faridabad Family Court handles divorce, maintenance and custody; DV Act reliefs go before the Magistrate.",
+      "Mutual-consent divorce is the fastest route; contested matters benefit from a lawyer who appears at the Family Court regularly.",
     ],
   },
 };
