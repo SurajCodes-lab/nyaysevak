@@ -11,6 +11,7 @@ import { trackPhoneClick } from "@/lib/analytics";
 const navLinks = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/services" },
+  { label: "Pricing", href: "/pricing" },
   { label: "Practice Areas", href: "/practice-areas" },
   { label: "Lawyers", href: "/lawyers" },
   { label: "Courts", href: "/courts" },

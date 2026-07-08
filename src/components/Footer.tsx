@@ -29,6 +29,7 @@ const quickLinks = [
   { label: "Home", href: "/" },
   { label: "About NyaySevak", href: "/about" },
   { label: "Legal Services", href: "/services" },
+  { label: "Pricing", href: "/pricing" },
   { label: "How It Works", href: "/platform" },
   { label: "Practice Areas", href: "/practice-areas" },
   { label: "Court Coverage", href: "/courts" },

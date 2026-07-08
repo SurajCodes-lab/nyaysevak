@@ -26,6 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
     { url: BASE_URL, lastModified: corePageDate, changeFrequency: "daily", priority: 1.0 },
     { url: `${BASE_URL}/services`, lastModified: corePageDate, changeFrequency: "daily", priority: 1.0 },
+    { url: `${BASE_URL}/pricing`, lastModified: corePageDate, changeFrequency: "weekly", priority: 0.9 },
     { url: `${BASE_URL}/practice-areas`, lastModified: corePageDate, changeFrequency: "daily", priority: 1.0 },
     { url: `${BASE_URL}/courts`, lastModified: corePageDate, changeFrequency: "weekly", priority: 0.9 },
     { url: `${BASE_URL}/contact`, lastModified: corePageDate, changeFrequency: "weekly", priority: 0.9 },
