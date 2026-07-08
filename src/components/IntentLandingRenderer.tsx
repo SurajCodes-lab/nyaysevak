@@ -1,5 +1,5 @@
 // Week 8: Shared renderer for intent-rendered landing pages.
-// Each /best-X-lawyers-in-india + /free-legal-consultation page passes its
+// Each /best-X-lawyers-in-india + /case-assessment page passes its
 // IntentLandingPage data to this component. Keeps the route files thin.
 
 import Link from "next/link";
@@ -126,7 +126,7 @@ export default function IntentLandingRenderer({ data }: { data: IntentLandingPag
             </h3>
             <p className="text-sm text-gray-400 mb-5 max-w-xl mx-auto">{data.ctaCopy}</p>
             <ContactButton className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-gold to-gold-light px-6 py-3 text-sm font-semibold uppercase tracking-widest text-black hover:shadow-lg hover:shadow-gold/20 transition-all duration-300 cursor-pointer">
-              Get free consultation
+              Book your assessment
               <ArrowRight className="h-4 w-4" />
             </ContactButton>
           </section>

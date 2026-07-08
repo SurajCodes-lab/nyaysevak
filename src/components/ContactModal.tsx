@@ -24,7 +24,7 @@ const legalIssueOptions = [
 const trustBadges = [
   { Icon: ShieldCheck, label: "100% Confidential" },
   { Icon: Clock, label: "Response within 24hrs" },
-  { Icon: CheckCircle2, label: "Free First Consultation" },
+  { Icon: CheckCircle2, label: "Expert Case Assessment" },
 ];
 
 export default function ContactModal() {
@@ -102,7 +102,7 @@ export default function ContactModal() {
           <div className="flex items-center gap-3 mb-2">
             <div className="h-px w-6 bg-gradient-to-r from-transparent to-gold/50" />
             <p className="text-[10px] sm:text-xs uppercase tracking-[0.35em] text-gold font-semibold">
-              Free Consultation
+              Case Assessment
             </p>
           </div>
           <h3 id="contact-modal-title" className="text-xl sm:text-2xl font-heading font-bold text-white heading-glow">
@@ -249,7 +249,7 @@ export default function ContactModal() {
                   </>
                 ) : (
                   <>
-                    Book Free Consultation
+                    Book Your Assessment
                     <Send className="h-4 w-4" strokeWidth={2} />
                   </>
                 )}

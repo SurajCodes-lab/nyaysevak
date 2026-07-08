@@ -101,7 +101,7 @@ const profession: StatRow[] = [
 const market: StatRow[] = [
   { metric: "Indian legal-services market size (estimate)", value: "₹1.6–1.8 lakh crore (~US$ 20 bn)", asOf: "2025", source: "Editorial estimate — synthesised from industry reports" },
   { metric: "Online legal-services market (estimate)", value: "₹3,000–4,000 crore", asOf: "2025", source: "Editorial estimate" },
-  { metric: "Average fee — first lawyer consultation, metros", value: "₹500–₹2,500", asOf: "2025-26", source: "Editorial estimate from market scan", notes: "Free first consultation is offered by NyaySevak and several other platforms." },
+  { metric: "Average fee — first lawyer consultation, metros", value: "₹500–₹2,500", asOf: "2025-26", source: "Editorial estimate from market scan", notes: "Paid case assessment is offered by NyaySevak and several other platforms." },
   { metric: "Average fee — uncontested divorce (mutual consent)", value: "₹25,000–₹75,000", asOf: "2025-26", source: "Editorial estimate" },
   { metric: "Average fee — anticipatory bail application (district)", value: "₹15,000–₹50,000", asOf: "2025-26", source: "Editorial estimate" },
 ];
@@ -319,17 +319,17 @@ export default function Page() {
         </section>
 
         <section className="mt-16 rounded-2xl border border-white/10 bg-white/[0.03] p-6">
-          <h2 className="text-xl font-semibold text-gold">Need a lawyer? First consultation is free.</h2>
+          <h2 className="text-xl font-semibold text-gold">Need a lawyer? First step is a paid case assessment.</h2>
           <p className="mt-2 text-white/80">
             NyaySevak connects you with verified lawyers across all Indian courts. Free first
             consultation, transparent pricing, no obligation.
           </p>
           <div className="mt-4 flex flex-wrap gap-3">
             <a
-              href="/free-legal-consultation"
+              href="/case-assessment"
               className="rounded-xl bg-gold px-5 py-2.5 text-sm font-semibold text-black hover:opacity-90"
             >
-              Get free consultation
+              Book your assessment
             </a>
             <a
               href="tel:+919868666715"

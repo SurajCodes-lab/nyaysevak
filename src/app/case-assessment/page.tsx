@@ -4,7 +4,7 @@ import { intentLandings } from "@/data/intent-landings";
 import { SITE_URL } from "@/lib/site";
 import { notFound } from "next/navigation";
 
-const SLUG = "free-legal-consultation";
+const SLUG = "case-assessment";
 const data = intentLandings.find((d) => d.slug === SLUG);
 
 export const metadata: Metadata = data
@@ -49,17 +49,17 @@ export default function Page() {
     })),
   };
 
-  // Service schema explicitly representing the free-consultation offer.
+  // Service schema explicitly representing the paid case-assessment offer.
   const serviceJsonLd = {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: "Free Legal Consultation",
+    name: "Case Assessment",
     serviceType: "Lawyer Consultation",
     provider: { "@id": `${SITE_URL}/#organization` },
     areaServed: { "@type": "Country", name: "India" },
     offers: {
       "@type": "Offer",
-      price: "0",
+      price: "499",
       priceCurrency: "INR",
       availability: "https://schema.org/InStock",
       url,

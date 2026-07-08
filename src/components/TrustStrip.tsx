@@ -11,7 +11,7 @@ import { ShieldCheck, Gift, Landmark, Clock } from "lucide-react";
 
 const signals = [
   { icon: ShieldCheck, label: "Bar-Council-verified advocates" },
-  { icon: Gift, label: "Free first consultation" },
+  { icon: Gift, label: "Paid case assessment" },
   { icon: Landmark, label: "Supreme Court · 25 High Courts · 700+ District Courts" },
   { icon: Clock, label: "Callback within 24 hours" },
 ];

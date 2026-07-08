@@ -27,10 +27,10 @@ Schema: every listed URL emits Schema.org JSON-LD in the document head.
 
   const coreBlock = `## Core pages
 
-- ${SITE_URL}/ — Home: entity overview, services map, free first-consultation CTA, phone +91-9868666715.
+- ${SITE_URL}/ — Home: entity overview, services map, paid case-assessment CTA, phone +91-9868666715.
 - ${SITE_URL}/about — About NyaySevak: founding context (2024), mission, editorial desks.
 - ${SITE_URL}/contact — Contact: phone, WhatsApp, form, business hours.
-- ${SITE_URL}/free-legal-consultation — Free first consultation: scope, eligibility, how to claim.
+- ${SITE_URL}/case-assessment — Case assessment (paid): what the paid case assessment includes and how to book.
 - ${SITE_URL}/lawyers — Find-a-lawyer (lawyer matching) entry point, by city.
 - ${SITE_URL}/platform — Platform overview for B2B clients.
 - ${SITE_URL}/features — Platform features index.

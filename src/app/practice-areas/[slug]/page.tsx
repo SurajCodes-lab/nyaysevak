@@ -85,8 +85,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     // `%s | NyaySevak.com`, so hardcoding ".com" here produced a DOUBLE ".com"
     // suffix (verified live) that truncated the title and crushed CTR (GSC showed
     // money pages ranking well but CTR ~1%). No brand here — the template adds it.
-    title: `${v.primary} in India — Free Consultation`,
-    description: `Looking for the best ${primaryLower} in India? ${overview}. Verified ${v.variants[1]?.toLowerCase() ?? primaryLower} across Supreme Court, High Courts & 700+ District Courts. ${area.services.slice(0, 3).join(", ")}. Free first consultation in 60 seconds. Call +91-9868666715.`,
+    title: `${v.primary} in India — Case Assessment`,
+    description: `Looking for the best ${primaryLower} in India? ${overview}. Verified ${v.variants[1]?.toLowerCase() ?? primaryLower} across Supreme Court, High Courts & 700+ District Courts. ${area.services.slice(0, 3).join(", ")}. Book a case assessment in 60 seconds. Call +91-9868666715.`,
     keywords: [
       ...v.variants.map((vv) => vv.toLowerCase()),
       `best ${primaryLower}`,
@@ -102,21 +102,21 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       ...area.services.slice(0, 4).map((s) => s.toLowerCase()),
       "verified lawyer India",
       "NyaySevak",
-      "free legal consultation",
+      "paid case assessment",
     ].join(", "),
     alternates: {
       canonical: `https://www.nyaysevak.com/practice-areas/${slug}`,
     },
     openGraph: {
-      title: `${v.primary} India 2026 — Verified Advocates, Free Consultation | NyaySevak.com`,
-      description: `Verified ${primaryLower}s across India. ${area.description}. Free first consultation on NyaySevak.`,
+      title: `${v.primary} India 2026 — Verified Advocates, Case Assessment | NyaySevak.com`,
+      description: `Verified ${primaryLower}s across India. ${area.description}. Book a case assessment on NyaySevak.`,
       type: "website",
       url: `https://www.nyaysevak.com/practice-areas/${slug}`,
     },
     twitter: {
       card: "summary_large_image",
       title: `${v.primary} India 2026 | NyaySevak.com`,
-      description: `Find verified ${primaryLower}s near you. ${area.services.slice(0, 2).join(", ")}. Free consultation.`,
+      description: `Find verified ${primaryLower}s near you. ${area.services.slice(0, 2).join(", ")}. Case assessment.`,
     },
   };
 }
@@ -143,7 +143,7 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ s
   const primaryLower = variant.primary.toLowerCase();
   const quickAnswer = content
     ? trimToSentences(content.detailedOverview[0], 70)
-    : `NyaySevak connects you with Bar-Council-verified ${primaryLower}s across the Supreme Court, 25 High Courts, and 700+ District Courts. ${area.description} Your first consultation is free, with transparent fees agreed upfront.`;
+    : `NyaySevak connects you with Bar-Council-verified ${primaryLower}s across the Supreme Court, 25 High Courts, and 700+ District Courts. ${area.description} Your first step is a paid case assessment, with transparent fees agreed upfront.`;
   const quickAnswerQuestion = `How do I find a verified ${primaryLower} in India?`;
 
   // Category-aware related areas: same category first, then adjacent
@@ -221,9 +221,9 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ s
     serviceType: area.title,
     offers: {
       "@type": "Offer",
-      price: "0",
+      price: "499",
       priceCurrency: "INR",
-      description: "Free first consultation for all practice areas",
+      description: "Paid case assessment for all practice areas",
       availability: "https://schema.org/InStock",
     },
     hasOfferCatalog: {

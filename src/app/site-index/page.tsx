@@ -45,7 +45,7 @@ export default function SiteIndexPage() {
       { label: "Legal Insights", href: "/insights" },
       { label: "Legal Glossary", href: "/legal-glossary" },
       { label: "Legal Tools", href: "/legal-tools" },
-      { label: "Free Legal Consultation", href: "/free-legal-consultation" },
+      { label: "Case Assessment", href: "/case-assessment" },
       { label: "Legal Industry Statistics", href: "/legal-industry-statistics-india" },
       { label: "Contact", href: "/contact" },
     ],

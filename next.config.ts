@@ -92,6 +92,7 @@ const nextConfig: NextConfig = {
       // Note: /lawyers is now a real index page (city-based), so no longer redirected.
       { source: "/advocates", destination: "/lawyers", permanent: true },
       { source: "/consultation", destination: "/services/lawyer-consultation", permanent: true },
+      { source: "/free-legal-consultation", destination: "/case-assessment", permanent: true },
 
       // Week 8 — Workstream B: intent-aliased URL aliases.
       // High-volume search-friendly URLs forwarded (301) to canonical practice

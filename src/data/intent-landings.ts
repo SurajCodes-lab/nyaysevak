@@ -50,11 +50,11 @@ export const intentLandings: IntentLandingPage[] = [
   {
     slug: "best-property-lawyers-in-india",
     quickAnswer:
-      "The best property lawyers in India are Bar-Council-verified advocates with a documented practice history at the relevant city's Sub-Registrar offices and High Court, plus hands-on experience with that city's specific property regime. NyaySevak lists verified property advocates across Delhi, Mumbai, Bangalore, Chennai, Hyderabad, Pune, Kolkata, and Ahmedabad for title verification, RERA complaints, conveyancing, and partition — with a free first consultation.",
+      "The best property lawyers in India are Bar-Council-verified advocates with a documented practice history at the relevant city's Sub-Registrar offices and High Court, plus hands-on experience with that city's specific property regime. NyaySevak lists verified property advocates across Delhi, Mumbai, Bangalore, Chennai, Hyderabad, Pune, Kolkata, and Ahmedabad for title verification, RERA complaints, conveyancing, and partition — with a paid case assessment.",
     title:
       "Best Property Lawyers in India 2026 — City-Wise Verified Advocates",
     metaDescription:
-      "Find the best property lawyers in India 2026 — verified advocates across Delhi, Mumbai, Bangalore, Chennai, Hyderabad, Pune, Kolkata, Ahmedabad. Title verification, RERA, conveyancing, partition. Free first consultation.",
+      "Find the best property lawyers in India 2026 — verified advocates across Delhi, Mumbai, Bangalore, Chennai, Hyderabad, Pune, Kolkata, Ahmedabad. Title verification, RERA, conveyancing, partition. Paid case assessment available.",
     primaryKeyword: "best property lawyers in India",
     secondaryKeywords: [
       "best property lawyer India",
@@ -69,7 +69,7 @@ export const intentLandings: IntentLandingPage[] = [
     hero: {
       eyebrow: "Property Law · India · 2026",
       h1: "Best Property Lawyers in India",
-      sub: "Verified, Bar-Council-checked property advocates across the 8 largest Indian metros. Title verification, RERA complaints, conveyancing, partition suits, builder-buyer disputes, tenancy. Free first consultation.",
+      sub: "Verified, Bar-Council-checked property advocates across the 8 largest Indian metros. Title verification, RERA complaints, conveyancing, partition suits, builder-buyer disputes, tenancy. Paid case assessment available.",
     },
     intro: [
       "Property is the single most-fraud-vulnerable transaction category in Indian civil practice. A buyer who skips proper title verification typically discovers the problem only after possession — by which point reversing the transaction can take a decade of litigation. Choosing the right property lawyer at the right stage of the transaction is the single most important risk control most home-buyers and commercial-property purchasers can exercise.",
@@ -214,13 +214,13 @@ export const intentLandings: IntentLandingPage[] = [
       {
         question: "How do NyaySevak's property lawyers differ from listing-site directories?",
         answer:
-          "Three differences: (i) every property lawyer in our network is Bar-Council verified — listing-site directories often display unverified profiles; (ii) we match lawyers to your specific city, court, and matter type — listing sites typically present alphabetical lists; (iii) the first consultation is free with no obligation — listing-site directories charge per lead.",
+          "Three differences: (i) every property lawyer in our network is Bar-Council verified — listing-site directories often display unverified profiles; (ii) we match lawyers to your specific city, court, and matter type — listing sites typically present alphabetical lists; (iii) the first step is a paid case assessment with no obligation — listing-site directories charge per lead.",
       },
     ],
     practiceCanonicalSlug: "property-real-estate",
     ctaTitle: "Need a property lawyer right now?",
     ctaCopy:
-      "Get a free first consultation with a verified property advocate in your city. We match you to a lawyer with documented experience in your specific city and matter type — typically within 4 hours.",
+      "Get a paid case assessment with a verified property advocate in your city. We match you to a lawyer with documented experience in your specific city and matter type — typically within 4 hours.",
   },
 
   // ============================================================
@@ -229,11 +229,11 @@ export const intentLandings: IntentLandingPage[] = [
   {
     slug: "best-divorce-lawyers-in-india",
     quickAnswer:
-      "The best divorce lawyers in India specialise in matrimonial law and the Family Courts, handling mutual-consent and contested divorce, maintenance, child custody, and alimony under the Hindu Marriage Act, Special Marriage Act, and applicable personal law. NyaySevak connects you with verified divorce advocates across the 8 largest metros, with transparent fees and a free first consultation to assess your matter confidentially.",
+      "The best divorce lawyers in India specialise in matrimonial law and the Family Courts, handling mutual-consent and contested divorce, maintenance, child custody, and alimony under the Hindu Marriage Act, Special Marriage Act, and applicable personal law. NyaySevak connects you with verified divorce advocates across the 8 largest metros, with transparent fees and a paid case assessment to assess your matter confidentially.",
     title:
       "Best Divorce Lawyers in India 2026 — City-Wise Verified Family Advocates",
     metaDescription:
-      "Find the best divorce lawyers in India 2026 — verified family advocates across Delhi, Mumbai, Bangalore, Chennai, Hyderabad, Pune, Kolkata, Ahmedabad. Mutual consent, contested, custody, maintenance. Free first consultation.",
+      "Find the best divorce lawyers in India 2026 — verified family advocates across Delhi, Mumbai, Bangalore, Chennai, Hyderabad, Pune, Kolkata, Ahmedabad. Mutual consent, contested, custody, maintenance. Paid case assessment available.",
     primaryKeyword: "best divorce lawyers in India",
     secondaryKeywords: [
       "best divorce lawyer India",
@@ -248,7 +248,7 @@ export const intentLandings: IntentLandingPage[] = [
     hero: {
       eyebrow: "Family Law · India · 2026",
       h1: "Best Divorce Lawyers in India",
-      sub: "Verified, Bar-Council-checked divorce and family-law advocates across the 8 largest Indian metros. Mutual-consent and contested divorce, child custody, maintenance, domestic violence, matrimonial property. Free first consultation.",
+      sub: "Verified, Bar-Council-checked divorce and family-law advocates across the 8 largest Indian metros. Mutual-consent and contested divorce, child custody, maintenance, domestic violence, matrimonial property. Paid case assessment available.",
     },
     intro: [
       "Divorce is among the most procedurally and emotionally complex matters in Indian civil practice. The right lawyer makes the difference between a 6-month mutual-consent decree and a 5-year contested battle. Choosing well at the start saves years of litigation, lakhs in counsel fees, and immeasurable personal toll.",
@@ -398,7 +398,7 @@ export const intentLandings: IntentLandingPage[] = [
     practiceCanonicalSlug: "family-matrimonial",
     ctaTitle: "Need a divorce lawyer right now?",
     ctaCopy:
-      "Get a free first consultation with a verified divorce or family-law advocate in your city. We match you to a lawyer with documented Family Court practice and the right experience for your specific matter (mutual-consent, contested, custody, or maintenance).",
+      "Get a paid case assessment with a verified divorce or family-law advocate in your city. We match you to a lawyer with documented Family Court practice and the right experience for your specific matter (mutual-consent, contested, custody, or maintenance).",
   },
 
   // ============================================================
@@ -407,11 +407,11 @@ export const intentLandings: IntentLandingPage[] = [
   {
     slug: "best-criminal-lawyers-in-india",
     quickAnswer:
-      "The best criminal lawyers in India are advocates experienced in bail, trial, and appellate defence under the Bharatiya Nyaya Sanhita and Bharatiya Nagarik Suraksha Sanhita, 2023, who appear regularly before the relevant Sessions Court, High Court, and Supreme Court. NyaySevak connects you with verified criminal defence advocates across the 8 largest metros for FIRs, anticipatory and regular bail, and trials — with a free, confidential first consultation.",
+      "The best criminal lawyers in India are advocates experienced in bail, trial, and appellate defence under the Bharatiya Nyaya Sanhita and Bharatiya Nagarik Suraksha Sanhita, 2023, who appear regularly before the relevant Sessions Court, High Court, and Supreme Court. NyaySevak connects you with verified criminal defence advocates across the 8 largest metros for FIRs, anticipatory and regular bail, and trials — with a confidential paid case assessment.",
     title:
       "Best Criminal Lawyers in India 2026 — City-Wise Verified Defence Advocates",
     metaDescription:
-      "Find the best criminal lawyers in India 2026 — verified defence advocates across Delhi, Mumbai, Bangalore, Chennai, Hyderabad, Pune, Kolkata, Ahmedabad. Bail, FIR quashing, trial defence, PMLA, NDPS, CBI cases. Free first consultation.",
+      "Find the best criminal lawyers in India 2026 — verified defence advocates across Delhi, Mumbai, Bangalore, Chennai, Hyderabad, Pune, Kolkata, Ahmedabad. Bail, FIR quashing, trial defence, PMLA, NDPS, CBI cases. Paid case assessment available.",
     primaryKeyword: "best criminal lawyers in India",
     secondaryKeywords: [
       "best criminal lawyer India",
@@ -427,7 +427,7 @@ export const intentLandings: IntentLandingPage[] = [
     hero: {
       eyebrow: "Criminal Defence · India · 2026",
       h1: "Best Criminal Lawyers in India",
-      sub: "Verified, Bar-Council-checked criminal-defence advocates across the 8 largest Indian metros. Bail, anticipatory bail, FIR quashing, trial defence, PMLA, NDPS, CBI cases. Free first consultation.",
+      sub: "Verified, Bar-Council-checked criminal-defence advocates across the 8 largest Indian metros. Bail, anticipatory bail, FIR quashing, trial defence, PMLA, NDPS, CBI cases. Paid case assessment available.",
     },
     intro: [
       "Criminal-defence work is the highest-stakes practice in Indian law. Loss of liberty is irreversible while it lasts; a wrongful conviction carries lifelong consequences. The right criminal lawyer at the right stage — pre-FIR, at the bail application, at trial, at appeal — materially shifts outcome probability. Choosing well is rarely about price; it is about precise expertise.",
@@ -580,44 +580,44 @@ export const intentLandings: IntentLandingPage[] = [
     practiceCanonicalSlug: "criminal-law",
     ctaTitle: "Need a criminal lawyer right now?",
     ctaCopy:
-      "Get a free first consultation with a verified criminal-defence advocate in your city. We match you to a lawyer with the right Sessions/HC/special-court experience for your matter — typically within 4 hours.",
+      "Get a paid case assessment with a verified criminal-defence advocate in your city. We match you to a lawyer with the right Sessions/HC/special-court experience for your matter — typically within 4 hours.",
   },
 
   // ============================================================
-  // Free Legal Consultation
+  // Case Assessment
   // ============================================================
   {
-    slug: "free-legal-consultation",
+    slug: "case-assessment",
     quickAnswer:
-      "Yes — you can get free legal advice in India. NyaySevak offers a free first consultation with a Bar-Council-verified lawyer for any matter, by phone, video, or chat, with no obligation to proceed. You describe your issue, get matched with a relevant advocate within 24 hours, and agree any further fees upfront before work begins. Government legal aid is also available via NALSA for eligible persons.",
+      "Yes — you can get free legal advice in India. NyaySevak offers a paid case assessment with a Bar-Council-verified lawyer for any matter, by phone, video, or chat, with no obligation to proceed. You describe your issue, get matched with a relevant advocate within 24 hours, and agree any further fees upfront before work begins. Government legal aid is also available via NALSA for eligible persons.",
     title:
-      "Free Legal Consultation in India — Talk to a Verified Lawyer Today",
+      "Case Assessment in India — Talk to a Verified Lawyer Today",
     metaDescription:
-      "Free first legal consultation in India. Talk to a verified Bar-Council-checked lawyer for criminal, divorce, property, corporate, civil, or any other matter. No obligation, no card required, response within 4 hours.",
-    primaryKeyword: "free legal consultation",
+      "Paid case assessment in India. Talk to a verified Bar-Council-checked lawyer for criminal, divorce, property, corporate, civil, or any other matter. No obligation — nominal assessment fee, response within 4 hours.",
+    primaryKeyword: "paid case assessment",
     secondaryKeywords: [
-      "free legal consultation India",
-      "free lawyer consultation",
+      "paid case assessment India",
+      "paid case assessment",
       "free legal advice India",
       "talk to a lawyer free",
-      "free first consultation lawyer",
-      "online free lawyer consultation",
+      "paid case assessment lawyer",
+      "online paid case assessment",
       "free legal aid India",
       "ask a lawyer free",
     ],
     hero: {
       eyebrow: "Free Service · No Obligation",
-      h1: "Free Legal Consultation in India",
-      sub: "Talk to a verified, Bar-Council-checked lawyer about your legal matter — no charge for the first consultation, no obligation to engage further. Available across criminal, civil, divorce, property, corporate, tax, cyber, consumer, and 25+ other practice areas.",
+      h1: "Case Assessment in India",
+      sub: "Talk to a verified, Bar-Council-checked lawyer about your legal matter — a nominal fee for the case assessment, with no obligation to engage further. Available across criminal, civil, divorce, property, corporate, tax, cyber, consumer, and 25+ other practice areas.",
     },
     intro: [
-      "Most Indian legal-service buyers delay engaging a lawyer because they don't know what the matter will cost — and they don't want to commit money to find out. The free first consultation removes this friction. You describe your situation; a verified lawyer assesses the matter, explains your options, gives a realistic timeline and fee estimate, and answers questions. No obligation to proceed.",
-      "NyaySevak's free first consultation is structured deliberately. We match you to a lawyer with documented experience in your specific matter type and (where relevant) your city's procedural particulars. The consultation runs 30-45 minutes and is held by phone, video, or chat — your choice. The lawyer is a real Bar-Council-enrolled advocate, not a chatbot or a salesperson.",
+      "Most Indian legal-service buyers delay engaging a lawyer because they don't know what the matter will cost — and they don't want to commit money to find out. The paid case assessment removes this friction. You describe your situation; a verified lawyer assesses the matter, explains your options, gives a realistic timeline and fee estimate, and answers questions. No obligation to proceed.",
+      "NyaySevak's paid case assessment is structured deliberately. We match you to a lawyer with documented experience in your specific matter type and (where relevant) your city's procedural particulars. The consultation runs 30-45 minutes and is held by phone, video, or chat — your choice. The lawyer is a real Bar-Council-enrolled advocate, not a chatbot or a salesperson.",
       "What this page explains: what to expect from the consultation; how to prepare; what the lawyer will tell you; what it does not include; and the realistic timeline for proceeding from consultation to hiring (if you choose to).",
     ],
     sections: [
       {
-        heading: "What is included in the free consultation",
+        heading: "What is included in the case assessment",
         body: [],
         bullets: [
           "An assessment of your matter — what category of law applies, what statutes are relevant, what procedural framework governs.",
@@ -650,10 +650,10 @@ export const intentLandings: IntentLandingPage[] = [
         ],
       },
       {
-        heading: "Why is the first consultation free?",
+        heading: "Why start with a paid case assessment?",
         body: [
-          "Three reasons. (1) Friction reduction — most legal-service buyers genuinely don't know whether their matter needs a lawyer at all; the free consultation lets them learn before paying. (2) Trust building — the consultation lets the buyer evaluate the lawyer before committing. (3) Mutual fit — not every matter is a fit for every lawyer; the consultation lets both sides assess fit.",
-          "We can offer the free first consultation at scale because (a) the verified lawyers in our network value access to high-intent matched leads; (b) the consultation is bounded (30-45 minutes, single session); and (c) the consultation produces a clear engagement decision — proceed or don't — that lets the lawyer plan time efficiently.",
+          "Three reasons. (1) Serious matters only — a nominal fee filters out idle enquiries, so the verified lawyer spends the session on people genuinely ready to act on their matter. (2) A real deliverable — you leave with a clear diagnosis of your situation and a written next-step plan, not vague free advice. (3) Mutual fit — the assessment lets both you and the lawyer decide whether to proceed to full engagement.",
+          "The assessment is bounded (30-45 minutes, single session) and ends with a clear engagement decision — proceed or don't — so both sides know exactly where they stand before any larger fees are discussed.",
         ],
       },
       {
@@ -667,12 +667,12 @@ export const intentLandings: IntentLandingPage[] = [
     ],
     faqs: [
       {
-        question: "Is the first consultation really free?",
+        question: "How much is the case assessment, and what do I get?",
         answer:
-          "Yes, completely free, no card required, no hidden charges. The lawyer's time for the first 30-45 minute consultation is provided at no cost to the user. There is no obligation to proceed with engagement after the consultation.",
+          "The case assessment is a nominal paid step with no hidden charges. The lawyer's time for the first 30-45 minute assessment is charged as a nominal fee. There is no obligation to proceed with engagement after the consultation.",
       },
       {
-        question: "How quickly can I get a free consultation?",
+        question: "How quickly can I get a case assessment?",
         answer:
           "Typical match-and-schedule time is 4 hours for non-urgent matters; 30-60 minutes for urgent matters (impending arrest, court hearing the same day, etc.). We prioritise urgency in matching.",
       },
@@ -697,7 +697,7 @@ export const intentLandings: IntentLandingPage[] = [
           "Yes. The Legal Services Authorities Act 1987 creates free legal aid for women, children, SC/ST, persons with disability, and persons with annual income below state-prescribed thresholds (typically ₹1-3 lakh annually). NyaySevak's Legal Aid service connects eligible users with NALSA / SLSA / DLSA panels.",
       },
     ],
-    ctaTitle: "Get your free consultation now",
+    ctaTitle: "Get your case assessment now",
     ctaCopy:
       "Tell us about your matter — a verified Bar-Council-enrolled lawyer will be matched to you within 4 hours. No card required, no obligation, complete confidentiality.",
   },
@@ -710,11 +710,11 @@ export const intentLandings: IntentLandingPage[] = [
   {
     slug: "best-civil-lawyers-in-india",
     quickAnswer:
-      "The best civil lawyers in India are Bar-Council-verified litigators with a documented record before the relevant city's District Civil Courts, the High Court, and (for high-value commercial suits) the Commercial Courts under the Commercial Courts Act, 2015. They handle property and partition suits, money recovery, specific performance, injunctions, declaration suits, and consumer and RERA matters. NyaySevak matches you with a verified civil advocate across the 8 largest metros — with a free first consultation and fees agreed upfront.",
+      "The best civil lawyers in India are Bar-Council-verified litigators with a documented record before the relevant city's District Civil Courts, the High Court, and (for high-value commercial suits) the Commercial Courts under the Commercial Courts Act, 2015. They handle property and partition suits, money recovery, specific performance, injunctions, declaration suits, and consumer and RERA matters. NyaySevak matches you with a verified civil advocate across the 8 largest metros — with a paid case assessment and fees agreed upfront.",
     title:
       "Best Civil Lawyers in India 2026 — City-Wise Verified Advocates",
     metaDescription:
-      "Find the best civil lawyers in India 2026 — verified civil litigation advocates across Delhi, Mumbai, Bangalore, Chennai, Hyderabad, Pune, Kolkata, Ahmedabad. Property suits, recovery, injunctions, specific performance, partition. Free first consultation.",
+      "Find the best civil lawyers in India 2026 — verified civil litigation advocates across Delhi, Mumbai, Bangalore, Chennai, Hyderabad, Pune, Kolkata, Ahmedabad. Property suits, recovery, injunctions, specific performance, partition. Paid case assessment available.",
     primaryKeyword: "best civil lawyers in India",
     secondaryKeywords: [
       "best civil lawyer India",
@@ -729,7 +729,7 @@ export const intentLandings: IntentLandingPage[] = [
     hero: {
       eyebrow: "Civil Litigation · India · 2026",
       h1: "Best Civil Lawyers in India",
-      sub: "Verified, Bar-Council-checked civil litigation advocates across the 8 largest Indian metros. Property and partition suits, money recovery, specific performance, injunctions, declaration, consumer and RERA matters. Free first consultation.",
+      sub: "Verified, Bar-Council-checked civil litigation advocates across the 8 largest Indian metros. Property and partition suits, money recovery, specific performance, injunctions, declaration, consumer and RERA matters. Paid case assessment available.",
     },
     intro: [
       "Civil litigation is the widest category in Indian practice — anything that is not a crime and not purely a regulatory matter ultimately resolves through a civil suit. Money recovery, breach of contract, property title and partition, specific performance of an agreement to sell, injunctions to stop a wrong before it happens, and declaratory suits to settle a legal status all run through the civil courts under the Code of Civil Procedure, 1908. The single biggest determinant of a civil outcome is procedural: which forum, what valuation, what limitation period, and whether interim relief is secured early.",
@@ -849,12 +849,12 @@ export const intentLandings: IntentLandingPage[] = [
       {
         question: "What is the best way to find a civil lawyer in India?",
         answer:
-          "Choose a Bar-Council-verified advocate with a documented record at the exact forum your matter belongs to — District Civil Court, the High Court's original or appellate side, or the Commercial Court. Confirm enrolment on the State Bar Council website, and get a written engagement letter stating scope and fees. Tell NyaySevak about your matter and we match you within 24 hours with a verified civil advocate in your city; the first consultation is free.",
+          "Choose a Bar-Council-verified advocate with a documented record at the exact forum your matter belongs to — District Civil Court, the High Court's original or appellate side, or the Commercial Court. Confirm enrolment on the State Bar Council website, and get a written engagement letter stating scope and fees. Tell NyaySevak about your matter and we match you within 24 hours with a verified civil advocate in your city; the first step is a paid case assessment.",
       },
       {
         question: "How much do civil lawyers charge in India in 2026?",
         answer:
-          "Civil-court appearances typically run ₹10,000–₹60,000 each at the District/City Civil Court level and ₹30,000–₹5,00,000 at the High Court, depending on the city and counsel seniority. Drafting a plaint or written statement is usually ₹15,000–₹75,000. Mumbai and Delhi rates are the highest; Hyderabad, Kolkata, and Ahmedabad run 30–50% lower for ordinary practice. Through NyaySevak the first consultation is free and all fees are agreed upfront.",
+          "Civil-court appearances typically run ₹10,000–₹60,000 each at the District/City Civil Court level and ₹30,000–₹5,00,000 at the High Court, depending on the city and counsel seniority. Drafting a plaint or written statement is usually ₹15,000–₹75,000. Mumbai and Delhi rates are the highest; Hyderabad, Kolkata, and Ahmedabad run 30–50% lower for ordinary practice. Through NyaySevak the first step is a paid case assessment and all fees are agreed upfront.",
       },
       {
         question: "How long does a civil suit take in India?",
@@ -880,7 +880,7 @@ export const intentLandings: IntentLandingPage[] = [
     practiceCanonicalSlug: "civil-law",
     ctaTitle: "Need a civil lawyer right now?",
     ctaCopy:
-      "Get a free first consultation with a verified civil litigation advocate in your city. Tell us your matter and the court involved — we match you to a lawyer with documented experience in that exact forum, typically within 4 hours.",
+      "Get a paid case assessment with a verified civil litigation advocate in your city. Tell us your matter and the court involved — we match you to a lawyer with documented experience in that exact forum, typically within 4 hours.",
   },
 
   // ============================================================
@@ -891,11 +891,11 @@ export const intentLandings: IntentLandingPage[] = [
   {
     slug: "best-corporate-lawyers-in-india",
     quickAnswer:
-      "The best corporate lawyers in India advise companies and founders on incorporation, contracts, compliance, fundraising, and M&A, and litigate before the NCLT, the High Court's Commercial Division, and regulators such as SEBI, the RBI, and the CCI. NyaySevak matches you with a verified corporate and business advocate — or a corporate law firm — across the 8 largest metros, with a free first consultation and fees agreed upfront.",
+      "The best corporate lawyers in India advise companies and founders on incorporation, contracts, compliance, fundraising, and M&A, and litigate before the NCLT, the High Court's Commercial Division, and regulators such as SEBI, the RBI, and the CCI. NyaySevak matches you with a verified corporate and business advocate — or a corporate law firm — across the 8 largest metros, with a paid case assessment and fees agreed upfront.",
     title:
       "Best Corporate Lawyers in India 2026 — City-Wise Verified Advocates & Law Firms",
     metaDescription:
-      "Find the best corporate lawyers and law firms in India 2026 — verified business advocates across Delhi, Mumbai, Bangalore, Chennai, Hyderabad, Pune, Kolkata, Ahmedabad. Incorporation, contracts, NCLT, IBC, M&A, compliance. Free first consultation.",
+      "Find the best corporate lawyers and law firms in India 2026 — verified business advocates across Delhi, Mumbai, Bangalore, Chennai, Hyderabad, Pune, Kolkata, Ahmedabad. Incorporation, contracts, NCLT, IBC, M&A, compliance. Paid case assessment available.",
     primaryKeyword: "best corporate lawyers in India",
     secondaryKeywords: [
       "best corporate lawyer India",
@@ -910,7 +910,7 @@ export const intentLandings: IntentLandingPage[] = [
     hero: {
       eyebrow: "Corporate & Business Law · India · 2026",
       h1: "Best Corporate Lawyers in India",
-      sub: "Verified, Bar-Council-checked corporate and business advocates and law firms across the 8 largest Indian metros. Incorporation, shareholder and commercial contracts, compliance, fundraising, M&A, NCLT and IBC litigation. Free first consultation.",
+      sub: "Verified, Bar-Council-checked corporate and business advocates and law firms across the 8 largest Indian metros. Incorporation, shareholder and commercial contracts, compliance, fundraising, M&A, NCLT and IBC litigation. Paid case assessment available.",
     },
     intro: [
       "Corporate legal work splits into two very different streams, and the best lawyer for one is rarely the best for the other. Transactional and advisory work — incorporation, founders' and shareholders' agreements, commercial contracts, employment and ESOP structuring, fundraising, due diligence, and M&A — is preventive and document-heavy. Disputes and regulatory work — oppression and mismanagement and insolvency before the NCLT, commercial arbitration, and proceedings before SEBI, the RBI, and the Competition Commission — is adversarial and forum-specific. Knowing which stream your matter falls into is the first decision.",
@@ -1030,12 +1030,12 @@ export const intentLandings: IntentLandingPage[] = [
       {
         question: "What is the best way to find a corporate lawyer in India?",
         answer:
-          "Match the lawyer to the matter: an individual business advocate for a contract or single dispute, or a corporate law firm for a multi-workstream transaction. Confirm Bar Council enrolment, and for litigation insist on documented experience before your NCLT bench or the High Court Commercial Division. Tell NyaySevak whether you need an advocate or a firm and what the matter is — we match you within 24 hours, with a free first consultation and fees agreed upfront.",
+          "Match the lawyer to the matter: an individual business advocate for a contract or single dispute, or a corporate law firm for a multi-workstream transaction. Confirm Bar Council enrolment, and for litigation insist on documented experience before your NCLT bench or the High Court Commercial Division. Tell NyaySevak whether you need an advocate or a firm and what the matter is — we match you within 24 hours, with a paid case assessment and fees agreed upfront.",
       },
       {
         question: "How much do corporate lawyers charge in India in 2026?",
         answer:
-          "Advisory work is usually a monthly retainer (₹30,000–₹5,00,000 depending on city, scope, and firm tier) or a fixed fee per document (₹15,000–₹1,50,000 for a shareholders' agreement or contract suite). NCLT and Commercial Division litigation runs ₹25,000–₹7,50,000+ per hearing by seniority. Mumbai and Delhi are the highest; Hyderabad, Kolkata, and Ahmedabad are materially lower. Through NyaySevak the first consultation is free.",
+          "Advisory work is usually a monthly retainer (₹30,000–₹5,00,000 depending on city, scope, and firm tier) or a fixed fee per document (₹15,000–₹1,50,000 for a shareholders' agreement or contract suite). NCLT and Commercial Division litigation runs ₹25,000–₹7,50,000+ per hearing by seniority. Mumbai and Delhi are the highest; Hyderabad, Kolkata, and Ahmedabad are materially lower. Through NyaySevak the first step is a paid case assessment.",
       },
       {
         question: "Which NCLT bench handles my company?",
@@ -1055,13 +1055,13 @@ export const intentLandings: IntentLandingPage[] = [
       {
         question: "Can a startup afford a corporate lawyer?",
         answer:
-          "Yes — and the cost of not having one is usually higher. Many corporate advocates offer fixed-fee startup packages (incorporation-to-shareholders'-agreement) and flexible retainers scaled to stage. The founders' and shareholders' agreements, a clean cap table, and proper IP assignment are exactly the documents investors diligence — getting them right early protects valuation at the next round. NyaySevak's first consultation is free, so you can scope the cost before committing.",
+          "Yes — and the cost of not having one is usually higher. Many corporate advocates offer fixed-fee startup packages (incorporation-to-shareholders'-agreement) and flexible retainers scaled to stage. The founders' and shareholders' agreements, a clean cap table, and proper IP assignment are exactly the documents investors diligence — getting them right early protects valuation at the next round. NyaySevak's first step is a paid case assessment, so you can scope the cost before committing.",
       },
     ],
     practiceCanonicalSlug: "corporate-business",
     ctaTitle: "Need a corporate lawyer or law firm right now?",
     ctaCopy:
-      "Get a free first consultation with a verified corporate and business advocate — or a corporate law firm — in your city. Tell us whether it's advisory, transactional, or a dispute, and we match you to the right lawyer for that work, typically within 4 hours.",
+      "Get a paid case assessment with a verified corporate and business advocate — or a corporate law firm — in your city. Tell us whether it's advisory, transactional, or a dispute, and we match you to the right lawyer for that work, typically within 4 hours.",
   },
 ];
 

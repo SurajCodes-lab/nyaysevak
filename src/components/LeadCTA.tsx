@@ -14,7 +14,7 @@ import { trackContactModalOpen, trackCTAClick, trackPhoneClick, trackWhatsAppCli
 const PHONE = "+919868666715";
 
 export default function LeadCTA({
-  heading = "Talk to a verified lawyer — free first consultation",
+  heading = "Talk to a verified lawyer — paid case assessment",
   subtext = "Tell us your matter and a Bar-Council-verified advocate calls you back, usually within 24 hours. No upfront fee, no obligation.",
   waText = "Hi, I need legal help.",
   context = "lead-cta",
@@ -34,7 +34,7 @@ export default function LeadCTA({
 
   return (
     <section
-      aria-label="Get a free legal consultation"
+      aria-label="Get a paid case assessment"
       className="not-prose my-10 overflow-hidden rounded-2xl border border-gold/30 bg-gradient-to-br from-gold/[0.08] via-gold/[0.03] to-transparent p-6 sm:p-8"
     >
       <div className="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
@@ -45,7 +45,7 @@ export default function LeadCTA({
           <p className="mt-2 text-sm text-gray-300 leading-relaxed">{subtext}</p>
           <ul className="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-xs text-gray-400">
             <li className="inline-flex items-center gap-1.5"><ShieldCheck className="h-4 w-4 text-gold shrink-0" strokeWidth={1.5} /> Bar-Council-verified</li>
-            <li className="inline-flex items-center gap-1.5"><Gift className="h-4 w-4 text-gold shrink-0" strokeWidth={1.5} /> Free first consultation</li>
+            <li className="inline-flex items-center gap-1.5"><Gift className="h-4 w-4 text-gold shrink-0" strokeWidth={1.5} /> Paid case assessment</li>
             <li className="inline-flex items-center gap-1.5"><Clock className="h-4 w-4 text-gold shrink-0" strokeWidth={1.5} /> Callback within 24 hours</li>
           </ul>
         </div>

@@ -1195,7 +1195,7 @@ export const articles: Article[] = [
           "Mid-career advocate (5-15 years' practice): Rs 1,500 to Rs 5,000 per consultation.",
           "Senior advocate (15+ years' practice / partner-level): Rs 5,000 to Rs 25,000 per consultation.",
           "Designated Senior Advocate: Rs 25,000 to Rs 1,00,000 per consultation.",
-          "On NyaySevak specifically, the first consultation is free — this is a deliberate platform decision to reduce friction at the buyer end and to encourage seekers to actually start the conversation. After the first consultation, standard rates apply for subsequent meetings.",
+          "On NyaySevak specifically, the first step is a paid case assessment — this is a deliberate platform decision to reduce friction at the buyer end and to encourage seekers to actually start the conversation. After the first consultation, standard rates apply for subsequent meetings.",
         ],
       },
       {
@@ -1356,7 +1356,7 @@ export const articles: Article[] = [
     title: "How to Send a Legal Notice in India: Format, Process & Cost (2026)",
     metaTitle: "How to Send a Legal Notice in India (2026) — Format, Process & Cost",
     metaDescription:
-      "Step-by-step guide to sending a legal notice in India: when it's required, format, how to send it, cost, replies, and what happens next. Free first consultation.",
+      "Step-by-step guide to sending a legal notice in India: when it's required, format, how to send it, cost, replies, and what happens next. Paid case assessment available.",
     excerpt:
       "A legal notice is the formal first step before most disputes go to court. Here's exactly when you need one, what it must contain, how to send it correctly, and what it costs.",
     category: "Practical Guidance",
@@ -1429,7 +1429,7 @@ export const articles: Article[] = [
         heading: "How much does a legal notice cost?",
         body: [
           "Costs vary with the complexity of the matter and the lawyer's experience. Drafting and sending a straightforward notice is typically an affordable fixed fee, with postage as a small additional cost. Complex commercial matters cost more because they require detailed drafting.",
-          "On NyaySevak the exact fee is shown and agreed upfront, and your first consultation is free — so you can understand your position before committing to anything.",
+          "On NyaySevak the exact fee is shown and agreed upfront, and your first step is a paid case assessment — so you can understand your position before committing to anything.",
         ],
       },
       {
@@ -1480,7 +1480,7 @@ export const articles: Article[] = [
       {
         question: "How much does it cost to send a legal notice in India?",
         answer:
-          "It depends on the complexity of the matter and the lawyer's experience. A simple notice is usually an affordable fixed fee plus a small postage cost, while complex commercial notices cost more. On NyaySevak the fee is agreed upfront and your first consultation is free.",
+          "It depends on the complexity of the matter and the lawyer's experience. A simple notice is usually an affordable fixed fee plus a small postage cost, while complex commercial notices cost more. On NyaySevak the fee is agreed upfront and your first step is a paid case assessment.",
       },
     ],
     relatedPracticeAreaSlugs: ["civil-law", "property-real-estate", "consumer-protection", "banking-finance"],
@@ -1615,7 +1615,7 @@ export const articles: Article[] = [
       {
         question: "Do I need a lawyer to report cyber crime?",
         answer:
-          "You can report it yourself through 1930 and the portal. However, for serious losses, identity theft, harassment, or when a case has to be pursued through an FIR and the courts, a cyber-crime lawyer helps frame the complaint correctly, follow up with agencies, and pursue recovery. Your first consultation on NyaySevak is free.",
+          "You can report it yourself through 1930 and the portal. However, for serious losses, identity theft, harassment, or when a case has to be pursued through an FIR and the courts, a cyber-crime lawyer helps frame the complaint correctly, follow up with agencies, and pursue recovery. Your case assessment on NyaySevak is a nominal ₹499.",
       },
     ],
     relatedPracticeAreaSlugs: ["cyber-law", "criminal-law", "consumer-protection"],
@@ -1751,7 +1751,7 @@ export const articles: Article[] = [
       {
         question: "Can the police arrest me without a warrant?",
         answer:
-          "Only in a cognizable offence. For cognizable offences the police may arrest without a warrant. For non-cognizable offences they cannot arrest without a warrant and cannot investigate without the magistrate's permission. If you believe the police have acted beyond these powers, consult a criminal lawyer immediately — the first consultation on NyaySevak is free.",
+          "Only in a cognizable offence. For cognizable offences the police may arrest without a warrant. For non-cognizable offences they cannot arrest without a warrant and cannot investigate without the magistrate's permission. If you believe the police have acted beyond these powers, consult a criminal lawyer immediately — the case assessment on NyaySevak is a nominal ₹499.",
       },
     ],
     relatedPracticeAreaSlugs: ["criminal-law", "cbi-cases"],
@@ -1896,7 +1896,7 @@ export const articles: Article[] = [
       {
         question: "How much does a succession certificate cost?",
         answer:
-          "The dominant cost is the ad-valorem court fee, which is calculated as a percentage of the value of the debts and securities involved (the percentage and any cap vary by state). On top of that are counsel's professional fees and incidental costs such as the newspaper publication. A legal heir certificate, by contrast, costs only a nominal fee. Your first consultation on NyaySevak is free, and the lawyer can estimate the court fee for your asset value.",
+          "The dominant cost is the ad-valorem court fee, which is calculated as a percentage of the value of the debts and securities involved (the percentage and any cap vary by state). On top of that are counsel's professional fees and incidental costs such as the newspaper publication. A legal heir certificate, by contrast, costs only a nominal fee. Your case assessment on NyaySevak is a nominal ₹499, and the lawyer can estimate the court fee for your asset value.",
       },
     ],
     relatedPracticeAreaSlugs: ["property-real-estate", "documentation", "family-matrimonial"],
@@ -2034,7 +2034,7 @@ export const articles: Article[] = [
       {
         question: "Do I need a lawyer to file a consumer complaint?",
         answer:
-          "No. Consumers are permitted to file and argue their own complaints, and the procedure on e-Daakhil is designed to be accessible. For higher-value claims, medical-negligence or insurance disputes, or where the opposite party is well-represented, a consumer lawyer materially improves the outcome. The first consultation on NyaySevak is free.",
+          "No. Consumers are permitted to file and argue their own complaints, and the procedure on e-Daakhil is designed to be accessible. For higher-value claims, medical-negligence or insurance disputes, or where the opposite party is well-represented, a consumer lawyer materially improves the outcome. The case assessment on NyaySevak is a nominal ₹499.",
       },
       {
         question: "What reliefs can a consumer commission grant?",
@@ -2182,7 +2182,7 @@ export const articles: Article[] = [
       {
         question: "What is the penalty for not registering under GST?",
         answer:
-          "Operating above the threshold without registration, or failing to register when compulsorily required, attracts a penalty of broadly 10% of the tax due (subject to a minimum), rising to 100% of the tax due where evasion is deliberate. You also cannot pass on input tax credit. A tax lawyer can help regularise the position — your first consultation on NyaySevak is free.",
+          "Operating above the threshold without registration, or failing to register when compulsorily required, attracts a penalty of broadly 10% of the tax due (subject to a minimum), rising to 100% of the tax due where evasion is deliberate. You also cannot pass on input tax credit. A tax lawyer can help regularise the position — your case assessment on NyaySevak is a nominal ₹499.",
       },
       {
         question: "What is the GST composition scheme?",
@@ -2313,7 +2313,7 @@ export const articles: Article[] = [
       {
         question: "What are trademark classes?",
         answer:
-          "Trademarks are registered class-wise under the NICE classification, which divides goods and services into 45 classes (Classes 1–34 for goods, Classes 35–45 for services). You register in the class(es) that match your business; an IP lawyer can confirm the right class to avoid gaps or wasted fees. Your first consultation on NyaySevak is free.",
+          "Trademarks are registered class-wise under the NICE classification, which divides goods and services into 45 classes (Classes 1–34 for goods, Classes 35–45 for services). You register in the class(es) that match your business; an IP lawyer can confirm the right class to avoid gaps or wasted fees. Your case assessment on NyaySevak is a nominal ₹499.",
       },
     ],
     relatedPracticeAreaSlugs: ["intellectual-property", "corporate-business", "media-entertainment"],
@@ -2445,7 +2445,7 @@ export const articles: Article[] = [
       {
         question: "What if my employer refuses to pay my settlement?",
         answer:
-          "Unpaid dues can be recovered — gratuity through the Controlling Authority under the Payment of Gratuity Act, wages through the authorities under the wage law, and the balance through an industrial dispute or a civil claim depending on your category. A labour-law advocate can identify the fastest route for your facts; your first consultation on NyaySevak is free.",
+          "Unpaid dues can be recovered — gratuity through the Controlling Authority under the Payment of Gratuity Act, wages through the authorities under the wage law, and the balance through an industrial dispute or a civil claim depending on your category. A labour-law advocate can identify the fastest route for your facts; your case assessment on NyaySevak is a nominal ₹499.",
       },
     ],
     relatedPracticeAreaSlugs: ["labour-employment", "civil-law", "corporate-business"],
@@ -2570,7 +2570,7 @@ export const articles: Article[] = [
       {
         question: "Is probate of a will always required?",
         answer:
-          "No. Probate is mandatory mainly where the will was made within, or relates to immovable property in, the former presidency towns of Kolkata, Chennai, and Mumbai. Elsewhere it is often not strictly required, though some banks or registrars may insist on probate or letters of administration, especially in disputed cases. A lawyer can confirm whether probate applies to you — your first consultation on NyaySevak is free.",
+          "No. Probate is mandatory mainly where the will was made within, or relates to immovable property in, the former presidency towns of Kolkata, Chennai, and Mumbai. Elsewhere it is often not strictly required, though some banks or registrars may insist on probate or letters of administration, especially in disputed cases. A lawyer can confirm whether probate applies to you — your case assessment on NyaySevak is a nominal ₹499.",
       },
       {
         question: "What happens if I die without a will?",
@@ -2701,7 +2701,7 @@ export const articles: Article[] = [
       {
         question: "How do I file a domestic violence complaint?",
         answer:
-          "You can approach a Protection Officer, a service provider, the police, or the Magistrate directly. A Domestic Incident Report is prepared, and an application under Section 12 is filed before the Magistrate, who can pass interim and ex-parte orders where there is urgency. A family lawyer can prepare a strong application — your first consultation on NyaySevak is free.",
+          "You can approach a Protection Officer, a service provider, the police, or the Magistrate directly. A Domestic Incident Report is prepared, and an application under Section 12 is filed before the Magistrate, who can pass interim and ex-parte orders where there is urgency. A family lawyer can prepare a strong application — your case assessment on NyaySevak is a nominal ₹499.",
       },
       {
         question: "Is the Domestic Violence Act a criminal or civil law?",
@@ -2840,7 +2840,7 @@ export const articles: Article[] = [
       {
         question: "Is quashing the same as bail or acquittal?",
         answer:
-          "No. Bail secures release while a case continues; acquittal comes at the end of a trial. Quashing terminates the FIR or proceeding itself at an early stage, so the case does not go to trial at all. It is the strongest early remedy where the FIR should never have proceeded. Your first consultation on NyaySevak is free.",
+          "No. Bail secures release while a case continues; acquittal comes at the end of a trial. Quashing terminates the FIR or proceeding itself at an early stage, so the case does not go to trial at all. It is the strongest early remedy where the FIR should never have proceeded. Your case assessment on NyaySevak is a nominal ₹499.",
       },
     ],
     relatedPracticeAreaSlugs: ["criminal-law", "cbi-cases", "family-matrimonial"],
@@ -2967,7 +2967,7 @@ export const articles: Article[] = [
       {
         question: "Does an unregistered rent agreement have legal value?",
         answer:
-          "An 11-month agreement that is properly stamped is valid and enforceable for that term. But for tenancies of a year or more, an unregistered lease is largely inadmissible to prove its terms under Section 49 of the Registration Act. For longer or higher-value tenancies, registration is the safer course — a property lawyer can advise; your first consultation on NyaySevak is free.",
+          "An 11-month agreement that is properly stamped is valid and enforceable for that term. But for tenancies of a year or more, an unregistered lease is largely inadmissible to prove its terms under Section 49 of the Registration Act. For longer or higher-value tenancies, registration is the safer course — a property lawyer can advise; your case assessment on NyaySevak is a nominal ₹499.",
       },
       {
         question: "What clauses should a rent agreement include?",
@@ -3113,7 +3113,7 @@ export const articles: Article[] = [
       {
         question: "Can I convert my business structure later?",
         answer:
-          "Yes, conversions are possible — for example, an LLP or partnership to a Private Limited Company, or an OPC to a Private Limited Company — but they involve regulatory filings, time, and cost, and can have tax implications. It is far better to choose the right structure at the outset. Your first consultation on NyaySevak is free.",
+          "Yes, conversions are possible — for example, an LLP or partnership to a Private Limited Company, or an OPC to a Private Limited Company — but they involve regulatory filings, time, and cost, and can have tax implications. It is far better to choose the right structure at the outset. Your case assessment on NyaySevak is a nominal ₹499.",
       },
     ],
     relatedPracticeAreaSlugs: ["corporate-business", "tax-law", "intellectual-property"],
@@ -3230,7 +3230,7 @@ export const articles: Article[] = [
       {
         question: "How quickly should I act after a rejection?",
         answer:
-          "Immediately. With arrest looming, the escalation to the High Court or the decision to surrender-and-seek-regular-bail should be made without delay, since every day increases the risk. Engage a criminal lawyer the same day — your first consultation on NyaySevak is free.",
+          "Immediately. With arrest looming, the escalation to the High Court or the decision to surrender-and-seek-regular-bail should be made without delay, since every day increases the risk. Engage a criminal lawyer the same day — your case assessment on NyaySevak is a nominal ₹499.",
       },
     ],
     relatedPracticeAreaSlugs: ["criminal-law", "cbi-cases", "ed-cases"],
@@ -3360,7 +3360,7 @@ export const articles: Article[] = [
       {
         question: "Can I also file a criminal case for workplace harassment?",
         answer:
-          "Yes. The POSH process is separate from and additional to criminal remedies — sexual harassment can also attract offences under the Bharatiya Nyaya Sanhita 2023. The employer is required to assist the complainant if she chooses to file a criminal complaint. A lawyer can help you pursue both tracks; your first consultation on NyaySevak is free.",
+          "Yes. The POSH process is separate from and additional to criminal remedies — sexual harassment can also attract offences under the Bharatiya Nyaya Sanhita 2023. The employer is required to assist the complainant if she chooses to file a criminal complaint. A lawyer can help you pursue both tracks; your case assessment on NyaySevak is a nominal ₹499.",
       },
     ],
     relatedPracticeAreaSlugs: ["labour-employment", "criminal-law", "corporate-business"],

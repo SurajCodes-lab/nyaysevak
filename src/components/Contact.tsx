@@ -31,7 +31,7 @@ const legalIssueOptions = [
 const trustBadges = [
   { Icon: ShieldCheck, label: "100% Confidential" },
   { Icon: Clock, label: "Response within 24hrs" },
-  { Icon: CheckCircle2, label: "Free First Consultation" },
+  { Icon: CheckCircle2, label: "Expert Case Assessment" },
 ];
 
 export default function Contact() {
@@ -105,14 +105,14 @@ export default function Contact() {
             <div className="flex items-center gap-3 mb-4">
               <div className="h-px w-8 bg-gradient-to-r from-transparent to-gold/50" />
               <p className="text-[10px] sm:text-xs uppercase tracking-[0.35em] text-gold font-semibold">
-                Free Consultation
+                Case Assessment
               </p>
             </div>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold tracking-tight text-white heading-glow">
               Get Expert Legal Help
             </h2>
             <p className="mt-3 text-sm text-gray-400 leading-relaxed max-w-md">
-              Connect with verified legal professionals and get the guidance you deserve. Your first consultation is completely free.
+              Connect with verified legal professionals and get the guidance you deserve. Your case assessment is a nominal paid step with a verified lawyer.
             </p>
 
             {/* Process steps */}
@@ -306,7 +306,7 @@ export default function Contact() {
                     </>
                   ) : (
                     <>
-                      Book Free Consultation
+                      Book Your Assessment
                       <Send className="h-4 w-4" strokeWidth={2} />
                     </>
                   )}

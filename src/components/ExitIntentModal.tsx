@@ -209,7 +209,7 @@ export default function ExitIntentModal() {
                 Get a free call back in 5 minutes
               </h3>
               <p className="mt-2 text-sm text-gray-400 leading-relaxed">
-                Leave your number and a verified lawyer will call you for a free first consultation — no obligation, no fees.
+                Leave your number and a verified lawyer will call you for a paid case assessment — a nominal fee, no obligation to proceed.
               </p>
 
               <form onSubmit={handleSubmit} className="mt-5 space-y-4">

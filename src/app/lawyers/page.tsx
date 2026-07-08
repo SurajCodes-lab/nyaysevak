@@ -10,20 +10,20 @@ const url = `${SITE_URL}/lawyers`;
 export const metadata: Metadata = {
   title: "Find Lawyers by City in India",
   description:
-    "Find the best verified lawyers across India's top cities — Delhi, Mumbai, Bangalore, Chennai, Hyderabad, Pune, Kolkata, and Ahmedabad. Criminal, civil, divorce, property, and corporate advocates. Free first consultation.",
+    "Find the best verified lawyers across India's top cities — Delhi, Mumbai, Bangalore, Chennai, Hyderabad, Pune, Kolkata, and Ahmedabad. Criminal, civil, divorce, property, and corporate advocates. Paid case assessment available.",
   keywords:
-    "lawyer near me, lawyer in Delhi, lawyer in Mumbai, lawyer in Bangalore, lawyer in Chennai, lawyer in Hyderabad, lawyer in Pune, lawyer in Kolkata, lawyer in Ahmedabad, best lawyer India, verified advocate India, free legal consultation, NyaySevak",
+    "lawyer near me, lawyer in Delhi, lawyer in Mumbai, lawyer in Bangalore, lawyer in Chennai, lawyer in Hyderabad, lawyer in Pune, lawyer in Kolkata, lawyer in Ahmedabad, best lawyer India, verified advocate India, paid case assessment, NyaySevak",
   alternates: { canonical: url },
   openGraph: {
     title: "Find Lawyers by City Across India | NyaySevak",
-    description: "Verified lawyers in Delhi, Mumbai, Bangalore, Chennai, Hyderabad, Pune, Kolkata, Ahmedabad. Every practice area. Free consultation.",
+    description: "Verified lawyers in Delhi, Mumbai, Bangalore, Chennai, Hyderabad, Pune, Kolkata, Ahmedabad. Every practice area. Case assessment.",
     url,
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "Find Lawyers by City in India | NyaySevak",
-    description: "Verified advocates across India's top 8 cities. Free first consultation.",
+    description: "Verified advocates across India's top 8 cities. Paid case assessment available.",
   },
 };
 
@@ -79,7 +79,7 @@ export default function LawyersIndexPage() {
           </p>
           <div className="mt-8">
             <ContactButton className="btn-gold-shine inline-flex items-center justify-center gap-2.5 rounded-xl bg-gradient-to-r from-gold to-gold-light px-8 py-4 text-sm font-semibold uppercase tracking-widest text-black cursor-pointer">
-              Book Free Consultation
+              Book Your Assessment
               <ArrowRight className="h-4 w-4" strokeWidth={2} />
             </ContactButton>
           </div>

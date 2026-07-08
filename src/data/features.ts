@@ -28,7 +28,7 @@ export const platformFeatures: Feature[] = [
     bullets: [
       "Instant or scheduled appointment booking",
       "Transparent, upfront pricing with no hidden fees",
-      "Free first consultation for new clients",
+      "Paid case assessment for new clients",
       "Automated reminders and follow-ups",
       "Rescheduling and cancellation flexibility",
     ],

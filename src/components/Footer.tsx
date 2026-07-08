@@ -36,7 +36,7 @@ const quickLinks = [
   { label: "Legal Insights", href: "/insights" },
   { label: "Legal Glossary", href: "/legal-glossary" },
   { label: "Legal Tools", href: "/legal-tools" },
-  { label: "Free Consultation", href: "/free-legal-consultation" },
+  { label: "Case Assessment", href: "/case-assessment" },
   { label: "Site Index", href: "/site-index" },
 ];
 
@@ -48,7 +48,7 @@ const popularSearches = [
   { label: "Best Criminal Lawyers in India", href: "/best-criminal-lawyers-in-india" },
   { label: "Best Civil Lawyers in India", href: "/best-civil-lawyers-in-india" },
   { label: "Best Corporate Lawyers in India", href: "/best-corporate-lawyers-in-india" },
-  { label: "Free Legal Consultation", href: "/free-legal-consultation" },
+  { label: "Case Assessment", href: "/case-assessment" },
   { label: "Court Fee Calculator", href: "/legal-tools/court-fee-calculator" },
 ];
 

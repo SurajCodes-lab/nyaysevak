@@ -47,7 +47,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/best-criminal-lawyers-in-india`, lastModified: corePageDate, changeFrequency: "weekly", priority: 0.9 },
     { url: `${BASE_URL}/best-civil-lawyers-in-india`, lastModified: corePageDate, changeFrequency: "weekly", priority: 0.9 },
     { url: `${BASE_URL}/best-corporate-lawyers-in-india`, lastModified: corePageDate, changeFrequency: "weekly", priority: 0.9 },
-    { url: `${BASE_URL}/free-legal-consultation`, lastModified: corePageDate, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${BASE_URL}/case-assessment`, lastModified: corePageDate, changeFrequency: "weekly", priority: 0.9 },
     // 2026 — Legal Tools hub (individual calculators generated below from the registry)
     { url: `${BASE_URL}/legal-tools`, lastModified: toolsPageDate, changeFrequency: "monthly", priority: 0.9 },
     // Legal industry statistics — AEO cite-magnet

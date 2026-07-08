@@ -49,8 +49,8 @@ export async function generateMetadata(
   // the title dropped, then folds in the page-specific lead.
   const descAltKw = label.keyword.replace("lawyer", "advocate");
   const description = content
-    ? `Find a verified ${label.keyword} / ${descAltKw} near you in ${city.name}, ${city.state}. ${content.lead.slice(0, 105).trimEnd()}… Free first consultation.`
-    : `Find the best ${label.keyword}s near you in ${city.name}, ${city.state}. Verified advocates for ${label.long.toLowerCase()} matters across ${city.highCourt.name} and district courts. Free first consultation. Call +91-9868666715.`;
+    ? `Find a verified ${label.keyword} / ${descAltKw} near you in ${city.name}, ${city.state}. ${content.lead.slice(0, 105).trimEnd()}… Paid case assessment available.`
+    : `Find the best ${label.keyword}s near you in ${city.name}, ${city.state}. Verified advocates for ${label.long.toLowerCase()} matters across ${city.highCourt.name} and district courts. Paid case assessment available. Call +91-9868666715.`;
 
   const cityLower = city.name.toLowerCase();
   const stateLower = city.state.toLowerCase();
@@ -74,15 +74,15 @@ export async function generateMetadata(
     ].join(", "),
     alternates: { canonical: url },
     openGraph: {
-      title: `Best ${label.title} in ${city.name} | Free Consultation | NyaySevak`,
-      description: `Verified ${label.long.toLowerCase()}s serving ${city.name}, ${city.state}. ${label.short} matters across ${city.highCourt.name} and district courts. Free first consultation.`,
+      title: `Best ${label.title} in ${city.name} | Case Assessment | NyaySevak`,
+      description: `Verified ${label.long.toLowerCase()}s serving ${city.name}, ${city.state}. ${label.short} matters across ${city.highCourt.name} and district courts. Paid case assessment available.`,
       type: "website",
       url,
     },
     twitter: {
       card: "summary_large_image",
       title: `Best ${label.title} in ${city.name} | NyaySevak`,
-      description: `Verified ${label.keyword}s in ${city.name}. Free first consultation.`,
+      description: `Verified ${label.keyword}s in ${city.name}. Paid case assessment available.`,
     },
     robots: {
       index: true,
@@ -121,7 +121,7 @@ export default async function CityPracticePage(
   // and voice assistants read aloud.
   const quickAnswerQuestion = `Where can I find a verified ${label.title.toLowerCase()} in ${city.name}?`;
   const quickAnswer =
-    `NyaySevak connects you with Bar-Council-verified ${label.title.toLowerCase()}s across ${city.name}, ${city.state} — advocates who appear regularly before ${city.highCourt.name} and the local district courts for ${label.long.toLowerCase()} matters. Typical district-court fees here run ${content.feeRange.district}. Your first consultation is free, with all fees agreed upfront before any work begins.`;
+    `NyaySevak connects you with Bar-Council-verified ${label.title.toLowerCase()}s across ${city.name}, ${city.state} — advocates who appear regularly before ${city.highCourt.name} and the local district courts for ${label.long.toLowerCase()} matters. Typical district-court fees here run ${content.feeRange.district}. Your first step is a paid case assessment, with all fees agreed upfront before any work begins.`;
 
   // Week 15: two data-driven FAQs appended to every city × practice page,
   // built from the page's own fee + court data (so they stay page-specific,
@@ -136,12 +136,12 @@ export default async function CityPracticePage(
     {
       question: `How much does a ${label.keyword} charge in ${city.name}?`,
       answer:
-        `${city.name} ${label.keyword} fees typically run ${content.feeRange.consultation} for a consultation, ${content.feeRange.district} per district-court appearance, and ${content.feeRange.highCourt} at ${city.highCourt.name}. ${content.feeRange.note} Through NyaySevak your first consultation is free and every fee is agreed upfront before any work begins.`,
+        `${city.name} ${label.keyword} fees typically run ${content.feeRange.consultation} for a consultation, ${content.feeRange.district} per district-court appearance, and ${content.feeRange.highCourt} at ${city.highCourt.name}. ${content.feeRange.note} Through NyaySevak your first step is a paid case assessment and every fee is agreed upfront before any work begins.`,
     },
     {
       question: `How do I find the best ${label.keyword} or ${altKeyword} in ${city.name}?`,
       answer:
-        `Tell NyaySevak about your ${label.short.toLowerCase()} matter and we match you within 24 hours with a Bar-Council-verified ${label.keyword} in ${city.name} — an advocate who appears regularly before ${city.highCourt.name} and the local district courts. Whether you want an individual ${altKeyword} or a ${label.short.toLowerCase()} law firm, the first consultation is free with all fees agreed upfront.`,
+        `Tell NyaySevak about your ${label.short.toLowerCase()} matter and we match you within 24 hours with a Bar-Council-verified ${label.keyword} in ${city.name} — an advocate who appears regularly before ${city.highCourt.name} and the local district courts. Whether you want an individual ${altKeyword} or a ${label.short.toLowerCase()} law firm, the first step is a paid case assessment with all fees agreed upfront.`,
     },
   ];
   const augmentedFaqs = [...content.faqs, ...generatedFaqs];
@@ -192,9 +192,9 @@ export default async function CityPracticePage(
     serviceType: label.long,
     offers: {
       "@type": "Offer",
-      price: "0",
+      price: "499",
       priceCurrency: "INR",
-      description: "Free first consultation",
+      description: "Paid case assessment",
       availability: "https://schema.org/InStock",
     },
     hasOfferCatalog: {
@@ -318,7 +318,7 @@ export default async function CityPracticePage(
                 {[
                   { Icon: BadgeCheck, label: "Bar Council Verified" },
                   { Icon: Clock, label: "Response in 24hrs" },
-                  { Icon: CheckCircle2, label: "Free First Consultation" },
+                  { Icon: CheckCircle2, label: "Expert Case Assessment" },
                   { Icon: MapPin, label: `${city.name} Courts` },
                 ].map((stat) => (
                   <span key={stat.label} className="glass-card !rounded-full !px-4 !py-2 inline-flex items-center gap-2 text-xs text-gray-300">
@@ -330,7 +330,7 @@ export default async function CityPracticePage(
 
               <div className="mt-8 flex flex-col sm:flex-row flex-wrap gap-4">
                 <ContactButton className="btn-gold-shine inline-flex items-center justify-center gap-2.5 rounded-xl bg-gradient-to-r from-gold to-gold-light px-8 py-4 text-sm font-semibold uppercase tracking-widest text-black cursor-pointer">
-                  Get Free Consultation
+                  Book Your Assessment
                   <ArrowRight className="h-4 w-4" strokeWidth={2} />
                 </ContactButton>
                 <a
@@ -504,14 +504,14 @@ export default async function CityPracticePage(
             {[
               {
                 step: "Describe your matter",
-                desc: `Share the facts of your ${label.short.toLowerCase()} matter and your location in ${city.name} — no charge, no obligation.`,
+                desc: `Share the facts of your ${label.short.toLowerCase()} matter and your location in ${city.name} — a nominal assessment fee, no obligation.`,
               },
               {
                 step: "Get matched in 24 hours",
                 desc: `We match you with a Bar-Council-verified ${label.keyword} who regularly appears before ${city.highCourt.name} and the relevant ${city.name} courts.`,
               },
               {
-                step: "Book a free consultation",
+                step: "Book a case assessment",
                 desc: `Speak with your lawyer by phone, video, or in-person meeting in ${city.name}. Agree fees upfront — no surprises.`,
               },
             ].map((step, i) => (
@@ -653,11 +653,11 @@ export default async function CityPracticePage(
                 Talk to a {label.title} in {city.name} Today
               </h2>
               <p className="mx-auto mt-4 mb-8 max-w-xl text-sm sm:text-base text-gray-400 leading-relaxed">
-                Verified {city.name} {label.keyword}s are ready to help. Your first consultation is free — no obligation, no hidden fees.
+                Verified {city.name} {label.keyword}s are ready to help. Your first step is a paid case assessment — no obligation, no hidden fees.
               </p>
               <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4">
                 <ContactButton className="btn-gold-shine inline-flex items-center justify-center gap-2.5 rounded-xl bg-gradient-to-r from-gold to-gold-light px-8 sm:px-10 py-4 sm:py-5 text-sm font-semibold uppercase tracking-widest text-black cursor-pointer">
-                  Get Free Consultation
+                  Book Your Assessment
                   <ArrowRight className="h-4 w-4" strokeWidth={2} />
                 </ContactButton>
                 <a

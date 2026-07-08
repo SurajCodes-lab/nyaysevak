@@ -100,7 +100,7 @@ export default async function GlossaryTermPage({
             question: `Which type of lawyer handles ${name} matters?`,
             answer: `${name} falls under ${related
               .map((p) => p.title)
-              .join(", ")}. NyaySevak matches you with a Bar-Council-verified advocate in the relevant practice area — the first consultation is free.`,
+              .join(", ")}. NyaySevak matches you with a Bar-Council-verified advocate in the relevant practice area — the first consultation is a nominal paid case assessment.`,
           },
         ]
       : []),
@@ -216,7 +216,7 @@ export default async function GlossaryTermPage({
           {/* CTA */}
           <LeadCTA
             heading={`Dealing with ${name.toLowerCase()} in a real case?`}
-            subtext="Definitions describe the framework — your case lives in its facts. Talk to a Bar-Council-verified advocate. First consultation is free, callback usually within 24 hours."
+            subtext="Definitions describe the framework — your case lives in its facts. Talk to a Bar-Council-verified advocate. Case assessment is a nominal paid step; callback usually within 24 hours."
             waText={`Hi, I have a question about ${name} and need legal help.`}
             context={`glossary:${term.slug}`}
           />

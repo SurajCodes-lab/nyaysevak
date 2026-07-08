@@ -228,10 +228,10 @@ export default function CourtFeeCalculatorPage() {
             Not sure how to value your suit?
           </h2>
           <p className="text-sm sm:text-base text-gray-600 mb-6 leading-relaxed">
-            Suit valuation determines court fee and pecuniary jurisdiction. Talk to a verified civil-litigation advocate on NyaySevak — free first consultation.
+            Suit valuation determines court fee and pecuniary jurisdiction. Talk to a verified civil-litigation advocate on NyaySevak — paid case assessment.
           </p>
           <ContactButton className="btn-gold-shine inline-flex items-center gap-2.5 rounded-xl bg-gradient-to-r from-gold to-gold-light px-8 py-4 text-sm font-semibold uppercase tracking-widest text-black cursor-pointer">
-            Get Free Consultation
+            Book Your Assessment
             <ArrowRight className="h-4 w-4" strokeWidth={2} />
           </ContactButton>
         </div>

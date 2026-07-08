@@ -7,13 +7,13 @@ import { ArrowRight } from "lucide-react";
 export const metadata: Metadata = {
   title: "About NyaySevak — Verified Lawyer Platform",
   description:
-    "NyaySevak is India's most trusted legal platform connecting you with verified lawyers across Supreme Court, 25 High Courts, 700+ District Courts & all Tribunals. 29 practice areas, transparent pricing, free first consultation. Serving individuals & businesses pan-India.",
+    "NyaySevak is India's most trusted legal platform connecting you with verified lawyers across Supreme Court, 25 High Courts, 700+ District Courts & all Tribunals. 29 practice areas, transparent pricing, paid case assessment. Serving individuals & businesses pan-India.",
   keywords:
     "about NyaySevak, best legal services India, trusted lawyer platform, verified lawyer matching India, legal services platform, online legal consultation India, find lawyer near me, hire advocate online, pan-India legal coverage",
   alternates: { canonical: "https://www.nyaysevak.com/about" },
   openGraph: {
     title: "About NyaySevak - India's Most Trusted Legal Services Platform",
-    description: "Verified lawyers across all courts in India. 29 practice areas. Free first consultation.",
+    description: "Verified lawyers across all courts in India. 29 practice areas. Paid case assessment available.",
     url: "https://www.nyaysevak.com/about",
     type: "website",
   },

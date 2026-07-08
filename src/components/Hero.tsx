@@ -11,7 +11,7 @@ import { trackPhoneClick } from "@/lib/analytics";
 const trustItems = [
   { icon: Shield, label: "Bar-Council-Verified Lawyers" },
   { icon: MapPin, label: "Supreme Court · 25 HCs · 700+ Courts" },
-  { icon: MessageCircle, label: "Free First Consultation" },
+  { icon: MessageCircle, label: "Expert Case Assessment" },
   { icon: Users, label: "Callback within 24 hours" },
 ];
 
