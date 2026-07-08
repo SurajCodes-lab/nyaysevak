@@ -2907,4 +2907,134 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       "Mutual-consent divorce is the fastest route; contested matters benefit from a lawyer who appears at the Family Court regularly.",
     ],
   },
+
+  // ── Ghaziabad + Faridabad: civil & corporate (completes the 5-practice NCR base) ──
+  "ghaziabad__civil-law": {
+    lead:
+      "Ghaziabad's dense commercial and residential activity produces a steady stream of civil disputes — money recovery, property and contract matters. NyaySevak connects you with Bar-Council-verified Ghaziabad civil lawyers who file recovery and summary suits at the Ghaziabad courts and injunctions and appeals before the Allahabad High Court.",
+    landscape: [
+      "Civil litigation in Ghaziabad runs through the District & Sessions Court at the Kacheri, with the Commercial Court handling above-value commercial disputes and the civil judges deciding recovery, title, partition and injunction suits. Given the industrial base, money-recovery and contract disputes are among the highest-volume matters.",
+      "Clear, document-backed debts are pursued through the fast-track summary suit under Order XXXVII, while commercial disputes of specified value go to the Commercial Court after mandatory pre-institution mediation. Writs and civil appeals go to the Allahabad High Court.",
+    ],
+    courtsForThisMatter: [
+      "Ghaziabad District & Civil Courts (Kacheri) — recovery, title, injunction suits",
+      "Commercial Court, Ghaziabad — above-value commercial disputes",
+      "Allahabad High Court — writs, civil appeals, revisions",
+      "Permanent Lok Adalat — settlement of eligible civil/utility matters",
+    ],
+    caseTypes: [
+      { title: "Money Recovery Suits", desc: "Recovery of dues via legal notice, Order XXXVII summary suit, or the Commercial Court." },
+      { title: "Property & Title Disputes", desc: "Title, possession and partition suits at the Ghaziabad civil courts." },
+      { title: "Contract Disputes", desc: "Breach, specific performance and damages claims for businesses and individuals." },
+      { title: "Injunctions", desc: "Temporary and permanent injunctions to protect property and rights." },
+      { title: "Consumer & Recovery", desc: "Consumer complaints and connected recovery through the appropriate forum." },
+    ],
+    faqs: [
+      { question: "How do I recover money owed to me in Ghaziabad?", answer: "Start with a legal demand notice, then choose the route: an Order XXXVII summary suit for clear document-backed debts, or the Commercial Court for commercial disputes of specified value (after pre-institution mediation). A Ghaziabad civil lawyer can pick the fastest route — your first step is a free case assessment. See our money-recovery guide." },
+      { question: "Which court handles civil disputes in Ghaziabad?", answer: "Recovery, title, partition and injunction suits are filed at the Ghaziabad civil courts at the Kacheri; above-value commercial disputes go to the Commercial Court; and writs and appeals to the Allahabad High Court." },
+      { question: "What is a summary suit and can I use it in Ghaziabad?", answer: "A summary suit under Order XXXVII CPC is a fast-track recovery for debts on written contracts, cheques or acknowledgements — the defendant needs the court's leave to defend. It is available at the Ghaziabad courts and is the quickest route for clear debts." },
+      { question: "Can a Ghaziabad lawyer help with a property or title dispute?", answer: "Yes. Title, possession and partition suits are decided by the Ghaziabad civil courts. A lawyer can pursue or defend the suit and seek injunctions to protect possession while it is pending." },
+      { question: "What does a civil lawyer in Ghaziabad charge?", answer: "It depends on the suit and stage; fees are set by the advocate and agreed in writing before work begins. Your first step through NyaySevak is a free case assessment with no obligation." },
+    ],
+    localNotes: [
+      "Ghaziabad's industrial base makes money-recovery and contract disputes the highest-volume civil matters.",
+      "Clear debts are fastest via an Order XXXVII summary suit; commercial disputes go to the Commercial Court after mediation.",
+    ],
+  },
+  "ghaziabad__corporate-business": {
+    lead:
+      "Ghaziabad's factories, MSMEs and traders generate constant corporate and commercial needs — from incorporation and contracts to cheque-bounce and commercial recovery. NyaySevak connects you with verified Ghaziabad corporate lawyers for company setup, agreements, and recovery before the Ghaziabad Commercial Court, NCLT and the Allahabad High Court.",
+    landscape: [
+      "As a major NCR industrial belt, Ghaziabad's business disputes centre on commercial recovery, cheque dishonour, supplier and employment matters, and company setup for its large MSME base. Above-value commercial suits go to the Commercial Court; company and insolvency matters to the NCLT; and cheque-bounce prosecutions to the Magistrate.",
+      "Well-drafted contracts and timely recovery action protect margins in this fast-moving market, and a specialist can pick between a summary suit, a Section 138 complaint, or IBC pressure depending on the debtor and amount.",
+    ],
+    courtsForThisMatter: [
+      "Commercial Court, Ghaziabad — above-value commercial suits",
+      "NCLT (Allahabad/Delhi bench) — company petitions & insolvency (IBC)",
+      "Magistrate Courts, Ghaziabad — cheque bounce (S.138)",
+      "Allahabad High Court — writs and commercial appeals",
+    ],
+    caseTypes: [
+      { title: "Company Incorporation & Contracts", desc: "Pvt Ltd/LLP setup, co-founder and vendor agreements, drafting and review." },
+      { title: "Cheque Bounce (S.138)", desc: "Statutory notice and prosecution for dishonoured cheques — common in this trading belt." },
+      { title: "Commercial Recovery", desc: "Money recovery via summary suit, Commercial Court, or IBC pressure." },
+      { title: "NCLT / Insolvency", desc: "Company petitions, IBC proceedings and oppression-mismanagement." },
+      { title: "Employment & Compliance", desc: "Employment agreements, disputes and ongoing corporate compliance." },
+    ],
+    faqs: [
+      { question: "How do I recover business dues in Ghaziabad?", answer: "For a company debtor owing ₹1 crore or more an IBC petition is powerful leverage; for a bounced cheque a Section 138 complaint; and for clear debts an Order XXXVII summary suit or the Commercial Court. A corporate lawyer picks the route — your first step is a free case assessment. See our NCLT and money-recovery guides." },
+      { question: "Can a Ghaziabad lawyer register my company?", answer: "Yes — Ghaziabad corporate lawyers handle Private Limited and LLP incorporation, co-founder and shareholder agreements, and ongoing compliance for the city's large MSME and trading base. See our company-registration and co-founder-agreement guides." },
+      { question: "Which court handles commercial disputes in Ghaziabad?", answer: "Above-value commercial suits go to the Commercial Court at Ghaziabad; company and insolvency matters to the NCLT; cheque-bounce prosecutions to the Magistrate; and writs and appeals to the Allahabad High Court." },
+      { question: "Is cheque bounce common in Ghaziabad business?", answer: "Very — given the trading and manufacturing base. A lawyer can send the Section 138 statutory notice within the 30-day window and prosecute the complaint. See our cheque-bounce notice guide for the exact timeline." },
+      { question: "What does a corporate lawyer in Ghaziabad charge?", answer: "Incorporation and contracts are often fixed-scope; disputes vary by stage. Fees are set by the advocate and agreed in writing before work begins. Your first step through NyaySevak is a free case assessment." },
+    ],
+    localNotes: [
+      "Ghaziabad's MSME and trading base drives cheque-bounce, commercial-recovery and contract work.",
+      "For company debtors, IBC pressure via the NCLT is often the strongest recovery lever; clear debts go via summary suit.",
+    ],
+  },
+  "faridabad__civil-law": {
+    lead:
+      "Faridabad's industrial and residential mix produces frequent civil disputes — money recovery, property and contract matters. NyaySevak connects you with verified Faridabad civil lawyers who file recovery and summary suits at the Faridabad and Ballabgarh courts and injunctions and appeals before the Punjab & Haryana High Court.",
+    landscape: [
+      "Civil litigation in Faridabad runs through the District & Civil Courts at Sector 12 and the Ballabgarh sub-divisional courts, with the Commercial Court handling above-value commercial disputes and civil judges deciding recovery, title, partition and injunction suits. The manufacturing base makes money-recovery and contract disputes especially common.",
+      "Document-backed debts are pursued through the fast-track summary suit under Order XXXVII, while commercial disputes of specified value go to the Commercial Court after mandatory pre-institution mediation. Writs and civil appeals go to the Punjab & Haryana High Court.",
+    ],
+    courtsForThisMatter: [
+      "Faridabad District & Civil Courts (Sector 12) — recovery, title, injunction suits",
+      "Ballabgarh Sub-Divisional Courts",
+      "Commercial Court, Faridabad — above-value commercial disputes",
+      "Punjab & Haryana High Court — writs, civil appeals, revisions",
+    ],
+    caseTypes: [
+      { title: "Money Recovery Suits", desc: "Recovery via legal notice, Order XXXVII summary suit, or the Commercial Court." },
+      { title: "Property & Title Disputes", desc: "Title, possession and partition suits at the Faridabad civil courts." },
+      { title: "Contract Disputes", desc: "Breach, specific performance and damages claims for businesses and individuals." },
+      { title: "Injunctions", desc: "Temporary and permanent injunctions to protect property and rights." },
+      { title: "Consumer & Recovery", desc: "Consumer complaints and connected recovery through the appropriate forum." },
+    ],
+    faqs: [
+      { question: "How do I recover money owed to me in Faridabad?", answer: "Start with a legal demand notice, then choose the route: an Order XXXVII summary suit for clear document-backed debts, or the Commercial Court for commercial disputes of specified value (after pre-institution mediation). A Faridabad civil lawyer can pick the fastest route — your first step is a free case assessment. See our money-recovery guide." },
+      { question: "Which court handles civil disputes in Faridabad?", answer: "Recovery, title, partition and injunction suits are filed at the Faridabad civil courts (Sector 12) and Ballabgarh courts; above-value commercial disputes go to the Commercial Court; and writs and appeals to the Punjab & Haryana High Court." },
+      { question: "What is a summary suit and can I use it in Faridabad?", answer: "A summary suit under Order XXXVII CPC is a fast-track recovery for debts on written contracts, cheques or acknowledgements — the defendant needs the court's leave to defend. It is available at the Faridabad courts and is the quickest route for clear debts." },
+      { question: "Can a Faridabad lawyer help with a property or title dispute?", answer: "Yes. Title, possession and partition suits are decided by the Faridabad civil courts. A lawyer can pursue or defend the suit and seek injunctions to protect possession while it is pending." },
+      { question: "What does a civil lawyer in Faridabad charge?", answer: "It depends on the suit and stage; fees are set by the advocate and agreed in writing before work begins. Your first step through NyaySevak is a free case assessment with no obligation." },
+    ],
+    localNotes: [
+      "Faridabad's manufacturing base makes money-recovery and contract disputes the highest-volume civil matters.",
+      "Clear debts are fastest via an Order XXXVII summary suit; commercial disputes go to the Commercial Court after mediation.",
+    ],
+  },
+  "faridabad__corporate-business": {
+    lead:
+      "Faridabad, Haryana's largest industrial city, generates constant corporate and commercial needs — from incorporation and contracts to cheque-bounce and commercial recovery. NyaySevak connects you with verified Faridabad corporate lawyers for company setup, agreements, and recovery before the Faridabad Commercial Court, the NCLT and the Punjab & Haryana High Court.",
+    landscape: [
+      "As a manufacturing and auto-component hub, Faridabad's business disputes centre on commercial recovery, cheque dishonour, supplier and labour matters, and company setup. Above-value commercial suits go to the Commercial Court; company and insolvency matters to the NCLT; labour disputes to the Industrial Tribunal; and cheque-bounce prosecutions to the Magistrate.",
+      "Well-drafted contracts and timely recovery protect margins in this industrial market, and a specialist can choose between a summary suit, a Section 138 complaint, or IBC pressure depending on the debtor and amount.",
+    ],
+    courtsForThisMatter: [
+      "Commercial Court, Faridabad — above-value commercial suits",
+      "NCLT (Chandigarh/Delhi bench) — company petitions & insolvency (IBC)",
+      "Magistrate Courts, Faridabad — cheque bounce (S.138)",
+      "Labour Court / Industrial Tribunal & Punjab & Haryana High Court",
+    ],
+    caseTypes: [
+      { title: "Company Incorporation & Contracts", desc: "Pvt Ltd/LLP setup, co-founder and vendor agreements, drafting and review." },
+      { title: "Cheque Bounce (S.138)", desc: "Statutory notice and prosecution for dishonoured cheques — common in this industrial city." },
+      { title: "Commercial Recovery", desc: "Money recovery via summary suit, Commercial Court, or IBC pressure." },
+      { title: "NCLT / Insolvency", desc: "Company petitions, IBC proceedings and oppression-mismanagement." },
+      { title: "Labour & Employment", desc: "Industrial disputes, employment agreements and compliance for factories." },
+    ],
+    faqs: [
+      { question: "How do I recover business dues in Faridabad?", answer: "For a company debtor owing ₹1 crore or more an IBC petition is powerful leverage; for a bounced cheque a Section 138 complaint; and for clear debts an Order XXXVII summary suit or the Commercial Court. A corporate lawyer picks the route — your first step is a free case assessment. See our NCLT and money-recovery guides." },
+      { question: "Can a Faridabad lawyer register my company?", answer: "Yes — Faridabad corporate lawyers handle Private Limited and LLP incorporation, co-founder and shareholder agreements, and ongoing compliance for the city's industrial and trading base. See our company-registration and co-founder-agreement guides." },
+      { question: "Which court handles commercial disputes in Faridabad?", answer: "Above-value commercial suits go to the Commercial Court at Faridabad; company and insolvency matters to the NCLT; labour disputes to the Industrial Tribunal; cheque-bounce prosecutions to the Magistrate; and writs and appeals to the Punjab & Haryana High Court." },
+      { question: "Are labour and industrial disputes common in Faridabad?", answer: "Yes — given Faridabad's large manufacturing base, industrial and employment disputes are frequent. A lawyer can advise employers on compliance and disputes, or pursue an employee's dues through the appropriate forum." },
+      { question: "What does a corporate lawyer in Faridabad charge?", answer: "Incorporation and contracts are often fixed-scope; disputes vary by stage. Fees are set by the advocate and agreed in writing before work begins. Your first step through NyaySevak is a free case assessment." },
+    ],
+    localNotes: [
+      "Faridabad's manufacturing base drives cheque-bounce, commercial-recovery, contract and industrial-dispute work.",
+      "For company debtors, IBC pressure via the NCLT is often the strongest recovery lever; labour disputes go to the Industrial Tribunal.",
+    ],
+  },
 };
