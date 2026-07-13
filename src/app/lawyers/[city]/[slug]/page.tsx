@@ -7,7 +7,7 @@ import {
   ArrowRight, Landmark, MapPin, Scale, Building2, BadgeCheck,
   Phone, Clock, ChevronRight, CheckCircle2, HelpCircle, Briefcase,
 } from "lucide-react";
-import { cities, cityPracticeSlugs, cityPracticeLabels, type CityPracticeSlug } from "@/data/cities";
+import { cities, cityPracticeSlugs, cityPracticeLabels, cityMatterParentPractice, type CityPracticeSlug } from "@/data/cities";
 import { cityPracticeContent } from "@/data/city-practice-content";
 import { SITE_URL } from "@/lib/site";
 import RelatedLinks from "@/components/RelatedLinks";
@@ -15,9 +15,12 @@ import { relatedGroupsForCityPractice } from "@/data/internal-links";
 import { notFound } from "next/navigation";
 
 export function generateStaticParams() {
-  // 8 cities × 5 practice areas = 40 static pages
+  // Content-gated: only combos with a hand-written cityPracticeContent entry
+  // are built (Week 18 — matter slugs exist for a subset of cities only).
   return cities.flatMap((city) =>
-    cityPracticeSlugs.map((slug) => ({ city: city.slug, slug }))
+    cityPracticeSlugs
+      .filter((slug) => Boolean(cityPracticeContent[`${city.slug}__${slug}`]))
+      .map((slug) => ({ city: city.slug, slug }))
   );
 }
 
@@ -148,13 +151,20 @@ export default async function CityPracticePage(
   ];
   const augmentedFaqs = [...content.faqs, ...generatedFaqs];
 
-  // Other practice areas for this city (for cross-linking)
+  // Other practice areas for this city (for cross-linking).
+  // Week 18: content-gated so matter slugs never link to combos that 404.
   const otherPractices = cityPracticeSlugs
-    .filter((p) => p !== practice)
+    .filter((p) => p !== practice && Boolean(cityPracticeContent[`${citySlug}__${p}`]))
     .map((p) => ({ slug: p, label: cityPracticeLabels[p] }));
 
-  // Sister cities for same practice (for cross-linking)
-  const sisterCities = cities.filter((c) => c.slug !== citySlug).slice(0, 7);
+  // Sister cities for same practice (for cross-linking) — gated the same way.
+  const sisterCities = cities
+    .filter((c) => c.slug !== citySlug && Boolean(cityPracticeContent[`${c.slug}__${practice}`]))
+    .slice(0, 7);
+
+  // Week 18: matter slugs (cheque-bounce, RERA, company-registration) are not
+  // practice-area slugs — anchor them to their parent pillar page instead.
+  const pillarSlug = cityMatterParentPractice[practice] ?? practice;
 
   // ── Schema.org structured data ──
   const breadcrumbJsonLd = {
@@ -612,33 +622,37 @@ export default async function CityPracticePage(
         </div>
       </section>
 
-      {/* ===== Cross-links: same practice in other cities ===== */}
+      {/* ===== Cross-links: same practice in other cities (only combos that exist) ===== */}
       <section className="bg-dark-deep py-14 sm:py-16 border-t border-white/[0.04]">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <p className="mb-2 text-[10px] sm:text-xs uppercase tracking-[0.3em] text-gold/60 font-semibold">By City</p>
-          <h2 className="text-xl sm:text-2xl font-heading font-bold text-white mb-8">
-            {label.title}s in Other Top Indian Cities
-          </h2>
-          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-            {sisterCities.map((c) => (
-              <Link
-                key={c.slug}
-                href={`/lawyers/${c.slug}/${practice}`}
-                className="glass-card !rounded-xl p-4 group hover:border-gold/30 transition-all duration-300"
-              >
-                <div className="flex items-center gap-2">
-                  <MapPin className="h-4 w-4 text-gold/60" strokeWidth={1.5} />
-                  <p className="text-sm font-semibold text-white group-hover:text-gold transition-colors">
-                    {label.title} in {c.name}
-                  </p>
-                </div>
-                <p className="mt-1 text-xs text-gray-500 pl-6">{c.state}</p>
-              </Link>
-            ))}
-          </div>
-          <div className="mt-8 text-center">
-            <Link href={`/practice-areas/${practice}`} className="inline-flex items-center gap-2 text-sm text-gold hover:text-gold-light transition-colors">
-              View {label.title} practice area
+          {sisterCities.length > 0 && (
+            <>
+              <p className="mb-2 text-[10px] sm:text-xs uppercase tracking-[0.3em] text-gold/60 font-semibold">By City</p>
+              <h2 className="text-xl sm:text-2xl font-heading font-bold text-white mb-8">
+                {label.title}s in Other Top Indian Cities
+              </h2>
+              <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+                {sisterCities.map((c) => (
+                  <Link
+                    key={c.slug}
+                    href={`/lawyers/${c.slug}/${practice}`}
+                    className="glass-card !rounded-xl p-4 group hover:border-gold/30 transition-all duration-300"
+                  >
+                    <div className="flex items-center gap-2">
+                      <MapPin className="h-4 w-4 text-gold/60" strokeWidth={1.5} />
+                      <p className="text-sm font-semibold text-white group-hover:text-gold transition-colors">
+                        {label.title} in {c.name}
+                      </p>
+                    </div>
+                    <p className="mt-1 text-xs text-gray-500 pl-6">{c.state}</p>
+                  </Link>
+                ))}
+              </div>
+            </>
+          )}
+          <div className={`${sisterCities.length > 0 ? "mt-8" : ""} text-center`}>
+            <Link href={`/practice-areas/${pillarSlug}`} className="inline-flex items-center gap-2 text-sm text-gold hover:text-gold-light transition-colors">
+              View the {label.short} practice area
               <ArrowRight className="h-4 w-4" strokeWidth={2} />
             </Link>
           </div>

@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContactButton from "@/components/ContactButton";
 import { ArrowRight, MapPin, Landmark, ChevronRight } from "lucide-react";
 import { cities, cityPracticeSlugs, cityPracticeLabels } from "@/data/cities";
+import { cityPracticeContent } from "@/data/city-practice-content";
 import { SITE_URL } from "@/lib/site";
 
 const url = `${SITE_URL}/lawyers`;
@@ -136,7 +137,7 @@ export default function LawyersIndexPage() {
                   {c.name}, {c.state}
                 </h3>
                 <div className="flex flex-wrap gap-2">
-                  {cityPracticeSlugs.map((p) => {
+                  {cityPracticeSlugs.filter((p) => cityPracticeContent[`${c.slug}__${p}`]).map((p) => {
                     const label = cityPracticeLabels[p];
                     return (
                       <Link

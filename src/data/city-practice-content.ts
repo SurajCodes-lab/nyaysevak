@@ -3,6 +3,7 @@
 // NOT templated doorway duplicates (which Google penalises).
 
 import type { CityPracticeSlug } from "./cities";
+import { cityMatterContent } from "./city-matter-content";
 
 export interface CityPracticeFAQ {
   question: string;
@@ -3037,4 +3038,9 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       "For company debtors, IBC pressure via the NCLT is often the strongest recovery lever; labour disputes go to the Industrial Tribunal.",
     ],
   },
+
+  // Week 18: high-buyer-intent city × matter pages (Delhi cheque-bounce,
+  // Noida RERA, Gurgaon company-registration) live in city-matter-content.ts
+  // to keep this file from growing further; same shape, same gating.
+  ...cityMatterContent,
 };

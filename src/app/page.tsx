@@ -12,6 +12,7 @@ import Contact from "@/components/Contact";
 import Link from "next/link";
 import ContactButton from "@/components/ContactButton";
 import { cities, cityPracticeSlugs, cityPracticeLabels } from "@/data/cities";
+import { cityPracticeContent } from "@/data/city-practice-content";
 
 export const metadata: Metadata = {
   title: "NyaySevak - Best Lawyer Consultation & Legal Services in India | Expert Case Assessment",
@@ -415,7 +416,7 @@ export default function Home() {
                     </span>
                   </p>
                   <div className="flex flex-wrap gap-2">
-                    {cityPracticeSlugs.map((p) => {
+                    {cityPracticeSlugs.filter((p) => cityPracticeContent[`${c.slug}__${p}`]).map((p) => {
                       const label = cityPracticeLabels[p];
                       return (
                         <Link

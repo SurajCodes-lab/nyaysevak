@@ -1,6 +1,8 @@
 // Week 5: Contextual cross-linking from each practice area to relevant services and
 // (where applicable) the matching city × practice-area landing pages.
 
+import type { CityPracticeSlug } from "./cities";
+
 // Map each practice-area slug → 3 relevant service slugs (for mid-body "Recommended Services" block)
 export const practiceAreaToServices: Record<string, { slug: string; desc: string }[]> = {
   // Criminal / specialist criminal
@@ -99,8 +101,9 @@ export const practiceAreaToServices: Record<string, { slug: string; desc: string
 };
 
 // Map each practice-area slug to its matching city-practice slug (where applicable)
-// Only 5 of our practice-area slugs have direct city pages; others map to `null`.
-export const practiceAreaToCityPracticeSlug: Record<string, "criminal-law" | "civil-law" | "family-matrimonial" | "property-real-estate" | "corporate-business" | null> = {
+// Others map to `null`. Link targets are content-gated downstream, so a mapping
+// here only produces links for cities that actually have the page.
+export const practiceAreaToCityPracticeSlug: Record<string, CityPracticeSlug | null> = {
   "criminal-law": "criminal-law",
   "civil-law": "civil-law",
   "family-matrimonial": "family-matrimonial",
@@ -110,8 +113,8 @@ export const practiceAreaToCityPracticeSlug: Record<string, "criminal-law" | "ci
   "cbi-cases": "criminal-law",
   "ed-cases": "criminal-law",
   "ndps-cases": "criminal-law",
-  // Default: no direct city mapping
-  "banking-finance": null,
+  // Week 18: banking-finance pillar → the Delhi cheque-bounce matter page
+  "banking-finance": "cheque-bounce-recovery",
   "tax-law": null,
   "intellectual-property": null,
   "arbitration-adr": null,

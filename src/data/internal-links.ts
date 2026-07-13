@@ -16,7 +16,7 @@ import { practiceAreas } from "./practice-areas";
 import { allServices } from "./services";
 import { articles } from "./insights";
 import { glossaryTerms } from "./legal-glossary";
-import { cities, cityPracticeSlugs, cityPracticeLabels, type CityPracticeSlug } from "./cities";
+import { cities, cityPracticeSlugs, cityPracticeLabels, cityMatterParentPractice, type CityPracticeSlug } from "./cities";
 import { cityPracticeContent } from "./city-practice-content";
 import { practiceAreaToServices, practiceAreaToCityPracticeSlug } from "./practice-area-cross-links";
 import { highCourts, tribunalGroups, districtCourts } from "./courts";
@@ -163,7 +163,9 @@ export function relatedGroupsForCity(citySlug: string): RelatedLinksGroup[] {
     : null;
 
   return groups(
-    group(`Lawyers in ${c.name} by specialisation`, verticals, 5),
+    // Week 18: raised 5 → 8 so gated matter pages (cheque-bounce, RERA,
+    // company-registration) receive a mesh inlink from their city hub.
+    group(`Lawyers in ${c.name} by specialisation`, verticals, 8),
     group("Lawyers in other cities", nearby, 6),
     group("Local courts", [court], 3)
   );
@@ -179,12 +181,15 @@ export function relatedGroupsForCityPractice(citySlug: string, cps: CityPractice
   const sameInOtherCities = citiesForCityPractice(cps)
     .filter((cs) => cs !== citySlug)
     .map((cs) => cityPracticeItem(cs, cps));
-  const pillar = practiceItem(cps); // city-practice slugs ARE practice-area slugs
+  // Week 18: matter slugs (cheque-bounce, RERA, company-registration) are not
+  // practice-area slugs — resolve to the parent pillar for practice/guide/term links.
+  const pillarSlug = cityMatterParentPractice[cps] ?? cps;
+  const pillar = practiceItem(pillarSlug);
   const guides = articles
-    .filter((a) => a.relatedPracticeAreaSlugs.includes(cps))
+    .filter((a) => a.relatedPracticeAreaSlugs.includes(pillarSlug))
     .map((a) => articleItem(a.slug));
   const gloss = glossaryTerms
-    .filter((t) => t.relatedPracticeAreaSlugs.includes(cps))
+    .filter((t) => t.relatedPracticeAreaSlugs.includes(pillarSlug))
     .map((t) => termItem(t.slug));
 
   return groups(

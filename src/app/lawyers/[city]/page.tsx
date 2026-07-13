@@ -86,16 +86,19 @@ export default async function CityHubPage({ params }: { params: Promise<{ city: 
     mainEntity: {
       "@type": "ItemList",
       itemListOrder: "https://schema.org/ItemListOrderAscending",
-      numberOfItems: cityPracticeSlugs.length,
-      itemListElement: cityPracticeSlugs.map((p, i) => {
-        const label = cityPracticeLabels[p];
-        return {
-          "@type": "ListItem",
-          position: i + 1,
-          name: `${label.title}s in ${city.name}`,
-          url: `${url}/${p}`,
-        };
-      }),
+      // Content-gated (Week 18): schema must only list combos that resolve 200.
+      numberOfItems: cityPracticeSlugs.filter((p) => cityPracticeContent[`${citySlug}__${p}`]).length,
+      itemListElement: cityPracticeSlugs
+        .filter((p) => cityPracticeContent[`${citySlug}__${p}`])
+        .map((p, i) => {
+          const label = cityPracticeLabels[p];
+          return {
+            "@type": "ListItem",
+            position: i + 1,
+            name: `${label.title}s in ${city.name}`,
+            url: `${url}/${p}`,
+          };
+        }),
     },
   };
 

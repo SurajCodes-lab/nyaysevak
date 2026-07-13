@@ -322,18 +322,34 @@ export const cities: City[] = [
   },
 ];
 
-// The 5 practice-area slugs we target per city.
-// These are the five highest-volume Indian-legal-search verticals.
-// Each corresponds to an existing /practice-areas/[slug] page, so anchor-links flow correctly.
+// The practice-area slugs we target per city.
+// The first five are the highest-volume Indian-legal-search verticals; each
+// corresponds to an existing /practice-areas/[slug] page, so anchor-links flow correctly.
+// Week 18 (NCR proposal Phase 2): high-buyer-intent MATTER slugs — these are NOT
+// practice-area slugs; use cityMatterParentPractice to reach their pillar page.
+// Content-gated: a combo only renders (and is only linked) when cityPracticeContent
+// has a hand-written entry for it — so adding a slug here never creates thin pages.
 export const cityPracticeSlugs = [
   "criminal-law",
   "civil-law",
   "family-matrimonial",
   "property-real-estate",
   "corporate-business",
+  // Week 18 high-value matter slugs (content exists only where hand-written)
+  "cheque-bounce-recovery",
+  "rera-complaint",
+  "company-registration",
 ] as const;
 
 export type CityPracticeSlug = (typeof cityPracticeSlugs)[number];
+
+// Matter slug → parent practice-area slug (for pillar links, related guides,
+// and the /practice-areas/[slug] anchor on city×matter pages).
+export const cityMatterParentPractice: Partial<Record<CityPracticeSlug, string>> = {
+  "cheque-bounce-recovery": "banking-finance",
+  "rera-complaint": "property-real-estate",
+  "company-registration": "corporate-business",
+};
 
 // Human-friendly labels used in H1/metadata (kept in one place to avoid drift).
 export const cityPracticeLabels: Record<CityPracticeSlug, {
@@ -371,6 +387,26 @@ export const cityPracticeLabels: Record<CityPracticeSlug, {
     title: "Corporate Lawyer",
     long: "Corporate & Business Lawyer",
     keyword: "corporate lawyer",
+  },
+  // Week 18 matter labels — phrased so every template slot reads naturally:
+  // "Best {title} in {city}", "{long} in {city}", "{keyword} near me".
+  "cheque-bounce-recovery": {
+    short: "Cheque Bounce",
+    title: "Cheque Bounce Lawyer",
+    long: "Cheque Bounce & Recovery Lawyer",
+    keyword: "cheque bounce lawyer",
+  },
+  "rera-complaint": {
+    short: "RERA / Builder-Buyer",
+    title: "RERA Lawyer",
+    long: "RERA & Builder-Buyer Dispute Lawyer",
+    keyword: "RERA lawyer",
+  },
+  "company-registration": {
+    short: "Company Registration",
+    title: "Company Registration Lawyer",
+    long: "Company Registration & Startup Lawyer",
+    keyword: "company registration lawyer",
   },
 };
 

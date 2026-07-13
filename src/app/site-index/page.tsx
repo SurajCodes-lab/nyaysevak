@@ -6,6 +6,7 @@ import { practiceAreas } from "@/data/practice-areas";
 import { highCourts, tribunalGroups, districtCourts } from "@/data/courts";
 import { platformFeatures } from "@/data/features";
 import { cities, cityPracticeSlugs, cityPracticeLabels } from "@/data/cities";
+import { cityPracticeContent } from "@/data/city-practice-content";
 import { articles } from "@/data/insights";
 import { authors } from "@/data/authors";
 import { glossaryTerms } from "@/data/legal-glossary";
@@ -96,14 +97,18 @@ export default function SiteIndexPage() {
   };
 
   // City × practice — the largest under-linked cluster. Flattened into one group.
-  const cityPracticeGroup: Group = {
-    title: `City × Practice Pages (${cities.length * cityPracticeSlugs.length})`,
-    links: cities.flatMap((c) =>
-      cityPracticeSlugs.map((p) => ({
+  // Content-gated (Week 18): matter slugs exist only for the cities we hand-wrote.
+  const cityPracticeLinks = cities.flatMap((c) =>
+    cityPracticeSlugs
+      .filter((p) => Boolean(cityPracticeContent[`${c.slug}__${p}`]))
+      .map((p) => ({
         label: `${cityPracticeLabels[p].title} in ${c.name}`,
         href: `/lawyers/${c.slug}/${p}`,
       }))
-    ),
+  );
+  const cityPracticeGroup: Group = {
+    title: `City × Practice Pages (${cityPracticeLinks.length})`,
+    links: cityPracticeLinks,
   };
 
   const insightsGroup: Group = {
