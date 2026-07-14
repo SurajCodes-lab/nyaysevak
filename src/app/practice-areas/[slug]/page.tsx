@@ -11,6 +11,7 @@ import { practiceAreaContent } from "@/data/practice-area-content";
 import { practiceAreaCategories } from "@/data/practice-area-categories";
 import { allServices } from "@/data/services";
 import { cities, cityPracticeLabels, type CityPracticeSlug } from "@/data/cities";
+import { cityPracticeContent } from "@/data/city-practice-content";
 import {
   practiceAreaToServices,
   practiceAreaToCityPracticeSlug,
@@ -724,7 +725,12 @@ export default async function PracticeAreaPage({ params }: { params: Promise<{ s
               ) : null;
             })()}
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-              {cities.map((c) => {
+              {/* Week 19: content-gated — matter slugs (e.g. banking-finance →
+                  cheque-bounce-recovery) exist only for hand-written cities;
+                  ungated, this grid emitted 404 links for every other city. */}
+              {cities
+                .filter((c) => Boolean(cityPracticeContent[`${c.slug}__${practiceAreaToCityPracticeSlug[slug]!}`]))
+                .map((c) => {
                 const cityPractice = practiceAreaToCityPracticeSlug[slug]!;
                 // Week 15: anchor text uses the city × practice head keyword
                 // ("Best Property Lawyer in Mumbai") instead of the long practice

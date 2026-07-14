@@ -339,6 +339,10 @@ export const cityPracticeSlugs = [
   "cheque-bounce-recovery",
   "rera-complaint",
   "company-registration",
+  // Week 19 tranche — remaining focus matters for the NCR trio
+  "anticipatory-bail",
+  "mutual-consent-divorce",
+  "nclt-ibc",
 ] as const;
 
 export type CityPracticeSlug = (typeof cityPracticeSlugs)[number];
@@ -349,6 +353,9 @@ export const cityMatterParentPractice: Partial<Record<CityPracticeSlug, string>>
   "cheque-bounce-recovery": "banking-finance",
   "rera-complaint": "property-real-estate",
   "company-registration": "corporate-business",
+  "anticipatory-bail": "criminal-law",
+  "mutual-consent-divorce": "family-matrimonial",
+  "nclt-ibc": "corporate-business",
 };
 
 // Human-friendly labels used in H1/metadata (kept in one place to avoid drift).
@@ -407,6 +414,25 @@ export const cityPracticeLabels: Record<CityPracticeSlug, {
     title: "Company Registration Lawyer",
     long: "Company Registration & Startup Lawyer",
     keyword: "company registration lawyer",
+  },
+  // Week 19 matter labels
+  "anticipatory-bail": {
+    short: "Anticipatory Bail",
+    title: "Anticipatory Bail Lawyer",
+    long: "Anticipatory & Pre-Arrest Bail Lawyer",
+    keyword: "anticipatory bail lawyer",
+  },
+  "mutual-consent-divorce": {
+    short: "Mutual Consent Divorce",
+    title: "Mutual Consent Divorce Lawyer",
+    long: "Mutual Consent Divorce Lawyer",
+    keyword: "mutual consent divorce lawyer",
+  },
+  "nclt-ibc": {
+    short: "NCLT / Insolvency",
+    title: "NCLT Lawyer",
+    long: "NCLT & Insolvency (IBC) Lawyer",
+    keyword: "NCLT lawyer",
   },
 };
 

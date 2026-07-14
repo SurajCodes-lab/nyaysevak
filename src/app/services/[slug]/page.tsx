@@ -231,14 +231,23 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
   const otherServices = allServices.filter((s) => s.slug !== slug && s.category === service.category).slice(0, 3);
   const ServiceIcon = lucideIconMap[service.lucideIcon];
 
+  // Week 18: merge data-driven extraFaqs (services.ts) into the template FAQs —
+  // rendered on-page AND emitted in the FAQPage JSON-LD below.
+  const faqs = [
+    ...content.faqs,
+    ...(service.extraFaqs ?? []).map((f) => ({ q: f.question, a: f.answer })),
+  ];
+
   const tocItems: TocItem[] = [
     { id: "overview", label: "Overview" },
+    ...(service.whatsIncluded ? [{ id: "whats-included", label: "What's Included" }] : []),
     { id: "benefits", label: "Key Benefits" },
     { id: "process", label: "How It Works" },
     { id: "why-nyaysevak", label: "Why NyaySevak" },
+    ...(service.whoItsFor ? [{ id: "who-its-for", label: "Who It's For" }] : []),
     { id: "practice-areas", label: "Practice Areas" },
     { id: "cities", label: "Available in Cities" },
-    ...(content.faqs.length > 0 ? [{ id: "faqs", label: "FAQs" }] : []),
+    ...(faqs.length > 0 ? [{ id: "faqs", label: "FAQs" }] : []),
     { id: "consultation", label: "Get Free Assessment" },
   ];
 
@@ -285,10 +294,10 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
     },
   };
 
-  const faqJsonLd = content.faqs.length > 0 ? {
+  const faqJsonLd = faqs.length > 0 ? {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: content.faqs.map((faq) => ({
+    mainEntity: faqs.map((faq) => ({
       "@type": "Question",
       name: faq.q,
       acceptedAnswer: { "@type": "Answer", text: faq.a },
@@ -397,6 +406,29 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
         </div>
       </section>
 
+      {/* ===== Week 18: What's Included — Dark (gated on data) ===== */}
+      {service.whatsIncluded && (
+        <section id="whats-included" className="bg-dark py-16 sm:py-20 lg:py-24 relative overflow-hidden">
+          <div className="glow-pulse pointer-events-none absolute top-[15%] left-[-5%] w-[400px] h-[400px] rounded-full bg-[radial-gradient(circle,rgba(201,168,76,0.05)_0%,transparent_60%)]" />
+          <div className="relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-10 sm:mb-14">
+              <p className="text-[10px] sm:text-xs uppercase tracking-[0.3em] text-gold/60 font-semibold mb-2">Scope of Service</p>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-white heading-glow">
+                What&apos;s Included in {service.title}
+              </h2>
+            </div>
+            <div className="grid gap-4 sm:gap-5 sm:grid-cols-2">
+              {service.whatsIncluded.map((item) => (
+                <div key={item} className="glass-card p-5 sm:p-6 flex items-start gap-3">
+                  <CheckCircle2 className="h-5 w-5 text-gold shrink-0 mt-0.5" strokeWidth={1.5} />
+                  <span className="text-sm text-gray-300 leading-relaxed">{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* ===== Benefits — Dark ===== */}
       <section id="benefits" className="bg-dark-deep py-16 sm:py-20 lg:py-24 relative overflow-hidden dark-section-depth">
         <div className="glow-pulse pointer-events-none absolute bottom-[10%] left-[5%] w-[400px] h-[400px] rounded-full bg-[radial-gradient(circle,rgba(201,168,76,0.06)_0%,transparent_55%)]" />
@@ -427,21 +459,44 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
             <p className="text-[10px] sm:text-xs uppercase tracking-[0.3em] text-gold-dark/60 font-semibold mb-2">Step by Step</p>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-gray-900 heading-glow-cream">How It Works</h2>
           </div>
-          <div className="grid gap-5 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {content.process.map((step, i) => (
-              <div key={i} className="glass-cream p-5 sm:p-6 relative">
-                <span className="absolute top-3 right-4 text-[60px] font-heading font-bold text-gold/[0.05] leading-none select-none pointer-events-none">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <div className="flex items-start gap-4 relative z-10">
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl icon-box-cream text-sm font-bold text-gold-dark">
-                    {i + 1}
+          {/* Week 18: richer numbered steps (title + description) when the
+              service data provides them; generic string steps otherwise. */}
+          {service.process ? (
+            <div className="grid gap-5 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {service.process.map((step, i) => (
+                <div key={step.step} className="glass-cream p-5 sm:p-6 relative">
+                  <span className="absolute top-3 right-4 text-[60px] font-heading font-bold text-gold/[0.05] leading-none select-none pointer-events-none">
+                    {String(i + 1).padStart(2, "0")}
                   </span>
-                  <p className="text-sm text-gray-600 pt-2 leading-relaxed">{step}</p>
+                  <div className="flex items-start gap-4 relative z-10">
+                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl icon-box-cream text-sm font-bold text-gold-dark">
+                      {i + 1}
+                    </span>
+                    <div className="pt-1.5">
+                      <h3 className="text-sm sm:text-base font-semibold text-gray-900 mb-1.5">{step.step}</h3>
+                      <p className="text-sm text-gray-600 leading-relaxed">{step.desc}</p>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          ) : (
+            <div className="grid gap-5 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {content.process.map((step, i) => (
+                <div key={i} className="glass-cream p-5 sm:p-6 relative">
+                  <span className="absolute top-3 right-4 text-[60px] font-heading font-bold text-gold/[0.05] leading-none select-none pointer-events-none">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <div className="flex items-start gap-4 relative z-10">
+                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl icon-box-cream text-sm font-bold text-gold-dark">
+                      {i + 1}
+                    </span>
+                    <p className="text-sm text-gray-600 pt-2 leading-relaxed">{step}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 
@@ -471,6 +526,28 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
           </div>
         </div>
       </section>
+
+      {/* ===== Week 18: Who This Service Is For — Cream (gated on data) ===== */}
+      {service.whoItsFor && (
+        <section id="who-its-for" className="bg-cream cream-pattern py-16 sm:py-20 lg:py-24">
+          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-10 sm:mb-14">
+              <p className="text-[10px] sm:text-xs uppercase tracking-[0.3em] text-gold-dark/60 font-semibold mb-2">Right Fit</p>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-gray-900 heading-glow-cream">
+                Who This Service Is For
+              </h2>
+            </div>
+            <div className="grid gap-3 sm:gap-4 sm:grid-cols-2">
+              {service.whoItsFor.map((item) => (
+                <div key={item} className="flex items-start gap-3 glass-cream p-4 sm:p-5">
+                  <Users className="h-5 w-5 text-gold-dark shrink-0 mt-0.5" strokeWidth={1.5} />
+                  <span className="text-sm text-gray-700 leading-relaxed">{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* ===== Week 5: Practice areas where this service applies ===== */}
       <section id="practice-areas" className="bg-dark py-14 sm:py-16 relative overflow-hidden">
@@ -528,7 +605,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
       </section>
 
       {/* ===== FAQs — Dark Glassmorphism Cards ===== */}
-      {content.faqs.length > 0 && (
+      {faqs.length > 0 && (
         <section id="faqs" className="bg-dark py-16 sm:py-20 lg:py-24 relative overflow-hidden">
           <div className="glow-pulse pointer-events-none absolute top-[20%] right-[-10%] w-[400px] h-[400px] rounded-full bg-[radial-gradient(circle,rgba(201,168,76,0.05)_0%,transparent_60%)]" />
           <div className="relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
@@ -537,7 +614,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-white heading-glow">Frequently Asked Questions</h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
-              {content.faqs.map((faq, i) => (
+              {faqs.map((faq, i) => (
                 <div key={i} className="faq-card-dark group">
                   <div className="flex items-start gap-4">
                     <span className="shrink-0 h-8 w-8 rounded-lg bg-gold/[0.08] border border-gold/10 flex items-center justify-center text-xs font-heading font-bold text-gold/60 group-hover:text-gold transition-all duration-300">

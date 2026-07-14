@@ -589,7 +589,7 @@ export const intentLandings: IntentLandingPage[] = [
   {
     slug: "case-assessment",
     quickAnswer:
-      "Yes — you can get free legal advice in India. NyaySevak offers a free case assessment with a Bar-Council-verified lawyer for any matter, by phone, video, or chat, with no obligation to proceed. You describe your issue, get matched with a relevant advocate within 24 hours, and agree any further fees upfront before work begins. Government legal aid is also available via NALSA for eligible persons.",
+      "Looking for free legal advice in India? What serious matters actually need first is a diagnosis — NyaySevak offers a free case assessment with a Bar-Council-verified lawyer for any matter, by phone, video, or chat, with no obligation to proceed. You describe your issue, get matched with a relevant advocate within 24 hours, and leave with a clear next-step plan; any further fees are agreed upfront before work begins. Government legal aid via NALSA is also available for eligible persons.",
     title:
       "Case Assessment in India — Talk to a Verified Lawyer Today",
     metaDescription:
@@ -669,7 +669,7 @@ export const intentLandings: IntentLandingPage[] = [
       {
         question: "How much is the case assessment, and what do I get?",
         answer:
-          "The case assessment is free and comes with no obligation with no hidden charges. The lawyer's time for the first 30-45 minute assessment is charged as free. There is no obligation to proceed with engagement after the consultation.",
+          "The case assessment is free, with no obligation and no hidden charges — the first 30-45 minute session with a verified lawyer costs nothing. You leave with a diagnosis of your matter and a written next-step plan, and there is no obligation to proceed to engagement afterwards.",
       },
       {
         question: "How quickly can I get a case assessment?",
@@ -677,9 +677,9 @@ export const intentLandings: IntentLandingPage[] = [
           "Typical match-and-schedule time is 4 hours for non-urgent matters; 30-60 minutes for urgent matters (impending arrest, court hearing the same day, etc.). We prioritise urgency in matching.",
       },
       {
-        question: "Can I get free legal advice without engaging a lawyer afterwards?",
+        question: "Can I get the free assessment without engaging a lawyer afterwards?",
         answer:
-          "Yes. The consultation is unconditional. The whole point is that you can learn about your matter without committing to engagement. If you decide not to proceed, you owe nothing.",
+          "Yes. The assessment is unconditional — the whole point is that you can understand your matter and your options without committing to engagement. If you decide not to proceed, you owe nothing.",
       },
       {
         question: "What if I need a lawyer who speaks a specific language?",

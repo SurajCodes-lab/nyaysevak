@@ -100,7 +100,7 @@ export default async function GlossaryTermPage({
             question: `Which type of lawyer handles ${name} matters?`,
             answer: `${name} falls under ${related
               .map((p) => p.title)
-              .join(", ")}. NyaySevak matches you with a Bar-Council-verified advocate in the relevant practice area — the first consultation is a nominal free case assessment.`,
+              .join(", ")}. NyaySevak matches you with a Bar-Council-verified advocate in the relevant practice area — your first step is a free case assessment with no obligation.`,
           },
         ]
       : []),
@@ -175,6 +175,24 @@ export default async function GlossaryTermPage({
               <div className="rounded-xl border border-white/[0.06] bg-white/[0.015] p-5 mb-6">
                 <p className="text-[10px] uppercase tracking-[0.2em] text-gold/60 mb-1">Statutory reference</p>
                 <p className="text-sm text-white font-medium">{term.statutoryReference}</p>
+              </div>
+            )}
+
+            {term.inPractice && (
+              <>
+                <h2 className="text-xl sm:text-2xl font-heading font-bold text-white mb-3">
+                  How {name.toLowerCase()} works in practice
+                </h2>
+                <p className="text-sm sm:text-base text-gray-300 leading-[1.8] mb-6">
+                  {term.inPractice}
+                </p>
+              </>
+            )}
+
+            {term.workedExample && (
+              <div className="rounded-xl border border-gold/20 bg-gold/[0.04] p-5 mb-8">
+                <p className="text-[10px] uppercase tracking-[0.2em] text-gold/70 mb-2 font-semibold">Worked example</p>
+                <p className="text-sm text-gray-300 leading-[1.8]">{term.workedExample}</p>
               </div>
             )}
           </div>

@@ -19,12 +19,22 @@ export type GlossaryTerm = {
     | "Evidence & Trial";
   statutoryReference?: string;
   relatedPracticeAreaSlugs: string[];
+  // Week 19 (audit Priority 2 — glossary deepening). Optional, filled for the
+  // highest-intent terms first: a practical-application paragraph and a worked
+  // example lift the page past the ~450-real-word band and give AEO surfaces a
+  // concrete scenario to cite. BCI-safe: dispute amounts OK, lawyer fees never.
+  inPractice?: string;    // "How it applies in practice" — ~100-150 words
+  workedExample?: string; // concrete Indian-fact scenario — ~80-120 words
 };
 
 export const glossaryTerms: GlossaryTerm[] = [
   // ========== Criminal Procedure ==========
   {
     slug: "fir-first-information-report",
+    inPractice:
+      "For a complainant, the FIR is the document everything downstream depends on — dates, named accused, and the specific acts alleged should be complete and accurate at registration, because gaps become defence arguments at trial. If the police refuse to register despite a cognizable offence being disclosed, the escalation ladder is: a written complaint to the Superintendent of Police, then an application to the Magistrate under Section 175(3) BNSS (the old 156(3) CrPC) seeking a direction to register and investigate. For an accused, the FIR fixes the battlefield: a copy is obtainable as of right (and most states publish FIRs online), and the choice between anticipatory bail, a quashing petition, or simply cooperating with the investigation is made by reading exactly what the FIR does and does not allege.",
+    workedExample:
+      "A Noida resident discovers ₹6 lakh siphoned from her bank account through a phishing link. The local police station suggests a 'complaint' instead of an FIR. Citing Lalita Kumari — registration is mandatory where a cognizable offence is disclosed — her lawyer submits a written complaint describing the offences under the BNS and IT Act. When the station still stalls, an application under Section 175(3) BNSS before the Magistrate produces a direction to register. The FIR's precise transaction timeline later lets the cyber cell freeze part of the money trail — detail at registration converted directly into recovery.",
     term: "FIR (First Information Report)",
     shortDefinition:
       "Written record of information relating to a cognizable offence, registered by the police under Section 173 BNSS (formerly Section 154 CrPC). Triggers police investigation and forms the foundation of every criminal prosecution.",
@@ -36,6 +46,10 @@ export const glossaryTerms: GlossaryTerm[] = [
   },
   {
     slug: "anticipatory-bail",
+    inPractice:
+      "The application is filed before the Sessions Court of the district where the FIR is registered, or directly before the High Court — both have concurrent jurisdiction, and convention is to try the Sessions Court first. A well-drafted petition attaches the FIR (or pleads the basis of apprehension where none is traceable) and asks for interim protection on the very first date, which courts frequently grant while the police file a status report. Standard conditions on grant: join the investigation whenever called, do not contact witnesses or tamper with evidence, and do not leave India without the court's permission. Breach of conditions invites cancellation, so compliance is what keeps the protection alive. For offences punishable up to seven years, the Section 35(3) BNSS notice regime (the old Section 41A CrPC) and the Arnesh Kumar safeguards are argued alongside — if arrest is not necessary at all, protection follows more easily.",
+    workedExample:
+      "A Delhi businessman learns that his estranged business partner has filed an FIR alleging cheating and criminal breach of trust over a failed venture. Fearing arrest, he moves the Sessions Court at Saket under Section 482 BNSS within two days. The court grants interim protection on the first hearing and, after the police status report shows the dispute is documented in contracts and ledgers, confirms anticipatory bail with conditions to join the investigation and not leave India. He is questioned twice, never arrested, and the parallel civil settlement eventually leads to the FIR being quashed by the High Court.",
     term: "Anticipatory Bail",
     shortDefinition:
       "Pre-arrest order under Section 482 BNSS (formerly Section 438 CrPC) directing that, in the event of arrest of the applicant on accusation of having committed a non-bailable offence, he or she shall be released on bail.",
@@ -47,6 +61,10 @@ export const glossaryTerms: GlossaryTerm[] = [
   },
   {
     slug: "regular-bail",
+    inPractice:
+      "Regular bail is applied for after arrest, typically first before the Magistrate and then the Sessions Court, with the High Court available if both decline. The court weighs the gravity of the offence, the strength of the prima facie case, the accused's antecedents and roots in the community, flight risk, and the possibility of witness tampering. In practice, the quality of the bail application matters enormously: annexing documents that show the dispute is civil in nature, medical grounds, parity with co-accused already on bail, and the period already spent in custody are the arguments that actually move courts. Bail is almost always conditional — surety bonds, surrender of passport, regular appearance at the police station — and conditions can be relaxed later by application to the same court.",
+    workedExample:
+      "A trader is arrested in a ₹40 lakh cheating case after a supply deal collapses. His first bail application before the Magistrate is rejected. His lawyer then moves the Sessions Court with the complete paper trail — purchase orders, part payments, and correspondence showing an ongoing commercial dispute — and argues parity, since a co-accused was granted bail two weeks earlier. The Sessions Court grants regular bail on a personal bond with one surety, passport deposit, and weekly police-station attendance for two months. Total custody: 19 days — most of it spent waiting for the Sessions listing, which is why the first application's forum and drafting matter.",
     term: "Regular Bail",
     shortDefinition:
       "Bail granted to an accused person already in custody under Section 480 (bailable offences) or Section 483 (non-bailable offences) BNSS. Distinct from anticipatory bail, which is granted before arrest.",
@@ -69,6 +87,10 @@ export const glossaryTerms: GlossaryTerm[] = [
   },
   {
     slug: "quashing-of-fir",
+    inPractice:
+      "A quashing petition is filed only before the High Court, and succeeds on two broad tracks. The first is the Bhajan Lal track: the FIR, read on its face, discloses no offence, is absurd or malicious, or is a civil dispute dressed up as crime — courts quash these to prevent abuse of process. The second, far more common track is settlement: where the parties have genuinely resolved a private dispute (matrimonial FIRs, business cheating cases, cheque matters), the High Court quashes the proceedings because a trial would serve no purpose. Timing is strategic — quashing can be sought at the FIR stage, after charge-sheet, or even during trial — and the petition is usually paired with interim protection from coercive steps while it is pending. Heinous and economic offences against society are quashed far more reluctantly, settlement or not.",
+    workedExample:
+      "Following a mutual consent divorce settlement in Delhi, a wife agrees to close the 498A FIR she had filed during the dispute. Because 498A is non-compoundable, withdrawal alone is not possible — so the husband files a quashing petition under Section 528 BNSS before the Delhi High Court, annexing the settlement deed and the divorce decree, with the wife appearing to confirm the settlement was voluntary. The High Court quashes the FIR, noting the dispute was purely matrimonial and stands fully resolved. The quashing was the final, structural step of the divorce settlement — negotiated and sequenced into the deed from day one.",
     term: "Quashing of FIR",
     shortDefinition:
       "High Court order under Section 528 BNSS (formerly Section 482 CrPC) inherent powers, terminating an FIR or criminal proceeding that discloses no offence, is malicious, time-barred, or has been compounded between parties.",
@@ -124,6 +146,10 @@ export const glossaryTerms: GlossaryTerm[] = [
   },
   {
     slug: "section-138-ni-act",
+    inPractice:
+      "The prosecution lives or dies on three strict windows: the written demand notice must go within 30 days of the bank's return memo, the drawer gets 15 days from receipt to pay, and the complaint must be filed within one month after that period lapses. Jurisdiction follows the payee's bank branch (post-2015), so you file where you deposited the cheque, not where the drawer lives. Two financial levers turn the case into recovery pressure: interim compensation of up to 20% of the cheque amount under Section 143A once the accused pleads not guilty, and a further minimum 20% deposit under Section 148 if a convicted drawer appeals. Because the offence is compoundable, a large share of cases settle at mediation or Lok Adalat on a recorded payment schedule — for most payees, the settlement is the point.",
+    workedExample:
+      "A Ghaziabad packaging supplier holds a ₹12 lakh cheque from a Delhi buyer that returns 'funds insufficient'. Notice goes out on day 12; the buyer neither pays nor replies; the complaint is filed in week seven before the magistrate serving the supplier's Ghaziabad bank branch. After summons, the court awards ₹2.4 lakh interim compensation under Section 143A. Facing personal criminal exposure, the buyer's directors propose settlement at the next National Lok Adalat: ₹12 lakh in four recorded instalments. Total time to first money: about five months — driven by the statutory levers, not the trial.",
     term: "Section 138 NI Act (Cheque Bounce)",
     shortDefinition:
       "Penal provision in the Negotiable Instruments Act 1881 making dishonour of cheque drawn for legally enforceable debt or liability a punishable offence, with maximum imprisonment of 2 years or fine up to twice the cheque amount.",
@@ -194,6 +220,10 @@ export const glossaryTerms: GlossaryTerm[] = [
   // ========== Family Law ==========
   {
     slug: "section-13B-mutual-divorce",
+    inPractice:
+      "The process is two motions before the Family Court built on one comprehensive settlement. The spouses must have lived separately for at least a year; the first motion records the settlement deed — permanent alimony, custody and visitation, return of stridhan, division of joint assets, and closure of pending cases — and the second motion produces the decree. The six-month cooling-off period between motions is waivable after the Supreme Court's Amardeep Singh ruling where separation is long and reconciliation is genuinely dead, which can compress the whole matter to a few weeks. Consent must subsist until the decree — either spouse can withdraw before the second motion — so experienced lawyers sequence payments and case-withdrawals against the two stages so neither side is exposed if the other resiles. NRI spouses routinely appear through video-conference.",
+    workedExample:
+      "A couple married in Delhi and separated for two years agree to end the marriage. The settlement: ₹30 lakh one-time alimony (half at each motion), the wife retains her stridhan, joint custody with defined visitation, and withdrawal of the pending maintenance case at the first motion with the 498A FIR to be quashed after the second. Both file the first motion at the Dwarka Family Court and simultaneously apply for waiver of the cooling-off period, citing the two-year separation and complete settlement. The court grants the waiver; the second motion follows in five weeks; the decree issues, the balance is paid, and the High Court quashes the FIR on the settlement.",
     term: "Section 13B HMA (Mutual-Consent Divorce)",
     shortDefinition:
       "Provision in the Hindu Marriage Act 1955 permitting divorce by mutual consent. Requires one year's separation, two motions six months apart (waivable under Amardeep Singh v. Harveen Kaur, 2017).",
@@ -205,6 +235,10 @@ export const glossaryTerms: GlossaryTerm[] = [
   },
   {
     slug: "section-125-bnss-maintenance",
+    inPractice:
+      "A maintenance petition is filed before the Family Court or Magistrate where the claimant resides, and interim maintenance is the real first battle — courts can and do order monthly payments while the main petition is pending. Since Rajnesh v. Neha (2020), both sides must file a sworn affidavit of assets and liabilities, and maintenance is normally payable from the date of application, not the date of the order — so delay by the paying spouse builds arrears rather than saving money. Quantum turns on the payer's real income and lifestyle (bank statements, ITRs, and visible spending all count), the claimant's own income, and the standard of living during the marriage. Enforcement has teeth: arrears are recoverable through warrants, attachment, and even civil imprisonment for wilful default.",
+    workedExample:
+      "A Gurgaon wife with a young child files under Section 125 BNSS after separation, disclosing her ₹35,000 monthly salary; the husband, a senior manager, declares only ₹60,000. Her lawyer summons his bank statements and Form 16, which show ₹2.4 lakh monthly plus bonuses and an EMI on a second flat. Applying the Rajnesh framework, the Family Court awards ₹45,000 interim maintenance for wife and child from the date of filing — creating eight months of arrears at the first effective hearing. Faced with a warrant for the arrears, the husband proposes a comprehensive settlement that folds maintenance into mutual consent divorce terms.",
     term: "Section 125 BNSS (Maintenance)",
     shortDefinition:
       "Provision (formerly Section 125 CrPC) allowing wife, children, and parents to claim monthly maintenance from a person of sufficient means who has neglected to maintain them. Religion-neutral and procedure-friendly.",
@@ -238,6 +272,10 @@ export const glossaryTerms: GlossaryTerm[] = [
   },
   {
     slug: "498a-ipc-bns-85",
+    inPractice:
+      "In practice the section runs on two tracks at once. For the complainant wife, the FIR is typically filed with supporting detail of specific acts, dates and dowry demands — vague omnibus allegations against the entire extended family are the single most common reason cases collapse. For the accused husband and in-laws, the immediate playbook is anticipatory bail (granted liberally for relatives with peripheral roles), strict reliance on the Arnesh Kumar safeguards — since the offence is punishable up to three years, arrest requires recorded justification and the Section 35(3) BNSS notice regime applies — and, where the allegations are demonstrably a pressure tactic, a quashing petition. Most 498A matters end not in conviction but in a mediated global settlement: the criminal case is quashed on settlement as part of a mutual consent divorce package.",
+    workedExample:
+      "A week after a Delhi husband files for divorce, an FIR under BNS Section 85 names him, his parents, and his married sister in Lucknow. All four obtain anticipatory bail — the sister's counsel showing she visited the couple twice in three years, the court noting the omnibus nature of the allegations. The Family Court refers the couple to mediation, where a comprehensive settlement emerges: mutual consent divorce, ₹25 lakh one-time alimony, return of stridhan. After the second motion and final payment, the Delhi High Court quashes the FIR on the settlement — the standard arc for the large majority of contested 498A matters.",
     term: "Section 498A IPC / Section 85 BNS (Cruelty)",
     shortDefinition:
       "Penal provision criminalising cruelty by husband or his relatives towards a married woman. Cognizable, non-bailable, non-compoundable. Section 85 BNS replaced Section 498A IPC effective 1 July 2024.",
@@ -251,6 +289,10 @@ export const glossaryTerms: GlossaryTerm[] = [
   // ========== Property Law ==========
   {
     slug: "encumbrance-certificate-ec",
+    inPractice:
+      "The EC is the first document a property lawyer pulls in any purchase due diligence — obtained from the Sub-Registrar's office (online in most states) for a fee, ideally covering 13 to 30 years of the property's registered history. Reading it correctly matters more than obtaining it: the EC shows only registered transactions, so an unregistered agreement to sell, an unregistered family arrangement, pending litigation, or unpaid statutory dues will not appear. Practice is therefore to pair the EC with the title-deed chain, revenue records, a litigation search, and — for flats — the society's and authority's dues position. A clean EC is necessary but never sufficient; a loan entry (mortgage) on the EC that has been repaid must still be matched with a registered release deed before you pay.",
+    workedExample:
+      "A Bangalore buyer negotiating a ₹1.6 crore resale flat obtains a 15-year EC online. It shows the seller's purchase in 2014 and a mortgage to a housing-finance company in 2016 — but no release. The seller insists the loan was closed in 2022 and produces a closure letter. The buyer's lawyer holds the deal until the lender executes and registers a release deed, then re-pulls the EC to confirm the entry. The updated EC comes back clean, the sale deed proceeds, and the buyer avoids the classic trap: paying full value for a flat that is still, on the register, security for someone else's loan.",
     term: "Encumbrance Certificate (EC)",
     shortDefinition:
       "Document issued by the Sub-Registrar's office listing every registered transaction (sale, mortgage, lease, gift, court order, attachment) on a property within the requested time period. Foundational for title verification.",
@@ -295,6 +337,10 @@ export const glossaryTerms: GlossaryTerm[] = [
   },
   {
     slug: "rera-real-estate-regulation",
+    inPractice:
+      "For a delayed homebuyer, RERA works in three moves. First, the complaint — e-filed with the state authority (UP RERA's Greater Noida bench for Noida projects, HRERA Gurugram for Gurugram district) with a modest statutory fee, decided mostly on documents. Second, the Section 18 choice: exit the project with a full refund plus prescribed interest on every payment, or stay and claim delay interest month by month — a genuine strategic decision that depends on the project's likelihood of completion. Third, execution, where cases are actually won or lost: an unpaid order becomes a recovery certificate enforced through the district revenue machinery as arrears of land revenue, with attachment of builder assets available. The builder's appeal to the appellate tribunal requires a pre-deposit of the refund ordered — which is why buyer-favourable orders carry real settlement leverage.",
+    workedExample:
+      "A buyer paid ₹85 lakh for a Noida Extension flat promised in 2021 and still unfinished. She files a UP RERA complaint electing refund under Section 18. The authority orders a full refund with prescribed interest — the computation, run payment-by-payment from each instalment date, takes the total past ₹1.2 crore. The builder neither pays nor appeals (the appeal would need a matching pre-deposit), so a recovery certificate issues to the District Magistrate, Gautam Buddh Nagar, who initiates attachment of the builder's unsold inventory. The builder settles: ₹1.05 crore in three tranches — recovered through execution pressure, not the order alone.",
     term: "RERA (Real Estate Regulation)",
     shortDefinition:
       "Statute (Real Estate Regulation and Development Act 2016) creating state-level Real Estate Regulatory Authorities to register builder projects, supervise compliance, and adjudicate buyer complaints with 60-day decision mandate.",
@@ -317,6 +363,10 @@ export const glossaryTerms: GlossaryTerm[] = [
   },
   {
     slug: "partition-suit",
+    inPractice:
+      "A partition suit is filed in the civil court where the property is situated, by any co-owner — and after the 2005 amendment to the Hindu Succession Act, daughters hold coparcenary rights equal to sons, including in properties inherited long before. The suit proceeds in two stages: a preliminary decree declaring each sharer's fractional entitlement, then a final decree physically dividing the property (or ordering sale and distribution where division is impracticable, as with a single flat). The realistic paths to resolution are three: a negotiated family settlement recorded before the court, court-referred mediation, or the full trial. Because possession, rental income and mesne profits accrue while the suit runs, interim arrangements — who occupies, who collects rent — are often fought as hard as the shares themselves.",
+    workedExample:
+      "Three siblings inherit their father's Delhi house; the eldest brother occupies it and refuses to divide. The sister — an equal coparcener post-2005 — files a partition suit, claiming her one-third share plus mesne profits for her excluded years. The court passes a preliminary decree of one-third each; since a single built-up house cannot be split three ways, the parties are referred to mediation, where the occupying brother agrees to buy out both siblings at a valuer-determined price of ₹1.1 crore each, paid in two instalments recorded in the final decree. Time: 3 years — against 8-10 for a fully contested trial to sale.",
     term: "Partition Suit",
     shortDefinition:
       "Civil suit for division of jointly-held property among co-owners or coparceners. Filed under Order XX Rule 18 CPC. Hindu joint family partitions involve Mitakshara coparceners and require all coparceners' joinder.",
@@ -330,6 +380,10 @@ export const glossaryTerms: GlossaryTerm[] = [
   // ========== Corporate Law ==========
   {
     slug: "private-limited-company",
+    inPractice:
+      "Incorporation runs through the MCA's SPICe+ form, processed centrally with stamp duty auto-computed at the state's rate — a clean filing completes in roughly 7–14 days and bundles DIN, PAN, TAN, EPFO/ESIC and optional GST. The decisions that matter are made before filing: entity choice (venture-capital fundraising and ESOPs effectively require a Private Limited over an LLP), a name that clears the trademark and MCA conflict checks, an authorised-capital figure that anticipates the first funding round, and — above all — founders' and shareholders' agreements with vesting and IP assignment signed at incorporation, when they are cheap. The post-incorporation calendar is unforgiving: first auditor within 30 days, share certificates within 60, the INC-20A commencement declaration within 180 (before which the company cannot trade or borrow).",
+    workedExample:
+      "Two founders incorporate a SaaS startup as a Private Limited with a co-working registered office in Gurgaon's Cyber City (operator NOC plus utility bill). On their lawyer's insistence they sign a founders' agreement at incorporation: 4-year vesting with a 1-year cliff, IP assignment of all pre-incorporation code, and a deadlock-resolution clause. Eight months later one founder exits; the cliff and vesting mean he leaves with 12.5% instead of his full 50%, and the assigned IP stays with the company. The seed round closes on schedule — the investor's diligence flags nothing, because the fight that kills most young startups was papered out of existence on day one.",
     term: "Private Limited Company (Pvt Ltd)",
     shortDefinition:
       "Company under Section 2(68) Companies Act 2013 with restricted right to transfer shares, minimum 2 shareholders, maximum 200, minimum 2 directors. Default vehicle for Indian start-ups.",
@@ -352,6 +406,10 @@ export const glossaryTerms: GlossaryTerm[] = [
   },
   {
     slug: "ibc-insolvency-bankruptcy-code",
+    inPractice:
+      "For creditors, the IBC works as much through leverage as liquidation. An operational creditor owed ₹1 crore or more serves a Section 8 demand notice; the debtor has 10 days to pay or show a pre-existing dispute, failing which a Section 9 petition can be filed at the NCLT bench for the debtor's registered-office state. A very large share of these matters settle at or before admission — because admission hands the company to a resolution professional, imposes a moratorium, and freezes the promoters out. Financial creditors file under Section 7 on default; homebuyers qualify as financial creditors subject to the 100-allottee-or-10% class threshold. For debtors, the 10-day reply showing a genuine pre-existing dispute is the single defence that kills a petition at the threshold — and once inside CIRP, timely claim filing with the RP decides how much anyone recovers.",
+    workedExample:
+      "A Gurgaon component manufacturer is owed ₹1.8 crore by an auto-parts buyer that has stalled payment for a year with no dispute ever raised in writing. Its lawyer serves a Section 8 demand notice; the buyer's reply alleges quality issues for the first time — with no prior correspondence to back it. The Section 9 petition is filed at NCLT Chandigarh (the buyer is Haryana-registered). Facing likely admission and loss of the company, the promoters settle at ₹1.55 crore in two tranches before the first effective hearing, and the petition is withdrawn. Time from notice to first payment: four months.",
     term: "IBC (Insolvency and Bankruptcy Code 2016)",
     shortDefinition:
       "Consolidated insolvency and bankruptcy framework for companies, partnerships, and individuals. Corporate Insolvency Resolution Process (CIRP) under Sections 7, 9, 10 administered by NCLT.",
@@ -363,6 +421,10 @@ export const glossaryTerms: GlossaryTerm[] = [
   },
   {
     slug: "shareholders-agreement-sha",
+    inPractice:
+      "An SHA is negotiated at two moments: among founders at incorporation, and with investors at each funding round. The clauses that decide real disputes are predictable — vesting and cliff for founder equity, board composition and reserved matters (what cannot be done without investor consent), anti-dilution protection, transfer restrictions (right of first refusal, tag-along, drag-along), exit rights, and the deadlock mechanism. Two practice points matter in India: the SHA's key terms must also be written into the Articles of Association to bind the company itself reliably, and dispute-resolution clauses should name arbitration with a workable seat, because a bare SHA breach otherwise lands in slow civil courts. When a founder is squeezed out or diluted in breach, the remedies run from arbitration under the SHA to an oppression-and-mismanagement petition at the NCLT.",
+    workedExample:
+      "A three-founder Bangalore startup raises a seed round. The SHA gives the investor a board seat, reserved matters over budgets and ESOP expansion, and gives founders reverse vesting; the same provisions are mirrored into the Articles. A year later, two founders attempt to issue fresh shares to themselves at par, diluting the third from 30% to 9% while he is on medical leave. Because the SHA (and Articles) require unanimous founder consent plus investor sign-off for new issuance, the allotment is void against the Articles; his lawyer's NCLT oppression petition under Sections 241–242 wins interim status quo in three weeks, and the matter settles with the allotment reversed.",
     term: "Shareholders Agreement (SHA)",
     shortDefinition:
       "Private contract among shareholders governing their inter se rights — voting agreements, transfer restrictions, tag-along, drag-along, ROFR/ROFO, reserved matters, board composition, and exit provisions.",
@@ -398,6 +460,10 @@ export const glossaryTerms: GlossaryTerm[] = [
   },
   {
     slug: "specific-performance",
+    inPractice:
+      "Specific performance is the standard remedy when a seller of immovable property backs out — since the 2018 amendment to the Specific Relief Act, it is the rule rather than the discretionary exception, and courts must grant it unless a statutory bar applies. The buyer's case is won on readiness and willingness: pleading and proving that they were at all times ready to pay and perform, backed by bank statements, loan sanction letters, and written demands to complete the sale. Limitation is three years. The suit is filed where the property is situated, almost always with an interim injunction restraining the seller from creating third-party rights — and a notice of lis pendens so any purchaser during the suit takes subject to the outcome. Damages remain the fallback where performance has become impossible.",
+    workedExample:
+      "A Pune buyer signs an agreement to purchase a flat for ₹90 lakh, pays ₹20 lakh earnest, and obtains a loan sanction for the balance. As prices rise, the seller stops responding and negotiates with another buyer at ₹1.1 crore. The buyer's lawyer sends a completion notice, then sues for specific performance with an urgent injunction against third-party sale — granted in the first fortnight. At trial, the earnest receipt, loan sanction and notices prove continuous readiness and willingness. The court decrees specific performance at the contract price; the seller executes the sale deed through the court's machinery when he refuses to sign voluntarily.",
     term: "Specific Performance",
     shortDefinition:
       "Equitable remedy under the Specific Relief Act 1963 compelling actual performance of a contract rather than damages. Post-2018 amendment, specific performance is the rule rather than the exception.",
