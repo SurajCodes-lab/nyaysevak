@@ -163,9 +163,10 @@ export function relatedGroupsForCity(citySlug: string): RelatedLinksGroup[] {
     : null;
 
   return groups(
-    // Week 18: raised 5 → 8 so gated matter pages (cheque-bounce, RERA,
-    // company-registration) receive a mesh inlink from their city hub.
-    group(`Lawyers in ${c.name} by specialisation`, verticals, 8),
+    // Week 18: raised 5 → 8 so gated matter pages receive a mesh inlink from
+    // their city hub. Week 19: 8 → 11 — the NCR trio now carries 5 verticals
+    // + 6 matter pages each; a cap of 8 would orphan three matter pages per hub.
+    group(`Lawyers in ${c.name} by specialisation`, verticals, 11),
     group("Lawyers in other cities", nearby, 6),
     group("Local courts", [court], 3)
   );
