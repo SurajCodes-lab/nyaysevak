@@ -70,6 +70,36 @@ function citiesForCityPractice(cps: CityPracticeSlug): string[] {
   return cities.filter((c) => cityPracticeContent[`${c.slug}__${cps}`]).map((c) => c.slug);
 }
 
+// Week 21 (ranking push): inverse of cityMatterParentPractice — parent
+// practice-area slug → its matter slugs. Fully derived, so a new matter slug
+// wired in cities.ts automatically starts receiving links from its pillar,
+// its guides, and its glossary terms with zero extra mapping.
+const mattersForPractice = new Map<string, CityPracticeSlug[]>();
+for (const [matter, parent] of Object.entries(cityMatterParentPractice)) {
+  if (!parent) continue;
+  const list = mattersForPractice.get(parent) ?? [];
+  list.push(matter as CityPracticeSlug);
+  mattersForPractice.set(parent, list);
+}
+
+// Content-gated city×matter links for a set of practice-area slugs.
+// Anchors use the proven head-query pattern ("Cheque Bounce Lawyer in Noida").
+function matterItemsForPractices(practiceSlugs: string[]): (RelatedLinkItem | null)[] {
+  const seen = new Set<string>();
+  const items: (RelatedLinkItem | null)[] = [];
+  for (const ps of practiceSlugs) {
+    for (const matter of mattersForPractice.get(ps) ?? []) {
+      for (const citySlug of citiesForCityPractice(matter)) {
+        const key = `${citySlug}__${matter}`;
+        if (seen.has(key)) continue;
+        seen.add(key);
+        items.push(cityPracticeItem(citySlug, matter));
+      }
+    }
+  }
+  return items;
+}
+
 // ──────────────────────────────────────────────────────────────────────────
 // Builders — one per leaf template
 // ──────────────────────────────────────────────────────────────────────────
@@ -85,12 +115,20 @@ export function relatedGroupsForPractice(practiceSlug: string): RelatedLinksGrou
     .map((a) => articleItem(a.slug));
   const cps = practiceAreaToCityPracticeSlug[practiceSlug];
   const byCity = cps ? citiesForCityPractice(cps).map((cs) => cityPracticeItem(cs, cps)) : [];
+  // Week 21: pillar → matter-page links (equity from pos-1–2 pillars into the
+  // new transactional pages; content-gated, derived via cityMatterParentPractice).
+  // Exclude the slug already covered by the byCity group (banking-finance's
+  // vertical mapping IS a matter slug) so the same URL never appears twice.
+  const matterLinks = matterItemsForPractices([practiceSlug]).filter(
+    (i) => !cps || !i?.href.endsWith(`/${cps}`)
+  );
 
   return groups(
     group("Recommended services", services, 3),
     group("Key legal terms", gloss, 6),
     group("In-depth guides", guides, 4),
-    group("Find lawyers by city", byCity, 6)
+    group("Find lawyers by city", byCity, 6),
+    group("Matter-specific lawyers", matterLinks, 8)
   );
 }
 
@@ -124,11 +162,15 @@ export function relatedGroupsForInsight(articleSlug: string): RelatedLinksGroup[
     .filter((o) => o.slug !== articleSlug && o.category === a.category)
     .map((o) => articleItem(o.slug));
   const cityLinks = (a.relatedCitySlugs ?? []).map((cs) => cityItem(cs));
+  // Week 21: guide → matter-page links (an S.138 guide links every live
+  // "Cheque Bounce Lawyer in <city>" page; derived, content-gated).
+  const matterLinks = matterItemsForPractices(a.relatedPracticeAreaSlugs);
 
   return groups(
     group("Related guides", related, 4),
     group("Related practice areas", practices, 4),
     group("Talk to a lawyer", services, 3),
+    group("Hire a lawyer for this matter", matterLinks, 6),
     group("Lawyers near you", cityLinks, 6)
   );
 }
@@ -144,11 +186,15 @@ export function relatedGroupsForGlossary(termSlug: string): RelatedLinksGroup[] 
   const guides = articles
     .filter((a) => a.relatedPracticeAreaSlugs.some((s) => t.relatedPracticeAreaSlugs.includes(s)))
     .map((a) => articleItem(a.slug));
+  // Week 21: glossary → matter-page links (the ranking "anticipatory bail"
+  // definition links every live "Anticipatory Bail Lawyer in <city>" page).
+  const matterLinks = matterItemsForPractices(t.relatedPracticeAreaSlugs);
 
   return groups(
     group("Related terms", sameCat, 6),
     group("Practice areas", practices, 4),
-    group("Guides that use this term", guides, 4)
+    group("Guides that use this term", guides, 4),
+    group("Hire a lawyer for this matter", matterLinks, 5)
   );
 }
 

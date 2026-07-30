@@ -304,9 +304,12 @@ export default async function CityPracticePage(
           <nav className="mb-8 flex flex-wrap items-center gap-2 text-xs sm:text-sm text-gray-500" aria-label="Breadcrumb">
             <Link href="/" className="hover:text-gold transition-colors">Home</Link>
             <ChevronRight className="h-3.5 w-3.5 text-gray-700" />
-            <span className="text-gray-500">Lawyers by City</span>
+            {/* Week 21: breadcrumb crumbs are real links (they were plain text
+                while the BreadcrumbList schema claimed link targets) — gives all
+                85 combo pages a crawlable upward path consistent with schema. */}
+            <Link href="/lawyers" className="text-gray-500 hover:text-gold transition-colors">Lawyers by City</Link>
             <ChevronRight className="h-3.5 w-3.5 text-gray-700" />
-            <span className="text-gray-400">{city.name}</span>
+            <Link href={`/lawyers/${citySlug}`} className="text-gray-400 hover:text-gold transition-colors">{city.name}</Link>
             <ChevronRight className="h-3.5 w-3.5 text-gray-700" />
             <span className="text-gold">{label.title}</span>
           </nav>

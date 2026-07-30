@@ -185,6 +185,10 @@ export const glossaryTerms: GlossaryTerm[] = [
   },
   {
     slug: "interim-injunction",
+    inPractice:
+      "The interim injunction is usually the real battle in property and commercial disputes — whoever holds the interim order holds the ground for the years the suit takes. The application (Order XXXIX Rules 1–2 CPC) is decided on three tests argued together: a prima facie case, balance of convenience, and irreparable injury that damages cannot cure. In urgent matters courts grant ex parte ad-interim relief on the first day, subject to Order XXXIX Rule 3's requirement of immediate notice to the other side. The tactical corollaries matter as much as the tests: an injunction obtained by concealment is vacated with costs; undertakings given to court are enforceable; and breach is punishable under Rule 2A with attachment and even detention. Injunctions against creating third-party rights in disputed property are the bread-and-butter form.",
+    workedExample:
+      "A Gurgaon buyer under an agreement to sell learns the seller is negotiating with a second purchaser at a higher price. Her lawyer files a specific-performance suit the same week with an Order XXXIX application, annexing the agreement, payment receipts and the broker's messages about the rival deal. The court grants ex parte ad-interim protection restraining the seller from alienating or encumbering the flat, notice returnable in two weeks. The rival deal dies — no purchaser will buy litigation — and eighteen months later the seller settles by executing the sale deed. The injunction, obtained in week one, decided the case.",
     term: "Interim Injunction (Order 39)",
     shortDefinition:
       "Temporary restraining order granted under Order XXXIX Rule 1 or 2 CPC during the pendency of a suit, restraining the defendant from disturbing the status quo. Granted on three-fold test: prima facie case, balance of convenience, irreparable injury.",
@@ -207,6 +211,10 @@ export const glossaryTerms: GlossaryTerm[] = [
   },
   {
     slug: "execution-decree",
+    inPractice:
+      "Winning the decree is half the case; execution is the other half, and it is where Indian litigation actually slows down. The decree-holder files an execution petition before the court that passed the decree (or the court where the judgment-debtor's assets sit, after transfer), choosing the mode that fits the debtor: attachment and sale of movable or immovable property, garnishee orders on bank accounts and receivables, arrest and civil detention in genuinely wilful-default cases, or delivery of possession for property decrees. The practical craft is asset intelligence — execution moves at the speed at which you can point the court to identifiable assets. Money decrees carry interest until satisfaction, and a judgment-debtor's objections under Section 47 CPC are the standard delaying tool to anticipate and rebut.",
+    workedExample:
+      "A Delhi firm holds a ₹28 lakh money decree from a commercial suit against a trading company that simply ignores it. Its lawyer files execution with a banker's-book summons that reveals two active accounts, obtains attachment (a garnishee order) on both, and simultaneously seeks attachment of the debtor's delivery van. With its operating accounts frozen mid-season, the debtor appears within three weeks and settles the decree with interest in two instalments — recorded in the execution proceeding so default revives attachment automatically. The asset trail, not the decree, produced the money.",
     term: "Execution of Decree",
     shortDefinition:
       "Procedure under Order XXI CPC for enforcing a decree — by attachment and sale of property, arrest of judgment-debtor (in limited cases), or attachment of bank accounts.",
@@ -238,7 +246,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     inPractice:
       "A maintenance petition is filed before the Family Court or Magistrate where the claimant resides, and interim maintenance is the real first battle — courts can and do order monthly payments while the main petition is pending. Since Rajnesh v. Neha (2020), both sides must file a sworn affidavit of assets and liabilities, and maintenance is normally payable from the date of application, not the date of the order — so delay by the paying spouse builds arrears rather than saving money. Quantum turns on the payer's real income and lifestyle (bank statements, ITRs, and visible spending all count), the claimant's own income, and the standard of living during the marriage. Enforcement has teeth: arrears are recoverable through warrants, attachment, and even civil imprisonment for wilful default.",
     workedExample:
-      "A Gurgaon wife with a young child files under Section 125 BNSS after separation, disclosing her ₹35,000 monthly salary; the husband, a senior manager, declares only ₹60,000. Her lawyer summons his bank statements and Form 16, which show ₹2.4 lakh monthly plus bonuses and an EMI on a second flat. Applying the Rajnesh framework, the Family Court awards ₹45,000 interim maintenance for wife and child from the date of filing — creating eight months of arrears at the first effective hearing. Faced with a warrant for the arrears, the husband proposes a comprehensive settlement that folds maintenance into mutual consent divorce terms.",
+      "A Gurgaon wife with a young child files a maintenance petition (Section 144 BNSS, the provision formerly numbered Section 125 CrPC) after separation, disclosing her ₹35,000 monthly salary; the husband, a senior manager, declares only ₹60,000. Her lawyer summons his bank statements and Form 16, which show ₹2.4 lakh monthly plus bonuses and an EMI on a second flat. Applying the Rajnesh framework, the Family Court awards ₹45,000 interim maintenance for wife and child from the date of filing — creating eight months of arrears at the first effective hearing. Faced with a warrant for the arrears, the husband proposes a comprehensive settlement that folds maintenance into mutual consent divorce terms.",
     term: "Section 125 BNSS (Maintenance)",
     shortDefinition:
       "Provision (formerly Section 125 CrPC) allowing wife, children, and parents to claim monthly maintenance from a person of sufficient means who has neglected to maintain them. Religion-neutral and procedure-friendly.",
@@ -250,6 +258,10 @@ export const glossaryTerms: GlossaryTerm[] = [
   },
   {
     slug: "domestic-violence-act",
+    inPractice:
+      "A DV Act application is filed before the Magistrate (increasingly, Family Courts hear them alongside matrimonial matters) by or on behalf of an aggrieved woman, and its power lies in the interim stage: protection orders, residence orders securing her right to stay in the shared household regardless of whose name owns it, monetary relief covering maintenance and expenses, and interim custody — often granted within weeks. The Act is civil in architecture (breach of a protection order is the criminal offence), applies to live-in relationships in the nature of marriage, and reliefs run alongside — not instead of — Section 125 BNSS maintenance and matrimonial proceedings. For respondents, the defence work is documentary: rebutting the domestic-relationship or violence allegations, and ensuring monetary orders reflect real income on both sides via the Rajnesh affidavit discipline.",
+    workedExample:
+      "After being locked out of her matrimonial flat in Noida, a woman files a DV application through the Protection Officer. Within three weeks the Magistrate passes an interim residence order restoring her to the shared household and monetary relief of ₹22,000 per month against her husband, based on his salary slips summoned from his employer. The orders hold while the couple's divorce negotiation matures; a year later, the DV case is withdrawn as part of a comprehensive mutual consent divorce settlement in which the one-time alimony expressly covers all past and future claims — the standard arc for DV proceedings that begin as protection and end as leverage toward a complete settlement.",
     term: "Domestic Violence Act 2005",
     shortDefinition:
       "Civil-protection statute giving aggrieved women the right to (i) protection orders, (ii) residence orders, (iii) monetary relief, (iv) custody orders, and (v) compensation orders. Enforced by Magistrate court.",
@@ -261,6 +273,10 @@ export const glossaryTerms: GlossaryTerm[] = [
   },
   {
     slug: "child-custody-india",
+    inPractice:
+      "Custody in India is decided on one test — the welfare of the child — which overrides every parental right and every agreement between the parents. Applications run under the Guardians and Wards Act (all communities) or Section 26 HMA within matrimonial proceedings, before the Family Court where the child ordinarily resides. Courts increasingly distinguish custody from guardianship and favour arrangements that keep both parents present: physical custody to one parent with defined visitation, or genuinely shared arrangements for older children. Children of discernible maturity are interviewed in chambers. The practice reality: interim custody and visitation orders set the pattern the final order usually follows, so the first sixty days matter disproportionately — and a parent who unilaterally cuts off access damages their own case more than the other side's.",
+    workedExample:
+      "In a Delhi mutual consent divorce, parents of a nine-year-old negotiate custody instead of fighting it: physical custody with the mother, alternate weekends and half of every vacation with the father, joint decisions on school and medical matters, video calls on fixed evenings, and a no-relocation-abroad clause without written consent or court leave. The schedule is written into the settlement deed with pickup times and holiday splits, recorded at the first motion, and made part of the decree. Three years later, when a job offer tempts the mother toward Singapore, the clause forces a renegotiation instead of an abduction petition — precision in the deed prevented the second round of litigation.",
     term: "Child Custody (India)",
     shortDefinition:
       "Custody disputes in India are decided primarily under the Guardians and Wards Act 1890 (and personal-law overlay). Welfare of the child is the paramount consideration; sole-physical-custody-with-visitation is the most common outcome.",
@@ -315,6 +331,10 @@ export const glossaryTerms: GlossaryTerm[] = [
   },
   {
     slug: "lis-pendens",
+    inPractice:
+      "Section 52 of the Transfer of Property Act makes any transfer of disputed property during a pending suit subject to the suit's outcome — the buyer steps into the seller's shoes and is bound by the decree, without needing to be a party. For a litigant, the working consequence is protective: a defendant cannot defeat your property suit by selling to a third party mid-way. For a buyer, it is a due-diligence command: search for pending litigation before paying, because 'I didn't know about the case' is no defence. In states like Maharashtra, a notice of lis pendens can be registered so it surfaces in the property's search; elsewhere, litigation searches on e-Courts and a careful reading of the plaint schedule do the work. Lawyers pursuing property suits routinely pair the doctrine with an express injunction against alienation — the doctrine binds a purchaser, but the injunction deters the sale itself.",
+    workedExample:
+      "Mid-way through a partition suit over a Ghaziabad plot, one brother sells 'his' share of the undivided property to an investor at a discount. The investor registers the sale deed and starts fencing the plot. The other siblings do nothing special — they simply implead the investor and proceed. When the final decree allots that portion of the plot to a sister, the investor's purchase stands subject to the decree under Section 52: he acquired only what his seller was finally held to own, which is a different, smaller parcel. His remedy is a refund fight against his own seller. The discount, it turns out, was the price of the pending suit he never searched for.",
     term: "Lis Pendens",
     shortDefinition:
       "Doctrine under Section 52 TPA — during the pendency of a suit involving immovable property, no party can transfer the property to defeat the rights of any other party in the suit. Buyer takes property burdened with judgment.",
@@ -326,6 +346,10 @@ export const glossaryTerms: GlossaryTerm[] = [
   },
   {
     slug: "registered-sale-deed",
+    inPractice:
+      "The registered sale deed is the document that actually transfers ownership of immovable property worth ₹100 or more — an agreement to sell, a GPA, or possession letters do not, whatever market practice suggests. Execution runs through the Sub-Registrar of the property's district: stamp duty at the state's rate (with concessions for women buyers in several states, including Delhi and UP), registration fee, both parties' and witnesses' presence for biometrics and photographs, and presentation within four months of execution. The lawyer's work happens before that appointment: verifying the seller's title chain and a clean encumbrance certificate, matching the property schedule to the actual survey/khasra numbers, confirming no registered mortgage survives without a release deed, and drafting covenants — title warranty, indemnity, possession and dues cutoffs — that protect the buyer for decades. After registration, mutation in revenue/municipal records completes the practical transfer.",
+    workedExample:
+      "A Noida buyer pays ₹1.1 crore for a resale flat. Her lawyer insists the deal close only by registered sale deed — not the seller's proposed 'GPA + agreement' shortcut that would save stamp duty. Pre-registration checks surface a surviving mortgage entry from 2019; the lender's registered release deed is obtained first. At the Sub-Registrar's office the deed is executed with the authority transfer-memorandum requirements met, duty paid at UP's female-buyer concession rate in her name, and possession and maintenance-dues cutoffs recorded in the deed. Mutation follows in six weeks. Two years later, when a cousin of the seller claims an interest, the registered deed plus the release trail ends the threat at the notice stage.",
     term: "Registered Sale Deed",
     shortDefinition:
       "Conveyance of immovable property valued above Rs 100 must be by registered sale deed under Section 17 of the Registration Act 1908. Unregistered sale deeds do not pass title and are inadmissible as evidence of title.",
@@ -436,6 +460,10 @@ export const glossaryTerms: GlossaryTerm[] = [
   },
   {
     slug: "esop-employee-stock-options",
+    inPractice:
+      "An ESOP is built in three legal layers: the scheme (board plus shareholders' special resolution under Section 62(1)(b) of the Companies Act and Rule 12 — with pool size, eligibility and vesting architecture), the individual grant letters (options, strike price, vesting schedule, exercise window, exit and clawback terms), and the cap-table discipline that keeps the pool honest through funding rounds. Standard Indian startup practice is four-year vesting with a one-year cliff. Two legal points bite repeatedly: promoters and most directors holding over 10% cannot receive ESOPs (except in DPIIT-recognised startups within their exemption window), and tax hits twice — as salary (perquisite) on exercise and as capital gains on sale — which is why exercise windows and departure terms are the most negotiated clauses. For employees, the enforceable rights are in the scheme and grant letter, not the offer-letter one-liner.",
+    workedExample:
+      "A Gurgaon SaaS startup grants a senior engineer options over 0.4% of the company: four-year vesting, one-year cliff, strike at face value, 90-day post-exit exercise window. She leaves after 30 months with 50% + 6/48 vested. Because the scheme allows the board to extend the exercise window, her lawyer negotiates an extension to two years — sparing her the perquisite tax hit of exercising illiquid shares immediately. At the Series B secondary a year later, she exercises and sells vested shares in the same event, paying perquisite tax on the exercise-date fair value and capital gains on the uplift. The clause that mattered was not the number of options — it was the exercise window her grant letter almost didn't have.",
     term: "ESOP (Employee Stock Option Plan)",
     shortDefinition:
       "Equity-incentive scheme allowing employees the right to purchase company shares at a predetermined price after a vesting period. Governed by Companies Act 2013 (Section 62(1)(b)) and SEBI ESOP regulations for listed companies.",
@@ -488,6 +516,10 @@ export const glossaryTerms: GlossaryTerm[] = [
   // ========== Constitutional Law ==========
   {
     slug: "writ-petition-article-226",
+    inPractice:
+      "Article 226 is the citizen's direct line to the High Court against the State — and 'State' reaches government departments, municipal and development authorities, tax officers, universities, and statutory bodies like RERA authorities or the Noida and Ghaziabad development authorities. The petition asks for one of the classic writs (certiorari to quash an order, mandamus to compel a duty, prohibition, quo warranto, habeas corpus) and is the remedy of choice where an authority acts without jurisdiction, violates natural justice, or simply refuses to perform a statutory duty. Its practical limits are equally important: the High Court ordinarily will not entertain a writ where an effective alternative remedy (a statutory appeal, a tribunal) exists, will not decide heavily disputed facts, and expects clean hands and prompt filing. Interim relief — a stay of the impugned action — is often the petition's real objective, sought on day one.",
+    workedExample:
+      "A fully paid Ghaziabad flat owner cannot register her flat because the GDA withholds completion permissions over the builder's unpaid dues — a fight she is not party to. RERA orders against the builder have not moved the authority itself. Her buyers' association files an Article 226 petition before the Allahabad High Court against the GDA, seeking mandamus to process registrations of blameless buyers and interim directions. On the first hearing the court seeks the GDA's response and restrains coercive steps; three months later it directs a dues-settlement mechanism between GDA and the builder that de-links buyers' registries. The writ reached the authority the consumer and RERA forums could not.",
     term: "Writ Petition (Article 226)",
     shortDefinition:
       "Petition before a High Court invoking constitutional jurisdiction to issue writs (mandamus, certiorari, prohibition, quo warranto, habeas corpus) against the State or its instrumentalities for enforcement of fundamental and other legal rights.",
@@ -701,6 +733,10 @@ export const glossaryTerms: GlossaryTerm[] = [
   },
   {
     slug: "consumer-protection-act-2019",
+    inPractice:
+      "The 2019 Act rebuilt consumer litigation around value-based tiers: District Commissions hear claims up to ₹50 lakh, State Commissions up to ₹2 crore, and the NCDRC above that (jurisdiction is measured by the consideration paid, not the compensation claimed — a 2021 recalibration that moved most cases down the ladder). Complaints are e-filed on e-Daakhil, can be filed where the complainant resides or works (not just where the seller sits), and limitation is two years from the cause of action. The Act's practical additions matter: product liability claims against manufacturers and sellers, recognition of unfair contracts, mediation cells attached to commissions, and the Central Consumer Protection Authority acting against unfair trade practices at scale. Execution has teeth — non-compliance with commission orders is punishable with imprisonment. For homebuyers, the consumer route runs concurrent with RERA; you elect the forum, you cannot recover twice.",
+    workedExample:
+      "A Delhi buyer pays ₹18 lakh for a modular kitchen and premium appliances; installation is botched, the chimney is a discontinued model, and the vendor stops responding. She e-files on e-Daakhil before the Delhi District Commission (consideration ₹18 lakh — comfortably within the ₹50 lakh tier), claiming refund of the defective components, rectification costs and compensation, with photographs, invoices and the WhatsApp trail annexed. At the commission's mediation cell the vendor offers partial rectification; she declines, and the commission later orders replacement of the chimney, ₹2.4 lakh toward rectification and ₹50,000 compensation with interest on default. When payment stalls, an execution application citing the Act's penal enforcement produces a settlement cheque within a month.",
     term: "Consumer Protection Act 2019",
     shortDefinition:
       "Statute creating three-tier consumer-redressal forums: District Consumer Disputes Redressal Commission (claims up to Rs 1 cr), State Commission (Rs 1 cr to Rs 10 cr), National Commission (above Rs 10 cr).",
@@ -723,6 +759,10 @@ export const glossaryTerms: GlossaryTerm[] = [
   },
   {
     slug: "company-strike-off",
+    inPractice:
+      "Strike-off is the exit route for a company that never took off or has stopped operating — and a compliance trap for directors who ignore it. Voluntary strike-off under Section 248(2) runs on Form STK-2: the company must have no operations for two financial years (or never commenced business), extinguish liabilities, close bank accounts, and file with a members' special resolution, indemnity bonds and a statement of accounts no older than 30 days. The ROC's own power under Section 248(1) is the involuntary version — routinely triggered by companies that skip annual filings or never file INC-20A — and it arrives with director consequences: potential disqualification under Section 164(2) after three years of non-filing, which blocks directorships across all companies. A struck-off company can be restored by the NCLT under Section 252 within specified windows, but restoration is litigation, not paperwork. The clean rule: operate compliantly, or close deliberately — never abandon.",
+    workedExample:
+      "Two Noida founders shut their venture in 2024 but simply stop filing instead of closing the company. In 2026 the ROC issues a Section 248(1) notice and strikes the company off; both founders discover the sting when a new startup's incorporation stalls — their DINs are flagged for disqualification exposure from the defunct company's filing defaults. Fixing it costs a year: a Section 252 restoration application before the NCLT, back-filing every overdue annual return with additional fees, and only then a proper voluntary strike-off via STK-2 with indemnity bonds and a bank-closure certificate. A ₹20,000 orderly closure in 2024 became a six-figure, twelve-month detour — the standard price of abandoning instead of dissolving.",
     term: "Company Strike-Off (Section 248 Companies Act 2013)",
     shortDefinition:
       "Closure procedure for inactive companies. ROC can strike off a company that has not commenced business within one year of incorporation, or has not filed financials/annual returns for two preceding years.",
