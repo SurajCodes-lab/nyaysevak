@@ -12,18 +12,21 @@ import EngagementTracker from "@/components/EngagementTracker";
 import ExitIntentModal from "@/components/ExitIntentModal";
 import { ContactModalProvider } from "@/context/ContactModalContext";
 
+// Week 21 CWV: weights trimmed to those actually used — no font-black (900)
+// or font-light (300) class appears anywhere in src, so those files were
+// downloaded on every page for nothing. Two fewer font files per visit.
 const playfair = Playfair_Display({
   variable: "--font-heading",
   subsets: ["latin"],
   display: "swap",
-  weight: ["400", "500", "600", "700", "800", "900"],
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 const inter = Inter({
   variable: "--font-body",
   subsets: ["latin"],
   display: "swap",
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const viewport: Viewport = {

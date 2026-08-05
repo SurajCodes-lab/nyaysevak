@@ -9,11 +9,14 @@ export default function GoogleAnalytics() {
 
   return (
     <>
+      {/* Week 21 CWV: lazyOnload keeps gtag.js off the critical path — it
+          loads after the page is fully interactive. Pageview + event capture
+          is unaffected; only script-download timing changes. */}
       <Script
         src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-        strategy="afterInteractive"
+        strategy="lazyOnload"
       />
-      <Script id="google-analytics" strategy="afterInteractive">
+      <Script id="google-analytics" strategy="lazyOnload">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}

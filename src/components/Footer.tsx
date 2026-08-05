@@ -40,6 +40,20 @@ const quickLinks = [
   { label: "Site Index", href: "/site-index" },
 ];
 
+// Week 21: sitewide footer links into the flagship decision guides — every
+// page on the site now passes authority into the guides that feed the matter
+// clusters. Kept to 8 to avoid diluting the footer link graph.
+const popularGuides = [
+  { label: "Anticipatory Bail vs Regular Bail", href: "/insights/anticipatory-bail-vs-regular-bail-india-2026" },
+  { label: "Mutual Consent vs Contested Divorce", href: "/insights/mutual-consent-vs-contested-divorce-india-2026" },
+  { label: "RERA vs Consumer Court", href: "/insights/rera-vs-consumer-court-homebuyer-india-2026" },
+  { label: "Cheque Bounce vs Money Recovery Suit", href: "/insights/cheque-bounce-case-vs-money-recovery-suit-india-2026" },
+  { label: "NCLT (IBC) vs Commercial Court", href: "/insights/nclt-ibc-vs-commercial-court-recovery-india-2026" },
+  { label: "Arbitration vs Court Litigation", href: "/insights/arbitration-vs-court-litigation-india-2026" },
+  { label: "Trademark Objection Reply", href: "/insights/trademark-objection-reply-india-2026" },
+  { label: "Lawyer Fees in India", href: "/insights/lawyer-fees-india-benchmarks-2026" },
+];
+
 // Internal links into the local landing-page cluster + high-intent pages that
 // were previously reachable only via the sitemap.
 const popularSearches = [
@@ -240,6 +254,29 @@ export default function Footer() {
               ))}
               <Link href="/lawyers" className="inline-flex items-center gap-1.5 text-sm text-gold/70 font-semibold hover:text-gold transition-colors duration-200">
                 All Cities
+                <ArrowRight className="h-3 w-3" strokeWidth={2} />
+              </Link>
+            </div>
+          </div>
+
+          {/* Week 21: Popular Legal Guides — sitewide authority into the
+              flagship decision guides */}
+          <div className="mt-8">
+            <h4 className="mb-4 text-[10px] sm:text-xs font-bold uppercase tracking-[0.25em] text-gold/70">
+              Popular Legal Guides
+            </h4>
+            <div className="flex flex-wrap gap-x-5 gap-y-2.5">
+              {popularGuides.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="text-sm text-gray-400 transition-colors duration-200 hover:text-white link-underline"
+                >
+                  {item.label}
+                </Link>
+              ))}
+              <Link href="/insights" className="inline-flex items-center gap-1.5 text-sm text-gold/70 font-semibold hover:text-gold transition-colors duration-200">
+                All Guides
                 <ArrowRight className="h-3 w-3" strokeWidth={2} />
               </Link>
             </div>

@@ -403,6 +403,42 @@ export default function Home() {
             </div>
           </div>
 
+          {/* Week 21: Decision guides — homepage authority into the flagship
+              comparison guides that feed every matter cluster. The homepage is
+              the site's highest-authority URL; these keyword-first anchors are
+              the strongest single inlink each guide receives. */}
+          <div className="mt-10">
+            <h3 className="text-xs uppercase tracking-[0.2em] text-gold/60 font-semibold mb-4">Popular Legal Guides</h3>
+            <div className="flex flex-wrap gap-2">
+              {[
+                { label: "Anticipatory Bail vs Regular Bail", slug: "anticipatory-bail-vs-regular-bail-india-2026" },
+                { label: "Mutual Consent vs Contested Divorce", slug: "mutual-consent-vs-contested-divorce-india-2026" },
+                { label: "RERA vs Consumer Court", slug: "rera-vs-consumer-court-homebuyer-india-2026" },
+                { label: "Cheque Bounce Case vs Money Recovery Suit", slug: "cheque-bounce-case-vs-money-recovery-suit-india-2026" },
+                { label: "NCLT (IBC) vs Commercial Court", slug: "nclt-ibc-vs-commercial-court-recovery-india-2026" },
+                { label: "Arbitration vs Court Litigation", slug: "arbitration-vs-court-litigation-india-2026" },
+                { label: "Trademark Objection Reply", slug: "trademark-objection-reply-india-2026" },
+                { label: "Anticipatory Bail Procedure (S.482 BNSS)", slug: "anticipatory-bail-india-section-482-bnss-guide-2026" },
+                { label: "Cheque Bounce Procedure (S.138 NI Act)", slug: "section-138-ni-act-cheque-bounce-procedure-2026" },
+                { label: "Lawyer Fees in India", slug: "lawyer-fees-india-benchmarks-2026" },
+              ].map((item) => (
+                <Link
+                  key={item.slug}
+                  href={`/insights/${item.slug}`}
+                  className="rounded-full border border-white/[0.06] bg-white/[0.02] px-3 py-1.5 text-[11px] text-gray-500 hover:text-gold hover:border-gold/30 transition-colors"
+                >
+                  {item.label}
+                </Link>
+              ))}
+              <Link
+                href="/insights"
+                className="rounded-full border border-gold/20 bg-white/[0.02] px-3 py-1.5 text-[11px] text-gold/70 hover:text-gold hover:border-gold/40 transition-colors"
+              >
+                All 37 Legal Guides →
+              </Link>
+            </div>
+          </div>
+
           {/* Week 5: Lawyers by City — geographic internal linking (40 city × practice links) */}
           <div className="mt-12 pt-10 border-t border-white/[0.04]">
             <h3 className="text-xs uppercase tracking-[0.2em] text-gold/60 font-semibold mb-6">Find Lawyers by City</h3>

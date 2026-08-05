@@ -41,10 +41,12 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: "ChatGPT-User", allow: "/", disallow }, // on-demand fetch during a chat session
       { userAgent: "OAI-SearchBot", allow: "/", disallow }, // SearchGPT index crawler
 
-      // Anthropic — two known user-agents.
+      // Anthropic — full current user-agent family.
       { userAgent: "ClaudeBot", allow: "/", disallow },
       { userAgent: "anthropic-ai", allow: "/", disallow },
       { userAgent: "Claude-Web", allow: "/", disallow },
+      { userAgent: "Claude-User", allow: "/", disallow }, // on-demand fetch during a chat session
+      { userAgent: "Claude-SearchBot", allow: "/", disallow }, // Claude search index crawler
 
       // Google's separate AI-training opt-in token (distinct from Googlebot).
       // Allowing Google-Extended permits the page to be used in Gemini /
@@ -85,6 +87,19 @@ export default function robots(): MetadataRoute.Robots {
 
       // Allen Institute's AI2.
       { userAgent: "AI2Bot", allow: "/", disallow },
+
+      // Week 21 additions — engines users explicitly ask about.
+      // xAI / Grok: both user-agent forms that appear in the wild are named,
+      // so whichever token xAI's crawler presents, the allow rule matches.
+      { userAgent: "GrokBot", allow: "/", disallow },
+      { userAgent: "xAI-Bot", allow: "/", disallow },
+      // Google Vertex AI Search grounding crawler (separate from Googlebot
+      // and Google-Extended; powers "grounded" Gemini/Vertex answers).
+      { userAgent: "Google-CloudVertexBot", allow: "/", disallow },
+      // DuckDuckGo's AI-answers fetcher (DuckAssist).
+      { userAgent: "DuckAssistBot", allow: "/", disallow },
+      // DeepSeek's crawler.
+      { userAgent: "DeepSeekBot", allow: "/", disallow },
     ],
     sitemap: [`${SITE_URL}/sitemap.xml`],
     host: SITE_URL,

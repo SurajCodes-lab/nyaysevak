@@ -76,6 +76,10 @@ export const glossaryTerms: GlossaryTerm[] = [
   },
   {
     slug: "default-bail-statutory-bail",
+    inPractice:
+      "The clock runs from the first remand date, not the date of arrest — diarise it on day one, because the entire right turns on arithmetic. The limit is 60 days where the offence is punishable up to ten years and 90 days where punishable with ten years or more, life, or death; special statutes extend it (180 days under the NDPS Act, extendable further under UAPA). The right is indefeasible but perishable: the application must be filed, and bail furnished, before the charge-sheet lands. Prosecutions sometimes race a bare or incomplete charge-sheet to court on day 59 or 89 precisely to defeat the right — whether such a filing is a genuine final report can itself be contested. Courts cannot refuse default bail on the gravity of the offence; the only questions are the calendar and the bond.",
+    workedExample:
+      "A Gurgaon man is remanded in a cheating and forgery case punishable up to seven years — the 60-day limit applies. His lawyer notes the remand date and files the Section 187(3) BNSS application on day 61, before any charge-sheet has been filed, with the accused ready to furnish bail. The court verifies the dates from the remand record and releases him the same week — no argument on merits, no status report. Had the family waited three more days, the charge-sheet filed on day 63 would have extinguished the right entirely, and bail would have had to be fought on merits under Section 483.",
     term: "Default Bail (Statutory Bail)",
     shortDefinition:
       "Statutory right to bail under Section 187(3) BNSS when the prosecution fails to file the charge-sheet within 60 or 90 days of the accused's first remand to custody.",
@@ -102,6 +106,10 @@ export const glossaryTerms: GlossaryTerm[] = [
   },
   {
     slug: "cognizable-offence",
+    inPractice:
+      "The classification is the first thing to check on either side of a criminal matter, because it decides who can do what without a Magistrate. For a complainant, a cognizable offence means the police must register an FIR and can investigate immediately; a non-cognizable one means an NCR entry and an application under Section 174 BNSS for Magistrate permission before any real investigation. For a person accused, cognizable means arrest without warrant is legally possible — though for offences punishable up to seven years, the Section 35(3) BNSS notice regime and the Arnesh Kumar safeguards make a notice of appearance, not arrest, the lawful default. In practice, complaints are often drafted (and FIRs registered) with at least one clearly cognizable section precisely to anchor police jurisdiction — reading which sections are cognizable tells you how much coercive power is actually in play.",
+    workedExample:
+      "A long-running parking dispute between Noida neighbours produces daily verbal abuse — the police correctly record only an NCR, and nothing moves without the Magistrate. One evening a shove leaves the complainant with a fractured wrist: voluntarily causing grievous hurt is cognizable, so an FIR is registered that night and investigation begins without any court order. Because the offence is punishable under seven years, the accused receives a Section 35(3) BNSS notice to join the investigation rather than being arrested — both halves of the case turning entirely on the cognizable/non-cognizable line and the arrest safeguards layered over it.",
     term: "Cognizable Offence",
     shortDefinition:
       "Offence in which a police officer may arrest without warrant and may register an FIR and investigate without magistrate's sanction. Listed in the First Schedule to the BNSS.",
@@ -113,6 +121,10 @@ export const glossaryTerms: GlossaryTerm[] = [
   },
   {
     slug: "charge-sheet",
+    inPractice:
+      "The charge-sheet is the hinge of the criminal case: its filing date decides default bail, its contents fix the prosecution's outer case, and its annexures are what the accused is entitled to receive in full before trial. The defence reads it less for what it says than for what it is missing — an essential ingredient not supported by any document or statement is the foundation of a discharge argument at the framing of charge. Supplementary charge-sheets after further investigation are common, so the first filing is not always the last word. For complainants, the stage matters too: if the police file a closure report instead, the complainant has the right to file a protest petition and be heard before the Magistrate accepts it.",
+    workedExample:
+      "In a Delhi cheating case arising from a failed distribution deal, the charge-sheet arrives with the complainant's ledger, the agreement, and bank statements — every annexure showing supplies made, part-payments received, and a dispute over quality. At the framing of charge the defence argues discharge: the prosecution's own documents show a commercial relationship that soured, with nothing indicating dishonest intention when the deal was struck — the settled dividing line between breach of contract and cheating. The court discharges the accused. Nothing outside the charge-sheet was needed; the case was won by reading the prosecution's own file against its legal theory.",
     term: "Charge-sheet (Final Report)",
     shortDefinition:
       "Police report under Section 193 BNSS (formerly Section 173 CrPC) filed at the conclusion of investigation, stating the facts found, the persons accused, and the sections under which prosecution is recommended.",
@@ -163,6 +175,10 @@ export const glossaryTerms: GlossaryTerm[] = [
   // ========== Civil Procedure ==========
   {
     slug: "plaint",
+    inPractice:
+      "The plaint is where civil suits are won or lost years before evidence begins. Three drafting decisions carry most of the weight: pleading the cause of action with dates (because the defendant's first attack will be an Order VII Rule 11 rejection application arguing no cause of action or time-bar on the plaint's own showing), valuation (which fixes court fees and the forum), and the relief clause (courts do not grant what was never asked). Facts that answer an obvious limitation problem — a written acknowledgment, a part-payment — must be pleaded in the plaint itself, not saved for arguments. In commercial suits, add the Commercial Courts Act layer: a Statement of Truth verification and, unless urgent interim relief is sought, completed pre-institution mediation under Section 12A.",
+    workedExample:
+      "A Noida components supplier sues for ₹18 lakh in unpaid invoices, the oldest raised just over three years before filing. The buyer promptly moves Order VII Rule 11: time-barred on the face of the plaint. But the plaint had pleaded, with dates and the bank entry, a ₹2 lakh part-payment made against the running account fourteen months before filing — extending limitation under Section 19 of the Limitation Act. The rejection application is dismissed and the suit proceeds. Two sentences of careful pleading, supported by one annexure, were the difference between a live claim and a dead one.",
     term: "Plaint",
     shortDefinition:
       "Pleading filed by the plaintiff to commence a civil suit under Order VII of the Code of Civil Procedure 1908. Contains the cause of action, relief sought, and material facts.",
@@ -503,6 +519,10 @@ export const glossaryTerms: GlossaryTerm[] = [
   },
   {
     slug: "arbitration-conciliation-act",
+    inPractice:
+      "Five sections do most of the Act's practical work. Section 8 makes reference mandatory: if a party sues in court despite a valid arbitration clause, the other side applies before its first statement on the substance and the suit is referred. Section 9 gives court-ordered interim protection before the tribunal exists; Section 11 has the High Court appoint the arbitrator when the clause's mechanism fails or one side stalls. Section 29A puts the award on a 12-month clock from completion of pleadings (extendable six months by consent, then only by court). Section 34 is the challenge route — deliberately narrow, with no re-hearing on merits — and Section 36 makes the award enforceable as a decree with no automatic stay pending challenge. Half of all arbitration fights trace back to clause drafting: seat, institution versus ad hoc, and the number of arbitrators deserve deliberate choices at contract stage, not boilerplate.",
+    workedExample:
+      "A Delhi distributor's agreement with a manufacturer carries a Delhi-seated institutional arbitration clause. When the relationship collapses, the manufacturer sues in civil court for account recovery; the distributor applies under Section 8 and the suit is referred to arbitration. A Section 9 order meanwhile restrains the manufacturer from appropriating the distributor's security deposit. The sole arbitrator, appointed through the institution without any Section 11 detour, renders a ₹1.6 crore award in under fifteen months. The manufacturer's Section 34 challenge — effectively asking for a merits re-hearing — fails, and the award is executed as a decree. Every stage ran on the statute's rails because the clause was drafted cleanly.",
     term: "Arbitration and Conciliation Act 1996",
     shortDefinition:
       "Statute governing domestic and international commercial arbitration in India. Sections 9 (interim measures), 11 (appointment of arbitrator), 34 (challenge to award), 37 (appeal). Aligned with UNCITRAL Model Law.",
@@ -590,6 +610,10 @@ export const glossaryTerms: GlossaryTerm[] = [
   // ========== Additional terms ==========
   {
     slug: "limitation-act-time-bar",
+    inPractice:
+      "Limitation is the first question in every civil consultation, because it kills more claims than bad evidence ever does. Money and contract claims die three years from when each invoice or instalment fell due — on a running commercial account, every invoice has its own clock. Possession claims run twelve years; execution of a decree, twelve. Two provisions revive a dying claim: a written, signed acknowledgment of liability before expiry (Section 18) and a part-payment (Section 19) each restart the period — which is why a demand letter that provokes a written 'we will clear the dues' reply is worth more than a year of phone calls. Section 5 condonation of delay exists for appeals and applications, not suits: a time-barred suit is dead however sympathetic the cause, and courts must reject it even if the defendant never raises the point.",
+    workedExample:
+      "A Noida vendor holds ₹9 lakh in unpaid invoices against a retail chain, the oldest now two years and ten months old. Before filing, her lawyer sends a demand email; the buyer's accounts head replies confirming the outstanding balance and promising payment 'by next quarter'. That signed acknowledgment resets limitation under Section 18 for the entire admitted balance. The recovery suit is filed four months later — comfortably within the fresh period — and the acknowledgment email doubles as the suit's best evidence. Without it, the oldest invoices would have expired in eight weeks, and no court could have revived them.",
     term: "Limitation Act 1963",
     shortDefinition:
       "Statute prescribing the time within which different categories of suits, appeals, and applications must be filed. Suits filed beyond limitation are barred regardless of merit, subject to Section 5 condonation of delay.",
@@ -601,6 +625,10 @@ export const glossaryTerms: GlossaryTerm[] = [
   },
   {
     slug: "vakalatnama",
+    inPractice:
+      "The vakalatnama looks like a formality but defines the lawyer-client relationship in court: read its printed clauses before signing, because standard forms typically authorise the advocate to act, file, receive documents, and sometimes compromise the matter. It is executed per proceeding and per forum — an appeal or a connected case needs its own — and carries a small court-fee stamp that varies by state. Changing advocates mid-case is a client's right: the new advocate files a fresh vakalatnama, in practice with a no-objection endorsement from the earlier advocate or, where that is withheld, with the court's leave after notice — the file and case papers must be handed over, subject to accounts being settled. Senior advocates never file a vakalatnama; they appear on the instructions of the advocate-on-record, which is why every matter needs a filing advocate regardless of who argues it.",
+    workedExample:
+      "Midway through a Delhi property suit, a litigant loses confidence after repeated adjournments sought by her counsel and engages a new advocate. The new advocate prepares a fresh vakalatnama and requests a no-objection from the earlier counsel; when a week passes without response, he files the vakalatnama with an application seeking leave to appear, with notice to the earlier advocate. The court grants leave, directs handover of the case file, and the suit continues without losing a date. The change cost one application and no adjournment — because the substitution followed the procedure instead of simply turning up with new counsel on the hearing day.",
     term: "Vakalatnama",
     shortDefinition:
       "Authorisation document under Order III Rule 4 CPC by which a litigant appoints an advocate to appear and act on his/her behalf in a court matter. Mandatory for advocate's appearance.",
@@ -623,6 +651,10 @@ export const glossaryTerms: GlossaryTerm[] = [
   },
   {
     slug: "stay-order",
+    inPractice:
+      "A stay is never automatic — it is asked for, argued, and usually conditioned. Filing an appeal does not by itself stop execution of the decree below: a separate application under Order XLI Rule 5 CPC is needed, and courts routinely condition the stay on depositing all or part of the decretal amount, so the winner below is protected while the appeal runs. In writ and quashing practice, the interim stay of the impugned order or of coercive steps is often the petition's real objective on day one. Statutes increasingly build the condition into the stay itself — a builder appealing a RERA refund order, for instance, must first deposit the amount under Section 43(5) RERA. An ex parte stay lasts only until the returnable date, breach of a stay is contempt, and the other side can always apply to vacate — so a stay is a position to be defended, not a result.",
+    workedExample:
+      "A Delhi landlord wins a ₹22 lakh money decree against a former commercial tenant, who files a first appeal on day 28. The appeal alone changes nothing — execution can proceed — so the tenant also files an Order XLI Rule 5 stay application. The appellate court grants the stay on the condition that half the decretal amount be deposited in court within four weeks, failing which the stay dissolves. The tenant deposits; execution is suspended for the life of the appeal, while the landlord knows ₹11 lakh sits secured in court whatever the outcome. Both sides got what a stay is actually designed to deliver: preserved positions, not free time.",
     term: "Stay Order",
     shortDefinition:
       "Court order temporarily suspending operation of a lower court's decree, an authority's action, or a particular activity. May be interim (during pendency) or absolute (final).",
@@ -634,6 +666,10 @@ export const glossaryTerms: GlossaryTerm[] = [
   },
   {
     slug: "appeal",
+    inPractice:
+      "Three questions decide every appeal before its merits are ever reached: does a right of appeal exist at all (it is purely statutory), what is the limitation period (typically 30, 60, or 90 days, strictly counted from the judgment or its certified copy), and what must be deposited to be heard (consumer and RERA appeals carry statutory pre-deposits). A civil first appeal under Section 96 CPC is a full re-hearing on fact and law; a second appeal under Section 100 lies only on a substantial question of law, which the High Court must frame — most second appeals die at admission. Filing the appeal does not stay the decree: a separate stay application is needed. And the respondent is not passive — cross-objections allow the winner below to challenge the parts it lost, so an appeal can end worse than the judgment appealed from.",
+    workedExample:
+      "A Ghaziabad contractor loses a suit and faces a ₹22 lakh decree with 12% interest. Within 30 days he files a first appeal before the District Judge with a stay application; the stay is granted against deposit of half the amount. Because the first appeal is a full re-hearing, the appellate court re-examines the ledgers and finds the trial court double-counted one invoice and applied a contractual interest clause that had lapsed — the decree is reduced to ₹15 lakh with 9% interest. The decree-holder's cross-objection on a disallowed claim fails. Neither side got everything, which is the routine truth of appellate practice: recalibration is common, reversal is rare.",
     term: "Appeal",
     shortDefinition:
       "Statutory remedy seeking review of a lower court's judgment by a higher court. Appeals are creature of statute — no inherent right of appeal exists; the right must be conferred by specific statutory provision.",
@@ -689,6 +725,10 @@ export const glossaryTerms: GlossaryTerm[] = [
   },
   {
     slug: "section-9-arbitration-interim",
+    inPractice:
+      "Section 9 is the emergency room of arbitration: it is used before the tribunal exists, when assets are moving and the clause alone protects nothing. Typical asks — restraint on alienating the disputed asset, security for the amount in dispute, preservation of stock or records, appointment of a receiver. The court applies the standard injunction trilogy (prima facie case, balance of convenience, irreparable injury), and bank-guarantee encashment is restrained only on the narrow grounds of fraud or irretrievable injustice. Two timing rules matter: once interim relief is granted before arbitration, arbitral proceedings must be commenced within 90 days, and once the tribunal is constituted, Section 9(3) sends parties to the tribunal under Section 17 unless that remedy would be inefficacious. Filed strategically, a Section 9 order often produces the settlement the arbitration would otherwise take a year to force.",
+    workedExample:
+      "A Gurgaon contractor with ₹90 lakh in certified-but-unpaid bills learns the developer is negotiating to sell the only unencumbered floor of the project — its effective recovery pool — while invoking arbitration is still weeks away. A Section 9 petition before the commercial court seeks security for the claim; the court restrains alienation of the floor pending arbitration and directs the developer to disclose encumbrances. The contractor serves its notice of arbitration within the 90-day window, and the tribunal, once constituted, continues the protection under Section 17. When the award later comes, there is still an asset left to execute against — the entire value of the case preserved by the first fortnight's filing.",
     term: "Section 9 Arbitration Act (Interim Measures)",
     shortDefinition:
       "Provision in the Arbitration and Conciliation Act 1996 allowing courts to grant interim measures (asset preservation, status-quo, security) before or during arbitration proceedings.",
