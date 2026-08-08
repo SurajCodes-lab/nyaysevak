@@ -1320,4 +1320,402 @@ export const cityMatterContent: Record<string, CityPracticeContent> = {
       "The UP REAT pre-deposit rule is your leverage: a refund order the builder must fully deposit to appeal usually produces a settlement offer — and the DM recovery-certificate pipeline is where relentless follow-up wins.",
     ],
   },
+
+  // ════════════════ WEEK 22: FARIDABAD MATTER TRANCHE (6 entries) ════════════════
+  // ──────────────── FARIDABAD × CHEQUE BOUNCE (S.138 NI ACT) ────────────────
+  "faridabad__cheque-bounce-recovery": {
+    lead:
+      "Faridabad is one of Haryana's biggest MSME and manufacturing hubs — auto components, light engineering, job-work units — and the classic cheque-bounce pattern here is the unpaid-invoice cheque between a vendor and a buyer. Section 138 NI Act complaints from Faridabad account-holders are heard by the Judicial Magistrate courts at the Sector 12 district court complex (or Ballabgarh for that side of the district). NyaySevak connects you with Bar-Council-verified Faridabad cheque-bounce lawyers who send the statutory notice within the 30-day window, file before the correct magistrate, press interim compensation under Section 143A, and use the district's Lok Adalat machinery to convert the prosecution into actual recovery.",
+    landscape: [
+      "Jurisdiction is fixed by your bank, not the drawer's address: after the 2015 amendment to Section 142 NI Act, a cheque-bounce complaint is filed where the payee's bank branch is located. So if you presented the cheque through a Faridabad branch, your case is heard by a Judicial Magistrate at the Faridabad District Court complex in Sector 12 — even against a drawer sitting in Delhi, Noida, or another state — while matters from the Ballabgarh side of the district go to the Ballabgarh Sub-Divisional Courts. Appeals against conviction or acquittal lie to the Sessions Court, Faridabad; quashing and revision go to the Punjab & Haryana High Court at Chandigarh under Section 528 BNSS (the old Section 482 CrPC).",
+      "Two financial levers turn a Faridabad prosecution into recovery pressure. Section 143A lets the trial magistrate order interim compensation of up to 20% of the cheque amount once the accused pleads not guilty — money in hand before the trial ends. If the drawer is convicted and appeals, Section 148 requires a minimum 20% deposit before the Sessions Court hears the appeal. And because so many Faridabad cheques are drawn by proprietorships and private companies in the industrial estates, Section 141 matters: the company, its signatory, and every person in charge of its business when the cheque was issued can all be prosecuted.",
+      "Section 138 is compoundable, and Faridabad's settlement machinery is active: the District Legal Services Authority runs regular Lok Adalats, and the National Lok Adalats dispose of NI Act matters in bulk — usually on a payment schedule recorded before the court. The mediation centre at the district court handles pre-trial and referred settlements. For larger trade debts, a parallel civil track is often run alongside the prosecution: a recovery suit before the Commercial Court, Faridabad under the Commercial Courts Act, which requires Section 12A pre-institution mediation unless urgent interim relief is sought — itself a structured settlement opportunity.",
+    ],
+    courtsForThisMatter: [
+      "Judicial Magistrate Courts — Faridabad District Court complex, Sector 12",
+      "Ballabgarh Sub-Divisional Courts (matters from the Ballabgarh side of the district)",
+      "Sessions Court, Faridabad (appeals against S.138 conviction/acquittal)",
+      "Punjab & Haryana High Court, Chandigarh (quashing under S.528 BNSS; revision)",
+      "Commercial Court, Faridabad (parallel civil recovery; S.12A pre-institution mediation)",
+      "DLSA Faridabad Lok Adalats & mediation centre at the district court (NI Act settlements)",
+    ],
+    caseTypes: [
+      { title: "Statutory Demand Notice", desc: "Drafting and dispatching the S.138 notice within 30 days of the return memo — the step most self-represented payees get wrong." },
+      { title: "S.138 Complaint Filing", desc: "Filing before the Judicial Magistrate at Sector 12 or Ballabgarh serving your bank branch, with complete cause-of-action documentation." },
+      { title: "Interim Compensation (S.143A)", desc: "Pressing the magistrate to order up to 20% of the cheque amount as interim compensation at the trial stage." },
+      { title: "Defence of S.138 Cases", desc: "Rebutting the S.139 presumption — security cheques, stop-payment on disputed supplies, quality disputes on the underlying invoice, notice defects." },
+      { title: "Vendor & Trade-Debt Recovery", desc: "The Faridabad staple: bounced cheques against unpaid supply invoices between MSME vendors and buyers, often with running-account reconciliation." },
+      { title: "Company & Director Liability", desc: "Prosecuting the drawer company, its signatory, and persons in charge under S.141 — common where the buyer is a private limited unit in the industrial estates." },
+      { title: "Settlement & Compounding", desc: "DLSA Lok Adalats, National Lok Adalats, and court-referred mediation — frequently the fastest route from prosecution to actual money." },
+      { title: "Parallel Commercial-Court Recovery", desc: "Recovery suits before the Commercial Court, Faridabad for larger debts, run alongside the S.138 prosecution for dual pressure." },
+    ],
+    faqs: [
+      {
+        question: "Where do I file a cheque-bounce case in Faridabad?",
+        answer:
+          "Before the Judicial Magistrate court serving the area of your bank branch — the branch where you presented the cheque. Since the 2015 amendment to Section 142 NI Act, the payee's bank branch fixes territorial jurisdiction, so a Faridabad account-holder files in Faridabad even against a drawer based elsewhere. Most complaints go to the district court complex at Sector 12; matters from the Ballabgarh side go to the Ballabgarh Sub-Divisional Courts.",
+      },
+      {
+        question: "My buyer's cheque against a supply invoice bounced. Is that a S.138 case?",
+        answer:
+          "Almost always, yes — a cheque issued against an unpaid invoice is a cheque for a legally enforceable debt, which is exactly what Section 138 covers. This is the most common Faridabad pattern: MSME vendors in the industrial estates holding bounced cheques from buyers. Keep the invoice, delivery challans, ledger, and return memo together — the drawer's usual defence is a quality or reconciliation dispute, and the paper trail defeats it. Start with a free case assessment to map the timeline.",
+      },
+      {
+        question: "What is the deadline for the cheque-bounce notice?",
+        answer:
+          "You must send the written demand notice within 30 days of receiving the bank's return memo. The drawer then has 15 days to pay; if they don't, the complaint must be filed within one month after that 15-day window closes. Miss either deadline and the prosecution can fail on limitation alone — the notice stage is where a Faridabad lawyer earns their place first.",
+      },
+      {
+        question: "Can I get money before the trial in Faridabad ends?",
+        answer:
+          "Often, yes. Under Section 143A the trial magistrate can direct the drawer to pay interim compensation of up to 20% of the cheque amount once they plead not guilty. If the drawer is convicted and appeals to the Sessions Court, Faridabad, Section 148 requires a further minimum 20% deposit before the appeal is heard. For larger trade debts, a parallel suit before the Commercial Court, Faridabad adds civil pressure.",
+      },
+      {
+        question: "The cheque was issued by a company in the industrial area — who do I prosecute?",
+        answer:
+          "The company itself plus every person in charge of and responsible for its business when the cheque was issued — typically the signatory and the directors actively running the unit — under Section 141 NI Act. This matters in Faridabad, where many drawer entities are private limited companies or LLPs in the industrial estates. Nominee or non-executive directors with no role in day-to-day affairs can contest their impleadment.",
+      },
+      {
+        question: "Can a cheque-bounce case in Faridabad be settled?",
+        answer:
+          "Yes — Section 138 is compoundable at any stage. The District Legal Services Authority Faridabad runs regular Lok Adalats, and National Lok Adalats settle NI Act matters in bulk, usually on a payment schedule recorded before the court; the mediation centre at the district court handles referred settlements. Once the money is paid, the case is compounded — or the Punjab & Haryana High Court quashes the proceedings on settlement. For most payees, settlement is the fastest route to actual recovery.",
+      },
+    ],
+    localNotes: [
+      "Your bank branch's location — not the drawer's address — fixes jurisdiction (S.142(2) NI Act, post-2015): Faridabad branches mean the Sector 12 district courts, with Ballabgarh-side matters at the Ballabgarh Sub-Divisional Courts.",
+      "Faridabad's MSME/manufacturing base makes vendor-buyer invoice cheques the dominant S.138 pattern — keep invoices, challans, and ledgers with the return memo, and consider a parallel Commercial Court, Faridabad suit for larger debts.",
+      "Use the financial levers and the settlement machinery together: S.143A interim compensation (up to 20%), the S.148 appellate deposit, and DLSA Faridabad's Lok Adalats — which dispose of NI Act matters in bulk — turn the prosecution into real recovery pressure.",
+    ],
+  },
+
+  // ──────────────── FARIDABAD × COMPANY REGISTRATION & STARTUP ────────────────
+  "faridabad__company-registration": {
+    lead:
+      "Faridabad founders — whether an auto-components unit in the DLF Industrial Area, a job-work shop in Sector 24-25, or a startup in Neharpar/Greater Faridabad — incorporate through the same fully-online MCA route as the rest of India, but the jurisdictional map is Haryana-specific: the Central Registration Centre processes the SPICe+ filing, the Registrar of Companies (ROC) Delhi (whose jurisdiction covers NCT of Delhi and Haryana) handles everything post-incorporation, and the NCLT Chandigarh Bench is the company-law tribunal for Haryana companies. NyaySevak connects you with verified Faridabad company-registration and startup lawyers who choose the right structure, draft the MoA/AoA around your actual business, clear the registered-office and name hurdles, and set up the compliance calendar — starting with a free case assessment.",
+    landscape: [
+      "Incorporation itself is end-to-end digital: SPICe+ Part A reserves the name, Part B files the incorporation with DIN allotment for directors, and the linked AGILE-PRO form bundles GST, EPFO, and ESIC registrations in one shot; DSC (digital signature) procurement for the signatories comes first. The filing is processed by the Central Registration Centre — physically located at IMT Manesar, though no Faridabad founder ever visits it, because the entire process runs on the MCA portal. What is not automatic is judgment: name availability against existing companies and trademarks, MoA object clauses that actually match a manufacturing or services business, and shareholding/director structure that anticipates investors — this is where a lawyer earns their place before the certificate of incorporation arrives.",
+      "The structural choice comes before the filing. Private limited remains the default for anything that will raise investment or take institutional purchase orders; an LLP suits professional-services and family-run trading setups with a lighter compliance load; an OPC works for single founders; a plain partnership or proprietorship still makes sense for small job-work units — though it forfeits limited liability. Faridabad-specific adjacencies stack on top: Udyam (MSME) registration for the manufacturing base, factory-licence and Haryana State Pollution Control Board (HSPCB) consents for units in the industrial estates, and shops-and-establishments registration under the Haryana rules for offices and retail. Registered-office proof — ownership documents or a rent deed with the owner's NOC plus a utility bill — is the commonest cause of resubmission remarks.",
+      "Incorporation is day one, not the finish line. Commencement of business (INC-20A) must be filed within 180 days before the company can start operations or borrow; the annual ROC cycle to the ROC Delhi runs AOC-4 (financials), MGT-7/7A (annual return), and ADT-1 (auditor appointment), with directors' KYC alongside; missed filings attract per-day additional fees that quickly dwarf the cost of doing it right. Disputes and schemes — oppression-mismanagement, mergers, strike-off restorations — go to the NCLT Chandigarh Bench, the tribunal for Haryana. A practical Faridabad pattern worth noting: founders frequently register with a Faridabad registered office (home or factory address) while selling and operating across the NCR — perfectly lawful, provided the registered office genuinely receives communication and the state-level registrations (GST, shops-and-establishments) match where business is actually done.",
+    ],
+    courtsForThisMatter: [
+      "Central Registration Centre (CRC), MCA — processes SPICe+ incorporations (at IMT Manesar; fully online)",
+      "Registrar of Companies (ROC), Delhi — post-incorporation jurisdiction for NCT of Delhi & Haryana",
+      "NCLT Chandigarh Bench (company-law tribunal for Haryana companies)",
+      "Regional Director (Northern Region), MCA (appeals, name disputes, shifting of registered office)",
+      "Haryana State Pollution Control Board & factory-licensing authorities (industrial-unit consents)",
+      "GST, EPFO & ESIC authorities via AGILE-PRO (bundled registrations at incorporation)",
+    ],
+    caseTypes: [
+      { title: "Structure Selection", desc: "Pvt Ltd vs LLP vs OPC vs partnership — matched to funding plans, liability exposure, and the compliance load a Faridabad MSME can actually carry." },
+      { title: "SPICe+ Incorporation", desc: "Name reservation (SPICe+ Part A/RUN), DSC and DIN, Part B filing through the CRC, and AGILE-PRO for GST/EPFO/ESIC in one pass." },
+      { title: "MoA/AoA Drafting", desc: "Object clauses that match a manufacturing or services business, and articles that anticipate founders' rights, transfer restrictions, and future investors." },
+      { title: "Registered-Office Setup", desc: "Rent deed, owner's NOC, and utility-bill proof done right — the commonest resubmission trigger — including Faridabad-office-plus-NCR-operations structures." },
+      { title: "MSME & Industrial Registrations", desc: "Udyam registration, factory licence, HSPCB consents, and Haryana shops-and-establishments — the licensing stack around the incorporation for industrial-estate units." },
+      { title: "Post-Incorporation Compliance", desc: "INC-20A within 180 days, then the annual ROC Delhi cycle — AOC-4, MGT-7, ADT-1, director KYC — on a calendar, not on panic." },
+      { title: "Founder & Shareholder Agreements", desc: "Founders' agreements, ESOP pools, and share-transfer paperwork for Neharpar/Greater Faridabad startups heading toward investment." },
+      { title: "ROC Disputes & NCLT Matters", desc: "Strike-off restorations, name objections before the Regional Director, and oppression-mismanagement or scheme matters at the NCLT Chandigarh Bench." },
+    ],
+    faqs: [
+      {
+        question: "Do I have to visit any government office to register a company in Faridabad?",
+        answer:
+          "No. Incorporation is fully online through the MCA portal: SPICe+ Part A reserves the name, Part B files the incorporation, and AGILE-PRO bundles GST, EPFO, and ESIC. The filing is processed by the Central Registration Centre — physically at IMT Manesar, but you never go there. The only physical steps are getting your digital signature (DSC) verified and assembling registered-office proof.",
+      },
+      {
+        question: "Which ROC and tribunal cover a Faridabad company?",
+        answer:
+          "The Registrar of Companies, Delhi — whose jurisdiction covers both the NCT of Delhi and Haryana — handles all post-incorporation filings and scrutiny for Faridabad companies. Company-law disputes, schemes, and strike-off restorations go to the NCLT Chandigarh Bench, the tribunal for Haryana. So your annual filings go to ROC Delhi even though your factory or office is in Faridabad.",
+      },
+      {
+        question: "Private limited, LLP, or OPC — what suits a Faridabad manufacturing unit?",
+        answer:
+          "It depends on where the business is going. A private limited company is the default if you will raise investment, take institutional purchase orders, or want clean limited liability for an industrial unit. An LLP carries a lighter compliance load and suits services and family-run trading. An OPC fits a single founder. Many small job-work units stay proprietorships — cheap, but with unlimited personal liability. A free case assessment can map the choice to your actual plans.",
+      },
+      {
+        question: "Can I use my Faridabad home or factory as the registered office?",
+        answer:
+          "Yes — a residential or factory address works, with ownership proof or a rent deed plus the owner's NOC and a recent utility bill. Registered-office proof is the commonest cause of resubmission remarks, so get the paperwork exact. Many founders register with a Faridabad address while operating across the NCR — lawful, provided the office genuinely receives official communication and your GST and shops-and-establishments registrations match where you actually do business.",
+      },
+      {
+        question: "What registrations does a Faridabad industrial unit need beyond incorporation?",
+        answer:
+          "Typically: Udyam (MSME) registration — which unlocks priority-sector lending, delayed-payment protection, and tender preferences; a factory licence if you cross the worker thresholds; consent-to-establish and consent-to-operate from the Haryana State Pollution Control Board for units in the industrial estates like DLF Industrial Area or Sector 24-25; and shops-and-establishments registration under the Haryana rules for offices. GST, EPFO, and ESIC usually come bundled at incorporation via AGILE-PRO.",
+      },
+      {
+        question: "What must I file after the company is incorporated?",
+        answer:
+          "First, INC-20A (commencement of business) within 180 days — without it the company cannot start operations or borrow, and it is a common strike-off trigger. Then the annual cycle to ROC Delhi: AOC-4 for financial statements, MGT-7 or MGT-7A for the annual return, ADT-1 for auditor appointment, plus directors' KYC. Late filings attract per-day additional fees that escalate fast, so a compliance calendar from day one is cheaper than any rescue later.",
+      },
+    ],
+    localNotes: [
+      "Incorporation is processed by the CRC (fully online), but everything after belongs to ROC Delhi — the registrar for NCT of Delhi and Haryana — and disputes go to the NCLT Chandigarh Bench: a three-body map every Faridabad founder should know.",
+      "Faridabad's incorporation work is MSME-flavoured: Udyam registration, factory licence, and HSPCB consents stack on top of SPICe+ for units in the DLF Industrial Area and Sector 24-25 estates, while Neharpar/Greater Faridabad startups add founders' agreements and ESOP structures.",
+      "Founders commonly register with a Faridabad registered office while operating across the NCR — lawful, but the office must genuinely receive communication, and INC-20A within 180 days plus the AOC-4/MGT-7/ADT-1 annual cycle are non-negotiable.",
+    ],
+  },
+
+  // ──────────────── FARIDABAD × RERA / BUILDER-BUYER DISPUTES ────────────────
+  "faridabad__rera-complaint": {
+    lead:
+      "Faridabad's builder-buyer disputes cluster in Neharpar — Greater Faridabad's Sectors 75–89 — where a wave of projects launched in the late 2000s and 2010s ran years behind schedule, and older BPTP/SRS-era developments stalled outright. The critical jurisdictional fact most buyers get wrong: Faridabad falls under HRERA Panchkula, not HRERA Gurugram — the Gurugram authority's territory is Gurugram district alone, and every other Haryana district including Faridabad files at Panchkula. NyaySevak connects you with verified RERA lawyers who file your complaint on the HRERA Panchkula portal, argue the Section 18 refund-versus-interest choice, and drive execution until money actually moves.",
+    landscape: [
+      "The primary forum for a Faridabad homebuyer is the Haryana Real Estate Regulatory Authority, Panchkula. Complaints are filed online on the HRERA Panchkula portal with a modest statutory fee, and Section 18 RERA frames the core decision: exit the delayed project and recover everything you paid with prescribed interest, or stay in and claim delay-possession interest for every month past the promised date. The choice is strategic — refund makes sense in genuinely stalled towers, while delay interest suits projects that will eventually deliver. A lawyer computes the claim payment-by-payment from your builder-buyer agreement and receipts, because the interest often rivals the principal in decade-old delays.",
+      "Execution is where Faridabad cases are won or lost. HRERA can enforce its orders as arrears of land revenue through the district administration, route compensation questions through its adjudicating officer, and transfer decree-execution so an unpaid order behaves like a civil decree against the builder's assets. Builder appeals go to the Haryana Real Estate Appellate Tribunal at Chandigarh — but Section 43(5) forces the appealing promoter to pre-deposit the full refund amount (or a substantial slice of the penalty) before the appeal is even entertained. That pre-deposit requirement is the single strongest settlement lever a Faridabad buyer holds, and experienced counsel uses it deliberately.",
+      "RERA is not the only track. Following Imperia Structures, a homebuyer can instead sue for deficiency of service before the District Consumer Commission at Faridabad or the Haryana SCDRC at Panchkula — the remedies are concurrent, not exclusive. When the developer is insolvent, the fight shifts to the NCLT under the IBC, where allottees rank as financial creditors and a group of at least 100 or 10% of the project's allottees can jointly initiate proceedings. Writs to the Punjab & Haryana High Court remain available against authorities and HRERA itself. Layer in Faridabad's local frictions — FMDA master-plan infrastructure running behind the towers, registry and occupancy-certificate delays, and the Surajkund/Sector 37 side pockets — and forum selection becomes the lawyer's core skill.",
+    ],
+    courtsForThisMatter: [
+      "HRERA Panchkula (the authority for Faridabad district — not HRERA Gurugram)",
+      "Haryana Real Estate Appellate Tribunal, Chandigarh (appeals; builder's S.43(5) pre-deposit)",
+      "Adjudicating Officer, HRERA Panchkula (compensation claims)",
+      "District Consumer Commission, Faridabad / Haryana SCDRC, Panchkula (Imperia Structures concurrent route)",
+      "NCLT (builder insolvency under IBC — allottees as financial creditors)",
+      "Punjab & Haryana High Court (writs against authorities / HRERA)",
+    ],
+    caseTypes: [
+      { title: "Refund with Interest (S.18)", desc: "Exit a delayed Neharpar or Greater Faridabad project with a full refund plus prescribed interest computed from each payment." },
+      { title: "Delay-Possession Interest", desc: "Stay in the project and claim monthly interest for the entire delay past the promised possession date." },
+      { title: "Execution of HRERA Orders", desc: "Enforcing unpaid orders as arrears of land revenue, through the adjudicating officer, or via decree-execution transfer." },
+      { title: "Appellate Defence at HREAT", desc: "Holding the builder to the S.43(5) pre-deposit before the Chandigarh tribunal — and converting that pressure into settlement." },
+      { title: "Registry & OC Disputes", desc: "Forcing conveyance and registry where occupancy certificates or builder-authority dues block completed towers." },
+      { title: "Consumer-Forum Route", desc: "Deficiency-of-service complaints before the Faridabad District Commission or Haryana SCDRC where that forum suits the case better." },
+      { title: "Builder Insolvency (NCLT/IBC)", desc: "Representing allottee groups (100 or 10% threshold) as financial creditors when the developer collapses — the stalled-project pattern." },
+      { title: "Stalled-Project Revival", desc: "Strategies for the older BPTP/SRS-type stuck developments — association action, forum switching, and negotiated completion." },
+    ],
+    faqs: [
+      {
+        question: "Which RERA authority covers Faridabad — Gurugram or Panchkula?",
+        answer:
+          "HRERA Panchkula. Haryana split its authority in two, but HRERA Gurugram's jurisdiction is Gurugram district only — every other district, including Faridabad, files before HRERA Panchkula. Filing at the wrong authority wastes months, and it is one of the most common self-filing errors we see from Greater Faridabad buyers. The complaint itself is filed online on the HRERA Panchkula portal, so you do not need to travel to Panchkula to start.",
+      },
+      {
+        question: "My Neharpar flat is years delayed. Refund or delay interest — which should I claim?",
+        answer:
+          "Section 18 gives you the choice. A refund with prescribed interest suits projects that look genuinely stalled; delay-possession interest suits towers that will plausibly deliver, since you keep the flat and collect interest for every month of delay. The promised date in your builder-buyer agreement (or the RERA-registered completion date) is the trigger. In Sectors 75–89, where delays commonly run five years or more, the interest component alone can be very substantial — get the claim computed before you elect.",
+      },
+      {
+        question: "The builder is ignoring my HRERA order. How do I actually recover the money?",
+        answer:
+          "File for execution. HRERA Panchkula can recover the amount as arrears of land revenue through the district machinery, route compensation through its adjudicating officer, and transfer the order for execution like a civil decree against the builder's assets. Execution is slower than winning the order but it is where persistence pays — and where a lawyer who tracks the file matters far more than one who only argued the hearing.",
+      },
+      {
+        question: "The builder has appealed my refund order. Does that freeze everything?",
+        answer:
+          "Not without payment. Under Section 43(5) RERA, a promoter appealing to the Haryana Real Estate Appellate Tribunal at Chandigarh must first deposit the full refund amount ordered (or a substantial share of any penalty) with the tribunal. Many Faridabad builders abandon or settle appeals rather than fund the pre-deposit — so a builder's appeal, properly defended, often accelerates your recovery instead of delaying it.",
+      },
+      {
+        question: "Can I go to the consumer court instead of HRERA?",
+        answer:
+          "Yes. The Supreme Court held in Imperia Structures that RERA and the Consumer Protection Act are concurrent remedies — a Faridabad allottee can choose the District Consumer Commission at Faridabad or the Haryana SCDRC at Panchkula instead of HRERA. Consumer forums can award compensation for harassment and mental agony that RERA typically does not, but HRERA's land-revenue execution and the S.43(5) pre-deposit are levers the consumer route lacks. Forum choice should follow the builder's specific situation.",
+      },
+      {
+        question: "My builder is insolvent. Is a RERA complaint still worth filing?",
+        answer:
+          "Once an NCLT moratorium begins, proceedings against the builder freeze and the action shifts to the insolvency process, where homebuyers rank as financial creditors with a seat in the committee of creditors. To initiate insolvency themselves, allottees need at least 100 buyers or 10% of the project's allottees acting jointly. For Faridabad's older stalled projects this associative route — organising the buyer group, then choosing between RERA, NCLT, and the High Court — is usually the realistic path, and it starts with a free case assessment of where your project actually stands.",
+      },
+    ],
+    localNotes: [
+      "Faridabad files at HRERA Panchkula, not HRERA Gurugram — the Gurugram authority covers Gurugram district only, and misdirected complaints from Greater Faridabad buyers are routinely returned.",
+      "Neharpar / Greater Faridabad (Sectors 75–89) is the district's delayed-project belt: long possession delays, FMDA infrastructure catching up behind the towers, and registry/OC bottlenecks even in completed blocks.",
+      "The builder's S.43(5) pre-deposit before the Chandigarh appellate tribunal is your strongest lever — an appealing promoter must put the refund amount on the table before being heard.",
+    ],
+  },
+
+  // ──────────────── FARIDABAD × NCLT & INSOLVENCY (IBC) ────────────────
+  "faridabad__nclt-ibc": {
+    lead:
+      "For a Faridabad company — or a creditor chasing one — the National Company Law Tribunal is not in Faridabad or even Delhi: Haryana-registered companies litigate before the NCLT Chandigarh bench, roughly 250 km away, with appeals to the NCLAT at New Delhi. That geography shapes everything, from who you hire to how hearings are attended. NyaySevak connects you with verified insolvency and company-law teams who appear at Chandigarh while managing your matter from Faridabad — drafting the Section 8 demand notice, filing the S.7 or S.9 petition, defending promoters, and running oppression-and-mismanagement or strike-off-restoration petitions before the same bench.",
+    landscape: [
+      "The IBC's two front doors are Section 7 for financial creditors and Section 9 for operational creditors, both requiring a default of at least ₹1 crore. The operational route — the one most Faridabad auto-component and engineering vendors use — starts with a Form 3/Form 4 demand notice under Section 8; the corporate debtor gets ten days to pay or flag a pre-existing dispute, and under Mobilox even a plausible pre-existing dispute defeats the petition. Used well, the demand notice itself is potent recovery pressure: many OEM-chain buyers pay on notice rather than risk admission, a moratorium under Section 14, and loss of management. Withdrawal after admission needs Section 12A — 90% approval of the committee of creditors — so the leverage is front-loaded.",
+      "Faridabad's insolvency docket reflects its industrial character: manufacturing and auto-component supply chains where a vendor several tiers below an OEM absorbs the shock of a customer's collapse, industrial sickness and revival attempts in the older sectors, and — from the housing side — dues stuck in insolvent builders, where allottees proceed as financial creditors through the 100-or-10% joint route. For MSME vendors below or around the ₹1 crore threshold, the practical parallel track is MSME Samadhaan: a reference to the Haryana Micro and Small Enterprises Facilitation Council, which carries compound-interest liability for delayed payments and needs no insolvency at all. A good team runs the S.8 notice and the MSEFC reference as complementary pressure, not alternatives chosen blindly.",
+      "The Chandigarh bench also hears the company-law side for Haryana entities: oppression-and-mismanagement petitions under Sections 241–242 — common in Faridabad's family-held manufacturing companies when a faction is squeezed out — restoration of struck-off companies, and schemes and reductions. Personal guarantors to corporate debtors (typically promoters who guaranteed working-capital lines) are likewise pursued before the NCLT. On the exit side, voluntary liquidation under the IBC and STK-2 strike-off give defunct Faridabad units a clean wind-down. The 250-km problem is real but shrinking: NCLT video-conference hearings cut routine travel, and the working model is a lawyer team that appears at Chandigarh — physically when the matter demands it — while the client is briefed and documents move from Faridabad.",
+    ],
+    courtsForThisMatter: [
+      "NCLT Chandigarh Bench (the tribunal for Haryana-registered companies, ~250 km from Faridabad)",
+      "NCLAT, New Delhi (appeals from NCLT Chandigarh)",
+      "MSE Facilitation Council, Haryana (MSME Samadhaan — parallel delayed-payment route for vendors)",
+      "Supreme Court of India (appeals from NCLAT on questions of law)",
+      "Punjab & Haryana High Court (writs touching NCLT/authority action)",
+      "Registrar of Companies / Official Liquidator (strike-off, voluntary liquidation interface)",
+    ],
+    caseTypes: [
+      { title: "S.8 Demand Notice (Operational)", desc: "Form 3/Form 4 notice for unpaid supplies — often the highest-leverage recovery step a Faridabad vendor has against a defaulting buyer." },
+      { title: "S.9 Petition Filing", desc: "Operational-creditor petitions at NCLT Chandigarh once the ₹1 crore default stands and no pre-existing dispute is flagged." },
+      { title: "S.7 Financial-Creditor Petitions", desc: "Initiating CIRP for lenders, NBFCs, and homebuyer groups (100 or 10% of allottees) against insolvent builders." },
+      { title: "Corporate-Debtor Defence", desc: "Resisting admission on Mobilox pre-existing-dispute grounds, negotiating pre-admission settlement, and S.12A withdrawal strategy." },
+      { title: "Oppression & Mismanagement (S.241-242)", desc: "Shareholder-faction disputes in Faridabad's family-held manufacturing companies, fought before the Chandigarh bench." },
+      { title: "Personal-Guarantor Proceedings", desc: "Insolvency of promoters who guaranteed the company's debt — pursued (or defended) before the NCLT." },
+      { title: "MSME Samadhaan (MSEFC Haryana)", desc: "Facilitation-council references for delayed payments with compound interest — the sub-crore parallel route for MSME suppliers." },
+      { title: "Wind-Down & Restoration", desc: "Voluntary liquidation and STK-2 strike-off for defunct units; NCLT restoration of companies struck off in error." },
+    ],
+    faqs: [
+      {
+        question: "Which NCLT bench handles a Faridabad company?",
+        answer:
+          "NCLT Chandigarh — the bench with territorial jurisdiction over companies registered in Haryana. There is no NCLT bench in Faridabad or Gurugram, and the Delhi bench next door covers NCT of Delhi companies only, so a Faridabad company's insolvency, oppression-and-mismanagement, or restoration matter travels roughly 250 km to Chandigarh. Appeals go to the NCLAT at New Delhi.",
+      },
+      {
+        question: "A buyer owes my Faridabad unit a large sum. Can I use the IBC to recover it?",
+        answer:
+          "If the default is ₹1 crore or more, yes — you serve a Section 8 demand notice (Form 3 or Form 4), wait ten days, and file a Section 9 petition at NCLT Chandigarh if payment does not come. The notice alone often produces payment, because admission means a moratorium and loss of management for the debtor. But under the Mobilox test a genuine pre-existing dispute — quality claims, debit notes, prior correspondence — defeats the petition, so the notice must be built on clean documentation.",
+      },
+      {
+        question: "My dues are below ₹1 crore. What are my options?",
+        answer:
+          "The IBC is closed below the ₹1 crore threshold, but a registered MSME supplier can file an MSME Samadhaan reference before the Haryana Micro and Small Enterprises Facilitation Council, which carries compound-interest liability on delayed payments and can culminate in an arbitral award. Ordinary civil and commercial-court recovery, summary suits, and negotiated settlement remain available. For many Faridabad auto-component vendors the MSEFC route plus firm notice-stage negotiation recovers more, faster, than any tribunal fight — a free case assessment can map which track fits your paper trail.",
+      },
+      {
+        question: "How do we manage a case 250 km away in Chandigarh?",
+        answer:
+          "This is the practical question for every Faridabad litigant, and the working answer is a team structure: counsel who regularly appear before the NCLT Chandigarh bench handle listings and hearings, while coordination, documents, and client meetings run from Faridabad or over calls. NCLT video-conference hearings have cut routine travel substantially — many procedural listings need no one physically at Chandigarh — with physical appearance reserved for admission, final arguments, and contested applications.",
+      },
+      {
+        question: "My company received a Section 8 demand notice. What should we do in the ten days?",
+        answer:
+          "Act immediately — the ten-day window is where the case is usually decided. If a genuine dispute predates the notice (quality rejections, debit notes, correspondence contesting the invoice), reply on the record raising it: under Mobilox a plausible pre-existing dispute bars admission of the Section 9 petition. If the debt is undisputed, negotiate before filing, because once a petition is admitted at Chandigarh, withdrawal needs Section 12A approval from 90% of the committee of creditors and management passes to a resolution professional under the Section 14 moratorium.",
+      },
+      {
+        question: "Our builder in Greater Faridabad is insolvent. Can flat buyers use the NCLT?",
+        answer:
+          "Yes — homebuyers are financial creditors under the IBC, so allottees can file under Section 7 at NCLT Chandigarh, provided at least 100 allottees or 10% of the project's buyers (whichever is less) join the petition. Once CIRP begins, buyers vote in the committee of creditors through an authorised representative. Organising the buyer group is the hard part in practice; the legal route from Faridabad's stalled projects is well-established.",
+      },
+    ],
+    localNotes: [
+      "There is no NCLT bench in Faridabad or anywhere in the NCR portion of Haryana — Haryana companies file at NCLT Chandigarh (~250 km), with appeals to the NCLAT at New Delhi. Video-conference hearings now absorb most routine listings.",
+      "Faridabad's insolvency work follows its factories: auto-component and engineering vendors in OEM supply chains, where the S.8 demand notice is often more valuable as recovery pressure than the petition itself.",
+      "For MSME suppliers under the ₹1 crore IBC threshold, the Haryana MSE Facilitation Council (MSME Samadhaan) is the parallel route — compound interest on delayed payments, no insolvency required.",
+    ],
+  },
+
+  // ──────────────── FARIDABAD × ANTICIPATORY BAIL (S.482 BNSS) ────────────────
+  "faridabad__anticipatory-bail": {
+    lead:
+      "Anticipatory bail under Section 482 of the BNSS 2023 (the old Section 438 CrPC) is fully available in Haryana — unlike neighbouring UP, the state never deleted the remedy — and for a Faridabad FIR the application ordinarily goes first to the Sessions Court at the Faridabad District Court complex in Sector 12, with the Punjab & Haryana High Court at Chandigarh as the concurrent and appellate forum. NyaySevak connects you with Bar-Council-verified Faridabad anticipatory-bail lawyers who obtain a copy of the FIR, move the application before the right court fast, press for interim protection on the first listing, and manage the investigation-cooperation conditions that keep that protection alive.",
+    landscape: [
+      "The mechanics matter more than the panic. Faridabad is a Police Commissionerate — the city is headed by a Commissioner of Police with DCP zones covering NIT, Ballabgarh, and Central Faridabad — so the FIR you fear will typically sit with a police station in one of those zones (or the Ballabgarh sub-division for the southern belt). FIR copies are downloadable from the Haryana Police citizen portal, which lets a lawyer read the allegations and the sections invoked before drafting. The conventional sequence is Sessions Court first: judges at the Sector 12 complex hear anticipatory-bail applications daily, usually call for a police report, and can grant interim protection from arrest on the very first listing while the matter is argued.",
+      "Two statutory shields run alongside. For offences punishable up to seven years, Section 35(3) BNSS (the old Section 41A CrPC) requires police to issue a notice of appearance rather than arrest, and the Supreme Court's Arnesh Kumar guidelines make a mechanical arrest in such cases open to challenge — a lawyer often responds to the 35(3) notice and pursues anticipatory bail in parallel. When bail is granted, expect the standard conditions: join the investigation whenever called, do not contact or influence witnesses, and do not leave India without leave of the court. Breach of these is the usual route by which protection gets cancelled, so compliance is part of the strategy, not an afterthought.",
+      "Faridabad's geography creates a distinctive wrinkle: residents routinely face FIRs registered across the border in Delhi or UP, and outsiders face Faridabad FIRs. Following Priya Indoria (2023), the Sessions Court at Faridabad can grant short transit anticipatory bail — time-limited protection that lets you travel and apply before the court with jurisdiction over the outside-state FIR. The matters that dominate the anticipatory-bail board here are matrimonial complaints under Section 85 BNS (old 498A IPC), business-cheating complaints under Section 318 BNS arising from Faridabad's dense trade and industrial disputes, and property or possession scuffles. If arrest happens despite everything, regular bail under Sections 480/483 BNSS lies before the same complex, and default bail under Section 187(3) BNSS remains the fallback if the chargesheet is delayed.",
+    ],
+    courtsForThisMatter: [
+      "Sessions Court, Faridabad District Court complex, Sector 12 (primary forum for S.482 BNSS applications)",
+      "Punjab & Haryana High Court, Chandigarh (concurrent jurisdiction; second attempt after Sessions rejection)",
+      "Magistrate Courts, Faridabad (S.35(3) BNSS notice compliance; remand; regular bail in magistrate-triable offences)",
+      "Sessions Court, Faridabad — transit anticipatory bail for FIRs registered in Delhi/UP (Priya Indoria route)",
+      "Ballabgarh sub-divisional courts (matters arising from Ballabgarh-zone police stations)",
+      "Punjab & Haryana High Court (S.528 BNSS quashing of the FIR itself, where settlement or no offence is made out)",
+    ],
+    caseTypes: [
+      { title: "Anticipatory Bail (S.482 BNSS)", desc: "Drafting and arguing the application before the Faridabad Sessions Court, with a push for interim protection on the first listing." },
+      { title: "Matrimonial FIRs (S.85 BNS / 498A)", desc: "Protection for husbands and in-laws named in dowry-cruelty complaints — the single largest category on Faridabad's anticipatory-bail board." },
+      { title: "Business & Cheating Complaints (S.318 BNS)", desc: "Trade-dispute FIRs dressed as cheating — common in Faridabad's industrial and trading belts — where civil-dispute arguments carry real weight." },
+      { title: "Transit Anticipatory Bail", desc: "Short-duration protection from the Faridabad Sessions Court for an FIR registered in Delhi or UP, so you can apply before the jurisdictional court without arrest en route." },
+      { title: "S.35(3) BNSS Notice Response", desc: "Appearing on and replying to police notices of appearance (old 41A) for ≤7-year offences, invoking Arnesh Kumar against mechanical arrest." },
+      { title: "High Court Applications", desc: "Fresh or successive anticipatory-bail applications before the Punjab & Haryana High Court at Chandigarh after a Sessions rejection." },
+      { title: "Regular & Default Bail", desc: "S.480/483 BNSS bail after arrest before the Sector 12 complex, and default bail under S.187(3) BNSS when the chargesheet misses its deadline." },
+      { title: "Cancellation Defence & Condition Modification", desc: "Opposing cancellation applications and seeking relaxation of travel or reporting conditions as the investigation progresses." },
+    ],
+    faqs: [
+      {
+        question: "Where do I apply for anticipatory bail in Faridabad?",
+        answer:
+          "The Sessions Court at the Faridabad District Court complex in Sector 12 is the conventional first forum. The Punjab & Haryana High Court at Chandigarh has concurrent jurisdiction under Section 482 BNSS, but courts generally expect you to move the Sessions Court first; a Sessions rejection then lets you apply afresh at Chandigarh. Your lawyer will first pull the FIR — usually available online through the Haryana Police portal — to confirm which police station and zone the case sits in.",
+      },
+      {
+        question: "Is anticipatory bail even available in Haryana?",
+        answer:
+          "Yes, fully. Haryana never removed the remedy — unlike UP, which deleted the old Section 438 CrPC for decades — so Section 482 BNSS operates in Faridabad exactly as the statute reads. This matters in the NCR: a Faridabad resident facing a UP FIR needs to understand a different bail landscape across the border, which is where transit anticipatory bail from the Faridabad Sessions Court comes in.",
+      },
+      {
+        question: "How fast can I get protection from arrest?",
+        answer:
+          "Often on the first listing. The Faridabad Sessions Court routinely grants interim protection from arrest while it calls for a police report and hears the application fully — for urgent matters an application can be listed within a day or two of the FIR surfacing. For offences punishable up to seven years, a Section 35(3) BNSS notice plus the Arnesh Kumar guidelines add a second layer: police are expected to issue a notice of appearance, not arrest.",
+      },
+      {
+        question: "The FIR against me is in Delhi or UP, but I live in Faridabad. What do I do?",
+        answer:
+          "Apply for transit anticipatory bail before the Sessions Court at Faridabad. Following the Supreme Court's Priya Indoria decision (2023), a Sessions Court where the applicant resides can grant short, time-bound protection from arrest for an FIR registered in another state — enough to travel and file a full anticipatory-bail application before the court that actually has jurisdiction. The reverse also works for outsiders facing Faridabad FIRs.",
+      },
+      {
+        question: "What conditions come with anticipatory bail in Faridabad?",
+        answer:
+          "The standard trio: join the investigation whenever the investigating officer calls you, do not contact or attempt to influence witnesses or complainants, and do not leave India without the court's permission. Courts may add local reporting or a bond. Breaching a condition is the main ground on which the prosecution seeks cancellation, so treat compliance — including actually appearing at the police station in the correct DCP zone (NIT, Ballabgarh, or Central) — as part of the defence.",
+      },
+      {
+        question: "What if I am arrested before the application is heard?",
+        answer:
+          "The remedy shifts to regular bail under Sections 480/483 BNSS before the magistrate or Sessions Court at the same Sector 12 complex — anticipatory bail becomes infructuous once you are in custody. If the police fail to file the chargesheet within the statutory period (60 or 90 days depending on the offence), default bail under Section 187(3) BNSS becomes an absolute right. A Faridabad lawyer will keep both tracks ready from day one.",
+      },
+    ],
+    localNotes: [
+      "Faridabad is a Police Commissionerate: FIRs sit with police stations under the NIT, Ballabgarh, or Central DCP zones (with the Ballabgarh sub-division covering the southern belt), and copies are usually downloadable from the Haryana Police citizen portal before you ever visit a thana.",
+      "The Sessions Court at Sector 12 is the working forum — interim protection is realistically available on the first listing — with the Punjab & Haryana High Court at Chandigarh as the concurrent and second-attempt court.",
+      "Cross-border FIRs are a Faridabad speciality: transit anticipatory bail under the Priya Indoria framework lets the local Sessions Court protect you long enough to face a Delhi or UP FIR before the right court.",
+    ],
+  },
+
+  // ──────────────── FARIDABAD × MUTUAL CONSENT DIVORCE (S.13B HMA) ────────────────
+  "faridabad__mutual-consent-divorce": {
+    lead:
+      "Mutual consent divorce under Section 13B of the Hindu Marriage Act (or Section 28 of the Special Marriage Act for civil marriages) is the fastest and least damaging way for a Faridabad couple to separate — a two-motion procedure before the Family Court at the Faridabad District Court complex, Sector 12, that can conclude in as little as a single stretch if the six-month cooling-off is waived. NyaySevak connects you with Bar-Council-verified Faridabad divorce lawyers who draft a watertight settlement deed, structure alimony payments so neither side is exposed if consent is withdrawn, and wind up every connected case — maintenance, DV Act, 498A — in the same settlement.",
+    landscape: [
+      "Jurisdiction first: a Section 13B petition can be filed where the marriage was solemnised, where the husband and wife last resided together, or where the wife currently resides. Because so many couples married elsewhere have set up their matrimonial home in Faridabad's sectors and NIT colonies, the last-residence ground brings most local couples before the Family Court at Sector 12. The petition is joint, supported by affidavits, marriage proof, address proof, and photographs, and pleads one year of separation plus a genuine failure of the marriage. The first motion records both parties' statements; the second motion — after the statutory interregnum — records them again, and the decree follows.",
+      "The six-month cooling-off between motions is no longer rigid. In Amardeep Singh v. Harveen Kaur (2017) the Supreme Court held the period is directory, and the Faridabad Family Court can waive it where the couple has already been separated well over a year, mediation has failed, all disputes over alimony, streedhan, and custody are genuinely settled, and further waiting would only prolong agony. A properly drafted waiver application at the first motion is now routine practice. The real risk in a 13B is withdrawal of consent: Sureshta Devi holds that either spouse can resile any time before the decree, so a competent lawyer stages the settlement — part payment at first motion, balance at second, streedhan and custody terms recorded in the deed — so neither side pays everything before the divorce is irreversible.",
+      "A Faridabad mutual-consent settlement rarely travels alone. The same deed should wind up Section 144 BNSS maintenance proceedings (the old 125 CrPC), Domestic Violence Act cases pending before Faridabad magistrates, and any 498A/Section 85 BNS FIR — the FIR requiring quashing before the Punjab & Haryana High Court on the strength of the settlement, on the Gian Singh line of cases. The court-annexed Mediation & Conciliation Centre at the Faridabad district court is the standard machine for converting a contested divorce, or a bundle of cross-cases, into a clean 13B package. For NRI spouses, local practice permits appearance through video-conferencing or a power of attorney at intermediate stages, but courts generally insist both spouses appear (physically or by VC as permitted) for the recording of statements at both motions — a scheduling detail your lawyer must plan around flight dates.",
+    ],
+    courtsForThisMatter: [
+      "Family Court, Faridabad District Court complex, Sector 12 (S.13B HMA and S.28 SMA petitions)",
+      "Mediation & Conciliation Centre, Faridabad district court (converting contested matters into mutual consent)",
+      "Magistrate Courts, Faridabad (winding up S.144 BNSS maintenance and DV Act proceedings on settlement)",
+      "Punjab & Haryana High Court, Chandigarh (quashing of 498A/S.85 BNS FIRs on settlement — Gian Singh line)",
+      "Punjab & Haryana High Court (appeals and transfer petitions in matrimonial matters)",
+      "Lok Adalats at the Faridabad complex (recording matrimonial settlements attached to the divorce package)",
+    ],
+    caseTypes: [
+      { title: "Joint 13B Petition & Two Motions", desc: "Drafting and filing the joint petition, first-motion statements, and second-motion decree proceedings before the Sector 12 Family Court." },
+      { title: "Cooling-Off Waiver", desc: "Amardeep Singh applications to waive the six-month gap where separation is long, mediation is exhausted, and all terms are settled." },
+      { title: "Settlement Deed Drafting", desc: "One comprehensive deed covering alimony, streedhan return, child custody and visitation, and withdrawal of every pending case." },
+      { title: "Staged-Payment Protection", desc: "Structuring alimony in tranches tied to the first and second motions so a Sureshta Devi consent-withdrawal cannot strand a paying spouse." },
+      { title: "Winding Up Connected Cases", desc: "Closing S.144 BNSS maintenance, DV Act matters before Faridabad magistrates, and 498A/S.85 BNS FIRs via High Court quashing." },
+      { title: "Mediation-to-13B Conversion", desc: "Using the court-annexed Mediation & Conciliation Centre to turn contested divorces and cross-FIRs into a single mutual-consent package." },
+      { title: "NRI & Outstation Spouse Divorces", desc: "Video-conference appearances and power-of-attorney arrangements per local practice, with both statements scheduled around travel." },
+      { title: "Special Marriage Act Divorces", desc: "Mutual consent under S.28 SMA for couples who married civilly or across religions — same two-motion architecture." },
+    ],
+    faqs: [
+      {
+        question: "Where do we file a mutual consent divorce in Faridabad?",
+        answer:
+          "Before the Family Court at the Faridabad District Court complex in Sector 12. Jurisdiction lies where the marriage took place, where you last lived together as a couple, or where the wife now resides — so couples who married in another city but made their home in Faridabad file locally on the last-residence ground. The petition is joint, so both spouses sign and both appear for statements.",
+      },
+      {
+        question: "How long does a mutual consent divorce take in Faridabad?",
+        answer:
+          "The statute contemplates two motions separated by six to eighteen months, but the six-month cooling-off is waivable after Amardeep Singh v. Harveen Kaur (2017) where the separation already exceeds a year, mediation has failed, and every issue — alimony, streedhan, custody — is genuinely settled. With a waiver granted, Faridabad couples have completed the process in a matter of weeks; without it, expect roughly seven to eight months end to end.",
+      },
+      {
+        question: "Can my spouse back out after we file?",
+        answer:
+          "Yes — under Sureshta Devi, either spouse can withdraw consent at any time before the decree, and the court cannot force the divorce through. This is why the settlement must be staged: typically part of the agreed amount changes hands at the first motion and the balance only at the second, with streedhan, custody, and case-withdrawal terms written into the deed. Structured properly, neither side is left having paid everything for a divorce that never happened.",
+      },
+      {
+        question: "We also have maintenance, DV, and 498A cases running. What happens to those?",
+        answer:
+          "A well-drafted settlement winds all of them up. Maintenance under Section 144 BNSS and DV Act cases before Faridabad magistrates are withdrawn or closed on the settlement's terms. A 498A/Section 85 BNS FIR cannot simply be withdrawn — it must be quashed by the Punjab & Haryana High Court at Chandigarh on the basis of the settlement, following the Gian Singh line of authority. Your lawyer should sequence the quashing alongside the second motion so nothing is left hanging.",
+      },
+      {
+        question: "One of us lives abroad. Do we both have to come to Faridabad?",
+        answer:
+          "Statements at both motions ordinarily require both spouses, but local practice accommodates NRI parties: courts have permitted appearance through video-conferencing, and a power of attorney can handle intermediate procedural steps. What cannot be delegated wholesale is the recording of consent itself, so the realistic plan is either two short India trips timed to the motions or a VC application supported by good cause — your lawyer will schedule the motions around travel.",
+      },
+      {
+        question: "What documents do we need, and can mediation help us get to mutual consent?",
+        answer:
+          "Core documents: proof of marriage (certificate, cards, or ceremony photographs), address proof for both spouses, photographs, and the signed settlement deed; separation and settlement details go on affidavit. If you are not yet agreed, the Mediation & Conciliation Centre at the Faridabad district court exists precisely to convert contested divorces and bundles of cross-cases into an agreed 13B package — many Faridabad mutual consents start as referrals from a contested matter. Start with a free case assessment to map your terms before filing.",
+      },
+    ],
+    localNotes: [
+      "The Family Court at Sector 12 handles all Faridabad mutual-consent matters; couples who married elsewhere but last lived together in Faridabad file locally on the last-residence ground under S.13B HMA (or S.28 SMA for civil marriages).",
+      "The six-month cooling-off is waivable on the Amardeep Singh criteria, but the Sureshta Devi withdrawal risk means alimony should always be staged across the two motions — never paid in full up front.",
+      "A complete Faridabad settlement package pairs the 13B decree with closure of S.144 BNSS maintenance and DV Act cases before local magistrates and quashing of any 498A/S.85 BNS FIR at the Punjab & Haryana High Court, usually brokered through the district court's Mediation & Conciliation Centre.",
+    ],
+  },
+
 };

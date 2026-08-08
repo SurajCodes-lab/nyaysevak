@@ -51,9 +51,13 @@ export async function generateMetadata(
   // Week 15: description now leads with the "near you" + advocate variant that
   // the title dropped, then folds in the page-specific lead.
   const descAltKw = label.keyword.replace("lawyer", "advocate");
+  // Week 23 (GSC-driven): fee-intent queries ("<matter> lawyer fees in <city>")
+  // are the site's top click driver (15 of 101 clicks, avg pos 9.6). The
+  // description now answers that intent BCI-safely — transparency language
+  // only, never fee amounts.
   const description = content
-    ? `Find a verified ${label.keyword} / ${descAltKw} near you in ${city.name}, ${city.state}. ${content.lead.slice(0, 105).trimEnd()}… Free case assessment available.`
-    : `Find the best ${label.keyword}s near you in ${city.name}, ${city.state}. Verified advocates for ${label.long.toLowerCase()} matters across ${city.highCourt.name} and district courts. Free case assessment available. Call +91-9868666715.`;
+    ? `Find a verified ${label.keyword} / ${descAltKw} near you in ${city.name}, ${city.state}. ${content.lead.slice(0, 90).trimEnd()}… Free case assessment; fees quoted transparently upfront.`
+    : `Find the best ${label.keyword}s near you in ${city.name}, ${city.state}. Verified advocates for ${label.long.toLowerCase()} matters across ${city.highCourt.name} and district courts. Free case assessment; fees quoted transparently upfront. Call +91-9868666715.`;
 
   const cityLower = city.name.toLowerCase();
   const stateLower = city.state.toLowerCase();

@@ -136,6 +136,10 @@ export const glossaryTerms: GlossaryTerm[] = [
   },
   {
     slug: "compoundable-offence",
+    inPractice:
+      "Section 359 BNSS carries two tables that decide everything: offences compoundable by the victim alone (simple hurt, defamation, criminal trespass) and offences compoundable only with the court's permission (voluntarily causing hurt by dangerous means, criminal breach of trust, cheating). Compounding is the victim's act, not the accused's — the complainant applies, the court verifies the settlement is voluntary, and the effect is an acquittal, not merely a closure. Cheque-bounce cases under Section 138 NI Act are separately compoundable under Section 147 of that Act at any stage, which is why Lok Adalats dispose of them in bulk. Where an offence is non-compoundable but the parties have genuinely settled — the 498A/matrimonial pattern — the route is not compounding at all but quashing before the High Court under Section 528 BNSS on the Gian Singh line.",
+    workedExample:
+      "A dispute between two Faridabad shop neighbours ends in a scuffle and an FIR for voluntarily causing hurt. A year into the trial, elders broker peace: the complainant files a compounding application under Section 359 BNSS with the settlement recorded, and because the offence sits in the with-permission table, the magistrate examines both parties to confirm the compromise is voluntary and permits it — the accused stands acquitted the same day. His cousin's 498A case, settled the same season, needed a different door entirely: cruelty is non-compoundable, so the family took the settlement deed to the High Court for quashing instead.",
     term: "Compoundable Offence",
     shortDefinition:
       "Offence which the complainant and accused can settle (compound) under Section 359 BNSS (formerly Section 320 CrPC), terminating prosecution. Categorised as compoundable with or without court permission.",
@@ -147,6 +151,10 @@ export const glossaryTerms: GlossaryTerm[] = [
   },
   {
     slug: "summons-warrant-cases",
+    inPractice:
+      "The two-year punishment line does real work in practice. In a summons case (offences up to two years) there is no formal charge and no discharge stage — the substance of the accusation is put to the accused, and the trial is compact; Section 138 NI Act cheque cases run on this track, with summary-trial directions compressing it further. In a warrant case (above two years), the accused gets a discharge stage before charge is framed — the first genuine opportunity to end the case by showing, from the prosecution's own papers, that no offence is made out. That difference drives strategy: in warrant cases the defence front-loads effort into discharge arguments; in summons cases the pressure points are the plea, cross-examination of the complainant, and settlement. Magistrates can also convert a summons case into a warrant-case procedure where the interests of justice require.",
+    workedExample:
+      "Two cases from one soured Ghaziabad supply deal illustrate the fork. The buyer's bounced cheque produces a Section 138 complaint — a summons case: no charge framing, notice of accusation, evidence on affidavit, and a settlement at Lok Adalat inside a year. The supplier's rival FIR alleging cheating under Section 318 BNS (punishable up to seven years) is a warrant case — and dies precisely at the stage the summons case lacks: at charge framing, the defence shows the prosecution's own documents record a delivery dispute, not dishonest inducement, and the magistrate discharges the accused before a single witness is called.",
     term: "Summons Case / Warrant Case",
     shortDefinition:
       "Procedural classification under Section 261 BNSS — summons cases (offences punishable up to 2 years) follow simpler procedure; warrant cases (offences punishable beyond 2 years) follow elaborate trial under Sections 263-274 BNSS.",
@@ -190,6 +198,10 @@ export const glossaryTerms: GlossaryTerm[] = [
   },
   {
     slug: "written-statement",
+    inPractice:
+      "Two disciplines decide most written statements. The first is the calendar: 30 days from summons, extendable to 90 on costs — and in commercial suits the Supreme Court's SCG Contracts ruling makes 120 days an absolute guillotine, after which the right to file is forfeited and the suit effectively proceeds on the plaint alone. The second is specificity: Order VIII Rule 5 deems every allegation not specifically denied to be admitted, so a lazy “all para wise allegations are denied” draft concedes the case it thinks it is defending. The WS is also the only vehicle for affirmative defences — limitation, jurisdiction, accord and satisfaction must be pleaded here or nowhere — and for the counter-claim, which converts a defence into an attack and survives even if the plaintiff withdraws.",
+    workedExample:
+      "A Delhi trading firm is sued in a commercial suit for ₹35 lakh on running-account invoices. Its counsel files the written statement on day 87 — inside the outer limit — with paragraph-wise denials, a specific plea that two invoices were never delivered (annexing the transporter's records), and a ₹9 lakh counter-claim for rejected goods. The plaintiff's application for summary judgment fails because the specific denials raise triable issues. The co-defendant who filed a bare general denial on day 130 fares differently: his WS is refused as time-barred under SCG Contracts, and the case against him proceeds undefended.",
     term: "Written Statement (WS)",
     shortDefinition:
       "Pleading filed by the defendant in response to a plaint, under Order VIII CPC. Must be filed within 30 days of summons (extendable to 90 days) and contains specific denials and affirmative defences.",
@@ -216,6 +228,10 @@ export const glossaryTerms: GlossaryTerm[] = [
   },
   {
     slug: "ex-parte-decree",
+    inPractice:
+      "An ex parte decree is a real decree — executable, attachable, enforceable — so the response clock matters more than the merits. The set-aside application under Order IX Rule 13 CPC must come within 30 days of the decree (or of knowledge of it, where summons was never duly served), and must show sufficient cause for the non-appearance: defective service is the classic ground, which is why the plaintiff's service record — who received the summons, at which address, with what proof — decides most of these applications. Courts routinely impose terms while restoring: costs, deposit of part of the decretal amount, or an undertaking not to seek adjournments. The strategic alternative is a first appeal against the decree itself, and the two routes can run in parallel. For plaintiffs, the lesson is the mirror image: build the service record meticulously, because a decree obtained on shaky substituted service is a decree waiting to be reopened.",
+    workedExample:
+      "A Ghaziabad businessman discovers a ₹14 lakh ex parte money decree against him only when the execution notice arrives to attach his shop — the suit summons had gone to a factory address he vacated three years earlier, and 'service' was completed by affixation there. His Order IX Rule 13 application, filed within 30 days of knowledge, annexes the rent deed and electricity records proving the address change predated the suit. The court sets aside the decree on terms — ₹2 lakh deposited in court and costs paid — and the suit is restored to be fought on merits. The deposit stings, but an unchallenged decree at execution stage would have cost the shop.",
     term: "Ex-parte Decree",
     shortDefinition:
       "Decree passed where the defendant fails to appear despite proper service. Set aside under Order IX Rule 13 CPC if the defendant shows sufficient cause for non-appearance or improper service.",
@@ -336,6 +352,10 @@ export const glossaryTerms: GlossaryTerm[] = [
   },
   {
     slug: "transfer-of-property-act",
+    inPractice:
+      "Four provisions carry the Act's practical weight in property work. Section 54: sale of immovable property worth ₹100 or more is completed only by a registered sale deed — possession plus full payment plus a notarised agreement still passes no title. That is why GPA transactions are not sales: the Supreme Court in Suraj Lamp closed the GPA/agreement-to-sell/will route, and such holdings can be regularised only by a fresh registered conveyance from the true owner. Section 53A gives the shield version: a transferee in possession under a written agreement who has performed his part can defend that possession even without registration — a defence, never a source of title. Section 52 (lis pendens) makes purchases of property under litigation subject to the suit's outcome, and Section 106 governs lease terminations, where the notice's form and period decide eviction suits before they begin.",
+    workedExample:
+      "A Delhi buyer holds a 2009-vintage GPA-plus-agreement 'purchase' of a plot, with full payment and continuous possession. When he tries to sell, the title search stops the deal: post-Suraj Lamp, his papers convey no title. The original owner, traced after months, demands a premium to execute a registered conveyance. Meanwhile a rival claimant's suit against the owner tempts a quick unregistered exit — but any transfer now would be caught by Section 52 lis pendens. The eventual solution is the only clean one: a registered sale deed from the owner (at negotiated cost), executed after the rival suit is compromised on record. Section 53A had protected his possession for fifteen years; only registration finally gave him property.",
     term: "Transfer of Property Act 1882",
     shortDefinition:
       "Central statute governing transfer of immovable property between living persons. Defines sale, mortgage, lease, exchange, and gift, and lays down doctrines of lis pendens, part performance, and rule against perpetuities.",
@@ -435,6 +455,10 @@ export const glossaryTerms: GlossaryTerm[] = [
   },
   {
     slug: "memorandum-articles-association",
+    inPractice:
+      "The MoA fixes what the company may do (objects, capital, registered-office state); the AoA fixes how it is run (board powers, share transfers, meetings, founder rights). Most incorporations paste Table F articles untouched — and pay for it at the first funding round or the first founder fight, because the rules that matter (transfer restrictions, ROFR, drag/tag rights, board-seat entitlements, deadlock resolution) exist only if drafted in. The load-bearing practice point: rights written into a shareholders' agreement but not into the articles bind only the signatories — against the company and incoming shareholders, courts enforce the articles, so every SHA negotiation should end with a conforming AoA amendment by special resolution. Alterations are ROC-filed (MGT-14); object-clause changes need a special resolution, and entrenchment provisions can make chosen articles amendable only by stricter thresholds.",
+    workedExample:
+      "Two co-founders of a Faridabad tooling startup sign an SHA giving each a right of first refusal over the other's shares — but never amend the Table F articles. Years later one founder sells to an outside investor overnight; the ROFR claim against the transfer fails because the articles, which the company and the transferee are bound by, contain no such restriction — the SHA yields only a damages claim against the seller. The investor's own counsel does it properly at the next round: the new SHA's transfer restrictions, board rights, and entrenched protective provisions are written into amended articles and filed with the ROC, making them enforceable against everyone who ever touches the shares.",
     term: "MoA / AoA (Memorandum and Articles of Association)",
     shortDefinition:
       "Constitutional documents of a company. MoA defines objects, capital, and external relationships. AoA governs internal management, share rights, board composition, and meetings.",
@@ -493,6 +517,10 @@ export const glossaryTerms: GlossaryTerm[] = [
   // ========== Contract & Commercial ==========
   {
     slug: "indian-contract-act",
+    inPractice:
+      "Three provisions do most of the Act's commercial work. Section 73 gives compensation for loss naturally arising from breach — but only loss actually proved, with a duty to mitigate; Section 74 caps liquidated-damages clauses at reasonable compensation, so the ₹10-lakh-per-day penalty in the contract is a ceiling for negotiation, not an entitlement (Kailash Nath v. DDA is the governing statement). Section 27 renders agreements in restraint of trade void — which is why post-employment non-compete clauses in Indian employment contracts are generally unenforceable however solemnly signed, while confidentiality and (narrowly drawn) non-solicitation obligations survive. Around these sit the daily disciplines: free consent (coercion and undue influence unwind contracts signed under pressure), and the rule that a contract can be terminated only per its own notice clause — termination in breach of the clause is itself a breach.",
+    workedExample:
+      "A Gurgaon IT firm sues a departed engineer on a two-year non-compete and simultaneously invokes the contract's ₹15 lakh liquidated-damages clause. The non-compete claim fails at the threshold — Section 27 makes a post-employment restraint void, and the injunction application is dismissed. The damages claim survives but shrinks: under Section 74 the firm must still prove actual loss, and its evidence supports only the cost of one delayed project deliverable. It recovers ₹2.1 lakh, not ₹15 lakh. The clause that holds is the narrowly drafted non-solicitation covenant — the engineer is restrained from poaching the two named clients he serviced, because that restraint protects goodwill rather than barring him from his trade.",
     term: "Indian Contract Act 1872",
     shortDefinition:
       "Foundational contract statute. Defines agreement, contract, consideration, capacity, free consent, and lawful object. Sections 73-75 govern remedies for breach.",
@@ -575,6 +603,10 @@ export const glossaryTerms: GlossaryTerm[] = [
   },
   {
     slug: "examination-cross-examination",
+    inPractice:
+      "In civil trials the examination-in-chief now arrives as an affidavit (Order XVIII Rule 4 CPC), so the live courtroom event is really the cross-examination — and cases are decided by what a witness concedes there, not by what the affidavit asserted. Cross permits leading questions and ranges over credibility as well as facts; its sharpest tool is Section 148 BSA-style confrontation with prior inconsistent statements — the witness's own earlier affidavit, police statement, reply notice, or WhatsApp messages. Practical disciplines: put your case to the opposing witness (a fact never suggested in cross is treated as accepted), keep questions short and closed, and know when to stop — the over-long cross that lets a witness repair damage is a courtroom classic. Re-examination is confined to explaining matters arising in cross; it cannot introduce a fresh story.",
+    workedExample:
+      "In a Section 138 trial, the drawer's defence is that the cheque was a blank security instrument misused by the supplier. In cross-examination the complainant's counsel gets three admissions in ten minutes: the signature is the drawer's, the goods covered by the invoices were received and never returned, and the statutory demand notice went unanswered for months. Each admission is a prior-conduct contradiction of the security-cheque story. The defence's own witness stage cannot undo it — the presumption under Section 139 NI Act, now fortified by the admissions, carries the conviction. The case turned on ten minutes of cross, not on either side's paperwork.",
     term: "Examination, Cross-Examination, Re-Examination",
     shortDefinition:
       "Three-stage witness examination procedure. Examination-in-chief is led by the calling party; cross-examination by the opposing party tests the testimony; re-examination by the calling party clarifies points raised in cross.",
@@ -586,6 +618,10 @@ export const glossaryTerms: GlossaryTerm[] = [
   },
   {
     slug: "burden-of-proof-criminal-civil",
+    inPractice:
+      "The two standards produce practical consequences people rarely expect. First, parallel proceedings can diverge lawfully: an acquittal in the criminal case (proof beyond reasonable doubt not met) does not defeat the civil claim on the same facts, which needs only a preponderance — so a director acquitted of cheating can still lose the recovery suit. Second, statutes reverse the burden where the legislature wants convictions easier: Section 139 NI Act presumes a bounced cheque was issued for a legally enforceable debt, so in cheque trials it is the accused who must raise a probable defence (Rangappa v. Mohan) — on the civil standard of preponderance, not beyond reasonable doubt. Similar reverse-onus architecture runs through the NDPS Act, PMLA, and the dowry-death presumption. Knowing who must prove what, to which standard, is the first strategic question in any dispute that straddles the criminal-civil line.",
+    workedExample:
+      "A supplier runs a Section 138 prosecution and a civil recovery suit against the same defaulting buyer. In the criminal case the Section 139 presumption operates: the buyer must probabilise his story that the cheque was security — his bare denial, with no reply to the statutory notice and no supporting ledger, fails the preponderance threshold and conviction follows. In a parallel cheating FIR over the same deal, the same buyer is discharged — dishonest intention at inception cannot be proved beyond reasonable doubt from a commercial paper trail. Same facts, three proceedings, three burdens — and the outcomes differ exactly as the standards predict.",
     term: "Burden of Proof — Criminal vs Civil",
     shortDefinition:
       "Criminal: prosecution must prove guilt beyond reasonable doubt. Civil: plaintiff must prove case on preponderance of probabilities (more likely than not).",
@@ -788,6 +824,10 @@ export const glossaryTerms: GlossaryTerm[] = [
   },
   {
     slug: "it-act-section-66",
+    inPractice:
+      "The provisions that matter in everyday cyber-fraud practice are Section 66C (identity theft — using someone's password, OTP, or electronic signature) and Section 66D (cheating by personation using a computer resource — the fake-officer video call, the phishing link, the UPI fraud), usually charged alongside cheating under Section 318 BNS. Speed decides recovery: report within hours on the 1930 cyber helpline or cybercrime.gov.in and the system can freeze the money mid-hop between mule accounts; wait a week and the trail is dry. The complaint route runs cyber cell → FIR → bank lien on the frozen amounts → magistrate-supervised release back to the victim. For the accused side, these offences are bailable in most configurations, and the defence work is largely forensic — device seizure memos, IP logs, and the chain of custody of electronic evidence.",
+    workedExample:
+      "A Noida professional clicks a courier-notification link and loses ₹3.8 lakh through three instant UPI debits. She calls 1930 within the hour and files on cybercrime.gov.in the same evening; the freeze request catches ₹2.6 lakh sitting in two mule accounts before it moves again. The cyber cell registers an FIR under Sections 66C/66D IT Act and Section 318 BNS, and three months later the magistrate orders the frozen amounts released to her against indemnity. The uncaught ₹1.2 lakh had left the banking system within forty minutes of the fraud — the case was won and lost in the first hour, not in court.",
     term: "IT Act 2000 — Sections 66 and 66A",
     shortDefinition:
       "Section 66 IT Act 2000 criminalises computer-related offences (hacking, identity theft, cyberstalking). Section 66A was struck down in Shreya Singhal v. Union of India (2015) for unconstitutional vagueness.",
