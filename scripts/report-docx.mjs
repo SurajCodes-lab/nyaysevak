@@ -251,9 +251,10 @@ function cover(meta) {
     line("DATE", { caps: true, size: sz(8), color: GOLD, after: 40 }),
     line(meta.date, { after: 220 }),
     line("PREPARED BY", { caps: true, size: sz(8), color: GOLD, after: 40 }),
-    line(meta.by, { after: 220 }),
-    line("STATUS", { caps: true, size: sz(8), color: GOLD, after: 40 }),
-    line(meta.status, { after: 700 }),
+    line(meta.by, { after: meta.status ? 220 : 700 }),
+    ...(meta.status
+      ? [line("STATUS", { caps: true, size: sz(8), color: GOLD, after: 40 }), line(meta.status, { after: 700 })]
+      : []),
     new Paragraph({
       border: { top: { style: BorderStyle.SINGLE, size: 6, color: RULE, space: 10 } },
       spacing: { before: 200 },
@@ -282,9 +283,17 @@ if (!week) {
   console.error("usage: node scripts/report-docx.mjs <weekNN> [--out file.docx]");
   process.exit(1);
 }
+// --client produces the version that goes to the client: it reads the separate
+// client-facing narrative and omits the Change Log and New Page Index
+// appendices. Those appendices, and the internal report they accompany, carry
+// commit hashes, branch names, build output and source file paths — engineering
+// records that have no place in a client document. The client narrative is
+// authored separately rather than machine-redacted, because a client report is
+// written for a different reader, not the internal one with words removed.
+const CLIENT = process.argv.includes("--client");
 const outIdx = process.argv.indexOf("--out");
 const dir = path.resolve(week);
-const reportPath = path.join(dir, `${week}_seo_report.md`);
+const reportPath = path.join(dir, `${week}_${CLIENT ? "client" : "seo"}_report.md`);
 if (!fs.existsSync(reportPath)) {
   console.error(`not found: ${reportPath}`);
   process.exit(1);
@@ -308,7 +317,8 @@ const meta = {
   sub: deckIdx > -1 ? (allLines[deckIdx + 1] ?? "").trim() : "",
   date: dateM?.[1] ?? new Date().toISOString().slice(0, 10),
   by: (byM?.[1] ?? "SEO Architecture Team").trim(),
-  status: "Committed, not deployed",
+  // Delivery state is an internal engineering fact, not client information.
+  status: CLIENT ? "" : "Committed, not deployed",
 };
 
 // Body starts after the byline, so the title, deck and metadata printed on the
@@ -324,7 +334,7 @@ const readAll = (sub) => {
     .map((f) => ({ name: f, md: fs.readFileSync(path.join(p, f), "utf8") }));
 };
 
-const changes = readAll("changes");
+const changes = CLIENT ? [] : readAll("changes");
 if (changes.length) {
   children.push(...appendixDivider("Change Log", `One entry per site-wide change shipped this cycle (${changes.length} total). Each records what was wrong, what changed, why it helps, and how it was verified.`));
   changes.forEach((c, n) => {
@@ -333,7 +343,7 @@ if (changes.length) {
   });
 }
 
-const pages = readAll("pages");
+const pages = CLIENT ? [] : readAll("pages");
 if (pages.length) {
   children.push(...appendixDivider("New Page Index", `One entry per page created this cycle (${pages.length} total), with its URL, target keywords, coverage, courts, schema, internal links, and measured depth.`));
   pages.forEach((p) => children.push(...convert(p.md)));
@@ -365,7 +375,7 @@ const doc = new Document({
 });
 
 const out = outIdx > -1 ? process.argv[outIdx + 1]
-  : path.join(dir, `NyaySevak-${week.replace(/^week/, "Week-")}-SEO-Report.docx`);
+  : path.join(dir, `NyaySevak-${week.replace(/^week/, "Week-")}-SEO-Report${CLIENT ? "-Client" : ""}.docx`);
 
 const buf = await Packer.toBuffer(doc);
 fs.writeFileSync(out, buf);
