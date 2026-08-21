@@ -11,6 +11,7 @@ import FloatingContactBar from "@/components/FloatingContactBar";
 import EngagementTracker from "@/components/EngagementTracker";
 import ExitIntentModal from "@/components/ExitIntentModal";
 import { ContactModalProvider } from "@/context/ContactModalContext";
+import { sameAs } from "@/lib/business";
 
 // Week 21 CWV: weights trimmed to those actually used — no font-black (900)
 // or font-light (300) class appears anywhere in src, so those files were
@@ -165,14 +166,9 @@ const organizationJsonLd = {
     "Divorce Proceedings India",
   ],
   slogan: "Defending Your Rights",
-  sameAs: [
-    // Week 15: removed twitter/x.com/nyaysevak and linkedin.com/company/nyaysevak
-    // — both return 404 (the profiles do not exist). A sameAs pointing at a dead
-    // URL is a negative trust signal and weakens entity disambiguation. Only
-    // profiles confirmed live (HTTP 200) remain. Re-add others once created.
-    "https://www.facebook.com/nyaysevak",
-    "https://www.instagram.com/nyaysevak",
-  ],
+  // Week 22: sourced from lib/business so the GBP link and socials are
+  // declared once and cannot drift between Organization and per-city schema.
+  sameAs: sameAs(),
   contactPoint: [
     {
       "@type": "ContactPoint",
@@ -372,14 +368,9 @@ const professionalServiceJsonLd = {
       closes: "18:00",
     },
   ],
-  sameAs: [
-    // Week 15: removed twitter/x.com/nyaysevak and linkedin.com/company/nyaysevak
-    // — both return 404 (the profiles do not exist). A sameAs pointing at a dead
-    // URL is a negative trust signal and weakens entity disambiguation. Only
-    // profiles confirmed live (HTTP 200) remain. Re-add others once created.
-    "https://www.facebook.com/nyaysevak",
-    "https://www.instagram.com/nyaysevak",
-  ],
+  // Week 22: sourced from lib/business so the GBP link and socials are
+  // declared once and cannot drift between Organization and per-city schema.
+  sameAs: sameAs(),
 };
 
 export const metadata: Metadata = {

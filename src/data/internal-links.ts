@@ -55,6 +55,21 @@ const cityPracticeItem = (citySlug: string, cps: CityPracticeSlug): RelatedLinkI
   return { label: `${cityPracticeLabels[cps].title} in ${c.name}`, href: `/lawyers/${citySlug}/${cps}` };
 };
 
+// Week 22: city hub -> the district-courts page for that state. The
+// districtCourtsSlug field existed on the City type but was never read
+// anywhere, and its stored values were in the wrong format
+// ("gujarat-district-courts" vs the generated "district-courts-gujarat").
+// Both are now fixed. The link is gated on the slug resolving to a real
+// district-courts page so it can never 404. District-court pages are the
+// thinnest programmatic pages on the site and previously had no inlink at
+// all besides the sitemap, which is what parks them in "Discovered - currently
+// not indexed".
+const districtCourtItem = (c: (typeof cities)[number]): RelatedLinkItem | null => {
+  const slug = c.districtCourtsSlug;
+  if (!slug || !districtCourts.some((d) => d.slug === slug)) return null;
+  return { label: `${c.state} District Courts`, href: `/courts/${slug}` };
+};
+
 const clean = (items: (RelatedLinkItem | null)[], max = 6): RelatedLinkItem[] =>
   items.filter((x): x is RelatedLinkItem => Boolean(x)).slice(0, max);
 
@@ -214,7 +229,7 @@ export function relatedGroupsForCity(citySlug: string): RelatedLinksGroup[] {
     // + 6 matter pages each; a cap of 8 would orphan three matter pages per hub.
     group(`Lawyers in ${c.name} by specialisation`, verticals, 11),
     group("Lawyers in other cities", nearby, 6),
-    group("Local courts", [court], 3)
+    group("Local courts", [court, districtCourtItem(c)], 3)
   );
 }
 

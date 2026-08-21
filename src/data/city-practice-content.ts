@@ -4,6 +4,7 @@
 
 import type { CityPracticeSlug } from "./cities";
 import { cityMatterContent } from "./city-matter-content";
+import { cityPracticeExpansion } from "./city-practice-expansion";
 
 export interface CityPracticeFAQ {
   question: string;
@@ -3043,4 +3044,8 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
   // Noida RERA, Gurgaon company-registration) live in city-matter-content.ts
   // to keep this file from growing further; same shape, same gating.
   ...cityMatterContent,
+
+  // Regional expansion cycle: Greater Noida, Surat, Vadodara, Rajkot,
+  // Gandhinagar, Jodhpur, Udaipur, Kota, Ajmer (45 city × practice entries).
+  ...cityPracticeExpansion,
 };

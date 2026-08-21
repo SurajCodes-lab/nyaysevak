@@ -34,7 +34,7 @@ export const cities: City[] = [
       "Tis Hazari Courts", "Patiala House Courts", "Karkardooma Courts",
       "Saket Courts", "Rohini Courts", "Dwarka Courts",
     ],
-    districtCourtsSlug: "delhi-district-courts",
+    districtCourtsSlug: "district-courts-delhi",
     blurb:
       "India's capital and the seat of the Supreme Court, hosting the country's most active commercial and constitutional litigation ecosystem.",
   },
@@ -59,7 +59,7 @@ export const cities: City[] = [
       "Borivali Court",
       "Thane District & Sessions Court",
     ],
-    districtCourtsSlug: "maharashtra-district-courts",
+    districtCourtsSlug: "district-courts-maharashtra",
     blurb:
       "India's financial capital and home to the Bombay High Court — the leading forum for commercial, corporate, arbitration, and securities litigation.",
   },
@@ -82,7 +82,7 @@ export const cities: City[] = [
       "Magistrate Courts at Halasuru Gate, Jayanagar, Yelahanka",
       "Bangalore Rural District Court",
     ],
-    districtCourtsSlug: "karnataka-district-courts",
+    districtCourtsSlug: "district-courts-karnataka",
     blurb:
       "India's technology capital — a major centre for IT, startups, and IP-driven disputes, served by a fast-moving Karnataka High Court bench.",
   },
@@ -107,7 +107,7 @@ export const cities: City[] = [
       "Chengalpattu District & Sessions Court",
       "Tiruvallur District Court",
     ],
-    districtCourtsSlug: "tamil-nadu-district-courts",
+    districtCourtsSlug: "district-courts-tamil-nadu",
     blurb:
       "South India's largest judicial hub — Madras High Court has original civil jurisdiction and one of the heaviest commercial dockets in the country.",
   },
@@ -130,7 +130,7 @@ export const cities: City[] = [
       "Ranga Reddy District Court at L. B. Nagar",
       "Medchal-Malkajgiri District Court",
     ],
-    districtCourtsSlug: "telangana-district-courts",
+    districtCourtsSlug: "district-courts-telangana",
     blurb:
       "A rapidly growing IT and pharma corridor where cyber, corporate, and real-estate litigation has surged with the city's expansion into HITEC City and the ORR belt.",
   },
@@ -153,7 +153,7 @@ export const cities: City[] = [
       "Metropolitan Magistrate Courts, Shivajinagar",
       "Pimpri-Chinchwad Court, Khadki Cantonment Court",
     ],
-    districtCourtsSlug: "maharashtra-district-courts",
+    districtCourtsSlug: "district-courts-maharashtra",
     blurb:
       "Western India's education and auto-manufacturing hub — Pune's courts handle heavy volumes of commercial, employment, and consumer litigation routed through the Bombay High Court.",
   },
@@ -177,7 +177,7 @@ export const cities: City[] = [
       "Barasat District Court (North 24 Parganas)",
       "Howrah District Court",
     ],
-    districtCourtsSlug: "west-bengal-district-courts",
+    districtCourtsSlug: "district-courts-west-bengal",
     blurb:
       "India's oldest chartered High Court sits in Kolkata — a jurisdiction with deep tradition in commercial, admiralty, testamentary, and constitutional matters.",
   },
@@ -190,7 +190,7 @@ export const cities: City[] = [
     neighbourhoods: [
       "Navrangpura", "Satellite", "Vastrapur", "Bodakdev", "SG Highway",
       "Maninagar", "Chandkheda", "Naranpura", "Thaltej", "Paldi",
-      "Gandhinagar", "Gota", "Bopal", "Prahladnagar",
+      "Shahibaug", "Gota", "Bopal", "Prahladnagar",
     ],
     localBar: "Bar Council of Gujarat",
     highCourt: { name: "Gujarat High Court", slug: "gujarat-high-court" },
@@ -198,9 +198,9 @@ export const cities: City[] = [
       "City Civil & Sessions Court, Bhadra",
       "Metropolitan Magistrate Courts, Gheekanta",
       "Mirzapur Court",
-      "Gandhinagar District & Sessions Court",
+      "Commercial Court, Ahmedabad",
     ],
-    districtCourtsSlug: "gujarat-district-courts",
+    districtCourtsSlug: "district-courts-gujarat",
     blurb:
       "Gujarat's commercial capital — a major centre for corporate, textile, and real-estate matters, with the Gujarat High Court handling high volumes of writ and tax litigation.",
   },
@@ -224,6 +224,7 @@ export const cities: City[] = [
       "Family Court, Jaipur",
       "Motor Accident Claims Tribunal (MACT), Jaipur",
     ],
+    districtCourtsSlug: "district-courts-rajasthan",
     blurb:
       "Rajasthan's capital and the seat of the Rajasthan High Court's Jaipur Bench — a fast-growing centre for real-estate, consumer, family, and commercial litigation.",
   },
@@ -248,6 +249,7 @@ export const cities: City[] = [
       "UP RERA (builder–buyer complaints)",
       "Motor Accident Claims Tribunal (MACT), Gautam Buddh Nagar",
     ],
+    districtCourtsSlug: "district-courts-uttar-pradesh",
     blurb:
       "NCR's fastest-growing real-estate and IT hub — ground zero for builder–buyer (RERA) disputes, with the Gautam Buddh Nagar courts at Surajpur and writs to the Allahabad High Court.",
   },
@@ -271,6 +273,7 @@ export const cities: City[] = [
       "UP RERA (builder–buyer complaints)",
       "Motor Accident Claims Tribunal (MACT), Ghaziabad",
     ],
+    districtCourtsSlug: "district-courts-uttar-pradesh",
     blurb:
       "A major NCR industrial and residential district in Uttar Pradesh — high volumes of cheque-bounce, commercial-recovery and builder–buyer (RERA) matters, heard at the Ghaziabad district courts with writs to the Allahabad High Court.",
   },
@@ -294,6 +297,7 @@ export const cities: City[] = [
       "Family Court, Faridabad",
       "Haryana RERA (Panchkula/Gurugram bench) — builder–buyer complaints",
     ],
+    districtCourtsSlug: "district-courts-haryana",
     blurb:
       "Haryana's largest industrial city and a core NCR market — a hub for manufacturing, labour and commercial-recovery disputes, heard at the Faridabad and Ballabgarh courts with writs to the Punjab & Haryana High Court.",
   },
@@ -317,8 +321,239 @@ export const cities: City[] = [
       "Haryana RERA, Gurugram Bench (builder–buyer complaints)",
       "Motor Accident Claims Tribunal (MACT), Gurugram",
     ],
+    districtCourtsSlug: "district-courts-haryana",
     blurb:
       "India's corporate capital — home to most multinational India headquarters, driving heavy commercial, employment, and real-estate (RERA) litigation, with district courts in Gurugram and writs to the Punjab & Haryana High Court at Chandigarh.",
+  },
+  // ──────────────────────────────────────────────────────────────────────
+  // NCR completion — Greater Noida shares the Gautam Buddh Nagar judiciary
+  // at Surajpur with Noida, so the differentiation here is the AUTHORITY
+  // (GNIDA / YEIDA allotments) rather than the courthouse.
+  // ──────────────────────────────────────────────────────────────────────
+  {
+    slug: "greater-noida",
+    name: "Greater Noida",
+    state: "Uttar Pradesh",
+    geo: { lat: 28.4744, lng: 77.5040 },
+    population: "12 lakh (Gautam Buddh Nagar)",
+    neighbourhoods: [
+      "Alpha", "Beta", "Gamma", "Delta", "Omega",
+      "Pari Chowk", "Knowledge Park", "Techzone IV", "Greater Noida West", "Noida Extension",
+      "Bisrakh", "Kasna", "Surajpur", "Yamuna Expressway (YEIDA)",
+    ],
+    localBar: "Bar Council of Uttar Pradesh",
+    highCourt: { name: "Allahabad High Court", slug: "allahabad-high-court" },
+    districtCourts: [
+      "Gautam Buddh Nagar District & Sessions Court, Surajpur",
+      "Commercial Court, Gautam Buddh Nagar",
+      "Family Court, Surajpur",
+      "UP RERA (Greater Noida project complaints)",
+      "Motor Accident Claims Tribunal (MACT), Gautam Buddh Nagar",
+    ],
+    districtCourtsSlug: "district-courts-uttar-pradesh",
+    blurb:
+      "The NCR's largest planned-development belt — where GNIDA and YEIDA allotment disputes, stalled builder-buyer projects, and UP RERA complaints dominate the litigation mix, all heard at the Gautam Buddh Nagar courts in Surajpur.",
+  },
+
+  // ──────────────────────────────────────────────────────────────────────
+  // GUJARAT — every city writs to the Gujarat High Court at Ahmedabad
+  // (single seat, no benches), so the local differentiation is the district
+  // judiciary and the industry driving the disputes.
+  // ──────────────────────────────────────────────────────────────────────
+  {
+    slug: "surat",
+    name: "Surat",
+    state: "Gujarat",
+    geo: { lat: 21.1702, lng: 72.8311 },
+    population: "75 lakh (metro)",
+    neighbourhoods: [
+      "Adajan", "Vesu", "Piplod", "Athwalines", "Ghod Dod Road",
+      "Katargam", "Varachha", "Udhna", "Pal", "Rander",
+      "Bhatar", "Majura Gate", "Dumas Road", "Sachin GIDC",
+    ],
+    localBar: "Bar Council of Gujarat",
+    highCourt: { name: "Gujarat High Court", slug: "gujarat-high-court" },
+    districtCourts: [
+      "Surat District & Sessions Court",
+      "Chief Judicial Magistrate Court, Surat",
+      "Commercial Court, Surat",
+      "Family Court, Surat",
+      "Labour Court & Industrial Tribunal, Surat",
+    ],
+    districtCourtsSlug: "district-courts-gujarat",
+    blurb:
+      "India's diamond-polishing and man-made-textile capital — an SME-dense economy that generates exceptional volumes of cheque-bounce prosecutions, trade-credit recovery, and partnership disputes.",
+  },
+  {
+    slug: "vadodara",
+    name: "Vadodara",
+    state: "Gujarat",
+    geo: { lat: 22.3072, lng: 73.1812 },
+    population: "22 lakh (metro)",
+    neighbourhoods: [
+      "Alkapuri", "Fatehgunj", "Gotri", "Akota", "Sayajigunj",
+      "Manjalpur", "Karelibaug", "Nizampura", "Subhanpura", "Waghodia Road",
+      "Vasna", "Makarpura", "Race Course", "Chhani",
+    ],
+    localBar: "Bar Council of Gujarat",
+    highCourt: { name: "Gujarat High Court", slug: "gujarat-high-court" },
+    districtCourts: [
+      "Vadodara District & Sessions Court",
+      "Commercial Court, Vadodara",
+      "Family Court, Vadodara",
+      "Labour Court & Industrial Tribunal, Vadodara",
+      "Motor Accident Claims Tribunal (MACT), Vadodara",
+    ],
+    districtCourtsSlug: "district-courts-gujarat",
+    blurb:
+      "Gujarat's petrochemical and heavy-engineering centre — home to a large organised-sector workforce, which makes industrial and employment disputes unusually prominent alongside corporate and property litigation.",
+  },
+  {
+    slug: "rajkot",
+    name: "Rajkot",
+    state: "Gujarat",
+    geo: { lat: 22.3039, lng: 70.8022 },
+    population: "18 lakh (metro)",
+    neighbourhoods: [
+      "Kalawad Road", "University Road", "Race Course", "Gondal Road", "Mavdi",
+      "Nana Mava", "Yagnik Road", "150 Feet Ring Road", "Amin Marg", "Bhaktinagar",
+      "Raiya Road", "Morbi Road", "Kotecha Chowk", "Aji GIDC",
+    ],
+    localBar: "Bar Council of Gujarat",
+    highCourt: { name: "Gujarat High Court", slug: "gujarat-high-court" },
+    districtCourts: [
+      "Rajkot District & Sessions Court",
+      "Commercial Court, Rajkot",
+      "Family Court, Rajkot",
+      "Labour Court, Rajkot",
+      "Motor Accident Claims Tribunal (MACT), Rajkot",
+    ],
+    districtCourtsSlug: "district-courts-gujarat",
+    blurb:
+      "The commercial capital of Saurashtra and the hub of Gujarat's casting, forging, and engineering MSMEs — a proprietor-and-partnership economy where recovery, cheque-bounce, and firm-dissolution disputes dominate.",
+  },
+  {
+    slug: "gandhinagar",
+    name: "Gandhinagar",
+    state: "Gujarat",
+    geo: { lat: 23.2156, lng: 72.6369 },
+    population: "14 lakh (district)",
+    neighbourhoods: [
+      "GIFT City", "Infocity", "Kudasan", "Randesan", "Sargasan",
+      "Raysan", "Sector 11", "Sector 21", "Koba", "Vavol",
+      "Adalaj", "Pethapur", "Sughad", "Chiloda",
+    ],
+    localBar: "Bar Council of Gujarat",
+    highCourt: { name: "Gujarat High Court", slug: "gujarat-high-court" },
+    districtCourts: [
+      "Gandhinagar District & Sessions Court",
+      "Commercial Court, Gandhinagar",
+      "Family Court, Gandhinagar",
+      "Central Administrative Tribunal, Ahmedabad Bench (central service matters)",
+    ],
+    districtCourtsSlug: "district-courts-gujarat",
+    blurb:
+      "Gujarat's administrative capital and the site of GIFT City — India's only operational IFSC — producing a distinctive mix of government-service litigation, land and urban-development disputes, and IFSCA-regulated corporate work.",
+  },
+
+  // ──────────────────────────────────────────────────────────────────────
+  // RAJASTHAN — the state is split between two High Court seats: the
+  // PRINCIPAL seat at Jodhpur and the Jaipur Bench. Which seat hears a writ
+  // depends on the district it arises from, so this is the single most
+  // important local fact on every Rajasthan page.
+  // ──────────────────────────────────────────────────────────────────────
+  {
+    slug: "jodhpur",
+    name: "Jodhpur",
+    state: "Rajasthan",
+    geo: { lat: 26.2389, lng: 73.0243 },
+    population: "15 lakh (metro)",
+    neighbourhoods: [
+      "Ratanada", "Sardarpura", "Shastri Nagar", "Paota", "Chopasni Housing Board",
+      "Basni", "Mandore", "Pal Road", "Banar Road", "High Court Colony",
+      "Jhalamand", "Kudi Bhagtasni", "Bhagat Ki Kothi", "Nai Sarak",
+    ],
+    localBar: "Bar Council of Rajasthan",
+    highCourt: { name: "Rajasthan High Court (Principal Seat, Jodhpur)", slug: "rajasthan-high-court" },
+    districtCourts: [
+      "Jodhpur District & Sessions Court",
+      "Jodhpur Metropolitan Magistrate Courts",
+      "Commercial Court, Jodhpur",
+      "Family Court, Jodhpur",
+      "Motor Accident Claims Tribunal (MACT), Jodhpur",
+    ],
+    districtCourtsSlug: "district-courts-rajasthan",
+    blurb:
+      "The principal seat of the Rajasthan High Court and the state's appellate centre — where writ, service, revenue, and mining-lease litigation from western Rajasthan is heard, alongside a deep senior-counsel bar.",
+  },
+  {
+    slug: "udaipur",
+    name: "Udaipur",
+    state: "Rajasthan",
+    geo: { lat: 24.5854, lng: 73.7125 },
+    population: "10 lakh (metro)",
+    neighbourhoods: [
+      "Hiran Magri", "Fatehpura", "Ashok Nagar", "Bhuwana", "Sukher",
+      "Panchwati", "Shobhagpura", "Goverdhan Vilas", "Madri", "Savina",
+      "Bedla", "Chetak Circle", "Udaipole", "Sector 14",
+    ],
+    localBar: "Bar Council of Rajasthan",
+    highCourt: { name: "Rajasthan High Court (Principal Seat, Jodhpur)", slug: "rajasthan-high-court" },
+    districtCourts: [
+      "Udaipur District & Sessions Court",
+      "Commercial Court, Udaipur",
+      "Family Court, Udaipur",
+      "Motor Accident Claims Tribunal (MACT), Udaipur",
+    ],
+    districtCourtsSlug: "district-courts-rajasthan",
+    blurb:
+      "Rajasthan's tourism and hospitality capital, set in the Mewar marble and mining belt — driving land, lease, hotel-licensing, and mining-lease disputes, with writs going to the Jodhpur principal seat.",
+  },
+  {
+    slug: "kota",
+    name: "Kota",
+    state: "Rajasthan",
+    geo: { lat: 25.2138, lng: 75.8648 },
+    population: "12 lakh (metro)",
+    neighbourhoods: [
+      "Talwandi", "Vigyan Nagar", "Rajeev Gandhi Nagar", "Mahaveer Nagar", "Jawahar Nagar",
+      "Dadabari", "Landmark City", "Borkheda", "Nayapura", "Gumanpura",
+      "Kunhari", "Anantpura", "Shrinathpuram", "Indraprastha Industrial Area",
+    ],
+    localBar: "Bar Council of Rajasthan",
+    highCourt: { name: "Rajasthan High Court (Jaipur Bench)", slug: "rajasthan-high-court" },
+    districtCourts: [
+      "Kota District & Sessions Court",
+      "Commercial Court, Kota",
+      "Family Court, Kota",
+      "Motor Accident Claims Tribunal (MACT), Kota",
+    ],
+    districtCourtsSlug: "district-courts-rajasthan",
+    blurb:
+      "India's coaching capital and a major industrial and power-generation centre — producing an unusual caseload of student and institute disputes, hostel and tenancy claims, consumer complaints, and criminal defence work.",
+  },
+  {
+    slug: "ajmer",
+    name: "Ajmer",
+    state: "Rajasthan",
+    geo: { lat: 26.4499, lng: 74.6399 },
+    population: "6 lakh (city)",
+    neighbourhoods: [
+      "Vaishali Nagar", "Civil Lines", "Panchsheel", "Adarsh Nagar", "Kotra",
+      "Pushkar Road", "Foy Sagar Road", "Alwar Gate", "Naya Bazar", "Ramganj",
+      "Beawar Road", "Shastri Nagar", "Makarwali", "Nasirabad Road",
+    ],
+    localBar: "Bar Council of Rajasthan",
+    highCourt: { name: "Rajasthan High Court (Jaipur Bench)", slug: "rajasthan-high-court" },
+    districtCourts: [
+      "Ajmer District & Sessions Court",
+      "Family Court, Ajmer",
+      "Commercial Court, Ajmer",
+      "Motor Accident Claims Tribunal (MACT), Ajmer",
+    ],
+    districtCourtsSlug: "district-courts-rajasthan",
+    blurb:
+      "A divisional headquarters and the seat of the Rajasthan Public Service Commission and the state education boards — which makes public-service, recruitment, and education litigation unusually prominent alongside revenue and land disputes.",
   },
 ];
 
