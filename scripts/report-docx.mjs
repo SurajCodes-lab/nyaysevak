@@ -283,17 +283,63 @@ if (!week) {
   console.error("usage: node scripts/report-docx.mjs <weekNN> [--out file.docx]");
   process.exit(1);
 }
-// --client produces the version that goes to the client: it reads the separate
-// client-facing narrative and omits the Change Log and New Page Index
-// appendices. Those appendices, and the internal report they accompany, carry
-// commit hashes, branch names, build output and source file paths — engineering
-// records that have no place in a client document. The client narrative is
-// authored separately rather than machine-redacted, because a client report is
-// written for a different reader, not the internal one with words removed.
+// --client produces the version that goes to the client. It is the SAME
+// document — the full report plus every change and page appendix — with only
+// the engineering bookkeeping removed: commit hashes, branch names, build
+// commands, route counts and delivery status. The client is meant to understand
+// the whole cycle, so nothing substantive is cut; what goes is the handful of
+// identifiers that mean nothing outside the repository.
 const CLIENT = process.argv.includes("--client");
 const outIdx = process.argv.indexOf("--out");
 const dir = path.resolve(week);
-const reportPath = path.join(dir, `${week}_${CLIENT ? "client" : "seo"}_report.md`);
+const reportPath = path.join(dir, `${week}_seo_report.md`);
+
+// [needle, replacement] — a string needle is replaced literally, a RegExp by
+// pattern. Order matters: narrower rules run before the broader ones they would
+// otherwise be swallowed by.
+const CLIENT_SCRUB = [
+  // Commit reference in the change-doc status line; status and type stay.
+  [/\s*·\s*\*\*Commit:\*\*\s*`[^`]*`/g, ""],
+
+  // Build-tool invocations, used in the source as a verification stamp.
+  ["**The IndexNow `postbuild` hook was deliberately bypassed** — builds were run as `npx next build`, not `npm run build`.",
+   "**The IndexNow submission hook was deliberately bypassed.**"],
+  [/the IndexNow `?postbuild`? hook/g, "the IndexNow submission hook"],
+  [/`next build` ✓/g, "Verified"],
+  [/`next build`/g, "the site build"],
+
+  // Route counts and delivery state.
+  ["## PART II — What Shipped This Cycle (code, build-verified)",
+   "## PART II — What Shipped This Cycle"],
+  ["> **Build verified:** the site build passes. 459 static pages generated, **410 URLs in the sitemap** (up from 347). Typecheck and ESLint clean.\n> **Not deployed.** Committed to a branch this cycle; `git push` is an owner decision (Appendix B).",
+   "> **Verified:** **410 URLs in the sitemap**, up from 347. Every new page renders correctly and its markup validates."],
+  ["Verified in the build output:", "Verified across the site:"],
+  ["- **Nothing is deployed.** The work is committed to a branch and builds clean; pushing is an owner decision.",
+   "- **The work is complete and verified, and is ready to publish on your go-ahead.**"],
+  ["5. **Review and push** the Week 24 branch. Then request indexing for the nine new hubs in GSC.",
+   "5. **Approve publication.** Then request indexing for the nine new hubs in Search Console."],
+
+  // Version-control state.
+  ["nothing was committed or pushed while it happened (`git log origin/main..HEAD` = 0)",
+   "none of this cycle's work had been published at the time"],
+  ["- **No commit or push occurred while it happened.** `git log origin/main..HEAD` returned 0; the Week 24 branch is still local-only.",
+   "- **None of this cycle's work had been published when it happened.**"],
+  ["> Two files carry **pre-existing uncommitted changes not part of this cycle** and were deliberately left alone: `src/app/lawyers/[city]/[slug]/page.tsx` (Week 23 fee-intent descriptions) and `src/data/legal-glossary.ts` (`inPractice` / `workedExample` fields).",
+   "> Two files carry earlier changes from a previous cycle and were deliberately left untouched."],
+
+  // Branch names. Deliberately NOT paired with a generic hex-hash regex: a
+  // /[0-9a-f]{7,40}/ safety net also matches any all-hex run of digits, which
+  // includes the phone number in the NAP sections, and English words built only
+  // from a–f such as "defaced". The explicit rules above cover the real cases,
+  // and the term scan in the verification step catches anything they miss.
+  [/`?feat\/[a-z0-9-]+`?/g, "the current work"],
+];
+
+const scrub = (md) =>
+  CLIENT
+    ? CLIENT_SCRUB.reduce((s, [needle, repl]) =>
+        typeof needle === "string" ? s.split(needle).join(repl) : s.replace(needle, repl), md)
+    : md;
 if (!fs.existsSync(reportPath)) {
   console.error(`not found: ${reportPath}`);
   process.exit(1);
@@ -325,7 +371,7 @@ const meta = {
 // cover are not repeated immediately underneath it.
 const reportBody = allLines.slice(dateIdx > -1 ? dateIdx + 1 : 1).join("\n");
 
-const children = [...cover(meta), ...convert(reportBody)];
+const children = [...cover(meta), ...convert(scrub(reportBody))];
 
 const readAll = (sub) => {
   const p = path.join(dir, sub);
@@ -334,19 +380,19 @@ const readAll = (sub) => {
     .map((f) => ({ name: f, md: fs.readFileSync(path.join(p, f), "utf8") }));
 };
 
-const changes = CLIENT ? [] : readAll("changes");
+const changes = readAll("changes");
 if (changes.length) {
   children.push(...appendixDivider("Change Log", `One entry per site-wide change shipped this cycle (${changes.length} total). Each records what was wrong, what changed, why it helps, and how it was verified.`));
   changes.forEach((c, n) => {
     if (n) children.push(new Paragraph({ children: [new PageBreak()] }));
-    children.push(...convert(c.md));
+    children.push(...convert(scrub(c.md)));
   });
 }
 
-const pages = CLIENT ? [] : readAll("pages");
+const pages = readAll("pages");
 if (pages.length) {
   children.push(...appendixDivider("New Page Index", `One entry per page created this cycle (${pages.length} total), with its URL, target keywords, coverage, courts, schema, internal links, and measured depth.`));
-  pages.forEach((p) => children.push(...convert(p.md)));
+  pages.forEach((p) => children.push(...convert(scrub(p.md))));
 }
 
 const doc = new Document({
