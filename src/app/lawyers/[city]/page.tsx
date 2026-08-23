@@ -9,6 +9,7 @@ import { SITE_URL } from "@/lib/site";
 import RelatedLinks from "@/components/RelatedLinks";
 import { relatedGroupsForCity } from "@/data/internal-links";
 import { faqPageJsonLd } from "@/lib/schema";
+import { BUSINESS } from "@/lib/business";
 import { notFound } from "next/navigation";
 
 export function generateStaticParams() {
@@ -102,42 +103,62 @@ export default async function CityHubPage({ params }: { params: Promise<{ city: 
     },
   };
 
-  // Week 11: full GBP-mirror LocalBusiness for the city hub. The hub previously
-  // carried a minimal LocalBusiness; this brings it to parity with the
-  // city×practice pages and with the on-site Google Business Profile we are
-  // standing up this cycle — stable @id, openingHoursSpecification, sameAs, and
-  // an areaServed that names both the city and its state.
-  const localBusinessJsonLd = {
+  // Week 24: this was a full LocalBusiness ("Week 11: full GBP-mirror") that
+  // asserted a PostalAddress and precise GeoCoordinates on every city hub — so
+  // the site declared 22 physical premises for a business that operates from a
+  // single base and, per BCI norms, deliberately does not publicise local
+  // offices, named advocates, or fees anywhere in its visible content.
+  // Structured data is a public claim exactly like visible copy: it should not
+  // assert what the page itself declines to say.
+  //
+  // It also worked directly against the entity goal. Google cross-checks
+  // on-site markup against the verified Google Business Profile, and one
+  // verified location versus 22 asserted ones weakens that association instead
+  // of building it — the opposite of what linking the GBP is meant to achieve.
+  //
+  // Correct representation for a service-area business: a Service provided by
+  // the single Organization entity, with areaServed carrying the local
+  // relevance (which is what actually earns the city-level topical signal —
+  // local pack ranking comes from the GBP, never from on-page LocalBusiness
+  // markup). Contact details remain as a ServiceChannel — a way to reach us —
+  // rather than as the address of a branch office that does not exist. sameAs
+  // lives on the entity in layout.tsx and is not repeated across 22 service
+  // descriptions, because sameAs describes an entity, not a service.
+  const serviceJsonLd = {
     "@context": "https://schema.org",
-    "@type": "LegalService",
-    "@id": `${url}#localbusiness`,
-    name: `NyaySevak — Lawyers in ${city.name}`,
-    description: `Bar-Council-verified lawyers in ${city.name}, ${city.state} across criminal, civil, family, property, and corporate law. Free case assessment available.`,
+    "@type": "Service",
+    "@id": `${url}#service`,
+    name: `Lawyers in ${city.name} — NyaySevak`,
+    serviceType: "Legal representation and lawyer matching",
+    description: `Bar-Council-verified lawyers serving ${city.name}, ${city.state} across criminal, civil, family, property, and corporate law. Free case assessment available.`,
     image: `${SITE_URL}/logo.png`,
     url,
-    telephone: "+91-9868666715",
-    email: "nyaysevak@gmail.com",
-    priceRange: "Free - ₹₹₹",
-    address: { "@type": "PostalAddress", addressLocality: city.name, addressRegion: city.state, addressCountry: "IN" },
-    geo: { "@type": "GeoCoordinates", latitude: city.geo.lat, longitude: city.geo.lng },
+    provider: { "@id": `${SITE_URL}/#organization` },
     areaServed: [
       { "@type": "City", name: city.name },
       { "@type": "State", name: city.state },
     ],
-    openingHoursSpecification: [
-      {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-        opens: "09:00",
-        closes: "21:00",
+    availableChannel: {
+      "@type": "ServiceChannel",
+      serviceUrl: url,
+      availableLanguage: ["en-IN", "hi-IN"],
+      servicePhone: {
+        "@type": "ContactPoint",
+        telephone: BUSINESS.telephone,
+        email: BUSINESS.email,
+        contactType: "customer service",
+        areaServed: "IN",
+        availableLanguage: ["English", "Hindi"],
       },
-      { "@type": "OpeningHoursSpecification", dayOfWeek: "Sunday", opens: "10:00", closes: "18:00" },
-    ],
-    parentOrganization: { "@id": "https://www.nyaysevak.com/#organization" },
-    sameAs: [
-      "https://www.facebook.com/nyaysevak",
-      "https://www.instagram.com/nyaysevak",
-    ],
+    },
+    offers: {
+      "@type": "Offer",
+      name: "Free case assessment",
+      price: "0",
+      priceCurrency: "INR",
+      availability: "https://schema.org/InStock",
+      areaServed: { "@type": "City", name: city.name },
+    },
   };
 
   // Week 11: AEO Quick Answer for the city hub + WebPage Speakable target.
@@ -184,7 +205,7 @@ export default async function CityHubPage({ params }: { params: Promise<{ city: 
     <main className="min-h-screen">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageJsonLd(cityFaqs)) }} />
 
