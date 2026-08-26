@@ -5,6 +5,7 @@
 import type { CityPracticeSlug } from "./cities";
 import { cityMatterContent } from "./city-matter-content";
 import { cityPracticeExpansion } from "./city-practice-expansion";
+import { cityMatterExpansion } from "./city-matter-expansion";
 
 export interface CityPracticeFAQ {
   question: string;
@@ -3048,4 +3049,7 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
   // Regional expansion cycle: Greater Noida, Surat, Vadodara, Rajkot,
   // Gandhinagar, Jodhpur, Udaipur, Kota, Ajmer (45 city × practice entries).
   ...cityPracticeExpansion,
+
+  // Week 25: matter pages for the nine cities added in Week 24.
+  ...cityMatterExpansion,
 };
