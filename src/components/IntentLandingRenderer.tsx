@@ -103,7 +103,10 @@ export default function IntentLandingRenderer({ data }: { data: IntentLandingPag
                         <MapPin className="h-4 w-4" />
                         {c.city}
                       </h3>
-                      <span className="text-xs text-gray-500">{c.feeRange}</span>
+                      {/* Week 25 (BCI): the per-city fee range was removed from these
+                          cards. Advocate fee advertising is restricted, and the city
+                          hub and city x practice pages stopped displaying amounts in
+                          the same pass. The highlights below carry the local detail. */}
                     </div>
                     <ul className="mt-3 space-y-1.5">
                       {c.highlights.map((h, k) => (
