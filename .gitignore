@@ -42,3 +42,8 @@ next-env.d.ts
 
 # Word lock files (created while a .docx is open)
 ~$*
+
+# Weekly SEO documentation — kept out of git.
+# Two sessions working the same cycle both write weekNN/, which is how the
+# duplicate-key collision happened; keeping these untracked avoids it.
+week*/
