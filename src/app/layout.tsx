@@ -336,14 +336,22 @@ const professionalServiceJsonLd = {
       },
     ],
   },
-  // Week 9: makesOffer mirrors the catalog at the entity level so AI engines
-  // that scan ProfessionalService.makesOffer (some Perplexity / Gemini index
-  // pipelines do, even when hasOfferCatalog is not walked) still see pricing.
+  // makesOffer mirrors the catalog at the entity level, because some AI index
+  // pipelines scan ProfessionalService.makesOffer even when hasOfferCatalog is
+  // not walked.
+  //
+  // Week 25 (BCI): this was an AggregateOffer carrying lowPrice "0" and
+  // highPrice "25000" — a published fee range for advocate services, in the one
+  // field those pipelines are most likely to quote. Bar Council rules restrict
+  // advocate fee advertising, and Week 18 removed pricing from the visible site
+  // without reaching the structured data. It is now a single Offer for the free
+  // case assessment, which is the only thing we actually price.
   makesOffer: {
-    "@type": "AggregateOffer",
-    offerCount: 5,
-    lowPrice: "0",
-    highPrice: "25000",
+    "@type": "Offer",
+    name: "Free case assessment",
+    description:
+      "Diagnosis of the matter and a written next-step plan, at no cost and with no obligation. Advocate fees are set by the individual advocate and agreed in writing before any work begins.",
+    price: "0",
     priceCurrency: "INR",
     availability: "https://schema.org/InStock",
     eligibleRegion: { "@type": "Country", name: "India" },

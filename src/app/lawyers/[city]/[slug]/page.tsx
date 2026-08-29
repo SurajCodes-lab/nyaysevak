@@ -4,8 +4,8 @@ import ContactButton from "@/components/ContactButton";
 import AnswerBlock from "@/components/AnswerBlock";
 import TrustStrip from "@/components/TrustStrip";
 import {
-  ArrowRight, Landmark, MapPin, Scale, Building2, BadgeCheck,
-  Phone, Clock, ChevronRight, CheckCircle2, HelpCircle, Briefcase,
+  ArrowRight, Landmark, MapPin, Scale, BadgeCheck,
+  Phone, Clock, ChevronRight, CheckCircle2, HelpCircle,
 } from "lucide-react";
 import { cities, cityPracticeSlugs, cityPracticeLabels, cityMatterParentPractice, type CityPracticeSlug } from "@/data/cities";
 import { cityPracticeContent } from "@/data/city-practice-content";
@@ -128,7 +128,7 @@ export default async function CityPracticePage(
   // and voice assistants read aloud.
   const quickAnswerQuestion = `Where can I find a verified ${label.title.toLowerCase()} in ${city.name}?`;
   const quickAnswer =
-    `NyaySevak connects you with Bar-Council-verified ${label.title.toLowerCase()}s across ${city.name}, ${city.state} — advocates who appear regularly before ${city.highCourt.name} and the local district courts for ${label.long.toLowerCase()} matters.${content.feeRange ? ` Typical district-court fees here run ${content.feeRange.district}.` : ""} Your first step is a free case assessment, with all fees agreed upfront before any work begins.`;
+    `NyaySevak connects you with Bar-Council-verified ${label.title.toLowerCase()}s across ${city.name}, ${city.state} — advocates who appear regularly before ${city.highCourt.name} and the local district courts for ${label.long.toLowerCase()} matters. Your first step is a free case assessment, with all fees agreed upfront before any work begins.`;
 
   // Week 15: two data-driven FAQs appended to every city × practice page,
   // built from the page's own fee + court data (so they stay page-specific,
@@ -142,10 +142,7 @@ export default async function CityPracticePage(
   const generatedFaqs = [
     {
       question: `How much does a ${label.keyword} charge in ${city.name}?`,
-      answer:
-        content.feeRange
-          ? `${city.name} ${label.keyword} fees typically run ${content.feeRange.consultation} for a consultation, ${content.feeRange.district} per district-court appearance, and ${content.feeRange.highCourt} at ${city.highCourt.name}. ${content.feeRange.note} Through NyaySevak your first step is a free case assessment and every fee is agreed upfront before any work begins.`
-          : `Through NyaySevak, your first step in ${city.name} is a free case assessment with a verified ${label.keyword}: they diagnose your matter and give a clear next-step plan, and any advocate fees are agreed with you in writing before work begins.`,
+      answer: `Through NyaySevak, your first step in ${city.name} is a free case assessment with a verified ${label.keyword}: they diagnose your matter and give a clear next-step plan, and any advocate fees are agreed with you in writing before work begins.`,
     },
     {
       question: `How do I find the best ${label.keyword} or ${altKeyword} in ${city.name}?`,
@@ -481,37 +478,14 @@ export default async function CityPracticePage(
         </div>
       </section>
 
-      {/* ===== Typical fees (rendered only when fee data is present) ===== */}
-      {content.feeRange && (
-      <section className="bg-cream cream-pattern py-16 sm:py-20">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <p className="mb-2 text-[10px] sm:text-xs uppercase tracking-[0.3em] text-gold-dark/60 font-semibold">Indicative Fees</p>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-gray-900 heading-glow-cream mb-8">
-            Typical {label.title} Fees in {city.name}
-          </h2>
-          <div className="grid gap-4 sm:gap-5 sm:grid-cols-3">
-            {[
-              { label: "Consultation", value: content.feeRange.consultation, Icon: Briefcase },
-              { label: "District Court", value: content.feeRange.district, Icon: Landmark },
-              { label: city.highCourt.name, value: content.feeRange.highCourt, Icon: Scale },
-            ].map((card) => (
-              <div key={card.label} className="glass-cream p-5 sm:p-6">
-                <div className="icon-box-cream h-10 w-10 rounded-xl flex items-center justify-center mb-3">
-                  <card.Icon className="h-4 w-4 text-gold-dark" strokeWidth={1.5} />
-                </div>
-                <p className="text-[10px] sm:text-xs uppercase tracking-wider text-gold-dark/70 font-bold">{card.label}</p>
-                <p className="mt-1 text-sm sm:text-base font-semibold text-gray-900">{card.value}</p>
-              </div>
-            ))}
-          </div>
-          <div className="mt-6 rounded-xl border border-gold/20 bg-gold/5 p-5 sm:p-6">
-            <p className="text-sm text-gray-700 leading-relaxed">
-              <strong className="text-gold-dark font-semibold">Local note:</strong> {content.feeRange.note}
-            </p>
-          </div>
-        </div>
-      </section>
-      )}
+      {/* Week 25 (BCI): the "Typical Fees" section was removed. It rendered advocate
+      fee ranges from content.feeRange on 55 pages across 11 cities, while the other
+      11 cities already ran fee-free copy. Bar Council rules restrict advocate fee
+      advertising, and Week 18 removed pricing everywhere else — this surface, the
+      Quick Answer, and the meta description were missed. The FAQ still answers
+      "how much does a lawyer charge" using the transparency wording the newer
+      cities already used, so the fee-intent query is still served without naming
+      an amount. */}
 
       {/* ===== How it works in this city ===== */}
       <section className="bg-dark py-16 sm:py-20 relative overflow-hidden">
