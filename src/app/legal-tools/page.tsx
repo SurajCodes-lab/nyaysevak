@@ -4,9 +4,9 @@ import { Calculator, ArrowRight, Clock, Scale, Search, FileText } from "lucide-r
 import FaqBlock from "@/components/FaqBlock";
 
 export const metadata: Metadata = {
-  title: "Free Legal Tools & Calculators India [2026] | NyaySevak.com",
+  title: "Free Legal Tools & Calculators [2026]",
   description:
-    "Free legal calculators for India — court fee, stamp duty, limitation period, motor-accident compensation, cheque-bounce claim. Instant results, state-wise schedules, no signup required.",
+    "Free Indian legal calculators — court fee, stamp duty, limitation period, motor-accident compensation, cheque-bounce claim. No signup required.",
   keywords:
     "legal tools India, court fee calculator, stamp duty calculator, limitation period checker, motor accident compensation calculator, cheque bounce calculator, CNR case lookup, NyaySevak",
   alternates: { canonical: "https://www.nyaysevak.com/legal-tools" },

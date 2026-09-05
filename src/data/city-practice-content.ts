@@ -2109,7 +2109,7 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
   },
   "noida__family-matrimonial": {
     lead:
-      "Divorce, maintenance, custody and domestic-violence matters in Noida are heard by the Family Court at Gautam Buddh Nagar, with appeals to the Allahabad High Court. NyaySevak connects you with verified Noida divorce and family lawyers for mutual-consent and contested divorce, maintenance, custody, and DV Act protection.",
+      "Noida's matrimonial cases are shaped by its corporate workforce: dual-income couples, salaries and stock that are fully documented, and a matrimonial home that is usually the largest asset in the settlement. NyaySevak connects you with Bar-Council-verified Noida divorce and family lawyers who file at the Family Court in Surajpur and negotiate settlements where the flat, not the maintenance figure, is the real question.",
     landscape: [
       "Family disputes in Noida are handled by the dedicated Family Court at Gautam Buddh Nagar. Mutual-consent divorce under Section 13B of the Hindu Marriage Act is the fastest route and is regularly granted here, with the Supreme Court's Amardeep Singh waiver of the cooling-off period available in suitable cases. Contested divorce, maintenance under Section 144 BNSS, custody, and Domestic Violence Act applications are all filed before the Family Court or the Magistrate as applicable.",
       "Noida's large population of working professionals and NRIs means cross-border and dual-income matrimonial matters are common — including maintenance disputes where both spouses earn, and custody matters involving travel and schooling. Experienced Noida family lawyers handle video-conference appearances for NRIs and structure settlement deeds that cover alimony, custody, and the withdrawal of connected criminal complaints.",
@@ -2129,11 +2129,31 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       { title: "498A / BNS 85 Defence", desc: "Defence and quashing strategy for matrimonial cruelty complaints." },
     ],
     faqs: [
-      { question: "How do I find a good divorce lawyer near me in Noida?", answer: "Tell NyaySevak whether your matter is mutual or contested and we match you with a Bar-Council-verified Noida family lawyer at the Gautam Buddh Nagar Family Court. Your first step is a free case assessment." },
-      { question: "Which court handles divorce in Noida?", answer: "Divorce and most matrimonial matters are heard by the Family Court at Gautam Buddh Nagar; appeals go to the Allahabad High Court. DV Act and maintenance applications can also go before the Magistrate." },
-      { question: "How long does mutual-consent divorce take in Noida?", answer: "With the Amardeep Singh waiver of the six-month cooling-off period, a well-prepared mutual-consent divorce can conclude in roughly 4–6 months; without the waiver, around six months or more." },
-      { question: "Can NRIs get divorced through Noida courts?", answer: "Yes. Noida family lawyers regularly handle NRI matters with appearance by video-conference or through duly executed affidavits/power of attorney, especially for mutual-consent petitions." },
-      { question: "How much does a divorce lawyer cost in Noida?", answer: "Mutual-consent matters are commonly scoped as a fixed package covering both motions, while contested matters are engaged stage by stage at the Family Court in Surajpur. A transfer petition, if a spouse has moved to another state, is scoped separately. NyaySevak does not publish fee amounts; your first step is a free case assessment, and the advocate quotes and agrees the fee in writing before any work begins." },
+      {
+        question: "Who keeps the flat in a Noida divorce?",
+        answer:
+          "It depends on how it is owned and funded, not on who lives in it. A jointly owned or jointly financed flat has to be dealt with expressly in the settlement — sale and division, one spouse buying the other out, or transfer against a reduced alimony figure — and any outstanding home loan and the guarantees behind it must be dealt with at the same time, because the lender is not bound by a matrimonial settlement.",
+      },
+      {
+        question: "How is maintenance calculated when both of us work?",
+        answer:
+          "The court weighs both incomes, the standard of living during the marriage, and the children's needs, rather than assuming one spouse pays. Under Rajnesh v. Neha both parties file affidavits of assets and income, and in Noida's salaried economy those are usually corroborated by salary slips, Form 16 and provident-fund records.",
+      },
+      {
+        question: "Are ESOPs and variable pay counted?",
+        answer:
+          "They can be. Stock options, bonuses and deferred compensation form part of the financial picture even though they are not monthly salary, and courts increasingly expect them to be disclosed. Vesting schedules matter, because an unvested grant is treated differently from one already exercised.",
+      },
+      {
+        question: "How long does a mutual consent divorce take in Noida?",
+        answer:
+          "Ordinarily six to twelve months because of the two-motion structure and the statutory gap between motions. Where separation has already been long and the settlement is complete, the Family Court can waive the six-month gap and the matter may conclude in two to three months.",
+      },
+      {
+        question: "Where is the Noida Family Court?",
+        answer:
+          "At the Gautam Buddh Nagar district complex in Surajpur, which serves both Noida and Greater Noida. Domestic Violence Act proceedings and Section 144 BNSS maintenance are heard by the Magistrate there, separately from the Family Court.",
+      },
     ],
     localNotes: [
       "Noida's professional and NRI population makes video-conference appearances and cross-border custody issues routine here.",
@@ -2293,12 +2313,14 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       "Mediation Centre, Gurugram",
     ],
     caseTypes: [
-      { title: "Mutual-Consent Divorce", desc: "Joint petition under Section 13B HMA with settlement deed and waiver application." },
-      { title: "Contested Divorce", desc: "Cruelty, desertion, and adultery petitions before the Family Court." },
-      { title: "Maintenance", desc: "Maintenance for spouse and children under Section 144 BNSS and the DV Act." },
-      { title: "Child Custody", desc: "Custody and visitation, including NRI and international-schooling matters." },
-      { title: "Domestic Violence", desc: "Protection, residence, and monetary relief under the PWDVA 2005." },
-      { title: "498A / BNS 85 Defence", desc: "Defence and quashing strategy for matrimonial cruelty complaints." },
+      { title: "Mutual Consent Divorce", desc: "Two-motion Section 13B petitions at the Gurugram Family Court, with waiver of the six-month gap where appropriate." },
+      { title: "Contested Divorce", desc: "Cruelty, desertion and adultery petitions and defences before the Family Court." },
+      { title: "High-Value Alimony Settlements", desc: "Settlements involving ESOPs, variable pay and international assets, common in Gurgaon's corporate workforce." },
+      { title: "Maintenance & Interim Support", desc: "Section 24 HMA and Section 144 BNSS claims argued on salary, bonus and stock records under the Rajnesh framework." },
+      { title: "Custody Across Relocations", desc: "Arrangements that survive a corporate transfer or a move abroad, including school continuity and video contact." },
+      { title: "NRI & Cross-Border Matters", desc: "Proceedings where one spouse lives overseas, including service abroad and enforcement questions." },
+      { title: "Domestic Violence Proceedings", desc: "Protection, residence and monetary orders before the Magistrate at Gurugram." },
+      { title: "Section 85 BNS Defence & Quashing", desc: "Defending dowry-cruelty allegations and quashing on settlement at the Punjab & Haryana High Court." },
     ],
     faqs: [
       { question: "How do I find a good divorce lawyer near me in Gurgaon?", answer: "Tell NyaySevak whether your matter is mutual or contested and we match you with a Bar-Council-verified Gurugram family lawyer at the Family Court. Your first step is a free case assessment." },
@@ -2431,11 +2453,14 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       "Allahabad High Court — writs and appeals",
     ],
     caseTypes: [
-      { title: "RERA Complaints", desc: "Delayed possession, refund-with-interest and defect claims against Ghaziabad builders before UP RERA." },
-      { title: "Property Due Diligence", desc: "Title chain, encumbrance and RERA-status verification before purchase." },
-      { title: "Title & Possession Suits", desc: "Civil suits over ownership, possession and partition." },
-      { title: "Sale/Lease Deed Drafting", desc: "Drafting and registration of sale, gift and lease deeds." },
-      { title: "Builder Disputes", desc: "Action for stalled projects, one-sided agreements and hidden charges." },
+      { title: "UP RERA Complaints", desc: "Refund with interest, delay compensation and completion directions against registered Ghaziabad and Raj Nagar Extension projects." },
+      { title: "Builder-Buyer Disputes", desc: "Possession delays, area shortfalls, changed layouts and one-sided allotment terms." },
+      { title: "GDA Allotment & Lease Issues", desc: "Ghaziabad Development Authority allotment conditions, cancellations, extension charges and transfer permission." },
+      { title: "Registry & Conveyance Deadlock", desc: "Securing registration where a developer's unpaid authority dues are blocking the sale deed." },
+      { title: "Title Verification & Due Diligence", desc: "Chain of title, encumbrance, sanctioned plan and RERA registration checks before purchase." },
+      { title: "Unauthorised Colony Risk", desc: "Assessing regularisation status before buying in a colony without development-authority approval." },
+      { title: "Tenancy & Commercial Leasing", desc: "Lease drafting, eviction and rent recovery for residential and industrial premises." },
+      { title: "Partition & Inherited Property", desc: "Family partition, mutation corrections and succession disputes." },
     ],
     faqs: [
       { question: "How do I file a RERA complaint in Ghaziabad?", answer: "Builder–buyer complaints for Ghaziabad projects are filed before the Uttar Pradesh RERA. A lawyer drafts the complaint seeking refund-with-interest, possession or compensation. Your first step through NyaySevak is a free case assessment; see our RERA guide for the process." },
@@ -2451,7 +2476,7 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
   },
   "ghaziabad__family-matrimonial": {
     lead:
-      "For divorce, maintenance and custody in Ghaziabad, NyaySevak connects you with verified family lawyers who appear before the Ghaziabad Family Court — handling mutual-consent and contested divorce, maintenance, custody and domestic-violence matters with discretion.",
+      "Ghaziabad's Family Court serves a district built on people who came here for work — from western Uttar Pradesh, from Bihar, and from across the NCR — which means a large share of its matrimonial cases involve a marriage solemnised in one state and a breakdown in another. NyaySevak connects you with Bar-Council-verified Ghaziabad divorce and family lawyers who handle that jurisdiction question first, then the divorce, maintenance and custody that follow.",
     landscape: [
       "Matrimonial matters in Ghaziabad are heard by the Family Court, which deals with divorce, maintenance, custody and guardianship, while domestic-violence reliefs are sought before the Magistrate. Mutual-consent divorce is the fastest route where both spouses agree.",
       "Contested matters — cruelty, desertion, maintenance and custody — are more involved, and a local lawyer who appears at the Ghaziabad Family Court can manage timelines and appearances efficiently.",
@@ -2463,22 +2488,46 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       "Allahabad High Court — matrimonial appeals and writs",
     ],
     caseTypes: [
-      { title: "Mutual Consent Divorce", desc: "Joint petition to decree under S.13B HMA at the Ghaziabad Family Court." },
-      { title: "Contested Divorce", desc: "Cruelty, desertion and other grounds, with maintenance and custody." },
-      { title: "Maintenance & Alimony", desc: "Interim (S.24) and permanent (S.25) maintenance claims and defence." },
-      { title: "Child Custody", desc: "Custody, visitation and guardianship matters." },
-      { title: "Domestic Violence & 498A", desc: "Protection, residence and maintenance orders; and defence of complaints." },
+      { title: "Mutual Consent Divorce", desc: "Two-motion Section 13B petitions at the Ghaziabad Family Court, with waiver of the six-month gap where separation has been long." },
+      { title: "Contested Divorce", desc: "Cruelty, desertion and adultery petitions, including defence of proceedings a spouse has filed in their home state." },
+      { title: "Cross-State Jurisdiction", desc: "Establishing which court can hear the matter where the couple married, lived and now reside in three different places." },
+      { title: "Transfer Petitions", desc: "Supreme Court petitions consolidating proceedings when a spouse returns to a home district." },
+      { title: "Maintenance & Interim Support", desc: "Section 24 HMA and Section 144 BNSS claims under the Rajnesh v. Neha disclosure framework." },
+      { title: "Child Custody & Guardianship", desc: "Custody, visitation and guardianship decided on the welfare of the child." },
+      { title: "Domestic Violence Proceedings", desc: "Protection, residence and monetary orders before the Magistrate at Ghaziabad, separate from the Family Court." },
+      { title: "Section 85 BNS Defence & Quashing", desc: "Defending dowry-cruelty allegations and quashing on settlement before the Allahabad High Court." },
     ],
     faqs: [
-      { question: "How do I file for divorce in Ghaziabad?", answer: "Divorce petitions are filed before the Ghaziabad Family Court. Mutual-consent divorce under Section 13B is the fastest where both spouses agree; contested divorce is filed on grounds such as cruelty or desertion. Your first step through NyaySevak is a free case assessment." },
-      { question: "How long does mutual consent divorce take in Ghaziabad?", answer: "With the six-month cooling-off period (which courts can waive following the Supreme Court's Amardeep Singh ruling), a mutual-consent divorce can conclude in roughly six months. See our mutual-consent divorce guide for the full procedure." },
-      { question: "Where is maintenance decided in Ghaziabad?", answer: "Interim maintenance is claimed under Section 24 and permanent alimony under Section 25 of the Hindu Marriage Act before the Family Court, and maintenance is also available under Section 144 BNSS. Amounts turn on income, assets and needs." },
-      { question: "Can a Ghaziabad lawyer handle custody disputes?", answer: "Yes. Custody, visitation and guardianship are decided by the Family Court on the welfare of the child. A family lawyer can pursue or defend a custody claim and negotiate workable arrangements." },
-      { question: "What does a divorce lawyer in Ghaziabad charge?", answer: "It depends on whether the divorce is mutual or contested and the issues involved; fees are set by the advocate and agreed in writing before work begins. Your first step through NyaySevak is a free case assessment with no obligation." },
+      {
+        question: "Where do I file for divorce in Ghaziabad?",
+        answer:
+          "At the Family Court in the Ghaziabad district complex. You can file where the marriage was solemnised, where you last lived together as spouses, or where the respondent resides; a wife may additionally claim maintenance where she currently lives.",
+      },
+      {
+        question: "We married in another state. Can we still file here?",
+        answer:
+          "Yes, if Ghaziabad is where you last resided together or where the respondent now lives. This is the usual basis locally, given how much of the population moved here for work in the NCR.",
+      },
+      {
+        question: "How long does a mutual consent divorce take?",
+        answer:
+          "Ordinarily six to twelve months because of the two-motion structure and the statutory gap. Where separation has already been long and the settlement is complete, the Family Court can waive the six-month gap and it may conclude in two to three months.",
+      },
+      {
+        question: "My spouse filed in their home state. What can I do?",
+        answer:
+          "You can defend there or move the Supreme Court for a transfer petition to bring the proceedings together. Which is better depends on where the children, the evidence and the witnesses are.",
+      },
+      {
+        question: "Is a domestic violence case heard by the Family Court?",
+        answer:
+          "No. The Magistrate hears Domestic Violence Act proceedings while the Family Court hears divorce and custody, and they run in parallel — which is why settlements are drafted to close every proceeding at once.",
+      },
     ],
     localNotes: [
-      "The Ghaziabad Family Court handles divorce, maintenance and custody; DV Act reliefs go before the Magistrate.",
-      "Mutual-consent divorce is the fastest route; contested matters benefit from a lawyer who appears at the Family Court regularly.",
+      "Ghaziabad's commuter and industrial population makes contested jurisdiction and Supreme Court transfer petitions unusually common, because couples frequently married elsewhere and settled here for work.",
+      "Divorce and custody sit with the Family Court; Domestic Violence Act reliefs and Section 144 BNSS maintenance sit with the Magistrate, so a settlement has to close both tracks.",
+      "Quashing a Section 85 BNS complaint on settlement means a separate petition at the Allahabad High Court, not the local court.",
     ],
   },
 
@@ -2549,7 +2598,7 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
   },
   "faridabad__family-matrimonial": {
     lead:
-      "For divorce, maintenance and custody in Faridabad, NyaySevak connects you with verified family lawyers who appear before the Faridabad Family Court — handling mutual-consent and contested divorce, maintenance, custody and domestic-violence matters discreetly.",
+      "Faridabad's matrimonial work sits against an industrial, largely settled population, where a spouse's income is often provable from factory payroll and provident-fund records rather than contested. NyaySevak connects you with Bar-Council-verified Faridabad divorce and family lawyers who file at the Family Court in Sector 12, handle maintenance on documented earnings, and take quashing on settlement to the Punjab & Haryana High Court at Chandigarh.",
     landscape: [
       "Matrimonial matters in Faridabad are heard by the Family Court, covering divorce, maintenance, custody and guardianship, while domestic-violence reliefs are sought before the Magistrate. Mutual-consent divorce is the quickest route where both spouses agree.",
       "Contested matters involving cruelty, desertion, maintenance and custody are more involved; a local lawyer who appears at the Faridabad Family Court manages timelines and appearances efficiently.",
@@ -2595,22 +2644,46 @@ export const cityPracticeContent: Record<string, CityPracticeContent> = {
       "Permanent Lok Adalat — settlement of eligible civil/utility matters",
     ],
     caseTypes: [
-      { title: "Money Recovery Suits", desc: "Recovery of dues via legal notice, Order XXXVII summary suit, or the Commercial Court." },
-      { title: "Property & Title Disputes", desc: "Title, possession and partition suits at the Ghaziabad civil courts." },
-      { title: "Contract Disputes", desc: "Breach, specific performance and damages claims for businesses and individuals." },
-      { title: "Injunctions", desc: "Temporary and permanent injunctions to protect property and rights." },
-      { title: "Consumer & Recovery", desc: "Consumer complaints and connected recovery through the appropriate forum." },
+      { title: "Summary Suits (Order XXXVII)", desc: "Fast-track recovery on cheques, invoices and written agreements, where the defendant must obtain leave to defend." },
+      { title: "Industrial Contract Disputes", desc: "Supply, job-work and service agreements across the Sahibabad, Site IV and Meerut Road belt." },
+      { title: "Commercial Court Claims", desc: "Above-value disputes under the Commercial Courts Act, after compulsory pre-institution mediation." },
+      { title: "Property, Title & Partition", desc: "Title, possession and partition suits, including disputes over land absorbed into the Ghaziabad Development Authority area." },
+      { title: "Specific Performance & Injunctions", desc: "Enforcing agreements to sell and restraining third-party transfers pending suit." },
+      { title: "Arbitration Support", desc: "Section 9 interim relief and Section 11 appointments before the Allahabad High Court." },
+      { title: "Consumer Complaints", desc: "Deficiency-of-service claims against builders, banks, insurers and service providers." },
+      { title: "Motor Accident Claims", desc: "MACT compensation claims arising on the NH-9 and Delhi–Meerut corridors." },
     ],
     faqs: [
-      { question: "How do I recover money owed to me in Ghaziabad?", answer: "Start with a legal demand notice, then choose the route: an Order XXXVII summary suit for clear document-backed debts, or the Commercial Court for commercial disputes of specified value (after pre-institution mediation). A Ghaziabad civil lawyer can pick the fastest route — your first step is a free case assessment. See our money-recovery guide." },
-      { question: "Which court handles civil disputes in Ghaziabad?", answer: "Recovery, title, partition and injunction suits are filed at the Ghaziabad civil courts at the Kacheri; above-value commercial disputes go to the Commercial Court; and writs and appeals to the Allahabad High Court." },
-      { question: "What is a summary suit and can I use it in Ghaziabad?", answer: "A summary suit under Order XXXVII CPC is a fast-track recovery for debts on written contracts, cheques or acknowledgements — the defendant needs the court's leave to defend. It is available at the Ghaziabad courts and is the quickest route for clear debts." },
-      { question: "Can a Ghaziabad lawyer help with a property or title dispute?", answer: "Yes. Title, possession and partition suits are decided by the Ghaziabad civil courts. A lawyer can pursue or defend the suit and seek injunctions to protect possession while it is pending." },
-      { question: "What does a civil lawyer in Ghaziabad charge?", answer: "It depends on the suit and stage; fees are set by the advocate and agreed in writing before work begins. Your first step through NyaySevak is a free case assessment with no obligation." },
+      {
+        question: "What is the fastest way to recover a business debt in Ghaziabad?",
+        answer:
+          "For a documented debt, an Order XXXVII summary suit, because the defendant must obtain the court's leave before being allowed to defend at all. Where a cheque has bounced, a Section 138 prosecution is usually run alongside it for settlement pressure.",
+      },
+      {
+        question: "Do I have to try mediation before filing?",
+        answer:
+          "For a commercial dispute above the specified value, yes — pre-institution mediation under the Commercial Courts Act is mandatory unless you are seeking urgent interim relief. Ordinary civil suits have no such precondition.",
+      },
+      {
+        question: "Where do appeals from the Ghaziabad civil courts go?",
+        answer:
+          "To the District Judge, and second appeals and writs to the Allahabad High Court. Ghaziabad is in Uttar Pradesh, so High Court matters are not heard in Delhi despite the proximity.",
+      },
+      {
+        question: "How long do I have to file a civil suit?",
+        answer:
+          "Broadly three years for most money and contract claims, and twelve years for possession of immovable property, running from when the cause of action arose. Limitation is usually the first defence taken.",
+      },
+      {
+        question: "Can a registered MSME recover faster?",
+        answer:
+          "Often. The Samadhaan route before the Uttar Pradesh MSME Facilitation Council carries compound interest at three times the RBI bank rate and applies real pressure to a larger buyer, provided the Udyam registration predates the transaction.",
+      },
     ],
     localNotes: [
-      "Ghaziabad's industrial base makes money-recovery and contract disputes the highest-volume civil matters.",
-      "Clear debts are fastest via an Order XXXVII summary suit; commercial disputes go to the Commercial Court after mediation.",
+      "The Sahibabad and Site IV industrial belt makes trade recovery and contract disputes the highest-volume civil work, and most of it moves fastest as an Order XXXVII summary suit.",
+      "Commercial disputes above the specified value require pre-institution mediation unless urgent interim relief is sought — building that step into the timeline avoids a suit being returned at the threshold.",
+      "Second appeals, writs and Section 11 arbitration appointments go to the Allahabad High Court, not to Delhi, which affects both cost and timeline.",
     ],
   },
   "ghaziabad__corporate-business": {

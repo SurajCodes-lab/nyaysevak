@@ -13,18 +13,19 @@ import Link from "next/link";
 import ContactButton from "@/components/ContactButton";
 import { cities, cityPracticeSlugs, cityPracticeLabels } from "@/data/cities";
 import { cityPracticeContent } from "@/data/city-practice-content";
+import { practiceAreas } from "@/data/practice-areas";
 
 export const metadata: Metadata = {
-  title: "NyaySevak - Best Lawyer Consultation & Legal Services in India | Expert Case Assessment",
+  title: "NyaySevak — Verified Lawyers, Free Case Assessment",
   description:
-    "India's trusted legal services platform. Get matched with verified lawyers near you for the Supreme Court, 25 High Courts, 700+ District Courts & all Tribunals. Online lawyer consultation, divorce lawyer, criminal lawyer, property lawyer, corporate advisory. 29 practice areas. Free case assessment available.",
+    `India's verified-lawyer platform — get matched with advocates across the Supreme Court, 25 High Courts and 700+ district courts. Free case assessment.`,
   alternates: {
     canonical: "https://www.nyaysevak.com",
   },
   openGraph: {
     title: "NyaySevak - Best Lawyer Consultation & Legal Services in India",
     description:
-      "Find verified lawyers near you. Online consultation, court representation across Supreme Court, High Courts, District Courts & Tribunals. 29 practice areas. Free case assessment available.",
+      `Find verified lawyers near you. Online consultation, court representation across Supreme Court, High Courts, District Courts & Tribunals. ${practiceAreas.length} practice areas. Free case assessment available.`,
     url: "https://www.nyaysevak.com",
     type: "website",
     images: [
@@ -78,7 +79,7 @@ const homepageFaqJsonLd = {
       name: "What is NyaySevak?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "NyaySevak is India's complete legal ecosystem that connects citizens and businesses with verified lawyers across the Supreme Court, 25 High Courts, 700+ District Courts, all Tribunals, and Arbitration centres. We offer both B2B and B2C legal services covering 29 practice areas.",
+        text: "NyaySevak is India's complete legal ecosystem that connects citizens and businesses with verified lawyers across the Supreme Court, 25 High Courts, 700+ District Courts, all Tribunals, and Arbitration centres. We offer both B2B and B2C legal services covering {practiceAreas.length} practice areas.",
       },
     },
     {
@@ -118,7 +119,7 @@ const homepageFaqJsonLd = {
       name: "How much does a lawyer cost in India?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Lawyer fees in India vary by specialization, court level, and case complexity. District Court lawyers typically charge ₹5,000-₹25,000 per hearing, High Court lawyers ₹15,000-₹1,00,000, and Supreme Court advocates ₹50,000-₹5,00,000+. NyaySevak offers transparent pricing with no hidden fees, and your first step is a free case assessment.",
+        text: "Lawyer fees in India vary by specialisation, court level, and case complexity, and they rise with the forum — a district court appearance, a High Court hearing and a senior-counsel brief are each priced differently. NyaySevak does not publish fee amounts, because Bar Council of India rules restrict advocate fee advertising. What is fixed is the process: your first step is a free case assessment with no obligation, and any advocate fee is quoted transparently and agreed in writing before work begins.",
       },
     },
     {
@@ -134,7 +135,7 @@ const homepageFaqJsonLd = {
       name: "What is the best legal services platform in India?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "NyaySevak is India's most comprehensive legal services platform, covering the Supreme Court, all 25 High Courts, 700+ District Courts, and all Tribunals. Unlike other platforms, NyaySevak offers end-to-end services including lawyer matching, document preparation, e-filing, and court representation across 29 practice areas with transparent pricing.",
+        text: "NyaySevak is India's most comprehensive legal services platform, covering the Supreme Court, all 25 High Courts, 700+ District Courts, and all Tribunals. Unlike other platforms, NyaySevak offers end-to-end services including lawyer matching, document preparation, e-filing, and court representation across {practiceAreas.length} practice areas with transparent pricing.",
       },
     },
     // Week 8 consolidation: 5 Q&As previously in a separate aeoQAJsonLd FAQPage
@@ -160,7 +161,7 @@ const homepageFaqJsonLd = {
       name: "What types of legal cases does NyaySevak handle?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "NyaySevak handles all types of legal cases across 29 practice areas including criminal law, civil law, family & divorce law, property disputes, corporate law, cyber crime, consumer protection, tax disputes, banking & finance, intellectual property, CBI cases, ED cases, NDPS cases, arbitration, immigration, insurance, environmental law, constitutional law, medical negligence, and more.",
+        text: `NyaySevak handles all types of legal cases across ${practiceAreas.length} practice areas including criminal law, civil law, family & divorce law, property disputes, corporate law, cyber crime, consumer protection, tax disputes, banking & finance, intellectual property, CBI cases, ED cases, NDPS cases, arbitration, immigration, insurance, environmental law, constitutional law, medical negligence, and more.`,
       },
     },
     {
@@ -168,7 +169,7 @@ const homepageFaqJsonLd = {
       name: "How much does it cost to consult a lawyer on NyaySevak?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "NyaySevak offers a free case assessment for all new clients. After that, lawyer fees vary by specialization, experience, and court level. District Court lawyers typically charge ₹5,000-₹25,000 per hearing, High Court lawyers ₹15,000-₹1,00,000, and Supreme Court advocates ₹50,000-₹5,00,000+. All fees are displayed transparently with no hidden charges.",
+        text: "NyaySevak offers a free case assessment for all new clients. After that, advocate fees vary by specialisation, experience and court level, and are set by the individual advocate rather than by the platform. We do not publish fee amounts — Bar Council of India rules restrict advocate fee advertising — but every fee is quoted to you upfront and agreed in writing before any work begins.",
       },
     },
   ],
@@ -228,7 +229,7 @@ const geoAuthorityJsonLd = {
     "@type": "Organization",
     name: "NyaySevak Legal Team",
     url: "https://www.nyaysevak.com/about",
-    description: "Team of Bar Council verified lawyers with expertise across 29 practice areas of Indian law",
+    description: `Team of Bar Council verified lawyers with expertise across ${practiceAreas.length} practice areas of Indian law`,
   },
   datePublished: "2024-01-01",
   dateModified: "2026-04-05", // stable — bump only when content actually changes (see sitemap.ts)
@@ -473,7 +474,7 @@ export default function Home() {
           {/* SEO text content */}
           <div className="mt-12 pt-10 border-t border-white/[0.04]">
             <p className="text-xs text-gray-400 leading-relaxed max-w-4xl">
-              NyaySevak is India&apos;s leading legal services platform connecting individuals and businesses with verified lawyers across the Supreme Court, 25 High Courts, 700+ District Courts, and all Tribunals. Whether you need a criminal lawyer, divorce lawyer, property lawyer, corporate lawyer, or specialist for CBI, ED, NDPS cases — NyaySevak provides access to Bar Council verified advocates with transparent pricing and free case assessment. Our platform covers 29 practice areas including civil law, family law, cyber law, consumer protection, tax law, banking &amp; finance, intellectual property, arbitration, and more. Available pan-India with support in Hindi, English, and regional languages.
+              NyaySevak is India&apos;s leading legal services platform connecting individuals and businesses with verified lawyers across the Supreme Court, 25 High Courts, 700+ District Courts, and all Tribunals. Whether you need a criminal lawyer, divorce lawyer, property lawyer, corporate lawyer, or specialist for CBI, ED, NDPS cases — NyaySevak provides access to Bar Council verified advocates with transparent pricing and free case assessment. Our platform covers {practiceAreas.length} practice areas including civil law, family law, cyber law, consumer protection, tax law, banking &amp; finance, intellectual property, arbitration, and more. Available pan-India with support in Hindi, English, and regional languages.
             </p>
           </div>
         </div>
@@ -528,13 +529,13 @@ export default function Home() {
             Understanding Lawyer Fees in India
           </h3>
           <p className="text-sm sm:text-base text-gray-400 leading-relaxed">
-            Lawyer fees in India vary widely. District Court lawyers typically charge ₹5,000–₹50,000 per hearing depending on case complexity and city. High Court lawyers range from ₹15,000 to ₹3 lakh or more per appearance, with senior advocates at the Bombay, Delhi, Madras, and Calcutta High Courts commanding ₹5 lakh and upwards. Supreme Court advocates and senior counsel in major metros can charge ₹10 lakh+ per appearance for complex matters. On NyaySevak, every fee is shown upfront, and your first step is a free case assessment regardless of which lawyer you choose — so you can make an informed decision about scope, timeline, and budget before committing to representation.
+            Lawyer fees in India vary widely, and what drives them is fairly predictable: the forum, the seniority of counsel, the complexity of the matter, and the city. A district court appearance, a High Court hearing and a senior-counsel brief sit at very different levels, and a discrete application is often quoted as a package rather than per appearance. We do not publish fee amounts, because Bar Council of India rules restrict advocate fee advertising — but every fee is quoted to you upfront and agreed in writing before work begins, and your first step is a free case assessment regardless of which lawyer you choose — so you can make an informed decision about scope, timeline, and budget before committing to representation.
           </p>
 
           <div className="mt-10 flex flex-wrap gap-4">
             <ContactButtonPrimary />
             <Link href="/practice-areas" className="inline-flex items-center gap-2 text-sm text-gold/70 hover:text-gold transition-colors">
-              Browse all 29 practice areas
+              Browse all {practiceAreas.length} practice areas
               <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
             </Link>
           </div>

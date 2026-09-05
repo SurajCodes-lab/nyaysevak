@@ -11,6 +11,7 @@ import { relatedGroupsForCity } from "@/data/internal-links";
 import { faqPageJsonLd } from "@/lib/schema";
 import { BUSINESS } from "@/lib/business";
 import { notFound } from "next/navigation";
+import { title as metaTitle, description as metaDescription, clamp, DESC_MAX , titleFit } from "@/lib/meta";
 
 export function generateStaticParams() {
   return cities.map((c) => ({ city: c.slug }));
@@ -25,8 +26,16 @@ export async function generateMetadata({ params }: { params: Promise<{ city: str
   // Keywords expanded with the per-practice variants ("criminal lawyer Delhi",
   // "divorce lawyer Delhi" etc.) and neighbourhood-level near-me variants.
   // Week 15: tightened + de-duplicated brand (root layout adds "| NyaySevak.com").
-  const title = `Best Lawyers in ${city.name} — Case Assessment`;
-  const description = `Find the best verified lawyers near you in ${city.name}, ${city.state}. Criminal lawyer, civil lawyer, divorce lawyer, property lawyer, corporate lawyer & more. Covering ${city.highCourt.name} and all ${city.name} district courts. Free case assessment available.`;
+  const title = titleFit([
+    `Best Lawyers in ${city.name} — Case Assessment`,
+    `Best Lawyers in ${city.name}`,
+    `Lawyers in ${city.name}`,
+  ]);
+  const description = metaDescription([
+    `Verified lawyers in ${city.name}, ${city.state} — criminal, civil, divorce, property and corporate.`,
+    "Free case assessment, fees agreed upfront.",
+    `Covering ${city.highCourt.name}.`,
+  ]);
   const url = `${SITE_URL}/lawyers/${citySlug}`;
   const cityLower = city.name.toLowerCase();
 

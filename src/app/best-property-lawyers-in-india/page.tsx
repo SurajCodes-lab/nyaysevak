@@ -5,14 +5,15 @@ import { SITE_URL } from "@/lib/site";
 import RelatedLinks from "@/components/RelatedLinks";
 import { relatedGroupsForPractice } from "@/data/internal-links";
 import { notFound } from "next/navigation";
+import { title as metaTitle, clamp, DESC_MAX } from "@/lib/meta";
 
 const SLUG = "best-property-lawyers-in-india";
 const data = intentLandings.find((d) => d.slug === SLUG);
 
 export const metadata: Metadata = data
   ? {
-      title: data.title,
-      description: data.metaDescription,
+      title: metaTitle(data.title),
+      description: clamp(data.metaDescription, DESC_MAX),
       keywords: [data.primaryKeyword, ...data.secondaryKeywords, "NyaySevak"].join(", "),
       alternates: { canonical: `${SITE_URL}/${SLUG}` },
       openGraph: {

@@ -1803,13 +1803,14 @@ export const cityMatterContent: Record<string, CityPracticeContent> = {
       "Supreme Court of India (transfer petitions between states; Article 142 dissolution in rare cases)",
     ],
     caseTypes: [
-      { title: "S.13B Joint Petition & Both Motions", desc: "Drafting, filing and appearing at the first and second motions with consent recorded correctly." },
-      { title: "Cooling-Off Waiver", desc: "Amardeep Singh applications to waive the six-month interregnum where separation is long and terms are complete." },
-      { title: "Settlement Deed & Alimony Structuring", desc: "One-time alimony, stridhan return and property division drafted to be final, staged and enforceable." },
-      { title: "Custody & Visitation Terms", desc: "Parenting schedules, relocation and schooling clauses detailed enough to prevent future guardianship rounds." },
-      { title: "NRI & Video-Conference Matters", desc: "VC appearances and travel-efficient sequencing for Gujarati-diaspora spouses posted abroad or in other cities." },
-      { title: "Closure of 498A / DV / Maintenance Cases", desc: "Withdrawals before local magistrates and quashing at the Gujarat High Court as part of the package." },
-      { title: "Forum Selection — Bhadra vs Gandhinagar vs Home Town", desc: "Choosing between the Ahmedabad and Gandhinagar Family Courts, or the marriage-town court, when jurisdiction lies in more than one." },
+      { title: "Section 13B Petitions", desc: "First and second motion petitions before the Family Court at Ahmedabad." },
+      { title: "Waiver of the Six-Month Gap", desc: "Applications on the Amardeep Singh criteria where separation is long and the settlement complete." },
+      { title: "Settlement Drafting", desc: "Alimony, custody, property, stridhan and closure of every parallel proceeding in one package." },
+      { title: "Quashing on Settlement", desc: "Gujarat High Court petitions closing Section 85 BNS complaints once terms are agreed." },
+      { title: "Business-Family Settlements", desc: "Partnership retirement, share transfer and release of personal guarantees where the family runs a firm." },
+      { title: "Custody & Visitation Terms", desc: "Workable arrangements recorded as consent terms rather than left to later dispute." },
+      { title: "Permanent Alimony Structuring", desc: "Lump sum or staged payment with enforceable security and timelines." },
+      { title: "Mediation", desc: "Court-annexed mediation converting a contested matter into agreed terms." },
     ],
     faqs: [
       {

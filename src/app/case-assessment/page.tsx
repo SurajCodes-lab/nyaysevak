@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import IntentLandingRenderer from "@/components/IntentLandingRenderer";
 import { intentLandings } from "@/data/intent-landings";
 import { SITE_URL } from "@/lib/site";
+import { title as metaTitle, clamp, DESC_MAX } from "@/lib/meta";
 import { notFound } from "next/navigation";
 
 const SLUG = "case-assessment";
@@ -9,8 +10,8 @@ const data = intentLandings.find((d) => d.slug === SLUG);
 
 export const metadata: Metadata = data
   ? {
-      title: data.title,
-      description: data.metaDescription,
+      title: metaTitle(data.title),
+      description: clamp(data.metaDescription, DESC_MAX),
       keywords: [data.primaryKeyword, ...data.secondaryKeywords, "NyaySevak"].join(", "),
       alternates: { canonical: `${SITE_URL}/${SLUG}` },
       openGraph: {

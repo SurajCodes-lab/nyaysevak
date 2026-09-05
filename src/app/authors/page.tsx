@@ -7,9 +7,9 @@ import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title:
-    "Editorial Desks & Reviewers — NyaySevak Legal Insights Authors",
+    "Editorial Desks & Reviewers",
   description:
-    "Meet the NyaySevak editorial desks — practising senior advocates and partner-level corporate counsel who research, write, and review every legal guide on this platform.",
+    "The NyaySevak editorial desks — practising senior advocates and corporate counsel who research, write and review every guide on this platform.",
   keywords:
     "NyaySevak editorial desk, legal authors India, criminal law desk, family law desk, property law desk, corporate law desk, senior advocate authors, NyaySevak reviewers",
   alternates: { canonical: `${SITE_URL}/authors` },

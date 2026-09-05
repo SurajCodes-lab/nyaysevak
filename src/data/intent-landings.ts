@@ -11,7 +11,9 @@ export type CityCard = {
   city: string;
   citySlug: string;
   highlights: string[]; // 2-3 short city-specific notes
-  feeRange: string;     // realistic 2026 fee range for this practice in this city
+  // feeRange was removed in Week 26. It carried per-city advocate fee ranges
+  // on the city cards; the rendering came out in Week 25 and the data follows
+  // now, so it cannot be switched back on.
 };
 
 export type IntentLandingPage = {
@@ -112,7 +114,6 @@ export const intentLandings: IntentLandingPage[] = [
           "Delhi Rent Control Act 1958 applies to pre-1995 tenancies — bifurcated regime.",
           "Unauthorised-colony PTM-based title is NOT freehold-equivalent — material risk.",
         ],
-        feeRange: "Title verification: ₹25,000-₹1,00,000 · Sale deed: ₹30,000-₹1,50,000 · Partition: ₹3,00,000+",
       },
       {
         city: "Mumbai",
@@ -122,7 +123,6 @@ export const intentLandings: IntentLandingPage[] = [
           "DCPR 2034 redevelopment regulations (33(5)/(7)/(9)/(10)/(11)) govern most society redevelopment.",
           "MahaRERA is India's most active RERA — matured complaint adjudication.",
         ],
-        feeRange: "Title verification: ₹30,000-₹1,50,000 · MahaRERA complaint: ₹50,000-₹2,50,000",
       },
       {
         city: "Bangalore",
@@ -132,7 +132,6 @@ export const intentLandings: IntentLandingPage[] = [
           "Gramathana (revenue village) land needs conversion order before urban transactions.",
           "BBMP/BDA/BMRDA layouts have different approval implications.",
         ],
-        feeRange: "Title + khata verification: ₹20,000-₹75,000 · A-khata conversion: ₹30,000-₹1,50,000",
       },
       {
         city: "Chennai",
@@ -142,7 +141,6 @@ export const intentLandings: IntentLandingPage[] = [
           "Patta-chitta-adangal revenue records overlay the registered conveyance.",
           "Tamil Nadu Apartment Ownership Act 1994 governs apartment ownership.",
         ],
-        feeRange: "Title + patta verification: ₹20,000-₹80,000 · CMDA dispute: ₹1,00,000+",
       },
       {
         city: "Hyderabad",
@@ -152,7 +150,6 @@ export const intentLandings: IntentLandingPage[] = [
           "GPA restrictions (post-2015 Telangana) limit power-of-attorney transfers.",
           "HMDA layout regularisation (within outer ring road) is largely complete.",
         ],
-        feeRange: "Title + Dharani verification: ₹15,000-₹60,000",
       },
       {
         city: "Pune",
@@ -162,7 +159,6 @@ export const intentLandings: IntentLandingPage[] = [
           "PMC stamp-duty rates — 6% for males, 4% for females.",
           "Maharashtra Rent Control Act 1999 applies for legacy tenancies.",
         ],
-        feeRange: "Title verification: ₹20,000-₹75,000",
       },
       {
         city: "Kolkata",
@@ -172,7 +168,6 @@ export const intentLandings: IntentLandingPage[] = [
           "WB-HIRA (separate from RERA) covers West Bengal residential projects.",
           "Mutation through BL&LRO via online portal.",
         ],
-        feeRange: "Title verification: ₹15,000-₹60,000 · HC suit: ₹2,00,000+",
       },
       {
         city: "Ahmedabad",
@@ -182,7 +177,6 @@ export const intentLandings: IntentLandingPage[] = [
           "GIFT City IFSC regulatory framework — India's only such centre.",
           "TP scheme framework determines plot lay-outs.",
         ],
-        feeRange: "Title verification: ₹15,000-₹60,000 · GIFT City structuring: ₹3,00,000+",
       },
     ],
     faqs: [
@@ -277,13 +271,14 @@ export const intentLandings: IntentLandingPage[] = [
         ],
       },
       {
-        heading: "Realistic fee benchmarks for 2026",
+        heading: "What actually drives the cost",
         body: [
-          "Mutual-consent divorce in a tier-1 city Family Court: ₹40,000-₹1,50,000 per side for a junior-counsel-led matter; ₹1,50,000-₹5,00,000 for senior counsel involvement. Costs scale with complexity of asset division and number of pending criminal complaints to be withdrawn.",
-          "Contested divorce: ₹1,50,000-₹7,50,000 lump-sum (junior counsel, full case to disposal); ₹7,50,000-₹30,00,000+ for senior counsel involvement. Per-appearance billing is also common for very long-running matters.",
-          "Child custody (separate matter): ₹1,00,000-₹4,00,000 (junior counsel).",
-          "DV Act matters: ₹50,000-₹3,00,000 (junior); ₹3,00,000-₹10,00,000 (senior).",
-          "Maintenance applications (Section 125 BNSS / 24-25 HMA): ₹30,000-₹1,50,000 (junior); ₹1,50,000-₹5,00,000 (senior).",
+          "Bar Council of India rules restrict advocate fee advertising, so this page does not publish fee amounts. What can be set out is what the number depends on — and in matrimonial work the drivers are unusually predictable, so a well-scoped brief rarely surprises anyone.",
+          "The single largest factor is whether the matter is mutual-consent or contested. A mutual-consent divorce follows a defined two-motion procedure and is commonly scoped as a fixed package covering both motions. A contested matter has no defined end point, so it is engaged stage by stage instead.",
+          "The second factor is how many proceedings are actually running. A divorce petition alone is one brief; a divorce running alongside a maintenance claim, a Domestic Violence Act application and a criminal complaint is four, before different judges, and any settlement has to close all of them together.",
+          "The third is seniority and forum. A Family Court appearance, a High Court appeal and a senior-counsel brief sit at different levels, and where a spouse has moved states, a Supreme Court transfer petition is separate work again.",
+          "Asset complexity drives the rest — a settlement dividing a salaried couple's flat is a different exercise from one involving a family firm, where partnership retirement, share transfer and release of personal guarantees all have to be dealt with or the parties stay financially entangled after the decree.",
+          "Whatever the matter, the advocate quotes the fee and agrees it in writing before work begins, and your first step through NyaySevak is a free case assessment with no obligation.",
         ],
       },
     ],
@@ -296,7 +291,6 @@ export const intentLandings: IntentLandingPage[] = [
           "Strong panel of mediation-empanelled lawyers.",
           "Highest concentration of Senior Advocates for HC matrimonial appeals.",
         ],
-        feeRange: "Mutual divorce: ₹50,000-₹2,00,000 · Contested: ₹2,00,000-₹15,00,000+",
       },
       {
         city: "Mumbai",
@@ -306,7 +300,6 @@ export const intentLandings: IntentLandingPage[] = [
           "Parsi Matrimonial Court at Bombay HC — unique in India.",
           "Strong commercial-bar exposure for high-net-worth matrimonial matters.",
         ],
-        feeRange: "Mutual divorce: ₹60,000-₹2,50,000 · Contested: ₹2,50,000-₹20,00,000+",
       },
       {
         city: "Bangalore",
@@ -315,7 +308,6 @@ export const intentLandings: IntentLandingPage[] = [
           "Vyalikaval Family Court — reasonable timelines.",
           "Karnataka HC is technology-forward — virtual hearings routine.",
         ],
-        feeRange: "Mutual divorce: ₹40,000-₹1,80,000 · Contested: ₹1,80,000-₹12,00,000",
       },
       {
         city: "Chennai",
@@ -324,7 +316,6 @@ export const intentLandings: IntentLandingPage[] = [
           "Saidapet Family Court — heavy docket; waivers less commonly granted.",
           "Madras HC family matters bench has its own procedural conventions.",
         ],
-        feeRange: "Mutual divorce: ₹40,000-₹1,50,000 · Contested: ₹1,50,000-₹10,00,000",
       },
       {
         city: "Hyderabad",
@@ -333,7 +324,6 @@ export const intentLandings: IntentLandingPage[] = [
           "Saroornagar Family Court — moderate timelines.",
           "Telangana HC writ practice for specific custody/maintenance disputes.",
         ],
-        feeRange: "Mutual divorce: ₹35,000-₹1,40,000 · Contested: ₹1,40,000-₹9,00,000",
       },
       {
         city: "Pune",
@@ -342,7 +332,6 @@ export const intentLandings: IntentLandingPage[] = [
           "Shivajinagar Family Court — moderate.",
           "Maharashtra Rent Control Act overlay common in matrimonial-property division.",
         ],
-        feeRange: "Mutual divorce: ₹40,000-₹1,60,000 · Contested: ₹1,60,000-₹10,00,000",
       },
       {
         city: "Kolkata",
@@ -351,7 +340,6 @@ export const intentLandings: IntentLandingPage[] = [
           "Alipore Family Court — slower; expect longer timelines.",
           "Calcutta HC original-civil-jurisdiction matters above ₹10 lakh.",
         ],
-        feeRange: "Mutual divorce: ₹30,000-₹1,30,000 · Contested: ₹1,30,000-₹8,00,000",
       },
       {
         city: "Ahmedabad",
@@ -360,7 +348,6 @@ export const intentLandings: IntentLandingPage[] = [
           "Family Court — moderate-to-fast.",
           "Lower fee benchmarks across most matter types.",
         ],
-        feeRange: "Mutual divorce: ₹30,000-₹1,30,000 · Contested: ₹1,30,000-₹8,00,000",
       },
     ],
     faqs: [
@@ -460,12 +447,14 @@ export const intentLandings: IntentLandingPage[] = [
         ],
       },
       {
-        heading: "Realistic fee benchmarks for 2026",
+        heading: "What actually drives the cost",
         body: [
-          "Magistrate-court bail (junior counsel): ₹15,000-₹50,000 per appearance. Sessions Court anticipatory bail: ₹30,000-₹1,00,000 (junior); ₹1,50,000-₹5,00,000 (senior). HC bail / quashing: ₹75,000-₹3,00,000 (junior); ₹3,00,000-₹15,00,000 (with senior counsel).",
-          "Trial defence (full case): ₹1,00,000-₹5,00,000 lump-sum at Magistrate level (junior); ₹3,00,000-₹15,00,000 at Sessions level (junior); ₹15,00,000-₹75,00,000+ for senior counsel in serious cases.",
-          "PMLA / CBI / NIA cases: typically 2-4x comparable IPC/BNS rates due to complexity, special-court forum, and higher seniority required.",
-          "Supreme Court SLP (criminal): ₹1,50,000-₹15,00,000+ depending on counsel.",
+          "Bar Council of India rules restrict advocate fee advertising, so this page does not publish fee amounts. What it can set out is what the figure depends on, which in criminal defence is driven more by forum and stage than by anything else.",
+          "Forum comes first. A Magistrate court appearance, a Sessions Court matter, a High Court bail or quashing petition and a Supreme Court special leave petition are four different levels of engagement, and each is scoped separately.",
+          "Stage matters as much as forum. A discrete application — bail, anticipatory bail, quashing — is usually scoped as a package with a defined end. A full trial has no such boundary and is engaged stage by stage, which is why the two are quoted so differently.",
+          "Seniority is the third driver. A designated Senior Advocate is briefed for specific hearings rather than carried through a matter, so a senior-counsel brief sits alongside the instructing advocate's engagement rather than replacing it.",
+          "Special statutes raise the work substantially. PMLA, NDPS, CBI and NIA matters run before designated special courts, carry their own bail thresholds — Section 37 of the NDPS Act for commercial quantities, for instance — and demand correspondingly more preparation.",
+          "In every case the advocate quotes the fee and agrees it in writing before work begins, and your first step through NyaySevak is a free case assessment with no obligation.",
         ],
       },
     ],
@@ -478,7 +467,6 @@ export const intentLandings: IntentLandingPage[] = [
           "Highest concentration of Designated Senior Advocates in India.",
           "Supreme Court proximity for SLP filings.",
         ],
-        feeRange: "Sessions bail: ₹50,000-₹3,00,000 · HC quashing: ₹1,50,000-₹10,00,000+",
       },
       {
         city: "Mumbai",
@@ -488,7 +476,6 @@ export const intentLandings: IntentLandingPage[] = [
           "MCOCA expertise — unique to Mumbai/Maharashtra.",
           "Strong PMLA defence bar (Bombay HC has substantial ED-prosecution docket).",
         ],
-        feeRange: "Sessions bail: ₹50,000-₹2,50,000 · PMLA defence: ₹3,00,000-₹15,00,000+",
       },
       {
         city: "Bangalore",
@@ -497,7 +484,6 @@ export const intentLandings: IntentLandingPage[] = [
           "City Civil & Sessions Court Bengaluru Urban + specialised CBI Court.",
           "Karnataka HC technology-forward — virtual hearings routine.",
         ],
-        feeRange: "Sessions bail: ₹40,000-₹2,00,000 · HC quashing: ₹1,20,000-₹7,00,000",
       },
       {
         city: "Chennai",
@@ -506,7 +492,6 @@ export const intentLandings: IntentLandingPage[] = [
           "Sessions Court at Egmore + Madras HC for bail / quashing.",
           "Tamil Nadu Goondas Act 1982 considerations in habitual-offender matters.",
         ],
-        feeRange: "Sessions bail: ₹35,000-₹1,80,000 · HC quashing: ₹1,00,000-₹6,00,000",
       },
       {
         city: "Hyderabad",
@@ -515,7 +500,6 @@ export const intentLandings: IntentLandingPage[] = [
           "Three police commissionerates create distinctive jurisdictional questions.",
           "Telangana HC criminal bench moderate-to-active.",
         ],
-        feeRange: "Sessions bail: ₹30,000-₹1,50,000 · HC quashing: ₹90,000-₹5,00,000",
       },
       {
         city: "Pune",
@@ -524,7 +508,6 @@ export const intentLandings: IntentLandingPage[] = [
           "Pune Sessions Court + Bombay HC bench at Nagpur for some matters.",
           "MCOCA jurisdiction in organised-crime cases.",
         ],
-        feeRange: "Sessions bail: ₹35,000-₹1,80,000 · HC quashing: ₹1,00,000-₹6,00,000",
       },
       {
         city: "Kolkata",
@@ -533,7 +516,6 @@ export const intentLandings: IntentLandingPage[] = [
           "Alipore Sessions Court + Calcutta HC original-side criminal jurisdiction.",
           "Slower listing timelines — plan accordingly.",
         ],
-        feeRange: "Sessions bail: ₹30,000-₹1,40,000 · HC quashing: ₹80,000-₹5,00,000",
       },
       {
         city: "Ahmedabad",
@@ -542,7 +524,6 @@ export const intentLandings: IntentLandingPage[] = [
           "Sessions Court Ahmedabad + Gujarat HC.",
           "Lower fee benchmarks across most matter types.",
         ],
-        feeRange: "Sessions bail: ₹30,000-₹1,40,000 · HC quashing: ₹80,000-₹5,00,000",
       },
     ],
     faqs: [
@@ -772,7 +753,6 @@ export const intentLandings: IntentLandingPage[] = [
           "Dedicated Commercial Courts at each district complex under the Commercial Courts Act.",
           "Heavy property, recovery, and builder-buyer civil dockets.",
         ],
-        feeRange: "District suit: ₹10,000–₹45,000/appearance · HC: ₹30,000–₹2,50,000",
       },
       {
         city: "Mumbai",
@@ -782,7 +762,6 @@ export const intentLandings: IntentLandingPage[] = [
           "Small Causes Court has exclusive tenancy jurisdiction (MRC Act).",
           "Commercial Division is among the busiest in India.",
         ],
-        feeRange: "City Civil: ₹15,000–₹75,000/appearance · HC: ₹50,000–₹5,00,000",
       },
       {
         city: "Bangalore",
@@ -792,7 +771,6 @@ export const intentLandings: IntentLandingPage[] = [
           "Commercial Courts handle IT/contract disputes — a large share of the docket.",
           "Khata and conversion issues frequently surface inside civil property suits.",
         ],
-        feeRange: "Civil suit: ₹12,000–₹60,000/appearance · HC: ₹35,000–₹2,50,000",
       },
       {
         city: "Chennai",
@@ -802,7 +780,6 @@ export const intentLandings: IntentLandingPage[] = [
           "Patta-chitta revenue records overlay civil title suits.",
           "Strong tradition of specific-performance and partition litigation.",
         ],
-        feeRange: "City Civil: ₹12,000–₹55,000/appearance · HC: ₹35,000–₹2,50,000",
       },
       {
         city: "Hyderabad",
@@ -812,7 +789,6 @@ export const intentLandings: IntentLandingPage[] = [
           "Dharani-portal land-record disputes feature heavily in title suits.",
           "GPA-transfer restrictions (post-2015 Telangana) shape property-suit strategy.",
         ],
-        feeRange: "Civil suit: ₹10,000–₹50,000/appearance · HC: ₹30,000–₹2,00,000",
       },
       {
         city: "Pune",
@@ -822,7 +798,6 @@ export const intentLandings: IntentLandingPage[] = [
           "Co-operative Court has dedicated jurisdiction over society disputes.",
           "Bombay HC (appellate) for writs and high-value appeals.",
         ],
-        feeRange: "Civil suit: ₹12,000–₹55,000/appearance · HC: ₹35,000–₹2,25,000",
       },
       {
         city: "Kolkata",
@@ -832,7 +807,6 @@ export const intentLandings: IntentLandingPage[] = [
           "City Civil Court and Alipore for lower-value matters.",
           "Strong testamentary and partition practice.",
         ],
-        feeRange: "City Civil: ₹10,000–₹50,000/appearance · HC: ₹30,000–₹2,00,000",
       },
       {
         city: "Ahmedabad",
@@ -842,7 +816,6 @@ export const intentLandings: IntentLandingPage[] = [
           "Gujarat HC handles writs and high-value appeals/original matters.",
           "Heavy real-estate and recovery civil docket.",
         ],
-        feeRange: "Civil suit: ₹10,000–₹45,000/appearance · HC: ₹30,000–₹2,00,000",
       },
     ],
     faqs: [
@@ -953,7 +926,6 @@ export const intentLandings: IntentLandingPage[] = [
           "SEBI Northern Regional Office, CCI, and MCA Regional Director (North).",
           "Delhi HC Commercial Division is highly active for arbitration and IPR.",
         ],
-        feeRange: "Advisory retainer: ₹40,000–₹3,00,000/mo · NCLT: ₹30,000–₹2,00,000/hearing",
       },
       {
         city: "Mumbai",
@@ -963,7 +935,6 @@ export const intentLandings: IntentLandingPage[] = [
           "Highest IBC filing volume in India; MCIA for institutional arbitration.",
           "Deepest M&A, PE, and securities bar in the country.",
         ],
-        feeRange: "Advisory retainer: ₹50,000–₹5,00,000/mo · HC/NCLT: ₹75,000–₹7,50,000",
       },
       {
         city: "Bangalore",
@@ -973,7 +944,6 @@ export const intentLandings: IntentLandingPage[] = [
           "NCLT Bengaluru Bench for Karnataka companies.",
           "Heavy SaaS, IP-licensing, and tech-M&A contract work.",
         ],
-        feeRange: "Advisory retainer: ₹40,000–₹3,50,000/mo · NCLT: ₹35,000–₹2,50,000/hearing",
       },
       {
         city: "Chennai",
@@ -983,7 +953,6 @@ export const intentLandings: IntentLandingPage[] = [
           "Strong manufacturing, auto-ancillary, and family-business advisory practice.",
           "Madras HC Commercial Division for high-value contract disputes.",
         ],
-        feeRange: "Advisory retainer: ₹35,000–₹2,50,000/mo · NCLT: ₹30,000–₹2,00,000/hearing",
       },
       {
         city: "Hyderabad",
@@ -993,7 +962,6 @@ export const intentLandings: IntentLandingPage[] = [
           "Fast-growing IT, pharma, and life-sciences corporate base.",
           "Rising corporate-law-firm presence around HITEC City and the financial district.",
         ],
-        feeRange: "Advisory retainer: ₹30,000–₹2,50,000/mo · NCLT: ₹25,000–₹1,75,000/hearing",
       },
       {
         city: "Pune",
@@ -1003,7 +971,6 @@ export const intentLandings: IntentLandingPage[] = [
           "Strong auto, manufacturing, and IT-services corporate practice.",
           "Commercial disputes route through the Bombay HC (appellate).",
         ],
-        feeRange: "Advisory retainer: ₹30,000–₹2,50,000/mo · NCLT: ₹30,000–₹2,00,000/hearing",
       },
       {
         city: "Kolkata",
@@ -1013,7 +980,6 @@ export const intentLandings: IntentLandingPage[] = [
           "Deep tradition in company, testamentary, and commercial litigation at the Calcutta HC.",
           "Strong family-conglomerate and trading-house advisory base.",
         ],
-        feeRange: "Advisory retainer: ₹30,000–₹2,25,000/mo · NCLT/HC: ₹30,000–₹2,00,000",
       },
       {
         city: "Ahmedabad",
@@ -1023,7 +989,6 @@ export const intentLandings: IntentLandingPage[] = [
           "GIFT City IFSC — India's only international financial-services centre.",
           "Heavy corporate, textile, and real-estate-company advisory and tax-writ work.",
         ],
-        feeRange: "Advisory retainer: ₹30,000–₹2,25,000/mo · NCLT/HC: ₹25,000–₹1,75,000",
       },
     ],
     faqs: [

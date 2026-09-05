@@ -22,9 +22,9 @@ import { SITE_URL } from "@/lib/site";
 //   AI crawlers a clean map of the whole site.
 
 export const metadata: Metadata = {
-  title: "Site Index — All Pages | NyaySevak.com",
+  title: "Site Index — All Pages",
   description:
-    "Complete index of every page on NyaySevak: practice areas, legal services, courts & tribunals, lawyers by city, legal tools, insights guides, and the legal glossary.",
+    "Every page on NyaySevak: practice areas, services, courts and tribunals, lawyers by city, legal tools, insights guides and the glossary.",
   alternates: { canonical: `${SITE_URL}/site-index` },
   robots: { index: true, follow: true },
 };

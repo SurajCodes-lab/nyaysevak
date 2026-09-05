@@ -17,6 +17,8 @@ import { webPageSpeakableJsonLd } from "@/lib/schema";
 import RelatedLinks from "@/components/RelatedLinks";
 import { relatedGroupsForService } from "@/data/internal-links";
 import { notFound } from "next/navigation";
+import WhatsAppLink from "@/components/WhatsAppLink";
+import { title as metaTitle, description as metaDescription, clamp, DESC_MAX } from "@/lib/meta";
 
 // Week 5: Map each service slug → 4 relevant practice-area slugs (mid-body cross-link)
 const serviceToPracticeAreas: Record<string, string[]> = {
@@ -54,8 +56,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     // Week 17: keyword-first, single-brand (layout adds `| NyaySevak.com`; the
     // hardcoded ".com" here was doubling it and truncating the SERP title).
-    title: `${service.title} in India — Case Assessment`,
-    description: `Best ${service.title.toLowerCase()} ${catLabel.toLowerCase()} in India. ${service.bullets.join(". ")}. Verified professionals across all courts. Book a case assessment in 60 seconds. Call +91-9868666715.`,
+    title: metaTitle(`${service.title} in India — Case Assessment`),
+    description: metaDescription([
+      `${service.title} in India — verified professionals across all courts.`,
+      "Free case assessment, fees agreed upfront.",
+      `${service.bullets[0]}.`,
+    ]),
     keywords: [
       `${service.title.toLowerCase()} India`,
       `best ${service.title.toLowerCase()}`,
@@ -87,7 +93,7 @@ const serviceContent: Record<string, { overview: string; benefits: string[]; pro
     overview: "NyaySevak's Lawyer Consultation service connects you with verified, experienced lawyers across India for instant or scheduled consultations. Whether you need quick legal advice on a property matter, guidance on a criminal case, or consultation for a business dispute — our platform ensures you get expert help via secure video, audio, or chat channels with complete transparency in pricing.",
     benefits: ["Access to Bar Council-verified lawyers across all practice areas", "Choose between instant and scheduled consultations", "Secure video, audio, and chat communication channels", "Transparent pricing displayed before booking — no hidden fees", "Consultations available in multiple Indian languages", "Follow-up support and documentation after consultation"],
     process: ["Tell us your legal matter and city", "Our team matches you with a verified specialist lawyer", "Book an instant or scheduled consultation slot", "Connect via secure video, audio, or chat", "Receive expert legal advice and a documented summary", "Continue with the same lawyer for full representation"],
-    whyChoose: ["Bar-Council-verified advocates across all 29 practice areas", "Quick response, including for urgent matters", "Consultations available in major Indian languages including Hindi, Tamil, Bengali", "Honest, upfront guidance with fees agreed before any work", "Confidential and encrypted communication", "Free case assessment for new clients"],
+    whyChoose: [`Bar-Council-verified advocates across all ${practiceAreas.length} practice areas`, "Quick response, including for urgent matters", "Consultations available in major Indian languages including Hindi, Tamil, Bengali", "Honest, upfront guidance with fees agreed before any work", "Confidential and encrypted communication", "Free case assessment for new clients"],
     faqs: [
       { q: "How are you matched with the right lawyer?", a: "Tell us your practice area, court, location, and preferred language, and our team matches you with a Bar Council–verified lawyer who fits your matter. We share their experience and fees before your free case assessment. (Bar Council of India rules do not permit advocates to be publicly advertised, listed, or rated, so we don't display lawyer profiles or star ratings.)" },
       { q: "What are the consultation modes available?", a: "We offer video calls, audio calls, and text chat consultations. You can choose the mode that works best for you during the booking process." },
@@ -133,8 +139,8 @@ const serviceContent: Record<string, { overview: string; benefits: string[]; pro
     ],
   },
   "legal-knowledge": {
-    overview: "Legal literacy empowers citizens to understand their rights and make informed decisions. NyaySevak's Legal Knowledge hub provides a comprehensive case law database, expert-written legal articles and guides, a full repository of acts and statutes, and know-your-rights educational resources covering all 29 practice areas of Indian law.",
-    benefits: ["Comprehensive searchable case law database with 50,000+ judgments", "Expert-written articles covering all 29 practice areas", "Complete repository of Indian acts, statutes, and bare acts", "Know-your-rights guides in simple, plain language", "Regular updates on new laws and legal developments", "Legal process guides with step-by-step instructions"],
+    overview: "Legal literacy empowers citizens to understand their rights and make informed decisions. NyaySevak's Legal Knowledge hub provides a comprehensive case law database, expert-written legal articles and guides, a full repository of acts and statutes, and know-your-rights educational resources covering all {practiceAreas.length} practice areas of Indian law.",
+    benefits: ["Comprehensive searchable case law database with 50,000+ judgments", `Expert-written articles covering all ${practiceAreas.length} practice areas`, "Complete repository of Indian acts, statutes, and bare acts", "Know-your-rights guides in simple, plain language", "Regular updates on new laws and legal developments", "Legal process guides with step-by-step instructions"],
     process: ["Browse articles by practice area or topic", "Search the case law database for relevant precedents", "Access acts and statutes from the repository", "Read know-your-rights guides relevant to your situation", "Use process guides to understand legal procedures", "Connect with a lawyer if you need professional help"],
     whyChoose: ["50,000+ case law summaries and full judgments", "Articles reviewed by practicing lawyers", "Updated within 24 hours of major legal developments", "Available in English and Hindi", "Free access with no registration required", "Downloadable resources for offline reading"],
     faqs: [
@@ -652,17 +658,17 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
               Book Your Assessment
               <ArrowRight className="h-4 w-4" strokeWidth={2} />
             </ContactButton>
-            <a
-              href="https://wa.me/919868666715"
-              target="_blank"
-              rel="noopener noreferrer"
+            <WhatsAppLink
+              message={`Hi, I need help with ${service.title}`}
+              source="service_page"
+              context={service.title}
               className="inline-flex items-center gap-2.5 rounded-xl bg-[#25D366] px-6 sm:px-8 py-4 sm:py-5 text-sm font-semibold uppercase tracking-widest text-white shadow-lg shadow-[#25D366]/25 hover:shadow-xl hover:shadow-[#25D366]/35 hover:scale-[1.02] transition-all duration-300"
             >
               <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
               </svg>
               Chat on WhatsApp
-            </a>
+            </WhatsAppLink>
           </div>
         </div>
       </section>

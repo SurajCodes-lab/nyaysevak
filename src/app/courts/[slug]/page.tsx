@@ -14,6 +14,8 @@ import { SITE_URL } from "@/lib/site";
 import RelatedLinks from "@/components/RelatedLinks";
 import { relatedGroupsForCourt } from "@/data/internal-links";
 import { notFound } from "next/navigation";
+import WhatsAppLink from "@/components/WhatsAppLink";
+import { title as metaTitle, description as metaDescription, clamp, DESC_MAX , titleFit } from "@/lib/meta";
 
 type CourtType = "hc" | "dc" | "tribunal";
 type CourtEntry = { type: CourtType; slug: string };
@@ -34,8 +36,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   const hc = highCourts.find((c) => c.slug === slug);
   if (hc) return {
-    title: `${hc.name.replace(/ HC$/, " High Court")} Lawyers — Case Assessment`,
-    description: `Find the best verified lawyers for ${hc.name} in ${hc.jurisdiction}. Writ petitions, appeals, bail, criminal, civil, family, corporate & tax matters. ${hc.benches.length > 0 ? `Benches: ${hc.benches.join(", ")}. ` : ""}Free case assessment available. Call +91-9868666715.`,
+    title: metaTitle(`${hc.name.replace(/ HC$/, " High Court")} Lawyers — Case Assessment`),
+    description: metaDescription([
+      `Verified lawyers for ${hc.name}, ${hc.jurisdiction}.`,
+      "Writs, appeals and bail. Free case assessment.",
+      hc.benches.length > 0 ? `Benches: ${hc.benches.join(", ")}.` : "",
+    ]),
     keywords: `${hc.name} lawyer, best advocate ${hc.jurisdiction}, ${hc.jurisdiction} lawyer, high court lawyer ${hc.jurisdiction}, bail lawyer ${hc.jurisdiction}, writ petition lawyer, ${hc.name} advocate, NyaySevak, free case assessment`,
     alternates: { canonical: `https://www.nyaysevak.com/courts/${slug}` },
     openGraph: {
@@ -53,8 +59,17 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   const dc = districtCourts.find((d) => d.slug === slug);
   if (dc) return {
-    title: `District Court Lawyers in ${dc.state}`,
-    description: `Find the best verified lawyers for all ${dc.districts.length} district courts in ${dc.state}. ${dc.districts.slice(0, 5).join(", ")} & more. Criminal, civil, family, property, consumer & labour cases. Free case assessment available.`,
+    title: titleFit([
+      `District Court Lawyers in ${dc.state}`,
+      `${dc.state} District Court Lawyers`,
+      `District Courts — ${dc.state}`,
+      `${dc.state} Courts`,
+    ]),
+    description: metaDescription([
+      `Verified lawyers across all ${dc.districts.length} district courts in ${dc.state}.`,
+      "Criminal, civil, family and property matters. Free case assessment.",
+      `${dc.districts.slice(0, 3).join(", ")} and more.`,
+    ]),
     keywords: `district court lawyer ${dc.state}, best lawyer ${dc.districts[0]}, advocate near me ${dc.state}, ${dc.districts.slice(0, 3).map(d => `lawyer ${d}`).join(", ")}, NyaySevak, free case assessment`,
     alternates: { canonical: `https://www.nyaysevak.com/courts/${slug}` },
     openGraph: {
@@ -72,8 +87,16 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   const tr = tribunalGroups.find((t) => t.slug === slug);
   if (tr) return {
-    title: `${tr.title} Tribunal Lawyers in India`,
-    description: `Find the best verified lawyers for ${tr.title} tribunals in India. ${tr.items.slice(0, 4).join(", ")} & more. Expert tribunal representation. Free case assessment available. Call +91-9868666715.`,
+    title: titleFit([
+      `${tr.title} Tribunal Lawyers in India`,
+      `${tr.title} Tribunal Lawyers`,
+      `${tr.title} Tribunals`,
+    ]),
+    description: metaDescription([
+      `Verified lawyers for ${tr.title} tribunals in India.`,
+      "Free case assessment, fees agreed upfront.",
+      `${tr.items.slice(0, 3).join(", ")} and more.`,
+    ]),
     keywords: `${tr.title} tribunal lawyer, ${tr.items.slice(0, 3).map(i => `${i} lawyer`).join(", ")}, best tribunal advocate India, NyaySevak, free case assessment`,
     alternates: { canonical: `https://www.nyaysevak.com/courts/${slug}` },
     openGraph: {
@@ -748,14 +771,13 @@ export default async function CourtDetailPage({ params }: { params: Promise<{ sl
                   Find a Lawyer
                   <ArrowRight className="h-4 w-4" strokeWidth={2} />
                 </ContactButton>
-                <a
-                  href="https://wa.me/919868666715"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <WhatsAppLink
+                  message="Hi, I need legal help with a court matter."
+                  source="court_page"
                   className="inline-flex items-center gap-2.5 rounded-xl border border-white/10 px-8 py-4 text-sm font-semibold text-white transition-all duration-300 hover:border-gold/30 hover:text-gold"
                 >
                   Chat on WhatsApp
-                </a>
+                </WhatsAppLink>
               </div>
             </div>
           </div>

@@ -16,6 +16,7 @@ import {
   webPageSpeakableJsonLd,
 } from "@/lib/schema";
 import { SITE_URL } from "@/lib/site";
+import { titleFit, clamp, DESC_MAX } from "@/lib/meta";
 
 // Why these are individual pages (not anchors on one glossary page):
 //   Each term answers a distinct "what is X / meaning of X in law" query. As
@@ -51,15 +52,22 @@ export async function generateMetadata({
   const ref = term.statutoryReference ? `, ${term.statutoryReference}` : "";
   const url = `${SITE_URL}/legal-glossary/${term.slug}`;
   return {
-    title: `What is ${name}? Meaning [2026]`,
-    description: term.shortDefinition.slice(0, 158),
+    // Week 26: statute names run long ("Section 351 BNSS (formerly 313 CrPC)
+    // Statement"). Shed the year, then the question form, before truncating.
+    title: titleFit([
+      `What is ${name}? Meaning [2026]`,
+      `What is ${name}? Meaning`,
+      `${name} — Meaning in Indian Law`,
+      `${name} — Legal Meaning`,
+    ]),
+    description: clamp(term.shortDefinition, DESC_MAX),
     keywords: `what is ${name}, ${name} meaning, ${name} in law India, ${name} definition${
       term.statutoryReference ? `, ${term.statutoryReference}` : ""
     }, NyaySevak`,
     alternates: { canonical: url },
     openGraph: {
       title: `What is ${name}? — Indian Legal Glossary | NyaySevak`,
-      description: term.shortDefinition.slice(0, 158),
+      description: clamp(term.shortDefinition, DESC_MAX),
       url,
       type: "article",
     },

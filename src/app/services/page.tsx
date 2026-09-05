@@ -4,11 +4,12 @@ import Services from "@/components/Services";
 import ContactButton from "@/components/ContactButton";
 import { ArrowRight } from "lucide-react";
 import { allServices } from "@/data/services";
+import { practiceAreas } from "@/data/practice-areas";
 
 export const metadata: Metadata = {
-  title: "Legal Services in India — Lawyers & Advisory",
+  title: "Legal Services & Advisory in India",
   description:
-    "Best legal services in India for individuals & businesses. Online lawyer consultation, find & hire verified advocates, document drafting, corporate legal advisory, compliance management, contract management, IP registration, litigation support. Free case assessment available.",
+    "Legal services for individuals and businesses — consultation, lawyer matching, document drafting, compliance, contracts, IP and litigation support.",
   keywords:
     "legal services India, lawyer consultation online, find lawyer near me, best advocate India, corporate legal advisory, compliance management, contract management, IP management, B2B legal services, B2C legal services, online lawyer India, legal help online, hire lawyer online, verified lawyer India, affordable legal services, free case assessment",
   alternates: { canonical: "https://www.nyaysevak.com/services" },
@@ -83,13 +84,13 @@ export default function ServicesPage() {
               <strong className="text-gray-900">For businesses</strong>, we offer <Link href="/services/corporate-legal-advisory" className="text-gold-dark hover:text-gold transition-colors font-semibold">corporate legal advisory</Link> (dedicated legal teams tailored to your enterprise size), <Link href="/services/compliance-management" className="text-gold-dark hover:text-gold transition-colors font-semibold">compliance management</Link> (automated tracking of GST, MCA, labour-law and industry-specific filings), <Link href="/services/contract-management" className="text-gold-dark hover:text-gold transition-colors font-semibold">contract management</Link> (end-to-end drafting, review, and lifecycle tracking), <Link href="/services/ip-management" className="text-gold-dark hover:text-gold transition-colors font-semibold">IP management</Link> (trademark, patent, copyright filings and enforcement), <Link href="/services/litigation-management" className="text-gold-dark hover:text-gold transition-colors font-semibold">litigation management</Link> (centralised tracking across jurisdictions), and <Link href="/services/mergers-acquisitions-support" className="text-gold-dark hover:text-gold transition-colors font-semibold">M&amp;A support</Link> (due diligence, transaction documents, regulatory approvals). Enterprise engagements are structured on retainer, project, or hourly-rate models depending on the scope and visibility required.
             </p>
             <p>
-              The advantage of using a platform like NyaySevak rather than searching for a lawyer cold is transparency: every lawyer&apos;s Bar Council registration is verified, their fees are displayed upfront (no hidden commissions, no opaque matching), and your first step is a free case assessment regardless of which lawyer you choose. For businesses, we offer integrated dashboards, compliance calendars, and legal MIS reports that make it easy to manage your entire legal function through a single interface. Browse the service catalogue below — or if you already know the practice area you need, visit our <Link href="/practice-areas" className="text-gold-dark hover:text-gold transition-colors font-semibold">29 practice areas</Link> directly, or find a lawyer in your <Link href="/lawyers" className="text-gold-dark hover:text-gold transition-colors font-semibold">city</Link>.
+              The advantage of using a platform like NyaySevak rather than searching for a lawyer cold is transparency: every lawyer&apos;s Bar Council registration is verified, fees are agreed with you upfront (no hidden commissions, no opaque matching), and your first step is a free case assessment regardless of which lawyer you choose. For businesses, we offer integrated dashboards, compliance calendars, and legal MIS reports that make it easy to manage your entire legal function through a single interface. Browse the service catalogue below — or if you already know the practice area you need, visit our <Link href="/practice-areas" className="text-gold-dark hover:text-gold transition-colors font-semibold">{practiceAreas.length} practice areas</Link> directly, or find a lawyer in your <Link href="/lawyers" className="text-gold-dark hover:text-gold transition-colors font-semibold">city</Link>.
             </p>
           </div>
         </div>
       </section>
 
-      <Services />
+      <Services headingLevel="h1" />
 
       <div className="section-separator" />
 
@@ -156,7 +157,7 @@ export default function ServicesPage() {
             href="/practice-areas"
             className="inline-flex items-center gap-2 text-sm text-gold/60 hover:text-gold transition-colors"
           >
-            View All 29 Practice Areas
+            View All {practiceAreas.length} Practice Areas
             <ArrowRight className="h-4 w-4" strokeWidth={1.5} />
           </Link>
         </div>

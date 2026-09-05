@@ -3,9 +3,9 @@ import ContactButton from "@/components/ContactButton";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Disclaimer | NyaySevak - India's Premier Legal Services Platform",
+  title: "Legal Disclaimer",
   description:
-    "Read the legal disclaimer for NyaySevak. Important information about limitations of our platform, no attorney-client relationship, and no guarantee of legal outcomes.",
+    "NyaySevak's legal disclaimer: platform limitations, no attorney-client relationship, and no guarantee of legal outcomes.",
   keywords:
     "NyaySevak disclaimer, legal disclaimer India, no attorney-client relationship, legal platform disclaimer, legal services limitations",
   alternates: { canonical: "https://www.nyaysevak.com/disclaimer" },

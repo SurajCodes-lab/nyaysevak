@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Platform from "@/components/Platform";
 
 export const metadata: Metadata = {
-  title: "How to Hire a Lawyer Online in India - Step by Step | NyaySevak Platform",
+  title: "How to Hire a Lawyer Online in India",
   description:
-    "Learn how to hire a verified lawyer online in India through NyaySevak. Simple 4-step process: describe your case, get matched with verified advocates, book case assessment, proceed with representation. B2B & B2C legal services for individuals, startups & corporates.",
+    "Hire a verified lawyer online in India in four steps: describe your case, get matched, book a free assessment, then proceed with representation.",
   keywords:
     "how to hire lawyer online India, how to find lawyer near me, online lawyer consultation process, best legal services platform India, B2B legal services, B2C legal services, hire advocate online, lawyer booking platform India, NyaySevak platform",
   alternates: { canonical: "https://www.nyaysevak.com/platform" },

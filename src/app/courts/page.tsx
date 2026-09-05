@@ -5,11 +5,12 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { highCourts, tribunalGroups, districtCourts } from "@/data/courts";
 import FaqBlock from "@/components/FaqBlock";
+import { practiceAreas } from "@/data/practice-areas";
 
 export const metadata: Metadata = {
   title: "Find Lawyers for Any Court in India",
   description:
-    "Find verified lawyers for Supreme Court, all 25 High Courts, 700+ District Courts, NCLT, NGT, RERA, NCDRC & 20+ Tribunals across India. Book court representation with expert advocates. Free case assessment available.",
+    "Verified lawyers for the Supreme Court, all 25 High Courts, 700+ district courts, NCLT, NGT, RERA, NCDRC and 20+ tribunals. Free case assessment.",
   keywords:
     "Supreme Court advocate, Supreme Court lawyer India, High Court lawyer, District Court lawyer near me, NCLT lawyer, NGT lawyer, RERA lawyer, tribunal lawyer India, court lawyer near me, find advocate for court, legal representation India, bail lawyer court, NyaySevak",
   alternates: { canonical: "https://www.nyaysevak.com/courts" },
@@ -101,7 +102,7 @@ export default function CourtsPage() {
         </div>
       </section>
 
-      <Courts />
+      <Courts headingLevel="h1" />
 
       <div className="section-separator" />
 
@@ -165,7 +166,7 @@ export default function CourtsPage() {
               href="/practice-areas"
               className="inline-flex items-center gap-2 text-sm text-gold/60 hover:text-gold transition-colors"
             >
-              All 29 Practice Areas
+              All {practiceAreas.length} Practice Areas
               <ArrowRight className="h-4 w-4" strokeWidth={1.5} />
             </Link>
             <Link
