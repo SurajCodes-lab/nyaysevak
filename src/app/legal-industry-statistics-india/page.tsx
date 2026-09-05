@@ -25,9 +25,9 @@ const PUBLISHED = "2026-05-12";
 
 export const metadata: Metadata = {
   title:
-    "Legal Industry Statistics — India 2026 | Court Pendency, Lawyer Count, Case Filings, Market Size | NyaySevak",
+    "Indian Legal Industry Statistics 2026",
   description:
-    "Authoritative data page for the Indian legal industry, 2026. Court pendency, enrolled advocates, case filings by court tier, average disposal time, market size, and digital-litigation adoption — sourced from NJDG, BCI, and DoJ. Free to cite.",
+    "Indian legal industry data for 2026 — court pendency, enrolled advocates, filings by court tier, disposal time and market size. Free to cite.",
   keywords: [
     "india legal industry statistics",
     "indian courts pendency",

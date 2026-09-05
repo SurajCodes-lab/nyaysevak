@@ -11,7 +11,7 @@ const url = `${SITE_URL}/lawyers`;
 export const metadata: Metadata = {
   title: "Find Lawyers by City in India",
   description:
-    "Find the best verified lawyers across India's top cities — Delhi, Mumbai, Bangalore, Chennai, Hyderabad, Pune, Kolkata, and Ahmedabad. Criminal, civil, divorce, property, and corporate advocates. Free case assessment available.",
+    "Verified lawyers across India's major cities — Delhi, Mumbai, Bangalore, Chennai, Hyderabad, Pune, Kolkata, Ahmedabad. Free case assessment.",
   keywords:
     "lawyer near me, lawyer in Delhi, lawyer in Mumbai, lawyer in Bangalore, lawyer in Chennai, lawyer in Hyderabad, lawyer in Pune, lawyer in Kolkata, lawyer in Ahmedabad, best lawyer India, verified advocate India, free case assessment, NyaySevak",
   alternates: { canonical: url },

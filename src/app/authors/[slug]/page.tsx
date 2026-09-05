@@ -6,6 +6,7 @@ import { authors, authorsBySlug, isAuthorSlug } from "@/data/authors";
 import { articles } from "@/data/insights";
 import RelatedLinks from "@/components/RelatedLinks";
 import { SITE_URL } from "@/lib/site";
+import { titleParts, description as metaDescription, snippet, clamp } from "@/lib/meta";
 
 export function generateStaticParams() {
   return authors.map((a) => ({ slug: a.slug }));
@@ -20,8 +21,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const url = `${SITE_URL}/authors/${slug}`;
 
   return {
-    title: `${author.name} — ${author.designation} | NyaySevak`,
-    description: `${author.shortBio} ${author.yearsOfExperience}+ years' practice across ${author.practiceAreas.slice(0, 3).join(", ")}.`,
+    // Week 26: layout appends the brand; appending it here doubled it.
+    title: titleParts([author.name, author.designation]),
+    description: metaDescription([snippet(author.shortBio, 90), `${author.yearsOfExperience}+ years across ${author.practiceAreas.slice(0, 2).join(", ")}.`]),
     keywords: [
       author.name,
       author.designation,

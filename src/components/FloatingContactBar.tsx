@@ -2,6 +2,7 @@
 
 import { Phone } from "lucide-react";
 import { trackPhoneClick, trackWhatsAppClick } from "@/lib/analytics";
+import { logWhatsAppEnquiry } from "@/lib/whatsapp-lead";
 
 // Week 5: Replaces the old footer WhatsApp-only floating button with a paired
 // WhatsApp + Call bar that fires analytics events and is visible on every page.
@@ -29,7 +30,10 @@ export default function FloatingContactBar() {
         href="https://wa.me/919868666715?text=Hi%2C%20I%20need%20legal%20help."
         target="_blank"
         rel="noopener noreferrer"
-        onClick={() => trackWhatsAppClick("floating_bar")}
+        onClick={() => {
+          trackWhatsAppClick("floating_bar");
+          logWhatsAppEnquiry({ source: "floating_bar", message: "Hi, I need legal help." });
+        }}
         aria-label="Chat with NyaySevak on WhatsApp"
         className="group flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-full bg-[#25D366] shadow-lg shadow-[#25D366]/30 transition-all duration-300 hover:scale-110 hover:shadow-xl hover:shadow-[#25D366]/40 focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2 focus:ring-offset-dark-deep"
       >

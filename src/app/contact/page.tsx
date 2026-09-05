@@ -3,9 +3,9 @@ import Contact from "@/components/Contact";
 import { HelpCircle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Case Assessment - Talk to a Lawyer Now | NyaySevak",
+  title: "Contact NyaySevak — Talk to a Lawyer",
   description:
-    "Get free case assessment from verified lawyers. Call +91 98686 66715 or fill the form. Available for criminal, divorce, property, corporate, cyber crime & all legal matters. 24/7 emergency legal help across India.",
+    "Reach NyaySevak for a free case assessment — criminal, divorce, property, corporate, cyber and civil matters. Response within four hours, pan-India.",
   keywords:
     "free case assessment, talk to lawyer online, legal consultation India, hire lawyer online, emergency lawyer India, free case assessment lawyer, book lawyer appointment, legal help near me, lawyer phone consultation, NyaySevak contact",
   alternates: { canonical: "https://www.nyaysevak.com/contact" },
@@ -94,7 +94,7 @@ export default function ContactPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(contactFaqJsonLd) }}
       />
-      <Contact />
+      <Contact headingLevel="h1" />
 
       {/* ===== FAQs ===== */}
       <section

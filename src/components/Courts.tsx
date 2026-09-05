@@ -12,7 +12,11 @@ const tribunalHighlights = [
   "NCLT", "NCLAT", "RERA Tribunals", "Consumer Forums", "NGT", "SAT", "ITAT", "CESTAT",
 ];
 
-export default function Courts() {
+// The hero heading level is a prop because this component is used two ways:
+// as this page's own headline (H1) and as one section of the homepage (H2),
+// where the homepage hero already holds the H1.
+export default function Courts({ headingLevel = "h2" }: { headingLevel?: "h1" | "h2" } = {}) {
+  const Heading = headingLevel;
   return (
     <section id="courts" className="bg-dark-deep relative overflow-hidden dark-section-depth" aria-label="Pan-India court coverage including Supreme Court, High Courts, District Courts and Tribunals">
       {/* Top separator */}
@@ -32,10 +36,10 @@ export default function Courts() {
                 <p className="text-[11px] sm:text-xs uppercase tracking-[0.35em] text-gold font-semibold mb-4">
                   Pan-India Presence
                 </p>
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold tracking-tight text-white heading-glow mb-6">
+                <Heading className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold tracking-tight text-white heading-glow mb-6">
                   Courts Across<br />
                   <span className="gradient-text-gold">All of India</span>
-                </h2>
+                </Heading>
                 <p className="text-sm sm:text-base text-gray-400 leading-relaxed max-w-md mb-10">
                   From the Supreme Court to your nearest District Court — comprehensive legal representation across every level of the Indian judiciary.
                 </p>

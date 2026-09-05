@@ -9,6 +9,8 @@ import {
 } from "lucide-react";
 import { platformFeatures } from "@/data/features";
 import { notFound } from "next/navigation";
+import { titleParts, description as metaDescription } from "@/lib/meta";
+import { practiceAreas } from "@/data/practice-areas";
 
 const lucideFeatureIcons: Record<string, React.ComponentType<{ className?: string; strokeWidth?: number }>> = {
   "lawyer-directory": Users,
@@ -29,8 +31,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!feature) return { title: "Not Found | NyaySevak", robots: { index: false, follow: false } };
 
   return {
-    title: `${feature.title} - Find Best Lawyers in India | NyaySevak Platform`,
-    description: `${feature.description} ${feature.bullets.join(". ")}. India's most advanced legal platform with verified lawyers across all courts. Free case assessment available.`,
+    // Week 26: the brand suffix is applied by the root layout template, so
+    // appending it here produced "… | NyaySevak Platform | NyaySevak.com".
+    title: titleParts([feature.title, "Verified Lawyers in India"]),
+    description: metaDescription([feature.description, "Free case assessment with verified lawyers across India.", feature.bullets[0]]),
     keywords: [
       feature.title.toLowerCase(),
       `best ${feature.title.toLowerCase()} India`,
@@ -70,7 +74,7 @@ const featureContent: Record<string, { longDesc: string; howItWorks: { title: st
     ],
     highlights: [
       { label: "1,000+ Verified Lawyers", desc: "Bar Council verified professionals across India" },
-      { label: "29 Practice Areas", desc: "Complete coverage of all legal specializations" },
+      { label: `${practiceAreas.length} Practice Areas`, desc: "Complete coverage of all legal specializations" },
       { label: "15+ Languages", desc: "Lawyers available in major Indian languages" },
       { label: "Ongoing Verification", desc: "Every lawyer's Bar Council status kept verified" },
       { label: "Under 2 Hour Response", desc: "Average response time for urgent matters" },
@@ -127,7 +131,7 @@ const featureContent: Record<string, { longDesc: string; howItWorks: { title: st
   "legal-guides-resources": {
     longDesc: "Legal literacy is the foundation of empowerment. NyaySevak's Legal Guides & Resources section is a comprehensive knowledge hub covering all aspects of Indian law — from simple explainers on filing RTI applications to in-depth analyses of corporate governance requirements. Every guide is written by practicing lawyers and reviewed by senior advocates.",
     howItWorks: [
-      { title: "Browse by Category", desc: "Explore guides organized by 29 practice areas for easy navigation." },
+      { title: "Browse by Category", desc: `Explore guides organized by ${practiceAreas.length} practice areas for easy navigation.` },
       { title: "Search by Topic", desc: "Use our search to find specific answers to your legal questions." },
       { title: "Read Expert Content", desc: "Articles written by practicing lawyers in plain, accessible language." },
       { title: "Follow Step-by-Step Guides", desc: "Process guides walk you through legal procedures with clarity." },
@@ -136,7 +140,7 @@ const featureContent: Record<string, { longDesc: string; howItWorks: { title: st
     ],
     highlights: [
       { label: "500+ Legal Guides", desc: "Comprehensive articles covering all areas" },
-      { label: "29 Practice Areas", desc: "Complete topical coverage of Indian law" },
+      { label: `${practiceAreas.length} Practice Areas`, desc: "Complete topical coverage of Indian law" },
       { label: "Regular Updates", desc: "New laws, amendments, and case summaries" },
       { label: "Bilingual Content", desc: "Available in English and Hindi" },
       { label: "Process Guides", desc: "Step-by-step legal procedure walkthroughs" },
@@ -210,7 +214,7 @@ const featureContent: Record<string, { longDesc: string; howItWorks: { title: st
     ],
     whyChoose: [
       "Answers written by practicing lawyers in simple, accessible language",
-      "Organized by 29 practice areas for easy discovery of relevant questions",
+      `Organized by ${practiceAreas.length} practice areas for easy discovery of relevant questions`,
       "Smart keyword search that understands legal terminology and common language",
       "Deep-linked to comprehensive guides for those who want detailed explanations",
       "Regularly updated to reflect new laws, amendments, and court decisions",

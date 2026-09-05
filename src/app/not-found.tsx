@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { Scale } from "lucide-react";
+import { practiceAreas } from "@/data/practice-areas";
 
 export const metadata: Metadata = {
   title: "Page Not Found",
@@ -18,7 +19,7 @@ const suggestedLinks = [
   {
     label: "Practice Areas",
     href: "/practice-areas",
-    desc: "Explore 29 practice areas",
+    desc: `Explore ${practiceAreas.length} practice areas`,
   },
   { label: "Courts", href: "/courts", desc: "Find courts across India" },
   { label: "Contact Us", href: "/contact", desc: "Get legal consultation" },

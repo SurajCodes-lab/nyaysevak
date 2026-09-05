@@ -2164,10 +2164,10 @@ export const cityMatterExpansion: Record<string, CityPracticeContent> = {
     caseTypes: [
       { title: "Section 9 Petitions", desc: "Operational creditor applications after a demand notice, absent a pre-existing dispute." },
       { title: "Section 7 Petitions", desc: "Financial creditor applications where the default meets the statutory threshold." },
-      { title: "Defending Admission", desc: "Establishing a pre-existing dispute from the quality and consignment record." },
-      { title: "MSME Samadhaan Claims", desc: "The below-threshold route with statutory compound interest for registered units." },
-      { title: "Claim Filing & Verification", desc: "Filing and pursuing claims with the resolution professional." },
-      { title: "Section 12A Withdrawal", desc: "Withdrawing an admitted petition on settlement with creditor approval." },
+      { title: "Export-Trade Claim Defence", desc: "Establishing a pre-existing dispute from the consignment, inspection and shipping record." },
+      { title: "Forum Correction", desc: "Filing at Jaipur rather than Jodhpur, where the High Court seat misleads creditors into the wrong bench." },
+      { title: "Samadhaan Claims", desc: "The below-threshold route with statutory compound interest for registered handicraft and stone units." },
+      { title: "Section 12A Withdrawal", desc: "Withdrawing an admitted petition on settlement with the required creditor approval." },
       { title: "Oppression & Mismanagement", desc: "Shareholder petitions over exclusion, dilution and related-party transactions." },
       { title: "Personal Guarantor Proceedings", desc: "Proceedings against promoters who guaranteed the corporate debt." },
     ],
@@ -2228,13 +2228,13 @@ export const cityMatterExpansion: Record<string, CityPracticeContent> = {
     ],
     caseTypes: [
       { title: "Statutory Demand Notice", desc: "Issuing the Section 138 notice within 30 days of the return memo." },
-      { title: "Complaint Filing", desc: "Filing before the magistrate serving your bank branch, with the debt properly pleaded." },
-      { title: "Seasonal Settlement Structuring", desc: "Payment schedules built around hospitality's seasonal cash flow." },
+      { title: "Seasonal Settlement Structuring", desc: "Payment schedules built around hospitality's season, which often recovers more than a decree enforced in a lean month." },
+      { title: "Hotel & Event Vendor Claims", desc: "Recovery against resorts, banquet operators and event contractors on bounced settlement cheques." },
+      { title: "Marble & Mineral Trade Recovery", desc: "Claims arising from consignment sales into the Mewar processing belt." },
       { title: "Interim Compensation (S.143A)", desc: "Pressing for up to twenty per cent of the cheque amount at the trial stage." },
-      { title: "MSME Samadhaan Claims", desc: "Delayed-payment recovery with statutory compound interest for registered suppliers." },
-      { title: "Defending a S.138 Case", desc: "Rebutting the Section 139 presumption — security cheques, blank cheques, notice defects." },
-      { title: "Settlement & Compounding", desc: "Mediation, Lok Adalat and compounding at any stage of the prosecution." },
-      { title: "Firm & Director Liability", desc: "Proceeding against partners, signatories and directors under Section 141." },
+      { title: "Defending a S.138 Case", desc: "Rebutting the Section 139 presumption — security cheques, blank cheques and notice defects." },
+      { title: "Quashing at the Principal Seat", desc: "Petitions at Jodhpur to close a prosecution once the parties have settled." },
+      { title: "Samadhaan Claims", desc: "Delayed-payment recovery with statutory compound interest for registered suppliers." },
     ],
     faqs: [
       {
@@ -3233,9 +3233,9 @@ export const cityMatterExpansion: Record<string, CityPracticeContent> = {
       },
     ],
     localNotes: [
-      "Government and railway employment makes income documented and arrears recoverable by salary attachment.",
-      "Pension, gratuity and family-pension entitlements must be dealt with expressly.",
-      "Service rules can create departmental exposure independent of the criminal outcome.",
+      "Ajmer's concentration of Rajasthan Public Service Commission, education board and railway employment means one spouse is very often on a documented public payroll, which makes maintenance quantifiable and recoverable by salary attachment.",
+      "Pension, gratuity and family-pension entitlements resurface at retirement if a settlement is silent on them, and the departmental consequences of a criminal complaint run independently of the criminal outcome.",
+      "Appeals from the Family Court and quashing on settlement both go to the Jaipur Bench, not the Jodhpur principal seat.",
     ],
   },
 

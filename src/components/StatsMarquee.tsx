@@ -2,6 +2,7 @@ import {
   Landmark, Building2, MapPin, Scale, Users, BookOpen,
   Globe, Briefcase, Gavel, PhoneCall,
 } from "lucide-react";
+import { practiceAreas } from "@/data/practice-areas";
 
 const items = [
   { label: "Supreme Court Coverage", Icon: Landmark },
@@ -9,7 +10,7 @@ const items = [
   { label: "700+ District Courts", Icon: MapPin },
   { label: "20+ Tribunals", Icon: Scale },
   { label: "1000+ Verified Lawyers", Icon: Users },
-  { label: "29 Practice Areas", Icon: BookOpen },
+  { label: `${practiceAreas.length} Practice Areas`, Icon: BookOpen },
   { label: "36 States & UTs", Icon: Globe },
   { label: "B2B + B2C Platform", Icon: Briefcase },
   { label: "Arbitration & ADR", Icon: Gavel },

@@ -12,6 +12,7 @@ import EngagementTracker from "@/components/EngagementTracker";
 import ExitIntentModal from "@/components/ExitIntentModal";
 import { ContactModalProvider } from "@/context/ContactModalContext";
 import { sameAs } from "@/lib/business";
+import { practiceAreas } from "@/data/practice-areas";
 
 // Week 21 CWV: weights trimmed to those actually used — no font-black (900)
 // or font-light (300) class appears anywhere in src, so those files were
@@ -233,7 +234,7 @@ const siteNavigationJsonLd = {
   url: "https://www.nyaysevak.com",
   hasPart: [
     { "@type": "SiteNavigationElement", name: "Legal Services", url: "https://www.nyaysevak.com/services", description: "B2B & B2C legal services for individuals and businesses" },
-    { "@type": "SiteNavigationElement", name: "Practice Areas", url: "https://www.nyaysevak.com/practice-areas", description: "29 practice areas covering every domain of Indian law" },
+    { "@type": "SiteNavigationElement", name: "Practice Areas", url: "https://www.nyaysevak.com/practice-areas", description: `${practiceAreas.length} practice areas covering every domain of Indian law` },
     { "@type": "SiteNavigationElement", name: "Court Coverage", url: "https://www.nyaysevak.com/courts", description: "Supreme Court, 25 High Courts, 700+ District Courts & Tribunals" },
     { "@type": "SiteNavigationElement", name: "Platform Features", url: "https://www.nyaysevak.com/features", description: "Verified lawyer matching and legal services platform features" },
     { "@type": "SiteNavigationElement", name: "About NyaySevak", url: "https://www.nyaysevak.com/about", description: "About India's premier legal services platform" },
@@ -390,7 +391,7 @@ export const metadata: Metadata = {
     template: "%s | NyaySevak.com",
   },
   description:
-    "India's trusted legal-services platform. Get matched with verified lawyers near you for the Supreme Court, 25 High Courts, 700+ District Courts & all Tribunals. Online lawyer consultation, divorce lawyer, criminal lawyer, property lawyer, corporate advisory. 29 practice areas. Free case assessment. Call +91-9868666715.",
+    `India's trusted legal-services platform. Get matched with verified lawyers near you for the Supreme Court, 25 High Courts, 700+ District Courts & all Tribunals. Online lawyer consultation, divorce lawyer, criminal lawyer, property lawyer, corporate advisory. ${practiceAreas.length} practice areas. Free case assessment. Call +91-9868666715.`,
   keywords:
     "lawyer near me, advocate near me, best lawyer India, online lawyer consultation, find lawyer India, hire lawyer online, legal services India, free legal consultation, divorce lawyer, criminal lawyer, property lawyer, bail lawyer, corporate lawyer, cyber crime lawyer, Supreme Court advocate, High Court lawyer, District Court lawyer, NCLT lawyer, NyaySevak, legal aid India, family lawyer India, tax lawyer, IP lawyer India, consumer court lawyer, labour lawyer, arbitration lawyer, RERA lawyer, documentation lawyer, affordable lawyer India, verified advocate India, court representation India",
   authors: [{ name: "NyaySevak" }],
@@ -417,7 +418,7 @@ export const metadata: Metadata = {
     siteName: "NyaySevak",
     title: "NyaySevak - Best Lawyer Consultation & Legal Services in India",
     description:
-      "Find verified lawyers near you. Online consultation, court representation across Supreme Court, High Courts, District Courts & Tribunals. 29 practice areas. Free case assessment.",
+      `Find verified lawyers near you. Online consultation, court representation across Supreme Court, High Courts, District Courts & Tribunals. ${practiceAreas.length} practice areas. Free case assessment.`,
     images: [
       {
         url: "https://www.nyaysevak.com/logo.png",

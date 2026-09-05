@@ -3,9 +3,9 @@ import Features from "@/components/Features";
 import { HelpCircle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Platform Features — Verified Lawyer Matching",
+  title: "Platform Features — Lawyer Matching",
   description:
-    "NyaySevak platform features: Bar Council verified lawyer matching, instant consultation booking, comprehensive legal guides, court information database, secure document storage, WhatsApp integration & 24/7 support. Get matched with the right lawyer for your case.",
+    "Bar Council-verified lawyer matching, instant booking, a court database, secure documents, WhatsApp integration and 24/7 support.",
   keywords:
     "find a lawyer India, book lawyer online, lawyer near me, verified advocate India, legal consultation booking, legal guides India, court information database, lawyer matching India, online legal platform India, NyaySevak features",
   alternates: { canonical: "https://www.nyaysevak.com/features" },

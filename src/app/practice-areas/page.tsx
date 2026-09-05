@@ -6,16 +6,16 @@ import { BookOpen, MapPin, ShieldCheck, ArrowRight, ChevronRight, Search } from 
 import { practiceAreas as practiceAreasData } from "@/data/practice-areas";
 
 export const metadata: Metadata = {
-  title: "29 Practice Areas of Indian Law",
+  title: `${practiceAreasData.length} Practice Areas of Indian Law`,
   description:
-    "Find the best lawyers in India across 29 practice areas. Criminal lawyer, divorce lawyer, property lawyer, corporate lawyer, cyber crime lawyer, bail lawyer, CBI/ED/NDPS defense, consumer protection, IP, tax & more. Verified advocates with free case assessment.",
+    `Lawyers across ${practiceAreasData.length} practice areas — criminal, divorce, property, corporate, cyber, bail, consumer, IP and tax. Free case assessment.`,
   keywords:
     "best lawyer India, criminal lawyer near me, divorce lawyer India, property lawyer, corporate lawyer, cyber crime lawyer, bail lawyer, CBI lawyer, ED lawyer, NDPS lawyer, consumer court lawyer, IP lawyer, tax lawyer India, family lawyer, advocate near me, legal services India, NyaySevak",
   alternates: { canonical: "https://www.nyaysevak.com/practice-areas" },
   openGraph: {
-    title: "29 Practice Areas - Find Best Lawyers in India | NyaySevak",
+    title: `${practiceAreasData.length} Practice Areas - Find Best Lawyers in India | NyaySevak`,
     description:
-      "Find verified lawyers across 29 practice areas. Criminal, civil, family, corporate, IP, tax, cyber crime, CBI, ED, NDPS & more. Free case assessment available.",
+      `Find verified lawyers across ${practiceAreasData.length} practice areas. Criminal, civil, family, corporate, IP, tax, cyber crime, CBI, ED, NDPS & more. Free case assessment available.`,
     type: "website",
     url: "https://www.nyaysevak.com/practice-areas",
   },
@@ -61,7 +61,7 @@ const breadcrumbJsonLd = {
 const practiceAreaItemListJsonLd = {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
-  name: "29 Practice Areas - Best Lawyers for Every Legal Need in India",
+  name: `${practiceAreasData.length} Practice Areas - Best Lawyers for Every Legal Need in India`,
   description: "Complete A-Z legal services across every domain of Indian law with verified lawyers.",
   url: "https://www.nyaysevak.com/practice-areas",
   isPartOf: { "@id": "https://www.nyaysevak.com/#website" },

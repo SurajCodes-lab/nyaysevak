@@ -6,9 +6,9 @@ import CourtFeeCalculator from "@/components/CourtFeeCalculator";
 import TableOfContents, { TocItem } from "@/components/TableOfContents";
 
 export const metadata: Metadata = {
-  title: "Court Fee Calculator India [2026] — State-wise Schedule | NyaySevak.com",
+  title: "Court Fee Calculator India [2026]",
   description:
-    "Free court fee calculator for India. Compute ad-valorem court fees for civil suits state-by-state — Delhi, Maharashtra, Karnataka, Tamil Nadu, U.P. and the central schedule. Updated for 2026.",
+    "Compute ad-valorem court fees for civil suits state by state — Delhi, Maharashtra, Karnataka, Tamil Nadu, U.P. and the central schedule. Updated 2026.",
   keywords:
     "court fee calculator India, court fee Delhi, court fee Maharashtra, court fee Karnataka, court fee Tamil Nadu, ad valorem court fee, civil suit court fee, court fees act 1870, e-stamping court fee, NyaySevak",
   alternates: {

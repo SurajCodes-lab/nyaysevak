@@ -15,6 +15,7 @@ import RelatedLinks from "@/components/RelatedLinks";
 import { relatedGroupsForInsight } from "@/data/internal-links";
 import { SITE_URL } from "@/lib/site";
 import { trimToSentences } from "@/lib/quick-answer";
+import { title as metaTitle, description as metaDescription, clamp, DESC_MAX } from "@/lib/meta";
 
 // Week 11: hand-written AEO "Quick Answer" for each pillar article, keyed by
 // slug. These are the highest-traffic informational pages, so the direct
@@ -77,8 +78,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const url = `${SITE_URL}/insights/${slug}`;
 
   return {
-    title: article.metaTitle,
-    description: article.metaDescription,
+    // Week 26: article metadata is hand-written per guide and had drifted long
+    // — every one of the 37 titles exceeded the SERP limit. Clamped here so the
+    // constraint applies to future guides without editing each one.
+    title: metaTitle(article.metaTitle),
+    description: clamp(article.metaDescription, DESC_MAX),
     keywords: [article.primaryKeyword, ...article.secondaryKeywords, "NyaySevak", "Indian law guide", "legal procedure India"].join(", "),
     alternates: { canonical: url },
     openGraph: {

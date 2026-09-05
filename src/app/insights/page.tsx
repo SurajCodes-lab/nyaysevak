@@ -7,9 +7,9 @@ import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title:
-    "Legal Insights & Guides — In-depth Indian Law Articles for 2026 | NyaySevak",
+    "Legal Insights & Guides — Indian Law",
   description:
-    "Long-form Indian legal guides — mutual-consent divorce, anticipatory bail, property title verification, RERA, company incorporation, cheque bounce, and lawyer-fee benchmarks. Hand-written by practising advocates.",
+    "Long-form Indian legal guides — mutual-consent divorce, anticipatory bail, title verification, RERA, cheque bounce. Written by practising advocates.",
   keywords:
     "legal articles India, legal guides 2026, divorce procedure, anticipatory bail guide, property title verification, RERA complaint, company registration, cheque bounce procedure, lawyer fees India, NyaySevak insights",
   alternates: {

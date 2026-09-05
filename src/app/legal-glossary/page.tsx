@@ -7,9 +7,9 @@ import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title:
-    "Indian Legal Glossary — 50+ Key Terms Explained for Legal-Service Buyers | NyaySevak",
+    "Indian Legal Glossary — Key Terms",
   description:
-    "Indian legal glossary 2026: FIR, anticipatory bail, cognizable offence, Section 138 NI Act, Section 13B HMA, RERA, IBC, lis pendens, encumbrance certificate, Khata. 50+ key terms.",
+    "Indian legal glossary: FIR, anticipatory bail, cognizable offence, Section 138 NI Act, RERA, IBC, lis pendens, encumbrance certificate. 50+ terms.",
   keywords:
     "Indian legal glossary, legal terms India, what is FIR, anticipatory bail meaning, Section 138 NI Act, Section 13B HMA, RERA meaning, IBC meaning, lis pendens, encumbrance certificate, NyaySevak",
   alternates: { canonical: `${SITE_URL}/legal-glossary` },

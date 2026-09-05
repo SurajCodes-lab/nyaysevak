@@ -20,7 +20,11 @@ const tabDescriptions = {
   b2b: "Streamline your enterprise legal operations with dedicated teams for compliance, contracts, IP protection, litigation management, and M&A support.",
 };
 
-export default function Services() {
+// The hero heading level is a prop because this component is used two ways:
+// as this page's own headline (H1) and as one section of the homepage (H2),
+// where the homepage hero already holds the H1.
+export default function Services({ headingLevel = "h2" }: { headingLevel?: "h1" | "h2" } = {}) {
+  const Heading = headingLevel;
   const [activeTab, setActiveTab] = useState<"b2c" | "b2b">("b2c");
   const scrollRef = useRef<HTMLDivElement>(null);
   const services = activeTab === "b2c" ? b2cServices : b2bServices;
@@ -53,9 +57,9 @@ export default function Services() {
                   What We Offer
                 </p>
               </div>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-bold tracking-tight text-gray-900 heading-glow-cream">
+              <Heading className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-bold tracking-tight text-gray-900 heading-glow-cream">
                 Our Services
-              </h2>
+              </Heading>
               <p className="mt-3 text-sm sm:text-base text-gray-500 leading-relaxed">
                 {tabDescriptions[activeTab]}
               </p>

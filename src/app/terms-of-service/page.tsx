@@ -3,7 +3,7 @@ import ContactButton from "@/components/ContactButton";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | NyaySevak - India's Premier Legal Services Platform",
+  title: "Terms of Service",
   description:
     "Read the Terms of Service for NyaySevak. Understand the terms governing your use of India's complete legal ecosystem platform.",
   keywords:

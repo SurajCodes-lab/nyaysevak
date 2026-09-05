@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ContactButton from "@/components/ContactButton";
+import WhatsAppLink from "@/components/WhatsAppLink";
 import AnswerBlock from "@/components/AnswerBlock";
 import TrustStrip from "@/components/TrustStrip";
 import {
@@ -13,6 +14,7 @@ import { SITE_URL } from "@/lib/site";
 import RelatedLinks from "@/components/RelatedLinks";
 import { relatedGroupsForCityPractice } from "@/data/internal-links";
 import { notFound } from "next/navigation";
+import { snippet, DESC_MAX , titleFit } from "@/lib/meta";
 
 export function generateStaticParams() {
   // Content-gated: only combos with a hand-written cityPracticeContent entry
@@ -47,17 +49,28 @@ export async function generateMetadata(
   // NB: the root layout applies a `%s | NyaySevak.com` title template, so we do
   // NOT append the brand here (the old title did, producing a double "| NyaySevak
   // | NyaySevak.com" suffix that ate SERP character budget).
-  const title = `Best ${label.title} in ${city.name}`;
-  // Week 15: description now leads with the "near you" + advocate variant that
-  // the title dropped, then folds in the page-specific lead.
-  const descAltKw = label.keyword.replace("lawyer", "advocate");
+  // Week 26: "Best" is worth keeping when it fits and worth losing when a long
+  // matter label ("Mutual Consent Divorce Lawyer") would push the title past the
+  // SERP limit. The city name must survive in every variant — it is the query.
+  const title = titleFit([
+    `Best ${label.title} in ${city.name}`,
+    `${label.title} in ${city.name}`,
+    `${label.short} Lawyer in ${city.name}`,
+  ]);
   // Week 23 (GSC-driven): fee-intent queries ("<matter> lawyer fees in <city>")
   // are the site's top click driver (15 of 101 clicks, avg pos 9.6). The
   // description now answers that intent BCI-safely — transparency language
   // only, never fee amounts.
-  const description = content
-    ? `Find a verified ${label.keyword} / ${descAltKw} near you in ${city.name}, ${city.state}. ${content.lead.slice(0, 90).trimEnd()}… Free case assessment; fees quoted transparently upfront.`
-    : `Find the best ${label.keyword}s near you in ${city.name}, ${city.state}. Verified advocates for ${label.long.toLowerCase()} matters across ${city.highCourt.name} and district courts. Free case assessment; fees quoted transparently upfront. Call +91-9868666715.`;
+  // Week 26: budgeted to DESC_MAX so the call to action is never the part
+  // Google truncates. An audit found this template producing a median 232-char
+  // description across 203 pages — the last third, including the CTA, never
+  // appeared in the result. Head and tail are fixed; whatever room remains goes
+  // to the page's own opening line, which is what makes the snippet distinctive.
+  const descHead = `Verified ${label.keyword}s in ${city.name}, ${city.state}.`;
+  const descTail = " Free case assessment, fees agreed upfront.";
+  const descRoom = DESC_MAX - descHead.length - descTail.length;
+  const descMid = content && descRoom > 45 ? " " + snippet(content.lead, descRoom) : "";
+  const description = descHead + descMid + descTail;
 
   const cityLower = city.name.toLowerCase();
   const stateLower = city.state.toLowerCase();
@@ -349,17 +362,17 @@ export default async function CityPracticePage(
                   Book Your Assessment
                   <ArrowRight className="h-4 w-4" strokeWidth={2} />
                 </ContactButton>
-                <a
-                  href={`https://wa.me/919868666715?text=${encodeURIComponent(`Hi, I need a ${label.title.toLowerCase()} in ${city.name}`)}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <WhatsAppLink
+                  message={`Hi, I need ${/^(NCLT|[AEIOU])/.test(label.title) ? "an" : "a"} ${label.title} in ${city.name}`}
+                  source="city_matter_page"
+                  context={`${city.name} — ${label.title}`}
                   className="inline-flex items-center justify-center gap-2.5 rounded-xl bg-[#25D366] px-6 py-4 text-sm font-semibold uppercase tracking-widest text-white shadow-lg shadow-[#25D366]/25 hover:shadow-xl hover:shadow-[#25D366]/35 transition-all duration-300"
                 >
                   <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
                   </svg>
                   Chat on WhatsApp
-                </a>
+                </WhatsAppLink>
               </div>
             </div>
           </div>

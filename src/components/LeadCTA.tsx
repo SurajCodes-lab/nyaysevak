@@ -3,6 +3,7 @@
 import { Phone, ArrowRight, ShieldCheck, Gift, Clock } from "lucide-react";
 import { useContactModal } from "@/context/ContactModalContext";
 import { trackContactModalOpen, trackCTAClick, trackPhoneClick, trackWhatsAppClick } from "@/lib/analytics";
+import { logWhatsAppEnquiry } from "@/lib/whatsapp-lead";
 
 // High-intent, in-content lead capture. Informational visitors (articles,
 // glossary) land, read, and bounce — this gives them three frictionless ways to
@@ -71,7 +72,10 @@ export default function LeadCTA({
               href={`https://wa.me/${PHONE.replace("+", "")}?text=${encodeURIComponent(waText)}`}
               target="_blank"
               rel="noopener noreferrer"
-              onClick={() => trackWhatsAppClick(context)}
+              onClick={() => {
+                trackWhatsAppClick(context);
+                logWhatsAppEnquiry({ source: "lead_cta", context, message: waText });
+              }}
               className="inline-flex flex-1 items-center justify-center gap-2 rounded-xl bg-[#25D366] px-5 py-3.5 text-sm font-semibold uppercase tracking-widest text-white hover:shadow-lg hover:shadow-[#25D366]/30 transition-all"
             >
               <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">

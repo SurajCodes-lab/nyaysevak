@@ -90,7 +90,7 @@ export default async function Image() {
               lineHeight: 1.5,
             }}
           >
-            Supreme Court &bull; 25 High Courts &bull; 700+ District Courts &bull; All Tribunals &bull; 29 Practice Areas
+            Supreme Court &bull; 25 High Courts &bull; 700+ District Courts &bull; All Tribunals &bull; 30 Practice Areas
           </p>
         </div>
       </div>
